@@ -1,14 +1,13 @@
 {
-  "checkedHead": "92b47336347ecccfe96789b4acd2e35460d6455b",
-  "checkedAt": "2026-11-13T04:26:54.777Z",
+  "checkedHead": "b6854f3e1c4afe42c1b86d59dba9454917f2a951",
+  "checkedAt": "2026-11-13T04:56:12.124Z",
   "counts": {
-    "official-text-layer-evidence-linked": 40,
-    "editorial-review-recorded": 114
+    "official-text-layer-evidence-linked": 154
   },
   "heldReferences": 154,
   "correctionProposals": 153,
-  "verificationNote": "Official PDF text-layer evidence is linked for 40 references. PDF bytes and rendered pages were not independently checked. GM3.16 remains held with a draft interpretation.",
-  "nextAction": "Audit the 114 editorial-review-only references for missing source scope or assessment evidence, prioritizing records with material gaps. Preserve GM7.11 labels pending clarification.",
+  "verificationNote": "All 154 held references link to official PDF text-layer evidence. Rendered pages and PDF bytes were not independently verified. Scope amendments are editorial draft changes to apply to the full objectives. GM3.16 remains held with a draft interpretation.",
+  "nextAction": "Apply the 114 scope amendments to their full draft objectives and check that assessment modes, existing source IDs and unresolved labels are preserved.",
   "rows": [
     {
       "code": "AN35.2",
@@ -33,9 +32,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Include formation, extent, relations and branches with demonstration.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN36.2",
@@ -45,9 +47,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Retain soft palate composition alongside the full palatine tonsil scope.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN42.3",
@@ -57,9 +62,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Include both muscles’ position, fibre direction, relations, innervation and actions. Source verb is describe.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN43.5",
@@ -69,9 +77,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Keep the three arterial palpation targets plus muscle testing, jugular locations and the three landmarks with vertebral levels.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN46.3",
@@ -81,9 +92,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Retain parts, components, vascular supply and lymphatic drainage.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN47.8",
@@ -93,9 +107,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Describe and identify formation, course, relations and tributaries of all three named veins.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN47.10",
@@ -105,9 +122,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Describe sites, applied anatomy and anatomical correlations. Avoid imposing a fixed subset.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN59.3",
@@ -117,9 +137,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-08.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Describe pontine cranial nerve nuclei by functional group. Mapping is a teaching option.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN64.2",
@@ -129,9 +152,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-09.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Name medulla, pons and midbrain individually alongside neural tube, spinal cord, cerebral hemisphere and cerebellum.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN68.3",
@@ -141,9 +167,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-10.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Describe nervous-tissue ultrastructure. Proposed cellular examples are editorial detail.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN75.4",
@@ -153,9 +182,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-11.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Keep both polymorphism and mutation. Pathogenicity categories are editorial detail.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN78.4",
@@ -165,9 +197,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-11.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Describe formation of all four named structures. Diagrams are optional teaching support.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "MI3.5",
@@ -177,9 +212,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define and classify pyrexia of unknown origin and cover infectious aetiopathogenesis and diagnostic modalities.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "PA26.7",
@@ -189,9 +227,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include gross and microscopic pathology alongside cause, mechanism, diagnosis and complications of infective endocarditis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "PA26.6",
@@ -201,9 +242,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include presentations, gross and microscopic pathology, diagnostic tests and interpretation of cardiac function testing in ACS alongside the wider IHD scope.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "PE11.4",
@@ -228,9 +272,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Demonstrate and document thyroid swelling examination, then discuss differential diagnosis and management.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "SU30.4",
@@ -240,9 +287,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Retain applied anatomy, clinical features, investigations and management principles of varicocele.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "MI4.7",
@@ -252,9 +302,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Retain epidemiology, aetiopathogenesis, clinical features and complications of viral hepatitis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.14",
@@ -264,9 +317,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for common fractures in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.22",
@@ -276,9 +332,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Cover nutritional disorders in older adults, including aetiopathogenesis, presentation, complications, assessment and management.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.9",
@@ -288,9 +347,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for stroke in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.12",
@@ -300,9 +362,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for degenerative joint disease.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.10",
@@ -312,9 +377,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiopathogenesis and functional changes of COPD in older adults alongside presentation, identification, acute care, stabilization, management and rehabilitation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.5",
@@ -324,9 +392,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for depression in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.6",
@@ -336,9 +407,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include dementia aetiopathogenesis and presentation in older adults alongside acute care, stabilization, management and rehabilitation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.17",
@@ -348,9 +422,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Keep hearing loss in older adults explicit, including functional changes and acute care through rehabilitation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.13",
@@ -360,9 +437,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for falls in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.11",
@@ -372,9 +452,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Retain functional changes, acute care, stabilization, management and rehabilitation for older adults undergoing surgery.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.15",
@@ -384,9 +467,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for visual abnormalities and loss in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.4",
@@ -396,9 +482,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for vascular events in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.8",
@@ -408,9 +497,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for osteoporosis in older adults.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.3",
@@ -420,9 +512,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include mechanisms and functional changes of acute confusional states alongside identification, presentation and care through rehabilitation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM25.7",
@@ -432,9 +527,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Include aetiopathogenesis, presentation, identification, functional changes, acute care, stabilization, management and rehabilitation for personality changes in older adults. The row is non-core.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.12",
@@ -444,9 +542,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Cover common causes, clinical features and management of both encephalitis and meningitis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN13.4",
@@ -456,9 +557,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Describe sternoclavicular, acromioclavicular, carpometacarpal and metacarpophalangeal joints. Comparative stabilizers and movements are not explicit requirements.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN21.8",
@@ -468,9 +572,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Describe and demonstrate joint type, articular surfaces and movement for the manubriosternal, costovertebral, costotransverse and xiphisternal joints. Stabilizers are not explicit.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.8",
@@ -480,9 +587,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include common causes, clinical features and management of skin, muscle and soft tissue infections.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.27",
@@ -492,9 +602,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiopathogenesis, clinical features and management of aspergillosis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.18",
@@ -504,9 +617,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include causes, aetiopathogenesis, clinical features and management of bacterial zoonoses, retaining the four source examples.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.26",
@@ -516,9 +632,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiopathogenesis, clinical features and management of candidiasis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.22",
@@ -543,9 +662,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiopathogenesis, clinical features, complications and management of amoebiasis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.24",
@@ -570,9 +692,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Assess diagnosis and severity through systematic general, skin, mucosal, lymph-node, chest and abdominal examination, including liver and spleen.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.5",
@@ -612,9 +737,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiopathogenesis, clinical features, complications and management of herpes simplex infections.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.11",
@@ -624,9 +752,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-01.json",
+      "draftScopeRevision": "Cover common causes, clinical features and management of urinary tract infection, pyelonephritis and prostatitis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM26.20",
@@ -636,9 +767,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Retain pathogenesis, clinical features and management of rickettsial disease, including scrub, epidemic and endemic typhus.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM14.1",
@@ -648,9 +782,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Define and measure obesity in the Indian population context. The row is K/KH.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM28.19",
@@ -660,9 +797,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Cover principles and use of oxygen therapy in both hospital and home.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM28.23",
@@ -672,9 +812,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Retain societal and workplace effects alongside quality of life, wellbeing, work and family.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM28.8",
@@ -699,9 +842,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Retain respiratory rate, distress, effort tolerance, breath sounds, added sounds and signs of consolidation, effusion and pneumothorax.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM28.15",
@@ -726,9 +872,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Explain beneficence as a guiding principle in patient care.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.24",
@@ -738,9 +887,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Identify, discuss and defend medico-legal, sociocultural, professional and ethical issues concerning impaired physicians.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.7",
@@ -750,9 +902,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include medico-legal, sociocultural and ethical issues in research involving study participants.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.4",
@@ -762,9 +917,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include medico-legal, sociocultural, economic and ethical issues concerning rights, equity and justice in healthcare access.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.19",
@@ -774,9 +932,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Demonstrate forming and functioning in appropriate professional networks.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.6",
@@ -786,9 +947,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include medico-legal, sociocultural and ethical emergency decisions, including situations involving inability or lack of capacity to consent.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.2",
@@ -798,9 +962,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include tubercle bacillus microbiology, transmission, pathogenesis, clinical evolution and natural history of pulmonary and extrapulmonary forms.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.13",
@@ -810,9 +977,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Include pharmacology, indications, contraindications, interactions and adverse reactions of antituberculous agents.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.5",
@@ -822,9 +992,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Elicit, document and present TB history including risks, contacts, cough, fever, anorexia, weight loss, haemoptysis and extrapulmonary symptoms. Assessment includes cases and OSCE.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.9",
@@ -849,9 +1022,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include BCG origin, indications, administration technique, efficacy and complications.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.6",
@@ -861,9 +1037,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Preserve general, chest and lung, lymphatic and relevant CNS examination. Include volume loss, mediastinal shift, percussion and normal and added lung sounds.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM27.4",
@@ -873,9 +1052,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Retain epidemiology and predisposing, microbial and treatment-related factors determining drug resistance.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM1.8",
@@ -960,9 +1142,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Perform, demonstrate and document the vascular and cardiac examination appropriate to the presentation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM2.8",
@@ -987,9 +1172,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Cover pathogenesis, recognition and management of arrhythmias, shock, LV dysfunction, papillary muscle rupture and pericarditis after acute coronary syndromes.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM3.4",
@@ -1029,9 +1217,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Order and interpret CBC, PA chest radiography, Mantoux, sputum Gram stain and culture with susceptibility, pleural fluid exam and culture, HIV testing and ABG as indicated by the presentation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM3.16",
@@ -1056,9 +1247,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Cover pathophysiology, clinical features and management for heat cramps, heat exhaustion and heat stroke.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM4.9",
@@ -1068,9 +1262,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include FUO mechanisms, causes and clinical manifestations across the source-listed host contexts.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM4.10",
@@ -1095,9 +1292,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Perform a systematic exam covering general, skin, mucosal, lymph node, chest and abdomen, explicitly including liver and spleen.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM4.13",
@@ -1122,9 +1322,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm1-gm4.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "For prolonged fever, cover indications and findings for inflammatory and rheumatologic tests, pathogen serology including HIV, and both marrow aspiration and biopsy.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM10.24",
@@ -1134,9 +1337,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include CKD effects on quality of life, wellbeing, work and family and incorporate patient preferences into care.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM11.7",
@@ -1161,9 +1367,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Perform and interpret urinary ketone dipstick estimation. Preserve source K/KH classification.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM11.18",
@@ -1188,9 +1397,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Demonstrate correct blood glucose self-monitoring technique and counsel the patient. Preserve K/KH.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM11.24",
@@ -1200,9 +1412,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Include precipitants, pathophysiology, recognition, clinical features, diagnosis, stabilization and management of the hyperosmolar nonketotic state.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM12.4",
@@ -1212,9 +1427,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Elicit, document and present the history to establish thyroid dysfunction diagnosis, cause and severity.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM12.5",
@@ -1224,9 +1442,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Perform and demonstrate systematic examination for both hypo- and hyperthyroid findings, rhythm abnormalities, thyroid and lymph node palpation and cardiovascular findings.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM12.13",
@@ -1251,9 +1472,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Elicit, document and present cancer history with risks, duration and evolution. Preserve source S domain and K level.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM13.12",
@@ -1263,9 +1487,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Explain indications and interpret chest radiography, mammography, skin and tissue biopsies, and tumour markers in common cancers.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM13.16",
@@ -1290,9 +1517,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include indications, use and adverse effects of opioid analgesics for cancer pain.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM14.1",
@@ -1302,9 +1532,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define and measure obesity in the Indian population context. Preserve this appearance's distinct reference.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM14.6",
@@ -1314,9 +1547,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+      "draftScopeRevision": "Elicit, document and present obesity history with natural history, diet, modifiable risks, family history, secondary-cause clues and motivation for weight loss.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM14.7",
@@ -1326,9 +1562,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include general examination, abdominal obesity measurement, secondary causes and comorbidities. Perform, document and demonstrate.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM17.1",
@@ -1338,9 +1577,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define and classify headache and cover presenting features and precipitating, aggravating and relieving factors. Assessment includes application questions and viva.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM17.2",
@@ -1365,9 +1607,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Generate, document and present the headache differential based on clinical features.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM17.13",
@@ -1377,9 +1622,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include pharmacology, dose, adverse reactions and regimens across bacterial, tuberculous and viral meningitis.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM18.3",
@@ -1404,9 +1652,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Elicit, document and present the stroke speech examination and distinguish speech disorders by lesion site.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM18.14",
@@ -1416,9 +1667,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Enumerate surgical indications in haemorrhagic stroke.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM18.15",
@@ -1428,9 +1682,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include indications and modalities of multidisciplinary stroke rehabilitation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM19.3",
@@ -1474,9 +1731,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define and distinguish seizures, convulsions and epilepsy.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM20.2",
@@ -1486,9 +1746,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include aetiological classification, mechanisms, clinical evaluation, recognition of types, diagnosis and diagnostic tests for epilepsy.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM21.1",
@@ -1498,9 +1761,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Cover distinguishing marks of each locally relevant venomous snake.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM21.4",
@@ -1510,9 +1776,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Elicit, document and present circumstances, timing, snake type and symptom evolution.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM21.5",
@@ -1522,9 +1791,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Perform, document and present general, local, cardiac and neurological examination.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM21.7",
@@ -1534,9 +1806,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Retain indications, pharmacology, dosing and adverse reactions including hypersensitivity.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM21.9",
@@ -1561,9 +1836,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Identify and describe the toxidrome from observed findings.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM22.6",
@@ -1603,9 +1881,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include causes, clinical and laboratory features, diagnosis and management of hyponatraemia.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM23.6",
@@ -1615,9 +1896,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include causes, clinical and laboratory features, diagnostic approach and management of hypokalaemia.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM29.1",
@@ -1627,9 +1911,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm17-gm29.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Explain non-maleficence as a guiding principle in patient care.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM7.8",
@@ -1654,9 +1941,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Examine all joints, muscles and skin systematically to establish diagnosis and severity.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM7.11",
@@ -1682,9 +1972,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include indications for plain joint radiographs and interpretation.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM7.16",
@@ -1694,9 +1987,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Select, prescribe and communicate pain relief and preventive therapy for crystalline arthropathies.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM7.17",
@@ -1706,9 +2002,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Select, prescribe and communicate treatment options for systemic rheumatologic conditions.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM8.3",
@@ -1718,9 +2017,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define and classify hypertension.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM8.8",
@@ -1745,9 +2047,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Define, describe and classify anaemia by red cell size and reticulocyte count.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM9.3",
@@ -1787,9 +2092,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Cover evolution, natural history and treatment of acute renal failure.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM10.9",
@@ -1814,9 +2122,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include diet, volume, drug-dose adjustment, monitoring and indications for dialysis in acute renal failure.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM10.20",
@@ -1826,9 +2137,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm7-gm10.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include hyperphosphataemia and secondary hyperparathyroidism alongside the other named CKD supportive care domains.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN81.2",
@@ -1838,9 +2152,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Keep indications, process and disadvantages of amniocentesis explicit.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN81.3",
@@ -1850,9 +2167,12 @@
       "reviewPacket": "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-anatomy-proposal-source-link-verification.json",
+      "draftScopeRevision": "Keep indications, process and disadvantages of chorionic villus biopsy explicit.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM6.10",
@@ -1877,9 +2197,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Include combination antiretroviral therapy principles, drug classes, adverse reactions and interactions. Assessment includes application questions and viva.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM6.15",
@@ -1889,9 +2212,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Cover both pathogenesis and management of IRIS.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM6.16",
@@ -1916,9 +2242,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Enumerate indications for endoscopy, colonoscopy and other imaging in upper GI bleeding. Timing is outside the explicit row.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM15.14",
@@ -1928,9 +2257,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Include indications, pharmacology and adverse effects of vasopressors in upper GI bleeding.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "GM16.10",
@@ -1955,9 +2287,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Cover attachments, innervation and actions of both pectoral muscles, plus clavipectoral fascia.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN10.11",
@@ -1967,9 +2302,12 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+      "draftScopeRevision": "Describe and demonstrate attachments, action and clinical anatomy of serratus anterior. Innervation is outside the explicit row.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     },
     {
       "code": "AN11.3",
@@ -1979,14 +2317,17 @@
       "reviewPacket": "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json",
       "wordingReview": "docs/evidence/2026-11-13-nmc-anatomy-correction-wording-review.json",
       "editorialVerdict": "addresses-documented-gap",
-      "sourceVerification": "editorial-review-recorded",
+      "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+      "draftScopeRevision": "Describe anatomical basis of cubital venipuncture. A comparison of venous patterns is outside the explicit row.",
+      "revisedDraftStatus": "source-checked-scope-amendment"
     }
   ],
   "draftCoverage": {
     "revisedObjectives": 39,
     "draftInterpretations": 1,
-    "editorialReviewOnly": 114
+    "draftScopeAmendments": 114
   }
 }
