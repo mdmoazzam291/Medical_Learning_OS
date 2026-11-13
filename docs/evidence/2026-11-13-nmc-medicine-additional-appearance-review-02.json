@@ -1,0 +1,532 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "2cbd279ddf2b7d68abe016ac4429fb1c88d83e3e",
+  "sourceQueue": "2026-11-13-nmc-anatomy-medicine-additional-appearance-queue.json",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 25,
+  "reviewed": 25,
+  "scopeAligned": 14,
+  "held": 11,
+  "cumulative": {
+    "reviewedSourceReferences": 866,
+    "alignedSourceRows": 733,
+    "heldSourceRows": 133,
+    "pendingSourceReferences": 78,
+    "distinctNamesReviewed": 797
+  },
+  "mappingAccepted": false,
+  "rows": [
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:271f88182306029dc7682b261bc6a684f4532ef5c48d4d0def8b5c701557eb36",
+      "subjectId": "medicine",
+      "code": "GM26.19",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "77e3f18230ccf5c54943fced249079a4e914496b60548f4e0cf8c3cf1599ee6e",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        228.66,
+        102.7,
+        269.46
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28",
+      "subjectId": "medicine",
+      "code": "GM26.23",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "689137e083d73effff46a9064eded3ca3f3103b58684ebbeaeb5bbba879639ad",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        364.86,
+        102.7,
+        405.66
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a",
+      "subjectId": "medicine",
+      "code": "GM26.8",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "f9919aa9b8534ba066295da2e78dbeb4f4be94e316559ce19f092b2c5af00a87",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        228.72,
+        102.7,
+        256.08
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make muscle involvement and common causes explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863",
+      "subjectId": "medicine",
+      "code": "GM26.27",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a3759c720a2e438ab07ef646b961eeb5a32bf8b1d35e00f7e83536950016a163",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        487.68,
+        102.7,
+        515.04
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca",
+      "subjectId": "medicine",
+      "code": "GM26.10",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "783261a9eb9c87285cd32993702643d18f0414384bd01cb88d241a5107060bda",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        296.88,
+        102.7,
+        337.62
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:585d0ff3adc4715aacc2fa1934c190d6caa3912be73443e211047d327f4315fd",
+      "subjectId": "medicine",
+      "code": "GM26.32",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "7ff017aa09a53189ca616feb86b42a6ba1cd2c317facf0de93cb8464f41c9e37",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        221.76,
+        102.7,
+        249.12
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5",
+      "subjectId": "medicine",
+      "code": "GM26.9",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b3c6fbae564b47becc6fd765ea602cbfc2ee88ef61a1d9178ccb15e0c4c8cfd3",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        256.08,
+        102.7,
+        296.88
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9",
+      "subjectId": "medicine",
+      "code": "GM26.18",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "63995c48b32ca1295ece9ab871a3252e84beb9e50c437bc2ca583833eba93ce7",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        187.92,
+        102.7,
+        228.66
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include causes and pathogenesis alongside exposure-based differentiation."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:6772dddc8b65c4f8e7799c25de27feea47716c6ae2c297c33888b44e75abb5e6",
+      "subjectId": "medicine",
+      "code": "GM26.2",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "ddb04f42e2fe0d31b58b61479834f871215dda5c7d3a276e6f804948f81e0d21",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        384.72,
+        102.7,
+        425.52
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:7bc2f91d5d82247d27d498fa51935fb890e57326c83c291fc23295fc5de4d3ae",
+      "subjectId": "medicine",
+      "code": "GM26.26",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "ea9dabc7ec71493bfdf1655324bce1d2afaf3154671634aa7b61fb5eb5de376a",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        460.32,
+        102.7,
+        487.68
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+      "subjectId": "medicine",
+      "code": "GM26.22",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "922c96d0925bd09b2d0470731718403a133e9da6de026d3c1aa3740aa1a41f3f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        337.62,
+        102.7,
+        364.86
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Clinical features are implicit in the comparison."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:901bb2e562aba8004eebfbf669c2b5e45c494a5b862ff1b11b30c1d201ec0807",
+      "subjectId": "medicine",
+      "code": "GM26.28",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "751c87d72474fd5b60cee3691b34bc8b2e32016628e09dc1e5c819769bf154f4",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        515.04,
+        102.7,
+        542.4
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:9954957807ed754b56e80de1c6f45479181473a338d71874604da9833e599a42",
+      "subjectId": "medicine",
+      "code": "GM26.35",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "296d34b51c690546b6b5033e79163b492f500e62491a62c87e24e243d06cfc3e",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        303.84,
+        102.7,
+        331.2
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e",
+      "subjectId": "medicine",
+      "code": "GM26.24",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "869839a4facf7ba22f2d2a0585c8b4379adea1a8169991042631df8542e7d603",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        405.66,
+        102.7,
+        433.02
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Prevention is explicit. Clinical management scope remains implicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:a8c5fd0bc85e5650eeb18394547adc93bb9eebb833e4cf84f62feb30bb30278c",
+      "subjectId": "medicine",
+      "code": "GM26.4",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "fd0f0f70f2d61dea2db66e9b8fa6c71341eb04bd2b586600e2216a23eb2f7380",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        479.64,
+        102.7,
+        533.88
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include general assessment and liver and spleen examination."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:adc434af1221f458b7cee430794d615708a27abbe5e17f547d06e5f745a7925b",
+      "subjectId": "medicine",
+      "code": "GM26.14",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "0ba4fe6bf9d105bdc230d792de066b2f6ab5e21e8eaba09acc525261bd27d226",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        460.08,
+        102.7,
+        500.7
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:b4f2620ee1b5c0c5655e83ee6bf75d9d4402508424c574097d5675ecc3c72ba6",
+      "subjectId": "medicine",
+      "code": "GM26.31",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "eb690bdafa2808b50222c3878b6d772dac986508ba63ad8ff34738b4f3c6f0e1",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        221.76
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77",
+      "subjectId": "medicine",
+      "code": "GM26.17",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b50d5e940ea5d63f70b15a0fc981df56d4f05048f2d97cd60692c7da408fbc4f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        187.92
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc",
+      "subjectId": "medicine",
+      "code": "GM26.33",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "164811959a51cb45c7969932d919db164a50967424c31eb61a8f00317d801592",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        276.48
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332",
+      "subjectId": "medicine",
+      "code": "GM26.5",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "9053926e3b6b4210b9e85cf678ad500855da56356c53697b743f5678929a6968",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        174.06
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Several source-listed investigations are left implicit in broad groups."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b",
+      "subjectId": "medicine",
+      "code": "GM26.3",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b8897dc87029c09feaf7ec248fc737504540028e10490edc5202e859bfdf236f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        425.52,
+        102.7,
+        479.64
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit history documentation is missing."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c65a84bfa6a0fc87b2869bf2392498a6a342a755e56fa2a0724371b933a99a10",
+      "subjectId": "medicine",
+      "code": "GM26.15",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "4c04b5835a4a86c3ce350e47e383b274212f6e5e95632f968146866dcfaa6e03",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        500.7,
+        102.7,
+        541.44
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+      "subjectId": "medicine",
+      "code": "GM26.29",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "3c19380796128e5b095e529b96899bdf56fdce6e0c93e2a08ea114b7b26d13ef",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        153.66
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:cd3632f2a0aac97f651723e91418f485865648cc666c957f3f64907c2172cf60",
+      "subjectId": "medicine",
+      "code": "GM26.21",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "dd26842f99ce9abf8d9b5da74b3e199bd8eb089054b04c2ce1dc23547952cf35",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        310.14,
+        102.7,
+        337.62
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:cde25bdd3eca7e73ac22bb9aa98904c5ccc4233dd1d57816ec58fbeba839a64a",
+      "subjectId": "medicine",
+      "code": "GM26.16",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "7c0731f92fc6495c390864a3dc9474b475f03377b8bf38a69b2c635f9e17cf9f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

@@ -1,0 +1,1367 @@
+{
+  "schemaVersion": 1,
+  "status": "next-unaltered-source-bound-review-queue",
+  "generatedAtUtc": "2026-11-12T15:45:00Z",
+  "parentPr": 415,
+  "workingPr": 421,
+  "sourceReferenceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "priorReviewedNames": 156,
+  "priorSourceAligned": 146,
+  "priorHeld": 10,
+  "remainingAnatomyMedicineAfterReviewed": 641,
+  "nextUnreviewedCount": 61,
+  "remainingAfterNextUnreviewed": 580,
+  "sourcePackets": [
+    "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+    "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+    "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json"
+  ],
+  "nextCodeStart": "AN13.1",
+  "nextCodeEnd": "AN21.11",
+  "scope": "Next coherent Anatomy lower-limb/thoracic-cage task window after AN12.15, made of exact retained source references. No new canonical IDs or accepted mappings.",
+  "precedingHoldQueue": [
+    {
+      "code": "GM6.10",
+      "referenceId": "nmc-2024-ref:0977b86aff3dcae454f5fda3b419ae06abdf291cccf6b7e605b0079db9e58179",
+      "heldReason": "The official row classifies this as S/KH with skill assessment, but the archived draft uses knowledge-only mode.",
+      "evidenceToResolve": "Confirm S/KH and OSCE/viva evidence in the row; update the proposed task mode without changing source reference or identity."
+    },
+    {
+      "code": "GM6.14",
+      "referenceId": "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f",
+      "heldReason": "The draft discusses combination treatment and drug class targets but omits the source's adverse reactions and interaction components.",
+      "evidenceToResolve": "Extend the proposed task to explicitly cover adverse reactions and drug interactions; retain source's 2024 scope."
+    },
+    {
+      "code": "GM6.15",
+      "referenceId": "nmc-2024-ref:c3690432d983dba2387c00f17424435e5e856bbf9cdd0f11107a0ab7ad9f237e",
+      "heldReason": "The draft covers pathogenesis/discrimination but does not expressly address management of immune reconstitution inflammatory syndrome.",
+      "evidenceToResolve": "Add a source-bound management facet; keep clinical management details behind separate medical and current-guideline review."
+    },
+    {
+      "code": "GM6.16",
+      "referenceId": "nmc-2024-ref:bd4053bd6f93158e3ed9e7affb2cc27499c583e7fa2c147a39a3b6238313b0e2",
+      "heldReason": "The source discusses PEP principles and regimens; the draft invokes unspecified 'current guidance' and follow-up.",
+      "evidenceToResolve": "Bind a dated current clinical guidance source for regimen and follow-up, or restrict the task to the September 2024 curriculum scope."
+    },
+    {
+      "code": "GM15.10",
+      "referenceId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf",
+      "heldReason": "The 2024 curriculum asks for investigation indications; the draft additionally promises procedure timing.",
+      "evidenceToResolve": "Validate timing against a separate guideline or remove it from the source-certified objective; retain investigation indications."
+    },
+    {
+      "code": "GM15.14",
+      "referenceId": "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4",
+      "heldReason": "The NMC row explicitly refers to vasopressors used for upper gastrointestinal bleeding; the draft broadens to unspecified vasoactive medicines.",
+      "evidenceToResolve": "Disambiguate the intended drug group and reconcile its scope with the original wording before canonical linking."
+    },
+    {
+      "code": "GM16.10",
+      "referenceId": "nmc-2024-ref:bc74fbf5971990dbc9ccde914643b0563c33efceeb50df2c8570bc6988f9fea8",
+      "heldReason": "The source is an identification task using a hanging-drop specimen; the draft only says recognize suggestive motility and confirmatory testing.",
+      "evidenceToResolve": "Specify the expected identification performance/assessment on the teaching preparation without equating suggestive motility to definitive laboratory confirmation."
+    },
+    {
+      "code": "AN9.1",
+      "referenceId": "nmc-2024-ref:63c2d63099d30b1033e8e18996bb6a876acf5b20bf7bddf8f41553bcf6bfd4c4",
+      "heldReason": "The label and task say 'pectoral muscles' without restricting the scope to the specific named pair in the 2024 NMC task.",
+      "evidenceToResolve": "Confirm the proposal means pectoralis major and minor plus clavipectoral fascia; do not silently include other muscles or surgical/procedural scopes."
+    },
+    {
+      "code": "AN10.11",
+      "referenceId": "nmc-2024-ref:cf8eaa315095782dcaa20c5c77bedf5c93ab105b6e7be576bfa34e910609d005",
+      "heldReason": "The draft explicitly adds innervation as a tested attribute. The official row specifies muscle attachment, action and clinical anatomy rather than nerve supply as a stated outcome.",
+      "evidenceToResolve": "Either restrict the NMC-bound objective to the stated elements or attach a separate evidence source for nerve supply in an enrichment objective."
+    },
+    {
+      "code": "AN11.3",
+      "referenceId": "nmc-2024-ref:33c3bd31c5d585933021c05c73a88661ef9059da31227f46c44417edd8e1455e",
+      "heldReason": "The draft requires comparison of two venous patterns, while the source objective only establishes the anatomical basis of elbow venipuncture.",
+      "evidenceToResolve": "Verify two-pattern examples from a permissible teaching source or simplify to the official venipuncture-anatomy scope."
+    }
+  ],
+  "nextItems": [
+    {
+      "code": "AN13.1",
+      "name": "Upper-limb compartments and drainage",
+      "nameKey": "upper-limb compartments and drainage",
+      "referenceId": "nmc-2024-ref:311ee8448ac0d3fa98c1e0f60edf37f69282032c23d5380baa1db106902f2c7e",
+      "sourceBodySha256": "d379562c59532909952f179824591c84b047baf4fe3670b03158fa989d7cbcae",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        254.94,
+        120.4,
+        288.78
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.2",
+      "name": "Upper-limb dermatomes",
+      "nameKey": "upper-limb dermatomes",
+      "referenceId": "nmc-2024-ref:ba4509d582769d89c146894c17bcfde410c78a50008c85cc8fe22eb376f46e9b",
+      "sourceBodySha256": "c2e03da212f068d2fe84d74307eb94e704c3dfcef08051c011e60260b0e72a63",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        288.78,
+        120.4,
+        320.4
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.3",
+      "name": "Elbow, forearm and wrist articulations",
+      "nameKey": "elbow, forearm and wrist articulations",
+      "referenceId": "nmc-2024-ref:05a5be385809af60ef88625e5189aec776e4e304cd670e841c4a9ea976622d22",
+      "sourceBodySha256": "25ffb44a3271c60268ce639f5d0bf469a04d0e6a79f7d24d02e2a9e4983592e3",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        320.4,
+        120.4,
+        378.42
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.4",
+      "name": "Clavicular and hand joints",
+      "nameKey": "clavicular and hand joints",
+      "referenceId": "nmc-2024-ref:5ddadb40c6658a0b937dc9fb68b28425c485b8e124cc812c963c3a04c065e076",
+      "sourceBodySha256": "ba43230e7451ccfb093dbb0bdd1920dac02b442d876307637debf1b6513285ff",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        378.42,
+        120.4,
+        424.14
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.5",
+      "name": "Upper-limb radiographic anatomy",
+      "nameKey": "upper-limb radiographic anatomy",
+      "referenceId": "nmc-2024-ref:6270de4b81c15ac027f36acce045cdbfe1eacbe4afddd96f6ba87baf320bb2eb",
+      "sourceBodySha256": "1b88782a1bcceee3d8afe6cb87e1dfe3f495dba844978f6530f1ddcb76f34f3a",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        424.14,
+        120.4,
+        469.86
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.6",
+      "name": "Upper-limb surface landmarks",
+      "nameKey": "upper-limb surface landmarks",
+      "referenceId": "nmc-2024-ref:af5f8fc1eae8b15793590b73009fa961a9895591ee54610c16cc058423996a04",
+      "sourceBodySha256": "7a1957980b1ca67783fc02cbf66664a9c56f96211cdb5b5438aba064eaf02e46",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 115,
+      "sourceRowBBox": [
+        51.2,
+        469.86,
+        120.4,
+        514.92
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.7",
+      "name": "Upper-limb surface vessels and muscle testing",
+      "nameKey": "upper-limb surface vessels and muscle testing",
+      "referenceId": "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193",
+      "sourceBodySha256": "572f430b1f1a40127a8f84c354eba792173f1647e667685bbf4c24a2670883f3",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        121.6,
+        166.74
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN13.8",
+      "name": "Upper-limb development",
+      "nameKey": "upper-limb development",
+      "referenceId": "nmc-2024-ref:7f52bb02825bd4ad557a5c66928527d4f671ab8964d75ee91f847771d412b331",
+      "sourceBodySha256": "93a82c61ca5be0003c9aa03a2f0fb42061db3a1ddeaac5cfc3f913957ca6868b",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        166.74,
+        121.6,
+        185.1
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN14.1",
+      "name": "Lower-limb osteology",
+      "nameKey": "lower-limb osteology",
+      "referenceId": "nmc-2024-ref:ff7f8b51d80cc237e3f9226ef2c306417b5a12439884b5adc8c30e6a1b08443a",
+      "sourceBodySha256": "b6e48195a28f4d2120686bc572b13f302627e9f3fb42fcf6a3e20804f6dfb1ee",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        205.26,
+        121.6,
+        250.62
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN14.2",
+      "name": "Articulations of lower-limb bones",
+      "nameKey": "articulations of lower-limb bones",
+      "referenceId": "nmc-2024-ref:62ce1f726bef55290f67424a98971ed330ce87f4803ce1c7a110e7eecca52ccc",
+      "sourceBodySha256": "4c71ff374af561425da179b76861b6e9be679214c065d359b3d63be89b3823a6",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        250.62,
+        121.6,
+        275.67
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN14.3",
+      "name": "Lower-limb ossification",
+      "nameKey": "lower-limb ossification",
+      "referenceId": "nmc-2024-ref:381c04a9db0fcd0b08bb4b4dae97f855e44680b0741724d5c8f4d48f7ae3214f",
+      "sourceBodySha256": "3ebece9ddbd100a7bf311a35d32d0c7b972bebd9ddbc39d3e9294e1e2c186f78",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        275.67,
+        121.6,
+        311.82
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN14.4",
+      "name": "Articulated foot osteology",
+      "nameKey": "articulated foot osteology",
+      "referenceId": "nmc-2024-ref:520fe53d813791b33707681d0dc1d0caab57eb74f799a5f9c7e36f203817d877",
+      "sourceBodySha256": "089128ea0d4ff06ffb8d084bd13adc20bd4f90b6a712ec32f26c6cf674d33fe7",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        311.82,
+        121.6,
+        336.24
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN15.1",
+      "name": "Anterior thigh nerves and vessels",
+      "nameKey": "anterior thigh nerves and vessels",
+      "referenceId": "nmc-2024-ref:479bbb461502380abf33ce8f7623581d2eb27f2d02606843e6b0ff4f7f0fb558",
+      "sourceBodySha256": "c977c570d89252109d42ec9f016dbb740bc403a210afd072aafecb306fcdfe80",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        358.56,
+        121.6,
+        403.56
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN15.2",
+      "name": "Anterior thigh muscles",
+      "nameKey": "anterior thigh muscles",
+      "referenceId": "nmc-2024-ref:1d64ae490e9686d45f46472f6c2df11a93197f6ca15e4a9e02ae0b1d2c35536e",
+      "sourceBodySha256": "098a10c76c8d36c097a5031198f4113bbd1932ef5787c02916ae371df7c0c7bc",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        403.56,
+        121.6,
+        446.4
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN15.3",
+      "name": "Femoral triangle",
+      "nameKey": "femoral triangle",
+      "referenceId": "nmc-2024-ref:d26298682b8728aa1afcb28752031fcc37ff39769ec406598573d5a08ffc997d",
+      "sourceBodySha256": "e2029c171de1d94e7cce2299a19b30199639a937c06c87d08e038499c231b3d4",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        446.4,
+        121.6,
+        488.94
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN15.4",
+      "name": "Psoas abscess and femoral hernia",
+      "nameKey": "psoas abscess and femoral hernia",
+      "referenceId": "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097",
+      "sourceBodySha256": "aeba8a51fa7f9b5739fc29293a1e6407a9eb07ed1eddf0bd44a5efb282713749",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 116,
+      "sourceRowBBox": [
+        51.2,
+        488.94,
+        121.6,
+        520.98
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN15.5",
+      "name": "Adductor canal",
+      "nameKey": "adductor canal",
+      "referenceId": "nmc-2024-ref:79d5cd2de126b412bba5c0e08f71e3d8869384d15a9ef69d19ba3d2a52e12dee",
+      "sourceBodySha256": "cb9f8b55175289b7da8d4ae38f55a3e82f2ee0d304520ea82fa99a742c06eb6d",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        121.9,
+        153.78
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.1",
+      "name": "Gluteal muscles",
+      "nameKey": "gluteal muscles",
+      "referenceId": "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0",
+      "sourceBodySha256": "664c5f2631c9a9b612e7bbb3fa8cabd4059a26df73f7a79871f9aa494c0280ff",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        175.38,
+        121.9,
+        221.46
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.2",
+      "name": "Deep gluteal structures",
+      "nameKey": "deep gluteal structures",
+      "referenceId": "nmc-2024-ref:04b52db7603275f1626b3832e6eb8aead0190220fe43bd4ac3c212a39d5ce744",
+      "sourceBodySha256": "7428322693aa8f3a13bdf059fcea5199bd5c858b790abf8b1d85793bea7ec346",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        221.46,
+        121.9,
+        271.14
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.3",
+      "name": "Trendelenburg sign",
+      "nameKey": "trendelenburg sign",
+      "referenceId": "nmc-2024-ref:1afea6d5613032589049bc2b0e7c63a436cc4961524c66fdb521524a6156c969",
+      "sourceBodySha256": "2597192f120524a57c6ba208a192f725bc00113c39f177993b4061ecc138f4ad",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        271.14,
+        121.9,
+        302.82
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.4",
+      "name": "Hamstrings",
+      "nameKey": "hamstrings",
+      "referenceId": "nmc-2024-ref:f43e25f4e2c0b3fc42797d62e7f92f1ce9bff9fc1539c0951c152693fd697999",
+      "sourceBodySha256": "e1c85bffe07d2dfa981c32ebe82c69411faf787d81438d6780ad2fb4a04be9d6",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        302.82,
+        121.9,
+        351.78
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.5",
+      "name": "Posterior thigh nerves and vessels",
+      "nameKey": "posterior thigh nerves and vessels",
+      "referenceId": "nmc-2024-ref:e7f7babb5d2e6d204670efdf623b2ae0a04853724e6be4b00c5ed5e0ddda33a8",
+      "sourceBodySha256": "4b0f0355a2b22cc58084126c9254b70aa2660177fde17994b631366233ba18ee",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        351.78,
+        121.9,
+        396.78
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN16.6",
+      "name": "Popliteal fossa",
+      "nameKey": "popliteal fossa",
+      "referenceId": "nmc-2024-ref:bdf6f19cbd523cb26dfa952215bba6d089a62004aefd079673dba66a0afc8058",
+      "sourceBodySha256": "8a2593779abf7cf0941c908d43a758fe1873c0bd69d9cc81f78253b9e08ecfa5",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        396.78,
+        121.9,
+        443.58
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN17.1",
+      "name": "Hip joint",
+      "nameKey": "hip joint",
+      "referenceId": "nmc-2024-ref:9fe342b917e167ce93036ce395fdef62a764ec5d21167781b7c50b117b2b7a1c",
+      "sourceBodySha256": "56d6faee99ddaab750a6a60f4d009e75912c51ba6d1673899ddbf727fea7ea07",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 117,
+      "sourceRowBBox": [
+        51.2,
+        463.74,
+        121.9,
+        524.94
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN17.2",
+      "name": "Femoral neck fracture complications",
+      "nameKey": "femoral neck fracture complications",
+      "referenceId": "nmc-2024-ref:2ee94c0d59f2e183f6f2ad916c2a93f9356ac516f445169dadcecc7f455ae06a",
+      "sourceBodySha256": "5109cc18310d68f9ef801694bf14be36bd380340bd5b7f0d6a6b57f26f47b616",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        121.9,
+        139.38
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN17.3",
+      "name": "Hip dislocation and replacement",
+      "nameKey": "hip dislocation and replacement",
+      "referenceId": "nmc-2024-ref:7d6a4cfb34eb08d2c5c646fabb3620cc9c7c1dd626f35fab154632f077b14834",
+      "sourceBodySha256": "f86eaa02c9064291b523a072b899245912155f5b42ac533ac2821e05f4f357b4",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        139.38,
+        121.9,
+        168.84
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.1",
+      "name": "Anterior leg muscles",
+      "nameKey": "anterior leg muscles",
+      "referenceId": "nmc-2024-ref:01bc9025274d1a2da0b08a28aa89db16957cac44d9175c68b537876aac56a2e3",
+      "sourceBodySha256": "6678cb37d16505b4262f0e22704e2c546d8c140a80dd50d74e66f017055ee22f",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        189,
+        121.9,
+        238.32
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.2",
+      "name": "Anterior leg nerves and vessels",
+      "nameKey": "anterior leg nerves and vessels",
+      "referenceId": "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d",
+      "sourceBodySha256": "8d2b285be80774c8f8104a5fca5767c82b164baf65ecaeb0ba242df3e69fb326",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        238.32,
+        121.9,
+        284.76
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.3",
+      "name": "Foot drop",
+      "nameKey": "foot drop",
+      "referenceId": "nmc-2024-ref:d845c826d2adc3ba610ab1af4df85dd347b9f0972ee10b7d168f19735557ffb7",
+      "sourceBodySha256": "fb4676069e9638b8a276bbc50623792e5d8202ec59c57a2c448992a149b6dbba",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        284.76,
+        121.9,
+        313.2
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.4",
+      "name": "Knee joint",
+      "nameKey": "knee joint",
+      "referenceId": "nmc-2024-ref:46d6efe442fe599e3b6869de2ea88b77c60a95b6ce8ed2820e279ba12779cc98",
+      "sourceBodySha256": "46215b6105a906a38b1fab71b0b5a92ce869c10ae5be14fa1048377f059890be",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        313.2,
+        121.9,
+        374.04
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.5",
+      "name": "Knee locking and unlocking",
+      "nameKey": "knee locking and unlocking",
+      "referenceId": "nmc-2024-ref:a17dd2ebc34a32a399d71bbbe4b38ac85047935fae51aff4da2a411593fea9b4",
+      "sourceBodySha256": "26f68c8c85e404c2be4ed2234644d1bb5297b780840e1d1b471e7cdd7bc211dc",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        374.04,
+        121.9,
+        409.38
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.6",
+      "name": "Knee injuries",
+      "nameKey": "knee injuries",
+      "referenceId": "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6",
+      "sourceBodySha256": "cce64c0d826eff3656a40ee76b4ce9d6b14adabed32dd8386c00f20091258920",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        409.38,
+        121.9,
+        440.28
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN18.7",
+      "name": "Knee osteoarthritis",
+      "nameKey": "knee osteoarthritis",
+      "referenceId": "nmc-2024-ref:f8136b28f5424469ba824150a990ff0d923ba53ea207989d671bf28449d6d89f",
+      "sourceBodySha256": "b418e2a940eb7a3f48831398f1f6fbc5b9c0733c90b1f3880e9d366b0b75bebf",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        440.28,
+        121.9,
+        472.38
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.1",
+      "name": "Posterior leg muscles",
+      "nameKey": "posterior leg muscles",
+      "referenceId": "nmc-2024-ref:62facc9aeea483cc862e56fb10ad77883baa0c873adee6fd24777c7dacd3c13f",
+      "sourceBodySha256": "cd3ff86543bb9861a7c1a8ad95df6b1b24e08f0502352d7d4d85d02edcbc36d4",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 118,
+      "sourceRowBBox": [
+        51.2,
+        493.56,
+        121.9,
+        543.3
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.2",
+      "name": "Posterior leg nerves and vessels",
+      "nameKey": "posterior leg nerves and vessels",
+      "referenceId": "nmc-2024-ref:38af0ecbbbed67c1c4fcf162fb776bcfa9cd16b8d45ac5ea116aa1b4a154aee5",
+      "sourceBodySha256": "4b0ed068df58103a51a331691dec34244434a6a993be3afd6d20b69c9c5a35f5",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        122.2,
+        157.74
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.3",
+      "name": "Calf muscle pump",
+      "nameKey": "calf muscle pump",
+      "referenceId": "nmc-2024-ref:2e0b2f79fde9fd8873611ba4dd082373e7ee2296e134ac6c3530b752d5552e64",
+      "sourceBodySha256": "a81bd2db0cb77a5e9e7132200f9ecced6cf6c11d3a39d0b989b2d8d6c1f026ce",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        157.74,
+        122.2,
+        186.24
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.4",
+      "name": "Calcaneal tendon rupture",
+      "nameKey": "calcaneal tendon rupture",
+      "referenceId": "nmc-2024-ref:8b4eea168cc4e100b07aeedefd6ad8bbe6111865c9f23701cd599c06daecc4d3",
+      "sourceBodySha256": "0815952300ed24cdf6f0c64b4d8392d1aa656e65e46358463ebb700681889eac",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        186.24,
+        122.2,
+        217.14
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.5",
+      "name": "Foot arches",
+      "nameKey": "foot arches",
+      "referenceId": "nmc-2024-ref:27e5b2f657657770a608a05c1daa65056c82c10d6c31f1f9efb804dabf8d7f83",
+      "sourceBodySha256": "3dc76b4a238fa5eed20be1ff575bc6a24d7e6a0b18a42f4ea8d257928fcd91d6",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        217.14,
+        122.2,
+        248.46
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.6",
+      "name": "Flatfoot and clubfoot",
+      "nameKey": "flatfoot and clubfoot",
+      "referenceId": "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7",
+      "sourceBodySha256": "2497a328e66b0b1791184f543c462f6da39439a0d69dcaa073eabba688ab34bc",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        248.46,
+        122.2,
+        279.06
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN19.7",
+      "name": "Metatarsalgia and plantar fasciitis",
+      "nameKey": "metatarsalgia and plantar fasciitis",
+      "referenceId": "nmc-2024-ref:b19dc92a5ade5a745c4602c7a7847f06ec644c5e0652fca69413ec137f8a7ba3",
+      "sourceBodySha256": "8b4c511512de3015ea201765444d752d47aa61efac0e76bce2d5f597eef25457",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        279.06,
+        122.2,
+        307.5
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.1",
+      "name": "Ankle and tibiofibular joints",
+      "nameKey": "ankle and tibiofibular joints",
+      "referenceId": "nmc-2024-ref:d7d88ad2bef1b2ecff6b8e29c47fc629f04db22ef070ae792e0cd0f0a0248a04",
+      "sourceBodySha256": "1804dd2fc3f04969e82c89c2debe9acfe4ef3462588c670c062a69d1078bd0b9",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        324.06,
+        122.2,
+        369.78
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.2",
+      "name": "Subtalar and transverse tarsal joints",
+      "nameKey": "subtalar and transverse tarsal joints",
+      "referenceId": "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9",
+      "sourceBodySha256": "6e7f94c190416f5fe78ee5476abe2f39907cf54b20563a24f4942c313034a709",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        369.78,
+        122.2,
+        400.23
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.3",
+      "name": "Lower-limb fascia and regional maps",
+      "nameKey": "lower-limb fascia and regional maps",
+      "referenceId": "nmc-2024-ref:472bc2ba1949c51ee4d644ee364d0d9fbfb925ae6df4ccda35fd261e2e7a19d3",
+      "sourceBodySha256": "af8d9a3bbef1615883943da7a7476dac4491251b46c3f488f9006a7e51f79e62",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        400.23,
+        122.2,
+        445.74
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.4",
+      "name": "Inguinal lymph node enlargement",
+      "nameKey": "inguinal lymph node enlargement",
+      "referenceId": "nmc-2024-ref:95fc7a97e4132b8b1e2dedf0c325c62d2585711405044f40b535ec910eb5a706",
+      "sourceBodySha256": "91c2a0e9504a36011e04a7d754b61c8f33b91c5e270370c1bc0f648692eeafe7",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        445.74,
+        122.2,
+        478.44
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.5",
+      "name": "Varicose veins and deep venous thrombosis",
+      "nameKey": "varicose veins and deep venous thrombosis",
+      "referenceId": "nmc-2024-ref:46e6e2d33ef24a79bb0e451e2d4434023f484d7eaa80462ebb0cef78f0133f89",
+      "sourceBodySha256": "ee6b5a1ddb09578c5c2dc251bd7efc3dad06b1dcd6d86f4ebca0790392ade86c",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        478.44,
+        122.2,
+        508.32
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.6",
+      "name": "Lower-limb radiographic anatomy",
+      "nameKey": "lower-limb radiographic anatomy",
+      "referenceId": "nmc-2024-ref:858e8f48f05b0f45bbb0b51bdeea921dec8fc2c20d58c45f2a66b7272ee6d0f8",
+      "sourceBodySha256": "c2d5520805fc3c8c73f581aca3db81d0185fad816cfca336588e50258946c7a0",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 119,
+      "sourceRowBBox": [
+        51.2,
+        508.32,
+        122.2,
+        546.48
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.7",
+      "name": "Lower-limb palpable bone landmarks",
+      "nameKey": "lower-limb palpable bone landmarks",
+      "referenceId": "nmc-2024-ref:8796db8f06e0dd2fbbb8ef7f673fe1c67820e982a9efbede851cdfe0c28cc6a2",
+      "sourceBodySha256": "ff9d62c88f7efe420d55b6a39d267b2c47a3efae3bced5b6ad875a9a38a5cfb6",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        122.2,
+        221.52
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.8",
+      "name": "Lower-limb arterial palpation",
+      "nameKey": "lower-limb arterial palpation",
+      "referenceId": "nmc-2024-ref:872c821c71f91956971041ec68d4287d53a49a2bd3ab2c5fe28d1647c4098985",
+      "sourceBodySha256": "f68882fd4437c10d53b9e2889b7d7fa1e84f3a2148abc5685599907ce5e172cd",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        221.52,
+        122.2,
+        266.52
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.9",
+      "name": "Lower-limb surface projections",
+      "nameKey": "lower-limb surface projections",
+      "referenceId": "nmc-2024-ref:59904bca8c5e099a97ac91bfc1f5620ba318cd70ba9d0616f51ee601a983d069",
+      "sourceBodySha256": "e8ae8440f9cd20431867f6e61d6863cf7168fd08ed1116e6ef9528f340f79a1c",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        266.52,
+        122.2,
+        326.64
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN20.10",
+      "name": "Lower-limb development",
+      "nameKey": "lower-limb development",
+      "referenceId": "nmc-2024-ref:27ebafc9dd36840feb19f5b88bfe1de96eb80b63aa6bb9c8a4891d4808474571",
+      "sourceBodySha256": "6e567b3f102e03eb842b3cc18bbf77623db6d0b36801d820be5ee388d16e39ea",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        326.64,
+        122.2,
+        351.48
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.1",
+      "name": "Typical thoracic bones",
+      "nameKey": "typical thoracic bones",
+      "referenceId": "nmc-2024-ref:0292af8852d59c884264f205427b9486df44ada9a6a9e15ae71baad9ce1f10a6",
+      "sourceBodySha256": "6237e925d689eb641419c8dccf7ceec2364eb25f2452a51c94562c880024bfe7",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        369.84,
+        122.2,
+        419.52
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.2",
+      "name": "Atypical ribs and vertebrae",
+      "nameKey": "atypical ribs and vertebrae",
+      "referenceId": "nmc-2024-ref:9cdb077f28058ac07e99f5dea5ad8024b816112df0888b4297cd56eb71d37422",
+      "sourceBodySha256": "0bf14c3b5c2c67855f57339f1678c5723d27e8adade412a690e429e84a588e13",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        419.52,
+        122.2,
+        468.84
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.3",
+      "name": "Thoracic boundaries and compression",
+      "nameKey": "thoracic boundaries and compression",
+      "referenceId": "nmc-2024-ref:527f01d307e798344f0c150a74488cfdb478a722d127540b9b699ee83442489f",
+      "sourceBodySha256": "7a2e953a0985cf9866ae74e55f0f734cb2029f806d74fea57867e2b6a5ec1477",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 120,
+      "sourceRowBBox": [
+        51.2,
+        468.84,
+        122.2,
+        518.88
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.4",
+      "name": "Intercostal muscle layers",
+      "nameKey": "intercostal muscle layers",
+      "referenceId": "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b",
+      "sourceBodySha256": "b41793ad40cd4fd009a96cde25cbb1411b673125f470e5197422aebc9054aa89",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        122.2,
+        153.42
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.5",
+      "name": "Typical intercostal nerve",
+      "nameKey": "typical intercostal nerve",
+      "referenceId": "nmc-2024-ref:f7ce9230447298db1dc4724ca06fa67eea0784eb9fe1a41fde0a43919d0a8b8d",
+      "sourceBodySha256": "0c2d880245acbbefe79fabd84aebb94327810f984b50b28dc8bbb81862f899c6",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        153.42,
+        122.2,
+        198.78
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.6",
+      "name": "Intercostal and internal thoracic vessels",
+      "nameKey": "intercostal and internal thoracic vessels",
+      "referenceId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256",
+      "sourceBodySha256": "86f4175df2af07a1ac35d192f31774937c37709865d18ce244b1bc30d67298d7",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        198.78,
+        122.2,
+        248.46
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.7",
+      "name": "Atypical intercostal nerves and upper and lower thoracic arteries",
+      "nameKey": "atypical intercostal nerves and upper and lower thoracic arteries",
+      "referenceId": "nmc-2024-ref:0d693efb73df8db7abceadcc3e489d82cef8e1add5608ebe586288d642ead4b0",
+      "sourceBodySha256": "1d05603ffb7333b72bc6b8571903d9c35584bac66fcd9aa9e776accb182a6e1f",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        248.46,
+        122.2,
+        297.84
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.8",
+      "name": "Sternal and rib–vertebral joints",
+      "nameKey": "sternal and rib–vertebral joints",
+      "referenceId": "nmc-2024-ref:0414c5aec52c98880d6d149ce8533ba676a246717162aa144c196019fbf07879",
+      "sourceBodySha256": "10da916185b08422784227b6c7705d94cb7c277e9cc2ebf89769b5f451ed6a91",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        297.84,
+        122.2,
+        347.1
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.9",
+      "name": "Thoracic mechanics of breathing",
+      "nameKey": "thoracic mechanics of breathing",
+      "referenceId": "nmc-2024-ref:4d82f84b69b5f5c515d6e663552c9ebd839245825941c30274bd5fd31ec11dfb",
+      "sourceBodySha256": "c0843528b62f5e34c72dbcde7244900efbd1e3e32fe3a5a152dcbe9fe76e0346",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        347.1,
+        122.2,
+        397.86
+      ],
+      "mode": "performance-and-knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.10",
+      "name": "Costal cartilage joints",
+      "nameKey": "costal cartilage joints",
+      "referenceId": "nmc-2024-ref:83fc0126888430e6d792b4411571d60eb55cbe2644441857af4ba8418502c591",
+      "sourceBodySha256": "80c668f094518b68f2f34ac171ead48d1e52c2e81f8859f1eef02c4b64e43176",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        397.86,
+        122.2,
+        432.42
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN21.11",
+      "name": "Mediastinal compartments",
+      "nameKey": "mediastinal compartments",
+      "referenceId": "nmc-2024-ref:8849d33451cb86b18c2bbbaf75ccec1c6550ab4a2bd7e180f49d6aaba7bfe02f",
+      "sourceBodySha256": "b39a065b2937d6438582b8fd53d327378e72acaf484b70ce0d26549aa459072d",
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        432.42,
+        122.2,
+        464.46
+      ],
+      "mode": "knowledge",
+      "sourceEdition": "nmc-cbme-2024-09-12",
+      "reviewStatus": "not-reviewed-in-this-continuation",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    }
+  ]
+}

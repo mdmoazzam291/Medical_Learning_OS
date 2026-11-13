@@ -1,0 +1,237 @@
+{
+  "checkedHead": "3f7bad6a17ea73cd523921c031b257e7e0d161a2",
+  "input": "docs/evidence/2026-11-13-nmc-paediatrics-review-reconciliation.json",
+  "linked": 8,
+  "pending": 14,
+  "nextAction": "Compare the 14 unmatched appearances against their own official curriculum rows before proposing canonical links.",
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:487d87ca6936e5b3a2ba15318d9eb5de386788c2aed951ba381c1551a6c1e23a",
+      "code": "PY4.12",
+      "subject": "physiology",
+      "evidence": null,
+      "nameKey": "abdominal examination",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:b7619d2fef04a6e56abf78df13c081161dcdc977ff4dd2acc93ab1cbfb55f0a5",
+      "code": "SU28.18",
+      "subject": "surgery",
+      "evidence": null,
+      "nameKey": "abdominal examination",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:62a7ad1fcdb97dcd9ba1d194e797fa59f8a60c6b1d31f29e52cc9c1aa602db75",
+      "code": "EN4.24",
+      "subject": "ent",
+      "evidence": null,
+      "nameKey": "allergic rhinitis",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:61894540e63ec9266d9aef2ab2d8bd316f4ceda61507007f134b7ebd42eea048",
+      "code": "GM9.12",
+      "subject": "medicine",
+      "evidence": null,
+      "nameKey": "anaemia counselling",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
+          "status": "editorial-source-scope-aligned"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:94ba6e62e3264cd9c37edae043b6f76b7419b2d62746657a6b17930bd25476e9",
+      "code": "PY5.16",
+      "subject": "physiology",
+      "evidence": null,
+      "nameKey": "cardiovascular examination",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:5dc4a1b473fcd477bd7e70e2536073dbc32325426d29595689ab7266147dfafc",
+      "code": "OR9.1",
+      "subject": "orthopaedics",
+      "evidence": null,
+      "nameKey": "cerebral palsy",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:16cc6337e4dc687b9c50e7e455bbcd7c2f60cc30520b9cbb4a9de60fa131f591",
+      "code": "CM5.13",
+      "subject": "community-medicine",
+      "evidence": null,
+      "nameKey": "complementary feeding counselling",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:80831489d8e48f93e30c622131ffaa6f6ced58ecdd3efc2ecae248bbe6053fe9",
+      "code": "GM17.9",
+      "subject": "medicine",
+      "evidence": null,
+      "nameKey": "csf interpretation",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
+          "status": "editorial-source-scope-aligned"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+      "code": "PA34.3",
+      "subject": "pathology",
+      "evidence": null,
+      "nameKey": "csf interpretation",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+          "status": "editorial-source-scope-aligned"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+      "code": "MI3.6",
+      "subject": "microbiology",
+      "evidence": null,
+      "nameKey": "enteric fever",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "code": "MI3.2",
+      "subject": "microbiology",
+      "evidence": null,
+      "nameKey": "infective endocarditis",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+          "status": "editorial-source-scope-aligned"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "code": "PA26.7",
+      "subject": "pathology",
+      "evidence": null,
+      "nameKey": "infective endocarditis",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+          "status": "editorial-source-scope-held"
+        },
+        {
+          "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+          "status": "draft-scope-correction"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+      "code": "GM1.19",
+      "subject": "medicine",
+      "evidence": null,
+      "nameKey": "infective endocarditis",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
+          "status": "editorial-source-scope-aligned"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+      "code": "FM10.19",
+      "subject": "forensic-medicine",
+      "evidence": null,
+      "nameKey": "informed consent",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+      "code": "OG35.10",
+      "subject": "obstetrics-gynaecology",
+      "evidence": null,
+      "nameKey": "informed consent",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a5a935c5cd83cf75e008f0d4addc8d1b3bb3c60fa5f292749d6c074796cc0df",
+      "code": "PS11.1",
+      "subject": "psychiatry",
+      "evidence": null,
+      "nameKey": "intellectual disability",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d7a22e04abe70fcd38761f0f0f1bfb1bcd5432d354fd88ef11c4c577c05c2d0",
+      "code": "PA23.7",
+      "subject": "pathology",
+      "evidence": null,
+      "nameKey": "malabsorption",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
+      "code": "GM14.7",
+      "subject": "medicine",
+      "evidence": null,
+      "nameKey": "obesity examination",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+          "status": "editorial-source-scope-held"
+        },
+        {
+          "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+          "status": "draft-scope-correction"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:7420ca22950910ff212852e418b217352a784777a866ba65f70908c44cff1e0f",
+      "code": "GM14.6",
+      "subject": "medicine",
+      "evidence": null,
+      "nameKey": "obesity history",
+      "matches": [
+        {
+          "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+          "status": "editorial-source-scope-held"
+        },
+        {
+          "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+          "status": "draft-scope-correction"
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+      "code": "AS9.1",
+      "subject": "anaesthesia",
+      "evidence": null,
+      "nameKey": "peripheral iv access",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:55fb66ee35faa87961af9899f33c46dfd8e667979ee16bb995111236d28eeb19",
+      "code": "PA24.5",
+      "subject": "pathology",
+      "evidence": null,
+      "nameKey": "portal hypertension",
+      "matches": []
+    },
+    {
+      "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+      "code": "BC14.3",
+      "subject": "biochemistry",
+      "evidence": null,
+      "nameKey": "urinalysis",
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "f6fa629cb699ea764b69070ed2897ad2c1227258",
+  "sourceQueue": "2026-11-13-nmc-anatomy-medicine-additional-appearance-queue.json",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 25,
+  "reviewed": 25,
+  "scopeAligned": 20,
+  "held": 5,
+  "cumulative": {
+    "reviewedSourceReferences": 891,
+    "alignedSourceRows": 753,
+    "heldSourceRows": 138,
+    "pendingSourceReferences": 53,
+    "distinctNamesReviewed": 797
+  },
+  "mappingAccepted": false,
+  "rows": [
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:dc0a169df46847b0f9bdd20e890a251f731b41b1cae6972219cbfd262f816961",
+      "subjectId": "medicine",
+      "code": "GM26.7",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "83d8bc5ad483c8273ad36534047e026f9ab0a696005cb233585e6e44cf3ed246",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        201.42,
+        102.7,
+        228.72
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5",
+      "subjectId": "medicine",
+      "code": "GM26.13",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "95f4659a8e2df733cb023f9fb88e6cb8307e225e39d072cce9d01b6e80deb73f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        419.22,
+        102.7,
+        460.08
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:e911855673dc645dafc7b35cdb8e7c6e72ae2099e9fd8e6e8b5b12be601c01c6",
+      "subjectId": "medicine",
+      "code": "GM26.25",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "94d121a5fb0498c21361c1ba5e81832a7b152ae0fa9b20e36193039cff009020",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        433.02,
+        102.7,
+        460.32
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da",
+      "subjectId": "medicine",
+      "code": "GM26.11",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "8cfb048f291717eda7575fe1f898e6708bda0e6aab1e7ad47b605ba05615fd5f",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        337.62,
+        102.7,
+        378.42
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly address common causes alongside clinical features and management."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7",
+      "subjectId": "medicine",
+      "code": "GM26.20",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "d90330a351b4fb4cf378bf5961b04659d6ea14bba71dee6142afaefe044178c9",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        269.46,
+        102.7,
+        310.14
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Include pathogenesis alongside epidemiology, findings and management."
+    },
+    {
+      "nameKey": "lifestyle counselling",
+      "referenceId": "nmc-2024-ref:00dee43e80d11016d1285a0253bde7c729129b4037dab2a42d838e9474875c23",
+      "subjectId": "medicine",
+      "code": "GM8.15",
+      "pdfPage": 296,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a5a2342d39137f0409ebfabeb133b281fe878c0cbe6eaf623ae45b8527ec33a2",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        212.76,
+        102.7,
+        253.56
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "marrow indications and interpretation",
+      "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
+      "subjectId": "medicine",
+      "code": "GM9.8",
+      "pdfPage": 297,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        179.52,
+        102.7,
+        207.06
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "nutritional and vitamin deficiencies",
+      "referenceId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd",
+      "subjectId": "medicine",
+      "code": "GM24.5",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "fc765d36ba33a3e16cfc61a0e2ed7a0faee76bc5fa56506d4c2a5d9cab8801a9",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        249.78,
+        102.7,
+        277.14
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "nutritional and vitamin deficiencies",
+      "referenceId": "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac",
+      "subjectId": "medicine",
+      "code": "GM24.4",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "84655102c88a1a3203de6534da64d736875846f111836846e9e6753be3647e88",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        222.42,
+        102.7,
+        249.78
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obesity aetiology",
+      "referenceId": "nmc-2024-ref:0a09c6200e02082f0892296b48eaa0428c9c1eb77eb8ec449ee526166a4ba3fa",
+      "subjectId": "medicine",
+      "code": "GM14.2",
+      "pdfPage": 304,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "23ce992c3f0ea0dc6a06cd284f884b6ef60ef6edc5083359c0fef23216ee2bcd",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        275.52,
+        102.7,
+        302.82
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obesity definition and measurement",
+      "referenceId": "nmc-2024-ref:54a1f93e36d81d04333afc06047a3c4bfbe8834b1995b2a08d6bdbca449043b1",
+      "subjectId": "medicine",
+      "code": "GM14.1",
+      "pdfPage": 304,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "40ac1a224522461ef4bc0f3a6fe1d7de1d409564bac3cfe7ca2c809b7cb92a59",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        228.24
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add an explicit definition and demonstrate measurement."
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:008abb4c46f776b5f22d8efb2efc2ecb4f7e19fc17333423eb68c4bddb93021f",
+      "subjectId": "medicine",
+      "code": "GM28.12",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "4135691289a4dd249822c5968ca04748d66dd606f59edc4d011627e1d9af3e82",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        268.92,
+        102.7,
+        323.16
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:05c1ce97a34725729551d9f1c0b48f0ff19d72d9831e8ad7d621a9a6c30aaeb1",
+      "subjectId": "medicine",
+      "code": "GM28.26",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "09aae82cea3bddd0ea9bc24ce399629f486c0b117a2368347a1a2edef2a7dace",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        425.7,
+        102.7,
+        466.5
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:4235f37fae96d72a0c300b79131cf5a8fa5ff76c6757b635cbf43d328a0bdc92",
+      "subjectId": "medicine",
+      "code": "GM28.13",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "e45e0184aa8e6491c9cbfb0bd78b754e0fb685f97d5eda68c0486616b65bf982",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        323.16,
+        102.7,
+        377.28
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:48bb791b6573389fbcc447b299bd108f0e6bae4cc475155df207e39b75611a2f",
+      "subjectId": "medicine",
+      "code": "GM28.2",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "8566bb922e8832d6a1c049e18516c1e7a1028b7285041eb519c01aa6eba775dc",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        323.16,
+        102.7,
+        350.52
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:593fbf281f729342e053705fea70dcacd8d770adfea5cf5c9adab542ac151799",
+      "subjectId": "medicine",
+      "code": "GM28.16",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "e3b4ea13247d7bf541a37de7955a764efb35ae439532858bac6ee9a1acecdf1e",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        472.38,
+        102.7,
+        499.62
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33",
+      "subjectId": "medicine",
+      "code": "GM28.19",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a9a5465440dd3709607965a93a98bb108962a536c3a27f9a7db33d9a58905598",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        207.84
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly explain oxygen therapy principles alongside use in each setting."
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:5f50684e9f22cf7f77ad9d57c19646c621ce7eb7063ba39099db664ee4e0069a",
+      "subjectId": "medicine",
+      "code": "GM28.23",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "4bdad5a625d59f45147fe6e151585993224dce1e135bd6897b11443fdeaff7d7",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        303.36,
+        102.7,
+        344.04
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include wider societal effects."
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466",
+      "subjectId": "medicine",
+      "code": "GM28.14",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "6296a821301ef4a0e1c030d9fac499aa5fe615f7f88bd746ed9cf713a01a42f1",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        377.28,
+        102.7,
+        431.46
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "subjectId": "medicine",
+      "code": "GM28.18",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "dd90ab4237ef57e07068c682c58fe6abbbba3fb67e920845bc68e1d9359338b7",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:8582cfa58b68545fe3fa5238c1bd3f78f1ccce70304ee4f9ccc5510b5c27d244",
+      "subjectId": "medicine",
+      "code": "GM28.25",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "499c40e44359cadbb6fa87c63947769b290290a05b9f1c79bdfee72c0f1983fd",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        384.78,
+        102.7,
+        425.7
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:886dee005e41e1f59891ef595cb9715c80ea61144f94cd51fd42715bf32c9254",
+      "subjectId": "medicine",
+      "code": "GM28.10",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "23634de60196732e1f3de1f6c0c9500ef049f4d120229b96396cc1eb7381d388",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        228.24
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9796b269dd278e3836ff46235ad51996899440eabf58fd49d8c729cb08b273d5",
+      "subjectId": "medicine",
+      "code": "GM28.21",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "6bb2db6349c308dec20474d7677e49f3659791fe5e64371de2659795c1c62cc3",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        248.76,
+        102.7,
+        276
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc",
+      "subjectId": "medicine",
+      "code": "GM28.11",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a69ae001eba0401ed24f8f384a3ebe0ab7b7fec4bce1ebedfdfdbd54ba665a37",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        228.24,
+        102.7,
+        268.92
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9dceaf8a439558ee3d17458b94b83f1a373bab8ba522824854eed90d8fbcc3e3",
+      "subjectId": "medicine",
+      "code": "GM28.4",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "79f567c097c4c01a4bdb8bc39b21a8aed2f9c0b76ac920a69c2fd27abd2ab3f5",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        391.38,
+        102.7,
+        418.62
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

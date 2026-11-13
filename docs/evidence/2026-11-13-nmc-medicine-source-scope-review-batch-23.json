@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "b3ff076c3feb7c50a393272523db18cdf099c0ca",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 25,
+  "reviewed": 25,
+  "scopeAligned": 16,
+  "held": 9,
+  "cumulative": {
+    "reviewedSourceRows": 771,
+    "reviewedDistinctNameKeys": 770,
+    "alignedSourceRows": 678,
+    "heldSourceRows": 93,
+    "unreviewedDistinctNameKeys": 27
+  },
+  "rows": [
+    {
+      "name": "Movement disorder history",
+      "nameKey": "movement disorder history",
+      "code": "GM19.3",
+      "sourceReferenceId": "nmc-2024-ref:03524623522aeef48f3eee5238211d90fad3e66ff5d52dcebf82426dfa97e9ef",
+      "sourcePdfPage": 311,
+      "sourceRowBBox": [
+        44.2,
+        503.64,
+        102.7,
+        544.56
+      ],
+      "sourceBodySha256": "655d37f5b32ab621328d6656eaf3c831f3a4e9c9e834f3ebc733414cae15652d",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add explicit documentation and distinguish aggravating from precipitating factors."
+    },
+    {
+      "name": "Movement disorder examination",
+      "nameKey": "movement disorder examination",
+      "code": "GM19.4",
+      "sourceReferenceId": "nmc-2024-ref:444d383d655bd844811d72f8aa9e5b3632ff5dab12fe844942745f0452224da3",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        167.04
+      ],
+      "sourceBodySha256": "ba563e77cc73beeeee37f3b35329a2432db247e6db65f1b4d401f20ef39ecc80",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Movement disorder differential",
+      "nameKey": "movement disorder differential",
+      "code": "GM19.5",
+      "sourceReferenceId": "nmc-2024-ref:abfd4bd23dea591d46dd318afdebea5baa1ac20d41be15e80292e2fa8e2f2302",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        167.04,
+        102.7,
+        207.78
+      ],
+      "sourceBodySha256": "fca5acf517fc4b9991dd3d40df3d6387de02ecd60fa32b01922ca33fc3154e04",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit documentation and presentation of the differential are missing."
+    },
+    {
+      "name": "Movement disorder localization",
+      "nameKey": "movement disorder localization",
+      "code": "GM19.6",
+      "sourceReferenceId": "nmc-2024-ref:6706c09951dbdb58f13d5b133083da0b18de6aa49c3d605822a1edd00d2025ae",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        207.78,
+        102.7,
+        261.96
+      ],
+      "sourceBodySha256": "d2d80c7d8cd85f9ceee88ec8097d0fcf17ec8e22db43c4d53ad11234d39624ab",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Movement disorder imaging",
+      "nameKey": "movement disorder imaging",
+      "code": "GM19.7",
+      "sourceReferenceId": "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        261.96,
+        102.7,
+        302.76
+      ],
+      "sourceBodySha256": "aeadff21ac7ada61056189a449dc9ff31a691a4d8a9a8941de6b6f85c6549251",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Parkinsonism medicines",
+      "nameKey": "parkinsonism medicines",
+      "code": "GM19.8",
+      "sourceReferenceId": "nmc-2024-ref:0295bc03d1774782660bbea9cde38b0a9c7ae62bfe2549abb039196761766ea5",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        302.76,
+        102.7,
+        347.34
+      ],
+      "sourceBodySha256": "5adedb6ff347a24963677b505ac557b735150520f677409b901b5988e56078c4",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Procedural movement disorder treatment",
+      "nameKey": "procedural movement disorder treatment",
+      "code": "GM19.9",
+      "sourceReferenceId": "nmc-2024-ref:0d9b0246064bb712f6e202acc6c14d76031c88e68ce8857f3e9ea25d154fd0db",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        347.34,
+        102.7,
+        374.7
+      ],
+      "sourceBodySha256": "dbc8b4053229235ec19d1158dee07db62402632b225d12c92cd54caeb960e140",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Seizure terminology",
+      "nameKey": "seizure terminology",
+      "code": "GM20.1",
+      "sourceReferenceId": "nmc-2024-ref:7ac74fb4c006a04505aa2d45acc25947d8b1251ca9c1a504f8cec12f02ce7bf4",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        394.56,
+        102.7,
+        435.36
+      ],
+      "sourceBodySha256": "8c1d7a24cbf9d9bcaa4a4b0e9e6574fe72b663657f6fe1e1e80ee593da221e91",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit definitions are missing."
+    },
+    {
+      "name": "Epilepsy assessment",
+      "nameKey": "epilepsy assessment",
+      "code": "GM20.2",
+      "sourceReferenceId": "nmc-2024-ref:984ca90e1c9b3306d0b4423caf1611399c72726c586c6830b398464f38028b91",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        435.36,
+        102.7,
+        489.54
+      ],
+      "sourceBodySha256": "fee2ff54bcccca42d3e1fa3e4c58039c398d07df777e8e7c7927b401665ff250",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make epilepsy pathophysiology explicit alongside classification and evaluation."
+    },
+    {
+      "name": "Epilepsy treatment",
+      "nameKey": "epilepsy treatment",
+      "code": "GM20.3",
+      "sourceReferenceId": "nmc-2024-ref:bba83b23139206962dc31a612f818b5286ff4fb48113169c58a054c32de725df",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        489.54,
+        102.7,
+        516.9
+      ],
+      "sourceBodySha256": "fcb22b1d3b0116a3575439171babf91d1c68e97e38ef28fde8128d11beb1da61",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Seizure safety counselling",
+      "nameKey": "seizure safety counselling",
+      "code": "GM20.4",
+      "sourceReferenceId": "nmc-2024-ref:addbc993a77461fc0943428f7dcfb828f81dd6e75126e949ccc20d55aecbc3a5",
+      "sourcePdfPage": 312,
+      "sourceRowBBox": [
+        44.2,
+        516.9,
+        102.7,
+        544.26
+      ],
+      "sourceBodySha256": "3d2199cf488ee64832574934bc78744e1de59bb65eae61d2bd1df5b08dadbe4f",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Acute seizure care",
+      "nameKey": "acute seizure care",
+      "code": "GM20.5",
+      "sourceReferenceId": "nmc-2024-ref:106c25b4fd2b5b2e848f0c8d72987fba0060929bdcc1c23a8477623a9a0c4be2",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        161.16
+      ],
+      "sourceBodySha256": "ab8db9168632c1863bed2fe10caffa474b109dba2bb83c29988b5366c0c2588b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Local venomous snakes",
+      "nameKey": "local venomous snakes",
+      "code": "GM21.1",
+      "sourceReferenceId": "nmc-2024-ref:36c8e98a8417d17ef54265da962a0309a14501163fd5eb480bc8ffe21e9c0f29",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        181.02,
+        102.7,
+        208.32
+      ],
+      "sourceBodySha256": "aacef56b69b2752b92d48037508fdf66011353fd8b88191b2d3186c78d1ed945",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Specify comparison of distinguishing marks alongside image identification."
+    },
+    {
+      "name": "Snakebite first aid",
+      "nameKey": "snakebite first aid",
+      "code": "GM21.2",
+      "sourceReferenceId": "nmc-2024-ref:1d6ca71af40cf37a310d83752c7248aadbf52d0ac6d7d1b48cc696c259859dc8",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "2176592efa10ca759bb909cbb33a568e608f1c04aa248ba49e47956607c6b014",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Snakebite stabilization",
+      "nameKey": "snakebite stabilization",
+      "code": "GM21.3",
+      "sourceReferenceId": "nmc-2024-ref:b35d042cedf3f843c3d5ed7f9201b9168ebac06456575c4b2bb2c09cbd3ae3db",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        276.48
+      ],
+      "sourceBodySha256": "f4f03659704df3fe4dc40ab79c10ea55c5f54f12f09d0b767ceb339af4479ae1",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Snakebite history",
+      "nameKey": "snakebite history",
+      "code": "GM21.4",
+      "sourceReferenceId": "nmc-2024-ref:5fb38bfc7b245056f57c47486c946015b2778dbcc3a190f5eceaf454aa5a9b0b",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        276.48,
+        102.7,
+        317.4
+      ],
+      "sourceBodySha256": "4dc8eae4259d1e00676374ac030b306e64b0b45a19893f4423561a50e2d3d2cd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Specify history presentation and record any available description of the snake without requiring capture."
+    },
+    {
+      "name": "Snakebite examination",
+      "nameKey": "snakebite examination",
+      "code": "GM21.5",
+      "sourceReferenceId": "nmc-2024-ref:69a375d863fe556e0d293dc9ce3c6dfa6bf268913b6a76b532ca2ea4fa1776e4",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        317.4,
+        102.7,
+        371.46
+      ],
+      "sourceBodySha256": "89e0e1eecd92e6a66a64343931f1d2ed0f3b53f7b2adfac6025728ef0c571ee9",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit presentation of examination findings is missing."
+    },
+    {
+      "name": "Snakebite investigations",
+      "nameKey": "snakebite investigations",
+      "code": "GM21.6",
+      "sourceReferenceId": "nmc-2024-ref:5aa6e33c08ed9f38227c6eab3788d85fe46ec17eb81f198d819d5e46107c3564",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        371.46,
+        102.7,
+        412.26
+      ],
+      "sourceBodySha256": "86298f8382e3c13a26c8bcc3cd0a9e4ac569d3f3d37c779749dc3d351d6e444d",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Antivenom",
+      "nameKey": "antivenom",
+      "code": "GM21.7",
+      "sourceReferenceId": "nmc-2024-ref:3ac3b5f32a49a18d435d812ae82c09f14f787b600711fdbb811a9983fba1f27f",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        412.26,
+        102.7,
+        439.62
+      ],
+      "sourceBodySha256": "e75e6069663082a803c0aa29a59cd3717896a808da154ae396f6af1538d4f9ca",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make antivenom pharmacology and hypersensitivity reactions explicit."
+    },
+    {
+      "name": "Scorpion envenomation",
+      "nameKey": "scorpion envenomation",
+      "code": "GM21.8",
+      "sourceReferenceId": "nmc-2024-ref:2bf3055d041cd01462529be003e6ad8fbaa1e3a129e8574f221ceffb654eb84f",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        439.62,
+        102.7,
+        466.92
+      ],
+      "sourceBodySha256": "bcdbe081ca8caee0bb1c934f0cc2c27afa5bef2d6cedd1a61803d5c6316057cf",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Stings and other envenomation",
+      "nameKey": "stings and other envenomation",
+      "code": "GM21.9",
+      "sourceReferenceId": "nmc-2024-ref:86bb5ed59c4667b35390c7d43ed8c5d4ae5d03f44dccee6bf7e4257b03dc4454",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        466.92,
+        102.7,
+        494.28
+      ],
+      "sourceBodySha256": "f88f15a31edb097e701644ed2c7ed28d9ee4455da35ccf57f8f4808eee75c579",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Specify the scope for other envenomation alongside bee stings."
+    },
+    {
+      "name": "Poisoning stabilization",
+      "nameKey": "poisoning stabilization",
+      "code": "GM22.1",
+      "sourceReferenceId": "nmc-2024-ref:694edf9edbfeb2254a578130093e4634eecb9603b207407e943f34312b3c1712",
+      "sourcePdfPage": 313,
+      "sourceRowBBox": [
+        44.2,
+        514.14,
+        102.7,
+        541.56
+      ],
+      "sourceBodySha256": "5941d6332fe4edde0921cf01ca5b1d2a2895fffbb0da51a201c6f565206b45da",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Plant toxins",
+      "nameKey": "plant toxins",
+      "code": "GM22.2",
+      "sourceReferenceId": "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "a12b5ad7245e84bf1d1aa2906ddb0e18862eaa41f49cdcd58b4b06e6fda479ed",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Corrosive poisoning",
+      "nameKey": "corrosive poisoning",
+      "code": "GM22.3",
+      "sourceReferenceId": "nmc-2024-ref:93cf6911b765d8751bc0bd9ba7fcb0171934907ee828161851acd280546f3a65",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "6f7e7b4a4d5553eaf6a7396bdb7ef1f410fa801e5e9180fffb4530a03decdf47",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Drug overdose",
+      "nameKey": "drug overdose",
+      "code": "GM22.4",
+      "sourceReferenceId": "nmc-2024-ref:b6c85011abe9c462548a3f4fb36e8bbf9e3ce77bd04e45676dbe76884ec51c67",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        215.22
+      ],
+      "sourceBodySha256": "7f44a949e0cc5f0259db1d2cefec194b3ee8228e699a31a2b4f496b5c4af8e6d",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

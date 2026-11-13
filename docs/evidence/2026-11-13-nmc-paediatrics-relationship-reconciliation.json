@@ -1,0 +1,837 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "5252e41e94e8dada7db7f66d00fcf522899cfd72",
+  "status": "draft",
+  "method": "Exact name and endpoint-reference join; no new semantic acceptance.",
+  "counts": {
+    "shared-task-family": 6,
+    "shared-topic-candidate": 8,
+    "population-specific-tasks": 3,
+    "reuse-provisional-topic": 4,
+    "hold-narrow-link": 1
+  },
+  "appearances": 22,
+  "rows": [
+    {
+      "nameKey": "abdominal examination",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:56dc863b9df869cea9a3efe6adffaaca2af93c37d41671f03e9c0b81a02322ee",
+        "code": "PE23.19",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:487d87ca6936e5b3a2ba15318d9eb5de386788c2aed951ba381c1551a6c1e23a",
+        "code": "PY4.12",
+        "subject": "physiology",
+        "evidence": null,
+        "nameKey": "abdominal examination",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "assessment-context",
+      "rationale": "Volunteer or simulation versus paediatric organomegaly and ascites assessment",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Volunteer or simulation versus paediatric organomegaly and ascites assessment",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "abdominal examination",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:56dc863b9df869cea9a3efe6adffaaca2af93c37d41671f03e9c0b81a02322ee",
+        "code": "PE23.19",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:b7619d2fef04a6e56abf78df13c081161dcdc977ff4dd2acc93ab1cbfb55f0a5",
+        "code": "SU28.18",
+        "subject": "surgery",
+        "evidence": null,
+        "nameKey": "abdominal examination",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "broader-workflow",
+      "rationale": "Surgery adds investigations and treatment planning",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Surgery adds investigations and treatment planning",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "allergic rhinitis",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:2301693b81005a49d481d148ed0f0235b248dda7cb44a9ef60ddf917928bddc8",
+        "code": "PE28.1",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:62a7ad1fcdb97dcd9ba1d194e797fa59f8a60c6b1d31f29e52cc9c1aa602db75",
+        "code": "EN4.24",
+        "subject": "ent",
+        "evidence": null,
+        "nameKey": "allergic rhinitis",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "ENT adds diagnostic workflow while Paediatrics includes prevention",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "ENT adds diagnostic workflow while Paediatrics includes prevention",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "anaemia counselling",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+        "code": "PE26.16",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:61894540e63ec9266d9aef2ab2d8bd316f4ceda61507007f134b7ebd42eea048",
+        "code": "GM9.12",
+        "subject": "medicine",
+        "evidence": null,
+        "nameKey": "anaemia counselling",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json",
+            "status": "editorial-source-scope-aligned"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "distinct-population",
+      "rationale": "Preserve general and paediatric counselling scopes",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "population-specific-tasks",
+      "decisionRationale": "Preserve general and paediatric counselling scopes",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "cardiovascular examination",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:c49c8ff30f0abb8fcbb68476cc3cc086fbf580a143559346431500b4f7400d4a",
+        "code": "PE22.8",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:94ba6e62e3264cd9c37edae043b6f76b7419b2d62746657a6b17930bd25476e9",
+        "code": "PY5.16",
+        "subject": "physiology",
+        "evidence": null,
+        "nameKey": "cardiovascular examination",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "assessment-context",
+      "rationale": "Volunteer or simulation versus independent paediatric cardiovascular examination",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Volunteer or simulation versus independent paediatric cardiovascular examination",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "cerebral palsy",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:86a1049ee9dd7f89b89d4152ea3c5e9a28bbf611101c5bb7975a1c4ef517d631",
+        "code": "PE27.10",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:5dc4a1b473fcd477bd7e70e2536073dbc32325426d29595689ab7266147dfafc",
+        "code": "OR9.1",
+        "subject": "orthopaedics",
+        "evidence": null,
+        "nameKey": "cerebral palsy",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Preserve orthopaedic assessment and paediatric management facets",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Preserve orthopaedic assessment and paediatric management facets",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "complementary feeding counselling",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:f1316dc70af7255cb77d49e7f76e821f9f32156434472bf1b500b394b26e293a",
+        "code": "PE8.5",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:16cc6337e4dc687b9c50e7e455bbcd7c2f60cc30520b9cbb4a9de60fa131f591",
+        "code": "CM5.13",
+        "subject": "community-medicine",
+        "evidence": null,
+        "nameKey": "complementary feeding counselling",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Community Medicine specifies dietary diversity and age-specific counselling",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Community Medicine specifies dietary diversity and age-specific counselling",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "csf interpretation",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
+        "code": "PE27.13",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:80831489d8e48f93e30c622131ffaa6f6ced58ecdd3efc2ecae248bbe6053fe9",
+        "code": "GM17.9",
+        "subject": "medicine",
+        "evidence": null,
+        "nameKey": "csf interpretation",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json",
+            "status": "editorial-source-scope-aligned"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "same-task-family",
+      "rationale": "Preserve each source-specific CSF interpretation context",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Preserve each source-specific CSF interpretation context",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "csf interpretation",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
+        "code": "PE27.13",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+        "code": "PA34.3",
+        "subject": "pathology",
+        "evidence": null,
+        "nameKey": "csf interpretation",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+            "status": "editorial-source-scope-aligned"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "same-task-family",
+      "rationale": "Preserve laboratory and paediatric interpretation contexts",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-task-family",
+      "decisionRationale": "Preserve laboratory and paediatric interpretation contexts",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "enteric fever",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+        "code": "PE31.12",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+        "code": "MI3.6",
+        "subject": "microbiology",
+        "evidence": null,
+        "nameKey": "enteric fever",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Microbiology adds pathogen classification and laboratory diagnosis",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-decisions.json",
+      "disposition": "reuse-provisional-topic",
+      "decisionRationale": "Share Enteric fever with separate microbiology and paediatric clinical tasks.",
+      "provisionalCandidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Enteric fever",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+            "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11"
+          ]
+        }
+      ],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+        "code": "PE22.5",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+        "code": "MI3.2",
+        "subject": "microbiology",
+        "evidence": null,
+        "nameKey": "infective endocarditis",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+            "status": "editorial-source-scope-aligned"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Keep microbiology and paediatric clinical objectives separate",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Keep microbiology and paediatric clinical objectives separate",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+        "code": "PE22.5",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+        "code": "PA26.7",
+        "subject": "pathology",
+        "evidence": null,
+        "nameKey": "infective endocarditis",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+            "status": "editorial-source-scope-held"
+          },
+          {
+            "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+            "status": "draft-scope-correction"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Pathology adds gross and microscopic findings",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Pathology adds gross and microscopic findings",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [
+        {
+          "code": "PA26.7",
+          "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+          "disposition": "draft-scope-correction",
+          "proposalPacket": "docs/evidence/2026-11-13-nmc-cross-subject-geriatric-held-scope-proposals.json",
+          "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+          "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
+          "editorialVerdict": "addresses-documented-gap",
+          "sourceVerification": "official-text-layer-evidence-linked",
+          "correctionAccepted": false,
+          "mappingAccepted": false,
+          "sourceEvidence": "docs/evidence/2026-11-13-nmc-routine-editorial-source-check.json",
+          "draftScopeRevision": "Include gross and microscopic pathology alongside cause, mechanism, diagnosis and complications of infective endocarditis.",
+          "revisedDraftStatus": "revised-draft",
+          "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
+          "assessmentAudit": "source-level-recorded",
+          "officialAssessmentEvidence": {
+            "domain": "K",
+            "level": "KH",
+            "suggestedAssessmentCell": "Written/ Viva voce",
+            "sourceCodeLine": 13543
+          }
+        }
+      ],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+        "code": "PE22.5",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+        "code": "GM1.19",
+        "subject": "medicine",
+        "evidence": null,
+        "nameKey": "infective endocarditis",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json",
+            "status": "editorial-source-scope-aligned"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Keep Medicine and Paediatrics clinical scopes separate",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Keep Medicine and Paediatrics clinical scopes separate",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "informed consent",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+        "code": "PE24.23",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+        "code": "FM10.19",
+        "subject": "forensic-medicine",
+        "evidence": null,
+        "nameKey": "informed consent",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "distinct-task",
+      "rationale": "Forensic Medicine covers consent rules and definitions",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-decisions.json",
+      "disposition": "reuse-provisional-topic",
+      "decisionRationale": "Share Informed consent as a topic. Preserve forensic knowledge and paediatric consent performance objectives.",
+      "provisionalCandidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Informed consent",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+            "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e"
+          ]
+        }
+      ],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "informed consent",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+        "code": "PE24.23",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+        "code": "OG35.10",
+        "subject": "obstetrics-gynaecology",
+        "evidence": null,
+        "nameKey": "informed consent",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-task-family",
+      "rationale": "Obstetrics consent for examination or procedure differs from paediatric scenario",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-decisions.json",
+      "disposition": "reuse-provisional-topic",
+      "decisionRationale": "Share Informed consent as a topic. Preserve paediatric and obstetric assessment contexts.",
+      "provisionalCandidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Informed consent",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+            "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a"
+          ]
+        }
+      ],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "intellectual disability",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:6757250f310296f334644748dc2211ad7e7c8b8fafef5f191fad9564dd3c1315",
+        "code": "PE27.9",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:6a5a935c5cd83cf75e008f0d4addc8d1b3bb3c60fa5f292749d6c074796cc0df",
+        "code": "PS11.1",
+        "subject": "psychiatry",
+        "evidence": null,
+        "nameKey": "intellectual disability",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Psychiatry describes the disorder while Paediatrics includes clinical management",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Psychiatry describes the disorder while Paediatrics includes clinical management",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "malabsorption",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:0258fc0d522a8820c3a40da696208a5811784250b7cb8938897cce08d6066ce4",
+        "code": "PE23.12",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:0d7a22e04abe70fcd38761f0f0f1bfb1bcd5432d354fd88ef11c4c577c05c2d0",
+        "code": "PA23.7",
+        "subject": "pathology",
+        "evidence": null,
+        "nameKey": "malabsorption",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Pathology focuses on causes and laboratory diagnosis",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Pathology focuses on causes and laboratory diagnosis",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "obesity examination",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+        "code": "PE11.4",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
+        "code": "GM14.7",
+        "subject": "medicine",
+        "evidence": null,
+        "nameKey": "obesity examination",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+            "status": "editorial-source-scope-held"
+          },
+          {
+            "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+            "status": "draft-scope-correction"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "distinct-population",
+      "rationale": "General Medicine and paediatric examination requirements differ",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "population-specific-tasks",
+      "decisionRationale": "General Medicine and paediatric examination requirements differ",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [
+        {
+          "code": "PE11.4",
+          "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+          "disposition": "draft-scope-correction",
+          "proposalPacket": "docs/evidence/2026-11-13-nmc-cross-subject-geriatric-held-scope-proposals.json",
+          "reviewPacket": "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
+          "wordingReview": "docs/evidence/2026-11-13-nmc-remaining-correction-wording-review.json",
+          "editorialVerdict": "wording-refinement-proposed",
+          "sourceVerification": "official-text-layer-evidence-linked",
+          "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+          "correctionAccepted": false,
+          "mappingAccepted": false,
+          "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+          "revisedDraftStatus": "revised-draft"
+        },
+        {
+          "code": "GM14.7",
+          "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
+          "disposition": "draft-scope-correction",
+          "proposalPacket": "docs/evidence/2026-11-13-nmc-medicine-held-scope-proposals-gm10-gm17.json",
+          "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+          "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
+          "editorialVerdict": "addresses-documented-gap",
+          "sourceVerification": "official-text-layer-evidence-linked",
+          "correctionAccepted": false,
+          "mappingAccepted": false,
+          "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-03.json",
+          "draftScopeRevision": "Include general examination, abdominal obesity measurement, secondary causes and comorbidities. Perform, document and demonstrate.",
+          "revisedDraftStatus": "revised-draft",
+          "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
+          "assessmentAudit": "source-level-recorded",
+          "officialAssessmentEvidence": {
+            "domain": "S",
+            "level": "SH",
+            "suggestedAssessmentCell": "Skills assessment",
+            "sourceCodeLine": 22749
+          }
+        }
+      ],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "obesity history",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+        "code": "PE11.3",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:7420ca22950910ff212852e418b217352a784777a866ba65f70908c44cff1e0f",
+        "code": "GM14.6",
+        "subject": "medicine",
+        "evidence": null,
+        "nameKey": "obesity history",
+        "matches": [
+          {
+            "path": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+            "status": "editorial-source-scope-held"
+          },
+          {
+            "path": "docs/evidence/2026-11-13-nmc-held-correction-source-verification-inventory.json",
+            "status": "draft-scope-correction"
+          }
+        ],
+        "sourceCheck": null
+      },
+      "proposedRelationship": "distinct-population",
+      "rationale": "General Medicine and paediatric history requirements differ",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "population-specific-tasks",
+      "decisionRationale": "General Medicine and paediatric history requirements differ",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [
+        {
+          "code": "GM14.6",
+          "referenceId": "nmc-2024-ref:7420ca22950910ff212852e418b217352a784777a866ba65f70908c44cff1e0f",
+          "disposition": "draft-scope-correction",
+          "proposalPacket": "docs/evidence/2026-11-13-nmc-medicine-held-scope-proposals-gm10-gm17.json",
+          "reviewPacket": "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json",
+          "wordingReview": "docs/evidence/2026-11-13-nmc-medicine-correction-wording-review-gm10-gm17.json",
+          "editorialVerdict": "addresses-documented-gap",
+          "sourceVerification": "official-text-layer-evidence-linked",
+          "correctionAccepted": false,
+          "mappingAccepted": false,
+          "sourceEvidence": "docs/evidence/2026-11-13-nmc-priority-editorial-source-check-02.json",
+          "draftScopeRevision": "Elicit, document and present obesity history with natural history, diet, modifiable risks, family history, secondary-cause clues and motivation for weight loss.",
+          "revisedDraftStatus": "revised-draft",
+          "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-objective-amendment-crosswalk.json",
+          "assessmentAudit": "no-KH-or-SH-mode-conflict-detected"
+        }
+      ],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "peripheral iv access",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+        "code": "PE15.3",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+        "code": "AS9.1",
+        "subject": "anaesthesia",
+        "evidence": null,
+        "nameKey": "peripheral iv access",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "broader-scope",
+      "rationale": "Anaesthesia specifies IV access without restricting it to peripheral access",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-decisions.json",
+      "disposition": "hold-narrow-link",
+      "decisionRationale": "Hold AS9.1 under Peripheral IV cannulation. The Anaesthesia row leaves access type unspecified; the Paediatrics procedure remains a narrower candidate.",
+      "provisionalCandidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Peripheral IV cannulation",
+          "labelMatch": false,
+          "sharedReferences": [
+            "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+            "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2"
+          ]
+        }
+      ],
+      "openSourceScopeHolds": [],
+      "linkHeld": true,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "portal hypertension",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:dad2c575fa210205f7d8e9da06a5be03e3d16f5e7e0e894a3aa08b853dfc287f",
+        "code": "PE23.16",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:55fb66ee35faa87961af9899f33c46dfd8e667979ee16bb995111236d28eeb19",
+        "code": "PA24.5",
+        "subject": "pathology",
+        "evidence": null,
+        "nameKey": "portal hypertension",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "same-topic",
+      "rationale": "Pathology emphasizes mechanisms and complications",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json",
+      "disposition": "shared-topic-candidate",
+      "decisionRationale": "Pathology emphasizes mechanisms and complications",
+      "provisionalCandidates": [],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    },
+    {
+      "nameKey": "urinalysis",
+      "paediatrics": {
+        "referenceId": "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+        "code": "PE20.8",
+        "subject": "pediatrics",
+        "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+      },
+      "other": {
+        "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+        "code": "BC14.3",
+        "subject": "biochemistry",
+        "evidence": null,
+        "nameKey": "urinalysis",
+        "matches": [],
+        "sourceCheck": "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
+      },
+      "proposedRelationship": "broader-scope",
+      "rationale": "Biochemistry includes urine constituents and dipstick demonstration",
+      "mappingAccepted": false,
+      "decisionEvidence": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-decisions.json",
+      "disposition": "reuse-provisional-topic",
+      "decisionRationale": "Share Urinalysis with distinct paediatric analyte interpretation and biochemistry constituents and dipstick tasks.",
+      "provisionalCandidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Urinalysis",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+            "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba"
+          ]
+        }
+      ],
+      "openSourceScopeHolds": [],
+      "linkHeld": false,
+      "correctionAccepted": false,
+      "learnerActivation": false
+    }
+  ]
+}
