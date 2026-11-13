@@ -1,6 +1,6 @@
 {
-  "checkedHead": "25b90544b2d96afa6922481a27f785e1c82c4c05",
-  "checkedAt": "2026-11-13T04:16:02.899Z",
+  "checkedHead": "92b47336347ecccfe96789b4acd2e35460d6455b",
+  "checkedAt": "2026-11-13T04:26:54.777Z",
   "counts": {
     "official-text-layer-evidence-linked": 40,
     "editorial-review-recorded": 114
@@ -8,7 +8,7 @@
   "heldReferences": 154,
   "correctionProposals": 153,
   "verificationNote": "Official PDF text-layer evidence is linked for 40 references. PDF bytes and rendered pages were not independently checked. GM3.16 remains held with a draft interpretation.",
-  "nextAction": "Reconcile the source findings into revised draft objectives, retaining the unresolved GM7.11 test labels and existing hold states.",
+  "nextAction": "Audit the 114 editorial-review-only references for missing source scope or assessment evidence, prioritizing records with material gaps. Preserve GM7.11 labels pending clarification.",
   "rows": [
     {
       "code": "AN35.2",
@@ -21,7 +21,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "AN35.6",
@@ -214,7 +216,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "SU22.3",
@@ -527,7 +531,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM26.28",
@@ -552,7 +558,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM26.4",
@@ -577,7 +585,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM26.3",
@@ -590,7 +600,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM26.21",
@@ -675,7 +687,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM28.9",
@@ -700,7 +714,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM29.3",
@@ -821,7 +837,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM27.12",
@@ -870,7 +888,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM1.18",
@@ -883,7 +903,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM1.22",
@@ -896,7 +918,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM1.26",
@@ -909,7 +933,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM2.6",
@@ -922,7 +948,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM2.7",
@@ -947,7 +975,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM2.19",
@@ -972,7 +1002,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM3.6",
@@ -985,7 +1017,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM3.7",
@@ -1010,7 +1044,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-gm3-16-source-clarification.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-gm3-16-source-clarification.json",
+      "revisedDraftStatus": "draft-interpretation"
     },
     {
       "code": "GM4.8",
@@ -1047,7 +1083,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM4.11",
@@ -1072,7 +1110,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-01.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM4.14",
@@ -1109,7 +1149,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM11.13",
@@ -1134,7 +1176,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM11.20",
@@ -1195,7 +1239,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM13.7",
@@ -1232,7 +1278,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM13.17",
@@ -1305,7 +1353,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM17.5",
@@ -1342,7 +1392,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM18.6",
@@ -1395,7 +1447,9 @@
       "sourceContinuation": {
         "lines": "23635–23641, 23657–23659",
         "finding": "The row lists short case and OSCE skill assessment. The following page completes the objective with ‘disorder’."
-      }
+      },
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM19.5",
@@ -1408,7 +1462,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM20.1",
@@ -1493,7 +1549,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM22.5",
@@ -1518,7 +1576,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM22.9",
@@ -1531,7 +1591,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM23.5",
@@ -1580,7 +1642,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM7.9",
@@ -1606,7 +1670,9 @@
       "correctionAccepted": false,
       "mappingAccepted": false,
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
-      "openSourceIssue": "The labels RA and DNA are preserved pending clarification."
+      "openSourceIssue": "The labels RA and DNA are preserved pending clarification.",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM7.13",
@@ -1667,7 +1733,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM9.1",
@@ -1692,7 +1760,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM9.11",
@@ -1705,7 +1775,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM10.3",
@@ -1730,7 +1802,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json"
+      "sourceEvidence": "docs/evidence/2026-11-13-nmc-queued-refinement-source-check-02.json",
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections-batch-02.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM10.19",
@@ -1791,7 +1865,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM6.14",
@@ -1828,7 +1904,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "GM15.10",
@@ -1865,7 +1943,9 @@
       "sourceVerification": "official-text-layer-evidence-linked",
       "sourceEvidence": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
       "correctionAccepted": false,
-      "mappingAccepted": false
+      "mappingAccepted": false,
+      "revisedDraftPacket": "docs/evidence/2026-11-13-nmc-source-verified-draft-corrections.json",
+      "revisedDraftStatus": "revised-draft"
     },
     {
       "code": "AN9.1",
@@ -1903,5 +1983,10 @@
       "correctionAccepted": false,
       "mappingAccepted": false
     }
-  ]
+  ],
+  "draftCoverage": {
+    "revisedObjectives": 39,
+    "draftInterpretations": 1,
+    "editorialReviewOnly": 114
+  }
 }
