@@ -1,7 +1,7 @@
 {
-  "checkedHead": "071c2ad819d865309f9e5a18566e8973ef3344d5",
+  "checkedHead": "dd09465bc5ede99ad05a69bc0a04567454d4b513",
   "status": "draft-crosswalk",
-  "nextAction": "Audit all 114 replacement drafts for scope and assessment consistency, then reconcile them into the held-correction inventory.",
+  "nextAction": "Reconcile the 114 audited drafts with the earlier 39 revised drafts and GM3.16 interpretation for the draft milestone.",
   "rows": [
     {
       "code": "AN35.6",
@@ -157,7 +157,7 @@
       "scopeAmendment": "Define and classify pyrexia of unknown origin and cover infectious aetiopathogenesis and diagnostic modalities.",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "revisedDraftLearningTask": "Define pyrexia of unknown origin, describe its types, and discuss the aetiopathogenesis and diagnostic evaluation of infectious causes."
+      "revisedDraftLearningTask": "Define pyrexia of unknown origin and describe its types. Discuss the aetiopathogenesis of infectious causes and the diagnostic methods used to rule them out."
     },
     {
       "code": "PA26.7",
@@ -795,7 +795,7 @@
       "scopeAmendment": "Include FUO mechanisms, causes and clinical manifestations across the source-listed host contexts.",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "revisedDraftLearningTask": "Discuss the pathophysiology, causes and clinical manifestations of fever of unknown origin in immunocompetent and neutropenic patients, hospital-acquired cases and people with HIV."
+      "revisedDraftLearningTask": "Discuss the pathophysiology, causes and clinical manifestations of fever of unknown origin in immunocompetent patients, neutropenic patients, hospitalized patients and people with HIV."
     },
     {
       "code": "GM4.11",
@@ -1011,7 +1011,7 @@
       "scopeAmendment": "Elicit, document and present the stroke speech examination and distinguish speech disorders by lesion site.",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "revisedDraftLearningTask": "Elicit, document and present examination findings in a stroke patient with a speech disorder and explain how to distinguish speech disorders by lesion site."
+      "revisedDraftLearningTask": "Examine a stroke patient with a speech disorder, document and present the findings, and describe how to distinguish speech disorders by lesion site."
     },
     {
       "code": "GM18.14",
@@ -1107,7 +1107,7 @@
       "scopeAmendment": "Retain indications, pharmacology, dosing and adverse reactions including hypersensitivity.",
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "revisedDraftLearningTask": "Describe indications, pharmacology, dosing and adverse reactions of antivenom, including hypersensitivity reactions."
+      "revisedDraftLearningTask": "Enumerate indications for antivenom and describe its pharmacology, dosing and adverse reactions, including hypersensitivity."
     },
     {
       "code": "GM22.5",
@@ -1381,5 +1381,11 @@
       "revisedDraftLearningTask": "Describe the anatomical basis of cubital venipuncture."
     }
   ],
-  "modeReconciliation": "The nine flagged comparisons were against absent review-mode values. The archived task modes are carried forward. Suggested assessment in official evidence remains distinct from the task mode."
+  "modeReconciliation": "The nine flagged comparisons were against absent review-mode values. The archived task modes are carried forward. Suggested assessment in official evidence remains distinct from the task mode.",
+  "semanticScopeAudit": {
+    "reviewed": 114,
+    "wordingUpdated": 4,
+    "basis": "Compared replacement wording to recorded official PDF text findings and source scope amendments.",
+    "assessment": "Original local modes retained. See held-correction-source-verification-inventory.json for official levels and documented differences."
+  }
 }
