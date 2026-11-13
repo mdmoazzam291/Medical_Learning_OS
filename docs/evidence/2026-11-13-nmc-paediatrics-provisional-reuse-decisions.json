@@ -1,0 +1,108 @@
+{
+  "checkedHead": "f7451c922e8d3d6117140fe77fd597bf7002e395",
+  "input": "docs/evidence/2026-11-13-nmc-paediatrics-provisional-reuse-screen.json",
+  "status": "draft",
+  "rows": [
+    {
+      "nameKey": "enteric fever",
+      "paediatricsReference": "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+      "otherReference": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+      "candidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Enteric fever",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+            "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11"
+          ]
+        }
+      ],
+      "codeAliases": [],
+      "mappingAccepted": false,
+      "disposition": "reuse-provisional-topic",
+      "rationale": "Share Enteric fever with separate microbiology and paediatric clinical tasks."
+    },
+    {
+      "nameKey": "informed consent",
+      "paediatricsReference": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+      "otherReference": "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+      "candidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Informed consent",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+            "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e"
+          ]
+        }
+      ],
+      "codeAliases": [],
+      "mappingAccepted": false,
+      "disposition": "reuse-provisional-topic",
+      "rationale": "Share Informed consent as a topic. Preserve forensic knowledge and paediatric consent performance objectives."
+    },
+    {
+      "nameKey": "informed consent",
+      "paediatricsReference": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+      "otherReference": "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+      "candidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Informed consent",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+            "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a"
+          ]
+        }
+      ],
+      "codeAliases": [],
+      "mappingAccepted": false,
+      "disposition": "reuse-provisional-topic",
+      "rationale": "Share Informed consent as a topic. Preserve paediatric and obstetric assessment contexts."
+    },
+    {
+      "nameKey": "peripheral iv access",
+      "paediatricsReference": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+      "otherReference": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+      "candidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Peripheral IV cannulation",
+          "labelMatch": false,
+          "sharedReferences": [
+            "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+            "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2"
+          ]
+        }
+      ],
+      "codeAliases": [],
+      "mappingAccepted": false,
+      "disposition": "hold-narrow-link",
+      "rationale": "Hold AS9.1 under Peripheral IV cannulation. The Anaesthesia row leaves access type unspecified; the Paediatrics procedure remains a narrower candidate."
+    },
+    {
+      "nameKey": "urinalysis",
+      "paediatricsReference": "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+      "otherReference": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+      "candidates": [
+        {
+          "path": "docs/evidence/2026-11-09-nmc-unified-names-only-review-queue.json",
+          "name": "Urinalysis",
+          "labelMatch": true,
+          "sharedReferences": [
+            "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+            "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba"
+          ]
+        }
+      ],
+      "codeAliases": [],
+      "mappingAccepted": false,
+      "disposition": "reuse-provisional-topic",
+      "rationale": "Share Urinalysis with distinct paediatric analyte interpretation and biochemistry constituents and dipstick tasks."
+    }
+  ],
+  "nextAction": "Review the 17 appearances without a provisional reuse match for shared topic or distinct scope."
+}
