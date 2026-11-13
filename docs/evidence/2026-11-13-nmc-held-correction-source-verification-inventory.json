@@ -1,13 +1,13 @@
 {
-  "checkedHead": "83ae8fccc1f0e1db4fe2bf0a907198ea3de3c5d5",
-  "checkedAt": "2026-11-13T05:17:16.019Z",
+  "checkedHead": "0ec9575a2180139c72b6e824006de940114af0b5",
+  "checkedAt": "2026-11-13T05:19:30.444Z",
   "counts": {
     "official-text-layer-evidence-linked": 154
   },
   "heldReferences": 154,
   "correctionProposals": 153,
   "verificationNote": "All 154 held references link to official PDF text-layer evidence. Rendered pages and PDF bytes were not independently verified. Scope amendments are editorial draft changes to apply to the full objectives. GM3.16 remains held with a draft interpretation.",
-  "nextAction": "Complete semantic scope audit of the 114 replacement drafts against official source findings.",
+  "nextAction": "Reconcile the 21 source exceptions against the current branch and resume the broader subject inventory and canonical mapping queues.",
   "rows": [
     {
       "code": "AN35.2",
@@ -2960,5 +2960,19 @@
       "GM14.1"
     ],
     "assessmentDecision": "Retain original local modes as draft metadata. Official levels and suggested assessments describe the source and do not establish local performance certification."
+  },
+  "draftMilestone": {
+    "matchedReferences": 154,
+    "revisedObjectives": 153,
+    "draftInterpretations": 1,
+    "duplicateReferenceIds": 0,
+    "acceptedCorrections": 0,
+    "acceptedMappings": 0,
+    "scopeAuditedCrosswalkObjectives": 114,
+    "openIssues": [
+      "GM3.16 draft interpretation remains held",
+      "GM7.11 source labels RA and DNA remain unresolved",
+      "Independent PDF byte and rendered-page verification pending"
+    ]
   }
 }
