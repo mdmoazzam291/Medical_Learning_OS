@@ -1,3 +1,16 @@
+## NMC Biochemistry source-scope review complete — 2026-11-16T00:15Z
+
+- Writer: Claude, draft PR #421 from remote head `ccc99f4880e61f9fc0b8658591ce29dde8e36c18`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **82** BC references that lacked selected review evidence (BC1.1–BC14.24) against the official NMC 12-09-2024 CBME text: **81 scope-aligned, 1 held** — `BC14.18` (official row lists eleven lab techniques to observe; draft names three). One documented mode exception (BC8.4 dietary advice at KH, practical draft). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints the first Topic 14 code as "14.1" without the BC prefix; BC14.1 is absent from the index and appears in the source-exception records. Not reviewed here.
+- Audit now: **2,232 of 2,607 linked, 375 pending**. Remaining: Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Microbiology (69). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18.
+
+---
+
 ## NMC Pharmacology source-scope review complete (92/92 linked) — 2026-11-16T00:05Z
 
 - Writer: Claude, draft PR #421 from remote head `cf0791e2d66bc1d947b1cde4547ad1db3df61b27`. Parent #415 and main unchanged. Ownership released after remote readback.

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "checkedHead": "cf0791e2d66bc1d947b1cde4547ad1db3df61b27",
+  "checkedHead": "ccc99f4880e61f9fc0b8658591ce29dde8e36c18",
   "scope": "Indexed source references linked to explicitly selected editorial review packets. Missing links are a reconciliation queue, not proof no older review exists. Review evidence is not acceptance.",
   "allSubjectsReviewed": false,
   "indexedNames": 2427,
   "indexedReferences": 2607,
-  "referencesWithReviewEvidence": 2150,
+  "referencesWithReviewEvidence": 2232,
   "originalHoldsStillOpen": 154,
   "originalAnatomyMedicineQueue": {
     "names": 797,
@@ -32,8 +32,8 @@
     {
       "subject": "biochemistry",
       "indexedReferences": 83,
-      "referencesWithReviewEvidence": 1,
-      "referencesWithoutSelectedReviewEvidence": 82,
+      "referencesWithReviewEvidence": 83,
+      "referencesWithoutSelectedReviewEvidence": 0,
       "originalHeldReferences": 0
     },
     {
@@ -651,744 +651,6 @@
       "code": "AN80.6",
       "pdfPage": 148,
       "packet": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
-      "subjectId": "biochemistry",
-      "code": "BC1.1",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5",
-      "subjectId": "biochemistry",
-      "code": "BC10.1",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227",
-      "subjectId": "biochemistry",
-      "code": "BC10.2",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
-      "subjectId": "biochemistry",
-      "code": "BC10.3",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
-      "subjectId": "biochemistry",
-      "code": "BC10.4",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
-      "subjectId": "biochemistry",
-      "code": "BC10.5",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1",
-      "subjectId": "biochemistry",
-      "code": "BC10.6",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
-      "subjectId": "biochemistry",
-      "code": "BC10.7",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
-      "subjectId": "biochemistry",
-      "code": "BC11.1",
-      "pdfPage": 167,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
-      "subjectId": "biochemistry",
-      "code": "BC11.2",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786",
-      "subjectId": "biochemistry",
-      "code": "BC12.1",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
-      "subjectId": "biochemistry",
-      "code": "BC12.2",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78",
-      "subjectId": "biochemistry",
-      "code": "BC12.3",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2",
-      "subjectId": "biochemistry",
-      "code": "BC13.1",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9",
-      "subjectId": "biochemistry",
-      "code": "BC13.2",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2",
-      "subjectId": "biochemistry",
-      "code": "BC13.3",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3",
-      "subjectId": "biochemistry",
-      "code": "BC13.4",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
-      "subjectId": "biochemistry",
-      "code": "BC13.5",
-      "pdfPage": 168,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc",
-      "subjectId": "biochemistry",
-      "code": "BC14.10",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415",
-      "subjectId": "biochemistry",
-      "code": "BC14.11",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b",
-      "subjectId": "biochemistry",
-      "code": "BC14.12",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521",
-      "subjectId": "biochemistry",
-      "code": "BC14.13",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f",
-      "subjectId": "biochemistry",
-      "code": "BC14.14",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d",
-      "subjectId": "biochemistry",
-      "code": "BC14.15",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
-      "subjectId": "biochemistry",
-      "code": "BC14.16",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
-      "subjectId": "biochemistry",
-      "code": "BC14.17",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
-      "subjectId": "biochemistry",
-      "code": "BC14.18",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
-      "subjectId": "biochemistry",
-      "code": "BC14.19",
-      "pdfPage": 171,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
-      "subjectId": "biochemistry",
-      "code": "BC14.2",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
-      "subjectId": "biochemistry",
-      "code": "BC14.20",
-      "pdfPage": 171,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e",
-      "subjectId": "biochemistry",
-      "code": "BC14.21",
-      "pdfPage": 172,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
-      "subjectId": "biochemistry",
-      "code": "BC14.22",
-      "pdfPage": 172,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
-      "subjectId": "biochemistry",
-      "code": "BC14.23",
-      "pdfPage": 172,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
-      "subjectId": "biochemistry",
-      "code": "BC14.24",
-      "pdfPage": 172,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
-      "subjectId": "biochemistry",
-      "code": "BC14.4",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
-      "subjectId": "biochemistry",
-      "code": "BC14.5",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618",
-      "subjectId": "biochemistry",
-      "code": "BC14.6",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
-      "subjectId": "biochemistry",
-      "code": "BC14.7",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4",
-      "subjectId": "biochemistry",
-      "code": "BC14.8",
-      "pdfPage": 169,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
-      "subjectId": "biochemistry",
-      "code": "BC14.9",
-      "pdfPage": 170,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
-      "subjectId": "biochemistry",
-      "code": "BC2.1",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63",
-      "subjectId": "biochemistry",
-      "code": "BC2.2",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183",
-      "subjectId": "biochemistry",
-      "code": "BC2.3",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8",
-      "subjectId": "biochemistry",
-      "code": "BC2.4",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
-      "subjectId": "biochemistry",
-      "code": "BC2.5",
-      "pdfPage": 162,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
-      "subjectId": "biochemistry",
-      "code": "BC3.1",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930",
-      "subjectId": "biochemistry",
-      "code": "BC3.2",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
-      "subjectId": "biochemistry",
-      "code": "BC3.3",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
-      "subjectId": "biochemistry",
-      "code": "BC3.4",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
-      "subjectId": "biochemistry",
-      "code": "BC3.5",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d",
-      "subjectId": "biochemistry",
-      "code": "BC3.6",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
-      "subjectId": "biochemistry",
-      "code": "BC4.1",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e",
-      "subjectId": "biochemistry",
-      "code": "BC4.2",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
-      "subjectId": "biochemistry",
-      "code": "BC4.3",
-      "pdfPage": 163,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
-      "subjectId": "biochemistry",
-      "code": "BC4.4",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
-      "subjectId": "biochemistry",
-      "code": "BC4.5",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6",
-      "subjectId": "biochemistry",
-      "code": "BC4.6",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
-      "subjectId": "biochemistry",
-      "code": "BC4.7",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
-      "subjectId": "biochemistry",
-      "code": "BC4.8",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
-      "subjectId": "biochemistry",
-      "code": "BC5.1",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810",
-      "subjectId": "biochemistry",
-      "code": "BC5.2",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64",
-      "subjectId": "biochemistry",
-      "code": "BC5.3",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
-      "subjectId": "biochemistry",
-      "code": "BC5.4",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
-      "subjectId": "biochemistry",
-      "code": "BC5.5",
-      "pdfPage": 164,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138",
-      "subjectId": "biochemistry",
-      "code": "BC5.6",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
-      "subjectId": "biochemistry",
-      "code": "BC5.7",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
-      "subjectId": "biochemistry",
-      "code": "BC5.8",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
-      "subjectId": "biochemistry",
-      "code": "BC5.9",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf",
-      "subjectId": "biochemistry",
-      "code": "BC6.1",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378",
-      "subjectId": "biochemistry",
-      "code": "BC6.2",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe",
-      "subjectId": "biochemistry",
-      "code": "BC6.3",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
-      "subjectId": "biochemistry",
-      "code": "BC7.1",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
-      "subjectId": "biochemistry",
-      "code": "BC7.2",
-      "pdfPage": 165,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
-      "subjectId": "biochemistry",
-      "code": "BC8.1",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
-      "subjectId": "biochemistry",
-      "code": "BC8.2",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5",
-      "subjectId": "biochemistry",
-      "code": "BC8.3",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d",
-      "subjectId": "biochemistry",
-      "code": "BC8.4",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
-      "subjectId": "biochemistry",
-      "code": "BC8.5",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899",
-      "subjectId": "biochemistry",
-      "code": "BC8.6",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
-      "subjectId": "biochemistry",
-      "code": "BC9.1",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220",
-      "subjectId": "biochemistry",
-      "code": "BC9.2",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
-      "subjectId": "biochemistry",
-      "code": "BC9.3",
-      "pdfPage": 166,
-      "packet": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
       "proposedObjectiveVersionIds": [],
       "status": "needs-review-evidence-reconciliation"
     },
@@ -4388,6 +3650,9 @@
     "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:03fd25676032629e91c723d4619be0ef39f9b1af49b458cc5f1ea849ff0fdddc": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
@@ -4634,6 +3899,9 @@
     "nmc-2024-ref:0cc0c3b5d7ae258066b4c20487b11c634f843c68e466c6475ff81571b504139b": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
     ],
+    "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
     ],
@@ -4769,6 +4037,9 @@
     "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
+    "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:123cf2da586401754dc9ce7f7b3d9cd28e8fb597b23486c5a1c5a790acdf64e6": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
     ],
@@ -4793,6 +4064,9 @@
     "nmc-2024-ref:12f367ef6aa7f60f4e3f2cb512d192fa60095b6b5600a4565a623edb7f17af69": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -4801,6 +4075,9 @@
     ],
     "nmc-2024-ref:13531702db0c47a0875ecd23021646b6cf02e0420049f053b8f8455306fb65f8": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+    ],
+    "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
@@ -4823,6 +4100,9 @@
     "nmc-2024-ref:13e349d33ea10b418aa45c04f7cfbeb4b9d6d430d4c119dfc9d3673117302572": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
     ],
+    "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:1410fca4088b10a3809fe86cfdb8ec87baf7f6a9c7e0dddce54b04afa715fa3b": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -4840,6 +4120,9 @@
     ],
     "nmc-2024-ref:14d8f85d7c3fddd2f96e27383151cbce55986929483a643c925d1a046223ce1a": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
+    ],
+    "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:15169048e5fc0085f3dcdd72adaeab85b80ce1ed0c9f6945380331068e858f77": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
@@ -5027,6 +4310,9 @@
     "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:1d24da38b6959d0d8a25d83250f3af7f5d56ba381b47e3ba57f61d4c1e902188": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
@@ -5092,6 +4378,9 @@
     ],
     "nmc-2024-ref:20110cd0d5d93c2348e7397df35f09325e1cea4bec00b2a61723378446ad91bd": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:2036733ddac04433a6d8101d11e718a9514e7b18421706e7e1f657f23113221a": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
@@ -5246,6 +4535,9 @@
     "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json"
     ],
+    "nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:25bfa2b53d9061e973187eff0affd3151f8054982c5571c0a509700513d9e735": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
@@ -5267,6 +4559,9 @@
     "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
+    "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:26c2ef52b1f02ec88596fcbde26dc73065d38fda1986735b419289e25b036538": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json"
     ],
@@ -5275,6 +4570,9 @@
     ],
     "nmc-2024-ref:26e20d42403ec87f674adff197c4bc8519ece0311884fa718fec1d44472b8800": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
+    ],
+    "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:271b801d03c801760be952e0ac9238dee0330275f8be5d50477fbdd72626afe1": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json"
@@ -5360,6 +4658,9 @@
     "nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:2b42d4a3a94e1c1dd3ff2b38a6161e51955bde01e7260f719f88e5767cba0fa0": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
     ],
@@ -5368,6 +4669,9 @@
     ],
     "nmc-2024-ref:2b77cc843deeedd87fa979fae0f73c6f61d92409550866c3e9be1e0f06622871": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
+    ],
+    "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:2b8cd05a1a13ba7fca6b135edca3b0d0dc6b51d7d626dbf10caec037a1ad6b94": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
@@ -5525,6 +4829,9 @@
     "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
+    "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:3143b84a5ff2c1edd238e86140bc2bc80bd054b39316e380a06d3599c65e20bb": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
@@ -5575,6 +4882,9 @@
     ],
     "nmc-2024-ref:338b443af44e2ea79a1fccda10478d5e89e9b3a8a5eae50d99bf5d3dee09d04e": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
+    ],
+    "nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:33c3bd31c5d585933021c05c73a88661ef9059da31227f46c44417edd8e1455e": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
@@ -5690,6 +5000,9 @@
     "nmc-2024-ref:3811ace99f346fa1ac7e5cd04874142105fcf4ab46dc52b7a0db5ce70c618828": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:381c04a9db0fcd0b08bb4b4dae97f855e44680b0741724d5c8f4d48f7ae3214f": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
     ],
@@ -5801,6 +5114,9 @@
     "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
     ],
@@ -5825,8 +5141,14 @@
     "nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:3dd9e6928e81193943342590354dc0f8d512a1e02da9f761c16436a7a9bf88ca": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json"
@@ -6155,6 +5477,9 @@
     "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
+    "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:4a13a0b360443a80d45c7929f798b5679eeac9a49d937d58ad8493d142834a5e": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
     ],
@@ -6166,6 +5491,9 @@
     ],
     "nmc-2024-ref:4aaa195b5704fc88a254fa8caec68079d28e376842f5b54025257993f881fc30": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:4acd36b2afea7ddd9a88df7486551638f52f0cc3573e5bd1b3086acb670e8d5d": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
@@ -6188,6 +5516,9 @@
     "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:4bf83a849f00290959bfedd15ea17b215245991079a1a5d28ca9e33759698adb": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
@@ -6208,6 +5539,9 @@
     ],
     "nmc-2024-ref:4cfb57cbb4654450f0f78415956074772e91f2464e1678e9cf787a10c3314c12": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
+    ],
+    "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:4d6da4cc1317ef47b1af2644b046cab53e9500a461f8c091255efa323e2a2171": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-04.json"
@@ -6254,6 +5588,9 @@
     "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
+    "nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:4edd3d0519e95c9e6a93cf41543f65d03c2982cb17ff18a7d8b206d77ba29b7d": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json"
     ],
@@ -6280,6 +5617,9 @@
     ],
     "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json"
+    ],
+    "nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:507046ef740ad1c0468663109d5ebb8d6ab08d0db6f4b3587acdbe51dfa0a4ce": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -6410,6 +5750,9 @@
     "nmc-2024-ref:541a07207128053c96cc5130d4b85b96c3b4edbb900d77efd6b1e45a9b988e97": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json"
     ],
+    "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:54831bd78a798bf51c732a65367d1b530b82d9c5c32413eee2126de36afd6fd1": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
     ],
@@ -6418,6 +5761,9 @@
     ],
     "nmc-2024-ref:54ac0ade90f468c362407a96f77cb66ee4837405c7616a99ee8d039a4e53e8f7": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+    ],
+    "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:550966e6ed5b47facda1dbf149fee5e49fc464110669a446fa4b292d71ad9ded": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
@@ -6488,6 +5834,9 @@
     "nmc-2024-ref:57a3fe60f8ac9511f6d18164a090a34ab6e55b0c318a79726464621d6f8b590e": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:57e695d805248048d8b425396d3b64c32c37eea3e8307bc4283ff424512f29b2": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
     ],
@@ -6545,6 +5894,9 @@
     "nmc-2024-ref:59f248bf50419e5b8f1684ab7c8db966cbd20029329b02cfa479add077dd845b": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:5a51b89332a08048ddf4b9fb3412c701cd439ee7e394fb58d3ccb1e80d408524": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
@@ -6598,6 +5950,9 @@
     ],
     "nmc-2024-ref:5beb8ffc57f8769d9c639a84f2107c414e5bd2b8626bbef10fc8fe15c0e553b5": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
+    ],
+    "nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:5c7297139e9802791fe1b6f4c8fab63cb0dd9b35fb037e4b85143372af944726": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -6731,6 +6086,9 @@
     "nmc-2024-ref:60ed1df241190b97bf50920172b8e52b9bd8f086e63afdba9f3feaf756c75919": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json"
     ],
+    "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -6814,6 +6172,9 @@
     ],
     "nmc-2024-ref:63c2d63099d30b1033e8e18996bb6a876acf5b20bf7bddf8f41553bcf6bfd4c4": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
+    ],
+    "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:63ef761da202c4908a33eb541cbd7c778c5c180dabfe39ebba6fe6f4fb193658": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json"
@@ -7037,11 +6398,17 @@
     "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:6c2fe0fdc2e97e7efe3e3a8b6a66d03bb548b93aaf03fc2cf17e3b0059557aad": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
     ],
     "nmc-2024-ref:6c2fff14581055e31591f382f037ab3fbfe7100deac68abe77f4be9a87ccf559": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json"
+    ],
+    "nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -7072,6 +6439,9 @@
     ],
     "nmc-2024-ref:6e0443c9e83d074bb517e1aa6836349f20d500675a00b66f1977a890bd925074": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
+    ],
+    "nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:6e5c201d9213e2bdac684ce2aec12c85eb3fedad5c3d269cd63adef62517b8a3": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -7142,6 +6512,9 @@
     "nmc-2024-ref:703ab2632daa0f6638d153698797df8dcbc63de8f47ad43b90ee652432a175eb": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
     ],
+    "nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:70693dcf514b1dfe1ba383d047deb48f01f13bbd9600fa87227f32ec7c6947dc": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
@@ -7174,6 +6547,9 @@
     ],
     "nmc-2024-ref:7234cadb714769b6e449319984afc869a314278734c10dc897fb9c75770c3689": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
+    ],
+    "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:7316d4ff642c7cf33260436ecaa8bbadd58515160e175e235abaf297f1e4783b": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -7214,11 +6590,17 @@
     "nmc-2024-ref:74aea76cdf7f082d77748d71162c8e013c4dc8b759bafd7ed94311d9b2661593": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
+    "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:74f99f6ff3cb3e49df9ee876b3826d5c1b1d0e9593814c2d93782e29d9a1bc2b": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
     ],
     "nmc-2024-ref:75003b02a58cf526dccb67707d7b34d2e0d69b0ca2d26429001a7266fcd18f2e": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json"
+    ],
+    "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:759f4f7711a32518934dcbfc5a0e97c7a53a1e198950d6a9ed808f1558aa76dd": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
@@ -7234,6 +6616,9 @@
     ],
     "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:764c3e7e45a41b7a920f812733bc777c35b7543880863de7a5c00f139fea9950": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -7442,6 +6827,9 @@
     "nmc-2024-ref:7f0f95cc83575449dd4876f262dc868f641e23ce3fd9bff623e39b8095f25e81": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
+    "nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
@@ -7536,6 +6924,9 @@
     "nmc-2024-ref:833a138d444d9db1941d373c0256b2d097226f98f59b3f4acbd6bd7d10a0dad7": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
     ],
+    "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:83a989959a14739210f1e2472e31add7ae184ac1a8e7ca89ccbc0c50a9ec38a4": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
@@ -7623,6 +7014,9 @@
     "nmc-2024-ref:861dc9af2668848a2731e3389c3c05fbab833beeadaac430a82b61b3bc471125": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
+    "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:8626be69de06dfb8baa1cf0cd9193cf5adf981362c3c98ebaae5cbfec4fe9838": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
     ],
@@ -7680,6 +7074,9 @@
     "nmc-2024-ref:87afa0046bd268bf5a0e0d1988667121273e93f47bf6233ddb4586fb3f983944": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
     ],
@@ -7694,6 +7091,9 @@
     ],
     "nmc-2024-ref:881a2d5c560e6bd7212d7d2185de2e1aaa54053e3eaa1e3733ab11b2776d287a": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:8849d33451cb86b18c2bbbaf75ccec1c6550ab4a2bd7e180f49d6aaba7bfe02f": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
@@ -7890,6 +7290,9 @@
     "nmc-2024-ref:8ee8d80fbc51f6df4bb334f4d2ce9a5b7564dd496be3551e6504df4c29eafc9c": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
     ],
+    "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:8effda3d184c352f02ae3bc77f85a40c3ae13bc8ae8058634764b1ab2c8cf768": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
     ],
@@ -7911,6 +7314,9 @@
     "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json"
     ],
+    "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
@@ -7925,6 +7331,9 @@
     ],
     "nmc-2024-ref:90aa485bc0708223a78d4c016557dd0ec1e29b5741839d838221ef7231794e9b": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json"
+    ],
+    "nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:90d6a5c69b8dba872c1e462041d9cf6c3c75f1be4c985662aeb5ff29a9877b82": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -8000,6 +7409,12 @@
     ],
     "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-18.json"
+    ],
+    "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
+    "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
@@ -8131,6 +7546,9 @@
     "nmc-2024-ref:9ad598d019ec3efc9e1c98b586e52af60805d0e95287fec7c83c0292a8f77c49": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:9b3151cb17d0702559c118bb3bc4ce7be0461c3004ebdb77a1e835d81e1adc91": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
     ],
@@ -8221,6 +7639,9 @@
     "nmc-2024-ref:9eb0d1ac805d5e40c03f46b471afb0e4562e596fdefeb80df465187bdd5105d8": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:9ecf4f50b7c16f96a6e882e949ac5b45b462bd98827424a653018ebe58b58138": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
@@ -8256,6 +7677,9 @@
     ],
     "nmc-2024-ref:9ff698637b25061ae37f4e45b0691c9dc833319bd4c9684e2f9dfc5d431faada": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-16.json"
+    ],
+    "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:a01adf346f605b1e6d5ec6eec221903ddd73460bd9596f0139197c49cd4319f8": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json"
@@ -8377,6 +7801,9 @@
     "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
+    "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
@@ -8439,6 +7866,9 @@
     ],
     "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
+    ],
+    "nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:a8289d23b3b0bcbfd35c82539021c6f658579176fdef3d533dacd8542fc42abc": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -8627,6 +8057,9 @@
     "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
     ],
+    "nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:afd10a6c2bab5d7249e3db5302c9e96539969c679c91ebd4acb4c85f7a32976d": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
     ],
@@ -8638,6 +8071,9 @@
     ],
     "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
+    ],
+    "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:b0a6a32404611e7109938aecd6b881e567f64ad86830ee6a007e1395e8d6a754": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -8831,6 +8267,9 @@
     "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
+    "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:b8ad20e9c6d7e878d9ea19935d9a612e883ce1b97339b683a3c49cda85a0ec55": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
@@ -8855,6 +8294,9 @@
     "nmc-2024-ref:b9f45329f0b662c3f63f27a09808fb2eb2a4ee903175b46abee8d9366ba75879": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
     ],
+    "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:ba070339032c6d51f8b6752f26aecc9d6c0c44519655d4c7efeb57a49b77efee": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
     ],
@@ -8869,6 +8311,9 @@
     ],
     "nmc-2024-ref:ba6d458678e9e7e86cdac19e5fac5b24e02fe9b7226ae303368c5c8d6dcd7e1b": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+    ],
+    "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-02.json"
@@ -8975,6 +8420,9 @@
     ],
     "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+    ],
+    "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:bdb2c13e100d1ae645af647c93d710c15e438902a37e4f2cfa789bcade3e9ed8": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
@@ -9132,6 +8580,9 @@
     "nmc-2024-ref:c2912aaf68a805e5799713662d46f6cab9b18b8e4e585db090667febe4c70341": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json"
     ],
+    "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:c2ef106d0a02b452be2643cc8d927a4f6e0fb8739f1a27d8479434ea5d4b4145": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json"
     ],
@@ -9197,6 +8648,9 @@
     ],
     "nmc-2024-ref:c4d9c4c5bd5c6ca425be82a85ee0b531cdcc7c6051fa4754f9c2ff4360fd3539": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json"
+    ],
+    "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:c5125466b57bc1cdb4367592fdedc58b60968722b798e3504a6e66db6e29d39b": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
@@ -9379,6 +8833,9 @@
     "nmc-2024-ref:cb9d0a69d6842d8f745aa6c6a592c74fffea44579127c37f3edf7d8659283a68": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
+    "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:cc0590752c0101a6e1246fb6de484f603fc3d6b656bf40023a7654d9e60700b7": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
@@ -9414,6 +8871,9 @@
     ],
     "nmc-2024-ref:cd56af83064edf2af137c81b49d053529843b1d9d84d18b8c06149b9ee7b8251": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:cd8e45caed1bf9afc5ac506b20c53698ad3540f5f14673630d4a1be1c1d4d656": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
@@ -9466,6 +8926,9 @@
     "nmc-2024-ref:cf4e7673e783b4f072f8c2c0df7d01506e0ee9f05074a1ef4847c38cd73873a3": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json"
     ],
+    "nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:cf86abc313af9efbb4b7709b0cd5d361942614cd2be0e5558c3f546d647a80b1": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
@@ -9502,6 +8965,9 @@
     "nmc-2024-ref:d10288a2e599aed54654eb79727a89a1154d912e0dcc3da2b3b404e4a36e18d6": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json"
     ],
@@ -9537,6 +9003,9 @@
     ],
     "nmc-2024-ref:d210e895480bc51209b996dbd43379ca94ac04192df6294f75e23b3e4a1554b4": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+    ],
+    "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:d26298682b8728aa1afcb28752031fcc37ff39769ec406598573d5a08ffc997d": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
@@ -9618,6 +9087,9 @@
     ],
     "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json"
+    ],
+    "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:d5d8c43d8442d27b716b79dbaeb876e33ca0730ffd66070c9de0834b5472233d": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
@@ -9808,6 +9280,9 @@
     "nmc-2024-ref:dd0ddb2c32c545a98f61b1be8972fe2e0939ee2df99ce0f8572b1b70fc779743": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json"
     ],
+    "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
     ],
@@ -9931,6 +9406,9 @@
     "nmc-2024-ref:e2222a0bbaa17cc0feb96091b1ff7f8f70ba0f0d908f56a76c70c523cad2d72e": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json"
     ],
+    "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:e256e8caa8ff299746aa36a657cdf4405aa52b911d900c9ba07bfb65b82e7c6c": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
     ],
@@ -10014,6 +9492,9 @@
     ],
     "nmc-2024-ref:e4d6af345cbd9f7beecd4c81cb77d38050847417a500820454bbf1bb4d76be3a": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
+    ],
+    "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
@@ -10249,6 +9730,9 @@
     "nmc-2024-ref:ee0832cd067e89761b6f9fd0847b5e7c7bc8c29a57bbd8d636690a47cabb3c41": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-04.json"
     ],
+    "nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:ee44e37a844eb0627eb2e6ee0aacbd76c4f7bbdf7150aae956ab6c77e2a75083": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
     ],
@@ -10360,6 +9844,9 @@
     "nmc-2024-ref:f1d64b1e197804e9eadcc5ee1b6976c7c56b1485b37a907cd729d0b193e4df72": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
+    "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:f1fbcb82caf72a4c78f98d41ac4b296a556f46fcb9dba6cf2cdbcf40f9143802": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
     ],
@@ -10368,6 +9855,9 @@
     ],
     "nmc-2024-ref:f23dd83de36f086e227c23b765874849ebe88cf13ff45716dfa93a4281669ccf": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:f2ab790cfc94aeae76d4988ea28f24301f8c39e3c2a1d30c0a46c764ef48d2f3": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
@@ -10510,6 +10000,9 @@
     "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json"
     ],
+    "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:f8106dfcf41cef640314507d5d07bf5a6d215f4532ad7ce95d3732410b4f199e": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
@@ -10539,6 +10032,9 @@
     ],
     "nmc-2024-ref:f8fb89101f4bbbda9654883fd93d6190509dffeb24baed5121b3c1623b6c3805": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
+    ],
+    "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
@@ -10572,6 +10068,9 @@
     ],
     "nmc-2024-ref:f9e60a48cb85afb9c79a9a6cd941fea257b91f51f9ab2c17ef5094852f727cf2": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:fa5bd0ff1f948e3256d1d0876f493506101a583e2888013220a751c68137c52b": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -10651,8 +10150,17 @@
     "nmc-2024-ref:fcf75eb01266bc3018615c13821b08d13dc664e204ad74c12aa9e1be36b71389": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
     "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
+    "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac": [
+      "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
     "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json"
@@ -10771,6 +10279,7 @@
     "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json": "613c858b417a87dedbeddec9a160f4fa12c534fb09be050f39e6e0faa840acfc",
     "docs/evidence/2026-11-13-nmc-paediatrics-unmatched-relationship-decisions.json": "cd196a62200a361c751c7540063cf0e8b8fac75a8f783b3ef22d3441a7566843",
     "docs/evidence/2026-11-13-nmc-source-alias-and-paediatrics-opening-review.json": "98c1375d4d95e31ee4c48f4d20e9b3f655133f8b3031020badf3ff332949e41a",
+    "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json": "837395afccd2b88730a82282021408daa9e2bca27811e11fd416ab69f9f52411",
     "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json": "b0a1dd883e1d03617b77d145970602bf4863946836f427c1ff2759fd5bd311b8",
     "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json": "745dd07098f17239e65fe897fb9a7e28eb9baf8a26ef964297f41422afa8ee66",
     "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json": "5926c14dc922905865f56b88ac0549730a6adbdddd8118bdae8bc95521074aad",
