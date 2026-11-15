@@ -1,3 +1,15 @@
+## NMC Dermatology source-scope review complete (48/48 linked) — 2026-11-16T01:05Z
+
+- Writer: Claude, draft PR #421 from remote head `06deea76e3c85b7d9e5dc77b51c12574fc2447ba`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **48** DR references (DR1.1–DR15.3) against the official NMC 12-09-2024 CBME text: **48 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,520 of 2,607 linked, 87 pending**. Remaining: Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Orthopaedics (38). Open holds from this session unchanged (10).
+
+---
+
 ## NMC Anaesthesia source-scope review complete — 2026-11-16T00:55Z
 
 - Writer: Claude, draft PR #421 from remote head `4cbb0a95b823aeef394e8e4ca581cbf4d5d4674d`. Parent #415 and main unchanged. Ownership released after remote readback.
