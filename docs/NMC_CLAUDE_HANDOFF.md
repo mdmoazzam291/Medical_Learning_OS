@@ -25,6 +25,10 @@ Authoritative generated outputs:
 
 Run `python scripts/nmc-review-handoff-audit.py` from the repository root. It fails on stale generated outputs, missing/duplicate decision pairs, endpoint/code mismatches and accepted mapping flags. Inspect changes before using `--write`; regenerated accounting cannot establish source or clinical acceptance.
 
+## Status update — 2026-11-16 (Claude)
+
+Subject-wide editorial source-scope review is complete: the audit links all 2,607 indexed references to selected review evidence (`allSubjectsReviewed: true`). This session's 19 packets (`docs/evidence/2026-11-16-nmc-*-source-scope-review-*.json`) reviewed 1,402 references against the official NMC 12-09-2024 text read through a web reader: 1,389 aligned, 13 held. Tasks 1 and 2 below are superseded by that work. Next: resolve the 13 new holds on rendered official pages, then tasks 3–6. See the top AI_HANDOFF entry for limits.
+
 ## Exact next tasks, in priority order
 
 1. Historical evidence linkage for the 14 Anatomy/Medicine references is now complete in `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json` (6 Anatomy, 8 Medicine). Each entry includes exact prior record pointers and original task metadata. Earlier name/scope proposals are weaker than full official-source checks: all 14 still require that verification before closure. The main audit counts remain unchanged; do not treat these links as accepted mappings.
