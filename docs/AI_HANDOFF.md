@@ -1,3 +1,15 @@
+## NMC Pharmacology source-scope review complete (92/92 linked) — 2026-11-16T00:05Z
+
+- Writer: Claude, draft PR #421 from remote head `cf0791e2d66bc1d947b1cde4547ad1db3df61b27`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **92** PH references (PH1.1–PH10.17) against the official NMC 12-09-2024 CBME text: **92 scope-aligned, 0 held**. Draft mode matches the official level on every row (practical when level contains SH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,150 of 2,607 linked, 457 pending**. Remaining: Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, plus small residues.
+- Changed: new `docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below. Drug names, regimens and programme guidance not checked for currency.
+- Next: Biochemistry (82). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2.
+
+---
+
 ## NMC Surgery source-scope review complete — 2026-11-15T23:55Z
 
 - Writer: Claude, draft PR #421 from remote head `f7d4eb7abb5ce9e34220d25eee10f7097c728b7d`. Parent #415 and main unchanged. Ownership released after remote readback.
