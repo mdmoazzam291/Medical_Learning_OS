@@ -1,3 +1,15 @@
+## NMC ENT source-scope review complete — 2026-11-16T00:35Z
+
+- Writer: Claude, draft PR #421 from remote head `4d0e2c9cc7bad824b660bea0317d92a05f2a0341`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **62** EN references that lacked selected review evidence (EN1.1–EN4.46) against the official NMC 12-09-2024 CBME text: **62 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,363 of 2,607 linked, 244 pending**. Remaining: Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Ophthalmology (59). Open holds from this session unchanged (10).
+
+---
+
 ## NMC Microbiology source-scope review complete — 2026-11-16T00:25Z
 
 - Writer: Claude, draft PR #421 from remote head `51067d2dc892275a0c09d53465d35820799e1b5c`. Parent #415 and main unchanged. Ownership released after remote readback.
