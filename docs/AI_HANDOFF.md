@@ -1,3 +1,16 @@
+## NMC Anaesthesia source-scope review complete — 2026-11-16T00:55Z
+
+- Writer: Claude, draft PR #421 from remote head `4cbb0a95b823aeef394e8e4ca581cbf4d5d4674d`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **50** AS references that lacked selected review evidence (AS1.1–AS11.6) against the official NMC 12-09-2024 CBME text: **50 scope-aligned, 0 held**. Two documented mode exceptions (AS9.2 central access and AS11.1 oxygen device setup, both coded KH but asking for demonstration). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints AS5.4 as "ASS.4"; AS5.4 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,472 of 2,607 linked, 135 pending**. Remaining: Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Dermatology (48). Open holds from this session unchanged (10).
+
+---
+
 ## NMC Ophthalmology source-scope review complete (59/59 linked) — 2026-11-16T00:45Z
 
 - Writer: Claude, draft PR #421 from remote head `4721c5872b6fa6a9837af54d72b37d56fe36e9b5`. Parent #415 and main unchanged. Ownership released after remote readback.
