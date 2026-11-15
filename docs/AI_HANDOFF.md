@@ -1,3 +1,16 @@
+## NMC Obstetrics & Gynaecology source-scope review complete (142/142 linked) — 2026-11-15T23:05Z
+
+- Writer: Claude, draft PR #421 from remote head `67f809377945c995688ee488aef5f8501512e79a`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **141** OG references that lacked selected review evidence (OG1.1–OG38.4) against the official NMC 12-09-2024 CBME text: **140 scope-aligned, 1 held** — `OG30.2` (official row includes management of hyperandrogenism; draft omits it). Draft mode matches the official level on all rows (practical when level contains SH or P; one documented exception, OG19.3 observe/assist at KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Source observations, not acted on: official OG16.4 repeats the IUGR text of OG12.11, and official OG26.2 duplicates OG26.1. Drafts follow the official rows.
+- Audit now: **1,676 of 2,607 linked, 931 pending**; OG 142/142. Largest remaining: Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69.
+- Changed: new `docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below; additionally the reader reported that Level and H/P columns are not cleanly separated for some OG rows. Programme and guideline names not checked for currency.
+- Next: Community Medicine (135). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2.
+
+---
+
 ## NMC Forensic Medicine source-scope review complete (157/157 linked) — 2026-11-15T22:45Z
 
 - Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `08a82c890c416fbb9d080db176850333840ac401`. Parent #415 and main unchanged. Ownership released after remote readback.
