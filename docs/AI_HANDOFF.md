@@ -1,3 +1,16 @@
+## NMC Physiology source-scope review complete — 2026-11-15T23:40Z
+
+- Writer: Claude, draft PR #421 from remote head `30da0fda37e5a9897e1977721f1d5fed522bee70`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **131** PY references that lacked selected review evidence (PY1.1–PY12.10) against the official NMC 12-09-2024 CBME text: **130 scope-aligned, 1 held** — `PY11.6` (official row cells garbled as "K S P Y"; level unclear, draft mode practical; scope matches). Draft mode matches the official level on all other rows. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- PY9.1 and PY10.10 are outside this review: they sit in the source-exception track, not the names-only index.
+- Audit now: **1,942 of 2,607 linked, 665 pending**. Largest remaining: Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59.
+- Changed: new `docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Surgery (116). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6.
+
+---
+
 ## NMC Community Medicine source-scope review complete (136/136 linked) — 2026-11-15T23:20Z
 
 - Writer: Claude, draft PR #421 from remote head `47fdd50424880738d367584c96789dd4954a5aff`. Parent #415 and main unchanged. Ownership released after remote readback.

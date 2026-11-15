@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 E = 'docs/evidence/'
 PREFIX = E + '2026-11-13-nmc-'
-INPUT_HEAD = '47fdd50424880738d367584c96789dd4954a5aff'
+INPUT_HEAD = '30da0fda37e5a9897e1977721f1d5fed522bee70'
 inputs = {}
 
 
