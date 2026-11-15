@@ -1,3 +1,16 @@
+## NMC Ophthalmology source-scope review complete (59/59 linked) — 2026-11-16T00:45Z
+
+- Writer: Claude, draft PR #421 from remote head `4721c5872b6fa6a9837af54d72b37d56fe36e9b5`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **59** OP references (OP1.1–OP10.7) against the official NMC 12-09-2024 CBME text: **59 scope-aligned, 0 held**. One documented mode exception (OP4.9 demonstrate row coded K/KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Observation: OP4.8 and OP4.9 domain/level cells look swapped, and OP7.3 (describe) reads S/SH; recheck on the rendered page.
+- Audit now: **2,422 of 2,607 linked, 185 pending**. Remaining: Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-ophthalmology-source-scope-review-op1-op10.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Anaesthesia (50). Open holds from this session unchanged (10).
+
+---
+
 ## NMC ENT source-scope review complete — 2026-11-16T00:35Z
 
 - Writer: Claude, draft PR #421 from remote head `4d0e2c9cc7bad824b660bea0317d92a05f2a0341`. Parent #415 and main unchanged. Ownership released after remote readback.
