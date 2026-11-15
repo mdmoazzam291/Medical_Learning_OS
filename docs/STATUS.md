@@ -1,3 +1,16 @@
+## NMC Orthopaedics source-scope review complete — 2026-11-16T01:15Z
+
+- Writer: Claude, draft PR #421 from remote head `785f352ae2d3af9f2e4f569e01518334d374b2d3`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **38** OR references that lacked selected review evidence (OR1.1–OR14.4) against the official NMC 12-09-2024 CBME text: **37 scope-aligned, 1 held** — `OR2.16` (official paediatric-injury row also covers femoral, tibial and leg fractures and non-accidental injury/child abuse; draft omits them). One documented mode exception (OR11.1 level printed "K/H", row asks to demonstrate splints). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints OR2.9 as "OR 2.2.9"; OR2.9 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,558 of 2,607 linked, 49 pending**. Remaining: Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Radiology (21). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16.
+
+---
+
 ## NMC Dermatology source-scope review complete (48/48 linked) — 2026-11-16T01:05Z
 
 - Writer: Claude, draft PR #421 from remote head `06deea76e3c85b7d9e5dc77b51c12574fc2447ba`. Parent #415 and main unchanged. Ownership released after remote readback.

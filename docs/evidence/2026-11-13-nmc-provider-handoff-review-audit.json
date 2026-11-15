@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "checkedHead": "06deea76e3c85b7d9e5dc77b51c12574fc2447ba",
+  "checkedHead": "785f352ae2d3af9f2e4f569e01518334d374b2d3",
   "scope": "Indexed source references linked to explicitly selected editorial review packets. Missing links are a reconciliation queue, not proof no older review exists. Review evidence is not acceptance.",
   "allSubjectsReviewed": false,
   "indexedNames": 2427,
   "indexedReferences": 2607,
-  "referencesWithReviewEvidence": 2520,
+  "referencesWithReviewEvidence": 2558,
   "originalHoldsStillOpen": 154,
   "originalAnatomyMedicineQueue": {
     "names": 797,
@@ -95,8 +95,8 @@
     {
       "subject": "orthopaedics",
       "indexedReferences": 39,
-      "referencesWithReviewEvidence": 1,
-      "referencesWithoutSelectedReviewEvidence": 38,
+      "referencesWithReviewEvidence": 39,
+      "referencesWithoutSelectedReviewEvidence": 0,
       "originalHeldReferences": 0
     },
     {
@@ -273,348 +273,6 @@
       "code": "GM24.1",
       "pdfPage": 315,
       "packet": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:33cf0de4e05d50fe9dd3f39e4b0d18f55ad79eb387287c4ba668f3b4c1151a94",
-      "subjectId": "orthopaedics",
-      "code": "OR1.1",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d6dffddbf2bbc5c9ad5e4007cb7d8e77f9b8572e94f21ba5140641947e9a449c",
-      "subjectId": "orthopaedics",
-      "code": "OR1.2",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:dd218ace5872c27d48378af518c94314debb006d2d4d6dda274fb4bb84eae64f",
-      "subjectId": "orthopaedics",
-      "code": "OR1.3",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3",
-      "subjectId": "orthopaedics",
-      "code": "OR1.4",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:356fabe961eddd6c6104dec5179d1e4bc5d8de5ceced8ad68805372d28a13ba0",
-      "subjectId": "orthopaedics",
-      "code": "OR1.5",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d328e6702ee0c86e705aa33eb43fcf3439586a767337c07d4067fff4cda022b7",
-      "subjectId": "orthopaedics",
-      "code": "OR1.6",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5f5eea5cb3ffa420b60b59a271a81199622337fd28095a1b28a8e3e9ed734bd4",
-      "subjectId": "orthopaedics",
-      "code": "OR10.1",
-      "pdfPage": 448,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43",
-      "subjectId": "orthopaedics",
-      "code": "OR11.1",
-      "pdfPage": 449,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d",
-      "subjectId": "orthopaedics",
-      "code": "OR12.1",
-      "pdfPage": 449,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b",
-      "subjectId": "orthopaedics",
-      "code": "OR13.1",
-      "pdfPage": 449,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71",
-      "subjectId": "orthopaedics",
-      "code": "OR13.2",
-      "pdfPage": 450,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:e53051c3020700d7132d5d44ea1f4481ba6b1aa2ea3394f432ecba39e314c401",
-      "subjectId": "orthopaedics",
-      "code": "OR14.1",
-      "pdfPage": 450,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
-      "subjectId": "orthopaedics",
-      "code": "OR14.2",
-      "pdfPage": 450,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5570c27a0883a5f4717f3767a65f71e3ca2cd590a63b5c7bff0e53b0f445c97e",
-      "subjectId": "orthopaedics",
-      "code": "OR14.3",
-      "pdfPage": 450,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b",
-      "subjectId": "orthopaedics",
-      "code": "OR14.4",
-      "pdfPage": 450,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:120c74c8a7f6172de27f9e76934a2116399ee223ccacf357855f1a25f2f2f5c7",
-      "subjectId": "orthopaedics",
-      "code": "OR2.1",
-      "pdfPage": 444,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3b2c6f39bd1c4d8cff6dab676a6233cf4d1b218e4bb1a898e11c85b83abf66d6",
-      "subjectId": "orthopaedics",
-      "code": "OR2.10",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:7b8312f5328eb9047b080dafb6baab8b075b5e032888fefba24151bf2b012747",
-      "subjectId": "orthopaedics",
-      "code": "OR2.11",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:fc99ceb1ec829e57eaf804ce730531b71df2ce41b3503116a985be0ecd3d7c38",
-      "subjectId": "orthopaedics",
-      "code": "OR2.12",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b",
-      "subjectId": "orthopaedics",
-      "code": "OR2.13",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:44e736a4a5d36eea22f10ebe5368b64126f2eba37b8ef0d0107402ad9d6e6b85",
-      "subjectId": "orthopaedics",
-      "code": "OR2.14",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:622b79188bc2a5bac6447f8bc742c7ab94d619ae95bccaabf253374901ab54da",
-      "subjectId": "orthopaedics",
-      "code": "OR2.15",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:123ddede3a0e709dc17517d58813fda59e9662a1ccfd88441f6115e72c1c8d77",
-      "subjectId": "orthopaedics",
-      "code": "OR2.16",
-      "pdfPage": 446,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:cd6a7ecb78881f0ebc50a703392d86f0a24eb81a1897a26ff3bd9720d92be59d",
-      "subjectId": "orthopaedics",
-      "code": "OR2.2",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:acf40a5b7c3ec0027417b98a64d9536fa2275d87d11a27ecc0b0fcd59afe6d1c",
-      "subjectId": "orthopaedics",
-      "code": "OR2.3",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5",
-      "subjectId": "orthopaedics",
-      "code": "OR2.4",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4848867f02728afd031e12e5cea826f52cc83422929e27f05adfc14dd05f9f59",
-      "subjectId": "orthopaedics",
-      "code": "OR2.5",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:7c6716591cb30f50629c1f5986a70556c8a2db1333442df52d2b8da7820251de",
-      "subjectId": "orthopaedics",
-      "code": "OR2.6",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f3787e2b0c25af35f42fe9b405c3c71e8acf5130af1c0ef2509f2008c06e370c",
-      "subjectId": "orthopaedics",
-      "code": "OR2.7",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3238438774e6719671b4edf541d749957b4f5fc6b2b67c458aec94ce0505d300",
-      "subjectId": "orthopaedics",
-      "code": "OR2.8",
-      "pdfPage": 445,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350",
-      "subjectId": "orthopaedics",
-      "code": "OR3.1",
-      "pdfPage": 447,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d678da00ce31ae31cbfa716b55f89c0fa43204cc6cea4c40c91d578247535fec",
-      "subjectId": "orthopaedics",
-      "code": "OR3.2",
-      "pdfPage": 447,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3c50babe61f29a22c7cd8037f21d166dc465a94449af941cd33460b2b8bf7c31",
-      "subjectId": "orthopaedics",
-      "code": "OR3.3",
-      "pdfPage": 447,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:a331b9601fdfe0b00e89956c837a81581d22ae42d065cb6e21f3d7ad1bc285a9",
-      "subjectId": "orthopaedics",
-      "code": "OR4.1",
-      "pdfPage": 447,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a",
-      "subjectId": "orthopaedics",
-      "code": "OR5.1",
-      "pdfPage": 447,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6",
-      "subjectId": "orthopaedics",
-      "code": "OR6.1",
-      "pdfPage": 448,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0",
-      "subjectId": "orthopaedics",
-      "code": "OR7.1",
-      "pdfPage": 448,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:05890feb63ce31b80243ccc4b53f01b661377b6e2b71763b96598f9a75cdc9e9",
-      "subjectId": "orthopaedics",
-      "code": "OR8.1",
-      "pdfPage": 448,
-      "packet": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
       "proposedObjectiveVersionIds": [],
       "status": "needs-review-evidence-reconciliation"
     },
@@ -947,6 +605,9 @@
     "nmc-2024-ref:008abb4c46f776b5f22d8efb2efc2ecb4f7e19fc17333423eb68c4bddb93021f": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json"
     ],
+    "nmc-2024-ref:00949080c06ff496999b95a6c018df3e537a481f5943557b250077119436966b": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:009beeb379b6d247e3daa15046c638a7652773c4d4c31d7296876a3ddde7c8b9": [
       "docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json"
     ],
@@ -1144,6 +805,9 @@
     ],
     "nmc-2024-ref:055f140032cda57c7b44a24a70e55efae078bb215e179e6b65fcb8f6a45b8167": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-01.json"
+    ],
+    "nmc-2024-ref:05890feb63ce31b80243ccc4b53f01b661377b6e2b71763b96598f9a75cdc9e9": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
@@ -1514,6 +1178,9 @@
     "nmc-2024-ref:11e5d1a71614d25bbf3c1d5893434856e64d57c7d05411750c6282e59601a840": [
       "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json"
     ],
+    "nmc-2024-ref:120c74c8a7f6172de27f9e76934a2116399ee223ccacf357855f1a25f2f2f5c7": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:121f4be682bbb7c1487dd3beb0003d0d61dfcd404605bf7665c3887c6ffbd59d": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
     ],
@@ -1522,6 +1189,9 @@
     ],
     "nmc-2024-ref:123cf2da586401754dc9ce7f7b3d9cd28e8fb597b23486c5a1c5a790acdf64e6": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+    ],
+    "nmc-2024-ref:123ddede3a0e709dc17517d58813fda59e9662a1ccfd88441f6115e72c1c8d77": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:1245086f697d45e89d5f11d301c4471a4d0605e4340f7164652468e2445f9238": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -1858,6 +1528,9 @@
     ],
     "nmc-2024-ref:1ec8cf2772f20862daed21f6216d7d334511f1f3109b3386154a8d1caa969df8": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:1ef0fb69963dbe393bab79636c71079043638ddbba0912720c6001b63fa3eba5": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:1f04078db79571d3cb84287e5672e60d21c577e05de7a2db8c07cf1dce34737e": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-17.json"
@@ -2207,6 +1880,9 @@
     "nmc-2024-ref:2a59cd14b8c2f5176788e13d235d3353f1054bfb64e7d5951959ad0a504f9f73": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-04.json"
     ],
+    "nmc-2024-ref:2a672268cb16f195826cac193438febab9992164fb2f790f0fde1980225d2350": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:2a8534eb455408aa6f1a47503b515c2944c7bef546393564ea228dfceff61d36": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
@@ -2266,6 +1942,9 @@
     ],
     "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+    ],
+    "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:2cb185ec1c5b6d4e305267ba542f7be1f6a9c7ac6317ee8e49aed16d41ffe6b0": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
@@ -2432,6 +2111,9 @@
     "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-07.json"
     ],
+    "nmc-2024-ref:3238438774e6719671b4edf541d749957b4f5fc6b2b67c458aec94ce0505d300": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:323ee76778ae871790a50ec121d92c47b8a26383b0ed41795691e4de0743742a": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
@@ -2473,6 +2155,9 @@
     ],
     "nmc-2024-ref:33c3bd31c5d585933021c05c73a88661ef9059da31227f46c44417edd8e1455e": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
+    ],
+    "nmc-2024-ref:33cf0de4e05d50fe9dd3f39e4b0d18f55ad79eb387287c4ba668f3b4c1151a94": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:33d5fe1874f4b9935a63f2547eec7a6ec267d4539dc6e36a248aa666a3c64f99": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -2521,6 +2206,9 @@
     ],
     "nmc-2024-ref:356c2f6cff054d6a6a846772eb7b9ac85183f55027fe773b51fa28b899e2f89e": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+    ],
+    "nmc-2024-ref:356fabe961eddd6c6104dec5179d1e4bc5d8de5ceced8ad68805372d28a13ba0": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json"
@@ -2678,6 +2366,9 @@
     "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-04.json"
     ],
+    "nmc-2024-ref:3b2c6f39bd1c4d8cff6dab676a6233cf4d1b218e4bb1a898e11c85b83abf66d6": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:3b30c72ba1a94ed3e114f9800dec033981fa2fd47b15f6c42c4736dae5c7a12b": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
@@ -2716,6 +2407,9 @@
     ],
     "nmc-2024-ref:3c10610b4ce62304a211331d1ad5414d729f661fe186903dd07fae965b3efbf7": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:3c50babe61f29a22c7cd8037f21d166dc465a94449af941cd33460b2b8bf7c31": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:3c577d3987421d8792845d06395595f97d2eb1a32bd7e427622ee07090f28f95": [
       "docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json"
@@ -2966,6 +2660,9 @@
     "nmc-2024-ref:44da0f8afc633dc317984beeb63072f04b6fb9ac4d50282bd3c345583e6d66c6": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
     ],
+    "nmc-2024-ref:44e736a4a5d36eea22f10ebe5368b64126f2eba37b8ef0d0107402ad9d6e6b85": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:44f23bd51e2163cd0ad02227986c5d84250c6e74843e8d7f5fc1ebb8765afd86": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
@@ -3055,6 +2752,9 @@
     ],
     "nmc-2024-ref:48253e00449f8776d345982fcee3fa833bb60932557ceb02c32f1ec91251dd84": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
+    ],
+    "nmc-2024-ref:4848867f02728afd031e12e5cea826f52cc83422929e27f05adfc14dd05f9f59": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:484aad85e60f11cca5df3bf261c4e0fcb1612e538bf8a2896e77c32a45b3d3a6": [
       "docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json"
@@ -3395,6 +3095,9 @@
     "nmc-2024-ref:528837c89a64f0dc40e110aa9ad6dcd00809db7b98abd91d1076840ca00ceb93": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
+    "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:52b957290b9bf85555c3861f61d8cafe127a2b0249a8a53dc56af65b6a957291": [
       "docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json"
     ],
@@ -3427,6 +3130,9 @@
     ],
     "nmc-2024-ref:535944bc9566d20e2a9aa206e669f40c877c3a33d303605e95794690173039ec": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
+    ],
+    "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -3472,6 +3178,9 @@
     ],
     "nmc-2024-ref:55328eec2d95710775eb1d0bdd14941a9f24a60e4c25ad06d2308ddfc273a35f": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:5570c27a0883a5f4717f3767a65f71e3ca2cd590a63b5c7bff0e53b0f445c97e": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:55b926d38f9b5b92d0dbeb3149d8f54f309ad1047b814301bc576080fde8e062": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
@@ -3773,6 +3482,9 @@
     "nmc-2024-ref:5f50684e9f22cf7f77ad9d57c19646c621ce7eb7063ba39099db664ee4e0069a": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json"
     ],
+    "nmc-2024-ref:5f5eea5cb3ffa420b60b59a271a81199622337fd28095a1b28a8e3e9ed734bd4": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
     ],
@@ -3841,6 +3553,9 @@
     ],
     "nmc-2024-ref:621a8670ad705b4840f9cce218aafda73e294abf5ec59099f295a1c06b11fe2c": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:622b79188bc2a5bac6447f8bc742c7ab94d619ae95bccaabf253374901ab54da": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -3985,6 +3700,9 @@
     ],
     "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-12.json"
+    ],
+    "nmc-2024-ref:66fa26717e00f57ca2ebe5e1111fc22fbae4f3099be94e701a6cb0a62b35678b": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:67040484156e820285393bd765a564abbe06cf0eecd35b5fbecbcf1ac9080112": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -4532,11 +4250,17 @@
     "nmc-2024-ref:7b0352f96d379e342fb9c6f9480c80ff8c2c6a2e3bfab77af9b061cd066a2cbe": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
+    "nmc-2024-ref:7b4c6b886d61a67fe487c59d861e3990a0167736421f1be2cde5c7a6bf52018b": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:7b762ef3160f5c37a6afd698cd61aa724ed7d3ece66f6b4a34a3ca193be55e33": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-05.json"
     ],
     "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
+    ],
+    "nmc-2024-ref:7b8312f5328eb9047b080dafb6baab8b075b5e032888fefba24151bf2b012747": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:7b998d2eedbe4dc5e0dc36c9f9bc6f94cc2336daecbaf636f8ea5e3683ce5c9b": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-21.json"
@@ -4570,6 +4294,9 @@
     ],
     "nmc-2024-ref:7c59fe7bb85508880d9a96a2d25b738b884804a30121c9f1539d9a1f1486a504": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
+    ],
+    "nmc-2024-ref:7c6716591cb30f50629c1f5986a70556c8a2db1333442df52d2b8da7820251de": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
@@ -5314,6 +5041,9 @@
     "nmc-2024-ref:952300140b206ae8ae40edf76324d0e5163d48b28b6418db38fd5acf19d73fa5": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json"
     ],
+    "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:95f0dd5e33f82fd00ec8d1e14c1acaaf19b3bc1a10119fa47d9de730b6f74677": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -5478,6 +5208,9 @@
     ],
     "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:9cd48be0eb21608fa716b578e6f2bf099a49cdda3b018a272a4773141faa1f43": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:9cdb077f28058ac07e99f5dea5ad8024b816112df0888b4297cd56eb71d37422": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
@@ -5683,6 +5416,9 @@
     "nmc-2024-ref:a316ad734e1e13929446bc76d19d326be8363bfc882e379dd67da756812d860f": [
       "docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json"
     ],
+    "nmc-2024-ref:a331b9601fdfe0b00e89956c837a81581d22ae42d065cb6e21f3d7ad1bc285a9": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -5799,6 +5535,9 @@
     ],
     "nmc-2024-ref:a80311dc8aa7fcfb39635935b1b8cac8af88cf80d866b6a4510a5fcb821da06e": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
@@ -5956,6 +5695,9 @@
     ],
     "nmc-2024-ref:acc718c7fa2013c251b3c315804faedc4d795ce253b3e73c59e922681ed623d8": [
       "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json"
+    ],
+    "nmc-2024-ref:acf40a5b7c3ec0027417b98a64d9536fa2275d87d11a27ecc0b0fcd59afe6d1c": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
@@ -6187,6 +5929,9 @@
     ],
     "nmc-2024-ref:b58b980165b748ed6b8d29e0c820944032041512c9aa5fc9a60a8c5d473eab78": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:b5c4de4601c8ae2945a423a5e07219ebb8954c73eed9b2ccdc8b7bcc3792fa54": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -6883,6 +6628,9 @@
     "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
+    "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:cb4a8d1be0d2f03857a674acc5fd0a9a343355f22d7d5d3b7fe36009a0615912": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json"
     ],
@@ -6957,6 +6705,9 @@
     ],
     "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220": [
       "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
+    "nmc-2024-ref:cd6a7ecb78881f0ebc50a703392d86f0a24eb81a1897a26ff3bd9720d92be59d": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:cd87a7618d4efb0e5011ffa87f6917cca74694c227ebdc4ab3857622738788cf": [
       "docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json"
@@ -7138,6 +6889,9 @@
     "nmc-2024-ref:d3285911a5b3402cb4ba8b6c4569327432c31a8392cb627a202b7de929c4f567": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-22.json"
     ],
+    "nmc-2024-ref:d328e6702ee0c86e705aa33eb43fcf3439586a767337c07d4067fff4cda022b7": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:d32f60a2653c199c9aa8d56740ee6b54e28f79388da64a33769ce9c2709b2d73": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
     ],
@@ -7228,11 +6982,17 @@
     "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc": [
       "docs/evidence/2026-11-16-nmc-ophthalmology-source-scope-review-op1-op10.json"
     ],
+    "nmc-2024-ref:d678da00ce31ae31cbfa716b55f89c0fa43204cc6cea4c40c91d578247535fec": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:d67f4f980b702225eeb20da19d33b8c6f04fd1f6d68c6048cb8e6da3a8115ef0": [
       "docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json"
     ],
     "nmc-2024-ref:d6b2c435a14376fe61bf446258ae3e05016a1ce9c139e73ef6b130224b22644a": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-04.json"
+    ],
+    "nmc-2024-ref:d6dffddbf2bbc5c9ad5e4007cb7d8e77f9b8572e94f21ba5140641947e9a449c": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:d6ee30a2bb88b674aa4b61f889c023d51a2f0eb2cdd6bc575165c650db1ee2b8": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
@@ -7419,6 +7179,9 @@
     ],
     "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9": [
       "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
+    "nmc-2024-ref:dd218ace5872c27d48378af518c94314debb006d2d4d6dda274fb4bb84eae64f": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:dd42088040d4a25ab8d9ef137e1f67eac3a08654f7bd63cb724466602449ffb0": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json"
@@ -7647,6 +7410,9 @@
     ],
     "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f": [
       "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
+    ],
+    "nmc-2024-ref:e53051c3020700d7132d5d44ea1f4481ba6b1aa2ea3394f432ecba39e314c401": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
     ],
     "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
@@ -8101,6 +7867,9 @@
     "nmc-2024-ref:f37602cb314a719c2077d6490513e0032505f25fd0e1796e9774d7c523041705": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:f3787e2b0c25af35f42fe9b405c3c71e8acf5130af1c0ef2509f2008c06e370c": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
@@ -8392,6 +8161,9 @@
     "nmc-2024-ref:fc998ac8e1341dcc211dd5e8c61c57376fb6527dee39e0e9305f04c5fd36dd90": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json"
     ],
+    "nmc-2024-ref:fc99ceb1ec829e57eaf804ce730531b71df2ce41b3503116a985be0ecd3d7c38": [
+      "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json"
+    ],
     "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
     ],
@@ -8560,6 +8332,7 @@
     "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json": "365ce6d489df2d46999b3f1297a3e0c90d07034cbcd02b8c124d5d22dd1d19af",
     "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json": "5926c14dc922905865f56b88ac0549730a6adbdddd8118bdae8bc95521074aad",
     "docs/evidence/2026-11-16-nmc-ophthalmology-source-scope-review-op1-op10.json": "e4ddcccccc14811a2d120ab78e62b1bdd5c84e2cb6bb3aad1b2508dac468e46c",
+    "docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json": "361510d8d0fa643fbe050daf5d25e6cbf6b69877395ef5e4d08cbae4ba2b725b",
     "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json": "ee751eb940646dbe8da4ffdd0848643acb8cf6dd91dd925ab0a8425af2b2a76d",
     "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json": "82f76404d5802313166df1958eec451b9a6e4e89d931455d246a628c8e8aebf8",
     "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json": "90bb098190410782d206a20bd03dd8a04e2318f6ddf2fa585ecbff1c9b635104",
