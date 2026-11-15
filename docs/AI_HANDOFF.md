@@ -1,3 +1,17 @@
+## NMC Radiology and Psychiatry source-scope reviews complete — 2026-11-16T01:25Z
+
+- Writer: Claude, draft PR #421 from remote head `cc721ff220a324f445c4b9885f592e09c0bd42a3`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Radiology: all **21** RD references (RD1.1–RD7.6) **scope-aligned, 0 held**; RD5.1, RD5.3 and RD5.4 print "P" in the level position and were treated as performs.
+- Psychiatry: all **14** pending PS references (PS1.1–PS13.1, PS11.1 already reviewed) **scope-aligned, 0 held**; one documented mode exception (PS4.1 diagnose and manage schizophrenia, S,K at KH). PS2.1 (printed with an asterisk) and PS9.2 are in the official table but already sit in the source-exception track. PS9.1 note: section retitled by the 10 Oct 2024 NMC clarification; rendered-page check advised.
+- Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,593 of 2,607 linked, 14 pending** — exactly the 14 Anatomy/Medicine references outside the original queue (AN25.3, AN29.1, AN29.4, AN40.1, AN47.13, AN80.6, GM1.2, GM2.22, GM10.6, GM10.15, GM11.3, GM11.23, GM23.7, GM24.1). Their provenance links exist in `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json`; official-source scope review is the last remaining step.
+- Changed: new `2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json` and `2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: official-source scope review of the final 14. Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16.
+
+---
+
 ## NMC Orthopaedics source-scope review complete — 2026-11-16T01:15Z
 
 - Writer: Claude, draft PR #421 from remote head `785f352ae2d3af9f2e4f569e01518334d374b2d3`. Parent #415 and main unchanged. Ownership released after remote readback.

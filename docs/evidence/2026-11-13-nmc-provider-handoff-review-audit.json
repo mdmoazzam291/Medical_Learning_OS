@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "checkedHead": "785f352ae2d3af9f2e4f569e01518334d374b2d3",
+  "checkedHead": "cc721ff220a324f445c4b9885f592e09c0bd42a3",
   "scope": "Indexed source references linked to explicitly selected editorial review packets. Missing links are a reconciliation queue, not proof no older review exists. Review evidence is not acceptance.",
   "allSubjectsReviewed": false,
   "indexedNames": 2427,
   "indexedReferences": 2607,
-  "referencesWithReviewEvidence": 2558,
+  "referencesWithReviewEvidence": 2593,
   "originalHoldsStillOpen": 154,
   "originalAnatomyMedicineQueue": {
     "names": 797,
@@ -130,15 +130,15 @@
     {
       "subject": "psychiatry",
       "indexedReferences": 15,
-      "referencesWithReviewEvidence": 1,
-      "referencesWithoutSelectedReviewEvidence": 14,
+      "referencesWithReviewEvidence": 15,
+      "referencesWithoutSelectedReviewEvidence": 0,
       "originalHeldReferences": 0
     },
     {
       "subject": "radiology",
       "indexedReferences": 21,
-      "referencesWithReviewEvidence": 0,
-      "referencesWithoutSelectedReviewEvidence": 21,
+      "referencesWithReviewEvidence": 21,
+      "referencesWithoutSelectedReviewEvidence": 0,
       "originalHeldReferences": 0
     },
     {
@@ -273,321 +273,6 @@
       "code": "GM24.1",
       "pdfPage": 315,
       "packet": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c53861b846e3bf9575c244f32564a67c7df6af2681cc8976f12c89fc56ea1177",
-      "subjectId": "psychiatry",
-      "code": "PS1.1",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:9aca6619bd07d4245bb383c5eaf5bb14548c84fd73dac1c73a7de12124adf07d",
-      "subjectId": "psychiatry",
-      "code": "PS1.2",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d79536a0246f0d34e0177b91ce1c49d6b993a043ecd0f1255793a73efb766ad9",
-      "subjectId": "psychiatry",
-      "code": "PS1.3",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:ac5f050c1f2635ae10e568a9c9858112bd2ae9e5f09b3de7a1b05efe6c87a65b",
-      "subjectId": "psychiatry",
-      "code": "PS10.1",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:78996126eaa1f93f393072b7157d370b7a9ac67f1d37b702ca0471be4992e6a8",
-      "subjectId": "psychiatry",
-      "code": "PS12.1",
-      "pdfPage": 354,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:8d11748a1634c78bdaf0c19302a6fb89ebf051944638fd7bcf74da628d46782c",
-      "subjectId": "psychiatry",
-      "code": "PS13.1",
-      "pdfPage": 354,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55",
-      "subjectId": "psychiatry",
-      "code": "PS3.1",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:dddc1e795842ed3d5ffb54600a56a823774caeefbc331de2d6b87390659738bd",
-      "subjectId": "psychiatry",
-      "code": "PS4.1",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b721691babac3ebd8c36f31c94c63ce99e0506db31e3fb015cde07c81afb9ad3",
-      "subjectId": "psychiatry",
-      "code": "PS5.1",
-      "pdfPage": 352,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:94df5b00e56ee29b79a6c624c95b40a2c10930654105dfc603b589e47eae4ea0",
-      "subjectId": "psychiatry",
-      "code": "PS5.2",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:4f04ad5a70f37a80ea9a63ee19112bf7dd5e804a423c36f19f596696333c700c",
-      "subjectId": "psychiatry",
-      "code": "PS6.1",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b1524ce815fe723017bc6643f603407a98159bef1c88ee10214b65edb368fdc8",
-      "subjectId": "psychiatry",
-      "code": "PS7.1",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d04c27988ef10d7d40e7785e25216329dc531fb7f18592f7299c774a2d6fb1a8",
-      "subjectId": "psychiatry",
-      "code": "PS8.1",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:b6d6d8ea6a3800de991cc0b0295ef07f84b63cd7e4cbd981fc4a1ab1451b9849",
-      "subjectId": "psychiatry",
-      "code": "PS9.1",
-      "pdfPage": 353,
-      "packet": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
-      "subjectId": "radiology",
-      "code": "RD1.1",
-      "pdfPage": 457,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:d26836743de6d5018cdf48c4cfbd8856d01630dd5efd6968321824a0a8b22d5e",
-      "subjectId": "radiology",
-      "code": "RD2.1",
-      "pdfPage": 457,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf",
-      "subjectId": "radiology",
-      "code": "RD2.2",
-      "pdfPage": 457,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:a5b6e0e2cd9798029d4170aa613248922ae9d5ece142cc458acd262816fbed09",
-      "subjectId": "radiology",
-      "code": "RD3.1",
-      "pdfPage": 457,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:08679f70d0d341b05ea1888b9d8e037adf9b4910076708d413d3428f4083a0ec",
-      "subjectId": "radiology",
-      "code": "RD3.2",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2c746fab91db25c10d2315b29df749218dca7cce9729a57733fc9a083c160789",
-      "subjectId": "radiology",
-      "code": "RD3.3",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:f8c24c66df6fa24926877b2e0f0e3d5a6a5f5d5ca976d5a070e71661953dde28",
-      "subjectId": "radiology",
-      "code": "RD3.4",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:5e11709eafc75210b83f44bfe291fcc3bcc320b436f24ff4a3b1b734d923303f",
-      "subjectId": "radiology",
-      "code": "RD4.1",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c392f2fc8c239c46fa3a8c68203b29c75e25581fa46af494836e87d21b613cc4",
-      "subjectId": "radiology",
-      "code": "RD4.2",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
-      "subjectId": "radiology",
-      "code": "RD4.3",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3eb79228539ca3577655ae00d0dd294de3a416a1495c8aa1fb6b5760e809347e",
-      "subjectId": "radiology",
-      "code": "RD5.1",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735",
-      "subjectId": "radiology",
-      "code": "RD5.2",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a",
-      "subjectId": "radiology",
-      "code": "RD5.3",
-      "pdfPage": 458,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:3752d926786b482344060f1512bdbda91002a9b656f555f1359adb6667f0fd33",
-      "subjectId": "radiology",
-      "code": "RD5.4",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:8afe35e20578a4fc0aaef4ae2f917fcc167a9064dd855e4a0380b172a9ba239b",
-      "subjectId": "radiology",
-      "code": "RD6.1",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c",
-      "subjectId": "radiology",
-      "code": "RD7.1",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
-      "subjectId": "radiology",
-      "code": "RD7.2",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
-      "subjectId": "radiology",
-      "code": "RD7.3",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58",
-      "subjectId": "radiology",
-      "code": "RD7.4",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd",
-      "subjectId": "radiology",
-      "code": "RD7.5",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
-      "proposedObjectiveVersionIds": [],
-      "status": "needs-review-evidence-reconciliation"
-    },
-    {
-      "referenceId": "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90",
-      "subjectId": "radiology",
-      "code": "RD7.6",
-      "pdfPage": 459,
-      "packet": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
       "proposedObjectiveVersionIds": [],
       "status": "needs-review-evidence-reconciliation"
     }
@@ -904,6 +589,9 @@
     ],
     "nmc-2024-ref:082439056358bfd04805b3b7fbf54d84c54beec6822a7f87eb27fb8eac3405bd": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
+    ],
+    "nmc-2024-ref:08679f70d0d341b05ea1888b9d8e037adf9b4910076708d413d3428f4083a0ec": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:087799c3bdde841631e4076e52a4d162ae415652692a541529b96033f3b312b1": [
       "docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json"
@@ -1892,6 +1580,9 @@
     "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c": [
       "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json"
     ],
+    "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8": [
       "docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json"
     ],
@@ -1930,6 +1621,9 @@
     ],
     "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724": [
       "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json"
+    ],
+    "nmc-2024-ref:2c746fab91db25c10d2315b29df749218dca7cce9729a57733fc9a083c160789": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:2c754d91b695228ca074c9c1912bcbb0985f6b78f5d625245afd9fa01db20de3": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
@@ -1987,6 +1681,9 @@
     ],
     "nmc-2024-ref:2d8037408dc43664763463b1416e01c2a300ff15bd9a3246cc242ba5e167606f": [
       "docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json"
+    ],
+    "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:2dd25e75727f7de0ce72004eebb0e01527d138ac131f347050a45b8b17ac6616": [
       "docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json"
@@ -2258,6 +1955,9 @@
     "nmc-2024-ref:36df88a22846f39443d722965234fc82b3e0ee133728c684aa3e83b2578ed727": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
     ],
+    "nmc-2024-ref:3752d926786b482344060f1512bdbda91002a9b656f555f1359adb6667f0fd33": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:37542b0ed2044ba9213d51e0ca6718cb7ab9f72e532270e51e5cb8277055c300": [
       "docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json"
     ],
@@ -2305,6 +2005,9 @@
     ],
     "nmc-2024-ref:38832f81dccbc6136ff64b2977b09f662850227e197d82179e50bacac5f1ad4f": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-14.json"
+    ],
+    "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
@@ -2482,6 +2185,9 @@
     ],
     "nmc-2024-ref:3ea55d3e82a7c8de81e476222e7d93eb375a057d565c07cbfaf92b41094d7d0f": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:3eb79228539ca3577655ae00d0dd294de3a416a1495c8aa1fb6b5760e809347e": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:3eb921033bffa221fd62a2ae2e01952e0af45360ab570f6e0c00d514544efd99": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -2987,6 +2693,9 @@
     "nmc-2024-ref:4ee2e522d7053d60948f10c34b6918a92e92daf7b98257c9e532bffb1d49e70d": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-11.json"
     ],
+    "nmc-2024-ref:4f04ad5a70f37a80ea9a63ee19112bf7dd5e804a423c36f19f596696333c700c": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:4f43a2bd7c8f5aa3c4a85e2ebb0c5ef14998536644a476df8d686b82ea38ba15": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
@@ -3436,6 +3145,9 @@
     ],
     "nmc-2024-ref:5e10bfbc186f0c23fc4d31c62ac2a9b62da838b2b10911d2c2889fb4e5c82209": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+    ],
+    "nmc-2024-ref:5e11709eafc75210b83f44bfe291fcc3bcc320b436f24ff4a3b1b734d923303f": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-04.json"
@@ -3962,6 +3674,9 @@
     "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-23.json"
     ],
+    "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:6fc9df4678ff3f74f5731dde08889b2915ed3e630192cdcfe1e79b3e601d3fb1": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
@@ -4151,6 +3866,9 @@
     "nmc-2024-ref:7892bcbd40f0f58e15beef34c0b8577ff069ec5f187b2abd15c1402d8517536f": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
+    "nmc-2024-ref:78996126eaa1f93f393072b7157d370b7a9ac67f1d37b702ca0471be4992e6a8": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:789f4bc3c95c57d3501b95b28c62e0831da497351c7a9385dc8f251cc8668ebb": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
     ],
@@ -4183,6 +3901,9 @@
     ],
     "nmc-2024-ref:794a365115152f32fc7899e36fbc852e45aaab715f8f5d5915d46412a15ef816": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -4743,6 +4464,9 @@
     "nmc-2024-ref:8ab9bde74d3961052da96568d1c436896571d8fc901bcd2fd706bd8c76b9cc24": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
     ],
+    "nmc-2024-ref:8afe35e20578a4fc0aaef4ae2f917fcc167a9064dd855e4a0380b172a9ba239b": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:8b1b67e430f3efa742d192e093464bb13f25b827914374f8230fcb62394469a3": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
     ],
@@ -4805,6 +4529,9 @@
     ],
     "nmc-2024-ref:8d0c9035284d2c2c4c28d9e2ea91467cbec9d2754ac5f6f0eadc7fae199bc15c": [
       "docs/evidence/2026-11-16-nmc-ophthalmology-source-scope-review-op1-op10.json"
+    ],
+    "nmc-2024-ref:8d11748a1634c78bdaf0c19302a6fb89ebf051944638fd7bcf74da628d46782c": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:8d160b85d57bc1614fe175f9f9cd66dd592d30d2f73403ef592447a28aa99a89": [
       "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json"
@@ -5020,6 +4747,9 @@
     "nmc-2024-ref:94ba6e62e3264cd9c37edae043b6f76b7419b2d62746657a6b17930bd25476e9": [
       "docs/evidence/2026-11-13-nmc-paediatrics-cross-subject-source-check.json"
     ],
+    "nmc-2024-ref:94df5b00e56ee29b79a6c624c95b40a2c10930654105dfc603b589e47eae4ea0": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:94e3a1bffb98b44e24fcd453991e7549b961a02f8b3009311d775294c8cc4ed3": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-09.json"
     ],
@@ -5157,6 +4887,9 @@
     ],
     "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc": [
       "docs/evidence/2026-11-13-nmc-medicine-additional-appearance-review-03.json"
+    ],
+    "nmc-2024-ref:9aca6619bd07d4245bb383c5eaf5bb14548c84fd73dac1c73a7de12124adf07d": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:9ad598d019ec3efc9e1c98b586e52af60805d0e95287fec7c83c0292a8f77c49": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -5494,6 +5227,9 @@
     "nmc-2024-ref:a5b29f5555a9760371c9299f05175d3dd30f0558f7e3c4f17f4643172531658f": [
       "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json"
     ],
+    "nmc-2024-ref:a5b6e0e2cd9798029d4170aa613248922ae9d5ece142cc458acd262816fbed09": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:a5f1ad3c14ee54c2a8d98f6d4de2ef27e11558c55e62c63ad39affe347b27bc5": [
       "docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json"
     ],
@@ -5684,6 +5420,9 @@
     "nmc-2024-ref:ac2b6f7b09749fb3611a839d1e102e4108653ee9afdca811b05e71ddbde5e939": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
     ],
+    "nmc-2024-ref:ac5f050c1f2635ae10e568a9c9858112bd2ae9e5f09b3de7a1b05efe6c87a65b": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:ac68074591afece652b55a1822bd83f059feeadbc0d6538f902c2dca93e11f90": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-20.json"
     ],
@@ -5777,6 +5516,9 @@
     "nmc-2024-ref:afd10a6c2bab5d7249e3db5302c9e96539969c679c91ebd4acb4c85f7a32976d": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
     ],
+    "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-05.json"
     ],
@@ -5806,6 +5548,9 @@
     ],
     "nmc-2024-ref:b1471f2dfd4391e4a36e7b867c73113e6a88f13dc75b83667d50de45870f1125": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+    ],
+    "nmc-2024-ref:b1524ce815fe723017bc6643f603407a98159bef1c88ee10214b65edb368fdc8": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:b1577cdd1e2b4ff9867e416896c7e156ca92d6c8bb752ff71b00996d5203a4bf": [
       "docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json"
@@ -5969,6 +5714,9 @@
     "nmc-2024-ref:b6ccf2b40f259a6a1d23d28cf6c1eb35ef6e93669875deccf1793dbc25a8ccc5": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
     ],
+    "nmc-2024-ref:b6d6d8ea6a3800de991cc0b0295ef07f84b63cd7e4cbd981fc4a1ab1451b9849": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:b6e356a54d1ba50029cb7aa3fb1d4a22132fdd9c16a829ac702041d54d61347d": [
       "docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json"
     ],
@@ -5977,6 +5725,9 @@
     ],
     "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0": [
       "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json"
+    ],
+    "nmc-2024-ref:b721691babac3ebd8c36f31c94c63ce99e0506db31e3fb015cde07c81afb9ad3": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:b726e5f6a73f87c44984d43486148511e54a3573830584e49e83c4dfe07b0c46": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
@@ -6339,6 +6090,9 @@
     "nmc-2024-ref:c23d204ba31e4bdc9e418ab94272ea873e0f160e9d66835ff20ffbdb5e5891d6": [
       "docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json"
     ],
+    "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:c248b0deee96303cebcf7e6f6dd231add31cecb25f91f345cccb47f215280f9b": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
@@ -6389,6 +6143,9 @@
     ],
     "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-11.json"
+    ],
+    "nmc-2024-ref:c392f2fc8c239c46fa3a8c68203b29c75e25581fa46af494836e87d21b613cc4": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json"
@@ -6444,12 +6201,18 @@
     "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269": [
       "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json"
     ],
+    "nmc-2024-ref:c53861b846e3bf9575c244f32564a67c7df6af2681cc8976f12c89fc56ea1177": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e": [
       "docs/evidence/2026-11-13-nmc-cross-subject-additional-appearance-review.json",
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
     ],
     "nmc-2024-ref:c55e011b87e3081f29fe736d7fd95eda388d23f17d2a7de56af59d2ad9c27944": [
       "docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json"
+    ],
+    "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
@@ -6510,6 +6273,9 @@
     ],
     "nmc-2024-ref:c765793ce2f30897d987aac6a4adf5e8e1749777b0adbfa7e39c8b6bcbd498f7": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
+    ],
+    "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:c7b5973118fccb0ba0276602f02df95c7a225facebbedceba816c26be4393064": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json"
@@ -6796,6 +6562,9 @@
     "nmc-2024-ref:d0081208b8c4e68b0e8194c32e612c8a52be99c0283046b10c9045620ec6cd4a": [
       "docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-06.json"
     ],
+    "nmc-2024-ref:d04c27988ef10d7d40e7785e25216329dc531fb7f18592f7299c774a2d6fb1a8": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:d0c0f153fc138be741f8039a33061e7db211b22d64b8fa9fd078950b515b0ffd": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-24.json"
     ],
@@ -6867,6 +6636,9 @@
     ],
     "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
+    ],
+    "nmc-2024-ref:d26836743de6d5018cdf48c4cfbd8856d01630dd5efd6968321824a0a8b22d5e": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:d281742f40297c83d2f5e09cef88d2ccddb76b72761dcfd9dffec61d89569d7f": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
@@ -7014,6 +6786,9 @@
     ],
     "nmc-2024-ref:d77cbb3c0e64f010ef736c3e5950831d07dc2939d1274ef4e2cc33ad4a3921b6": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-19.json"
+    ],
+    "nmc-2024-ref:d79536a0246f0d34e0177b91ce1c49d6b993a043ecd0f1255793a73efb766ad9": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:d795be1b2f83393ab548103a747281f957fc118adc3f2edca6aaa916aa4241b0": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
@@ -7209,6 +6984,9 @@
     ],
     "nmc-2024-ref:ddd789974be4b629ffa00f0fb0b1e15fe7f0179c0e1b9298ab7f85f5bdae9bc6": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+    ],
+    "nmc-2024-ref:dddc1e795842ed3d5ffb54600a56a823774caeefbc331de2d6b87390659738bd": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
     ],
     "nmc-2024-ref:dddecfae0d2ee26cc3963f06137491e782f315d29bdfd6802928c7545459d4a2": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
@@ -7558,6 +7336,9 @@
     "nmc-2024-ref:e9af4329a314e4bade8c00066a88cf66d43825c9d2519e1c61008a2ba2a23cc1": [
       "docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json"
     ],
+    "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55": [
+      "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json"
+    ],
     "nmc-2024-ref:e9ef29236ddc9ff503ef73396aac4c6d44c11af8d5d441e2e678b3697ef751c4": [
       "docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json"
     ],
@@ -7705,6 +7486,9 @@
     "nmc-2024-ref:ee44e37a844eb0627eb2e6ee0aacbd76c4f7bbdf7150aae956ab6c77e2a75083": [
       "docs/evidence/2026-11-13-nmc-medicine-source-scope-review-batch-13.json"
     ],
+    "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
+    ],
     "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33": [
       "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json"
     ],
@@ -7773,6 +7557,9 @@
     ],
     "nmc-2024-ref:f054345c46519bdf693135642067fdd1529cd4f274e396c547390b0e862f3f4b": [
       "docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json"
+    ],
+    "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:f05e983eade72128c79fdcb498604774be4ae1beb72f9af9222fd2e75dc1c3ea": [
       "docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json"
@@ -8040,6 +7827,9 @@
     ],
     "nmc-2024-ref:f89df4d7233b6f8e300972bf37cc3446922dc37acd1a4865f2ebb94842d64173": [
       "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json"
+    ],
+    "nmc-2024-ref:f8c24c66df6fa24926877b2e0f0e3d5a6a5f5d5ca976d5a070e71661953dde28": [
+      "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json"
     ],
     "nmc-2024-ref:f8d4fa80c2e5a3d4d486579425055d8be0d4923b7fd11307b687ad8d353f3b78": [
       "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
@@ -8336,6 +8126,8 @@
     "docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json": "ee751eb940646dbe8da4ffdd0848643acb8cf6dd91dd925ab0a8425af2b2a76d",
     "docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json": "82f76404d5802313166df1958eec451b9a6e4e89d931455d246a628c8e8aebf8",
     "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json": "90bb098190410782d206a20bd03dd8a04e2318f6ddf2fa585ecbff1c9b635104",
+    "docs/evidence/2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json": "3942bd5be98695c9869a8daf65af91ffe40809228c704047ab4731a229f32ac9",
+    "docs/evidence/2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json": "6c34e892a553424dcc9597b8805291602f49baa914704bfdd4244b321a4982ec",
     "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json": "79a829ce6261b3fb5a6dc47cfe921b7ecd9adbf13f57f18799d283b3643df41e"
   },
   "verificationLimits": [
