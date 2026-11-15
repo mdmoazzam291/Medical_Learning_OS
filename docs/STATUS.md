@@ -1,12 +1,12 @@
 ## NMC Pathology source-scope review complete (181/181 linked) — 2026-11-15T22:15Z
 
-- Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `d7ed78988c3e976c94498e6726ec67013175733e`. Parent #415 and main unchanged. Owner authorised the work in chat. **Not pushed:** this session had no write access to the repository; the commit exists only as a patch handed to the owner. Until it is applied, the remote branch does not contain this entry's work.
+- Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `d7ed78988c3e976c94498e6726ec67013175733e`. Parent #415 and main unchanged. Owner authorised the work in chat. Review commit `7a7dd4d619d9e45403df1a85e00c7ded547785ce` pushed and remote head verified after the owner installed the Claude GitHub App; ownership released.
 - Reviewed all **174** Pathology references that lacked selected review evidence (60-row queue PA1.1–PA16.2 plus the remaining 114, PA16.3–PA35.1) against the official NMC 12-09-2024 CBME document text: **170 scope-aligned, 4 held**. Held: `PA2.2` (etiology element absent), `PA8.5` (organ lesions beyond pathogenesis), `PA22.4` and `PA22.5` (domain cell read as "KS"; draft mode unverified). Zero accepted corrections or mappings. New holds live in the packet only; the 154-reference original hold inventory is unchanged.
 - Audit now: **1,379 of 2,607 references linked, 1,228 pending**; Pathology 181/181. Largest remaining: Forensic Medicine 156, Obstetrics/Gynaecology 141, Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92.
 - Changed: new `docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json`; `scripts/nmc-review-handoff-audit.py` gains one packet pattern and the new input head; both generated audit outputs rewritten.
 - Verification: exact reference and packet joins for 174 rows; draft mode matches official domain on the 170 aligned rows; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes (13 services / 254 locations).
 - Limits: official text was read through a web reader that quotes short rows and restates long ones. PDF bytes, the pinned SHA-256, source-body hashes, rendered pages and table-cell alignment were not verified; identity of the fetched file with the pinned PDF is assumed from title and date. Certification counts are reader-reported. No clinical, faculty, rights or canonical acceptance.
-- Next: apply and push the patch; resolve the four holds on rendered official pages; then Forensic Medicine (156). The 14 Anatomy/Medicine references still await official-source verification. The 12 identity candidates and 21 source exceptions are untouched.
+- Next: resolve the four holds on rendered official pages; then Forensic Medicine (156). The 14 Anatomy/Medicine references still await official-source verification. The 12 identity candidates and 21 source exceptions are untouched.
 
 ---
 
