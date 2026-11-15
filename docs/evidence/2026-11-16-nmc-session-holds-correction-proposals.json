@@ -8,12 +8,12 @@
     "https://www.mgmuhs.com/Pathology_(CBME).pdf",
     "https://www.mgmuhs.com/Physiology%20(CBME)%20-jkfha.pdf"
   ],
-  "status": "thirteen-correction-proposals-not-accepted",
-  "heldReferences": 13,
-  "proposedCorrections": 13,
+  "status": "twelve-correction-proposals-not-accepted",
+  "heldReferences": 12,
+  "proposedCorrections": 12,
   "acceptedCorrections": 0,
-  "unresolvedHolds": 13,
-  "note": "Proposals for the 13 holds raised by the 2026-11-16 source-scope review packets. Proposed tasks stay inside the official row wording as read through a web reader. Mode-only proposals (PA22.4, PA22.5, PY11.6, SU5.2) cite a second, non-official reproduction of the same table; that corroborates but does not replace a rendered-page check of the official PDF. Original draft tasks and packets are unchanged. No clinician review, faculty acceptance or canonical mapping.",
+  "unresolvedHolds": 12,
+  "note": "Proposals for the 12 holds raised by the 2026-11-16 source-scope review packets. Proposed tasks stay inside the official row wording as read through a web reader. Mode-only proposals (PA22.4, PA22.5, PY11.6) cite a second, non-official reproduction of the same table; that corroborates but does not replace a rendered-page check of the official PDF. Original draft tasks and packets are unchanged. No clinician review, faculty acceptance or canonical mapping.",
   "acceptanceRequires": [
     "Rendered-page check of the official NMC row (domain, level, wording).",
     "Explicit owner or faculty acceptance recorded as a versioned objective revision."
@@ -342,33 +342,12 @@
       "mappingAccepted": false,
       "correctionAccepted": false,
       "learnerActivation": false
-    },
+    }
+  ],
+  "withdrawnHolds": [
     {
       "code": "SU5.2",
-      "sourceReferenceId": "nmc-2024-ref:dda0e74f7adf1ac4b25b7c06eda390955ea59f4afaa2b134695a0b5725f6c6bc",
-      "sourceBodySha256": "33a21228862c968cd45d8bdfae7a9b8c8f371a24eecc64646d4a4eba0f9b908c",
-      "originalSourcePacket": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
-      "sourcePdfPage": 404,
-      "reviewPacket": "docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json",
-      "reviewPacketSha256": "79a829ce6261b3fb5a6dc47cfe921b7ecd9adbf13f57f18799d283b3643df41e",
-      "originalDraftMode": "performance-and-knowledge",
-      "originalDraftTask": "Elicit, document and present a structured history of a simulated wound.",
-      "priorHeldReason": "The official row is a communication skill at level SH (elicit, document and present a history in a patient with wounds); the draft task matches that scope but is tagged knowledge mode.",
-      "holdType": "mode-mismatch",
-      "officialDomain": "C",
-      "officialLevel": "SH",
-      "scopeCorrectionStatus": "proposal-made-original-hold-retained",
-      "proposedCurriculumBoundTask": "Elicit, document and present a structured history from a simulated patient presenting with a wound.",
-      "proposedTaskMode": "performance-and-knowledge",
-      "proposalNote": "Mode change only; scope unchanged.",
-      "modeChanged": false,
-      "sourceBodyRehashedNow": false,
-      "clinicalAcceptance": false,
-      "canonicalConceptId": null,
-      "objectiveVersionId": null,
-      "mappingAccepted": false,
-      "correctionAccepted": false,
-      "learnerActivation": false
+      "reason": "Held in error; draft mode was already performance-and-knowledge, consistent with official C/SH."
     }
   ]
 }

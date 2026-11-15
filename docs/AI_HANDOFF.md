@@ -1,11 +1,11 @@
 ## NMC session-hold correction proposals — 2026-11-16T01:55Z
 
 - Writer: Claude, draft PR #421 from remote head `1bcfc3a51a0261a51cf7cb04feea72265a9887ea`. Ownership released after remote readback.
-- Wrote `docs/evidence/2026-11-16-nmc-session-holds-correction-proposals.json`: one source-bound proposed task for each of the **13 holds** raised by this session's review packets, in the same format as the 2026-11-13 ten-hold proposals. **0 accepted**; all 13 holds stay open; original draft packets unchanged.
+- Wrote `docs/evidence/2026-11-16-nmc-session-holds-correction-proposals.json`: one source-bound proposed task for each of the **12 holds** raised by this session's review packets (SU5.2 withdrawn: it was held in error — its draft is already practical, matching official C/SH; the Surgery packet is corrected to 116 aligned), in the same format as the 2026-11-13 ten-hold proposals. **0 accepted**; all 12 holds stay open; original draft packets unchanged.
 - Scope proposals (9): PA2.2 adds etiology; PA8.5 narrows to definition and pathogenesis; FM1.5 adds conduct money, witness types, court questions and witness-box conduct; FM14.13 restores the sexual-offence accused examination with trace evidence; OG30.2 adds management; BC14.18 lists all eleven techniques; OR2.16 adds leg fractures and non-accidental injury recognition; GM10.15 replaces sampling with ABG indications and interpretation; GM24.1 adds caloric-requirement calculation.
-- Mode proposals (4), each with second-source corroboration from a university reproduction of the NMC table: PA22.4 and PA22.5 to practical (domain "KS", DOAP, skill assessment, 4 to certify); SU5.2 to practical (C/SH history-taking); PY11.6 to knowledge (same garbled "K S P Y" cells, but "Discuss", written/viva only, no certification).
+- Mode proposals (3), each with second-source corroboration from a university reproduction of the NMC table: PA22.4 and PA22.5 to practical (domain "KS", DOAP, skill assessment, 4 to certify); PY11.6 to knowledge (same garbled "K S P Y" cells, but "Discuss", written/viva only, no certification).
 - Acceptance still requires a rendered-page check of each official row and an explicit owner or faculty decision recorded as a versioned objective revision. The handoff audit is unaffected (2,607/2,607 linked).
-- Next: owner review of the 13 proposals; then the original 154 holds, the source-exception track and the canonical candidates.
+- Next: owner review of the 12 proposals; then the original 154 holds, the source-exception track and the canonical candidates.
 
 ---
 

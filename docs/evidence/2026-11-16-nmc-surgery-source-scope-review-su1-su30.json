@@ -9,12 +9,9 @@
   "modeRule": "Practical draft mode expected when the official level is SH or P; knowledge mode otherwise. Two documented exceptions (SU4.1, SU10.3).",
   "scope": "All 116 Surgery references that lacked selected review evidence at the checked head (SU1.1-SU30.6; SU3.2, SU22.3, SU28.5, SU28.18 and SU30.4 already reviewed).",
   "counts": {
-    "scope-aligned": 115,
-    "held-source-scope": 1
+    "scope-aligned": 116
   },
-  "heldCodes": [
-    "SU5.2"
-  ],
+  "heldCodes": [],
   "observations": [
     "The reader found SU24.1-SU24.3 (pancreas) and SU27.1-SU27.8 (vascular and lymphatic) in the official table without Topic 24 or Topic 27 headings; none is in the names-only index. These match the 11 Surgery heading exceptions in the separate source-exception track and are not reviewed here.",
     "The reader reported no SU26.2 in the official table.",
@@ -325,10 +322,10 @@
       "certificationCountReported": null,
       "modeConsistentWithLevel": true,
       "officialTextRelay": "quoted",
-      "disposition": "held-source-scope",
-      "holdType": "mode-mismatch",
-      "note": "The official row is a communication skill at level SH (elicit, document and present a history in a patient with wounds); the draft task matches that scope but is tagged knowledge mode.",
-      "evidenceToResolve": "Change the draft mode to performance-and-knowledge in a versioned task revision, or record why knowledge mode is intended.",
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Corrected 2026-11-16: originally held in error as a mode mismatch. The draft is already performance-and-knowledge, consistent with the official C/SH level.",
+      "evidenceToResolve": null,
       "correctionAccepted": false,
       "mappingAccepted": false,
       "learnerActivation": false
@@ -2578,5 +2575,8 @@
       "learnerActivation": false
     }
   ],
-  "nextAction": "Resolve SU5.2 draft mode, then continue with Pharmacology (92 pending references)."
+  "nextAction": "Continue with Pharmacology (92 pending references).",
+  "corrections": [
+    "2026-11-16: SU5.2 hold withdrawn; draft mode was already practical."
+  ]
 }
