@@ -1,3 +1,15 @@
+## NMC Forensic Medicine source-scope review complete (157/157 linked) — 2026-11-15T22:45Z
+
+- Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `08a82c890c416fbb9d080db176850333840ac401`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **156** Forensic Medicine references that lacked selected review evidence (FM1.1–FM14.20) against the official NMC 12-09-2024 CBME document text: **154 scope-aligned, 2 held**. Held: `FM1.5` (conduct money, types of witnesses, court questions and witness-box conduct absent from draft) and `FM14.13` (official row is the sexual-offence accused examination with trace evidence; draft is a generic accused examination). Draft mode matches the official domain on all 156 rows. Zero accepted corrections or mappings; the 154-reference original hold inventory is unchanged.
+- Audit now: **1,535 of 2,607 references linked, 1,072 pending**; Forensic Medicine 157/157, Pathology 181/181. Largest remaining: Obstetrics/Gynaecology 141, Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82.
+- Changed: new `docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json`; the audit packet pattern now matches any `2026-11-16-nmc-*-source-scope-review-*.json`; input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins for 156 rows; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes (13 services / 254 locations).
+- Limits: same as the Pathology entry below — official text read through a web reader that quotes short rows and restates long ones; PDF bytes, pinned SHA-256, source-body hashes, rendered pages and cell alignment not verified. Statute names and section numbers in official rows were not checked against current law. No clinical, legal, faculty, rights or canonical acceptance.
+- Next: Obstetrics and Gynaecology (141). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13 — resolve on rendered official pages. The 14 Anatomy/Medicine references still await official-source verification.
+
+---
+
 ## NMC Pathology source-scope review complete (181/181 linked) — 2026-11-15T22:15Z
 
 - Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `d7ed78988c3e976c94498e6726ec67013175733e`. Parent #415 and main unchanged. Owner authorised the work in chat. Review commit `7a7dd4d619d9e45403df1a85e00c7ded547785ce` pushed and remote head verified after the owner installed the Claude GitHub App; ownership released.
