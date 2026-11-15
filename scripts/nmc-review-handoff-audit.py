@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 E = 'docs/evidence/'
 PREFIX = E + '2026-11-13-nmc-'
-INPUT_HEAD = '5252e41e94e8dada7db7f66d00fcf522899cfd72'
+INPUT_HEAD = 'd7ed78988c3e976c94498e6726ec67013175733e'
 inputs = {}
 
 
@@ -87,7 +87,8 @@ def build():
                         '2026-11-13-nmc-medicine-additional-appearance-review-*.json',
                         '2026-11-13-nmc-cross-subject-additional-appearance-review.json',
                         '2026-11-13-nmc-paediatrics-source-scope-review-*.json',
-                        '2026-11-13-nmc-paediatrics-cross-subject-source-check.json')
+                        '2026-11-13-nmc-paediatrics-cross-subject-source-check.json',
+                        '2026-11-16-nmc-pathology-source-scope-review-*.json')
         for p in (ROOT / E).glob(pattern)))
     evidence = defaultdict(list)
     for path in packet_paths + [PREFIX + 'source-alias-and-paediatrics-opening-review.json']:
