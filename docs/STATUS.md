@@ -1,3 +1,16 @@
+## NMC Community Medicine source-scope review complete (136/136 linked) — 2026-11-15T23:20Z
+
+- Writer: Claude, draft PR #421 from remote head `47fdd50424880738d367584c96789dd4954a5aff`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **135** CM references that lacked selected review evidence (CM1.1–CM20.4) against the official NMC 12-09-2024 CBME text: **135 scope-aligned, 0 held**. Draft mode matches the official level on all rows (one documented exception, CM7.9 "describe and demonstrate" at S/KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Observations, not acted on: CM9.5 draft reframes "population control" as voluntary, rights-based approaches (framing noted); official CM10.5 reads "GMNCI" (likely IMNCI); topic headers for Topics 6 and 7 state one certifiable competency while CM6.6 and CM7.4 each show 5.
+- Audit now: **1,811 of 2,607 linked, 796 pending**; CM 136/136. Largest remaining: Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62.
+- Changed: new `docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below. Programme and policy names not checked for currency.
+- Next: Physiology (131). Open holds from this session unchanged: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2.
+
+---
+
 ## NMC Obstetrics & Gynaecology source-scope review complete (142/142 linked) — 2026-11-15T23:05Z
 
 - Writer: Claude, draft PR #421 from remote head `67f809377945c995688ee488aef5f8501512e79a`. Parent #415 and main unchanged. Ownership released after remote readback.
