@@ -1,3 +1,16 @@
+## NMC Microbiology source-scope review complete — 2026-11-16T00:25Z
+
+- Writer: Claude, draft PR #421 from remote head `51067d2dc892275a0c09d53465d35820799e1b5c`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **69** MI references that lacked selected review evidence (MI1.1–MI11.3) against the official NMC 12-09-2024 CBME text: **69 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints MI8.3 as "MI 8." (digit missing); MI8.3 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,301 of 2,607 linked, 306 pending**. Remaining: ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: ENT (62). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18.
+
+---
+
 ## NMC Biochemistry source-scope review complete — 2026-11-16T00:15Z
 
 - Writer: Claude, draft PR #421 from remote head `ccc99f4880e61f9fc0b8658591ce29dde8e36c18`. Parent #415 and main unchanged. Ownership released after remote readback.
