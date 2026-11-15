@@ -1,3 +1,16 @@
+## NMC Surgery source-scope review complete — 2026-11-15T23:55Z
+
+- Writer: Claude, draft PR #421 from remote head `f7d4eb7abb5ce9e34220d25eee10f7097c728b7d`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **116** SU references that lacked selected review evidence (SU1.1–SU30.6) against the official NMC 12-09-2024 CBME text: **115 scope-aligned, 1 held** — `SU5.2` (official row is a history-taking communication skill at SH; draft scope matches but is tagged knowledge mode). Two documented mode exceptions (SU4.1 history-and-examination row at KH; SU10.3 observe/assist at KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The reader found SU24.1–SU24.3 and SU27.1–SU27.8 without topic headings; these are exactly the 11 Surgery heading exceptions in `2026-11-13-nmc-source-exception-current-branch-checkpoint.json` and stay in that track. No SU26.2 appears in the official table.
+- Audit now: **2,058 of 2,607 linked, 549 pending**. Largest remaining: Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48.
+- Changed: new `docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Pharmacology (92). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2.
+
+---
+
 ## NMC Physiology source-scope review complete — 2026-11-15T23:40Z
 
 - Writer: Claude, draft PR #421 from remote head `30da0fda37e5a9897e1977721f1d5fed522bee70`. Parent #415 and main unchanged. Ownership released after remote readback.
