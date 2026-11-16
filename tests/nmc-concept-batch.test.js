@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateBatch,batchSummary,parseAcceptRequest,batchAcceptInput,newConcepts,ATTESTATION} from '../src/domain/nmc-concept-batch.js';
 import {batchReviewMarkup} from '../web/nmc-concept-batch-review.js';
-const raw=readFileSync(new URL('../docs/evidence/2026-11-16-nmc-physiology-concept-batch-v2.json',import.meta.url));
+const raw=readFileSync(new URL('../docs/evidence/2026-11-16-nmc-physiology-concept-batch-v3.json',import.meta.url));
 const batch=JSON.parse(raw);
 const fn=readFileSync(new URL('../supabase/functions/nmc-admin-preview/index.ts',import.meta.url),'utf8');
 const meta=JSON.parse(readFileSync(new URL('../data/nmc-competency-source-metadata.json',import.meta.url),'utf8')).rows;
@@ -43,7 +43,7 @@ test('review markup escapes content and shows the non-publication notice',()=>{
 });
 
 test('v2 names entities, types every concept and keeps aliases as true synonyms',()=>{
- assert.equal(batch.batchId,'nmc-physiology-concepts-v2-20261116');
+ assert.equal(batch.batchId,'nmc-physiology-concepts-v3-20261116');
  assert.equal(batch.supersedes.accepted,false);
  const labels=new Set(batch.concepts.map(c=>c.document.label));
  for(const subjectView of ['Liver physiology','Heart functional anatomy','Pain physiology','Physiology of pregnancy','Thyroid physiology','Neuromuscular junction disorders'])assert.ok(!labels.has(subjectView),subjectView);
@@ -66,4 +66,14 @@ test('review summary lists identity-changing concepts before unflagged ones',()=
  assert.deepEqual(s.concepts[0].reviewFlags.includes('reuses-accepted-identity'),true);
  assert.equal(s.concepts.length,batch.concepts.length);
  assert.match(batchReviewMarkup(s),/identity-changing items first/);
+});
+
+test('v3 lists only subjects evidenced by linked source rows and keeps expected subjects as hints',()=>{
+ for(const c of batch.concepts){
+  assert.deepEqual(c.document.classification.subjects,['physiology']);
+  assert.ok(Array.isArray(c.expectedSubjects)&&!c.expectedSubjects.includes('physiology'));
+  assert.ok(c.linkedCodes.every(k=>/^PY\d/.test(k)));
+ }
+ assert.ok(batch.concepts.find(c=>c.document.label==='Anaemia').expectedSubjects.includes('pathology'));
+ assert.ok(batchAcceptInput(batch,'x',{requestId:'r',reviewNotes:'n'}).items.every(i=>!('expectedSubjects' in i)&&!('expectedSubjects' in i.document)));
 });
