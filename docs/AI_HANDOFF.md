@@ -1,3 +1,12 @@
+## NMC Physiology batch v3 deployed and merged — 2026-11-16T13:25Z
+
+- Writer: Claude. Owner approved ("Next", 18:43 IST) the redeploy and merge.
+- `nmc-admin-preview` redeployed to production as version 4 with the v3 pin (commit `d2bc505`, SHA-256 `6a733f98…8f3f`); only the two batch pin constants changed. An unauthenticated request returned a client error, consistent with a booted function; an authenticated Admin load has not been observed.
+- PR #425 merged to main as `da16a8b` after check, browser, webkit and the Cloudflare build passed on head `d5a4ee1`.
+- Next: owner loads and accepts batch v3 in Admin → NMC Foundation → Canonical concept batch; then bind the 191 objectives from the receipts. Still deferred: question subject fallback before the first question import; objective ID on learning events; single subject tree.
+
+---
+
 ## NMC Physiology concept batch v3 — evidenced subjects only — 2026-11-16T11:55Z
 
 - Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` (PR #425), on top of `4e374e8`.
