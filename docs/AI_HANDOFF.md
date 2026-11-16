@@ -1,3 +1,15 @@
+## NMC canonical identity source-scope check — 2026-11-16T03:05Z
+
+- Writer: Claude, draft PR #421 from remote head `a8eb1c42c821595c96a440e7488ad74b5ba8c3d3`. Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-canonical-identity-source-scope-check.json` for the **12 accepted-private identities** and their **15 proposed objective links** (AN57.1–AN57.5, PY10.7, PY10.9, PY10.10).
+- All 12 receipts join to the candidates and the link plan; candidate references match plan links exactly.
+- **15/15 links scope-aligned as partial tasks; 0 held.** AN57.1 (K/S SH) carries the only practical task (specimen identification); all others are KH reasoning tasks.
+- Coverage: all 8 conditions listed in AN57.5 have an identity (7 here plus the retained Brown-Séquard identity `C-101d60e987915f6fa8175c469a265f79`), which also carries PY10.10 hemisection. Uncovered row elements, not holds: PY10.7 somatic sensations and applied sensory aspects; PY10.9 UMN vs LMN lesion differences.
+- Limits: the official PDF could not be downloaded here (workspace network allowlist refused nmc.org.in; no copy in Drive), so rows were read through the web reader; AN57.5 full text was relayed as a condition list, not quoted. No mapping accepted.
+- Next: owner/admin attestation of the 15 links; draft objectives for the PY10.7 and PY10.9 uncovered elements.
+
+---
+
 ## NMC source-exception official check — 2026-11-16T02:45Z
 
 - Writer: Claude, draft PR #421 from remote head `6a6a6da899f16eeef7a18732a3c5df53c605bdac` (remote re-verified after a pause; main still `55bae73`). Ownership released after remote readback.
