@@ -96,3 +96,17 @@ test('Biochemistry batch v1 covers every recognised Biochemistry row, reuses Phy
  assert.equal(new Set(names).size,names.length);
  for(const c of phys.concepts)assert.ok(!names.includes(c.label.toLowerCase())||bc.concepts.some(x=>x.existingConceptId===c.conceptId),c.label);
 });
+
+test('Pathology batch v1 covers every recognised Pathology row and reuses accepted identities by exact ID',()=>{
+ const pa=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-pathology-concept-batch-v1.json',import.meta.url)));
+ const cat=JSON.parse(readFileSync(new URL('../data/nmc-reference-catalogue.json',import.meta.url)));
+ const accepted=new Map();
+ for(const f of ['physiology','biochemistry'])for(const c of JSON.parse(readFileSync(new URL(`../docs/evidence/2026-11-16-nmc-${f}-objective-bindings-v1.json`,import.meta.url))).concepts)if(!accepted.has(c.label))accepted.set(c.label,c.conceptId);
+ validateBatch(pa);assert.equal(pa.subjectId,'pathology');assert.equal(pa.learnerActivation,false);
+ const rows=cat.references.filter(r=>r.subjectId==='pathology'&&r.identifierState==='standard').map(r=>r.referenceId).sort();
+ assert.deepEqual([...new Set(pa.objectives.map(o=>o.referenceId))].sort(),rows);
+ for(const c of pa.concepts){assert.deepEqual(c.document.classification.subjects,['pathology']);if(c.existingConceptId)assert.equal(c.existingConceptId,accepted.get(c.document.label));}
+ const names=pa.concepts.filter(c=>!c.existingConceptId).flatMap(c=>[c.document.label,...c.document.aliases].map(x=>x.toLowerCase()));
+ assert.equal(new Set(names).size,names.length);
+ assert.ok(!names.includes('blood components'));
+});
