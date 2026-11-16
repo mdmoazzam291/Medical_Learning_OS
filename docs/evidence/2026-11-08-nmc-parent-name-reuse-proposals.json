@@ -1,0 +1,4404 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-parent-name-reuse-proposals",
+  "sourceTriagePath": "docs/evidence/2026-11-08-nmc-unassessed-parent-reuse-triage.json",
+  "sourceTriageSha256": "9c9f48ad5a76f080aea113838f94b4955553fb8e7f50168d937ff4a00dc63ef7",
+  "sourceIndexPath": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+  "sourceIndexSha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "productionRegistryChecked": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "coverageFraction": null,
+  "totals": {
+    "parentNames": 57,
+    "sourceTaskAppearances": 88,
+    "distinctSourceReferences": 88,
+    "distinctTargetReferences": 51,
+    "assessmentModeSetDifferences": 11,
+    "subjectSetDifferences": 41,
+    "taskDigestSetDifferences": 57
+  },
+  "rows": [
+    {
+      "parentNameKey": "abdominal examination",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "abdominal examination",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:487d87ca6936e5b3a2ba15318d9eb5de386788c2aed951ba381c1551a6c1e23a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY4.12",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            207.18,
+            107.8,
+            247.86
+          ],
+          "sourceBodySha256": "932b191e370b51eb588e225318491117517a2883f8dfad79035cd42743d87760",
+          "editorialTaskSha256": "62e3be3dbaa710749be6908beb8d4522547a867f3704350652b57c9e4b2809aa",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:56dc863b9df869cea9a3efe6adffaaca2af93c37d41671f03e9c0b81a02322ee",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.19",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            430.44,
+            103.1,
+            463.02
+          ],
+          "sourceBodySha256": "a9f813542a14d43f951d0fdba6e7e0c687d4776cd0322a6fc9aab4dd10daf22c",
+          "editorialTaskSha256": "65ce81d0478c188ceb762385192ffa1fc26afd27c400f3e1b7084cb28dccc7d4",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b7619d2fef04a6e56abf78df13c081161dcdc977ff4dd2acc93ab1cbfb55f0a5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.18",
+          "page": 411,
+          "rowBBox": [
+            45,
+            309.48,
+            101.7,
+            358.38
+          ],
+          "sourceBodySha256": "b1228e67f1747d890c2af098e4e65cde97569d21dd16f0050c68b86c226e0f01",
+          "editorialTaskSha256": "595de9c0839ddf59cf20457f0a1bdbdce44151663a8efafdf7dfd0b85eae4c99",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.1",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            309.48,
+            103.1,
+            360
+          ],
+          "sourceBodySha256": "ba57cb969a618addc2c537652fedfee9707de5e51954c35fdd9d22df5b74d674",
+          "editorialTaskSha256": "c7d743a254d4ccefa39b3b0ad97823001f0be7651c59bacb0b6b95664a8d5411",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics",
+          "physiology",
+          "surgery"
+        ],
+        "targetSubjectIds": [
+          "obstetrics-gynaecology"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "adenomyosis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "adenomyosis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:7c2596d0a1b9ccd5a6bf059a3145b3a1ea75e75a5ab3f43ab944df16a02c40ab:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:33134360e72f9525507b9f4658ad17b1c3c6edd11ae7284dbf504d8479c2d59c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA29.8",
+          "page": 200,
+          "rowBBox": [
+            51.5,
+            433.68,
+            105.6,
+            454.2
+          ],
+          "sourceBodySha256": "1d1630b69d15073d9b7ef6d52a727ad93dc989babb5f49d0777ce82baf4d42af",
+          "editorialTaskSha256": "046e6b461b555dc3a2dea288c3c45f3220e123148128aeeb7b621ff601924c17",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7c2596d0a1b9ccd5a6bf059a3145b3a1ea75e75a5ab3f43ab944df16a02c40ab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG34.6",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            229.5,
+            103.1,
+            274.56
+          ],
+          "sourceBodySha256": "82e0cfb623319c681bc23e0d129b8f52d4ea7ae58ea0ab42d8abe7428ed91a68",
+          "editorialTaskSha256": "1281c48124922a85e1adc33b9d3fe8ee5f746c27cafa881f92bec9d928a5fdd4",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "obstetrics-gynaecology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "adolescent health",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "adolescent health",
+      "targetHomeProposalId": "editorial-home:adolescent-health",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a98a215cb3d86582f97bff4bc06161950c6cf9c67344c2a9573199ad5da9b79",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM10.8",
+          "page": 276,
+          "rowBBox": [
+            40.1,
+            396.6,
+            98.6,
+            428.22
+          ],
+          "sourceBodySha256": "c0bdfdd118278036404564c7e791bac5740583a955ba50ff1eddd1fffd96703d",
+          "editorialTaskSha256": "f11050db9ad4db068ddfe6e9fe097a11b9fad78e7dc409eee1098a01b6501d25",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE6.11",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            393.18,
+            103.1,
+            411.3
+          ],
+          "sourceBodySha256": "d8900e3b5a930707375d84ff081634e8c7d73a3f3e1c8de29126c740688d3aaa",
+          "editorialTaskSha256": "f6ee81fcb7a3bb5c97f1a996e4eafc3e35f2f79a8ff9749caa42f1fa8101a810",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "community-medicine"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "basic life support",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "basic life support",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:14390d8d2377b5d4ad81b467887301029eb93ac14936a9597542ddb480172477:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS2.1",
+          "page": 452,
+          "rowBBox": [
+            46.7,
+            414.78,
+            98.1,
+            444.36
+          ],
+          "sourceBodySha256": "6ae8ec867dbe84db35e3bf8069632b4a026de009e1bf661d64308f3c678f848f",
+          "editorialTaskSha256": "8577a2c4a505436e9d0c403cf9d03c31676bf5e0d6ee5f5f18031d376da4ce81",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2757f0e6f07d4b93dcdd21f907d626bf0ee380920aff0f6c4683b230afef8ef4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY12.10",
+          "page": 160,
+          "rowBBox": [
+            58.5,
+            278.46,
+            107.8,
+            331.74
+          ],
+          "sourceBodySha256": "e738363365d154d0357f8326b55fe7cb717fb9b089ef017a690ab7a47e1aece3",
+          "editorialTaskSha256": "bb89b8855af5e1cd798dc22163d6136f4855c61a07bbee48144685f8ce3c3fb9",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.22",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            453.42,
+            102.7,
+            480.78
+          ],
+          "sourceBodySha256": "b60346819874f7d3a608f6109913b8f12ce1606c73b91eeb0efdfd34102a2155",
+          "editorialTaskSha256": "d182297816a367cc6df478847be54770d0748d425be0d291406224cedda5b749",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:14390d8d2377b5d4ad81b467887301029eb93ac14936a9597542ddb480172477",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.2",
+          "page": 406,
+          "rowBBox": [
+            45,
+            537,
+            101.7,
+            580.74
+          ],
+          "sourceBodySha256": "14c6b04fbad6415244b90737e83114fc8d4628edc989b611c6bee551c152563a",
+          "editorialTaskSha256": "38d937be33380bef001cf036489b265d5b82981b2e91a0cb7487bbcd07cbe007",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anaesthesia",
+          "medicine",
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "surgery"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "body fluids",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "body fluids",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1043e39fdb48d31c66526f7ba75078e025f6bf3874cd957a67a4122388eee7f3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY1.5",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            273.42,
+            107.8,
+            300.72
+          ],
+          "sourceBodySha256": "ea49bf2a6b687998f4aec263dc067389c83713d8457b913de06b8ead0e4fc345",
+          "editorialTaskSha256": "351fc07882a90fc5a66a78ea732291ee67fa19736475247edface99b07ab6dee",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.17",
+          "page": 170,
+          "rowBBox": [
+            58.5,
+            423.18,
+            108.2,
+            467.1
+          ],
+          "sourceBodySha256": "471446bda0a5a03447d5a6349fcfaebf4dfe49df9cbf2c639c0c8efe99abbdf2",
+          "editorialTaskSha256": "b8c73aee7846c08b322c0e0378cb4bc4bbc9750645d1a556dbcb080521db5814",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "biochemistry"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "bone marrow aspiration",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "bone marrow aspiration",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9cdfa856b29298e136662ea701c6384b264c4d9e687c28276a4c265e831653ae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.14",
+          "page": 346,
+          "rowBBox": [
+            51.3,
+            293.58,
+            103.1,
+            320.16
+          ],
+          "sourceBodySha256": "ae5130a6ce390de0ec9351249c750d0c86d9460dc7cb0c71dbe88bdebf60bffe",
+          "editorialTaskSha256": "215f4aed8481885b97af9537086cf26184c025d6f60a574921921ba64df5019f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA17.1",
+          "page": 192,
+          "rowBBox": [
+            51.5,
+            329.28,
+            105.6,
+            371.82
+          ],
+          "sourceBodySha256": "fb827945d96186cef143b2f2607d34aae98cd37fbb0ee004c7dd0c9a8d4bc19f",
+          "editorialTaskSha256": "b51acadb8248c7b22b46f0c3d04e57bd7c6cc56e3ff3d0f3f289ebd54880615b",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "bone tumours",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "bone tumours",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:5f5eea5cb3ffa420b60b59a271a81199622337fd28095a1b28a8e3e9ed734bd4:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2403a080fbcec03e586f8d8bbd0d2056acfa21e101867b3fd821aa11ecbc11da",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA32.2",
+          "page": 202,
+          "rowBBox": [
+            51.5,
+            311.64,
+            105.6,
+            352.68
+          ],
+          "sourceBodySha256": "18eb562b5c78f823ccecf23fa9208204e0c8f51a753f4e65519becbd84418948",
+          "editorialTaskSha256": "6aea324c6aaeeea1bece07a8729a05e91923d294e05499d5ce4b6d1a267bde6d",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f5eea5cb3ffa420b60b59a271a81199622337fd28095a1b28a8e3e9ed734bd4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR10.1",
+          "page": 448,
+          "rowBBox": [
+            49.1,
+            474.72,
+            103.1,
+            531.3
+          ],
+          "sourceBodySha256": "63c43735f06c645a573a8ee3cfcebd9b1e417b6442bef2f3f454200ec045f22d",
+          "editorialTaskSha256": "7beea33471e0e0f719113c53053a3379422cdeb725c198c2947640bfd6adc8d3",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "orthopaedics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "cerebral cortex",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "cerebral cortex",
+      "targetHomeProposalId": "editorial-home:cerebral-cortex",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:db895d7f4f6aabe7b06849e53695763dcbb7a4eb81d02b982b51166c251d1fc1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN62.2",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            157.74
+          ],
+          "sourceBodySha256": "007f390cc1c8eb3824fa761badd68e13aab5de8ee4c9ec88a852219fcd3d52a0",
+          "editorialTaskSha256": "739ea1370be5922972b8632fe5ac80cfc520e240e9891b411c26f3b7f32305a7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.16",
+          "page": 158,
+          "rowBBox": [
+            58.5,
+            485.4,
+            107.8,
+            512.76
+          ],
+          "sourceBodySha256": "396f81f2516c4abeca82123044ebf46663af56aa9517732b1442f71259fe6168",
+          "editorialTaskSha256": "25925f8dd5441b378f99fcbfc2d8e3d45330048745e0c8fe9602325a42b7468f",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "physiology"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "childhood obesity",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "childhood obesity",
+      "targetHomeProposalId": "editorial-home:childhood-obesity",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2ef4a053ac82b57315848b27af63ad2bdffde3fd4e10bd937e7520150e3c6435",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE11.1",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            447.24,
+            103.1,
+            479.82
+          ],
+          "sourceBodySha256": "b9b58d1b8dc0d390c19e596c7503662fdd9453eeedd58ef54cd7d82c9a51b371",
+          "editorialTaskSha256": "7ba4483f9dda327565621ef3448f40b61a95c4882671ce49a2d2c5c39b97b11a",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE11.2",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            479.82,
+            103.1,
+            512.4
+          ],
+          "sourceBodySha256": "f6af6c65e494adecca1edc5407b8c8b8dc5b90e6e326311b922095f58791240a",
+          "editorialTaskSha256": "cf4112d387562f287be23813af9fe9e27129e87dcaa0830a0c18ff70046e342f",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "chronic inflammation",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "chronic inflammation",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA3.3",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            233.34,
+            105.5,
+            267.54
+          ],
+          "sourceBodySha256": "3cf1948cef2bee9a1953b78b84e7c93c4c80e43eeebd0aff8c1cb6da5eeeb227",
+          "editorialTaskSha256": "c9b3e861caea1a6b24848633d000c92944f416c8ae3acb03597f30cc731d6af8",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA3.1",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            176.46,
+            105.5,
+            205.62
+          ],
+          "sourceBodySha256": "db2b93f303fe81fb4bb04be495755927c4586b835e6aacd242f032e2fc7a8537",
+          "editorialTaskSha256": "9349d213b29f0627412d3063128aaa797bd435009f8a1f9aff9cd2748c995a15",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "chronic kidney disease",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "chronic kidney disease",
+      "targetHomeProposalId": "editorial-home:chronic-kidney-disease",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:791c106c38e9a2497d5e6608ea7dc9f882a4cd4a4aa3381e1058b4e3888e2f3d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA27.4",
+          "page": 198,
+          "rowBBox": [
+            51.5,
+            169.86,
+            105.6,
+            215.22
+          ],
+          "sourceBodySha256": "a4f27281203e6c96b693c5055e3c09b69ba45da61812708fad2eb0db9526ea56",
+          "editorialTaskSha256": "01b5838cac02f399e03f395ac542430230561f75b1e1ef613f1551231c0dfd85",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fbdc6a91445e6b6d4cfa3a882d40f4e9c9edca4be304929ca5b4703debed8a5f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.24",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            377.88,
+            102.7,
+            422.1
+          ],
+          "sourceBodySha256": "b7baaabe275aa0d367add0bfc8357f8e12f12f20baceefa4dc0957238fb31cbf",
+          "editorialTaskSha256": "ad3d9e8d3a2b445fa0f2068076caf26a85f2fe09cba0068a7bb053a0fdfb81fb",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "chronic liver disease",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "chronic liver disease",
+      "targetHomeProposalId": "editorial-home:chronic-liver-disease",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3541dfe12898776f3e81f507da8cb3822e8682c1366b6d61121d5a0c66f604ce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.15",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            202.98,
+            103.1,
+            235.5
+          ],
+          "sourceBodySha256": "be8087d4b8ee5eff91c6cd3e045032af50e13274548be363f8f97f2232a2d5ab",
+          "editorialTaskSha256": "7601d20a3bbf44f5cacaf736e4be2521eb03fac32c27f4d6e6a5af61d8eb0015",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.18",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            300.66,
+            103.1,
+            355.14
+          ],
+          "sourceBodySha256": "75b02b6bcb9a600b600357c010ee4ccc37bd4fbae7dc3b216e2fb20c1133e683",
+          "editorialTaskSha256": "6bd46836f0807135fe421ee101e70379242e93deff9bed0f36993e0a5576edff",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "complementary feeding",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "complementary feeding",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:79efb0722a75143250c86725986c1a3fe844f0ff531182163c9a9e791854cb47:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:eb14a8a46c6f8d58644de4652391f9696e5045e98e834e1214036464f9d6f10d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE8.1",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            215.64,
+            103.1,
+            230.64
+          ],
+          "sourceBodySha256": "6b5a3ec5f6a5da7fbe66123de4dfb1f83acc70e4d38e2c060aad109fd56e21a8",
+          "editorialTaskSha256": "efda782c7311aa305bf0f698d348de517cd40191c5f1ea5117f7c6b63a63e672",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79efb0722a75143250c86725986c1a3fe844f0ff531182163c9a9e791854cb47",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE7.6",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            102.54,
+            103.1,
+            135.12
+          ],
+          "sourceBodySha256": "ee5d2043c740064b9de8c679e4738c62f3a53b7930c3bde86db18554ede0a979",
+          "editorialTaskSha256": "2e97e05edc3f8798fd14d86eba4985fab66cad1a123fb77bdb87970ba52f02ee",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "cranial foramina",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "cranial foramina",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a9af2a1517646643430b8b2f7edfd26eeac6909ed033bcbc88efbc3a751890c",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN30.2",
+          "page": 127,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            157.74
+          ],
+          "sourceBodySha256": "7b75a88483545eaa9fbf831228719be46399a3c6231556c7049d920df0ac7155",
+          "editorialTaskSha256": "15027763e88b6c6f492c80a8a647959b6be91bc61ff5050fc37d53f2311719c1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN26.3",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            415.86,
+            122.2,
+            448.62
+          ],
+          "sourceBodySha256": "b2c3ea234f768b827edd42e14f39514d61e89ff5da7893b0924e58d841572808",
+          "editorialTaskSha256": "c4114aa3497952d375a5f2131a6a2ee92646299f497240b65bfb8083c19299f7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "cranial fossae",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "cranial fossae",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb6319cb2238011d42c4d052bf6009df3699053b633b25916200e37cee28388d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN30.1",
+          "page": 126,
+          "rowBBox": [
+            51.2,
+            466.56,
+            122.2,
+            516.3
+          ],
+          "sourceBodySha256": "8806df07b90b336bdd5ebb26ab04b650cf6c0df75f6423a51b0b4fa9aaf68c91",
+          "editorialTaskSha256": "0e3a1044f2e0088f98e7781531a74d1f38c8f4bf59fad04a82d0735cc1c4608b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN26.3",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            415.86,
+            122.2,
+            448.62
+          ],
+          "sourceBodySha256": "b2c3ea234f768b827edd42e14f39514d61e89ff5da7893b0924e58d841572808",
+          "editorialTaskSha256": "c4114aa3497952d375a5f2131a6a2ee92646299f497240b65bfb8083c19299f7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "dysentery",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "dysentery",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a:name-component:02",
+        "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f4c79c2a6782b2c0b1196a27e3b19742c96dd37f5a25cf6795dd6ba709740cb0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.5",
+          "page": 341,
+          "rowBBox": [
+            51.3,
+            256.98,
+            103.1,
+            289.5
+          ],
+          "sourceBodySha256": "531bdf36e6aac0b619f1f7b06efb049cdbb6a9451039ab8cf9d1262fa46715ef",
+          "editorialTaskSha256": "478bc369a7770cfcb1b158016868c6a09dff91dcd99d4f49c1d1fc6937c4b79d",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.6",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            447.18,
+            102.7,
+            487.92
+          ],
+          "sourceBodySha256": "39924077432de1bba699e042a39807b359bf18611cd0d49b3b67a6c2350b447d",
+          "editorialTaskSha256": "e3bf06dfbaf0ce00bf5a7ffc7b0665d36debd4b917aa880a8ff84047a07244fc",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.1",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            466.2,
+            108.8,
+            507.3
+          ],
+          "sourceBodySha256": "7da8ac9eb156e74c42d125dfe3359cc637aa9be615ad08dae6ff8e70ed3d5e6f",
+          "editorialTaskSha256": "77cd20784b2734fb08ab41291ee999aefa659b0facb50c2e289285bc0d3a6bb1",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "medicine",
+          "microbiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "end-of-life care",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "end-of-life care",
+      "targetHomeProposalId": "editorial-home:end-of-life-care",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a2ae47fec474ccf531ace441df7baa8676620e13a5a9454789e1cd3ce9210234",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.5",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            153.66
+          ],
+          "sourceBodySha256": "db61c7226d21ac5cadac2472ede88bacf73fdbd902d2fa12ad93d0261b59c801",
+          "editorialTaskSha256": "6305efe7a8424b4e7fa6cdeb2fb6a5fdc558df1ce26a57700de8cd8c923ec983",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:337523c070c1aac7bf24d716822d1d9a08cfbc7430aac0c94a18aaa8daf642e2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.18",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            133.8,
+            102.7,
+            161.16
+          ],
+          "sourceBodySha256": "4128dcf7cc13e5d96f0b48d6d6372ffcb9ce8fba7c337829551d671ad3d2713e",
+          "editorialTaskSha256": "164322642d562fdf9572db3f487efd64e0c6aa48676dc0c17960d9afc303c5d7",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "endometrial cycle",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "endometrial cycle",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:343138e4a2627c50c8bbbed64219dea689e24668299167053277b15b785f73e2:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ab1cbba07cb1ff1e2a398d2f6fcbc5aadb7d0eb0382fbd58ed0b3d8e7490e3e0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN77.1",
+          "page": 146,
+          "rowBBox": [
+            51.2,
+            408.3,
+            121.9,
+            433.14
+          ],
+          "sourceBodySha256": "5116b36ebab324d4448a4ec98151f0ced19e01f9bc97694c9ea9fda7f2d7de88",
+          "editorialTaskSha256": "4122a9cb860ded7b7ee639cb648882ae5c604523e0c6336284ccf4c1b00bee48",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:343138e4a2627c50c8bbbed64219dea689e24668299167053277b15b785f73e2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN77.2",
+          "page": 146,
+          "rowBBox": [
+            51.2,
+            433.14,
+            121.9,
+            457.68
+          ],
+          "sourceBodySha256": "f16a0f44588d98a3b7fa7ec19385637af18437ee8b6c997ac6e007a6e0ef7b53",
+          "editorialTaskSha256": "132067f9bd5a55ba682b00ecc96fcb847583eeab58be83f8e800d35d21a8442b",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "endometriosis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "endometriosis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:7c2596d0a1b9ccd5a6bf059a3145b3a1ea75e75a5ab3f43ab944df16a02c40ab:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:efcb5e644249f21a79993dfbf4feec66917464fab0318eccc68f5c0e195f5dce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA29.7",
+          "page": 200,
+          "rowBBox": [
+            51.5,
+            399.84,
+            105.6,
+            433.68
+          ],
+          "sourceBodySha256": "75a526b97bd26f7675fa8be9b90e2ab8f2f6b63c59e8561d4eaac7c26e41e168",
+          "editorialTaskSha256": "94437d91cd09c80a5370d5d58350e004435952aa970e6f3c39d48d127f5537da",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7c2596d0a1b9ccd5a6bf059a3145b3a1ea75e75a5ab3f43ab944df16a02c40ab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG34.6",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            229.5,
+            103.1,
+            274.56
+          ],
+          "sourceBodySha256": "82e0cfb623319c681bc23e0d129b8f52d4ea7ae58ea0ab42d8abe7428ed91a68",
+          "editorialTaskSha256": "1281c48124922a85e1adc33b9d3fe8ee5f746c27cafa881f92bec9d928a5fdd4",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "obstetrics-gynaecology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "epididymis",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "epididymis",
+      "targetHomeProposalId": "editorial-home:epididymis",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c7b96bc9c48ad5299def3e59722568c366795b5139d16fbeb6cf88df3e6f35f4",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN46.2",
+          "page": 134,
+          "rowBBox": [
+            51.2,
+            450.42,
+            122.2,
+            482.1
+          ],
+          "sourceBodySha256": "cf63430545c295c2aa3d7ddedf0786b2d3d6b4f4f6b869aa5ab7efa3de1b0452",
+          "editorialTaskSha256": "e4415cf9180c05d8cb46801fa84f3923e2235c6fbbab5e2d65da4734475ac117",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.2",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            406.74,
+            122.2,
+            546.9
+          ],
+          "sourceBodySha256": "714eec4895dd1a3e0d5c05f204e42b86600f8eeeddc90f02f1ac648e7ebc6286",
+          "editorialTaskSha256": "db849852cdc28fa70e8b06ac4bc41ffa46a1c17a4ff305d9458e28e5541b3bbf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "episcleritis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "episcleritis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4a09d7b1511565293a9ea408357e8ca3d400f7762d941035185a8fd5abace6e5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP5.1",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            333.66,
+            103.5,
+            363
+          ],
+          "sourceBodySha256": "35dde0d8d0ec7bbc43cb0051b42a97d2666bea469908337ba6770761e6cb7021",
+          "editorialTaskSha256": "6070207d2a306284afaf0fe421c614bdf913f4e0560c2c1982165144f65f127c",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP5.2",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            363,
+            103.5,
+            396.96
+          ],
+          "sourceBodySha256": "11cd0f5f564d5aba050f5a99e1960ea297a50bf7c51fedb7fb755149f0a4e9eb",
+          "editorialTaskSha256": "a84eaac0dcead750679604aa66f35e9905106fb054564dbcb5961aaf124ecf20",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "ophthalmology"
+        ],
+        "targetSubjectIds": [
+          "ophthalmology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "food poisoning",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "food poisoning",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c:name-component:03",
+        "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986:name-component:08"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9ae6427dfe51efe8b447442d7ec66d49f7060044f54672714a966e7d44962ecc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.5",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            198.72,
+            108.8,
+            239.76
+          ],
+          "sourceBodySha256": "b828483d510f51d1f3cf7e745bf875a190ececbe82b63a4f0b8393ce9a8e2c82",
+          "editorialTaskSha256": "836743b053f24a94ec11bc306e29e92cbd8c188d5b8853e6423198d0f0612e52",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:432db9ea744dda6acc779109bfef91e9ea7ef345f23bcf315c75b99a1c728986",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.20",
+          "page": 231,
+          "rowBBox": [
+            45.5,
+            391.98,
+            95.2,
+            437.34
+          ],
+          "sourceBodySha256": "032ff238fd620d793b21073bd95f446580446b0b0d1e7ce5072d605a5587e9a8",
+          "editorialTaskSha256": "82f77b6c38506a7017ee714ad0addb8021cf4e86975f0335928d43efdde85555",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.1",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            466.2,
+            108.8,
+            507.3
+          ],
+          "sourceBodySha256": "7da8ac9eb156e74c42d125dfe3359cc637aa9be615ad08dae6ff8e70ed3d5e6f",
+          "editorialTaskSha256": "77cd20784b2734fb08ab41291ee999aefa659b0facb50c2e289285bc0d3a6bb1",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "microbiology"
+        ],
+        "targetSubjectIds": [
+          "forensic-medicine",
+          "microbiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "general anaesthesia",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "general anaesthesia",
+      "targetHomeProposalId": "editorial-home:general-anaesthesia",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:96c281609dd41a6fac209980c6395d714a1013dcde8fe52ec4d904bbd1f36f19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH3.1",
+          "page": 176,
+          "rowBBox": [
+            51.7,
+            354.42,
+            105.7,
+            395.1
+          ],
+          "sourceBodySha256": "968383667ac69f3e4c8c8cef39e968e13350d91a713c179407ae6b18d47d0363",
+          "editorialTaskSha256": "aad9a5dee25bb52148db08705d0892ff4992188125641f8e6bbcc5c45e28bcdb",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS4.3",
+          "page": 453,
+          "rowBBox": [
+            46.7,
+            317.52,
+            98.1,
+            356.88
+          ],
+          "sourceBodySha256": "2c638db4a41e110667ee7fa9be40a1bf048904ddafbf2882c876786639225443",
+          "editorialTaskSha256": "6df21e16c2a50fcf8b1c3db5e23370f22c47349f6d53cf03b1e8e4749fa10e33",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pharmacology"
+        ],
+        "targetSubjectIds": [
+          "anaesthesia"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "general examination",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "general examination",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3774a9cf9c66c2150a24f34ff63f5038850558d9d6bad3a3cdc150b338e2b9b1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY12.9",
+          "page": 160,
+          "rowBBox": [
+            58.5,
+            251.1,
+            107.8,
+            278.46
+          ],
+          "sourceBodySha256": "ec1e09dbb700d977fc701880cf7f6fe7db31a95ab76fda50e885a62f52f10567",
+          "editorialTaskSha256": "cabbe5bc41a18dcd44d4c50f6bfc451f1bd80236b647e58c7c9b6ec01700ca58",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e42b0172ebb36eb7aa21b78b994429457b6f49ac9413799c78fbab6357ffa584",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.1",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            309.48,
+            103.1,
+            360
+          ],
+          "sourceBodySha256": "ba57cb969a618addc2c537652fedfee9707de5e51954c35fdd9d22df5b74d674",
+          "editorialTaskSha256": "c7d743a254d4ccefa39b3b0ad97823001f0be7651c59bacb0b6b95664a8d5411",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "obstetrics-gynaecology"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "haemostasis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "haemostasis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.9",
+          "page": 151,
+          "rowBBox": [
+            58.5,
+            163.62,
+            107.8,
+            206.82
+          ],
+          "sourceBodySha256": "ec665647cce85a638454a80f7be59441501457d9e5f2254d6e29683e364c9478",
+          "editorialTaskSha256": "e600d92e6102f7847468410d2091273531b2ea2932a900e790163052caef775a",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA5.4",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            456.84,
+            105.5,
+            492.06
+          ],
+          "sourceBodySha256": "bc265f23be8a958db1603dd84cbba52d18f32f8efca7c4ae26f2e3f279aa0141",
+          "editorialTaskSha256": "1963c09411acecde2163344823844c5374f96e4e01287a1c80e434deec84c5cb",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "health indicators",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "health indicators",
+      "targetHomeProposalId": "editorial-home:health-indicators",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5932a91566bb5a0284c285f771541ea703dd7db3a464b86a703f4f323eff3dca",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM1.7",
+          "page": 269,
+          "rowBBox": [
+            40.1,
+            326.46,
+            98.6,
+            347.46
+          ],
+          "sourceBodySha256": "fe42da53ec3489c18a86907d9e1402428427ba63809581f8c6a919a3d8048acd",
+          "editorialTaskSha256": "0acd15a6e08df7daf76edadba5d67287efb77834958e22e4f985231f1ed9be47",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM10.1",
+          "page": 276,
+          "rowBBox": [
+            40.1,
+            178.38,
+            98.6,
+            210
+          ],
+          "sourceBodySha256": "f4dae68f9bc84b71c271ccce0f370281b7eec5c0900ad9f7e2b5daead82abe88",
+          "editorialTaskSha256": "784aaf70381d5027e3c888254096af23ff79de17ec3348f49cb4c217d760f786",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "community-medicine"
+        ],
+        "targetSubjectIds": [
+          "community-medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "heart failure",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "heart failure",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.3",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            159.78,
+            105.6,
+            193.68
+          ],
+          "sourceBodySha256": "0a784b8243768e21581580ac091421920eca73980bacaca17be68ac0e2fdba57",
+          "editorialTaskSha256": "4afbe1a9e1fcce6f8a6a4a5fa3b345cd0059cef6e5175eaf576e5ab2040aec76",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.13",
+          "page": 154,
+          "rowBBox": [
+            58.5,
+            212.22,
+            107.8,
+            244.98
+          ],
+          "sourceBodySha256": "43eaf7eeee5e3e1fd549be1b599efd33313ea01e732dd13b17c0c71d1d3631bf",
+          "editorialTaskSha256": "1ca531db7070a91b68de0055b0947104a43b43adea6084e2ccd36f55ece10172",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "physiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "hydronephrosis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "hydronephrosis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:ebb52f72abb501366d3b34b7a3723cc605656ed422e05da6a840e1bc230193b1:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4b3f21814c05792d3e334a2e6e2904a17c81e0cf621fb603e1a39340737d0715",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU29.4",
+          "page": 411,
+          "rowBBox": [
+            45,
+            482.28,
+            101.7,
+            511.68
+          ],
+          "sourceBodySha256": "549506056cebd7b42071f04ac48b666c90cd235fabb64c65459ed6a181eb6d5a",
+          "editorialTaskSha256": "d5fd91b05a456b090f53059ccf4f87fdd01326f8b1ea418243c0a533e39fb1b1",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ebb52f72abb501366d3b34b7a3723cc605656ed422e05da6a840e1bc230193b1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA27.13",
+          "page": 199,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            167.34
+          ],
+          "sourceBodySha256": "916b249526302e73c235b1360f7d413aa76ab73802d9db72d15ac9f75e2a8f78",
+          "editorialTaskSha256": "c2f9cbe2fbefe3968da3a7e7ca16af7bdb90717b048f3eb943f7f41a9bca7dcd",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "surgery"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "infective endocarditis",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "infective endocarditis",
+      "targetHomeProposalId": "editorial-home:infective-endocarditis",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.2",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            295.44,
+            108.8,
+            327.12
+          ],
+          "sourceBodySha256": "fb43508d71d1b009e1833705f319a2205531dbb23eb7176695a7c710c43d519a",
+          "editorialTaskSha256": "cb93d199ded1bbe1c2b20e2885670118f5aef1c2aa6a541c80b0e5c7dcfabf07",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.7",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            308.1,
+            105.6,
+            342.66
+          ],
+          "sourceBodySha256": "17e8412749ab21a02b9114c8e7f82d656a3a1812912eddfdf0f65cc3196289a2",
+          "editorialTaskSha256": "f0b53ccdea195d18dcf2517f86fdbc892208ae98008bdb6749f8c88c40415f10",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.19",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            228.48
+          ],
+          "sourceBodySha256": "633eca62d8120796fe86e7225b1ad35584b4f898f4b66dc95b23b06b9f1a87e3",
+          "editorialTaskSha256": "e078036b4846832227b0f86a08fe4772555333639a391f18948f02701d21eb4e",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.5",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            265.2,
+            103.1,
+            297.78
+          ],
+          "sourceBodySha256": "9c177822795c01b40fa78ea41983b2729eb582bf3789e1102c543e8271e46f04",
+          "editorialTaskSha256": "d185210e583278939d510225e81669d6b8fb8e95c7b752e65e32b5aa5370c369",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.4",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            367.44,
+            108.8,
+            425.46
+          ],
+          "sourceBodySha256": "1fd828f8e4c1be41ac22136fab027027b7afd57a56827b3a66383e8af9302a18",
+          "editorialTaskSha256": "01fc4feb52cec8c7969c1cf97ce409c1c523e6ad752730ae73a0c62f6921736c",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine",
+          "microbiology",
+          "pathology",
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "microbiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge",
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "inflammatory bowel disease",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "inflammatory bowel disease",
+      "targetHomeProposalId": "editorial-home:inflammatory-bowel-disease",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:49a98f5d8ea62217f9f234e7c30712db168a0ff9a3fcc5f62903eed4dc467965",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA23.6",
+          "page": 194,
+          "rowBBox": [
+            51.5,
+            456.36,
+            105.6,
+            490.14
+          ],
+          "sourceBodySha256": "96c3cf0f6f8a95b75f6e9252bd8d6e29a79f2ab7d25c81f3407c183293f1241a",
+          "editorialTaskSha256": "68a4add099bf6c2efd9912f5f65a380036010f6e71f3ec976410a57102d2ff0b",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH6.5",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            281.58,
+            105.7,
+            326.22
+          ],
+          "sourceBodySha256": "d6159af6fa27bf4031505dfa488ea651563856df9fadaa955376990e1a6ccb8c",
+          "editorialTaskSha256": "12c50665012119df2ce52d3a9b8c9313fbfba62aa81f822f0ba9427d0992bb82",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "pharmacology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "insecticide poisoning",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "insecticide poisoning",
+      "targetHomeProposalId": "editorial-home:insecticide-poisoning",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:73cabee5d352f6d0ab6dfe665084afbad429db4c7f2c53ae365251e27960a7c7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.6",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            242.58,
+            102.7,
+            283.38
+          ],
+          "sourceBodySha256": "0afbddfc96e18cc0c9e114bc776be3b6f96f75f23995f6a3e72616363e961b01",
+          "editorialTaskSha256": "aef49efd7504ad707555847274002c446c1a30b2921897caf2d114299357b5c1",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH9.2",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            166.92,
+            105.7,
+            207.6
+          ],
+          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+          "editorialTaskSha256": "7d14807b04ac9ae682660fe895e7b2fafef66cee3968dec6be7e01f6bb89e1cc",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine"
+        ],
+        "targetSubjectIds": [
+          "pharmacology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "intellectual disability",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "intellectual disability",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6757250f310296f334644748dc2211ad7e7c8b8fafef5f191fad9564dd3c1315",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE27.9",
+          "page": 347,
+          "rowBBox": [
+            51.3,
+            296.22,
+            103.1,
+            328.74
+          ],
+          "sourceBodySha256": "17938ffb07425742e1810bd4092b0ca1e742c9d3de6589b0c506f2fb48c60f3b",
+          "editorialTaskSha256": "a2f6971b2db651897086ce146feab3dcab351f7d9262b1a6c1fd16ffed176e29",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:6a5a935c5cd83cf75e008f0d4addc8d1b3bb3c60fa5f292749d6c074796cc0df",
+          "packetPath": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+          "subjectId": "psychiatry",
+          "code": "PS11.1",
+          "page": 353,
+          "rowBBox": [
+            47.2,
+            478.26,
+            103.9,
+            513.18
+          ],
+          "sourceBodySha256": "6d5cb5ab35a70549d58e056362b36bf5d58d7cc2f1bfe8b9b1400bd2c0428465",
+          "editorialTaskSha256": "67dc9c0d72634672874eac3f4483e35aed62bfb6f2a9564e33b3062783266ed5",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE3.1",
+          "page": 330,
+          "rowBBox": [
+            51.3,
+            112.56,
+            103.1,
+            145.14
+          ],
+          "sourceBodySha256": "f208a0f89a9a41c1fc7603d335bdad42759345af22eabd7515090ce01403d32a",
+          "editorialTaskSha256": "fa0dc2eb9da841e58db3c75aced909872457050c170db2756d9c17cc1f50c2db",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics",
+          "psychiatry"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "ischaemic heart disease",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "ischaemic heart disease",
+      "targetHomeProposalId": "editorial-home:ischaemic-heart-disease",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.6",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            254.28,
+            105.6,
+            308.1
+          ],
+          "sourceBodySha256": "9a67c78bd599ba6bafd7b47a697b9634af87676943bb9c9cdf1c31e561db48de",
+          "editorialTaskSha256": "fa09efc36d086a583e48f966a64f362aba886fe2571942c66ac32d5a77ef9d94",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN22.4",
+          "page": 122,
+          "rowBBox": [
+            51.2,
+            201.66,
+            122.2,
+            234.42
+          ],
+          "sourceBodySha256": "13da2440675ccfb19ec0e94925801a473c004b9b716353b066fcc557ae190f24",
+          "editorialTaskSha256": "4aaee5e3082d1ef8d5fd5e5bb1e01da7603c753a732adfa7ce9c1a20339d3182",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.8",
+          "page": 178,
+          "rowBBox": [
+            51.7,
+            453.36,
+            105.7,
+            529.32
+          ],
+          "sourceBodySha256": "afe62adbf69c5caf489ee14a9c126f58ad096b9ec0d24a7f582787cdefb7f328",
+          "editorialTaskSha256": "efaf58bd0126949123ee70e427c0e94fffe9d52645d781fe649f643e3ef8bc55",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy",
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "pharmacology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "lung tumours",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "lung tumours",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:94259bb09775d4fe9501364ca1fcb4c1538e2d9fe4a0633d119eeaf4f5ed3c54:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2f1ba9f7a91e5eaa3c779da0810dccbf524d1838d68e330b1b94e64ed47a26bc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU26.4",
+          "page": 409,
+          "rowBBox": [
+            45,
+            394.2,
+            101.7,
+            429.72
+          ],
+          "sourceBodySha256": "f211fd6004229136a67a2a17b1b598285c15ddff4f3485edc5cfb1f9be488f2f",
+          "editorialTaskSha256": "ad75bab161432d0c20f1d59aa6a3740b094826b6db6a42d5754c0dfe37ecf902",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:94259bb09775d4fe9501364ca1fcb4c1538e2d9fe4a0633d119eeaf4f5ed3c54",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA25.6",
+          "page": 196,
+          "rowBBox": [
+            51.5,
+            373.26,
+            105.6,
+            431.28
+          ],
+          "sourceBodySha256": "42e790c3683bd9a47da5b6cd88103204393df662e9471dfcad78eedf35295a4f",
+          "editorialTaskSha256": "45cbe2ac20a9c7a536d784cdfb83df286244ed88fc250264f3ef4c835f1f59c8",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "surgery"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "membrane transport",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "membrane transport",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b4f599d7e45719a8f81a9172a52f7da2ced5c8e91d0c6fb7068fc88242d40bb5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY1.4",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            240.66,
+            107.8,
+            273.42
+          ],
+          "sourceBodySha256": "43366552a138acae50b6f6fb9221810d83f88d1cf3137f973034a8f9aa8c839f",
+          "editorialTaskSha256": "42d7716e2cbc1430ef5c896667b28dc9db2cb238945c4206e1b53d22f99c6013",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC1.1",
+          "page": 162,
+          "rowBBox": [
+            58.7,
+            192.48,
+            108.5,
+            250.44
+          ],
+          "sourceBodySha256": "9ed4387823ac0f04a74987b85cd3dbd183855b4ca732b651d03604dda5e83eb5",
+          "editorialTaskSha256": "0a00997df85003b44cb6a539baef35b6b9446453e0a379bb0977155fd262f018",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "biochemistry"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "opportunistic infections",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "opportunistic infections",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:ae279af6294060afd769494f7cf9dc089df919ac7608ed5c49c0b4004d63b3ba:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:024164cd3026557ed677a87ea680580cd18d12f2861a3109430faee4f8a550fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI9.2",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            416.22,
+            108.8,
+            457.26
+          ],
+          "sourceBodySha256": "3015ee98fd70c60c5eceadcc68c00a4bb2f797ac48a8055bf8f824c5c1212ee5",
+          "editorialTaskSha256": "0866a5b88c9562a6c7905172a3df704bb27fc11026a01852caca5eaa8bd04536",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ae279af6294060afd769494f7cf9dc089df919ac7608ed5c49c0b4004d63b3ba",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.3",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            127.5,
+            102.7,
+            154.86
+          ],
+          "sourceBodySha256": "1f953d3d6c45506ad8f9fe78afd1e48851d1f925ea882ea4387a920a1dd49047",
+          "editorialTaskSha256": "f19b899a8c50da1357d1d2257a7a1ca9af537c9f7df5aca5061d963e936bbeaa",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "microbiology"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "oral cancer",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "oral cancer",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:07719a4bad54301a3d84e58cb7732485505a5776a3a0c59e5298caefd2934c2a:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bbccdea6a61dc5e4f9c9d4aae00238def8eabc7acafdc627e80b8d6c9eae307f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA23.1",
+          "page": 194,
+          "rowBBox": [
+            51.5,
+            296.22,
+            105.6,
+            329.28
+          ],
+          "sourceBodySha256": "29eb9ad04c513ca0ad8bf4b59316b7eb4f0810b0fe24729c481e65f2c13abbb2",
+          "editorialTaskSha256": "927ef8ce37404b615b1a5262c8689b4202d0899566ccedf4d9877b600c97ea29",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:07719a4bad54301a3d84e58cb7732485505a5776a3a0c59e5298caefd2934c2a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU20.1",
+          "page": 407,
+          "rowBBox": [
+            45,
+            540,
+            101.7,
+            576.12
+          ],
+          "sourceBodySha256": "fc9c096eaa5582fa1de1b613de334b6b967b0613921e064aea84afd59b1248c8",
+          "editorialTaskSha256": "1b9553d79586b3dfe5840a74e97bbd22a1413bfec76539ec91a99b6801cb1754",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "surgery"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "organ donation",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "organ donation",
+      "targetHomeProposalId": "editorial-home:organ-donation",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cafe618148e05a33d518a60588db32753be7c4e196d3b0f714a61ea681a7ef2f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.4",
+          "page": 217,
+          "rowBBox": [
+            45.5,
+            157.5,
+            95.2,
+            196.38
+          ],
+          "sourceBodySha256": "f81d34ea98c5b6e42d8f6b4915441472894b322c911d7b8c05a1980e519c1403",
+          "editorialTaskSha256": "cd2ce8eaea13ad9812197018593b2914721068e11bffdb7d60a4c0fb015e3a21",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU13.3",
+          "page": 406,
+          "rowBBox": [
+            45,
+            154.32,
+            101.7,
+            169.38
+          ],
+          "sourceBodySha256": "0d158295f2fc536da74f4232546affcc583b896e1507cec62a3053570c244890",
+          "editorialTaskSha256": "3d908374faff13e977a8517a0e6a2e108a57f6da5776bc4cbc8b55f3a29a3a2a",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "forensic-medicine"
+        ],
+        "targetSubjectIds": [
+          "surgery"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "pain pathways",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "pain pathways",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f40c554ad68f8420698ad09e5910229f958366cbe860211fbca1ec5d74a731bf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS8.1",
+          "page": 454,
+          "rowBBox": [
+            46.7,
+            493.44,
+            98.1,
+            520.44
+          ],
+          "sourceBodySha256": "6ab0cb35bb26cae23b21f4d751cb332e14b9f89a2076e236243150f81cff8877",
+          "editorialTaskSha256": "cb881a27d393ef7c38ac1bb8755a241a11265bf8d6cdf937f3026a10bbdac00a",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.8",
+          "page": 158,
+          "rowBBox": [
+            58.5,
+            234.54,
+            107.8,
+            267.3
+          ],
+          "sourceBodySha256": "c94a9d995cfec2068670e3f718099dea9e37dfede2838afc9466c91b04575b4b",
+          "editorialTaskSha256": "cf2306f4604154588eec2690ddc41e9041c0e5fa028f844f3e7a9c235a653d7f",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anaesthesia"
+        ],
+        "targetSubjectIds": [
+          "physiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "parotid gland",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "parotid gland",
+      "targetHomeProposalId": "editorial-home:parotid-gland",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e820bd8908da31ceb6accf6af23e7349612765a0357f026ccd17d8aa1475d7e6",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN28.9",
+          "page": 126,
+          "rowBBox": [
+            51.2,
+            157.74,
+            122.2,
+            207
+          ],
+          "sourceBodySha256": "b82ed5628f84e0d32841477c85a2353f7e1f0400c650f0b0f352968545eaa331",
+          "editorialTaskSha256": "c806eb761c6b280ac814b67d209fbb3a01364d38755d99aa77992f2bb8bdaaf6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN43.6",
+          "page": 133,
+          "rowBBox": [
+            51.2,
+            193.44,
+            122.2,
+            243.06
+          ],
+          "sourceBodySha256": "a70ca4c14e2b0c0804d5079382df97434b3d7430a63960a4faccd071eb4792fa",
+          "editorialTaskSha256": "c9b66cba23bd0e6a30740acb15d95519fa642e27718bfb9742c584e2968f067e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "peripheral blood smear",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "peripheral blood smear",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2:name-component:03"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:24026ff7e34ad5467d13d1648f2ef909412db7f9535e030720be0333745bcc5f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.12",
+          "page": 346,
+          "rowBBox": [
+            51.3,
+            234.42,
+            103.1,
+            261
+          ],
+          "sourceBodySha256": "b6d3f85e17031f5fef0077c8fe9bcfa756875bba0adda2feded49897a2014fff",
+          "editorialTaskSha256": "94391813af6e3e18adb6b6dace2acdf339a915fcf7ce1ad77da18fd648c91c80",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.7",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            79.62,
+            102.7,
+            99.54
+          ],
+          "sourceBodySha256": "96d3ec82dc5ba4b4fe0764fe412b52ca7f04f813444775f1ae74c22628fc5ca8",
+          "editorialTaskSha256": "9c3c4b66532b4802c3a998315504e54bf0febcbdb41508c80cb16888341108a3",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "peritonitis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "peritonitis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:60801906bb2ee0b917675688f225a6ce03c058d40a689abb17a4aae8bf199b78:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9f786a93cbc9becc5c3cfbf37c33b2425b75f1822d7fb719dfa79a92fffd0bba",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.3",
+          "page": 410,
+          "rowBBox": [
+            45,
+            259.5,
+            101.7,
+            288.9
+          ],
+          "sourceBodySha256": "0f620a9dbe406245f38b1bbe983b51938f0e32b5b733525b976f8bafc2059701",
+          "editorialTaskSha256": "57afe0fa896f7af4372698c06e311d1e8ebc2cd8a1738056fa6cc1dd629c53fc",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60801906bb2ee0b917675688f225a6ce03c058d40a689abb17a4aae8bf199b78",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN47.3",
+          "page": 135,
+          "rowBBox": [
+            51.2,
+            245.58,
+            121.3,
+            270.42
+          ],
+          "sourceBodySha256": "35eebc5c8870f6cbc2e7bf711c25e72aa386304c44a59545a15bacd7022f90f7",
+          "editorialTaskSha256": "d0677f56a435be9230c8af8450492d42a5b8ad2160a5959d5c335f3e6d2c1a9e",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "surgery"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "portal hypertension",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "portal hypertension",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:55fb66ee35faa87961af9899f33c46dfd8e667979ee16bb995111236d28eeb19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA24.5",
+          "page": 195,
+          "rowBBox": [
+            51.5,
+            389.88,
+            105.6,
+            422.94
+          ],
+          "sourceBodySha256": "a951e891753606ceed1cb1264c36bc2bdc4bbec45fac33fc07705b14aa8ec386",
+          "editorialTaskSha256": "233c6b865b5da6f6dcabe31cb6892078f34f42d76c93f44fc1af3c9466364601",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:dad2c575fa210205f7d8e9da06a5be03e3d16f5e7e0e894a3aa08b853dfc287f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE23.16",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            235.5,
+            103.1,
+            268.14
+          ],
+          "sourceBodySha256": "849abe1cc5522c8ad81852f2cec25764593338c5c500acd2e11b9693d1156076",
+          "editorialTaskSha256": "d69c590bc3fe94a742e5d78a71d075a7059aaeed1ddd9ae73aaabdef03345c7f",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.5",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            322.92,
+            102.7,
+            390.6
+          ],
+          "sourceBodySha256": "d57c5aec15b94ee1091141aba1f524826d8e77e031a7c62abdff4c102991a2ae",
+          "editorialTaskSha256": "b483593fe518f6945d7540bd5b0d732d0c23c6abb35b81a9fc0ab6b7f3971a9d",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pathology",
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "refractive errors",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "refractive errors",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a881e3641d583944fccd5a4d66b8e589a88a2fae5d9a0ccff49e51f3107177ba",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP1.2",
+          "page": 414,
+          "rowBBox": [
+            49.5,
+            195.48,
+            103.5,
+            227.16
+          ],
+          "sourceBodySha256": "e4033056065d6ed88134aa5a16921462e57a2c1678786c521fe552f0a7a29e8e",
+          "editorialTaskSha256": "a5076b18a512ae5d2d56faf8dc39454d335519db94193dabf389be0c96ef1f07",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d666966ea3cb9250a5a2361a91e2347a5eae26a857db398f74a882343ca4a0fc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP10.3",
+          "page": 418,
+          "rowBBox": [
+            49.5,
+            336.72,
+            103.5,
+            367.98
+          ],
+          "sourceBodySha256": "5396ec1222346d2cfef07e83e8c8dd17650c8e309ab9452f04493fbdd4d23a22",
+          "editorialTaskSha256": "ac0850bc2a1bd044cee528945ae21dc7b134bd6f6147bade4d579142afcf00f8",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "ophthalmology"
+        ],
+        "targetSubjectIds": [
+          "ophthalmology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "rheumatic fever",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "rheumatic fever",
+      "targetHomeProposalId": "editorial-home:rheumatic-fever",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4f43a2bd7c8f5aa3c4a85e2ebb0c5ef14998536644a476df8d686b82ea38ba15",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA26.5",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            223.5,
+            105.6,
+            254.28
+          ],
+          "sourceBodySha256": "16126f6dc0b3c1143288ea601d209945bd245eac956f371746be7e610f656f8f",
+          "editorialTaskSha256": "e2c6eb947d6415298e1d325accf030bd83053d333256134d70b10d09d6394ea1",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:be22a74ce1d18df7e723b9c0a20e47da3f987bda1e5f51a1b0bfa2be2c1531bd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.1",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            262.38,
+            108.8,
+            295.44
+          ],
+          "sourceBodySha256": "b9e2fab87b837e24e606339376520870f6c8864a5a4783b2df1f99e0e4b72252",
+          "editorialTaskSha256": "ef4c5050c727551d2ed6ebca9253ab0ed45293a856069903afb3cb54da476003",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.4",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            367.44,
+            108.8,
+            425.46
+          ],
+          "sourceBodySha256": "1fd828f8e4c1be41ac22136fab027027b7afd57a56827b3a66383e8af9302a18",
+          "editorialTaskSha256": "01fc4feb52cec8c7969c1cf97ce409c1c523e6ad752730ae73a0c62f6921736c",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "microbiology",
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "microbiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "scorpion envenomation",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "scorpion envenomation",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:26e20d42403ec87f674adff197c4bc8519ece0311884fa718fec1d44472b8800:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2bf3055d041cd01462529be003e6ad8fbaa1e3a129e8574f221ceffb654eb84f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM21.8",
+          "page": 313,
+          "rowBBox": [
+            44.2,
+            439.62,
+            102.7,
+            466.92
+          ],
+          "sourceBodySha256": "bcdbe081ca8caee0bb1c934f0cc2c27afa5bef2d6cedd1a61803d5c6316057cf",
+          "editorialTaskSha256": "7f98e94aac2d05f9e045d3fe54c49083c5863f33e1f20d263a8b058dd2810240",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:26e20d42403ec87f674adff197c4bc8519ece0311884fa718fec1d44472b8800",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.19",
+          "page": 231,
+          "rowBBox": [
+            45.5,
+            358.14,
+            95.2,
+            391.98
+          ],
+          "sourceBodySha256": "1e340c43e976ebdc229a478180e85a3a09c68f0e396fcddf6af72e5a4de13cc3",
+          "editorialTaskSha256": "73731baa9d391c07c3464c7d85626fee510be925619b34b38fc4180a60e8ebca",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine"
+        ],
+        "targetSubjectIds": [
+          "forensic-medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "serratus anterior",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "serratus anterior",
+      "targetHomeProposalId": "editorial-home:serratus-anterior",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cf8eaa315095782dcaa20c5c77bedf5c93ab105b6e7be576bfa34e910609d005",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN10.11",
+          "page": 112,
+          "rowBBox": [
+            51.2,
+            428.4,
+            120.4,
+            477.72
+          ],
+          "sourceBodySha256": "70ea5e4b3c2ba8204fc2f2d3b6aea6f8cb1ab9dbd0a71656bc3c6af54cd9feaa",
+          "editorialTaskSha256": "508208f754f1009cb1739fda1c9ffa8197f6ca4aa6c168558498c7d75aab8cd3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ddad5cfad366679c12e7ac13899723df9047404fd634c994380a6a3435fda193",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN13.7",
+          "page": 116,
+          "rowBBox": [
+            51.2,
+            108.42,
+            121.6,
+            166.74
+          ],
+          "sourceBodySha256": "572f430b1f1a40127a8f84c354eba792173f1647e667685bbf4c24a2670883f3",
+          "editorialTaskSha256": "a24b95ec0d902e1c0925ac7c6d12e5aa1c16424215b35813614073788445b785",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "sexually transmitted infections",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "sexually transmitted infections",
+      "targetHomeProposalId": "editorial-home:sexually-transmitted-infections",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:10e46da98fea53771ced02d5d0d5f0b8734e0991328f174be0d6c11de9f087f4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG27.1",
+          "page": 437,
+          "rowBBox": [
+            49.1,
+            239.1,
+            103.1,
+            297.18
+          ],
+          "sourceBodySha256": "db56839ff2bb5106cedba6f74ad76a6a47c55bc6d61a6f5cad7ba16de04a4df8",
+          "editorialTaskSha256": "3ba6e34d918e1489b4a63761b882b819b322f12cfd377cfb794bb56ab219993b",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e9af4329a314e4bade8c00066a88cf66d43825c9d2519e1c61008a2ba2a23cc1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI8.2",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            193.32,
+            108.8,
+            253.8
+          ],
+          "sourceBodySha256": "6afbb8d52cecde58f6a5a3763b13d64e3a6c46072b135b838bf78bbfc554a378",
+          "editorialTaskSha256": "4cb4095e6c11c8094a9f0de266329d2a31d5473d81b92da585bd3688a0559f08",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.4",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            130.56,
+            105.7,
+            198.24
+          ],
+          "sourceBodySha256": "745b41126ad7ef7bf4daea86a1d127d6d4cc3cdbbe8e79e5ea63e753400c1d7f",
+          "editorialTaskSha256": "ef13dd315c87c9a7f58e1bd7c4fbc8f5f3edc2c4ccf2651eeac32c3d609aaa69",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "microbiology",
+          "obstetrics-gynaecology"
+        ],
+        "targetSubjectIds": [
+          "pharmacology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "shock",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "shock",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d6dffddbf2bbc5c9ad5e4007cb7d8e77f9b8572e94f21ba5140641947e9a449c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR1.2",
+          "page": 444,
+          "rowBBox": [
+            49.1,
+            349.86,
+            103.1,
+            382.92
+          ],
+          "sourceBodySha256": "715fc3a159586ee497d566b886b113add30227ea376c71a89c0b57f9388d4b28",
+          "editorialTaskSha256": "7dfc097d93dae94cbc821a4751950c6cc48f1366cd577a151386db7bac40051a",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ec1e54288562c3cef6fe15d294c3f1a77e85daf08a8aa3a5c2449854d08c8896",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA5.3",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            433.44,
+            105.5,
+            456.84
+          ],
+          "sourceBodySha256": "2f5442d4ec1a9048925931cce9bfefd79a1677e943fa2d86c8bfe7831d15ca4e",
+          "editorialTaskSha256": "9b7a453f1c600f1902e7ef271d6e1ef5905d68c140aee9857c4c69ea8e978e14",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.13",
+          "page": 154,
+          "rowBBox": [
+            58.5,
+            212.22,
+            107.8,
+            244.98
+          ],
+          "sourceBodySha256": "43eaf7eeee5e3e1fd549be1b599efd33313ea01e732dd13b17c0c71d1d3631bf",
+          "editorialTaskSha256": "1ca531db7070a91b68de0055b0947104a43b43adea6084e2ccd36f55ece10172",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "orthopaedics",
+          "pathology"
+        ],
+        "targetSubjectIds": [
+          "physiology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "testis",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "testis",
+      "targetHomeProposalId": "editorial-home:testis",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:93db363a25219f1a38a30c41c21b56bb7d54d82911ddd516e267b6dacf75c504",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN46.1",
+          "page": 134,
+          "rowBBox": [
+            51.2,
+            401.1,
+            122.2,
+            450.42
+          ],
+          "sourceBodySha256": "53f0cc9a701bdbbe340ba3dc23949221457fb35871fd96dd060dc7f7193693bc",
+          "editorialTaskSha256": "56b03a2f6556c301f55b76a34006091fa5c3573c7ddee192867bd3fec57aeb6e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.2",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            406.74,
+            122.2,
+            546.9
+          ],
+          "sourceBodySha256": "714eec4895dd1a3e0d5c05f204e42b86600f8eeeddc90f02f1ac648e7ebc6286",
+          "editorialTaskSha256": "db849852cdc28fa70e8b06ac4bc41ffa46a1c17a4ff305d9458e28e5541b3bbf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "thyroid function",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "thyroid function",
+      "targetHomeProposalId": "editorial-home:thyroid-function",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3d65233ea139e167f984dd3e955e217c7b55ae1db052fcfc8ec5029dd55560b4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY8.3",
+          "page": 156,
+          "rowBBox": [
+            58.5,
+            320.58,
+            107.8,
+            363.78
+          ],
+          "sourceBodySha256": "5d3f2932bd02f0901a984c47422523e96ed7ec6daff4df651f98855206edfcd8",
+          "editorialTaskSha256": "c561d1c074cfe0d76314c8e26a8512d0cd2d7e7cafcfed6160423ef866becd59",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:472c97d7dd6e88379a640026035333f7faed3f5f5bcc072e73dc68d9ea7296f3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.2",
+          "page": 301,
+          "rowBBox": [
+            44.2,
+            440.22,
+            102.7,
+            481.08
+          ],
+          "sourceBodySha256": "139d6405ca77ce39395f1b589c1184fd5615356771b640b81cec8b05d6ed2a0f",
+          "editorialTaskSha256": "96811c6a7e22ec7796dd43ef7c48f6ea290d1c807e98d5519602abc20e7ae466",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "physiology"
+        ],
+        "targetSubjectIds": [
+          "medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "tuberculosis",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "tuberculosis",
+      "targetHomeProposalId": "editorial-home:tuberculosis",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0388ad06da80dff5cdb9e2a7cda0e0a128dd5b7abfd2b798ebdc4ca2a6070fd8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.10",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            364.02,
+            102.7,
+            391.32
+          ],
+          "sourceBodySha256": "1b3feed9466a301b7d4d61d17496f802e1122eead0f55840c9fa7edf186ad4e6",
+          "editorialTaskSha256": "f44e65c38d4148c5187b3176c95e6f35c6a9152ceb2f6911e87c324446fa6bc7",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:049c1109ba9f09b780ff08f7397fa3d130dd13b41bf66edd04ad74abf2adfa4c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.1",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            351.06,
+            102.7,
+            378.54
+          ],
+          "sourceBodySha256": "8d1060c6ec4ed3e9f700e747d16da1df15a1658227ae3ee6bb03cd04b2413778",
+          "editorialTaskSha256": "a306e5034491b8bcff78630f7956dc8c7aedbc41824d0aa71a9d4d640c6a4b2c",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:12f2a876e69881f49abcb9f90ee3df85bdb2f1f74a0ecb0e580887a42ed25dfc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.18",
+          "page": 323,
+          "rowBBox": [
+            44.2,
+            248.58,
+            102.7,
+            275.94
+          ],
+          "sourceBodySha256": "465312aef954fd47aae37133850660c8e6fd24a9bf9074ed03dbb362d1b62f7d",
+          "editorialTaskSha256": "e166ec44343bb687a4e1277266d3baac4036c91e4be1377cc841713b7c7f4ce8",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:174980c954938a201c6e6e9b4647350a620881003c260bf772cea9673aea7c0f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.8",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            242.22,
+            102.7,
+            296.34
+          ],
+          "sourceBodySha256": "93dce09a03f9958ecba8937b98de12f10f530cab8515346d2842a5fab5115581",
+          "editorialTaskSha256": "7f8d6032cdb40921119f8169b824eaf6b11381e12143e49f9a60bbbb7de81f70",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1817fa8ed50e2ec99a0cb119bddead84bf9177ef53b4864dd1d4ce71ff2ab511",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.2",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            378.54,
+            102.7,
+            432.6
+          ],
+          "sourceBodySha256": "253581e95de59752c78cc4f0e1b5b6bdbfee8160fc81817abdd3358dd24e0768",
+          "editorialTaskSha256": "25ca1b992d767348a75152c0128d77b91aed2d8654466bf30bde9b445999509d",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:31a36314426b12800ee154fa46bca5633083790b2aca37eb17e1e4d170bcb52a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.13",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            459.42,
+            102.7,
+            500.22
+          ],
+          "sourceBodySha256": "ab15e2da37cae51261d0e94a7b274b99f611dea780c97414120400493ddbf38b",
+          "editorialTaskSha256": "2da72ef898ca820f38e5081db0bc6cd9abc3bf94592a2cd6ff4acba5814579e0",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3e9d5db2f8672669c726effeff2bfe0a44fd29d15aa614e558ca54735dd91c25",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.5",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            514.32,
+            102.7,
+            541.56
+          ],
+          "sourceBodySha256": "4b87ceb4b69f9e29ffa28dd5daa7a76300b50743ccec7faeac92f5bc67145eb5",
+          "editorialTaskSha256": "82c81a6fe5a1d305dc350b7d3906e137a7b1e8f32419dd3c62c96a653cdbc4f4",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:573e4035dbddb4e57c7133aff918d61b02a1524f7dc946e8df818b466ef69588",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.3",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            432.6,
+            102.7,
+            473.52
+          ],
+          "sourceBodySha256": "31928e3b695fc23e3dc846b498cecdcc689e08381cbd92c84ee9008820aacd72",
+          "editorialTaskSha256": "65111903c36664bb4eeb21656303360ed7b566b5dd8d4ec95b066d3c0701bc3d",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:61f6e9846c2ba57838ab874a8163ebbeaae034972b35e8f22f08cfad60e5db5d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.9",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            296.34,
+            102.7,
+            364.02
+          ],
+          "sourceBodySha256": "487da736e79e69e9f157567962faff53c17e3c4d58e70bf516b14f668fc46018",
+          "editorialTaskSha256": "38024084271782d28c720006d8ddd5c30d93e0a4a7377e9aacdb0cd0e9303b4b",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:7b762ef3160f5c37a6afd698cd61aa724ed7d3ece66f6b4a34a3ca193be55e33",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.15",
+          "page": 323,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            167.04
+          ],
+          "sourceBodySha256": "d8625238d529c87cbdd94af0269ef1c18c3c50c5adba3df3304fd355b13a90fc",
+          "editorialTaskSha256": "007cc4baecc97d7fc0d39fc16a983c355f6f53c8cd270742f4b9e2acdcbb7114",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:812b229a152e53f7cb10eab8be458cc10daf72222e24fdd2bc85ef6eac29606b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.17",
+          "page": 323,
+          "rowBBox": [
+            44.2,
+            207.78,
+            102.7,
+            248.58
+          ],
+          "sourceBodySha256": "fc87529b6aa9fa6f7dd10a2f6413e3a69674eaf438abed0cb820d0c4537bd9e7",
+          "editorialTaskSha256": "6dd2a7264b0c12af81b77aaa3388a14a24c0b41b7a5b27dcfaa51d1ff967754b",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:86042e0a820f1305a8d471a5ae018cceb7200c500b14609993f525772b5986a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.12",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            432.06,
+            102.7,
+            459.42
+          ],
+          "sourceBodySha256": "36350b4f3c4eff163b230e6fd78f98f3319c7168602efd2ec7c22d7f782c4935",
+          "editorialTaskSha256": "7e1139a29e02881ad046a749c551530d60e5dbf75194c3278339901705ccf2ad",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:90aa485bc0708223a78d4c016557dd0ec1e29b5741839d838221ef7231794e9b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.16",
+          "page": 323,
+          "rowBBox": [
+            44.2,
+            167.04,
+            102.7,
+            207.78
+          ],
+          "sourceBodySha256": "2a95c397f1076bec815316bde05677474aee30c53bf6507626c20f468033a092",
+          "editorialTaskSha256": "2f91a460dc3e0ec863c826dea06f81dd7ae18adca68f8967dc5adec13e67a6f7",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:93439a25564651523a61045b9c69aceeb9967f099b863d4172e55b01dec0e527",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.11",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            391.32,
+            102.7,
+            432.06
+          ],
+          "sourceBodySha256": "61342ebd047c9c91326c2fcedcd24c88b67ff3392428c938c0027fef849c6394",
+          "editorialTaskSha256": "8f2ce2a1e26049ebe70d619b707f7a8ab7898d772b028a15d5cd2ededc220d41",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bf8bad4cc60f8ba1928615432b2fde683846244f4deaeb79b3321af7bccf4986",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.6",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            133.8,
+            102.7,
+            214.86
+          ],
+          "sourceBodySha256": "b8fadafa86e7fc2a50184d1fa51ffe35ccafb1b06659896db0ac3a57f4fc37b6",
+          "editorialTaskSha256": "a90916171782a929cf8ca7d27945774d5b262ad19f6ac46710ed8339986a9dec",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c0e054a2617793a26bb8dd8c55ec20161b23a47d77dcd1e58d19189aa32a3739",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.4",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            473.52,
+            102.7,
+            514.32
+          ],
+          "sourceBodySha256": "61e210fa2c54a7ccf82b2e5d38c128aca1e28b3933aa5fb753c00e2ff8aeda62",
+          "editorialTaskSha256": "2ba7ff070c7cdaa09bebb2e12470131bb05f217bf8989293faf09ee4a73ba9c8",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:deeca393f0e6e5e410f4b1a6ade8966f1c5d7f26095edc03b8f787a0578393c2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.14",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            500.22,
+            102.7,
+            541.14
+          ],
+          "sourceBodySha256": "2a0598ce3de9733b4c6a66bcb890dbfc745db3e5b42df87f8e7c32d49fb24499",
+          "editorialTaskSha256": "26db04a72f0fe05e315c35ffadece8c7c8e0cf7c674f8120c798c36505475daf",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f16289097e9971117d92b4a590f37cbe7408ad59950bc14323548b31393ab7b6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM27.7",
+          "page": 322,
+          "rowBBox": [
+            44.2,
+            214.86,
+            102.7,
+            242.22
+          ],
+          "sourceBodySha256": "83442f6b919f4d74a07c8b195d0b53e81f12a3b99a428c44c9f8af2ccf800d9e",
+          "editorialTaskSha256": "3431c90a70a94e3751e46cb0900881e51243299cb796dbf81983f6087c246a6a",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE31.5",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            396.48,
+            103.1,
+            437.46
+          ],
+          "sourceBodySha256": "472ebf48ded934600c26ec8d43653541d8cd01d437f064833840feb884104786",
+          "editorialTaskSha256": "050ca59232cc0b2752ed38a7723c22a0fd0f8ef36c750dbfc11520604da0bdb5",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge",
+          "performance-and-knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "umbilical cord",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "umbilical cord",
+      "targetHomeProposalId": "editorial-home:umbilical-cord",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f504bf67ac0f4c145aea9b3dd58bbb409b8c18e32362e182ab745450fc556368",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN80.2",
+          "page": 147,
+          "rowBBox": [
+            51.2,
+            514.44,
+            121.7,
+            539.7
+          ],
+          "sourceBodySha256": "4c0a264ae44b4defcec2f3adc37f0451ffa126096d0712c0b74aac6baaa5b4d9",
+          "editorialTaskSha256": "37644ccad115b4cd16b42490bbeea82f4c19a4eb8eef3d57b3fd8f001c07cd78",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:396c3ce050ce11cacbff42ec2f2383a7d17a4e9b7fcb0632395deb66968fa1be",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN52.2",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            406.74,
+            122.2,
+            546.9
+          ],
+          "sourceBodySha256": "714eec4895dd1a3e0d5c05f204e42b86600f8eeeddc90f02f1ac648e7ebc6286",
+          "editorialTaskSha256": "db849852cdc28fa70e8b06ac4bc41ffa46a1c17a4ff305d9458e28e5541b3bbf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "anatomy"
+        ],
+        "targetSubjectIds": [
+          "anatomy"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": false,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "viral hepatitis",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "viral hepatitis",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:4e6d37c24e97f18268d21d1d46c5a291622ed61416b378034067a2bde3f320bb:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6668ed94ea96f8503e06cd94958a7d9f0c14255c2ac1d23a7a20843645d565a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.3",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            241.44,
+            102.7,
+            282.24
+          ],
+          "sourceBodySha256": "1ce49f3bd6ae4f1d08de79b6779b585e35138dcdc3b80eac3c9ede6a9d06fc2a",
+          "editorialTaskSha256": "f1d43a0b964f3a6b968d466ca6df448a985ec53d809b592c110acd29ade4e7c3",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.7",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            280.8,
+            108.8,
+            321.84
+          ],
+          "sourceBodySha256": "c9607eba14f1dbdc35fc5c9b05a3eccb8dc2fe85377a5dc580ae7b079a27eec4",
+          "editorialTaskSha256": "262d37a170862de086dea7876c662747a96b3f7642401ef97089107aa4215d40",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4e6d37c24e97f18268d21d1d46c5a291622ed61416b378034067a2bde3f320bb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA24.3",
+          "page": 195,
+          "rowBBox": [
+            51.5,
+            295.92,
+            105.6,
+            355.14
+          ],
+          "sourceBodySha256": "d4649f8cd21c2a438cbcd52af61fc3eadb1d17d854a643ce94153d374200be06",
+          "editorialTaskSha256": "9d5af30d741a11ce5c317f5a6d05bc8012be55967930db1eb051921544d75120",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "medicine",
+          "microbiology"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "vitamin a deficiency",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "vitamin a deficiency",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:c05c124ac71e9ac3c27e3c4b7d7dcc13a3b6c928296a851b2ba48a3fdde457e9:name-component:01"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:28756c6792ac9752aba35095bf16750cf0ebc94edb2096727f5c68ffd7260655",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP10.4",
+          "page": 418,
+          "rowBBox": [
+            49.5,
+            367.98,
+            103.5,
+            399.78
+          ],
+          "sourceBodySha256": "b37a85ca9bb78aef244bfd68aaa766162acb685197d82c42c38e7cc63af791e0",
+          "editorialTaskSha256": "2df28348155ab0424d17aaa37ad98b55e37e3c165089b2e68bd3a9bf3ac94146",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c05c124ac71e9ac3c27e3c4b7d7dcc13a3b6c928296a851b2ba48a3fdde457e9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE12.2",
+          "page": 334,
+          "rowBBox": [
+            51.3,
+            136.74,
+            103.1,
+            169.26
+          ],
+          "sourceBodySha256": "9286877196a87c3c7a93bb7a0b72f2301f3bdd0217e07cfa539f5a594f84172e",
+          "editorialTaskSha256": "d2359188e6655c39afda5f310267b0262caa1ce8dfd24f59f3d12ae6b58945af",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "ophthalmology"
+        ],
+        "targetSubjectIds": [
+          "pediatrics"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "vitamin k deficiency",
+      "targetKind": "existing-component-name-candidate",
+      "targetNameKey": "vitamin k deficiency",
+      "targetComponentProposalIds": [
+        "nmc-2024-ref:b63bc55dd54eb36a46ab701789842e342e8fe7eded6b5497878f18368f91ae6b:name-component:02"
+      ],
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:833a138d444d9db1941d373c0256b2d097226f98f59b3f4acbd6bd7d10a0dad7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE12.6",
+          "page": 334,
+          "rowBBox": [
+            51.3,
+            343.5,
+            103.1,
+            376.08
+          ],
+          "sourceBodySha256": "fa8136b46bfc194d52fcdc75fda3282b732f9a22fe6d120c74dcbf4286888196",
+          "editorialTaskSha256": "c7b38c8d980894c256bf84c368df9d0c8d6136d6f5c2868bf9a303e3ddf85e89",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b63bc55dd54eb36a46ab701789842e342e8fe7eded6b5497878f18368f91ae6b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA20.2",
+          "page": 193,
+          "rowBBox": [
+            51.5,
+            305.94,
+            105.6,
+            346.98
+          ],
+          "sourceBodySha256": "9be9a79d0f417a07572a4542e62488fa89da417ee8f14265ec985b2fc496a9c7",
+          "editorialTaskSha256": "134a05994bf8554cb854a8b29ebbd20d750dea71d5e493d0a458835e0c6ef696",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "pediatrics"
+        ],
+        "targetSubjectIds": [
+          "pathology"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "performance-and-knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": true,
+        "taskDigestSetsDiffer": true
+      }
+    },
+    {
+      "parentNameKey": "wound healing",
+      "targetKind": "existing-authoring-home-proposal",
+      "targetNameKey": "wound healing",
+      "targetHomeProposalId": "editorial-home:wound-healing",
+      "reuseLevel": "editorial-name-only",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "taskEquivalenceAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:efecc3784deb87f1ac1c2349441a2ce806af3eafb712dd64023156d49dbfbb7a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU5.1",
+          "page": 404,
+          "rowBBox": [
+            45,
+            145.08,
+            101.7,
+            166.44
+          ],
+          "sourceBodySha256": "f1a9686840477db030330da98c4f587e8624731200e469fbb80363a41d8c861a",
+          "editorialTaskSha256": "b83d14b9b51b4f1af68ff17db45d418bb48141e317efed925e0a930a4cfc6582",
+          "mode": "knowledge"
+        }
+      ],
+      "targetSourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "editorialTaskSha256": "55bc7e28d06fd2f65fab9111da159446b1a7223d3d8556bd0f9cf3b8f389f845",
+          "mode": "knowledge"
+        }
+      ],
+      "boundarySignals": {
+        "sourceSubjectIds": [
+          "surgery"
+        ],
+        "targetSubjectIds": [
+          "forensic-medicine"
+        ],
+        "sourceAssessmentModes": [
+          "knowledge"
+        ],
+        "targetAssessmentModes": [
+          "knowledge"
+        ],
+        "subjectSetsDiffer": true,
+        "assessmentModeSetsDiffer": false,
+        "taskDigestSetsDiffer": true
+      }
+    }
+  ]
+}

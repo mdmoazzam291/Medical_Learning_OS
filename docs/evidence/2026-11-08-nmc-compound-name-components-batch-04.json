@@ -1,0 +1,1632 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-component-proposals",
+  "sourceHead": "64e052cb93ff97eb5d6dd07d11d0be58d0ee9cd8",
+  "parentIndexPath": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+  "scopeBasis": "existing-editorial-labels-and-task-scopes",
+  "officialSourceRechecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "coverageFraction": null,
+  "totals": {
+    "parentNames": 30,
+    "sourceReferences": 30,
+    "componentNames": 69,
+    "subjects": 12
+  },
+  "rows": [
+    {
+      "parentNameKey": "preterm labour and membrane rupture",
+      "parentName": "Preterm labour and membrane rupture",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG13.4",
+          "pdfPage": 432,
+          "packet": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de:name-component:01",
+          "name": "Preterm labour",
+          "nameKey": "preterm labour",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de:name-component:02",
+          "name": "Prelabour rupture of membranes",
+          "nameKey": "prelabour rupture of membranes",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de:name-component:03",
+          "name": "Post-dated pregnancy",
+          "nameKey": "post-dated pregnancy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:50886766907d3a82f3300fe978a039680329e49618327df4775e29922d4e84de",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+        "editorialTaskSha256": "5dbfccff852efccf3731fa063019cb5ac71bb5483775842ece03676aedb42522",
+        "sourceBodySha256": "af20eedca58fcea6a529b85bafaad5bb1274ab2c49d673e54492f6a2af396951"
+      }
+    },
+    {
+      "parentNameKey": "primary and secondary hypertension",
+      "parentName": "Primary and secondary hypertension",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd",
+          "subjectId": "medicine",
+          "code": "GM8.4",
+          "pdfPage": 295,
+          "packet": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd:name-component:01",
+          "name": "Primary hypertension",
+          "nameKey": "primary hypertension",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd:name-component:02",
+          "name": "Secondary hypertension",
+          "nameKey": "secondary hypertension",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+        "editorialTaskSha256": "c4378cc50465670bd45347460c2405be0c5ce211ce6693a6e04d58e3c5a3f87d",
+        "sourceBodySha256": "0f607370c4bb92083cc27c533dce1ff85429bb4175b696e884e949b89aad9d5f"
+      }
+    },
+    {
+      "parentNameKey": "prokinetics and emesis",
+      "parentName": "Prokinetics and emesis",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd",
+          "subjectId": "pharmacology",
+          "code": "PH6.2",
+          "pdfPage": 180,
+          "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd:name-component:01",
+          "name": "Prokinetics",
+          "nameKey": "prokinetics",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd:name-component:02",
+          "name": "Emetics",
+          "nameKey": "emetics",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd:name-component:03",
+          "name": "Antiemetics",
+          "nameKey": "antiemetics",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+        "editorialTaskSha256": "f54007227274fabfc1f6cb858361abaab9bb8a47a7de54cc6eae6fed7350ec65",
+        "sourceBodySha256": "260ae4b7851a654d9139feed703257b57bb2e66e65f8a57a568979975600aeca"
+      }
+    },
+    {
+      "parentNameKey": "psoas abscess and femoral hernia",
+      "parentName": "Psoas abscess and femoral hernia",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097",
+          "subjectId": "anatomy",
+          "code": "AN15.4",
+          "pdfPage": 116,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097:name-component:01",
+          "name": "Psoas abscess",
+          "nameKey": "psoas abscess",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097:name-component:02",
+          "name": "Femoral hernia",
+          "nameKey": "femoral hernia",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:04812dd216d5497807e93fe560ca6eec73a18a08b8878543c1b5710509a94097",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json",
+        "editorialTaskSha256": "d02dd91c5be4bacd6505de97ab4b5e2322f6b92a461fe6f3fefb1b8aa3c447ce",
+        "sourceBodySha256": "aeba8a51fa7f9b5739fc29293a1e6407a9eb07ed1eddf0bd44a5efb282713749"
+      }
+    },
+    {
+      "parentNameKey": "pulmonary and systemic circulation",
+      "parentName": "Pulmonary and systemic circulation",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4",
+          "subjectId": "anatomy",
+          "code": "AN5.2",
+          "pdfPage": 109,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4:name-component:01",
+          "name": "Pulmonary circulation",
+          "nameKey": "pulmonary circulation",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4:name-component:02",
+          "name": "Systemic circulation",
+          "nameKey": "systemic circulation",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+        "editorialTaskSha256": "20f604ce9d38f4a2da61fc3f05553f983097d19175f21353b12a0fa0e3e2f4a0",
+        "sourceBodySha256": "246d2cd74b0158d67d35bda440b327ee8998fd6dc0144ccdeed23a77716994ba"
+      }
+    },
+    {
+      "parentNameKey": "pyelonephritis and reflux",
+      "parentName": "Pyelonephritis and reflux",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb",
+          "subjectId": "pathology",
+          "code": "PA27.10",
+          "pdfPage": 198,
+          "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb:name-component:01",
+          "name": "Acute pyelonephritis",
+          "nameKey": "acute pyelonephritis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb:name-component:02",
+          "name": "Chronic pyelonephritis",
+          "nameKey": "chronic pyelonephritis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb:name-component:03",
+          "name": "Reflux nephropathy",
+          "nameKey": "reflux nephropathy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+        "editorialTaskSha256": "7a0d1f78764cc297757218cb5b8d0af855332c0b4974ef84112731f215d02060",
+        "sourceBodySha256": "834cb23b7789e42ba85bd8c8f206397f634995e7f32d32b30d31376158c0c2f3"
+      }
+    },
+    {
+      "parentNameKey": "pyloric stenosis, ulcer and gastric cancer",
+      "parentName": "Pyloric stenosis, ulcer and gastric cancer",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db",
+          "subjectId": "surgery",
+          "code": "SU28.8",
+          "pdfPage": 410,
+          "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db:name-component:01",
+          "name": "Pyloric stenosis",
+          "nameKey": "pyloric stenosis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db:name-component:02",
+          "name": "Peptic ulcer",
+          "nameKey": "peptic ulcer",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db:name-component:03",
+          "name": "Gastric cancer",
+          "nameKey": "gastric cancer",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:3a677d3bfc9a622b652d0aba7869d90fbeef9b5f575b6b12b58618317d8821db",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+        "editorialTaskSha256": "6f58d506739a1d9a85cb797815dad12655e2914a2bef9096dd51711ba76515de",
+        "sourceBodySha256": "9dfdc30c752d02cf62e48ef638c04a47fb34c1678b31dc645696832be8f852fd"
+      }
+    },
+    {
+      "parentNameKey": "reticulocyte and platelet counts",
+      "parentName": "Reticulocyte and platelet counts",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51",
+          "subjectId": "physiology",
+          "code": "PY2.13",
+          "pdfPage": 151,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51:name-component:01",
+          "name": "Reticulocyte count",
+          "nameKey": "reticulocyte count",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51:name-component:02",
+          "name": "Platelet count",
+          "nameKey": "platelet count",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:a4aa2cdc0f0c9fc05099c4e6a2ccd74a53cb210c62b228e312bfe721ef5ccd51",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+        "editorialTaskSha256": "e568acc9c8cc31dc89c9a8a74660b368bc84a1e07baadaa5bc79b7a9a5ea1a0f",
+        "sourceBodySha256": "1f3df916027e47a4420da4784457ef7efc72714bd60225983cd7061bb29d735c"
+      }
+    },
+    {
+      "parentNameKey": "reversible and irreversible injury",
+      "parentName": "Reversible and irreversible injury",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+          "subjectId": "pathology",
+          "code": "PA2.2",
+          "pdfPage": 187,
+          "packet": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b:name-component:01",
+          "name": "Reversible cell injury",
+          "nameKey": "reversible cell injury",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b:name-component:02",
+          "name": "Irreversible cell injury",
+          "nameKey": "irreversible cell injury",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+        "editorialTaskSha256": "eb1c14bb5bcd7a22acb992c9bb9f9ad60060ed7bf59675e40a79a81cddf5ac42",
+        "sourceBodySha256": "5e00d117f67544717b5ebf651f3fb9da0de04905a0da67003ba90789ba52bb55"
+      }
+    },
+    {
+      "parentNameKey": "sedatives and hypnotics",
+      "parentName": "Sedatives and hypnotics",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d",
+          "subjectId": "pharmacology",
+          "code": "PH3.2",
+          "pdfPage": 176,
+          "packet": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d:name-component:01",
+          "name": "Sedatives",
+          "nameKey": "sedatives",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d:name-component:02",
+          "name": "Hypnotics",
+          "nameKey": "hypnotics",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+        "editorialTaskSha256": "92645085f4b36255ec2e1cc9ff80e471e6d6e4b56754247b07a8a145d0757d89",
+        "sourceBodySha256": "de27c48db37e39d4013f200119a9d24ca3587a4213c091229219aea42358bb19"
+      }
+    },
+    {
+      "parentNameKey": "semen and thyroid panels",
+      "parentName": "Semen and thyroid panels",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a",
+          "subjectId": "pathology",
+          "code": "PA22.3",
+          "pdfPage": 194,
+          "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a:name-component:01",
+          "name": "Semen analysis",
+          "nameKey": "semen analysis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a:name-component:02",
+          "name": "Thyroid function tests",
+          "nameKey": "thyroid function tests",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+        "editorialTaskSha256": "5bad0c29a8474baddd36f39cf514e5041b391812446cc5be39558bcb50ac7b8b",
+        "sourceBodySha256": "f117137b413fc86e6108bc385ae29b6bfd6efdde8864b07341ec9b74927e6881"
+      }
+    },
+    {
+      "parentNameKey": "sexual dysfunction and infertility",
+      "parentName": "Sexual dysfunction and infertility",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82",
+          "subjectId": "forensic-medicine",
+          "code": "FM8.11",
+          "pdfPage": 223,
+          "packet": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82:name-component:01",
+          "name": "Sexual dysfunction",
+          "nameKey": "sexual dysfunction",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82:name-component:02",
+          "name": "Infertility",
+          "nameKey": "infertility",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:da242ea68a1dd16cead27c79856922270f29de3218681d2a78ba5abe1dad5a82",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+        "editorialTaskSha256": "b5d0792b10fa627192205525410980ea95a714a5a85712cef97240263ba5461e",
+        "sourceBodySha256": "0a3a1a5f2d9da80c420fb50b7b67147b2180b581511409a7b39897dce766b2bc"
+      }
+    },
+    {
+      "parentNameKey": "shock, syncope and heart failure",
+      "parentName": "Shock, syncope and heart failure",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe",
+          "subjectId": "physiology",
+          "code": "PY5.13",
+          "pdfPage": 154,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe:name-component:01",
+          "name": "Shock",
+          "nameKey": "shock",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "shock"
+          ],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe:name-component:02",
+          "name": "Syncope",
+          "nameKey": "syncope",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe:name-component:03",
+          "name": "Heart failure",
+          "nameKey": "heart failure",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [
+            "heart failure"
+          ],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+        "editorialTaskSha256": "1ca531db7070a91b68de0055b0947104a43b43adea6084e2ccd36f55ece10172",
+        "sourceBodySha256": "43eaf7eeee5e3e1fd549be1b599efd33313ea01e732dd13b17c0c71d1d3631bf"
+      }
+    },
+    {
+      "parentNameKey": "sickle cell disease and thalassaemia",
+      "parentName": "Sickle cell disease and thalassaemia",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+          "subjectId": "pathology",
+          "code": "PA16.2",
+          "pdfPage": 192,
+          "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a:name-component:01",
+          "name": "Sickle cell disease",
+          "nameKey": "sickle cell disease",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a:name-component:02",
+          "name": "Thalassaemia",
+          "nameKey": "thalassaemia",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+        "editorialTaskSha256": "bdb0d6e9c29651045b0d181bcc53099a2524ab73c9c6f85837ef89a0738a5074",
+        "sourceBodySha256": "507718b2da85a647df7e3600fbfe074c80d377a9b75b9c361a3a192fba6d2383"
+      }
+    },
+    {
+      "parentNameKey": "sinonasal and nasopharyngeal tumours",
+      "parentName": "Sinonasal and nasopharyngeal tumours",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656",
+          "subjectId": "ent",
+          "code": "EN4.33",
+          "pdfPage": 424,
+          "packet": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656:name-component:01",
+          "name": "Sinonasal tumours",
+          "nameKey": "sinonasal tumours",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656:name-component:02",
+          "name": "Nasopharyngeal tumours",
+          "nameKey": "nasopharyngeal tumours",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:42755f344f27936462c6de5536c7e8e0a9cdeda0cb049b27da57fd90b2550656",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+        "editorialTaskSha256": "30449a07eaefb9eeca553e2ae2d549112023463af5ceec33a21c9375f2ac4080",
+        "sourceBodySha256": "79b54496fd34875cf93f8fa52f93f11e442c2cabffd9a17632441ae5be47742f"
+      }
+    },
+    {
+      "parentNameKey": "sinusitis and maxillary sinus masses",
+      "parentName": "Sinusitis and maxillary sinus masses",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5",
+          "subjectId": "anatomy",
+          "code": "AN37.3",
+          "pdfPage": 130,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5:name-component:01",
+          "name": "Sinusitis",
+          "nameKey": "sinusitis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5:name-component:02",
+          "name": "Maxillary sinus masses",
+          "nameKey": "maxillary sinus masses",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+        "editorialTaskSha256": "fa08535f41706ea39fc11d24cd7c1b9f806c37d064c9174ae4a6d45f6c765a6b",
+        "sourceBodySha256": "fb61d219b9e94421ba24adf4ca4e444d533726051cb5fe21f777111248f9499c"
+      }
+    },
+    {
+      "parentNameKey": "sodium and potassium disorders",
+      "parentName": "Sodium and potassium disorders",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199",
+          "subjectId": "pediatrics",
+          "code": "PE15.2",
+          "pdfPage": 335,
+          "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199:name-component:01",
+          "name": "Sodium disorders",
+          "nameKey": "sodium disorders",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199:name-component:02",
+          "name": "Potassium disorders",
+          "nameKey": "potassium disorders",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+        "editorialTaskSha256": "983ef36b7af61aeee50e7242291d03804a477ac7700bb97f578d68e413c5aec3",
+        "sourceBodySha256": "e49967c7a9faea6210224091fde7841b4af69a446c9c6a76f1a4f9b6b5d4295a"
+      }
+    },
+    {
+      "parentNameKey": "somites and intraembryonic coelom",
+      "parentName": "Somites and intraembryonic coelom",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573",
+          "subjectId": "anatomy",
+          "code": "AN79.4",
+          "pdfPage": 147,
+          "packet": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573:name-component:01",
+          "name": "Somites",
+          "nameKey": "somites",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573:name-component:02",
+          "name": "Intraembryonic coelom",
+          "nameKey": "intraembryonic coelom",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+        "editorialTaskSha256": "e22ad080c02f2d4661de5620830637b4b1cec59a666d2cfddff9e3fc175dc791",
+        "sourceBodySha256": "4e0a0c6b5182c410018a03365ecd2cc9059afda17a87e4abf580518c67cc4670"
+      }
+    },
+    {
+      "parentNameKey": "spinal and pelvic joints",
+      "parentName": "Spinal and pelvic joints",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4",
+          "subjectId": "anatomy",
+          "code": "AN50.2",
+          "pdfPage": 138,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4:name-component:01",
+          "name": "Intervertebral joints",
+          "nameKey": "intervertebral joints",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4:name-component:02",
+          "name": "Sacroiliac joints",
+          "nameKey": "sacroiliac joints",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4:name-component:03",
+          "name": "Pubic symphysis",
+          "nameKey": "pubic symphysis",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:2dece382ebc7c74523850f0d2f21266c1d05407246cc45506fd6bfd7c61789c4",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+        "editorialTaskSha256": "02350b7b63740545a178e3fda49951b99ec1e78b98d52cbaf4e7598fae373b25",
+        "sourceBodySha256": "b1e4ffe14e988e4bd254a43d2f2b4deb4339e13732c2e2b5ac6612c32cb1a80e"
+      }
+    },
+    {
+      "parentNameKey": "staining and stool microscopy",
+      "parentName": "Staining and stool microscopy",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+          "subjectId": "microbiology",
+          "code": "MI1.10",
+          "pdfPage": 207,
+          "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b:name-component:01",
+          "name": "Gram staining",
+          "nameKey": "gram staining",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b:name-component:02",
+          "name": "Ziehl–Neelsen staining",
+          "nameKey": "ziehl–neelsen staining",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b:name-component:03",
+          "name": "Stool microscopy",
+          "nameKey": "stool microscopy",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+        "editorialTaskSha256": "9ebef8071142c41566591d584edaa3c2b0cc5674e36177f2ff3732ff0e1b1b40",
+        "sourceBodySha256": "2305a61bf6048598b490c5742175a2388450138aa35c2dd54c86f52dee2f121f"
+      }
+    },
+    {
+      "parentNameKey": "sterilization and disinfection",
+      "parentName": "Sterilization and disinfection",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+          "subjectId": "microbiology",
+          "code": "MI1.12",
+          "pdfPage": 207,
+          "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:01",
+          "name": "Sterilization",
+          "nameKey": "sterilization",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b:name-component:02",
+          "name": "Disinfection",
+          "nameKey": "disinfection",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+        "editorialTaskSha256": "e8d5b6ecd55726bfe6bc1336e5e38b0226667df019681df8f54206189ffa941b",
+        "sourceBodySha256": "3e28f3f0a33a74ce3abf83b58f093b47393cd03a7ad8618be361d808351a4a88"
+      }
+    },
+    {
+      "parentNameKey": "stillbirth and abortion",
+      "parentName": "Stillbirth and abortion",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG1.3",
+          "pdfPage": 427,
+          "packet": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb:name-component:01",
+          "name": "Stillbirth",
+          "nameKey": "stillbirth",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb:name-component:02",
+          "name": "Abortion",
+          "nameKey": "abortion",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:36c9b11c1b00240f79a26f9003c624c888ecf656d7482b9433cda830c6ffdceb",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+        "editorialTaskSha256": "4112c4cbb9815633de46f9d59a092dd42e052a499462fed22571ccbe91f3eb56",
+        "sourceBodySha256": "dbe31649fa1fc8cbe3e7814a07586395ca6359724b6e3d21d0a67458407adf5a"
+      }
+    },
+    {
+      "parentNameKey": "submandibular gland and ganglion",
+      "parentName": "Submandibular gland and ganglion",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289",
+          "subjectId": "anatomy",
+          "code": "AN34.2",
+          "pdfPage": 128,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289:name-component:01",
+          "name": "Submandibular gland",
+          "nameKey": "submandibular gland",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289:name-component:02",
+          "name": "Submandibular ganglion",
+          "nameKey": "submandibular ganglion",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+        "editorialTaskSha256": "a86377f95c0d773900606a72f9f9343d1b46c529f57e2be17e4fe63fc0ed11d0",
+        "sourceBodySha256": "419cc5538ea318c693162c6b1096c23dcd0ee1119c98e3a69ba60fcb5ad134bb"
+      }
+    },
+    {
+      "parentNameKey": "subtalar and transverse tarsal joints",
+      "parentName": "Subtalar and transverse tarsal joints",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9",
+          "subjectId": "anatomy",
+          "code": "AN20.2",
+          "pdfPage": 119,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9:name-component:01",
+          "name": "Subtalar joint",
+          "nameKey": "subtalar joint",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9:name-component:02",
+          "name": "Transverse tarsal joint",
+          "nameKey": "transverse tarsal joint",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:45c7abbdaa60c756c5d9c0140478910614d458b55c6cfe622e8fc0c4ede3f9d9",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+        "editorialTaskSha256": "66818dadaaada71a4bdd586c9371494d0ae5465be6a941280cefcd911a71cbeb",
+        "sourceBodySha256": "6e7f94c190416f5fe78ee5476abe2f39907cf54b20563a24f4942c313034a709"
+      }
+    },
+    {
+      "parentNameKey": "superior vena cava and azygos system",
+      "parentName": "Superior vena cava and azygos system",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a",
+          "subjectId": "anatomy",
+          "code": "AN23.3",
+          "pdfPage": 122,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a:name-component:01",
+          "name": "Superior vena cava",
+          "nameKey": "superior vena cava",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a:name-component:02",
+          "name": "Azygos vein",
+          "nameKey": "azygos vein",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a:name-component:03",
+          "name": "Hemiazygos vein",
+          "nameKey": "hemiazygos vein",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a:name-component:04",
+          "name": "Accessory hemiazygos vein",
+          "nameKey": "accessory hemiazygos vein",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+        "editorialTaskSha256": "8b916cd439927744584c02629d59a5f7158023c4c97f67f8d8668b83a1305f6e",
+        "sourceBodySha256": "5cf1d10d6260cefd774d01efdfc18fa4601a2a57b9271ad53fdb81e3718066bb"
+      }
+    },
+    {
+      "parentNameKey": "sympathetic and spinal ganglia",
+      "parentName": "Sympathetic and spinal ganglia",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21",
+          "subjectId": "anatomy",
+          "code": "AN7.8",
+          "pdfPage": 110,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21:name-component:01",
+          "name": "Sympathetic ganglia",
+          "nameKey": "sympathetic ganglia",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21:name-component:02",
+          "name": "Spinal ganglia",
+          "nameKey": "spinal ganglia",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+        "editorialTaskSha256": "ec62584df2c4df99c1e248ba3167cf8c2e4b1c0f7b489490804660368f6f533c",
+        "sourceBodySha256": "b1624916035d7de23060515638e75412eea1733fbf3ae163b2cc0a63d57e1e0b"
+      }
+    },
+    {
+      "parentNameKey": "tantrums and pica",
+      "parentName": "Tantrums and pica",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494",
+          "subjectId": "pediatrics",
+          "code": "PE5.3",
+          "pdfPage": 330,
+          "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494:name-component:01",
+          "name": "Temper tantrums",
+          "nameKey": "temper tantrums",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494:name-component:02",
+          "name": "Pica",
+          "nameKey": "pica",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+        "editorialTaskSha256": "d9951c76deb64a47087cf6482fb1f3de1be398b6eaada12733d68dd6fb489c26",
+        "sourceBodySha256": "7bd5bc296e4ebc1a135e609ab4f1d2d62747eb7dbbfc6b801543c78326bdfb05"
+      }
+    },
+    {
+      "parentNameKey": "tear film and dry eye",
+      "parentName": "Tear film and dry eye",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567",
+          "subjectId": "ophthalmology",
+          "code": "OP4.5",
+          "pdfPage": 416,
+          "packet": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567:name-component:01",
+          "name": "Tear film",
+          "nameKey": "tear film",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567:name-component:02",
+          "name": "Dry eye",
+          "nameKey": "dry eye",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:b038b295a9b549ab849b4c2e14fced998b90e419dffa778df3d1514051030567",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+        "editorialTaskSha256": "ce47637785e1ab41d2c9148d0f95d7941429c7f40d48442927ac31aecafca732",
+        "sourceBodySha256": "8c65d6e0ee976dfbb1ac8d198d85074547888a7329316674e19ef27c02edc4a9"
+      }
+    },
+    {
+      "parentNameKey": "temporal and infratemporal fossae",
+      "parentName": "Temporal and infratemporal fossae",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d",
+          "subjectId": "anatomy",
+          "code": "AN33.1",
+          "pdfPage": 128,
+          "packet": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d:name-component:01",
+          "name": "Temporal fossa",
+          "nameKey": "temporal fossa",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d:name-component:02",
+          "name": "Infratemporal fossa",
+          "nameKey": "infratemporal fossa",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d",
+        "sourcePacketPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+        "editorialTaskSha256": "e06e7a1b76e5535ac5f4095e23ebf9a78d63563ca17f83229b364c87eb34fc3a",
+        "sourceBodySha256": "81ce6ea58b3758e850c91d2add956ae9d88609f582b0c249cbcf03458ec2a680"
+      }
+    },
+    {
+      "parentNameKey": "thymus and pineal",
+      "parentName": "Thymus and pineal",
+      "sourceAppearances": [
+        {
+          "referenceId": "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77",
+          "subjectId": "physiology",
+          "code": "PY8.7",
+          "pdfPage": 156,
+          "packet": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "proposedObjectiveVersionIds": []
+        }
+      ],
+      "components": [
+        {
+          "componentProposalId": "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77:name-component:01",
+          "name": "Thymus physiology",
+          "nameKey": "thymus physiology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77"
+          ]
+        },
+        {
+          "componentProposalId": "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77:name-component:02",
+          "name": "Pineal physiology",
+          "nameKey": "pineal physiology",
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "existingExactNameCandidates": [],
+          "identityStatus": "unresolved-editorial-proposal",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77"
+          ]
+        }
+      ],
+      "sourceScopeEvidence": {
+        "basis": "existing-editorial-parent-label-and-task-scope",
+        "checkedAtHead": "cc76ddd1075e8ae189e05175116281b2bd3c60d1",
+        "officialSourceRechecked": false,
+        "clinicalValidation": false,
+        "sourceReferenceId": "nmc-2024-ref:3648709463fa3106aca3d458e47fa997c792feca56981b4a3a0e6861cf8f2e77",
+        "sourcePacketPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+        "editorialTaskSha256": "9f18c42b3706d9fd3710a118417cb243a82237843af756e2a71844b40c3681a5",
+        "sourceBodySha256": "6fcfcc9149f7ed50223f9afac779463487b5653c1f9712a31bf95c5319d7c196"
+      }
+    }
+  ]
+}

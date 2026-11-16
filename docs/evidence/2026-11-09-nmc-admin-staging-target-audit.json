@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "staging-blocked",
+  "reviewedCommit": "14c25be38e1264ef386aa8ff00e14b0662f662cd",
+  "workflowRun": 42615311534,
+  "findings": [
+    "The checked-in web/cloud-config.js targets production. A staging build needs an explicit staging project URL and matching publishable key.",
+    "The Admin workspace depends on the Owner dashboard and the Foundation route requires authenticated runtime access and content Admin status.",
+    "A blank full migration replay stops at a historical visual-pilot data dependency."
+  ],
+  "stagingAcceptance": [
+    "Verify the built frontend targets staging before sign-in.",
+    "Verify the Owner dashboard and protected Foundation route using a genuine staging Admin session.",
+    "Verify a signed-in staging learner receives an authorization denial and no proposal payload.",
+    "Verify the Admin sees 91 concepts, two headings, six provisional aliases and one held entry."
+  ],
+  "hostedChangesApplied": false,
+  "next": "Implement and test an explicit staging build configuration that preserves the existing production default and never includes server credentials."
+}

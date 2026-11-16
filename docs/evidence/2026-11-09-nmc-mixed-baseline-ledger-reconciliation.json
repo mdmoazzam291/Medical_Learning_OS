@@ -1,0 +1,1058 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "326bb702ec5dc9dbbfc00356e02f47364b4f112f",
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body",
+    "Fetal age estimation",
+    "Physiological vaginal discharge",
+    "Rheumatic fever",
+    "Attention-deficit/hyperactivity disorder",
+    "Medical cause-of-death certification",
+    "Peptic ulcer",
+    "Population sex ratio",
+    "Acute otitis media",
+    "Cause of death coding",
+    "Essential medicines list",
+    "External ear",
+    "Facial nerve palsy",
+    "Mucosal chronic otitis media",
+    "Otitis media with effusion",
+    "Recurrent pregnancy loss",
+    "Rheumatic heart disease",
+    "Squamosal chronic otitis media",
+    "Vitamin K deficiency bleeding",
+    "Blood culture",
+    "Research ethics",
+    "Drug information",
+    "Basic life support",
+    "Pain assessment",
+    "Posterior triangle",
+    "Public health",
+    "Skeletal muscle",
+    "Urinary infection",
+    "Gestational trophoblastic neoplasia",
+    "Cardiac muscle",
+    "Malaria",
+    "Smooth muscle",
+    "Stroke",
+    "COPD"
+  ],
+  "baselineReferenceIds": [
+    "nmc-2024-ref:cfd9e37f4dad89a719d41c5a05c4c7e82e7bee52c9eca07ef5e73c17efdc39e0",
+    "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+    "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+    "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+    "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d",
+    "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+    "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+    "nmc-2024-ref:c73e05551c60f042fbabf0192ff2db175c4ed96a683d02387cd5dfb93b56f96b",
+    "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96",
+    "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+    "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+    "nmc-2024-ref:feaf1b63953cd8c40bae19e1a6f1e668de289dfc7845766f02bee47e3aa43934",
+    "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f",
+    "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+    "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011",
+    "nmc-2024-ref:76ffed5376221456428421836f34df15c386efc8146c2b8a8c8693cc85c21738",
+    "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c",
+    "nmc-2024-ref:9288d600c8e49f13bbbc2bf7039e274a9a03fb6fea2285c6c323e09de3271192",
+    "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad",
+    "nmc-2024-ref:37d03a9c073318da41c9ec261ed34b1f1c4055ae308b7d282bdbe8997e1d8ddb",
+    "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+    "nmc-2024-ref:80cffd3fe7ce058d5dde55b3f1d3c62439058bd2baa1334eab18753129c33718",
+    "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda",
+    "nmc-2024-ref:a2a075f94157b5ae4c65c58e41113c5ee7ffbe4cadc46536fbc07bf875ec435f",
+    "nmc-2024-ref:d56562bbcb283ebcb5a6ecc98514f1288609054209b563bf7b26a0b0ab8b5bcc",
+    "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+    "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+    "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+    "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+    "nmc-2024-ref:861dc9af2668848a2731e3389c3c05fbab833beeadaac430a82b61b3bc471125",
+    "nmc-2024-ref:c3df1cd8579827043b389aa69599aee944895488c2628747f455d427f63b1b66",
+    "nmc-2024-ref:c2000c7ec485b69d917bc94610cea5e198d871a7e5209433de0bbddc123b92cf",
+    "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14",
+    "nmc-2024-ref:1068fc841594b94e42aae4f2f2451e5a10767b0807ffe97095cba41334e95878",
+    "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00",
+    "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+    "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+    "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+    "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
+    "nmc-2024-ref:9c2dd77a3c5206dab60d595926bb36e71ca10f91bcd0f9447d4136350332dd0f",
+    "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa",
+    "nmc-2024-ref:ea9b95539ea713317897e4084b3372013d91cf431694cae45d1ad13b8ea6ed26",
+    "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+    "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+    "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2",
+    "nmc-2024-ref:d80b286ce7438bc25b1cb691ada9aab14abeb48441fe7aa0f1e989a08149dd6e",
+    "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+    "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae",
+    "nmc-2024-ref:5411b6095880ee0262f2e560736d01d1aba1bed66d412f34be3e9571d6e393f5",
+    "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166",
+    "nmc-2024-ref:9bf879a4feed91445031bce874317a8a0ff6e283d688dacb2bd7226d8e095608",
+    "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81",
+    "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+    "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f",
+    "nmc-2024-ref:b3e0148b740005c2fddf9d0833e976dfa7ba05e083b10e726c4804f42345e291",
+    "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+    "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0",
+    "nmc-2024-ref:8634107389533d96f67a5070a64fe0b9ac2353667a090b363ce58b496f1fcc50",
+    "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe",
+    "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+    "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+    "nmc-2024-ref:5f2ee00d77ee3c4169439a6283c72357ce118106505c1d9a0cd522dd8af9c492",
+    "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+    "nmc-2024-ref:6b750a21d9700af02f65c34e1644d41d0ed6473098133c631638e7c9d3d3f05f",
+    "nmc-2024-ref:22c90f3a246b1e7403f5d52cc364d7965bf25268ade0623496ef9ba4e3ed6d0b",
+    "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+    "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+    "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f",
+    "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+    "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+    "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+    "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+    "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+    "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+    "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+    "nmc-2024-ref:6fc9df4678ff3f74f5731dde08889b2915ed3e630192cdcfe1e79b3e601d3fb1",
+    "nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610",
+    "nmc-2024-ref:10b1f9e164d54d4d37df490fb24a40a0dde246e2dd7eaf818f9a0bcd1eda79be",
+    "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735",
+    "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c",
+    "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75",
+    "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937",
+    "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f",
+    "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166",
+    "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+    "nmc-2024-ref:62ae1c5c8867df7500be94236140c486934f417f953ce13314adfaadba3c4043",
+    "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7",
+    "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6",
+    "nmc-2024-ref:36988f661104d0c74c301f72c5bf09ae9f93399938021e95e8980d0a02b21187",
+    "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71",
+    "nmc-2024-ref:7e780a7d847205fddcc4cdd6efb0ccecd1a4891bb94d3ed74d9274a5ec38bcc6",
+    "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e",
+    "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87",
+    "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4",
+    "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950",
+    "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+    "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+    "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc",
+    "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a",
+    "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+    "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+    "nmc-2024-ref:2757f0e6f07d4b93dcdd21f907d626bf0ee380920aff0f6c4683b230afef8ef4",
+    "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+    "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+    "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+    "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+    "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+    "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21",
+    "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+    "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+    "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26",
+    "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+    "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169",
+    "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e",
+    "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378",
+    "nmc-2024-ref:8bf82fcf516e08674cfa8ffdbdb5592a344837d96cb4547ffa7b748765ab28f4",
+    "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e",
+    "nmc-2024-ref:4441130f4df6101b38c55f8b38ca2914ad39644ed00c3bcd1996e13f43706144",
+    "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+    "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77",
+    "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+    "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+  ],
+  "mixedReferenceRoles": {
+    "nmc-2024-ref:da5438435abc5e4c54f3137d51bd676bd0d6608e16f219cc8aa0dcb8101b6f75": [
+      {
+        "name": "Antepartum haemorrhage",
+        "role": "incoming",
+        "code": "OG35.19"
+      },
+      {
+        "name": "Postpartum haemorrhage",
+        "role": "incoming",
+        "code": "OG35.19"
+      }
+    ],
+    "nmc-2024-ref:8270ae1505883fdc7e933197ec29f05ec4b223e15856d55e0a4c9ca87a95c8b2": [
+      {
+        "name": "Antepartum haemorrhage",
+        "role": "target",
+        "code": "OG10.1"
+      }
+    ],
+    "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028": [
+      {
+        "name": "Cervical cytology sampling",
+        "role": "incoming",
+        "code": "GM13.9"
+      }
+    ],
+    "nmc-2024-ref:247852e249d96958c3d64dc211bed852f3d5b581fdaeaf0ae704dc7a284f597f": [
+      {
+        "name": "Cervical cytology sampling",
+        "role": "target",
+        "code": "OG35.15"
+      }
+    ],
+    "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d": [
+      {
+        "name": "Death by neurological criteria",
+        "role": "incoming",
+        "code": "FM2.3"
+      }
+    ],
+    "nmc-2024-ref:ae0a4fc2156fe9f0de1f3aa9aa1e22ec644f685729819e62e4080d72bd486110": [
+      {
+        "name": "Death by neurological criteria",
+        "role": "target",
+        "code": "PY12.7"
+      }
+    ],
+    "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a": [
+      {
+        "name": "Delayed puberty",
+        "role": "incoming",
+        "code": "PE30.6"
+      },
+      {
+        "name": "Precocious puberty",
+        "role": "incoming",
+        "code": "PE30.6"
+      }
+    ],
+    "nmc-2024-ref:2ca3cc8cf157e281ef512ba3877bf1aa266b36c59b2c68ed3318e3b75f324ee0": [
+      {
+        "name": "Delayed puberty",
+        "role": "target",
+        "code": "OG23.2"
+      }
+    ],
+    "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1": [
+      {
+        "name": "Drowning",
+        "role": "incoming",
+        "code": "PY6.6"
+      },
+      {
+        "name": "Oxygen therapy",
+        "role": "incoming",
+        "code": "PY6.6"
+      }
+    ],
+    "nmc-2024-ref:73dff45bffaa1d5479457d5dd5baee1fa95e8a2cc009a81941d68b35545dca34": [
+      {
+        "name": "Drowning",
+        "role": "target",
+        "code": "FM3.4"
+      }
+    ],
+    "nmc-2024-ref:23f70d14a6674f916f89ae8dc611b0253e66c9d357d5cfc9655c9b89d70778b1": [
+      {
+        "name": "Fetal circulation",
+        "role": "incoming",
+        "code": "PY5.12"
+      },
+      {
+        "name": "Pulmonary circulation",
+        "role": "incoming",
+        "code": "PY5.12"
+      }
+    ],
+    "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1": [
+      {
+        "name": "Fetal circulation",
+        "role": "target",
+        "code": "AN25.3"
+      }
+    ],
+    "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd": [
+      {
+        "name": "Foreign body aspiration",
+        "role": "incoming",
+        "code": "RD7.5"
+      },
+      {
+        "name": "Urinary infection",
+        "role": "reuse-proposed-name",
+        "code": "RD7.5"
+      }
+    ],
+    "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110": [
+      {
+        "name": "Foreign body aspiration",
+        "role": "target",
+        "code": "PE25.5"
+      }
+    ],
+    "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c": [
+      {
+        "name": "Haemostasis",
+        "role": "incoming",
+        "code": "PY2.1"
+      }
+    ],
+    "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62": [
+      {
+        "name": "Haemostasis",
+        "role": "target",
+        "code": "PY2.9"
+      }
+    ],
+    "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e": [
+      {
+        "name": "Haemostasis",
+        "role": "target",
+        "code": "PA5.4"
+      }
+    ],
+    "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99": [
+      {
+        "name": "Hearing loss",
+        "role": "incoming",
+        "code": "GM25.17"
+      }
+    ],
+    "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d": [
+      {
+        "name": "Hearing loss",
+        "role": "target",
+        "code": "EN4.14"
+      }
+    ],
+    "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2": [
+      {
+        "name": "Heart failure",
+        "role": "incoming",
+        "code": "RD7.3"
+      },
+      {
+        "name": "Stroke",
+        "role": "incoming",
+        "code": "RD7.3"
+      }
+    ],
+    "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af": [
+      {
+        "name": "Heart failure",
+        "role": "target",
+        "code": "PA26.3"
+      }
+    ],
+    "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe": [
+      {
+        "name": "Heart failure",
+        "role": "target",
+        "code": "PY5.13"
+      }
+    ],
+    "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180": [
+      {
+        "name": "Hysteroscopy",
+        "role": "incoming",
+        "code": "OG34.5"
+      }
+    ],
+    "nmc-2024-ref:fc23e271d9c20e0800bc803473cd5be94b6d349801588645c4151ba9dcf07c17": [
+      {
+        "name": "Hysteroscopy",
+        "role": "target",
+        "code": "OG38.2"
+      }
+    ],
+    "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca": [
+      {
+        "name": "Infectious diarrhoea",
+        "role": "incoming",
+        "code": "GM26.10"
+      }
+    ],
+    "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb": [
+      {
+        "name": "Infectious diarrhoea",
+        "role": "target",
+        "code": "MI4.2"
+      }
+    ],
+    "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc": [
+      {
+        "name": "Lipid test interpretation",
+        "role": "incoming",
+        "code": "BC14.19"
+      },
+      {
+        "name": "Renal test interpretation",
+        "role": "incoming",
+        "code": "BC14.19"
+      }
+    ],
+    "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918": [
+      {
+        "name": "Lipid test interpretation",
+        "role": "target",
+        "code": "BC4.8"
+      }
+    ],
+    "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057": [
+      {
+        "name": "Non-opioid analgesics",
+        "role": "incoming",
+        "code": "AS4.1"
+      },
+      {
+        "name": "Opioid analgesics",
+        "role": "incoming",
+        "code": "AS4.1"
+      }
+    ],
+    "nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94": [
+      {
+        "name": "Non-opioid analgesics",
+        "role": "target",
+        "code": "PH2.7"
+      }
+    ],
+    "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089": [
+      {
+        "name": "Nutritional assessment",
+        "role": "incoming",
+        "code": "CM5.9"
+      }
+    ],
+    "nmc-2024-ref:d99d246f692a50faf76d97c28a9b2b7d87e938b29005d1e9e4a0e31190f7a46c": [
+      {
+        "name": "Nutritional assessment",
+        "role": "target",
+        "code": "CM5.2"
+      }
+    ],
+    "nmc-2024-ref:f35bdf1d4da03eea02ef49d05281ace14101f9ed451da22756454b672d8d9e79": [
+      {
+        "name": "Nutritional assessment",
+        "role": "target",
+        "code": "GM24.1"
+      }
+    ],
+    "nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069": [
+      {
+        "name": "Opioid analgesics",
+        "role": "target",
+        "code": "PH3.4"
+      }
+    ],
+    "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1": [
+      {
+        "name": "Organophosphate poisoning",
+        "role": "incoming",
+        "code": "PH2.2"
+      }
+    ],
+    "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5": [
+      {
+        "name": "Organophosphate poisoning",
+        "role": "target",
+        "code": "PE14.2"
+      }
+    ],
+    "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4": [
+      {
+        "name": "Otosclerosis",
+        "role": "incoming",
+        "code": "EN1.2"
+      }
+    ],
+    "nmc-2024-ref:2e2a9f07fd736484aba7b7ce2ded7cbb7aaef1654b23a382c3f63e3c0e7010fd": [
+      {
+        "name": "Otosclerosis",
+        "role": "target",
+        "code": "EN4.13"
+      }
+    ],
+    "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33": [
+      {
+        "name": "Oxygen therapy",
+        "role": "incoming",
+        "code": "GM28.19"
+      }
+    ],
+    "nmc-2024-ref:ad8b42d65278540419217b2a17921d772d9eee7c50053ff3b087beea4d1620cc": [
+      {
+        "name": "Oxygen therapy",
+        "role": "target",
+        "code": "AS11.2"
+      }
+    ],
+    "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c": [
+      {
+        "name": "Paracetamol poisoning",
+        "role": "incoming",
+        "code": "FM13.17"
+      },
+      {
+        "name": "Salicylate poisoning",
+        "role": "incoming",
+        "code": "FM13.17"
+      }
+    ],
+    "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7": [
+      {
+        "name": "Paracetamol poisoning",
+        "role": "target",
+        "code": "PE14.3"
+      }
+    ],
+    "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed": [
+      {
+        "name": "pH measurement",
+        "role": "incoming",
+        "code": "BC14.18"
+      },
+      {
+        "name": "Laboratory technique observation",
+        "role": "context-only",
+        "code": "BC14.18"
+      }
+    ],
+    "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7": [
+      {
+        "name": "pH measurement",
+        "role": "target",
+        "code": "BC14.2"
+      }
+    ],
+    "nmc-2024-ref:68f1064e8eb1583e8dcaddcb57143658040803846b9d37143240fd89b9fd2654": [
+      {
+        "name": "Postpartum haemorrhage",
+        "role": "target",
+        "code": "OG16.1"
+      }
+    ],
+    "nmc-2024-ref:cd078130cb670dc57c5d18f3c36c45b2ba175d5738d836d2a614a3b591453aef": [
+      {
+        "name": "Precocious puberty",
+        "role": "target",
+        "code": "OG23.3"
+      }
+    ],
+    "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b": [
+      {
+        "name": "Pregnancy recognition",
+        "role": "incoming",
+        "code": "AN79.6"
+      }
+    ],
+    "nmc-2024-ref:80c94cf12fccecaf5f1db07673e05449ba8a0e3c0de105d18415f7bf6ee81f7c": [
+      {
+        "name": "Pregnancy recognition",
+        "role": "target",
+        "code": "OG6.1"
+      }
+    ],
+    "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da": [
+      {
+        "name": "Prostatitis",
+        "role": "incoming",
+        "code": "GM26.11"
+      }
+    ],
+    "nmc-2024-ref:66732075966806fd63e14410d32640a914fecfbd1f1633384636bac2ed44fe0b": [
+      {
+        "name": "Prostatitis",
+        "role": "target",
+        "code": "PA28.5"
+      }
+    ],
+    "nmc-2024-ref:29f6a6504e613df1729a219d1cf599a9240c9378173b4dd5af5d4e9b0f64ab93": [
+      {
+        "name": "Renal test interpretation",
+        "role": "target",
+        "code": "GM10.13"
+      }
+    ],
+    "nmc-2024-ref:c74bb2efeff4a57834800a7c94f631d75a1e24011a3fd54a119e92f3860ce28f": [
+      {
+        "name": "Respiratory distress assessment",
+        "role": "incoming",
+        "code": "GM28.9"
+      }
+    ],
+    "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479": [
+      {
+        "name": "Respiratory distress assessment",
+        "role": "target",
+        "code": "PE24.8"
+      }
+    ],
+    "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d": [
+      {
+        "name": "Torticollis",
+        "role": "incoming",
+        "code": "OR12.1"
+      },
+      {
+        "name": "Clubfoot",
+        "role": "incoming",
+        "code": "OR12.1"
+      }
+    ],
+    "nmc-2024-ref:c74196034f600a466ef9398a9101160a67be1072129c98642ebef1130fff133f": [
+      {
+        "name": "Torticollis",
+        "role": "target",
+        "code": "AN29.4"
+      }
+    ],
+    "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9": [
+      {
+        "name": "Tracheostomy",
+        "role": "incoming",
+        "code": "EN2.10"
+      }
+    ],
+    "nmc-2024-ref:9d3368c6d93efe91bff6e8a5619e4e6eab06a846576f1068dbb63eada9d3c539": [
+      {
+        "name": "Tracheostomy",
+        "role": "target",
+        "code": "EN4.44"
+      }
+    ],
+    "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71": [
+      {
+        "name": "Urinary catheterization",
+        "role": "incoming",
+        "code": "OR13.2"
+      }
+    ],
+    "nmc-2024-ref:20637b247511ad008003fddf8b118e0636ed461a9316cb0baed85a162ef67840": [
+      {
+        "name": "Urinary catheterization",
+        "role": "target",
+        "code": "OG35.20"
+      }
+    ],
+    "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e": [
+      {
+        "name": "Uterine prolapse",
+        "role": "incoming",
+        "code": "AN48.5"
+      }
+    ],
+    "nmc-2024-ref:abb0f475f6df3c8e3d2d0223b5d2f101d7ac1199450648fb8d808a4aafd381a6": [
+      {
+        "name": "Uterine prolapse",
+        "role": "target",
+        "code": "OG31.1"
+      }
+    ],
+    "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434": [
+      {
+        "name": "Vomiting",
+        "role": "incoming",
+        "code": "PY4.11"
+      },
+      {
+        "name": "Diarrhoea",
+        "role": "incoming",
+        "code": "PY4.11"
+      }
+    ],
+    "nmc-2024-ref:ec51d1ddd62af2e8afdea5e3a47bfc2f3fa9a8029b248b4be15ad78ea3db1f7c": [
+      {
+        "name": "Vomiting",
+        "role": "target",
+        "code": "PE23.1"
+      }
+    ],
+    "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58": [
+      {
+        "name": "Appendicitis",
+        "role": "incoming",
+        "code": "RD7.4"
+      }
+    ],
+    "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39": [
+      {
+        "name": "Appendicitis",
+        "role": "target",
+        "code": "PA23.5"
+      }
+    ],
+    "nmc-2024-ref:0e69f9564200cf9c82b18068de8dc7de63379de19057032a2da427e0edff2dc2": [
+      {
+        "name": "Assault",
+        "role": "incoming",
+        "code": "FM10.13"
+      }
+    ],
+    "nmc-2024-ref:230565b6a706d91fc9477271f1f187a2aa071d12ae79852a204fdc07cda622f9": [
+      {
+        "name": "Assault",
+        "role": "target",
+        "code": "FM5.2"
+      }
+    ],
+    "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2": [
+      {
+        "name": "Cardiac muscle",
+        "role": "incoming",
+        "code": "AN3.1"
+      },
+      {
+        "name": "Smooth muscle",
+        "role": "incoming",
+        "code": "AN3.1"
+      }
+    ],
+    "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de": [
+      {
+        "name": "Cardiac muscle",
+        "role": "incoming",
+        "code": "AN67.2"
+      },
+      {
+        "name": "Smooth muscle",
+        "role": "incoming",
+        "code": "AN67.2"
+      }
+    ],
+    "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466": [
+      {
+        "name": "Chest radiography",
+        "role": "incoming",
+        "code": "GM28.14"
+      }
+    ],
+    "nmc-2024-ref:5aca0d8673e308cbb8cb0f94648c260f211c2a4ee82e2e0b01874a730b09a0a9": [
+      {
+        "name": "Chest radiography",
+        "role": "target",
+        "code": "GM2.11"
+      }
+    ],
+    "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f": [
+      {
+        "name": "Cholecystitis",
+        "role": "incoming",
+        "code": "RD4.3"
+      },
+      {
+        "name": "Osteoarthritis",
+        "role": "incoming",
+        "code": "RD4.3"
+      }
+    ],
+    "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707": [
+      {
+        "name": "Cholecystitis",
+        "role": "target",
+        "code": "PA24.8"
+      }
+    ],
+    "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0": [
+      {
+        "name": "Cholecystitis",
+        "role": "target",
+        "code": "GM5.7"
+      }
+    ],
+    "nmc-2024-ref:3e5c836520f5511a2127ce9c42276035f5ceab2c6ac57152b6625928670ad7b7": [
+      {
+        "name": "Clubfoot",
+        "role": "target",
+        "code": "AN19.6"
+      }
+    ],
+    "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a": [
+      {
+        "name": "Diarrhoea",
+        "role": "target",
+        "code": "GM16.6"
+      }
+    ],
+    "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c": [
+      {
+        "name": "Diarrhoea",
+        "role": "target",
+        "code": "MI4.1"
+      }
+    ],
+    "nmc-2024-ref:841a1a6fc83e30028023896e8faca9fd0ff6fa2f16b2de36643999ca7fcff071": [
+      {
+        "name": "Episiotomy",
+        "role": "incoming",
+        "code": "OG15.1"
+      }
+    ],
+    "nmc-2024-ref:3225ff4899b91976832bd11d8dc1e2e7414d37388f12f35973d56367b5d7bdb5": [
+      {
+        "name": "Episiotomy",
+        "role": "target",
+        "code": "AN49.5"
+      }
+    ],
+    "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318": [
+      {
+        "name": "Herpes zoster",
+        "role": "incoming",
+        "code": "GM26.22"
+      },
+      {
+        "name": "Varicella",
+        "role": "incoming",
+        "code": "GM26.22"
+      }
+    ],
+    "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc": [
+      {
+        "name": "Herpes zoster",
+        "role": "target",
+        "code": "DR8.3"
+      },
+      {
+        "name": "Varicella",
+        "role": "target",
+        "code": "DR8.3"
+      }
+    ],
+    "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300": [
+      {
+        "name": "In vitro fertilization",
+        "role": "incoming",
+        "code": "FM8.12"
+      },
+      {
+        "name": "Surrogacy",
+        "role": "incoming",
+        "code": "FM8.12"
+      },
+      {
+        "name": "Contraceptive sterilization",
+        "role": "propose-qualified-distinct-name",
+        "code": "FM8.12"
+      }
+    ],
+    "nmc-2024-ref:71f8de728255d05e79dff3297776b348c265338e62958a74c8d1bd66521812a9": [
+      {
+        "name": "In vitro fertilization",
+        "role": "target",
+        "code": "PY9.10"
+      }
+    ],
+    "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb": [
+      {
+        "name": "Malaria",
+        "role": "incoming",
+        "code": "GM26.30"
+      }
+    ],
+    "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf": [
+      {
+        "name": "Malaria",
+        "role": "incoming",
+        "code": "GM26.29"
+      }
+    ],
+    "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6": [
+      {
+        "name": "Osteoarthritis",
+        "role": "target",
+        "code": "PA32.6"
+      }
+    ],
+    "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22": [
+      {
+        "name": "Pulmonary circulation",
+        "role": "target",
+        "code": "AN24.5"
+      }
+    ],
+    "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4": [
+      {
+        "name": "Pulmonary circulation",
+        "role": "target",
+        "code": "AN5.2"
+      }
+    ],
+    "nmc-2024-ref:e7ab1b66455162bacb80311aee33d88a5cfdd2ee356b79490f4f6c5ec1489abc": [
+      {
+        "name": "Salicylate poisoning",
+        "role": "target",
+        "code": "FM13.11"
+      }
+    ],
+    "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a": [
+      {
+        "name": "Stroke",
+        "role": "incoming",
+        "code": "GM25.9"
+      }
+    ],
+    "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16": [
+      {
+        "name": "Surrogacy",
+        "role": "target",
+        "code": "AN77.6"
+      }
+    ],
+    "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5": [
+      {
+        "name": "Tetanus",
+        "role": "incoming",
+        "code": "GM26.13"
+      }
+    ],
+    "nmc-2024-ref:4df168b01a7036fc03ecde67e90a36bead3a80da3f8b9f18f8d433416a14afdb": [
+      {
+        "name": "Tetanus",
+        "role": "target",
+        "code": "PE31.11"
+      }
+    ],
+    "nmc-2024-ref:be1f46aab2f1dea65ff5aaa13b61be515efb23e4733f6cabccc05b35405faf9c": [
+      {
+        "name": "Tracheoesophageal fistula",
+        "role": "incoming",
+        "code": "PE19.16"
+      }
+    ],
+    "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7": [
+      {
+        "name": "Tracheoesophageal fistula",
+        "role": "target",
+        "code": "AN25.4"
+      }
+    ],
+    "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b": [
+      {
+        "name": "COPD",
+        "role": "propose-broader-parent",
+        "code": "GM25.10"
+      }
+    ],
+    "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092": [
+      {
+        "name": "Pathology terminology",
+        "role": "context-only",
+        "code": "PA1.2"
+      }
+    ]
+  },
+  "sharedReferenceIds": [
+    "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+    "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+    "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+  ],
+  "distinctReferences": 216,
+  "remainingRoutes": [
+    {
+      "sourceName": "COPD",
+      "route": "propose-broader-parent",
+      "name": "COPD",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b",
+          "code": "GM25.10",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Laboratory technique observation",
+      "route": "context-only",
+      "name": "Laboratory technique observation",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+          "code": "BC14.18",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Pathology terminology",
+      "route": "context-only",
+      "name": "Pathology terminology",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092",
+          "code": "PA1.2",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Sterilization",
+      "route": "propose-qualified-distinct-name",
+      "name": "Contraceptive sterilization",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "code": "FM8.12",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "sourceName": "Urinary tract infection",
+      "route": "reuse-proposed-name",
+      "name": "Urinary infection",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd",
+          "code": "RD7.5",
+          "mode": "knowledge"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "copdNarrowDrafts": [
+    {
+      "scope": "draft revision",
+      "conceptId": "C-89191b5c-5d54-41e3-bd76-dfb6d34edc99",
+      "label": "Spirometric assessment of suspected COPD"
+    },
+    {
+      "scope": "draft revision",
+      "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+      "label": "COPD exacerbation management"
+    }
+  ],
+  "qualifiedNamePendingRegistryCheck": "Contraceptive sterilization",
+  "mappingAccepted": false,
+  "next": "Check the qualified contraceptive sterilization name and audit all 60 mixed reuse leads for final disposition coverage."
+}

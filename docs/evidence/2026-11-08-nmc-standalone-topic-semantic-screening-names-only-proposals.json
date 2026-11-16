@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "registryReadbackBlobSha": "45acea40c8b03cc605221ba40d835179cd922b1a",
+  "identities": [
+    {
+      "name": "Arterial blood gas sampling",
+      "sourceTopics": [
+        {
+          "topic": "arterial blood gas sampling",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+              "code": "GM10.15"
+            }
+          ]
+        },
+        {
+          "topic": "arterial sampling",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+              "code": "GM3.8"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Endometrial carcinoma",
+      "sourceTopics": [
+        {
+          "topic": "endometrial cancer",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f",
+              "path": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+              "code": "OG34.1"
+            }
+          ]
+        },
+        {
+          "topic": "endometrial carcinoma",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+              "path": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+              "code": "PA29.2"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peripheral IV cannulation",
+      "sourceTopics": [
+        {
+          "topic": "peripheral iv access",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+              "code": "PE15.3"
+            },
+            {
+              "id": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+              "path": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+              "code": "AS9.1"
+            }
+          ]
+        },
+        {
+          "topic": "peripheral iv cannulation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+              "code": "PE23.10"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "contextFacet": {
+    "name": "Emergency peripheral IV access",
+    "parentProposalName": "Peripheral IV cannulation",
+    "contextSourceRefs": [
+      {
+        "id": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+        "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+        "code": "PE24.13"
+      }
+    ],
+    "mappingAccepted": false
+  },
+  "ocularScope": "unresolved"
+}

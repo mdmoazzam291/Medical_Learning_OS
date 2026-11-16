@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:b5014fd84e831f9bac8431fad61250d2c58a51ea54ab3aa9780e980d0303003d",
+      "subjectId": "medicine",
+      "code": "GM6.19",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        243.12,
+        102.7,
+        270.6
+      ],
+      "sourceBodySha256": "56d588cedb2baec803191a810777353b0eb3ece34adabee1a5897a16c77103dd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV care communication",
+      "draftLearningTask": "Explain diagnosis, treatment and follow-up in a simulated consultation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1a30b9ada6f982c66b96e97c66c9ebb8d0787b5f0c0bd7930ce5d9fc87954894",
+      "subjectId": "medicine",
+      "code": "GM6.20",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        270.6,
+        102.7,
+        297.78
+      ],
+      "sourceBodySha256": "c2f493c1beef25af13dd70a324b119500a4efb17d0418ba7ee7e9cd3b88cc22b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adherence counselling",
+      "draftLearningTask": "Explore barriers and agree on a feasible medication adherence plan.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:074056175f14786b27a4af8a7670408e62ca0969b90c20620d22c4fdf443d44f",
+      "subjectId": "medicine",
+      "code": "GM6.21",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        297.78,
+        102.7,
+        338.52
+      ],
+      "sourceBodySha256": "e1d1165a957f22bd9fb63c9f73ed1ee0343b2952c7c56679b497c3fc32e3af23",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Confidentiality and disclosure",
+      "draftLearningTask": "Apply relevant ethical and legal guidance to a simulated disclosure decision.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0130490114d2cde71d6f82b8b44c9291b88f02901fd69540fbc258ed2937532f",
+      "subjectId": "medicine",
+      "code": "GM6.22",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        338.52,
+        102.7,
+        379.32
+      ],
+      "sourceBodySha256": "5c6068bf6505c88e72cf15bb1053428b91f2109d428d58e083b03cbdb0edb75c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nonjudgmental care",
+      "draftLearningTask": "Demonstrate respectful, inclusive communication without assumptions about identity or behaviour.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011",
+      "subjectId": "medicine",
+      "code": "GM7.1",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        399.18,
+        102.7,
+        426.72
+      ],
+      "sourceBodySha256": "6c86c594a19c49c0acf399842d041d410fe1ad29673e5e078e2c947357a0a06f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Autoimmune mechanisms",
+      "draftLearningTask": "Connect genetic susceptibility and loss of tolerance to representative autoimmune diseases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:27b5ca02ab252a935159cf9af5235aa3e636c8fc64c64ed8f30b7e6921e758b9",
+      "subjectId": "medicine",
+      "code": "GM7.2",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        426.72,
+        102.7,
+        447.6
+      ],
+      "sourceBodySha256": "3d8ddd10b3c17b2f2a04a90db7e10c2f1dce3926546d1171a80d8ba4b3cb356d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint pain classification",
+      "draftLearningTask": "Classify causes by inflammatory, mechanical, infectious and other mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7cc979a4d27d4a30c5740db086c4a6f82c9dbba90fa73a75eaaa1a1b088ec416",
+      "subjectId": "medicine",
+      "code": "GM7.3",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        447.6,
+        102.7,
+        474.96
+      ],
+      "sourceBodySha256": "aded2f6dea6d8f3dbbc4a995556c806301d0b0d48c7af0972fc940d3c063a752",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint pain assessment",
+      "draftLearningTask": "Build a staged approach using localization, timing and underlying mechanism.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5180c3cad95b8e590d47ccecee567466091e738be2140097de50dadd5c8b402e",
+      "subjectId": "medicine",
+      "code": "GM7.4",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        474.96,
+        102.7,
+        502.32
+      ],
+      "sourceBodySha256": "db51ee58c7ceafbb3ec8555ab632109042e2b06f205ff9ef966de45518e468df",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint symptom timeline",
+      "draftLearningTask": "Use acute, subacute and chronic patterns to narrow the differential.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6217e77eccfa1500f203a95e8c99aca24fd29649af834a9e4d8582067c58b09d",
+      "subjectId": "medicine",
+      "code": "GM7.5",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        502.32,
+        102.7,
+        543.12
+      ],
+      "sourceBodySha256": "6667a18356a050c7fb24f54e081011aa68e21ca1d7233c502759669e25e634db",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint and periarticular pain",
+      "draftLearningTask": "Distinguish arthralgia from arthritis, articular from periarticular symptoms and mechanical from inflammatory patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6",
+      "subjectId": "medicine",
+      "code": "GM7.6",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        133.8
+      ],
+      "sourceBodySha256": "5bd550190077ee64eb70355182f9f2b94fbb6ccc504036c65e2dc4fe8e426bd6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Musculoskeletal signs",
+      "draftLearningTask": "Match common symptoms and examination findings to articular or periarticular disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cf4dc84375ca39df6ef2ceb58eb63572c64748f4316e10e0c9024953c0938a81",
+      "subjectId": "medicine",
+      "code": "GM7.7",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        153.66
+      ],
+      "sourceBodySha256": "7d283af5d31977f72e7eb28e2a681d179975482e9a3a7f1ce5b8498664fc08ba",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Systemic rheumatology",
+      "draftLearningTask": "Identify extra-articular manifestations and explain their diagnostic implications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:32d640b2b68af1feb76591a37d772b8b67b34cbf05cfecb3b35ed1e1b514fcef",
+      "subjectId": "medicine",
+      "code": "GM7.8",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "sourceBodySha256": "919d312d1707910f055340f391fea4617876027565398aafe94d1f74811c2a70",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology history",
+      "draftLearningTask": "Elicit and present symptom pattern, exposures and systemic clues in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f7707702bd0741c6d01bffe5a4acd9300811b23de9a9623e83634267342bac48",
+      "subjectId": "medicine",
+      "code": "GM7.9",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        208.32
+      ],
+      "sourceBodySha256": "72f4c99c564257f48ca0ad66146325f65f2e4e809673fcb2dc71dff7d102eecd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology examination",
+      "draftLearningTask": "Demonstrate joint, muscle and skin examination and document severity.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1fe13ba7d8d8e742a3d28568e1bc842e6ccceeb434d3214e2eb8c82b76516f9c",
+      "subjectId": "medicine",
+      "code": "GM7.10",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        235.68
+      ],
+      "sourceBodySha256": "ef0390572f9df3ecde8551d566bb429fb129919d4962185bc3a71e5495087cb1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology differential",
+      "draftLearningTask": "Prioritize causes based on a simulated history and examination.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a0cd16cdac6dcc5ddd86172febd218ac10bdf3d9dd125f13c7c6b30da9868136",
+      "subjectId": "medicine",
+      "code": "GM7.11",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        235.68,
+        102.7,
+        289.92
+      ],
+      "sourceBodySha256": "9964c2555fd891e64f76e566720fea54d91e9cab1b868feba765949ac1d90275",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Autoimmune investigations",
+      "draftLearningTask": "Select and interpret blood counts, rheumatoid factor, anti-CCP, ANA and anti-dsDNA in clinical context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d4a887bf2075a97fcabfd07eb5c4efe8f7c7cd6d3d0d0c2a9693504f9d3caad0",
+      "subjectId": "medicine",
+      "code": "GM7.12",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        289.92,
+        102.7,
+        317.22
+      ],
+      "sourceBodySha256": "a7421bf10bffffd24d80442a89bd4952973e45a7602014d1071ae9ebc9c58826",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arthrocentesis indications",
+      "draftLearningTask": "Identify diagnostic and therapeutic indications in representative scenarios.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2103c94d1dd3f40d90370b1882e889812f43200f93fc94da814d0efcd272fc23",
+      "subjectId": "medicine",
+      "code": "GM7.13",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        317.22,
+        102.7,
+        344.58
+      ],
+      "sourceBodySha256": "2088ff52cddba2600335c8c369aaa195e99c7cfbfa96c5297e4e4c57589d2214",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint radiographs",
+      "draftLearningTask": "Choose appropriate views and interpret sample films.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9ff698637b25061ae37f4e45b0691c9dc833319bd4c9684e2f9dfc5d431faada",
+      "subjectId": "medicine",
+      "code": "GM7.14",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        344.58,
+        102.7,
+        371.94
+      ],
+      "sourceBodySha256": "162a38a23101bbeed9c03eaa579298a7657c1b7f824d58c93c405d85691e5d6e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology counselling",
+      "draftLearningTask": "Explain the diagnosis, treatment and follow-up to a simulated patient.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87373d8d20dd1685812bac72a2f73423aa06bb7dc6199b524352f4d055b93bf7",
+      "subjectId": "medicine",
+      "code": "GM7.15",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        371.94,
+        102.7,
+        417.78
+      ],
+      "sourceBodySha256": "e7f4bde20b9a85f68b6406d47e8a961f34dc0176391330e2640d1b2e5b417212",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology treatment",
+      "draftLearningTask": "Develop a plan based on disease activity, organ involvement and patient factors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1ea7b8fe9e34d1d03be467ecad3f813a334df10e62f6b1b289e29392e2a62d0b",
+      "subjectId": "medicine",
+      "code": "GM7.16",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        417.78,
+        102.7,
+        467.82
+      ],
+      "sourceBodySha256": "4a958aab20da04bc14b9f7f96fce1897494cba1bea2abc7648eef338c81c9440",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint pain and crystal arthritis",
+      "draftLearningTask": "Write and explain simulated symptomatic and preventive prescriptions as appropriate.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ea9904cb0510d39dd822b2bc5d67868204a411b79259cde79905236c6d786ed1",
+      "subjectId": "medicine",
+      "code": "GM7.17",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        467.82,
+        102.7,
+        495.12
+      ],
+      "sourceBodySha256": "e06f82097aa98e1f3ea910134d87532d9f6de3ea035f3f5df59036e6768aa00a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Systemic rheumatology treatment",
+      "draftLearningTask": "Select and communicate treatment and monitoring options in a simulated systemic presentation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cff9014d58e547ef8d5f090a3bac3dc2273043a436dc635996facef82db4111b",
+      "subjectId": "medicine",
+      "code": "GM7.18",
+      "page": 294,
+      "rowBBox": [
+        44.2,
+        495.12,
+        102.7,
+        535.98
+      ],
+      "sourceBodySha256": "7d838d513bc1a74fdec411b3537fbffad2f19baf987993f0637ece486a2a6674",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Disease-modifying treatment",
+      "draftLearningTask": "Compare the rationale for conventional and biologic disease-modifying therapy.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:97158b5147c5d73b81d6a374092457b91e6fb7a09e3a6ce5701cc4617051032c",
+      "subjectId": "medicine",
+      "code": "GM7.19",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        133.8
+      ],
+      "sourceBodySha256": "fe94167e4ce10ea6778b07fb201028f16399edece97ca965e571394d0ef04dbf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shared rheumatology decisions",
+      "draftLearningTask": "Elicit preferences and incorporate them into a simulated treatment decision.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:651a82b91404f6c60f8575af74db1c3fc2d85e086c00a84a602876c2d28a1d56",
+      "subjectId": "medicine",
+      "code": "GM7.20",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        183.78
+      ],
+      "sourceBodySha256": "051cb5aba65334330a486dccbc4251b7f5ef72d790bd69659b47162592d2302e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology monitoring",
+      "draftLearningTask": "Set monitoring and follow-up goals and explain them using teach-back.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b8e9ef474a846c8ed4ce8b6fcb79b0bdda32905d47803d0d7e588acd3c88f88a",
+      "subjectId": "medicine",
+      "code": "GM7.21",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        183.78,
+        102.7,
+        222.6
+      ],
+      "sourceBodySha256": "18cd44edfcac116b33a27d8786becf6039b0e9e075a086292d6d45e742eacec5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Quality of life",
+      "draftLearningTask": "Explore effects on daily life, work and family in a simulated encounter.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:df079e5893d06afc16eb746d05cfba428c2a3238fed72a3ddf30f0d43ff8e465",
+      "subjectId": "medicine",
+      "code": "GM7.22",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        222.6,
+        102.7,
+        242.46
+      ],
+      "sourceBodySha256": "376e58de2c6d89dea6fc0b19ba5c806d76cafb93fc4b7e49ebf623917adc7051",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatology referral",
+      "draftLearningTask": "Identify cases requiring specialist consultation and justify urgency.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:513df3dd09ff14f5003213bfe51ae200e10289340500abf46fadc4587465d418",
+      "subjectId": "medicine",
+      "code": "GM8.1",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        265.5,
+        102.7,
+        292.86
+      ],
+      "sourceBodySha256": "f2777b9f8fbe802e9c9525bb755cb78970537dbc76297b99b7ea37032a317676",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension epidemiology",
+      "draftLearningTask": "Compare prevalence, genetic susceptibility and causes of primary and secondary hypertension.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cecfa0178e942610f616b761cfd26388c29d240ab8551aafb45e7d14057f02d8",
+      "subjectId": "medicine",
+      "code": "GM8.2",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        292.86,
+        102.7,
+        313.86
+      ],
+      "sourceBodySha256": "0e77b1a7f4b2ef065565e7a1b354620e9200eed34f1183ec85509c85860218a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension mechanisms",
+      "draftLearningTask": "Explain how vascular resistance, volume and neurohormonal regulation contribute to sustained pressure elevation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4e74ac95bf3c9bca50eea91006d1e69d474bd701957d7b5cbaa9bc46b714e3b3",
+      "subjectId": "medicine",
+      "code": "GM8.3",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        313.86,
+        102.7,
+        333.72
+      ],
+      "sourceBodySha256": "249111e44d747643240152012db932097af1574ef5b5c2e1992021b9137f8f59",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension classification",
+      "draftLearningTask": "Apply an identified guideline to classify representative blood pressure measurements.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd",
+      "subjectId": "medicine",
+      "code": "GM8.4",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        333.72,
+        102.7,
+        361.08
+      ],
+      "sourceBodySha256": "0f607370c4bb92083cc27c533dce1ff85429bb4175b696e884e949b89aad9d5f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Primary and secondary hypertension",
+      "draftLearningTask": "Compare typical patterns and identify clues to a secondary cause.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e466cb1b0d07ef3832aa6334456b4786d1e44d1b27c4b4097a695479a8099d19",
+      "subjectId": "medicine",
+      "code": "GM8.5",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        361.08,
+        102.7,
+        388.44
+      ],
+      "sourceBodySha256": "ffc321a9ae941e9bea9de121ba286d23b1d98bdde687a63af410fbe08f75cf3c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Severe hypertension",
+      "draftLearningTask": "Distinguish severe elevation without acute injury from hypertensive emergency using simulated cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:75e27e6b01e3d4f2637dad9cb6aeeecc0146329e1139371e844d72ebeb4690f8",
+      "subjectId": "medicine",
+      "code": "GM8.6",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        388.44,
+        102.7,
+        415.8
+      ],
+      "sourceBodySha256": "e2eb84459de0e37cec47f043f1664e18d1cae6af672955e38f9d6a6b98de2ff8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Secondary hypertension clues",
+      "draftLearningTask": "Match representative findings to renal, endocrine, vascular and medication-related causes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022",
+      "subjectId": "medicine",
+      "code": "GM8.7",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        415.8,
+        102.7,
+        443.16
+      ],
+      "sourceBodySha256": "ba6418f9fb93a45894233604fe4ad201f42539fd9c9f4989a168e8eb44f048a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Target-organ injury",
+      "draftLearningTask": "Recognize cardiac, renal, retinal, neurological and vascular complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e256e8caa8ff299746aa36a657cdf4405aa52b911d900c9ba07bfb65b82e7c6c",
+      "subjectId": "medicine",
+      "code": "GM8.8",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        443.16,
+        102.7,
+        497.28
+      ],
+      "sourceBodySha256": "ab57a043de19055389cd2fe6f633cdc29ef9c11b02db0683b1335256e0bf5248",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension history",
+      "draftLearningTask": "Elicit readings, symptoms, comorbidities, lifestyle, diet, family and psychosocial context and medication use.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f6aa65e6f357914cd02226225723b35557dc2408a71fb4d89da7b20f2b168c5c",
+      "subjectId": "medicine",
+      "code": "GM8.10",
+      "page": 295,
+      "rowBBox": [
+        44.2,
+        497.28,
+        102.7,
+        524.82
+      ],
+      "sourceBodySha256": "842f3f949be8d44fb22711add30c58ec2fecf478cdc58c3a5ca6016aeed38538",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension differential",
+      "draftLearningTask": "Use representative findings to prioritize primary and secondary causes.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:27388143e967db1a14cbd4f544a9f946a2eb2f0ea2cda2bda97e6c5d3154f879",
+      "subjectId": "medicine",
+      "code": "GM8.11",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        52.26,
+        102.7,
+        79.5
+      ],
+      "sourceBodySha256": "e892c336a9dd59000cc7fefc148b69c9325e4d94ac697916ab3bcec4d000e3c8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension workup",
+      "draftLearningTask": "Select baseline and targeted investigations based on suspected aetiology.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3377bb4fa5c45f7e3c28bedd839ab4b1ea4d5fcd4a8a0b5cd516a7713bc36352",
+      "subjectId": "medicine",
+      "code": "GM8.12",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        145.68,
+        102.7,
+        173.04
+      ],
+      "sourceBodySha256": "0eb86c85f77adcd8467aeae9ac863ca2f3627b32d32129e4affb9247cae13347",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Baseline test interpretation",
+      "draftLearningTask": "Explain indications and interpret blood count, urinalysis, renal markers, electrolytes, urate and ECG findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e4b1401e21d4606af08ec86e68255bae13685e2c3939a586abb52133a1d3ce2a",
+      "subjectId": "medicine",
+      "code": "GM8.13",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        173.04,
+        102.7,
+        192.9
+      ],
+      "sourceBodySha256": "c44665494a364a274792a807d88b5a93d5d3cb82a47dac30399f33e58faca98e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Primary hypertension plan",
+      "draftLearningTask": "Build a simulated plan covering non-drug measures, medication selection and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47",
+      "subjectId": "medicine",
+      "code": "GM8.14",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        192.9,
+        102.7,
+        212.76
+      ],
+      "sourceBodySha256": "a382240e70266f618bb755a8171cc62b212cec714d91501b572bd88d9c168042",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertensive emergencies",
+      "draftLearningTask": "Identify acute organ injury and justify immediate assessment, treatment priorities and escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:00dee43e80d11016d1285a0253bde7c729129b4037dab2a42d838e9474875c23",
+      "subjectId": "medicine",
+      "code": "GM8.15",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        212.76,
+        102.7,
+        253.56
+      ],
+      "sourceBodySha256": "a5a2342d39137f0409ebfabeb133b281fe878c0cbe6eaf623ae45b8527ec33a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lifestyle counselling",
+      "draftLearningTask": "Agree on practical targets for weight, alcohol, activity and sodium with a simulated patient.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

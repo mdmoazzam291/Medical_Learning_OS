@@ -1,0 +1,2965 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    }
+  ],
+  "sourceHead": "3489eacb5a263f23577665bc8eeefe0bab24c2d3",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 31,
+    "componentProposals": 152,
+    "familyParentsWithoutDecompositionProposal": 352
+  },
+  "rows": [
+    {
+      "parentNameKey": "hearing loss",
+      "parentName": "Hearing loss",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN4.14",
+          "page": 423,
+          "rowBBox": [
+            40,
+            167.28,
+            94.3,
+            221.76
+          ],
+          "sourceBodySha256": "50a7101d511e59e9b731207588d62d041a5d77a0b914c3ca2f1ba81321c1099d",
+          "editorialTaskSha256": "838e31f0cb004971fc4cdff6e1c1faeddb0ff5e9f8fc5de10266109893af7722",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:01:01",
+          "name": "Conductive hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:02",
+          "name": "Sensorineural hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:03",
+          "name": "Sudden hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:04",
+          "name": "Noise-induced hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:05",
+          "name": "Hearing loss pattern differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:06",
+          "name": "Sudden hearing loss assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:01:07",
+          "name": "Noise-induced hearing loss assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "heart disease overview",
+      "parentName": "Heart disease overview",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.1",
+          "page": 281,
+          "rowBBox": [
+            44.2,
+            171.66,
+            102.7,
+            212.46
+          ],
+          "sourceBodySha256": "54ffe3489ac37e79034bd477ed49e683c19997b4eac661eb99b226edf841959f",
+          "editorialTaskSha256": "95f82ed53b864a65acbfa52189223c8c048d52c660144b836c3d1a3c78c512b6",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:02:01",
+          "name": "Rheumatic heart disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "rheumatic heart disease"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:02",
+          "name": "Valvular heart disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:03",
+          "name": "Ischaemic heart disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "ischaemic heart disease"
+            },
+            {
+              "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+              "nameKey": "ischaemic heart disease"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:04",
+          "name": "Hypertrophic heart disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:05",
+          "name": "Inflammatory heart disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:06",
+          "name": "Heart disease epidemiology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:07",
+          "name": "Inherited cardiac risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:08",
+          "name": "Heart disease mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:02:09",
+          "name": "Heart disease course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "heat illness",
+      "parentName": "Heat illness",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.8",
+          "page": 288,
+          "rowBBox": [
+            44.2,
+            398.16,
+            102.7,
+            438.9
+          ],
+          "sourceBodySha256": "2de3125d238f4fe08ff9dbf76e733a2102d01426ee11dcb838a91fa800849290",
+          "editorialTaskSha256": "a92c9f0b1d08990ddd66092c927a661fd6ff7f81d67d2245c8fee381d7481c02",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:03:01",
+          "name": "Heat cramps",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:03:02",
+          "name": "Heat exhaustion",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:03:03",
+          "name": "Heatstroke",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:03:04",
+          "name": "Heat illness differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:03:05",
+          "name": "Heat illness management simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "high-risk screening",
+      "parentName": "High-risk screening",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9f14be793e7303c8826784dbd2a8a169649084e0181187d473ac368fc240b463",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM10.2",
+          "page": 276,
+          "rowBBox": [
+            40.1,
+            210,
+            98.6,
+            242.1
+          ],
+          "sourceBodySha256": "843fd2a561d851b70973f3f7ed21eb67a08ea97a26dbd1af50c00efacc5fd654",
+          "editorialTaskSha256": "81f21bdccbc1ab0c16c60fbc6f40f16eb9e566f6034f581f8465fe47360ee9e0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:04:01",
+          "name": "High-risk group screening selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9f14be793e7303c8826784dbd2a8a169649084e0181187d473ac368fc240b463"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:04:02",
+          "name": "High-risk screening follow-up",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9f14be793e7303c8826784dbd2a8a169649084e0181187d473ac368fc240b463"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "history",
+      "parentName": "History",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:28b5f79d3e3c327385d55b14eff6fc27ff350bc607fe89d8edf7ec64df48bd05",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS1.1",
+          "page": 452,
+          "rowBBox": [
+            46.7,
+            307.92,
+            98.1,
+            322.02
+          ],
+          "sourceBodySha256": "c9b237850ca1479b0a2ff9c859a0e26e7eb3f6368be4f06135446b2e6b9e4192",
+          "editorialTaskSha256": "653e63b7597b0971ad99f0c2908480579883b49bd8c4529fbfa133373ef41eaa",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:05:01",
+          "name": "History of anaesthesia",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:28b5f79d3e3c327385d55b14eff6fc27ff350bc607fe89d8edf7ec64df48bd05"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:05:02",
+          "name": "Anaesthesia specialty milestones",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:28b5f79d3e3c327385d55b14eff6fc27ff350bc607fe89d8edf7ec64df48bd05"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hiv-associated dermatoses",
+      "parentName": "HIV-associated dermatoses",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f7dc597606715092aea3ae01d6d4745a5876970239b737837174897958808e4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR11.1",
+          "page": 360,
+          "rowBBox": [
+            39.9,
+            106.44,
+            101.6,
+            200.94
+          ],
+          "sourceBodySha256": "69689c0f71f7ebd370c4b2bce57af5878899668b776ea9775156cfb246543020",
+          "editorialTaskSha256": "eb8f5b6f3d98c9182b271fcc4c0d3bd87ab324a1abffef92af289cd248526486",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:06:01",
+          "name": "HIV-associated dermatosis assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f7dc597606715092aea3ae01d6d4745a5876970239b737837174897958808e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:06:02",
+          "name": "HIV skin opportunistic infection assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f7dc597606715092aea3ae01d6d4745a5876970239b737837174897958808e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:06:03",
+          "name": "HIV dermatosis targeted testing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f7dc597606715092aea3ae01d6d4745a5876970239b737837174897958808e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hiv-associated infections",
+      "parentName": "HIV-associated infections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1fe71f3a4bcca48e83e3bd7de7f453e971f06d1dd81d37bcf4bc043a7f19b864",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.4",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            154.86,
+            102.7,
+            182.22
+          ],
+          "sourceBodySha256": "65ee1f64dd6463421f00929e749895493aa7101802e0129abcfea990996aca03",
+          "editorialTaskSha256": "c12c3b66ceddf5062ae90e61f862dee21e01374aacf3e7f7bec950d0cfbcf004",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:07:01",
+          "name": "HIV opportunistic infection mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fe71f3a4bcca48e83e3bd7de7f453e971f06d1dd81d37bcf4bc043a7f19b864"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:07:02",
+          "name": "HIV opportunistic infection course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fe71f3a4bcca48e83e3bd7de7f453e971f06d1dd81d37bcf4bc043a7f19b864"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:07:03",
+          "name": "HIV opportunistic infection findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fe71f3a4bcca48e83e3bd7de7f453e971f06d1dd81d37bcf4bc043a7f19b864"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hiv-associated malignancies",
+      "parentName": "HIV-associated malignancies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:56bd337106db2c75911f4e6cde62d9002baa4469be1220fbe5eceb923c6cba19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.5",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            182.22,
+            102.7,
+            209.46
+          ],
+          "sourceBodySha256": "146da9638e7a3dc93f254ef187c3409835f75ec971345ff90593fe0c9980e690",
+          "editorialTaskSha256": "7f72462f80f98425cde5ddf26aeb6b072d8a36562a037e93ccc56f7e9179d1ca",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:08:01",
+          "name": "HIV-associated cancer pathogenesis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:56bd337106db2c75911f4e6cde62d9002baa4469be1220fbe5eceb923c6cba19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:08:02",
+          "name": "HIV-associated cancer course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:56bd337106db2c75911f4e6cde62d9002baa4469be1220fbe5eceb923c6cba19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:08:03",
+          "name": "HIV-associated cancer presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:56bd337106db2c75911f4e6cde62d9002baa4469be1220fbe5eceb923c6cba19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "holistic health",
+      "parentName": "Holistic health",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM1.2",
+          "page": 269,
+          "rowBBox": [
+            40.1,
+            178.38,
+            98.6,
+            209.64
+          ],
+          "sourceBodySha256": "08d9234894f01834ee939b6809f3a1b5e752cea9bf4fcaa25c3c63a65fabcd8e",
+          "editorialTaskSha256": "6f2d40f5bae8781936b28155f1b0b89ecaa8d2a762673373a64ac7f4c06a86a3",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:09:01",
+          "name": "Physical health dimension",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:09:02",
+          "name": "Mental health dimension",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:09:03",
+          "name": "Social health dimension",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:09:04",
+          "name": "Spiritual health dimension",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:09:05",
+          "name": "Health determinant comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hospital waste",
+      "parentName": "Hospital waste",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:87ccd64914b49e94890df8205e238b5346b51469b90162e0a7a7e4eb6fc7f0a3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU15.1",
+          "page": 406,
+          "rowBBox": [
+            45,
+            374.1,
+            101.7,
+            410.82
+          ],
+          "sourceBodySha256": "04c8815efa80ad33eb0020a64ed2847a7a15ed939cab5e0600ef3684a64b0cbe",
+          "editorialTaskSha256": "2078b9d5dc0b119253083fe300ef86c3903c3fc53e71b2f7d745725e39e99f71",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:10:01",
+          "name": "Hospital waste classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:87ccd64914b49e94890df8205e238b5346b51469b90162e0a7a7e4eb6fc7f0a3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:10:02",
+          "name": "Local waste disposal pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:87ccd64914b49e94890df8205e238b5346b51469b90162e0a7a7e4eb6fc7f0a3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "human life stages",
+      "parentName": "Human life stages",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN76.1",
+          "page": 146,
+          "rowBBox": [
+            51.2,
+            340.68,
+            121.9,
+            365.67
+          ],
+          "sourceBodySha256": "71719be4d5ffec4efe92d24ca8938eebd2d6dce1245bd2b95fd9636720a06b12",
+          "editorialTaskSha256": "b96e4b18986f9aaca634b54a1e0c76f109323a6bd5c707791b24691cfcba6fb8",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:11:01",
+          "name": "Prenatal life stages",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:11:02",
+          "name": "Postnatal life stages",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:11:03",
+          "name": "Human developmental transitions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "human milk banking",
+      "parentName": "Human milk banking",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE7.8",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            167.64,
+            103.1,
+            200.28
+          ],
+          "sourceBodySha256": "5630035b564497a8fed5289fae7a87117ddee9a1c33adda09c4aac83a7cba2f5",
+          "editorialTaskSha256": "657884d30100c6b88ae503778b8015a55d0487a434826edf7d14c82a42aabe01",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:12:01",
+          "name": "Milk bank observation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:12:02",
+          "name": "Milk donor screening",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:12:03",
+          "name": "Donor milk processing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:12:04",
+          "name": "Donor milk storage",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:12:05",
+          "name": "Donor milk distribution",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "human-caused disasters",
+      "parentName": "Human-caused disasters",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM13.3",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            467.82,
+            98.6,
+            485.64
+          ],
+          "sourceBodySha256": "5a78c71354b1e284684aa81ec336159adb1035ab416d79211eff0054decbb062",
+          "editorialTaskSha256": "d3fd33100e1a46c07f1b3de31f2e6f61e3dd51b3688c2a3b52b5e3d9d603040c",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:13:01",
+          "name": "Human-caused disaster examples",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:13:02",
+          "name": "Human-caused disaster causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:13:03",
+          "name": "Human-caused disaster impact",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:13:04",
+          "name": "Human-caused disaster prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hypersensitivity",
+      "parentName": "Hypersensitivity",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA8.2",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            508.98,
+            105.6,
+            531.66
+          ],
+          "sourceBodySha256": "8d6a8e03e9a2f034cdf6f98f5faebf731cc21365d4800fe9c15f9235354acf35",
+          "editorialTaskSha256": "e6323856b3a09f6c45c9fa28eff24b72008a05bfb53e9679badea655ffc897ba",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:14:01",
+          "name": "Hypersensitivity mechanism classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:14:02",
+          "name": "Hypersensitivity tissue injury correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "hypertensive emergencies",
+      "parentName": "Hypertensive emergencies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM8.14",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            192.9,
+            102.7,
+            212.76
+          ],
+          "sourceBodySha256": "a382240e70266f618bb755a8171cc62b212cec714d91501b572bd88d9c168042",
+          "editorialTaskSha256": "fd9df0c3b2d7bd613963ac6cbf99358a459c0d074a08f946c1c09e752ae4d6c7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:15:01",
+          "name": "Hypertensive acute organ injury",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:15:02",
+          "name": "Hypertensive emergency assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:15:03",
+          "name": "Hypertensive emergency treatment priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:15:04",
+          "name": "Hypertensive emergency escalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "icu functions",
+      "parentName": "ICU functions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS7.1",
+          "page": 454,
+          "rowBBox": [
+            46.7,
+            376.86,
+            98.1,
+            398.94
+          ],
+          "sourceBodySha256": "2839a8975cfc87ad7dd5f93d23f47556542a62a29882149b373bde2bb699771d",
+          "editorialTaskSha256": "147bb30d2d74ced57b38eaff6adc8bea28c81288407d752739cdb2cbf38dbd98",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:16:01",
+          "name": "ICU observation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:16:02",
+          "name": "ICU staffing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:16:03",
+          "name": "ICU monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "icu monitoring"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:16:04",
+          "name": "ICU organ support functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "identification from remains",
+      "parentName": "Identification from remains",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM4.4",
+          "page": 220,
+          "rowBBox": [
+            45.5,
+            309.06,
+            94.7,
+            354.42
+          ],
+          "sourceBodySha256": "4c22a09cd6753b0e76434db1bca84d85259116dbf7e72ac0ac83487474572858",
+          "editorialTaskSha256": "6b8e841cc4e70246fba63d465130741d5d5f50ecdf0fae77ba2ff386f3dc112d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:17:01",
+          "name": "Hair evidence",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:02",
+          "name": "Fibre evidence",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:03",
+          "name": "Dental evidence",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "dental evidence"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:04",
+          "name": "Anthropometry",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "anthropometry"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:05",
+          "name": "Identification evidence comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:06",
+          "name": "Trace association limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:17:07",
+          "name": "Unknown remains identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2e1a3b3d983652417a472604f1456f859b520431f3b2a289ecaffcf2c8b76580"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "identification techniques",
+      "parentName": "Identification techniques",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm3-fm4-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM4.5",
+          "page": 220,
+          "rowBBox": [
+            45.5,
+            354.42,
+            94.7,
+            387.54
+          ],
+          "sourceBodySha256": "8ee1dd7b5c00511227b4c792e07d2ff5f5576f429d41a9149903b500270c5bf3",
+          "editorialTaskSha256": "2ee38bb9be8d7d460218b5aa9a64ab1be713236768bb5dcf844553e011043466",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:18:01",
+          "name": "Fingerprints",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:02",
+          "name": "Footprints",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:03",
+          "name": "Scars",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:04",
+          "name": "Tattoos",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:05",
+          "name": "Poroscopy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:06",
+          "name": "Craniofacial superimposition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:07",
+          "name": "Identification technique evidentiary roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:18:08",
+          "name": "Identification technique limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:80794634c4982e21ee234e68e83f23d94f1b0a7cd9cd59e492ae4a7c4dbd56a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "imaging in opportunistic infection",
+      "parentName": "Imaging in opportunistic infection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM6.11",
+          "page": 292,
+          "rowBBox": [
+            44.2,
+            413.22,
+            102.7,
+            440.58
+          ],
+          "sourceBodySha256": "b478e2f1b453987a68fb1f703736f69d8a0a6d098b4a0487df74d831ee00d168",
+          "editorialTaskSha256": "fc831ab2611d00b315dc3682ca41166b076acd87b9bafb730511657cd90b5ee2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:19:01",
+          "name": "Chest CT",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:19:02",
+          "name": "Brain CT",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:19:03",
+          "name": "Brain MRI",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:19:04",
+          "name": "Opportunistic infection imaging indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:19:05",
+          "name": "Opportunistic infection imaging findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "imaging modalities",
+      "parentName": "Imaging modalities",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD1.1",
+          "page": 457,
+          "rowBBox": [
+            40.1,
+            267.6,
+            103.9,
+            389.4
+          ],
+          "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2",
+          "editorialTaskSha256": "bebd3068a801cc0189801b260758cdc825f469fa55176c53ca9a35869c6b2420",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:20:01",
+          "name": "Radiography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:02",
+          "name": "Fluoroscopy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:03",
+          "name": "CT imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:04",
+          "name": "Ultrasound imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:05",
+          "name": "Nuclear imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:06",
+          "name": "MRI imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:07",
+          "name": "Imaging operating principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:08",
+          "name": "Imaging hazards",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:20:09",
+          "name": "Imaging indication suitability",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "imaging principles",
+      "parentName": "Imaging principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN54.1",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            493.5,
+            122.2,
+            543.96
+          ],
+          "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad",
+          "editorialTaskSha256": "4a1d64887044811c381329a02713b1c7f8bb7b5b03b29e853b105a967b339923",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:21:01",
+          "name": "Plain radiography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:02",
+          "name": "Contrast radiography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:03",
+          "name": "CT imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:04",
+          "name": "MRI imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:05",
+          "name": "PET imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:06",
+          "name": "Digital subtraction angiography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:07",
+          "name": "Anatomical imaging information",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:21:08",
+          "name": "Functional imaging information",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "imaging selection",
+      "parentName": "Imaging selection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD2.2",
+          "page": 457,
+          "rowBBox": [
+            40.1,
+            458.52,
+            103.9,
+            526.68
+          ],
+          "sourceBodySha256": "1f12c62f24f6abc0d23a32081bcdd4175d0211be645718fb9b10b6f70c987538",
+          "editorialTaskSha256": "f7cb26a9c3f2d2be01bb9e4f62d708c9b9b12462f228eb75bb182ba9f59da296",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:22:01",
+          "name": "Infection imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:22:02",
+          "name": "Tumour imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:22:03",
+          "name": "Injury imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:22:04",
+          "name": "Congenital condition imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:22:05",
+          "name": "Paediatric imaging adaptation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:22:06",
+          "name": "Pregnancy imaging adaptation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immune components",
+      "parentName": "Immune components",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI2.2",
+          "page": 207,
+          "rowBBox": [
+            51.9,
+            398.52,
+            108.8,
+            445.68
+          ],
+          "sourceBodySha256": "2ac079ee255d73d11991949a55f59d8d879c3dbd43cfe741696c2bfcb99c16e5",
+          "editorialTaskSha256": "208fe3143270e3b12d0f9f020450c2051d7644aed3b75ce970ad632a2c676806",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:23:01",
+          "name": "Immune organs",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:23:02",
+          "name": "Immune cells",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:23:03",
+          "name": "Antigens",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:23:04",
+          "name": "Antibodies",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:23:05",
+          "name": "Complement",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:23:06",
+          "name": "Immune component interactions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immune diagnostic tests",
+      "parentName": "Immune diagnostic tests",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI2.5",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            68.34,
+            108.8,
+            115.14
+          ],
+          "sourceBodySha256": "c12f2c0634b1a28a47975168e43262ea468cb7199aab9cc0066de25d1c05b282",
+          "editorialTaskSha256": "30c6f5c7ba982d1b986df71ca9a7a82850399ef8179ffacddf250a762d2c8d88",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:24:01",
+          "name": "Immune diagnostic assay mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:24:02",
+          "name": "Host response detection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:24:03",
+          "name": "Immune test timing interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immune disorders",
+      "parentName": "Immune disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI2.7",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            162.3,
+            108.8,
+            209.46
+          ],
+          "sourceBodySha256": "65677ea3bac682484087268d749f0ad9b26a5cb2ead4bea8e20aff58da2e7b01",
+          "editorialTaskSha256": "767277eb188f9783910a740d04b5ee4e8da65198c8685bb0b0665b3f959ecde0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:25:01",
+          "name": "Hypersensitivity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "hypersensitivity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:25:02",
+          "name": "Autoimmunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "autoimmunity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:25:03",
+          "name": "Immunodeficiency",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:25:04",
+          "name": "Immune disorder comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:25:05",
+          "name": "Immune disorder laboratory selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immunity",
+      "parentName": "Immunity",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.7",
+          "page": 151,
+          "rowBBox": [
+            58.5,
+            108.96,
+            107.8,
+            136.32
+          ],
+          "sourceBodySha256": "f38df1942ae5074cad77c912039eb856aec87df8406a25280c297eb41585e92f",
+          "editorialTaskSha256": "56ddd6766d0f69cc7fc6bdf826db12fd96a7fda52499c4df71f50caa29403eda",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA8.1",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            485.94,
+            105.6,
+            508.98
+          ],
+          "sourceBodySha256": "be0a1d85a355df69a965d8ee54b9a836f5dce8975b07b45a8969fe4fcff9523c",
+          "editorialTaskSha256": "6929c61accf78956abf1512167f5d5a8eae367ebfc50adeaca5c7eae2e0bb86e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:26:01",
+          "name": "Innate immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "innate immunity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:02",
+          "name": "Adaptive immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "adaptive immunity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:03",
+          "name": "Immune response development",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:04",
+          "name": "Immune response regulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:05",
+          "name": "Immune protective roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e04987e8e6f7d59ae940de24ff75585804f1a4795c4954759a5a207008bc69fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:06",
+          "name": "Innate immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "innate immunity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:07",
+          "name": "Adaptive immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "adaptive immunity"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:08",
+          "name": "Antigen recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:09",
+          "name": "Immune activation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:26:10",
+          "name": "Immune effector mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immunoglobulins",
+      "parentName": "Immunoglobulins",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC5.5",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            499.2,
+            108.5,
+            537.06
+          ],
+          "sourceBodySha256": "e74377023d6f665b9b60e31245e6e4598e5612d3c683acb8b1ee3dee882ccf67",
+          "editorialTaskSha256": "ce8a0f0e551ebe7960d3526884697ed9c3b938cd703ce2d4578b35f3dfed50f7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:27:01",
+          "name": "Antibody domains",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:02",
+          "name": "Immunoglobulin classes",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:03",
+          "name": "Immunoglobulin disorders",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:04",
+          "name": "Humoral immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:05",
+          "name": "Cellular immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:06",
+          "name": "Antibody domain–function mapping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:27:07",
+          "name": "Humoral–cellular immunity comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immunomodulators",
+      "parentName": "Immunomodulators",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH9.1",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            136.32,
+            105.7,
+            166.92
+          ],
+          "sourceBodySha256": "e58e2a995bb18f39c70a21896160a809eedce10c0ab075c2bc5370e9960c582a",
+          "editorialTaskSha256": "df96a97cfe5d39fcefa3b5c52b0b1a4b886914eb0bf560faa39d37f8e0a3a03c",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:28:01",
+          "name": "Immunomodulator kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:28:02",
+          "name": "Immunomodulator targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:28:03",
+          "name": "Immunomodulator clinical uses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:28:04",
+          "name": "Immunomodulator adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "immunoprophylaxis",
+      "parentName": "Immunoprophylaxis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI2.6",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            115.14,
+            108.8,
+            162.3
+          ],
+          "sourceBodySha256": "c1884fedf54ac7ab86e2665d8cf9009651d700d15ab17e4695937aff37e96cb4",
+          "editorialTaskSha256": "daddc99bdce114365e905455c7c04d1e56e0e448099a1cb41cd1fc816a5292e0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:29:01",
+          "name": "Active immunoprophylaxis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:29:02",
+          "name": "Passive immunoprophylaxis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:29:03",
+          "name": "Population immunity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:29:04",
+          "name": "Immunoprophylaxis comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:29:05",
+          "name": "Population immunity–transmission relation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "indian healthcare delivery",
+      "parentName": "Indian healthcare delivery",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM17.5",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            159.72,
+            98.6,
+            175.44
+          ],
+          "sourceBodySha256": "f83c3298b1233a995a8faec536fe5ec66be9027a6b46bcb76411aaae393e6e14",
+          "editorialTaskSha256": "b0d42903d8cc14db9cf6d0eef8e7d084b43fdaa634e5bc141e5335b5f4b1f4fb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-10:30:01",
+          "name": "Indian public healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:30:02",
+          "name": "Indian private healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:30:03",
+          "name": "Community healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:30:04",
+          "name": "Primary healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:30:05",
+          "name": "Secondary healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-10:30:06",
+          "name": "Tertiary healthcare delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

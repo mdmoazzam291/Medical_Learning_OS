@@ -1,0 +1,1056 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:967b4ebd645dad0282f83fe1466019d6559f4a4074236580e6f8b9feac839421",
+      "subjectId": "surgery",
+      "code": "SU1.1",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        188.76,
+        101.7,
+        224.46
+      ],
+      "sourceBodySha256": "c9c93328cad21979c6cb5cf08a976e1ef223148e66527c6f9b302af0edbab83a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Injury response",
+      "draftLearningTask": "Explain homeostatic disruption after injury and link metabolic changes to major mediators.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:36df88a22846f39443d722965234fc82b3e0ee133728c684aa3e83b2578ed727",
+      "subjectId": "surgery",
+      "code": "SU1.2",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        224.46,
+        101.7,
+        245.64
+      ],
+      "sourceBodySha256": "32244971dd05373c50f0ee0c2933b6a399a03177792b504272504119f5e6ad5b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Modifiers of injury response",
+      "draftLearningTask": "Compare how injury severity, nutrition, infection and comorbidity affect the metabolic response.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5abab8a3cc5c76e433a8229618d21e60de66ab9ce2ca421d0c67a1c14f6562e8",
+      "subjectId": "surgery",
+      "code": "SU1.3",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        245.64,
+        101.7,
+        260.7
+      ],
+      "sourceBodySha256": "02499c9260820065a40f0bf3b47946a5704a935a877049684dfbe920f6dae69a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Perioperative care",
+      "draftLearningTask": "Map assessment, optimization, intraoperative coordination and postoperative recovery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:082439056358bfd04805b3b7fbf54d84c54beec6822a7f87eb27fb8eac3405bd",
+      "subjectId": "surgery",
+      "code": "SU2.1",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        281.1,
+        101.7,
+        310.44
+      ],
+      "sourceBodySha256": "7c95c3d7105cf4abb973fdf58799cd884ed7d7c181fbbd934575f9898f5e2119",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock mechanisms",
+      "draftLearningTask": "Compare shock types and justify resuscitation, fluid replacement and monitoring priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0550d0f616b215ccaae2766d9e7d919944b5913364d509dacd558830861be88c",
+      "subjectId": "surgery",
+      "code": "SU2.2",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        310.44,
+        101.7,
+        330.78
+      ],
+      "sourceBodySha256": "d152434414203c9695713c73cedd90d84be99fd4b14901146946fee5d373f7fa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock recognition",
+      "draftLearningTask": "Recognize shock in representative cases and explain cause-directed initial treatment principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:66e147ab13e647a7bda69c3c77731245435221e00f42ecd8abb62621d7088da4",
+      "subjectId": "surgery",
+      "code": "SU2.3",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        330.78,
+        101.7,
+        366.3
+      ],
+      "sourceBodySha256": "51f1a123eed575285c8b03d9b74a1ee68e92239bd5a72c4664f73ab843b16eac",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock counselling",
+      "draftLearningTask": "Explain treatment, prognosis and uncertainty empathetically to a simulated patient or family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c8bb1f5adddda2e3f80f043661c936860aaa49a9c91f5da3766cb9190b48e35c",
+      "subjectId": "surgery",
+      "code": "SU3.1",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        386.7,
+        101.7,
+        422.34
+      ],
+      "sourceBodySha256": "84fb026791cfbc68f657787ce42b65ecd85778afc46aa4e3c99a4bd13868826f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion decisions",
+      "draftLearningTask": "Match components to representative indications and recognize major transfusion complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:55be358d271c724154af5cce9e6a896fd9cb5b8085f885e28153ce19b1de7ad3",
+      "subjectId": "surgery",
+      "code": "SU3.2",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        422.34,
+        101.7,
+        453.48
+      ],
+      "sourceBodySha256": "528e19f76e84e2fe0843c40d9f86f8ce043459b5325c6db7ae6ffdc19c083ca1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion observation",
+      "draftLearningTask": "Observe an approved transfusion and document identity checks, monitoring and escalation procedures.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:38a5c0e21d90d6e674fed85f4e37970e12a1b5e59908f9c59a56f36f69f07a05",
+      "subjectId": "surgery",
+      "code": "SU3.3",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        453.48,
+        101.7,
+        482.88
+      ],
+      "sourceBodySha256": "02c784794faec27c54e553e96239152feca089af9a55e340907a134b50b6c859",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion and donation counselling",
+      "draftLearningTask": "Discuss benefits, risks and alternatives to transfusion and explain donation in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b7bcbbc238e65b6dd806ca97e16c9f482bbf97176cf0c4f5017d345ab15f1c0d",
+      "subjectId": "surgery",
+      "code": "SU4.1",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        507.06,
+        101.7,
+        542.88
+      ],
+      "sourceBodySha256": "2bf4bfb7f323c21d3a5fa9e33bfafa26028258a05c82f4191e125788bc6022f2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Burn history and examination",
+      "draftLearningTask": "Present a focused history and examination and link findings to burn pathophysiology.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:832c70a9e9727927d4e269d7755f8c83d71eab4d2a1da953e176d96a5b05406d",
+      "subjectId": "surgery",
+      "code": "SU4.2",
+      "page": 403,
+      "rowBBox": [
+        45.0,
+        542.88,
+        101.7,
+        583.68
+      ],
+      "sourceBodySha256": "efbb9149b752af12d0f4ac3f4456f5a0d40813f6a0c6de240fdb02cc61c355e7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Burn assessment and treatment",
+      "draftLearningTask": "Classify burn type and depth, estimate extent and justify initial care and referral priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d39aaec6cfe868e5ae9f814a2ecea5dbc6d30378aa7b51c40b9334fc95f1860e",
+      "subjectId": "surgery",
+      "code": "SU4.3",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        68.34,
+        101.7,
+        89.94
+      ],
+      "sourceBodySha256": "ec39f9a27e9896081a835fe51ab0e41d73ffae9479d1bf01c9ebc7f160d416a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Burn documentation",
+      "draftLearningTask": "Identify medico-legal concerns and document findings and circumstances in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a3f98559b3cdc54eaa0a979eb7f32f426049d8db626acbdeb22a21c2345a22f",
+      "subjectId": "surgery",
+      "code": "SU4.4",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        89.94,
+        101.7,
+        123.96
+      ],
+      "sourceBodySha256": "fe0958f0ca49094bf8f56e2d04c3779ca144f967631ad6cc90015f47ffa10c6b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Burn recovery counselling",
+      "draftLearningTask": "Discuss expected recovery, rehabilitation and uncertainty with a simulated patient and family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:efecc3784deb87f1ac1c2349441a2ce806af3eafb712dd64023156d49dbfbb7a",
+      "subjectId": "surgery",
+      "code": "SU5.1",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        145.08,
+        101.7,
+        166.44
+      ],
+      "sourceBodySha256": "f1a9686840477db030330da98c4f587e8624731200e469fbb80363a41d8c861a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Wound healing",
+      "draftLearningTask": "Sequence healing phases and explain local and systemic factors that impair repair.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dda0e74f7adf1ac4b25b7c06eda390955ea59f4afaa2b134695a0b5725f6c6bc",
+      "subjectId": "surgery",
+      "code": "SU5.2",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        166.44,
+        101.7,
+        195.12
+      ],
+      "sourceBodySha256": "33a21228862c968cd45d8bdfae7a9b8c8f371a24eecc64646d4a4eba0f9b908c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Wound history",
+      "draftLearningTask": "Elicit, document and present a structured history of a simulated wound.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175",
+      "subjectId": "surgery",
+      "code": "SU5.3",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        195.12,
+        101.7,
+        229.98
+      ],
+      "sourceBodySha256": "28cc0a6d16e29646a27aa3e2477ec94e4b2851beb1ac3ff2f4796a96121ed0a1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Wound classification and care",
+      "draftLearningTask": "Distinguish representative wounds, justify management and describe observed care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:aa3cb0c423fb5872ca1aaf219f4e08db49fa706ccc79c4ca907682af829a7b30",
+      "subjectId": "surgery",
+      "code": "SU5.4",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        229.98,
+        101.7,
+        251.04
+      ],
+      "sourceBodySha256": "b7d9f99fe0da679afc412d0de968918130d6fca304d65a26f17d2ddfead4c2a7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Wound medico-legal assessment",
+      "draftLearningTask": "Distinguish observed findings from opinion and explain documentation and evidence custody.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459",
+      "subjectId": "surgery",
+      "code": "SU6.1",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        272.52,
+        101.7,
+        308.94
+      ],
+      "sourceBodySha256": "4475460b577b21fed58074ba08764b018d321add67d4faa2a4effca9aa6e199b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical infection",
+      "draftLearningTask": "Classify surgical infections by source and explain representative mechanisms and risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8b1b67e430f3efa742d192e093464bb13f25b827914374f8230fcb62394469a3",
+      "subjectId": "surgery",
+      "code": "SU6.2",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        308.94,
+        101.7,
+        343.26
+      ],
+      "sourceBodySha256": "0354c6b91891aef7141e56aee3991f115aefe9fc766ca91d00ac30df1ca95e6a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical antibiotics",
+      "draftLearningTask": "Distinguish prophylaxis from treatment and justify antimicrobial selection and source control in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1bb33859c30b2ddac7236ae198528a283a2faf53b8f03e1e9409b0c4dd18b9c3",
+      "subjectId": "surgery",
+      "code": "SU7.1",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        363.78,
+        101.7,
+        385.32
+      ],
+      "sourceBodySha256": "4254c5f7dd913f07986ecaccf89f3ea294edf9277048a6ab78f43d57800a42da",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical audit",
+      "draftLearningTask": "Define standards and indicators, compare sample outcomes and outline improvement and re-audit.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f2ab790cfc94aeae76d4988ea28f24301f8c39e3c2a1d30c0a46c764ef48d2f3",
+      "subjectId": "surgery",
+      "code": "SU7.2",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        385.32,
+        101.7,
+        406.5
+      ],
+      "sourceBodySha256": "54d2a280e8fa2e5648a5848559d32f42c6450dba548d5ce714dd2fc36aa341e6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical research",
+      "draftLearningTask": "Develop a focused surgical question and outline design, ethics, measurement and analysis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22294c1758a1ad6d762d8d7207a901612b866b9317922165f77398b6dc641c37",
+      "subjectId": "surgery",
+      "code": "SU8.1",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        429.36,
+        101.7,
+        458.64
+      ],
+      "sourceBodySha256": "0f5da66108a010a386e61e82bd4fe7f9b5ee8a92bbff94d926a627dcd5995304",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical ethics",
+      "draftLearningTask": "Apply ethical principles to representative surgical decisions and consent dilemmas.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e2e043bdc7be25cb6388c5b11f8619c299bb78a0c7b46add55c75c8827fa4df1",
+      "subjectId": "surgery",
+      "code": "SU8.2",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        458.64,
+        101.7,
+        491.76
+      ],
+      "sourceBodySha256": "2f9825a96e0c02ed91c1c9f61c0a9190c438074a6f387c0f4f29a34e9d05245b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Professionalism and empathy",
+      "draftLearningTask": "Demonstrate respectful communication, privacy and empathy during a simulated surgical encounter.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5354928a3bbde5d6ea98424dd4034b9be0ea83fa57551f623d771150cfe68d07",
+      "subjectId": "surgery",
+      "code": "SU8.3",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        491.76,
+        101.7,
+        522.12
+      ],
+      "sourceBodySha256": "3917155ea9777a1f5f2ddb45b4065ea1d401d9d91ce1c8efed1cc4ff27569681",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical medico-legal issues",
+      "draftLearningTask": "Analyze documentation, disclosure and accountability in simulated surgical cases using applicable guidance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6d4024afe08bdc7af7c26c3b4e29acc194fb08c7e2497d327df7aaab63976fca",
+      "subjectId": "surgery",
+      "code": "SU9.1",
+      "page": 404,
+      "rowBBox": [
+        45.0,
+        542.94,
+        101.7,
+        586.68
+      ],
+      "sourceBodySha256": "17bace17941751193590b4e7959d27acaba49e4954041ac5100cbdcf45a87c06",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical investigations",
+      "draftLearningTask": "Select biochemical, microbiological, pathological and imaging tests and interpret representative results.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e4a3e847f45b11ce9958b6dded9d4f5cf354119ef19c7315bd6558014396b851",
+      "subjectId": "surgery",
+      "code": "SU9.2",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        68.34,
+        101.7,
+        104.82
+      ],
+      "sourceBodySha256": "2ecad2d4160acaaa11508d2bf34c859de46e68f7e7af8fd1988031f7fd20c034",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cancer detection and teamwork",
+      "draftLearningTask": "Explain the biological rationale for early detection and map multidisciplinary decision-making.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:589d161b5a84c8dd037f8d73066c3370d99cd1f963f277f764ff0a93c914c22b",
+      "subjectId": "surgery",
+      "code": "SU9.3",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        104.82,
+        101.7,
+        139.68
+      ],
+      "sourceBodySha256": "f092b8d1c5ec28994fcf6de4a691046e1c7cfbac3368c9fd09a99aeadda26d4d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Communicating investigation results",
+      "draftLearningTask": "Explain simulated results and next steps in plain language and check understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:96a4a6433338a21566311eb90e5bd5f2dcbf416ec21ec8deabb79b2d7c303875",
+      "subjectId": "surgery",
+      "code": "SU10.1",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        160.62,
+        101.7,
+        194.28
+      ],
+      "sourceBodySha256": "d9e40cb25c9fe90a021d09b599e7e0be64ddef4f0595ba6e0f32632204362740",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Perioperative management",
+      "draftLearningTask": "Compare perioperative needs for representative procedures and identify prevention and monitoring priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d4b22d1a33e127ef9a8bcab34b2bba1c936d82f10fbdad3a4566408105ed27f4",
+      "subjectId": "surgery",
+      "code": "SU10.2",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        194.28,
+        101.7,
+        224.76
+      ],
+      "sourceBodySha256": "62494151a3cf683370eceb52019fcfd47daf1c41f7df4180e66b424894eef706",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical consent",
+      "draftLearningTask": "Obtain consent in simulation after discussing indication, material risks, benefits and alternatives.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f7c7a7c6f079b0d1efdcc5103be51c45461eed39262f80d3dbc7fdd48c5ee9fe",
+      "subjectId": "surgery",
+      "code": "SU10.3",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        224.76,
+        101.7,
+        262.08
+      ],
+      "sourceBodySha256": "3ebb623a88e8e4206a3d242467c4419816ddcad70407c0d19f5d1d9c2d10ceaa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical observation and assistance",
+      "draftLearningTask": "Document observations of common and emergency procedures and demonstrate an assigned role in supervised minor surgery.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0742ca4320e03bf7246cea14158d7eee6e273c360210e34d58c3500ac3e65304",
+      "subjectId": "surgery",
+      "code": "SU10.4",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        262.08,
+        101.7,
+        291.48
+      ],
+      "sourceBodySha256": "9dcf419f7836c4d600c324b7c5d0021edba6bd54e25c9de94d04a4e062e0de47",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Basic surgical skills",
+      "draftLearningTask": "Demonstrate first aid, suturing and representative minor procedures on a simulator.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a36630b7cac837f7f837a446536b6f17bfb294aac51b873807d2f16714d3e9d",
+      "subjectId": "surgery",
+      "code": "SU11.1",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        312.24,
+        101.7,
+        333.66
+      ],
+      "sourceBodySha256": "00fef967f8ce416c55e6a909e7883f1b48c63906c00002e99a9a2d592a760449",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative assessment",
+      "draftLearningTask": "Assess patient and procedural risks and explain optimization and escalation criteria.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8a3c846d13609bac46e1bdd94bab7b23d4e9ce29a8f1af27978d57ebe97adb50",
+      "subjectId": "surgery",
+      "code": "SU11.2",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        333.66,
+        101.7,
+        353.52
+      ],
+      "sourceBodySha256": "0e3c7f7bde965de0f386478c730910d3623f8925d767b30e75445919c545cbea",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaesthesia principles",
+      "draftLearningTask": "Compare general, regional and local techniques by purpose, suitability and risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7c4f967f379db0700eb70ec82a34de1be32bcfd874ae1960dfdf2f4abbb4602c",
+      "subjectId": "surgery",
+      "code": "SU11.3",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        353.52,
+        101.7,
+        385.44
+      ],
+      "sourceBodySha256": "25cea53d494fb8ff8754a5f0a35dd2e8406cdc4f931b85f207d7fa34af3c969e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Airway maintenance",
+      "draftLearningTask": "Demonstrate basic airway maintenance and reassessment on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3630428d648c9643c0040ac0a79e74b684d03e3fcdb456059593344f1567da7d",
+      "subjectId": "surgery",
+      "code": "SU11.4",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        385.44,
+        101.7,
+        410.28
+      ],
+      "sourceBodySha256": "852da0594dabe390e9a8f0fdf6b3114e5bc31243d0165425630d2f9fef8f4b63",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Day surgery",
+      "draftLearningTask": "Identify appropriate candidates and explain preparation, discharge and safety requirements.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf",
+      "subjectId": "surgery",
+      "code": "SU11.5",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        410.28,
+        101.7,
+        447.48
+      ],
+      "sourceBodySha256": "06d9c3fbeed69a5fa1804b6133be17523567d7fe3952ecfed663da4ceedc7794",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical pain management",
+      "draftLearningTask": "Compare acute postoperative and chronic pain approaches and explain reassessment and adverse-effect monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5c768f2829e26d916ddb95b2d60ba71b7b247ad7038916ab69534f56ec9410de",
+      "subjectId": "surgery",
+      "code": "SU11.6",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        447.48,
+        101.7,
+        466.8
+      ],
+      "sourceBodySha256": "bea6fc99ab5e980e3dcada59d56d465ffb4f18113a84828adca1d98341e5310f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Safe surgery",
+      "draftLearningTask": "Apply identity, site, procedural checks and team communication to a simulated operation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a85cd15fc2c1df1fe44814a9d2403c85df705dd2927c5ffec986118633c0f688",
+      "subjectId": "surgery",
+      "code": "SU12.1",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        488.58,
+        101.7,
+        523.38
+      ],
+      "sourceBodySha256": "dd4fde016b1f37dc25177605f126105d58a8e9f25d7eef3f991633ac70e1a1ad",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical malnutrition",
+      "draftLearningTask": "Identify causes and explain effects on healing, complications and recovery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:218ccf0090e2a67178e3f2a4c43e026a2fb03d5767fb386b9108a2276ec6aef5",
+      "subjectId": "surgery",
+      "code": "SU12.2",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        523.38,
+        101.7,
+        552.78
+      ],
+      "sourceBodySha256": "055a0c985dcd788bd1e3c78bb28e2fbef72139b4c1e74fe4256c98fec91dcc88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fluids and electrolytes",
+      "draftLearningTask": "Estimate requirements and losses and justify replacement and reassessment in sample cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bf59fbcfada30e6963bccec8d35e12d5e3e378688676d0b96f7bd59a9afd2620",
+      "subjectId": "surgery",
+      "code": "SU12.3",
+      "page": 405,
+      "rowBBox": [
+        45.0,
+        552.78,
+        101.7,
+        587.58
+      ],
+      "sourceBodySha256": "9d1c667ab2a3720c92226aee79df262fcfc4612dafa19274222721b3571150d7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutritional support",
+      "draftLearningTask": "Compare oral, enteral and parenteral routes by indications, monitoring and complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b5fbf7a275daf34701da13867d0c89fefa523b26cfb11c5dae2018d748b3f34",
+      "subjectId": "surgery",
+      "code": "SU13.1",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        89.46,
+        101.7,
+        110.64
+      ],
+      "sourceBodySha256": "c202b5b53d555b449a3302db8acbb831851f5b76a321b54c6714b5ef2285d019",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transplant immunology",
+      "draftLearningTask": "Explain graft recognition, rejection and the principles of compatibility.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f47d61aa1a159c2ba49dd2bff64d226b4c4b5e33bfce43ea21c35ef72146aa57",
+      "subjectId": "surgery",
+      "code": "SU13.2",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        110.64,
+        101.7,
+        154.32
+      ],
+      "sourceBodySha256": "bdc3c08700820beec2fa2fff2bff132f4f0799f90731ce410eb11fd85e8ea18c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transplantation principles",
+      "draftLearningTask": "Compare representative indications and surgical principles and explain immunosuppression and follow-up.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c726b038df498242fd0451730749d5ff39cb8af6b28c56dde167a9013ee54fac",
+      "subjectId": "surgery",
+      "code": "SU13.3",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        154.32,
+        101.7,
+        169.38
+      ],
+      "sourceBodySha256": "0d158295f2fc536da74f4232546affcc583b896e1507cec62a3053570c244890",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organ donation ethics and law",
+      "draftLearningTask": "Use applicable official guidance to analyze consent, allocation and safeguards in a simulated donation case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:86b7d6d76b7dd1f676dd1baf2d358d93005b5cdf56dd4a5be80f8adf583c5db7",
+      "subjectId": "surgery",
+      "code": "SU13.4",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        169.38,
+        101.7,
+        204.24
+      ],
+      "sourceBodySha256": "8669b08ce5d7a03e1281b11c36748498655e0ecfe414518926671e79a29723b5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organ donation counselling",
+      "draftLearningTask": "Role-play a sensitive discussion with patients or relatives and respond to questions without pressure.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:50e8b4f6cdb70af951e0f54b9342f4788e79e4dd7a8ea3d4363fbb9d692ec2f1",
+      "subjectId": "surgery",
+      "code": "SU14.1",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        226.14,
+        101.7,
+        246.9
+      ],
+      "sourceBodySha256": "171411147749951636df04a39937376a83162db9900cd1a2bc32117865885f03",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Asepsis and decontamination",
+      "draftLearningTask": "Distinguish aseptic technique, disinfection and sterilization and select methods for representative settings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bd25c59a94bd7f635cc0f21bd3d770ee66cdd70fd29f01402adfc73605d68aed",
+      "subjectId": "surgery",
+      "code": "SU14.2",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        246.9,
+        101.7,
+        282.06
+      ],
+      "sourceBodySha256": "20b70f20ca0b7b33f192bb911fba9cdf8d3561dec4cae2c1daa42f430a3567e8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical approaches and instruments",
+      "draftLearningTask": "Match incisions and instruments to intended exposure and operative purpose.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c287fb3c1848efd014be934afcc8fe7609884aa2ab6aff80367292f523a8a5a0",
+      "subjectId": "surgery",
+      "code": "SU14.3",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        282.06,
+        101.7,
+        320.4
+      ],
+      "sourceBodySha256": "ca81a80fe5c7d5a23a04b80070a3a8b3b8b3837439b6ef78dd19051ddbd2a1d1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Closure and anastomosis",
+      "draftLearningTask": "Compare sutures, needles and knots and explain how tissue and purpose guide technique.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:06d8237587027de3457beec7371e42f10fa2337d038633d5c80ff204c7c52c42",
+      "subjectId": "surgery",
+      "code": "SU14.4",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        320.4,
+        101.7,
+        352.98
+      ],
+      "sourceBodySha256": "1afe2ebcc6eecd7addbb051e3376b7011485a43718ef8e02c1b4328f226e0cd0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Asepsis and suturing practical",
+      "draftLearningTask": "Demonstrate sterile preparation and wound suturing on a simulator.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87ccd64914b49e94890df8205e238b5346b51469b90162e0a7a7e4eb6fc7f0a3",
+      "subjectId": "surgery",
+      "code": "SU15.1",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        374.1,
+        101.7,
+        410.82
+      ],
+      "sourceBodySha256": "04c8815efa80ad33eb0020a64ed2847a7a15ed939cab5e0600ef3684a64b0cbe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hospital waste",
+      "draftLearningTask": "Classify representative waste and match it to disposal pathways using local procedures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee",
+      "subjectId": "surgery",
+      "code": "SU16.1",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        437.7,
+        101.7,
+        495.6
+      ],
+      "sourceBodySha256": "2e1e777fb0406b2ac18cb8b939e7967132f1cbacd2af21688ccd50a8c4294956",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Minimally invasive surgery",
+      "draftLearningTask": "Compare representative indications, benefits and limitations with open approaches.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:653a872e6c31f8a6fc2b547ce26da9963532216f4a121e3d3553f9d78f69dde1",
+      "subjectId": "surgery",
+      "code": "SU17.1",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        515.88,
+        101.7,
+        537.0
+      ],
+      "sourceBodySha256": "924021536ee834cc237e34731a6ad0eb8040e0c2c52286afb80a63a6e02df2db",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "First aid",
+      "draftLearningTask": "Explain scene safety, initial assessment and immediate priorities in representative injuries.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:14390d8d2377b5d4ad81b467887301029eb93ac14936a9597542ddb480172477",
+      "subjectId": "surgery",
+      "code": "SU17.2",
+      "page": 406,
+      "rowBBox": [
+        45.0,
+        537.0,
+        101.7,
+        580.74
+      ],
+      "sourceBodySha256": "14c6b04fbad6415244b90737e83114fc8d4628edc989b611c6bee551c152563a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Basic life support and transport",
+      "draftLearningTask": "Demonstrate BLS and coordinated transport of an injured person in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:33fa0ca42d945371099a81cf578a9a80b8209b55309c0a72d92269b1b25cae68",
+      "subjectId": "surgery",
+      "code": "SU17.3",
+      "page": 407,
+      "rowBBox": [
+        45.0,
+        68.34,
+        101.7,
+        91.8
+      ],
+      "sourceBodySha256": "b8671ad01e0935fb3bf8a6a342273dac5d91563a9ce914931f646e13b02aae85",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Mass casualty management",
+      "draftLearningTask": "Explain triage, command, communication and resource allocation in a mass casualty scenario.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fac2fd082d405d6f8424f4fe920af9562f820b30a2fec8344495eca9dc3a78d8",
+      "subjectId": "surgery",
+      "code": "SU17.4",
+      "page": 407,
+      "rowBBox": [
+        45.0,
+        91.8,
+        101.7,
+        112.92
+      ],
+      "sourceBodySha256": "43fd0d0b47b1c2a4833aa2dec1186e4b3e8d3dd20a41df01834716c1c1587a80",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Head injury mechanisms",
+      "draftLearningTask": "Compare injury mechanisms and explain primary and secondary brain injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b492d9ba2e70ff9e7c8f9bfd6363b5a685639ff912bfe28ffb8a8983e66c3577",
+      "subjectId": "surgery",
+      "code": "SU17.5",
+      "page": 407,
+      "rowBBox": [
+        45.0,
+        112.92,
+        101.7,
+        143.7
+      ],
+      "sourceBodySha256": "fca6a1d3207f947b3b5914954db6435de5d9a6861ac449677a1d04395a8548f9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurological assessment",
+      "draftLearningTask": "Interpret clinical findings and calculate and document the Glasgow Coma Scale from a simulated head injury case.",
+      "mode": "knowledge"
+    }
+  ]
+}

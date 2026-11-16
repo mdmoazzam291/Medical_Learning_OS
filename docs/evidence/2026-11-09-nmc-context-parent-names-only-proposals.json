@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-context-parent-source-registry-trace.json",
+      "blobSha": "13cf1f6b0dce4d56077d2a1ae89dcab0d54f6515"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-context-parent-reconciliation.json",
+      "blobSha": "b254dbfa762f6f840c390c14c671b19552855ab9"
+    }
+  ],
+  "parents": [
+    {
+      "name": "Blood culture",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+          "code": "GM 3.13",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+          "facet": "Blood culture interpretation",
+          "role": "parent-scope-facet-evidence"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Research ethics",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc",
+          "code": "FM10.29",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+          "facet": "Ethical research practice",
+          "role": "parent-scope-facet-evidence"
+        },
+        {
+          "referenceId": "nmc-2024-ref:79658621cb0ba9fb1324dff351f287af596da0ecd742a9332d2da4e079e4738a",
+          "code": "FM10.12",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-20.json",
+          "facet": "Stem cell research",
+          "role": "parent-scope-facet-evidence"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug information",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+          "code": "PH10.1",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Basic life support",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+          "code": "AS2.1",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2757f0e6f07d4b93dcdd21f907d626bf0ee380920aff0f6c4683b230afef8ef4",
+          "code": "PY12.10",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3af2db13310ce7b01a24887f3a8ecad178951f3f81b4210f214bc7eb345791f3",
+          "code": "GM 2.22",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pain assessment",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+          "code": "AS8.2",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Posterior triangle",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+          "code": "AN29.1",
+          "evidencePath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Public health",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+          "code": "CM1.1",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "facet": "sensory muscle innervation",
+          "role": "parent-scope-facet-evidence",
+          "code": "AN7.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "facet": "motor muscle innervation",
+          "role": "parent-scope-facet-evidence",
+          "code": "AN7.5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:2de15a1a87e93b6e9d41961affebdae94602fb949b50ae38cf02527ee433ae21",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "facet": "muscle energy sources",
+          "role": "parent-scope-facet-evidence",
+          "code": "PY3.9"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "facet": "skeletal muscle anatomy",
+          "role": "parent-scope-facet-evidence",
+          "code": "AN3.2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+          "evidencePath": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "facet": "muscle attachments",
+          "role": "parent-scope-facet-evidence",
+          "code": "AN3.2"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary infection",
+      "sourceEvidence": [
+        {
+          "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+          "code": "SU29.3",
+          "evidencePath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "role": "indexed-parent-appearance"
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    }
+  ],
+  "contexts": [
+    {
+      "name": "Blood culture collection",
+      "parentName": "Blood culture",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 5,
+          "sourceNameKey": "blood culture collection",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26",
+              "competencyCode": "GM 1.20"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        },
+        {
+          "reviewIndex": 6,
+          "sourceNameKey": "blood culture sampling",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+              "competencyCode": "GM3.12"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Clinical research ethics",
+      "parentName": "Research ethics",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 10,
+          "sourceNameKey": "clinical research ethics",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169",
+              "competencyCode": "FM10.25"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        },
+        {
+          "reviewIndex": 11,
+          "sourceNameKey": "clinical research ethics",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:3cb37bb015b09279fae66aca4701b9455110ce3e1a5dc9f8e3d5ebbace4c1169",
+              "competencyCode": "FM10.25"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Drug information in media",
+      "parentName": "Drug information",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 12,
+          "sourceNameKey": "drug information",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+              "competencyCode": "PH10.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paediatric basic life support",
+      "parentName": "Basic life support",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 20,
+          "sourceNameKey": "paediatric basic life support",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e",
+              "competencyCode": "PE24.21"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Joint pain assessment",
+      "parentName": "Pain assessment",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 21,
+          "sourceNameKey": "pain assessment",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+              "competencyCode": "AS8.2"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cancer pain assessment",
+      "parentName": "Pain assessment",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 22,
+          "sourceNameKey": "pain assessment",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+              "competencyCode": "AS8.2"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Posterior triangle muscles",
+      "parentName": "Posterior triangle",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 25,
+          "sourceNameKey": "posterior triangle",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+              "competencyCode": "AN29.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Recent public health events",
+      "parentName": "Public health",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 26,
+          "sourceNameKey": "public health",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+              "competencyCode": "CM1.1"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Skeletal muscle contraction",
+      "parentName": "Skeletal muscle",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 31,
+          "sourceNameKey": "skeletal muscle contraction",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:02361a0d94a64d2c2bd584e41a9ac94e5e8f948ea452d6d22c03d22f055fe378",
+              "competencyCode": "PY3.7"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Urinary infection in pregnancy",
+      "parentName": "Urinary infection",
+      "parentInProposalInventory": false,
+      "comparisons": [
+        {
+          "reviewIndex": 35,
+          "sourceNameKey": "urinary infection",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:12731ae146c58ca73c2ff7094b8d99fa40ecaab3b0cff34ae00669cca489ebd2",
+              "competencyCode": "SU29.3"
+            }
+          ],
+          "referenceRole": "parent-scope-evidence"
+        },
+        {
+          "reviewIndex": 36,
+          "sourceNameKey": "urinary infection in pregnancy",
+          "sourceReferences": [
+            {
+              "referenceId": "nmc-2024-ref:8bf82fcf516e08674cfa8ffdbdb5592a344837d96cb4547ffa7b748765ab28f4",
+              "competencyCode": "OG12.5"
+            }
+          ],
+          "referenceRole": "context-scope-evidence"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "distinctParentEvidenceReferences": 14
+}

@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:9c26caf5fc7e520db63477255ac532ab9395c85a1a8fb14caf62682970af2268",
+      "subjectId": "physiology",
+      "code": "PY10.1",
+      "page": 157,
+      "rowBBox": [
+        58.5,
+        450.42,
+        107.8,
+        477.78
+      ],
+      "sourceBodySha256": "d67b5255716062038f825e86cef7855317a7098c82c861cc2c03ebf32521678d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Central nervous system organization",
+      "draftLearningTask": "Map the major functional divisions of brain and spinal cord and place an example function in each division.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:08e5a07acd5d0fecb162d86f7bdfa1512e92852be5bdbcb5891e5fd7dba97f4e",
+      "subjectId": "physiology",
+      "code": "PY10.2",
+      "page": 157,
+      "rowBBox": [
+        58.5,
+        477.78,
+        107.8,
+        505.14
+      ],
+      "sourceBodySha256": "9b28578b0c201424ebeca66972ce2bd9c3a3e4803915f6d9fc11a647ef6df7de",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral nervous system organization",
+      "draftLearningTask": "Trace selected peripheral routes from a central connection to their targets and distinguish somatic from autonomic pathways.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0732de9a55b91c4c564a7cf2071e04df087f3a562b5648aabb22e4e2288f7061",
+      "subjectId": "physiology",
+      "code": "PY10.3",
+      "page": 157,
+      "rowBBox": [
+        58.5,
+        505.14,
+        107.8,
+        532.5
+      ],
+      "sourceBodySha256": "1b0af2e71d1314c84417a103202d00e722c85755d7b86cd9d5464113f9806f91",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurotransmitter classes and transmission",
+      "draftLearningTask": "Group selected neurotransmitters by class and trace the steps of chemical signalling at a synapse.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0651dc8a67a787cc1f338b56a0fecbc8864734a58f2a11ddf2ca5be19d1d9d24",
+      "subjectId": "physiology",
+      "code": "PY10.4",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        108.96,
+        107.8,
+        141.66
+      ],
+      "sourceBodySha256": "2d73b7f8808c26929e2912386c305cf8f5d328220628a2a198184b80b1d03980",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Synapse types and function",
+      "draftLearningTask": "Compare synapse types using labelled examples and explain how their properties affect signal transmission.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7a1ae5816d562fccc16c56b38c04b0ee33a1a6a63b989d3eb9dae06753118438",
+      "subjectId": "physiology",
+      "code": "PY10.5",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        141.66,
+        107.8,
+        174.42
+      ],
+      "sourceBodySha256": "be3200f190b1d919e9fa3b5c4335ce2739ebb634777cc774c98f69279c1b1bee",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reflex organization",
+      "draftLearningTask": "Classify example reflexes, trace their circuits and explain a property demonstrated by each example.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3eb921033bffa221fd62a2ae2e01952e0af45360ab570f6e0c00d514544efd99",
+      "subjectId": "physiology",
+      "code": "PY10.6",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        174.42,
+        107.8,
+        207.18
+      ],
+      "sourceBodySha256": "33849ddef14f01835ca5ae2b7d1c1176b1105a0398cceef70f7b27002e791dd7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sensory receptor properties",
+      "draftLearningTask": "Classify sample sensory receptors by stimulus and explain how their response properties affect the signal generated.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+      "subjectId": "physiology",
+      "code": "PY10.7",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        207.18,
+        107.8,
+        234.54
+      ],
+      "sourceBodySha256": "c30dca15ed9e2c5462fce070e21223e4fbe7a4aaee9711d49b228e7f8de33b03",
+      "state": "proposal-review",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [
+        "lo:C-9d978c84-6555-496d-943f-16e358baa9fb:py10.7:14@1"
+      ],
+      "reviewLabel": "Somatic sensory application",
+      "draftLearningTask": "Compare somatic sensory modalities using a simulated examination and explain how the distribution of abnormal findings informs localization.",
+      "mode": "knowledge",
+      "taskScope": "remaining-component"
+    },
+    {
+      "referenceId": "nmc-2024-ref:26bde13a24c4473eac904f3ffdb7bc36c8e5345513b75776d370640488b6d2a2",
+      "subjectId": "physiology",
+      "code": "PY10.8",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        234.54,
+        107.8,
+        267.3
+      ],
+      "sourceBodySha256": "c94a9d995cfec2068670e3f718099dea9e37dfede2838afc9466c91b04575b4b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pain pathways and modulation",
+      "draftLearningTask": "Trace a pain signal on a diagram and explain where and how a proposed gate-control mechanism could alter transmission.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+      "subjectId": "physiology",
+      "code": "PY10.9",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        267.3,
+        107.8,
+        310.5
+      ],
+      "sourceBodySha256": "baeacc58aa9fa24ef6b716b945e641a7c74c5fb8c111e599c997975d80d336bb",
+      "state": "proposal-review",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [
+        "lo:C-9d978c84-6555-496d-943f-16e358baa9fb:py10.9:15@1"
+      ],
+      "reviewLabel": "Motor lesion patterns",
+      "draftLearningTask": "Use simulated motor examinations to distinguish upper from lower motor neuron patterns and connect the differences to descending motor control.",
+      "mode": "knowledge",
+      "taskScope": "remaining-component"
+    },
+    {
+      "referenceId": "nmc-2024-ref:386290689ec4a15127da41af9376887cbfb5fed9cb2380e3eabcf9e763429390",
+      "subjectId": "physiology",
+      "code": "PY10.11",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        343.26,
+        107.8,
+        370.62
+      ],
+      "sourceBodySha256": "9c0ca15fb0b2d9b3f94b96df77cf662c93d25b49dcce40e7094b546d73f50bac",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cerebellar organization and function",
+      "draftLearningTask": "Map the major cerebellar connections, explain their functional roles and relate a simulated deficit to the relevant circuit.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d5ae38ae22c001b8e7aa671d0fb38a1ea1e8b5626858ec6443049ea1a05abb45",
+      "subjectId": "physiology",
+      "code": "PY10.12",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        370.62,
+        107.8,
+        397.92
+      ],
+      "sourceBodySha256": "6c8eb00d965b8b5212d65dd44bfdc7cafff019b0e2b32bfc8b09fbccbcd0894c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Basal ganglia circuits",
+      "draftLearningTask": "Trace a basal ganglia circuit and explain how a change in its activity could account for a simulated movement abnormality.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a331f4de10cfd89dd70d250cb4d308c981ffc8483e45fcfaeec8f5e9b0bf0db",
+      "subjectId": "physiology",
+      "code": "PY10.13",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        397.92,
+        107.8,
+        425.28
+      ],
+      "sourceBodySha256": "8fe062c1b99a85e66501e86aaa2edba0abd389a3c2f2e94a014d30c908bee031",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tone and postural control",
+      "draftLearningTask": "Explain how the nervous system coordinates tone, posture and movement during a simulated change in body position.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5cdc05d135d7ec932a58363670ce7e169539fbcf0fd10fa763d9eddfca24a8b5",
+      "subjectId": "physiology",
+      "code": "PY10.14",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        425.28,
+        107.8,
+        452.64
+      ],
+      "sourceBodySha256": "ea899b8d69d0d5533b3f5171fd27b0d4154c62e617ce93706449c91bc38d125c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Thalamic organization and function",
+      "draftLearningTask": "Trace selected thalamic connections and use a simulated deficit to explain the function of the affected pathway.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fd4bb64b9f05ee5df3d486886f981d5fbb910fe2cc2a3c774f27fa1c8e834d2e",
+      "subjectId": "physiology",
+      "code": "PY10.15",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        452.64,
+        107.8,
+        485.4
+      ],
+      "sourceBodySha256": "c5b2911a08b33710e176521edf71af2de08073e6fb7c172a58790a3900d789d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypothalamic and limbic circuits",
+      "draftLearningTask": "Compare selected hypothalamic and limbic connections and use simulated examples to distinguish their functional roles and deficits.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:58b6845f6c72337d0ca7b696bedc04ba4832c33e51b2ba85cfce64e7121506d2",
+      "subjectId": "physiology",
+      "code": "PY10.16",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        485.4,
+        107.8,
+        512.76
+      ],
+      "sourceBodySha256": "396f81f2516c4abeca82123044ebf46663af56aa9517732b1442f71259fe6168",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cortical organization and function",
+      "draftLearningTask": "Map cortical regions and connections on a diagram and explain how a simulated deficit relates to the area involved.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d26728da2e950cef0d3e1e726d68bcdbee9f495adac71b0bd7c093e27ae52e65",
+      "subjectId": "physiology",
+      "code": "PY10.17",
+      "page": 158,
+      "rowBBox": [
+        58.5,
+        512.76,
+        107.8,
+        545.52
+      ],
+      "sourceBodySha256": "6e1571245e2f5c2508321a055ef5c0f9b7a4c42a38748adf1eac6a4f17736ed8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arousal, sleep and EEG",
+      "draftLearningTask": "Relate arousal-system activity to sleep and wake states and identify characteristic changes in sample EEG traces.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:323ee76778ae871790a50ec121d92c47b8a26383b0ed41795691e4de0743742a",
+      "subjectId": "physiology",
+      "code": "PY10.18",
+      "page": 159,
+      "rowBBox": [
+        58.5,
+        108.96,
+        107.8,
+        136.32
+      ],
+      "sourceBodySha256": "99d1414d585b7e08b2efcf13d0f04f4b4166c2e11e4082b0021937d0ca9ca5f5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Learning, memory and speech",
+      "draftLearningTask": "Compare the physiological processes involved in learning and memory, then use simulated speech findings to distinguish different functional impairments.",
+      "mode": "knowledge",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5395ed8e3aee14ce7cd8ffcb0f621faa88c9c72e555a91cb92d94ff6c260fcdb",
+      "subjectId": "physiology",
+      "code": "PY10.19",
+      "page": 159,
+      "rowBBox": [
+        58.5,
+        136.32,
+        107.8,
+        179.52
+      ],
+      "sourceBodySha256": "ffd01282e183c98fe894d4bbf7cb5d276faa66b589f56afcdb4f6bd1f1e86767",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurological history and examination",
+      "draftLearningTask": "In a simulated encounter, obtain a focused history and demonstrate examination of higher functions, sensation, movement and reflexes using a structured checklist.",
+      "mode": "performance",
+      "taskScope": "row-task-draft"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0c01772e74b0a0ba3b86fdf727cfb9579e74ca1e6e7d7a820e13cf4386ca9ad2",
+      "subjectId": "physiology",
+      "code": "PY10.20",
+      "page": 159,
+      "rowBBox": [
+        58.5,
+        179.52,
+        107.8,
+        220.26
+      ],
+      "sourceBodySha256": "bbd94c0e630635e9d5be67adf3488aba2ea470c063213cf01568e8de387bda97",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cranial nerve history and examination",
+      "draftLearningTask": "In a simulated encounter, obtain a focused history and demonstrate a systematic cranial nerve examination using a structured checklist.",
+      "mode": "performance",
+      "taskScope": "row-task-draft"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed-integration",
+  "catalogueVersion": 448,
+  "inputs": {
+    "packSha": "37116cf11d63272d6929a64aecf8236c6313f89c",
+    "projectionSha": "4bcabb896a8fecdedcc18fee1c5169d7f4d09296"
+  },
+  "existingPublished": [
+    {
+      "id": "C-101d60e987915f6fa8175c469a265f79",
+      "name": "Brown-Sequard syndrome",
+      "aliases": [
+        "Brown Sequard syndrome",
+        "Hemicord syndrome"
+      ],
+      "route": "retain-existing-published-identity",
+      "sourceLinks": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "objectiveVersionId": "lo:C-101d60e987915f6fa8175c469a265f79:localization@1",
+          "status": "proposed",
+          "namedConcept": "Brown-Sequard syndrome"
+        },
+        {
+          "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+          "objectiveVersionId": "lo:C-101d60e987915f6fa8175c469a265f79:localization@1",
+          "status": "proposed",
+          "namedConcept": "Brown-Sequard syndrome"
+        }
+      ],
+      "exactFreshNameMatches": [],
+      "sharedFreshReferences": [],
+      "mappingAccepted": false
+    }
+  ],
+  "freshProposalCount": 78,
+  "identityPolicy": "Retain the canonical ID for existing published entries. Render fresh proposals independently. Require exact identity and component scope verification before any reuse binding. Keep learner history attached to its original identity and scope.",
+  "next": "Implement separate existing-published and fresh-proposal sections using current published discovery and the protected names-only projection."
+}

@@ -1,0 +1,1191 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-08:01",
+      "facetNameKey": "ecg practical",
+      "facetName": "ECG practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a8aad58d590340efdca756dbb75607a40d171f50fba763060af729bcc99c2aa8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM8.16",
+          "page": 296,
+          "rowBBox": [
+            44.2,
+            253.56,
+            102.7,
+            280.92
+          ],
+          "sourceBodySha256": "86622644e5dbe34c0bcff7098337c9b483d7060c9f87db769db48d50eb05c367",
+          "editorialTaskSha256": "5c5ed079b2c41dd0a32fa83be84bd56bc3122e1bb65b66f362d6e83cc23db37c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Electrocardiography",
+      "proposedHomeNameKey": "electrocardiography",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "12-lead recording/interpretation in a simulated hypertension case; not all ECG competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:02",
+      "facetNameKey": "ecg principles",
+      "facetName": "ECG principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:dff132e417e4b7de1a1d5cbd37e601d018a030b15631d93e6a8d2b8bb366bc12",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.5",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            396.12,
+            107.8,
+            437.16
+          ],
+          "sourceBodySha256": "369d3065bcb701ef7c3351f91268391116a09238d920c4718ccf2bfffb7013a2",
+          "editorialTaskSha256": "d62513ad0152e8e8a29d0125babbc61da215c29c3fe2effd1082cec8fd99e725",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Electrocardiography",
+      "proposedHomeNameKey": "electrocardiography",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Electrical lead deflections and sample-tracing frontal-axis determination.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:03",
+      "facetNameKey": "eczema management",
+      "facetName": "Eczema management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:484aad85e60f11cca5df3bf261c4e0fcb1612e538bf8a2896e77c32a45b3d3a6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR12.2",
+          "page": 360,
+          "rowBBox": [
+            39.9,
+            363.48,
+            101.6,
+            417.66
+          ],
+          "sourceBodySha256": "602b8b6898d87f54e8a2aa22758d268c0be2e7fcfeae86f8727888c819c88de3",
+          "editorialTaskSha256": "e8b1b4af5df10724c7a7b177fcc66382a71044b0896aa70252376f8d6d94c555",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Eczema",
+      "proposedHomeNameKey": "eczema",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated topical/systemic plan and referral criteria.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:04",
+      "facetNameKey": "eczema recognition",
+      "facetName": "Eczema recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bad882e10b58cba51cac6077b20a0bcbdcae2466ec14f0de20b5331f6a875f19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR12.1",
+          "page": 360,
+          "rowBBox": [
+            39.9,
+            282.42,
+            101.6,
+            363.48
+          ],
+          "sourceBodySha256": "a5f6ee0b04d0c57169a52f9b04890ab90b4422dedc385e032e2dc51b94f32d82",
+          "editorialTaskSha256": "c25d8612eeaa06d7ea1d0a1b9e90e0fa8ed5f8b4cdab0ed1acdd37914d2547d4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Eczema",
+      "proposedHomeNameKey": "eczema",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Endogenous/exogenous patterns from history/distribution.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:05",
+      "facetNameKey": "elbow arterial collateral routes",
+      "facetName": "Elbow arterial collateral routes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cfdb308551f8029ab6cebbbcaf43740a4f8215a766b01012b314179c9d56e36b",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN11.6",
+          "page": 113,
+          "rowBBox": [
+            51.2,
+            361.08,
+            120.4,
+            385.92
+          ],
+          "sourceBodySha256": "6ea0a7b9e87ec499cd6ab0d5524eb55195562d9c4fa48025916eb8b2729247c1",
+          "editorialTaskSha256": "883606c571980fd5a7feeea2f5acebf82517fe11bd8a6ae00017f72119befa93",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Elbow arterial anastomoses",
+      "proposedHomeNameKey": "elbow arterial anastomoses",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diagrammed above/below-elbow arterial connections; branches unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:06",
+      "facetNameKey": "emergency headache care",
+      "facetName": "Emergency headache care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:767972f4e78d963cea0ea3e76e71d1db87864afefabf71d85ad69ea79664b35c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.10",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            409.98,
+            102.7,
+            437.34
+          ],
+          "sourceBodySha256": "d1851d4c0b3a830af94b21a9bec65efd961fb4dc85d7e26a4428a63a9bd41924",
+          "editorialTaskSha256": "96aaf71820c8ccca80f01cf3c5568b3a8f039e8975316aacc2ab7aa2153a5543",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Admission/escalation and immediate support for source headache context.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:07",
+      "facetNameKey": "emergency oxygen",
+      "facetName": "Emergency oxygen",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5cf8d2bf6005211f17d3a32f5756b32ecd061700451ad602c559038451678912",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.6",
+          "page": 343,
+          "rowBBox": [
+            51.3,
+            182.64,
+            103.1,
+            215.16
+          ],
+          "sourceBodySha256": "1f58ef2965bfadc5600f38e4143d75aa9be8d5ce5a94c1e6ad4af97554508928",
+          "editorialTaskSha256": "b30e6bfcca97770f2e859e1612b082f6f48141da9506b54f1cd6e61981c092ec",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Oxygen therapy",
+      "proposedHomeNameKey": "oxygen therapy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "oxygen therapy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric delivery modes, selection and monitoring.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:08",
+      "facetNameKey": "emergency recognition",
+      "facetName": "Emergency recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79bd186d85fad0bbecd95b1b3ef23577769e45c3eb6f44837d5473ae83f4a218",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.9",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            282.96,
+            102.7,
+            310.2
+          ],
+          "sourceBodySha256": "421998f7bedaf9bff95cb3ef8f0054de6337e42ccdfc0ef01c813297021d3bdf",
+          "editorialTaskSha256": "955e43f74da592e6e7138eaa532616ba8e37f5e7bae8545c2f119a3883705027",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diabetic emergencies",
+      "proposedHomeNameKey": "diabetic emergencies",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "diabetic emergencies"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Hypoglycaemia/DKA/hyperosmolar features in simulation, not generic emergency diagnosis.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:09",
+      "facetNameKey": "empiric fever treatment",
+      "facetName": "Empiric fever treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5b2d654577147c9bc2ca4326cb727a39d0203286abacc92887799a19807e635d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.19",
+          "page": 289,
+          "rowBBox": [
+            44.2,
+            519.6,
+            102.7,
+            547.02
+          ],
+          "sourceBodySha256": "d74cb0066d3e05e999ef23f6bb69535daad90c37ae517c8f6bc6de5fab99f717",
+          "editorialTaskSha256": "ac809ddc3d356fa515290a5486d92898c7addd3128923bc115b767bb48c739eb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Provisional acuity/immune-status fever plan with explicit revision conditions.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:10",
+      "facetNameKey": "empirical antibiotics",
+      "facetName": "Empirical antibiotics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:986f2075ab7d32e6a3dc22a4074c76e5114c4d72322a41c1b6c725fbfd8d1e74",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.15",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            229.2,
+            102.7,
+            269.94
+          ],
+          "sourceBodySha256": "d1d12fc42231f0866b4443d13a8df9663c4d74c147fe492d34b9e010751d6fb1",
+          "editorialTaskSha256": "c2aa001f74c3ac390e33d495ed8d4db2dec40d9c652c156cda9ea064d2ee7471",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Antibiotic therapy",
+      "proposedHomeNameKey": "antibiotic therapy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Likely-pathogen/spectrum/patient-factor simulated prescription.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:11",
+      "facetNameKey": "encephalitis microbiology",
+      "facetName": "Encephalitis microbiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:98a90e12a87beed199805af7506d062d1bb6a47a8bc183f741d2e08ef5418591",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI6.2",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            254.88,
+            108.8,
+            295.92
+          ],
+          "sourceBodySha256": "d9ce772a9cbd44715827c7db7847ac206cf817584d0fa51e084655a33836b1b4",
+          "editorialTaskSha256": "b92fc045908e260ca3d1e45b88a4cdb609981c9355bf567ed68cf41b6fcb314e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Encephalitis",
+      "proposedHomeNameKey": "encephalitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Exposure/pathogenesis/course/workup of representative microbial causes.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:12",
+      "facetNameKey": "endocarditis diagnostics",
+      "facetName": "Endocarditis diagnostics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f9680378abb19aaba17d00f5303e46fb0e35ea334f903fd5140eb9e3cfdf92fc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.3",
+          "page": 208,
+          "rowBBox": [
+            51.9,
+            327.12,
+            108.8,
+            367.44
+          ],
+          "sourceBodySha256": "c8cd6f79cd02da1b210d37c88dd7cd2c4c6072d524bf5789aa01e4684af89b79",
+          "editorialTaskSha256": "ebe907f4ab22014aa6d4e7ecfa7a6a7dc094c514df9c9f99315179b7e72f09f8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Infective endocarditis",
+      "proposedHomeNameKey": "infective endocarditis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "infective endocarditis"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "infective endocarditis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Blood-culture collection/processing and integration in suspected endocarditis/sepsis; broader sepsis context retained, not identity equivalence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:13",
+      "facetNameKey": "energy in indian foods",
+      "facetName": "Energy in Indian foods",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1e95c83dfb4511ea78472f32aa3647487d61e807fd0ce1330d24b7ad90d7aa1e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE9.3",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            486.78,
+            103.1,
+            502.14
+          ],
+          "sourceBodySha256": "5addf29126fd0f9730f1e28637609a418b0e88549c440e499b8ad4b62678d9d8",
+          "editorialTaskSha256": "cff3ecdbb6703814c2650103c9ffc50b337689ff7bf17f4bf9d484cc1675686a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Food energy",
+      "proposedHomeNameKey": "food energy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "food energy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative Indian food energy per serving; values not generated or verified here.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:14",
+      "facetNameKey": "ent cancer recognition",
+      "facetName": "ENT cancer recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:777f6f1e1f24290231c186d1f39e157bef330b34bcc4183a93ab2e925b9f0dcb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.8",
+          "page": 421,
+          "rowBBox": [
+            40,
+            110.94,
+            94.3,
+            151.74
+          ],
+          "sourceBodySha256": "7370fcc4b8e5fb25284f117ca69370937f025045f1cf3bc26d61322273016097",
+          "editorialTaskSha256": "d0f3ccad3f0e14d0214e22a52b73789886859b9872bf1e5ef46cabdf8c9d2083",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "ENT neoplasia",
+      "proposedHomeNameKey": "ent neoplasia",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated risk-factor/suspicious premalignant or malignant findings; unspecified sites remain open.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:15",
+      "facetNameKey": "ent history",
+      "facetName": "ENT history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cd2ae0dad08eb18cfca125f014050754608c4f978de6dd0514ae5c4f2bb1007c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.1",
+          "page": 420,
+          "rowBBox": [
+            40,
+            232.14,
+            94.3,
+            263.16
+          ],
+          "sourceBodySha256": "f832ac62c6d6d7ef30e5f790ef5503160199d73fce6228d8e82657f2d6505110",
+          "editorialTaskSha256": "fc849fab5f39abf29fcff7af7c3967ab2461069ad6ca7cd47311d410dd04a345",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "ENT clinical assessment",
+      "proposedHomeNameKey": "ent clinical assessment",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated focused ENT history elicitation/documentation/presentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:16",
+      "facetNameKey": "ent manifestations of hiv",
+      "facetName": "ENT manifestations of HIV",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:24e8984a96abc101d02b4c098e4dcf2dbc8f7d0a1866dac37f266dd0469fbe2b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN4.46",
+          "page": 425,
+          "rowBBox": [
+            40,
+            536.28,
+            94.3,
+            568.5
+          ],
+          "sourceBodySha256": "6650d0737bdf6735c01c83a4e2e944eb9eeddc34fa9b36a38d69447e65671bc4",
+          "editorialTaskSha256": "5d1ecf23daa2df6c031e4e68ab7677f818a0dd86f7cf5f892a63593b0cb57829",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "HIV infection",
+      "proposedHomeNameKey": "hiv infection",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "hiv infection"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "HIV-specific ENT manifestations/investigation/management pathways.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:17",
+      "facetNameKey": "ent procedural consent",
+      "facetName": "ENT procedural consent",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c814d3ea18b43fd555abaaa716b6b6dedf5096ade48468a305e592f976725dfa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.9",
+          "page": 421,
+          "rowBBox": [
+            40,
+            151.74,
+            94.3,
+            219.36
+          ],
+          "sourceBodySha256": "dee1a3e764f241523b575eb12c9678f030a6454cd99046888b79abb2c1f5ed80",
+          "editorialTaskSha256": "45ed8f3bbb1aada9f90f263dec055fb2b1f43e423531d835f9400372f9b9b688",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Informed consent",
+      "proposedHomeNameKey": "informed consent",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "informed consent"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Role-play ENT procedural consent with understanding check, not actual clinical consent.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:18",
+      "facetNameKey": "enteric fever results",
+      "facetName": "Enteric fever results",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.8",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            130.68,
+            108.8,
+            190.08
+          ],
+          "sourceBodySha256": "4c39a3a5410f1a988154c29d2b3e74dcc0435d310d198795cd7f16f9e49e90b0",
+          "editorialTaskSha256": "7aafb494d6335c80c4a48c51c5694774fdde1a09d355e5489c3b119c90d03460",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Enteric fever",
+      "proposedHomeNameKey": "enteric fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "enteric fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Culture/serology interpretation with limitations.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:19",
+      "facetNameKey": "enteric fever testing",
+      "facetName": "Enteric fever testing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.7",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            68.34,
+            108.8,
+            130.68
+          ],
+          "sourceBodySha256": "4d61edf4531aaeab622cd83be8077ed905f7c97639c1e9c7dd252c92fce10200",
+          "editorialTaskSha256": "649406ab983fd52009a32fe4f18b5e312505c706fd69c1f83a42bd7575d207d9",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Enteric fever",
+      "proposedHomeNameKey": "enteric fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "enteric fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Illness-duration test choice and suspected carriage distinction.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:20",
+      "facetNameKey": "environmental influences on obesity",
+      "facetName": "Environmental influences on obesity",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f6bb692f4f901b1abaf772143aabc909501a7fbd58d8e806afe9b85f458329d4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.4",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            322.68,
+            102.7,
+            363.48
+          ],
+          "sourceBodySha256": "a60f3061815058e6c468ba385d77ec95bdd4fa36189b56b4ca84ae8696d7d90a",
+          "editorialTaskSha256": "ba6c243dd89a669ec3182e45f8b7dde60e901ac07030d55094ebf0df532957a5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Food access/eating/work/activity contributions to population obesity risk.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:21",
+      "facetNameKey": "enzyme classification",
+      "facetName": "Enzyme classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC2.1",
+          "page": 162,
+          "rowBBox": [
+            58.7,
+            278.88,
+            108.5,
+            328.2
+          ],
+          "sourceBodySha256": "c52370d7919e818af0ec97ba0b914a723e3f33fbf0475055a53f96217e8d67f0",
+          "editorialTaskSha256": "03891ef602d96652c8e86ea42f602fb02512cac0110129af79c1093cd46986b3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Enzymes",
+      "proposedHomeNameKey": "enzymes",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Enzyme/isoenzyme/coenzyme distinctions and source IUBMB reaction classes; classification version not rechecked.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:22",
+      "facetNameKey": "enzyme result interpretation",
+      "facetName": "Enzyme result interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC2.5",
+          "page": 162,
+          "rowBBox": [
+            58.7,
+            428.7,
+            108.5,
+            468.3
+          ],
+          "sourceBodySha256": "7f0d0b0a5d877be3f9d3cbd17910fa12b7d1f3cb07f265d1cdea787795935b14",
+          "editorialTaskSha256": "09ac75956441fc24eb0b99a0380531501d6f282e217f54155a7aaa8b1ffe58ed",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Clinical enzymology",
+      "proposedHomeNameKey": "clinical enzymology",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Contextual enzyme panels/trends rather than complete disease diagnosis.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:23",
+      "facetNameKey": "epilepsy assessment",
+      "facetName": "Epilepsy assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:984ca90e1c9b3306d0b4423caf1611399c72726c586c6830b398464f38028b91",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM20.2",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            435.36,
+            102.7,
+            489.54
+          ],
+          "sourceBodySha256": "fee2ff54bcccca42d3e1fa3e4c58039c398d07df777e8e7c7927b401665ff250",
+          "editorialTaskSha256": "f3813f3afa344d388a02e59f039451e9ecb159863dd3d773bdc0925bb67d79e6",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Epilepsy",
+      "proposedHomeNameKey": "epilepsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cause/seizure-type classification and evaluation/EEG/imaging justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:24",
+      "facetNameKey": "epilepsy treatment",
+      "facetName": "Epilepsy treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bba83b23139206962dc31a612f818b5286ff4fb48113169c58a054c32de725df",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM20.3",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            489.54,
+            102.7,
+            516.9
+          ],
+          "sourceBodySha256": "fcb22b1d3b0116a3575439171babf91d1c68e97e38ef28fde8128d11beb1da61",
+          "editorialTaskSha256": "c557888e7898a0b96d32392d6bf266e0b83c7f9b15ca0f81056dd0bfc21ee5c3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Epilepsy",
+      "proposedHomeNameKey": "epilepsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Medicine clinical-use/patient-factor/interaction comparison, not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:25",
+      "facetNameKey": "episiotomy practical",
+      "facetName": "Episiotomy practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6bb2552c42a6f406245521881ccee04034b32694d8102c811320b0a065eb0b38",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.17",
+          "page": 441,
+          "rowBBox": [
+            49.1,
+            340.38,
+            103.1,
+            366.96
+          ],
+          "sourceBodySha256": "4311dd342abd3e3a9dc9fc891e9dac6ee7ba34b311fc5ac33a61573f493d51fa",
+          "editorialTaskSha256": "fff0f60a67207e0f7fc5f2ec6434c8e4d4449d4b49b531bbae2574102e43ea00",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Episiotomy",
+      "proposedHomeNameKey": "episiotomy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "episiotomy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulator episiotomy/repair under source-approved checklist; not independent delivery competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:26",
+      "facetNameKey": "epithelial identification",
+      "facetName": "Epithelial identification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6b180d834afa25745e755faf4df1936644ed4fb8ef9e2b13cd8e58396b85321b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN65.1",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            153.48,
+            121.9,
+            189.99
+          ],
+          "sourceBodySha256": "12a58901a4eb67544e42e53326d3ac8de4890fa3fb8bde33874660027e94b7b7",
+          "editorialTaskSha256": "96c1241b2f5e3750902b6d5601aaf958cf4b0f9c1d8d04c29f8b610f7af12426",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Epithelium",
+      "proposedHomeNameKey": "epithelium",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Unknown slide layering/shape classification and function.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:27",
+      "facetNameKey": "epithelial ultrastructure",
+      "facetName": "Epithelial ultrastructure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5ae6abaa898b5043e1ba705a18792314e52e8edb02dd36c3c3d2ef38efcba772",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN65.2",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            189.99,
+            121.9,
+            208.5
+          ],
+          "sourceBodySha256": "4fdca3af982dc302dc96c24e506d4507e4f6e2b4d78dacae9ce1867c85abcb8f",
+          "editorialTaskSha256": "d0abc6da4b5c19fd11bb3f0816d02c4069565b1086e1e1c0c028a5b87c2fe32f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Epithelium",
+      "proposedHomeNameKey": "epithelium",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Electron-micrograph junctions/surface/basal attachments and function.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:28",
+      "facetNameKey": "essential medicines in primary care",
+      "facetName": "Essential medicines in primary care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2526952f9918457f2c4778cbe3c832f14667ab00b551959783939d1c6a3b7701",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM19.2",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            361.74,
+            98.6,
+            379.86
+          ],
+          "sourceBodySha256": "672d78685e483c8ea8a06577a918be4e388351ab284344cd4313a257338e6a7d",
+          "editorialTaskSha256": "ebd44218904d0ecce898d01c33f4a178a8fe6305d4b6ebbee5bee2b88b9b9d34",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Essential medicines",
+      "proposedHomeNameKey": "essential medicines",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "essential medicines"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "List-to-availability/rational-prescribing/service-delivery relationship; no current list version certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:29",
+      "facetNameKey": "ethical clinical conduct",
+      "facetName": "Ethical clinical conduct",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:96fff5257b9c86226c54ee7a424823daa2862e307478c7be7b6acac8d321cb64",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG35.9",
+          "page": 441,
+          "rowBBox": [
+            49.1,
+            149.22,
+            103.1,
+            175.8
+          ],
+          "sourceBodySha256": "8fb4cddcec3c68014a2a4a1f635d223a9911eee623c24c0c4c8781794fffa41a",
+          "editorialTaskSha256": "fad5a510b52f48b76e60ede15ea2aded1dfe64d824c39bb11ceeae56cb168cb1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Medical ethics",
+      "proposedHomeNameKey": "medical ethics",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "medical ethics"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Respect/confidentiality/boundaries in simulated encounters.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-08:30",
+      "facetNameKey": "ethical research practice",
+      "facetName": "Ethical research practice",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e71dc33fe80375951501e4b90f9dd257c93896d5e6f7e48866841f2466f25cdc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM10.29",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            275.16,
+            95.2,
+            307.2
+          ],
+          "sourceBodySha256": "fefde6b2bf7a74b80be377821f05eb56eff7075c7629acb558d28c7c2bf19e7d",
+          "editorialTaskSha256": "d387a49615119502246f497192aa32f78b5a3b0b3d1aa8c345292f1e1c8d48e9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Research ethics",
+      "proposedHomeNameKey": "research ethics",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated study design/documentation under applicable ethics guidance, not actual ethics approval.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 25,
+    "existingNameHomeLinks": 14,
+    "newNameHomeLinks": 16,
+    "facetsWithoutInitialHomeProposal": 419
+  }
+}

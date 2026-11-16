@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-audit",
+  "checkedHead": "fc7c2f016de201ba9d227196db9d3bdeb4d31612",
+  "worklistBlobSha": "b10a4cbcee177711364294c9e2d7fdb9e1f66714",
+  "worklistRows": 570,
+  "dispositionCounts": {
+    "semantic-screening-pending": 512,
+    "review-variant-dispositions": 32,
+    "review-exact-label-candidate": 25,
+    "review-source-confirmed-shared-topic": 1
+  },
+  "missingDispositions": 0,
+  "gestationalProposal": {
+    "name": "Gestational trophoblastic neoplasia",
+    "sourceReferences": [
+      {
+        "referenceId": "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e",
+        "observedCode": "PA29.5"
+      },
+      {
+        "referenceId": "nmc-2024-ref:4441130f4df6101b38c55f8b38ca2914ad39644ed00c3bcd1996e13f43706144",
+        "observedCode": "OG9.5"
+      }
+    ],
+    "sourceScopeEvidence": {
+      "topicNameKey": "trophoblastic neoplasia",
+      "competencyCodes": [
+        "OG9.5",
+        "PA29.5"
+      ],
+      "officialSources": [
+        "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+        "https://www.nmc.org.in/MCIRest/open/getDocument?path=%2FDocuments%2FPublic%2FPortal%2FLatestNews%2Fdocument+%288%29_merged.pdf"
+      ],
+      "scope": "Both rows explicitly concern gestational trophoblastic neoplasms. Preserve obstetric assessment, management and follow-up separately from pathology mechanisms and morphology."
+    },
+    "registryCollisionCheck": "pending",
+    "mappingAccepted": false
+  }
+}

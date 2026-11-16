@@ -1,0 +1,1185 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-10.json",
+      "sha256": "8b42358aa9fe8aea57654b5ca3465604285d1edcaa555b5622147c744210f467"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-11.json",
+      "sha256": "92422976e793d8bed80b24fc30fa4a30f75e7a62566d1d1522cfb8bd3c6eda60"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-12.json",
+      "sha256": "0f7800bddee98ede8dd3e320717e82a539314538be0b1c5c8feb49663d3b74e1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-13.json",
+      "sha256": "7901c12dfa052dd80e0714f33c4cc99ad898256def2c63c4edef29b4aee3ff27"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-14:01",
+      "facetNameKey": "lower-limb radiographic anatomy",
+      "facetName": "Lower-limb radiographic anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:858e8f48f05b0f45bbb0b51bdeea921dec8fc2c20d58c45f2a66b7272ee6d0f8",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN20.6",
+          "page": 119,
+          "rowBBox": [
+            51.2,
+            508.32,
+            122.2,
+            546.48
+          ],
+          "sourceBodySha256": "c2d5520805fc3c8c73f581aca3db81d0185fad816cfca336588e50258946c7a0",
+          "editorialTaskSha256": "07fc1636823fd0884ec2d6d291f49cc7956e22048bc62e9cdd4d522d293fc249",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Lower limb",
+      "proposedHomeNameKey": "lower limb",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "lower limb"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paired AP/lateral bone/joint-space identification and landmark orientation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:02",
+      "facetNameKey": "lumbar puncture anatomy",
+      "facetName": "Lumbar puncture anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d5ee262565dd602de4d3c2156bf98cc06a87ce2f97d9855a494a8d1168af00d2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN50.3",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            154.86,
+            122.2,
+            185.82
+          ],
+          "sourceBodySha256": "6f355dcad68a472aa2a9ff6f8f683d5bc8286403e2a050a4ecf8197d7fc0d03c",
+          "editorialTaskSha256": "0be615bfcf8859ae6ded68aa2b334491d23770063dfd23c71263a63a605b1162",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lumbar puncture",
+      "proposedHomeNameKey": "lumbar puncture",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "lumbar puncture"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sagittal adult conus/interspace/trajectory/layer anatomy, not procedure competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:03",
+      "facetNameKey": "lumbar puncture indications",
+      "facetName": "Lumbar puncture indications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.7",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            324.18,
+            102.7,
+            351.54
+          ],
+          "sourceBodySha256": "7e3f4bee7f168d292eadcc1a7c888308b0d1ba20ccc2c8461303b0f1e4d60804",
+          "editorialTaskSha256": "9ba8863a036f99b34c9254299ead28f2099fbe79c7a2bfa0a0b5714d93649cc4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Lumbar puncture",
+      "proposedHomeNameKey": "lumbar puncture",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "lumbar puncture"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Appropriate LP use and comparative meningitis CSF patterns.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:04",
+      "facetNameKey": "lumbar puncture technique",
+      "facetName": "Lumbar puncture technique",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.8",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            351.54,
+            102.7,
+            382.62
+          ],
+          "sourceBodySha256": "b1feb0d29db2079f22b0ab9b6e9463af64d18f30b5864331fd6b136c7d5515d3",
+          "editorialTaskSha256": "d0e3a1d44600a1b7d5446ea899744a9f7bbda6c173829b87f6a696dc14144a22",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Lumbar puncture",
+      "proposedHomeNameKey": "lumbar puncture",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "lumbar puncture"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Mannequin preparation/positioning/sampling/safety demonstration only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:05",
+      "facetNameKey": "lymphoma distinction",
+      "facetName": "Lymphoma distinction",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3ecad40613baea4cd204cc412f6d757b395e9f8058d898d1fb0a31e0bc686867",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA19.3",
+          "page": 193,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            157.26
+          ],
+          "sourceBodySha256": "5ac8b4a1c2e3f75eeee908c8a98b3d401cc2025a89f02eb5ae18326939a348e7",
+          "editorialTaskSha256": "5f4ecdae412be2175cdaf369aa204ca9642634fdc3484f7cc8b4a5b2389d794a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Lymphoma",
+      "proposedHomeNameKey": "lymphoma",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative Hodgkin/non-Hodgkin differentiation with architecture/cells/markers; identities remain distinct.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:06",
+      "facetNameKey": "macrocytic smear",
+      "facetName": "Macrocytic smear",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ef2fd78563d7d5c8e89253a2599905bd1d727ebc9dc5f983921d1cba7a2b353d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA15.3",
+          "page": 192,
+          "rowBBox": [
+            51.5,
+            165.54,
+            105.6,
+            195.06
+          ],
+          "sourceBodySha256": "493b0bd2c58623c3811011b15446a1f964ebd3f82f1bb3ffe413c8cfe90ab859",
+          "editorialTaskSha256": "a4f5cbc02e0c01a15a099accf443941f1dcfc22b93c643924673343019d84e3c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Macrocytic anaemia",
+      "proposedHomeNameKey": "macrocytic anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "macrocytic anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Smear macrocytic patterns, macro-ovalocytes/hypersegmentation when present; no assumed cause.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:07",
+      "facetNameKey": "malaria pathology",
+      "facetName": "Malaria pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.1",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            315.6,
+            105.6,
+            334.32
+          ],
+          "sourceBodySha256": "a5d4ad1b164973833c90405659e6bccea4b9ece6d12853eea74ea960e1c9baaf",
+          "editorialTaskSha256": "9f41a873e36307b117a1a111a27a4c5c8de9bae3ece3e94bdffac1fb8f5b406f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Malaria",
+      "proposedHomeNameKey": "malaria",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Erythrocyte infection/haemolysis/sequestration and organ pathology.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:08",
+      "facetNameKey": "malaria species differentiation",
+      "facetName": "Malaria species differentiation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e5bebcc10cee836b56d9deb3a8a0d2b038323bafafaecb0c1747630e0cc995e3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.12",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            340.62,
+            108.8,
+            394.98
+          ],
+          "sourceBodySha256": "7832d1e518cbf8bfa7b55e92f3d20435913bb5e4203d188facf88d9462add0cf",
+          "editorialTaskSha256": "5ee56c8aadea46bfb873f6339842ea84d5a8457688f4a6b80853655b1ee6e15c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Malaria",
+      "proposedHomeNameKey": "malaria",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Falciparum-versus-other smear differentiation with explicit acute-serology limits.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:09",
+      "facetNameKey": "malignant fever",
+      "facetName": "Malignant fever",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2e1920bc4397605615c780624f6feaea49f84088f9618bae663e40f74763c234",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.5",
+          "page": 288,
+          "rowBBox": [
+            44.2,
+            275.94,
+            102.7,
+            316.62
+          ],
+          "sourceBodySha256": "9c629accdf8426b24be69b0df27d03e4de78df8f188b9835dcac970fe26de8ae",
+          "editorialTaskSha256": "2e60783a28ac3577248ead5bac6dac465823c6ef338dcd27ed9a71938534ca7c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Haematological/lymphatic malignancy mechanisms and clues, not all malignant-fever diagnoses.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:10",
+      "facetNameKey": "malnutrition care planning",
+      "facetName": "Malnutrition care planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f99ba45016864aaa4b2e3873a6321856e0b09b8bb4f65c65f94c5dfb480f4f2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE10.3",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            231.96,
+            103.1,
+            275.7
+          ],
+          "sourceBodySha256": "99a9f85f6f74875f9bf75da6322a44c64e8665f6fce589eeadf4b1acb68c4143",
+          "editorialTaskSha256": "023f503319403881a6b322bc03d0de3a2532d906224dc226bf73c84416692f53",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Malnutrition",
+      "proposedHomeNameKey": "malnutrition",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated paediatric classification/setting/rehabilitation/follow-up/prevention.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:11",
+      "facetNameKey": "malnutrition counselling",
+      "facetName": "Malnutrition counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:00af7c0ba523493dac28a6bde8a0821b6c7302d76918f7b18d1f563efcd684e6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE10.4",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            351,
+            103.1,
+            379.38
+          ],
+          "sourceBodySha256": "3e2ddfec36cb2c654de1a626b3090ac9ff5f0c2aab350998ab732a7604924d67",
+          "editorialTaskSha256": "fe4fb5a75e5a709f98db38cfc14271d6482517f6f953813d71c5704d0acfecb0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Malnutrition",
+      "proposedHomeNameKey": "malnutrition",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated caregiver feeding/follow-up/warning-sign explanation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:12",
+      "facetNameKey": "mandibular landmarks",
+      "facetName": "Mandibular landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ed4f719e912a42534fb44f259a7cde221db796c6cdc892ba173c3409681b052f",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN26.4",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            448.62,
+            122.2,
+            478.86
+          ],
+          "sourceBodySha256": "02cf7e8caca66a2e5c544fef2d4f3785ff2e82c19252e21b295948fe0d405256",
+          "editorialTaskSha256": "af4058a3e8516c3fd6004deebdb69a3b0d8e4c706f06222247c20cb48c6c4c6b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Mandible",
+      "proposedHomeNameKey": "mandible",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Mandible specimen orientation and source-named landmarks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:13",
+      "facetNameKey": "mania in primary care",
+      "facetName": "Mania in primary care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4f04ad5a70f37a80ea9a63ee19112bf7dd5e804a423c36f19f596696333c700c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+          "subjectId": "psychiatry",
+          "code": "PS6.1",
+          "page": 353,
+          "rowBBox": [
+            47.2,
+            161.28,
+            103.9,
+            189.06
+          ],
+          "sourceBodySha256": "bd02d026185ed3362db8557da9cfe32fe177fa19cfd3da336ca0a9590b0467a5",
+          "editorialTaskSha256": "259ea26c7e822746b5524addfb4f9dd9daac583af16d830b6e2e87a607f75197",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Mania",
+      "proposedHomeNameKey": "mania",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated recognition/safety/assessment/referral, not independent psychiatric management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:14",
+      "facetNameKey": "mantoux interpretation",
+      "facetName": "Mantoux interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4434b282cda23804e96c3dd3b2d27944c3b5fba56c752048ea5136f934215e00",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.17",
+          "page": 289,
+          "rowBBox": [
+            44.2,
+            438.06,
+            102.7,
+            478.86
+          ],
+          "sourceBodySha256": "d2bf66483f09314dacce5f7d19e03e71dc39e7f20363e8b9007f4d13a4504c2d",
+          "editorialTaskSha256": "27566cef34e768b203cef7e403d03c0843f45422c134dcd379287ae421c68747",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Tuberculosis",
+      "proposedHomeNameKey": "tuberculosis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "tuberculosis"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "tuberculosis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Induration interpreted with exposure/immunity and test limitations.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:15",
+      "facetNameKey": "marrow procedure assistance",
+      "facetName": "Marrow procedure assistance",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:532f595cc5317d46d8d56163e953abbf977a1747e5d1f6b3e13831045fbd2a8d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.15",
+          "page": 289,
+          "rowBBox": [
+            44.2,
+            369.96,
+            102.7,
+            410.76
+          ],
+          "sourceBodySha256": "fcf0f03fab8bf72ee5cb06f5640c56497cddea688c470f54ab1c34529bc6e969",
+          "editorialTaskSha256": "2a1e64da9c0b5444f3946cb7a5db87790899710f7dc5ae0474cc5283e2899828",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Bone marrow sampling",
+      "proposedHomeNameKey": "bone marrow sampling",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Assigned aspiration/biopsy assistance in observation/simulation, not independent procedure.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:16",
+      "facetNameKey": "maternal pelvis",
+      "facetName": "Maternal pelvis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:710524266a6c7d34f254ad791f9a8d3ed54131dcacde6334f3052eab8fcc027c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG13.1",
+          "page": 432,
+          "rowBBox": [
+            49.1,
+            244.62,
+            103.1,
+            288.3
+          ],
+          "sourceBodySha256": "a7d3928eb3da13c937cb6231f4775f1ea30371ab334f3d800e8f68ecec29e137",
+          "editorialTaskSha256": "05f0c3b6fe4d0b5928e753a5b80fca3c557921b2e3b17267f5cf3af4c0732a8c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Bony pelvis",
+      "proposedHomeNameKey": "bony pelvis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Pelvic types/diameters on diagrams; types not enumerated here.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:17",
+      "facetNameKey": "medico-legal autopsy requirements",
+      "facetName": "Medico-legal autopsy requirements",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c1b927ffd3a2349f7c83c0be78a58be1c5b902ea150461708373a4a370fc6dc7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.14",
+          "page": 217,
+          "rowBBox": [
+            45.5,
+            508.5,
+            95.2,
+            543.84
+          ],
+          "sourceBodySha256": "c5209c10600f67f399b8514c23319ef8e355142955df0f2da4690a99b63fa947",
+          "editorialTaskSha256": "47477ba7b59365389d14770cf589d779f04df1d99dfc8e23cd8296098fc039f4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Autopsy",
+      "proposedHomeNameKey": "autopsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated authorization/documentation/examination requirements, not actual legal authorization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:18",
+      "facetNameKey": "medico-legal communication",
+      "facetName": "Medico-legal communication",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a3e1a8fe5f2ed3ddcb128ec8890a6be3f8cea79232cbc05e11681207831f6d27",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.27",
+          "page": 219,
+          "rowBBox": [
+            45.5,
+            259.74,
+            95.2,
+            302.64
+          ],
+          "sourceBodySha256": "69edff32764ddbb88affdb1c3a24633cc39505f3ab1611bc51f37ea17bf0ca23",
+          "editorialTaskSha256": "c872e4c65b4620b0bec2b419af8de1084ec43e3a76fd2f73ae39f78259863630",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Medico-legal practice",
+      "proposedHomeNameKey": "medico-legal practice",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Audience-adapted simulated findings explanation with confidentiality.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:19",
+      "facetNameKey": "medico-legal poisoning issues",
+      "facetName": "Medico-legal poisoning issues",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d0c0f153fc138be741f8039a33061e7db211b22d64b8fa9fd078950b515b0ffd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.10",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            392.22,
+            102.7,
+            419.52
+          ],
+          "sourceBodySha256": "47d09f4f748a73cb6a47af31c290efe11fe7ae4ab8a1a7daae11be6a6ec7de19",
+          "editorialTaskSha256": "2859328ec64e0fa203e683028e865eba8678e94a546dafa58b7770f34896739d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Poisoning",
+      "proposedHomeNameKey": "poisoning",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-guidance documentation/notification/evidence in suspected self-harm/assault; current legal duties not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:20",
+      "facetNameKey": "medico-legal updates",
+      "facetName": "Medico-legal updates",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:47e254d33db106ba5c289ae55881a69a90c28ffbe338404840771eb51ed682ab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM1.8",
+          "page": 216,
+          "rowBBox": [
+            45.5,
+            164.7,
+            95.2,
+            214.44
+          ],
+          "sourceBodySha256": "d32c9c91560dde5b0f5ef25f5495747bd5bbc0ba5897a639b909e3cd15ec1720",
+          "editorialTaskSha256": "c0b04014d33a293371e55d568773945070ecb78a958a82043503528c6fe88448",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Medico-legal practice",
+      "proposedHomeNameKey": "medico-legal practice",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Official publication date/scope/implication retrieval task only; no court/government update invented.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:21",
+      "facetNameKey": "medullary surface landmarks",
+      "facetName": "Medullary surface landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e867a541724bb6f78b29d5b8ba1aa9c1e9313af5204008fedd4697479e88f097",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN58.1",
+          "page": 141,
+          "rowBBox": [
+            51.2,
+            268.83,
+            122.2,
+            317.64
+          ],
+          "sourceBodySha256": "a742579c9179a5c10c3deeb9ff3d0d703d8bf35c5b9bc0d1be8d55bdb6cbb768",
+          "editorialTaskSha256": "d7128b7113e3dbf45279539abdfe5993adf4853620442b91ccc9b113fdf9ae3c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Medulla oblongata",
+      "proposedHomeNameKey": "medulla oblongata",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Medulla specimen orientation and pyramids/olives/tubercles/nerve exit zones.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:22",
+      "facetNameKey": "meningitis differentiation",
+      "facetName": "Meningitis differentiation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:91ca9222ff92580dcbd34834167f4e974484ce9ad95a817d01236171ec6a4600",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE27.3",
+          "page": 347,
+          "rowBBox": [
+            51.3,
+            99.66,
+            103.1,
+            118.62
+          ],
+          "sourceBodySha256": "c258dc7f852d6616909016db3e1d4170150b4e6df259cd50ed564003690f9ba8",
+          "editorialTaskSha256": "84517ffe27d9f669c14738a486ad1e535a508039241b75468c584df7ead73981",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Meningitis",
+      "proposedHomeNameKey": "meningitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bacterial/viral/tuberculous presentation-CSF distinction.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:23",
+      "facetNameKey": "meningitis mechanisms",
+      "facetName": "Meningitis mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f706cc663d2815115357335ffc27ea7fda45fe01f6d1250c7abf6135a1e7be56",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA34.1",
+          "page": 203,
+          "rowBBox": [
+            51.5,
+            388.08,
+            105.6,
+            426.96
+          ],
+          "sourceBodySha256": "28e19362acb412a18f40b94a8fabe41accc75273bc69e3591eaa37c0baf670cf",
+          "editorialTaskSha256": "00888b8d92acc8d4513857096a07884f9221c755e20b265a645a7ac50d6a308f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Meningitis",
+      "proposedHomeNameKey": "meningitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Major-cause pathogenesis/CSF profiles.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:24",
+      "facetNameKey": "meningitis medicines",
+      "facetName": "Meningitis medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:400413b4d8eed20c87bcc64149269f9e26fedd0e1208dea3bf95dece1416938b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.13",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            492.12,
+            102.7,
+            532.8
+          ],
+          "sourceBodySha256": "f4ac485fb11fea9b869a2e3a9a7994b1366dfa24c1bda03226bab077c7b1d965",
+          "editorialTaskSha256": "8e38c4456908cb59e3e6f0167ad1bd182abec872ad7cd528c712fc045a5da2eb",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Meningitis",
+      "proposedHomeNameKey": "meningitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-guidance regimen/dosing/harms comparison; current regimens not certified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:25",
+      "facetNameKey": "meningitis microbiology",
+      "facetName": "Meningitis microbiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2192f181c5ffa328da3475110bbd81386e5a7e032c27763d1555b3717732ddac",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI6.1",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            213.78,
+            108.8,
+            254.88
+          ],
+          "sourceBodySha256": "5aa9398a2436b5870470adbb6c0d642641f012c2cafa2b6f7f54f9ac6c5cc4d3",
+          "editorialTaskSha256": "7909464fd10463080c353bd8f12b17cc30896019a75daec89ec23f7afae05416",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Meningitis",
+      "proposedHomeNameKey": "meningitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bacterial/viral/fungal/parasitic pathogenesis/course/workup; unnamed agents unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:26",
+      "facetNameKey": "mental health warning signs",
+      "facetName": "Mental health warning signs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f6e2f77977178039386c1a7f1e007ba423f1e2b0792a01f7073f201592826cd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM15.2",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            254.64,
+            98.6,
+            285.36
+          ],
+          "sourceBodySha256": "2fa721c8c73e2a7bf385d7fdba4b1dd67da0f34bf0f346e49f4973233cbd0171",
+          "editorialTaskSha256": "80fcbed8bf01e828b7cb61e4b7ead02a0285c49be2f45b2c81bad5697ddb62b1",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Mental health",
+      "proposedHomeNameKey": "mental health",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated early/urgent mental-health warning signs.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:27",
+      "facetNameKey": "mental illness classification",
+      "facetName": "Mental illness classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4c10048948c7a241751adf2440085ac85517ee5b439e8a320f49eafa5a44c673",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM11.1",
+          "page": 227,
+          "rowBBox": [
+            45.5,
+            405.24,
+            95.2,
+            439.8
+          ],
+          "sourceBodySha256": "5a747aa1e7b4a1d4616238489f6c6ec4d91adac53966428b75519b6b3d90835e",
+          "editorialTaskSha256": "7ebd3e7b20b5bfab6c8d22dfdb5cea519083872f1436ddee623117be8eb518d7",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Mental disorders",
+      "proposedHomeNameKey": "mental disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Feature-based representative classification including PTSD; no diagnosis collapse.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:28",
+      "facetNameKey": "metabolic urine screening",
+      "facetName": "Metabolic urine screening",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.5",
+          "page": 169,
+          "rowBBox": [
+            58.5,
+            368.52,
+            108.2,
+            419.28
+          ],
+          "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+          "editorialTaskSha256": "0f7d2e27e8ba0ab4c462fd275c6cfde91eef179feb9424a23f9f6d7577894566",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Inborn errors of metabolism",
+      "proposedHomeNameKey": "inborn errors of metabolism",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Urine screening rationale/limits and paper chromatography separation, not confirmed metabolic diagnosis.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:29",
+      "facetNameKey": "microcytic smear",
+      "facetName": "Microcytic smear",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bd3e0147e2a354e6eeb9312f6281af6adcb2ec4628a07952e429296400a223b9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA14.2",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            455.7,
+            105.6,
+            474.78
+          ],
+          "sourceBodySha256": "e74e20cd4a1481b1239962db876e3b2e6fceb35754592ffb8842b21bd46aafba",
+          "editorialTaskSha256": "2ab40d0b45892b099d8861b29a0ec8b7eead198523ce474748e52d6e604e30f2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Microcytic anaemia",
+      "proposedHomeNameKey": "microcytic anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "microcytic anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Smear microcytosis/hypochromia and accompanying findings without cause assumption.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-14:30",
+      "facetNameKey": "microvascular flow regulation",
+      "facetName": "Microvascular flow regulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:83e7f3e670b5a8310f0380b5b3f3a7491786babaa5c176ee57be255342949ae8",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN5.7",
+          "page": 110,
+          "rowBBox": [
+            51.2,
+            108.42,
+            120.4,
+            139.74
+          ],
+          "sourceBodySha256": "40d882a6ff7d69187f9c2fa0c4ad28fa1c776a4715a1585fd618affff5c89796",
+          "editorialTaskSha256": "d316135a51b2dccbef6601675512cedef53f33be79c4d1249316b4f15ac0e8f5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Microcirculation",
+      "proposedHomeNameKey": "microcirculation",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diagrammed metarteriole/sphincter/AV-connection flow regulation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 22,
+    "existingNameHomeLinks": 8,
+    "newNameHomeLinks": 22,
+    "facetsWithoutInitialHomeProposal": 239
+  }
+}

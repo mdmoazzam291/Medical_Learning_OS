@@ -1,0 +1,2172 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-mixed-scope-decomposition-proposals",
+  "sourceHead": "d448e403aeef9261c94bed0770f3081840c67f7e",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "totals": {
+    "parentNames": 20,
+    "sourceTaskAppearances": 21,
+    "componentProposals": 133,
+    "mixedParentsWithoutDecompositionProposal": 49
+  },
+  "rows": [
+    {
+      "parentNameKey": "abdominal diagnostic modalities",
+      "parentName": "Abdominal diagnostic modalities",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN54.4",
+          "page": 140,
+          "rowBBox": [
+            51.2,
+            192.66,
+            122.2,
+            217.14
+          ],
+          "sourceBodySha256": "d81b4249f7f82d0d19739fdbe2128cba7fbfa29c92cfe17a34dbf52a91abfbaf",
+          "editorialTaskSha256": "f6d3da9f2c7991f89d38d4cdd4dd256d20e0d33e5653df8a56efa4038c133535",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:01:01",
+          "name": "ERCP",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:01:02",
+          "name": "CT imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:01:03",
+          "name": "MRI imaging",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:01:04",
+          "name": "Arteriography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:01:05",
+          "name": "Diagnostic modality selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb4b2a0bf40095c198b28a9ac949713060dc74ddf26c4bc79888203947c4568a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "abuse recognition",
+      "parentName": "Abuse recognition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE6.12",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            411.3,
+            103.1,
+            443.88
+          ],
+          "sourceBodySha256": "a73cc4b215250f501180f4b5fbe30784204f70a9fdfe062f72ccc1667de39fea",
+          "editorialTaskSha256": "27056103a5d8d0883fef1e5e555ecde41889e70c7133ed1110691de55e824e7f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:02:01",
+          "name": "Sexual abuse recognition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:02:02",
+          "name": "Substance use recognition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:02:03",
+          "name": "Abuse prevalence data interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:02:04",
+          "name": "Safeguarding pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "alcohol toxicology",
+      "parentName": "Alcohol toxicology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH3.8",
+          "page": 177,
+          "rowBBox": [
+            51.7,
+            345.78,
+            105.7,
+            378.54
+          ],
+          "sourceBodySha256": "47861cac6f19de827018d1dc6b5fe23a5cae701edca34ed8bb3dbf9bf6ffc195",
+          "editorialTaskSha256": "5d4454602420ea31515fc71aabed8fc212677650b4592af6ccd2eaeae7659eeb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:03:01",
+          "name": "Methanol poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:03:02",
+          "name": "Chronic ethanol-related presentations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:03:03",
+          "name": "Alcohol exposure assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:03:04",
+          "name": "Alcohol toxicology management simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "applied abdominal anatomy",
+      "parentName": "Applied abdominal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN47.6",
+          "page": 135,
+          "rowBBox": [
+            51.2,
+            351.78,
+            121.3,
+            426.3
+          ],
+          "sourceBodySha256": "b7012fa4fbb2b3935fc35d2d6f2744bca68b3ee1b0cd5477e07d70e716406390",
+          "editorialTaskSha256": "9b8ce0a2158971d9a447333925ce728c8b9711bdec4395a42471cd323f26895e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:04:01",
+          "name": "Splenic notches",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:02",
+          "name": "Accessory spleen",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:03",
+          "name": "Kehr sign",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:04",
+          "name": "Vagotomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:05",
+          "name": "Liver biopsy landmarks",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:06",
+          "name": "Biliary obstruction",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:07",
+          "name": "Biliary referred pain",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:08",
+          "name": "Periumbilical pain",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:09",
+          "name": "Loin-to-groin pain",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:10",
+          "name": "Gastric cancer lymphatic spread",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:04:11",
+          "name": "Applied abdominal anatomy case integration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d303be0e124c27d8878796725bdc8479a5d50ca1ad6aed93c754d8ba1fbccb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "applied digestive physiology",
+      "parentName": "Applied digestive physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY4.11",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            163.98,
+            107.8,
+            207.18
+          ],
+          "sourceBodySha256": "984cbe3d1d06cd8c9101b2e956dcbd033094c0c90c027eb142bdbdf2f524d5ca",
+          "editorialTaskSha256": "bd1551ed9c22bee7ce8d50c239ff5029b000365ebda84ecaf4a9c6c8bb824a1f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:05:01",
+          "name": "Peptic ulceration",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:02",
+          "name": "Gastro-oesophageal reflux",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:03",
+          "name": "Vomiting",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:04",
+          "name": "Diarrhoea",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:05",
+          "name": "Constipation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:06",
+          "name": "Adynamic ileus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:07",
+          "name": "Hirschsprung disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:05:08",
+          "name": "Digestive disorder physiological mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "applied pelvic anatomy",
+      "parentName": "Applied pelvic anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN48.5",
+          "page": 137,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            171.42
+          ],
+          "sourceBodySha256": "1ceb75b07bf56517b4c438098fee5a11ba4c29c95b18ad1fbc5276e891667af6",
+          "editorialTaskSha256": "70e1af96675c485b35a67b388f5a9059cc220e471b3ed15c4ee2e50ceff74038",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:06:01",
+          "name": "Suprapubic bladder access",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:02",
+          "name": "Prostatic obstruction",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:03",
+          "name": "Uterine retroversion",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:04",
+          "name": "Uterine prolapse",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:05",
+          "name": "Haemorrhoids",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:06",
+          "name": "Anal fistula",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:07",
+          "name": "Vasectomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:08",
+          "name": "Tubal pregnancy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:09",
+          "name": "Tubal ligation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:06:10",
+          "name": "Applied pelvic anatomy case integration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "applied respiratory physiology",
+      "parentName": "Applied respiratory physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY6.6",
+          "page": 155,
+          "rowBBox": [
+            58.5,
+            108.96,
+            107.8,
+            141.66
+          ],
+          "sourceBodySha256": "cbba3c3da9b8fec4b8e761ec877ebae25b7ace11b1a3a0a49b70de37a3273265",
+          "editorialTaskSha256": "687509af3f89d8f8b1d60c59b9869d45f6f1c3d17707eeafcfb8dc9c81df88b5",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:07:01",
+          "name": "Dyspnoea",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:02",
+          "name": "Hypoxia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:03",
+          "name": "Cyanosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:04",
+          "name": "Asphyxia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:05",
+          "name": "Drowning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:06",
+          "name": "Periodic breathing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:07",
+          "name": "Oxygen therapy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:07:08",
+          "name": "Respiratory disorder physiological mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "applied third-week embryology",
+      "parentName": "Applied third-week embryology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN79.5",
+          "page": 147,
+          "rowBBox": [
+            51.2,
+            394.62,
+            121.7,
+            440.34
+          ],
+          "sourceBodySha256": "287cc29277c92c8a83583362c2185104c399a679b723e8f1a9d47151f3f9b1e9",
+          "editorialTaskSha256": "61d6da008a9335be2b84bfe5c6bb36d92c4d1483d9a93b0e6e8158ac63f96249",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:08:01",
+          "name": "Persistent primitive streak",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:08:02",
+          "name": "Notochord remnants",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:08:03",
+          "name": "Neural tube closure failure",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:08:04",
+          "name": "Teratoma",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:08:05",
+          "name": "Nucleus pulposus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:08:06",
+          "name": "Third-week developmental correlations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "assessment to diet plan",
+      "parentName": "Assessment to diet plan",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.9",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            261.54,
+            98.6,
+            302.52
+          ],
+          "sourceBodySha256": "fa80915272ca2e7a582dde932d707c8aaa436453bfe3cfc29fa7f9fd3bd19444",
+          "editorialTaskSha256": "96fbc03407d9d81c483e3b4d42d2bdb6f1f1766a2276f6760dcd873927690f8d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:09:01",
+          "name": "Nutritional assessment",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:09:02",
+          "name": "Health-promoting diet planning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:09:03",
+          "name": "Assessment-informed diet planning",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "blood components",
+      "parentName": "Blood components",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.1",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            370.56,
+            107.8,
+            392.82
+          ],
+          "sourceBodySha256": "81edfc83fffeb0961d9e3ba1f78ff9b9940f2e2005c9fdf345be4a6a7cb67a1e",
+          "editorialTaskSha256": "85e0198f97819f14abd148c9babf9568326518da984fd7812fcda0bd4ea1bb9a",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:8962607dd9e8191c2df40ea46f7b02551a189f00d9466e56dfe111a3fb1f670b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA21.2",
+          "page": 193,
+          "rowBBox": [
+            51.5,
+            424.38,
+            105.6,
+            441.96
+          ],
+          "sourceBodySha256": "6684e87918e641e45f0cba76268337dd08d2789467cda447e2cace3c68ba9ab3",
+          "editorialTaskSha256": "c3646be7fa1c9cccc95aad69b170882b3157a3a7efec7d58000a6aa28d69b009",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:10:01",
+          "name": "Plasma",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:10:02",
+          "name": "Formed blood elements",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:10:03",
+          "name": "Blood transport functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:10:04",
+          "name": "Blood defence functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:10:05",
+          "name": "Haemostasis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:10:06",
+          "name": "Blood component selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8962607dd9e8191c2df40ea46f7b02551a189f00d9466e56dfe111a3fb1f670b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "calot triangle",
+      "parentName": "Calot triangle",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN47.7",
+          "page": 135,
+          "rowBBox": [
+            51.2,
+            426.3,
+            121.3,
+            450.78
+          ],
+          "sourceBodySha256": "2c57b1fafeeb0e76c493e522ab09d379ee29b3cc889e2b66ddcf7e1ef5f97b9a",
+          "editorialTaskSha256": "c3fc0acb0cd5f0ffcc570f5702e7585a083133136877b3c3368f0bd638de48bb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:11:01",
+          "name": "Classical Calot triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:11:02",
+          "name": "Hepatocystic triangle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:11:03",
+          "name": "Cystic artery",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:11:04",
+          "name": "Biliary ducts",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:11:05",
+          "name": "Triangle terminology distinction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:11:06",
+          "name": "Biliary structure localization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:79b85b4c2c59c4b175a84d66bab6534536b2d83b99475631e5628e03f168a8af"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cancer examination skills",
+      "parentName": "Cancer examination skills",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.9",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            262.68,
+            102.7,
+            303.36
+          ],
+          "sourceBodySha256": "7abf29b95897a6c6036550afeb7538c3cf849b22f6dc2b73f685efed5349dd43",
+          "editorialTaskSha256": "eb0f341bf699481ceb32c1d41e67db9c9979cb53b3963654494aa8e4b472d14a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:12:01",
+          "name": "Breast examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:12:02",
+          "name": "Rectal examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:12:03",
+          "name": "Cervical examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:12:04",
+          "name": "Cervical cytology sampling",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:12:05",
+          "name": "Cancer examination model demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "case-based test interpretation",
+      "parentName": "Case-based test interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.19",
+          "page": 171,
+          "rowBBox": [
+            58.5,
+            216.96,
+            108.2,
+            459.36
+          ],
+          "sourceBodySha256": "533a057de60caa4097d7a0552eb77523007a602c1ca4b67e55ef7556a4a8d096",
+          "editorialTaskSha256": "37644e2fc15fd49b1b51992054b36a1ffc3864e38458b00e1ca782e4c75098f8",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:13:01",
+          "name": "Glycaemic test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:02",
+          "name": "Lipid test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:03",
+          "name": "Cardiac test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:04",
+          "name": "Renal test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:05",
+          "name": "Hepatic test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:06",
+          "name": "Pancreatic test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:07",
+          "name": "Thyroid test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:08",
+          "name": "Genetic test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:09",
+          "name": "Nutritional test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:10",
+          "name": "Acid–base test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:11",
+          "name": "Mineral test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:12",
+          "name": "Electrolyte test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:13",
+          "name": "Gout test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:14",
+          "name": "Nephrotic syndrome test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:15",
+          "name": "Jaundice test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:13:16",
+          "name": "Vitamin deficiency test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "chest trauma simulation",
+      "parentName": "Chest trauma simulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.10",
+          "page": 407,
+          "rowBBox": [
+            45,
+            262.32,
+            101.7,
+            296.88
+          ],
+          "sourceBodySha256": "71391a838c43c005fa2ac353b445e3336fefba1f80889577a132c92b65d47413",
+          "editorialTaskSha256": "7ab345f9ba58b0312278d9973be3ee953f425f70462ab9fb0d80b7c4bb884e70",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:14:01",
+          "name": "Tension pneumothorax",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:14:02",
+          "name": "Haemothorax",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:14:03",
+          "name": "Flail chest",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:14:04",
+          "name": "Airway maintenance simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:14:05",
+          "name": "Chest trauma recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:14:06",
+          "name": "Chest trauma initial management simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d7b1e90d034a76d26fca99a039c6327ca26c82d4ef82d033305d5f98e097a7f9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "cholinergic drugs",
+      "parentName": "Cholinergic drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH2.2",
+          "page": 175,
+          "rowBBox": [
+            51.7,
+            418.56,
+            105.7,
+            463.56
+          ],
+          "sourceBodySha256": "b9a1048dcfb86d6a3e112014f5f4ae901ffa5ffe30bca938e3b57386e3dbb773",
+          "editorialTaskSha256": "81676cf954bc25e4bf0d0683db5fdc09fbf32076199c232695dbad214e7ff4bb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:15:01",
+          "name": "Cholinergic agents",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:02",
+          "name": "Anticholinergic agents",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:03",
+          "name": "Organophosphate poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:04",
+          "name": "Cholinergic drug kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:05",
+          "name": "Cholinergic drug actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:06",
+          "name": "Cholinergic drug indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:07",
+          "name": "Cholinergic drug adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:15:08",
+          "name": "Organophosphate poisoning management simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "common ent mechanisms",
+      "parentName": "Common ENT mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN1.2",
+          "page": 420,
+          "rowBBox": [
+            40,
+            182.34,
+            94.3,
+            213.84
+          ],
+          "sourceBodySha256": "5f15328c828988f4a608df86037de8894eddc60ab55e60cce7b494c1189231f8",
+          "editorialTaskSha256": "001252839d5efcff4e741788320a2518ffe535d6f31753002e6d883a71fd2da0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:16:01",
+          "name": "Chronic otitis media",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:16:02",
+          "name": "Otosclerosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:16:03",
+          "name": "Adenotonsillitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:16:04",
+          "name": "Nasal polyposis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:16:05",
+          "name": "ENT disorder mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "complication-directed treatment",
+      "parentName": "Complication-directed treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.18",
+          "page": 301,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            174.06
+          ],
+          "sourceBodySha256": "295234632c82cd9c04c2eb7c13b33252ae7eb76d90ee90203d23c2a8b60ff720",
+          "editorialTaskSha256": "93767b9775ca964d8a9cd5a85869b42cd2e919fc2fffa2e2e0b263b2319b2e9d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:17:01",
+          "name": "Neurological complication pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:17:02",
+          "name": "Renal complication pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:17:03",
+          "name": "Retinal complication pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:17:04",
+          "name": "Cardiovascular complication pharmacotherapy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:17:05",
+          "name": "Medicine safety monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6e6057458d848a2c6803a1ba81816c2ba378e5e3055ca6ba9ae73ac958bf99cc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "concepts of death",
+      "parentName": "Concepts of death",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.3",
+          "page": 217,
+          "rowBBox": [
+            45.5,
+            108.54,
+            95.2,
+            157.5
+          ],
+          "sourceBodySha256": "da46f4a8bbbeacf425beed1f0097c9675b2110dc53fddb7daf38853ed9b681d4",
+          "editorialTaskSha256": "aefb80e47f6b64bcf7c82562947d7d877b915f1f49b133a97484e2bae231b02d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:18:01",
+          "name": "Somatic death",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:18:02",
+          "name": "Cellular death",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:18:03",
+          "name": "Cortical death concepts",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:18:04",
+          "name": "Brainstem death concepts",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:18:05",
+          "name": "Death by neurological criteria",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:18:06",
+          "name": "Death concept comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "conventional examination",
+      "parentName": "Conventional examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.2",
+          "page": 420,
+          "rowBBox": [
+            40,
+            263.16,
+            94.3,
+            344.16
+          ],
+          "sourceBodySha256": "85e0f24786246d3d79137a7a5e31e7c0b953efbd8b1f4ff32f4ce98fa2d8905f",
+          "editorialTaskSha256": "62cf75eeee9d81c4fa1026c6c2f8dc18adf4c95c991e230d4c1ceaec76d4ead9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:19:01",
+          "name": "Headlamp examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:02",
+          "name": "Nasal speculum examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:03",
+          "name": "Tongue depressor examination",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:04",
+          "name": "Ear examination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:05",
+          "name": "Sinus examination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:06",
+          "name": "Neck examination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:19:07",
+          "name": "Laryngeal crepitus assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6dae7477c88dc08e94151f15d9883a1992b207a743ed05bb807e34880117744e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "creatinine estimation",
+      "parentName": "Creatinine estimation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.9",
+          "page": 170,
+          "rowBBox": [
+            58.5,
+            122.22,
+            108.2,
+            151.8
+          ],
+          "sourceBodySha256": "121c75d21f79f8c2161ce30a45682dffe9d864b34132afe1d1595d3e27014f7d",
+          "editorialTaskSha256": "009c0c967ebeaa9583a4225143738666a7fbd4b064223265cd5096c821de9f4e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-01:20:01",
+          "name": "Serum creatinine estimation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:20:02",
+          "name": "Timed creatinine clearance",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:20:03",
+          "name": "Creatinine assay performance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-01:20:04",
+          "name": "Creatinine clearance calculation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

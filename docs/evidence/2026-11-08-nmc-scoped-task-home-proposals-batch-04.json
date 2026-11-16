@@ -1,0 +1,1151 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-04:01",
+      "facetNameKey": "cancer examination",
+      "facetName": "Cancer examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ac68074591afece652b55a1822bd83f059feeadbc0d6538f902c2dca93e11f90",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.8",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            221.76,
+            102.7,
+            262.68
+          ],
+          "sourceBodySha256": "426f42b0f98052c162479e9359f63eade210cccf491cee2bf773a3e487fddd06",
+          "editorialTaskSha256": "2253a0a17852afb0659b39ea7c67e43595968271d5b437d4eca517926fdbfc0e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "General/focused examination and documentation of extent, spread and complications only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:02",
+      "facetNameKey": "cancer genetics",
+      "facetName": "Cancer genetics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:79146ece20bd0fc3d5b433bdf73ba8808fe07f51bf4d1a8ddd1a9f082d413b45",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.2",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            469.08,
+            102.7,
+            496.44
+          ],
+          "sourceBodySha256": "cec6fca931aabbafef1f7785f92a0eb6fc0b2acafdbd3a9d5945d4455351ed80",
+          "editorialTaskSha256": "02ba5aea3c6f21d41ffa2f7ef596f24f5dc6e5d8ac4233fc8fe58f262ab45811",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Germline and somatic alterations in representative cancers; no exhaustive gene enumeration.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:03",
+      "facetNameKey": "cancer history",
+      "facetName": "Cancer history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:715756bba4a2f1aef2b33f9f3aae7debe3c88a39eb8ec17f10f00f359b4b10a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.7",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            181.14,
+            102.7,
+            221.76
+          ],
+          "sourceBodySha256": "d8aabb3ad0d4b78639daf01e5d53b89ea162bbadf960e8d17d7ad3b2a4b24d55",
+          "editorialTaskSha256": "31e218fef3963a2ae8890c4167d0ee7226a3ddbf4adaa020ed2ec65f46a44c7f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptoms, exposures, risks and family history elicitation/presentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:04",
+      "facetNameKey": "cancer immunity",
+      "facetName": "Cancer immunity",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0a872699c4d1d6fb11638fa4e356bb21614341f2cc6e2fc919445def7528fbea",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA6.6",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            352.02,
+            105.6,
+            380.1
+          ],
+          "sourceBodySha256": "18599c8a7b6630d2831bb825e0c52a6dd7b7f63538d33248b86e5568c266e811",
+          "editorialTaskSha256": "4592dd93ff098c664ddadd958803528d6a9c24fea1c30e6d4b5bcc68e0149989",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Immune recognition/escape and representative immunotherapy rationale, not prescribing competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:05",
+      "facetNameKey": "cancer treatment preferences",
+      "facetName": "Cancer treatment preferences",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4973f120f2b81a63f10da33b7b8e3d6eedc7a9a509ebd4188342d2c0a539ea4e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.16",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            507.6,
+            102.7,
+            535.08
+          ],
+          "sourceBodySha256": "0628cedb3a288906a91f0fff08763a5a7ed6b40e3673ae2584800f14bccab583",
+          "editorialTaskSha256": "c27df57cba6302f7a5e0a0f1501307cc88399d10622dc1f40a955805814ad98e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated patient goals/preferences discussion, not actual treatment authorization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:06",
+      "facetNameKey": "carbohydrate test interpretation",
+      "facetName": "Carbohydrate test interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC3.6",
+          "page": 163,
+          "rowBBox": [
+            58.7,
+            373.26,
+            108.5,
+            416.88
+          ],
+          "sourceBodySha256": "858dbc55430aecdf642938d0345e17c9a92c1caca165d22a6bd722ac29cd5671",
+          "editorialTaskSha256": "63020bec63a815eee0d07aef4eb73fcf3f060c64138d14bd6689e82f404fd747",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Carbohydrate metabolism",
+      "proposedHomeNameKey": "carbohydrate metabolism",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Glucose/HbA1c and related result interpretation with test limitations; not all carbohydrate metabolism coverage.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:07",
+      "facetNameKey": "cardiac care empathy",
+      "facetName": "Cardiac care empathy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:18bafd4febe6232c20ed825fb3aab2e2985f9899d018150c890ade487908cec9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.11",
+          "page": 341,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            84.9
+          ],
+          "sourceBodySha256": "096f14aa78134dbc5ea9f42ccb8e133ecc476c47086f43ef3c5c60406f6b2b25",
+          "editorialTaskSha256": "4272ac07d1a5cd16e6fe5bdb275d565dc3a4215b477fa48e6532aaf43f6cdfaf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Paediatric cardiac care",
+      "proposedHomeNameKey": "paediatric cardiac care",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-appropriate simulated child/caregiver empathy, not adult cardiac communication equivalence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:08",
+      "facetNameKey": "cardiac conduction anatomy",
+      "facetName": "Cardiac conduction anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:88e0d1756c1c67ac963679a054762b14eba38159a1cff3be0734cfaf47044618",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN22.7",
+          "page": 122,
+          "rowBBox": [
+            51.2,
+            303.9,
+            122.2,
+            335.94
+          ],
+          "sourceBodySha256": "318bf4b9d9dd37775e1882c20c6a268d4ed4b27c5548750df33d195c3173b5c0",
+          "editorialTaskSha256": "4e01ec7a83d54c91b5f84bcdb38f0ed46dc0bf77171faa8336a640a2388fd143",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cardiac conduction system",
+      "proposedHomeNameKey": "cardiac conduction system",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Nodes, AV bundle, branches/Purkinje network and usual arterial supply.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:09",
+      "facetNameKey": "cardiac differential diagnosis",
+      "facetName": "Cardiac differential diagnosis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5332179664bfa4210106b8df153430f7dc8b8707cfd90579f2ac1be6805c1d24",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.14",
+          "page": 282,
+          "rowBBox": [
+            44.2,
+            337.14,
+            102.7,
+            378.06
+          ],
+          "sourceBodySha256": "151118c3a25f35f995fa39759725db555e640f5a9cac36ff8cff68328f6f7007",
+          "editorialTaskSha256": "4c267e3b453e56c95191fd4606f6c02ad1cc08b581aa9b90e678167c8ad285ba",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart disease",
+      "proposedHomeNameKey": "heart disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated cardiac presentation prioritization; time-critical differentials retained.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:10",
+      "facetNameKey": "cardiac disease in pregnancy",
+      "facetName": "Cardiac disease in pregnancy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b542d53dd008c9c01721325a32bb72fb0c072e5700378ebf8b63719d42142857",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG12.4",
+          "page": 431,
+          "rowBBox": [
+            49.1,
+            238.02,
+            103.1,
+            298.14
+          ],
+          "sourceBodySha256": "3108e098e8557b1aa110230e15f6a7d5a55a853f2f0b8ef476ab9a09c7f25a05",
+          "editorialTaskSha256": "1feb2546929b74e05d54df6d95fd1a228991c83c310ff3cb8ae39420d9e5ce8e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart disease",
+      "proposedHomeNameKey": "heart disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Pregnancy-specific causes, risks, tests and management through labour.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:11",
+      "facetNameKey": "cardiac findings in thyroid disease",
+      "facetName": "Cardiac findings in thyroid disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2d10fcfcf4842fd74e6dca122970ce8a41f00c37b817eb31bea285b8a35c48a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.9",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            256.62,
+            102.7,
+            284.1
+          ],
+          "sourceBodySha256": "a86565c17ac405491e82a38f6cfd47333f5a0f33b78ec06bef26dfb33ae17789",
+          "editorialTaskSha256": "fa33974724a4e72acf21a202e27347fb8b130590652bb711deda4799c7f3cd6a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Thyroid disorders",
+      "proposedHomeNameKey": "thyroid disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Thyroid-related AF/bradycardia and possible effusion ECG clues requiring confirmation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:12",
+      "facetNameKey": "cardiac muscle properties",
+      "facetName": "Cardiac muscle properties",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c19a98f884da60eedea9727a2b68a5c05477c22099bef8f9ae0ac6b25f587ee8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.2",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            289.92,
+            107.8,
+            322.68
+          ],
+          "sourceBodySha256": "d62a08c739fd5cbf067cbc451f34d3ad738902047f97292b23de9650c85d69f2",
+          "editorialTaskSha256": "30bb61d5d19c7d902b2030f700687649f2f1a1c5e74707044194d09f77272c33",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Myocardium",
+      "proposedHomeNameKey": "myocardium",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Myocardial architecture, coupling, contraction and metabolism related to pump function.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:13",
+      "facetNameKey": "cardiomegaly on chest x-ray",
+      "facetName": "Cardiomegaly on chest X-ray",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afd10a6c2bab5d7249e3db5302c9e96539969c679c91ebd4acb4c85f7a32976d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.9",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            492.72,
+            103.1,
+            513.48
+          ],
+          "sourceBodySha256": "6315fc3308b81ffb3f43bbbeb07f93bc1eea543032e02d12020111074fa81c99",
+          "editorialTaskSha256": "4d4154b914ff0576bc11c612c384acbc8e6ee3f1b40a4f86e5d135dd4da5b755",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cardiomegaly",
+      "proposedHomeNameKey": "cardiomegaly",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied film interpretation with projection/age limitations.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:14",
+      "facetNameKey": "cardiovascular regulation",
+      "facetName": "Cardiovascular regulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:805fd7a3a43e7ec00cbe5a040eee3aec7d99de6f2cc22732962cb1c4428f8e4d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.8",
+          "page": 153,
+          "rowBBox": [
+            58.5,
+            491.88,
+            107.8,
+            519.24
+          ],
+          "sourceBodySha256": "e08bca199d334fe27c926a1e043c983a211b9718205e74cba6971a5aa5247bf9",
+          "editorialTaskSha256": "14cfe1a9e01763ec16b430b332a3a320f8169d1348af71f0c88975bfbfd78d48",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cardiovascular system",
+      "proposedHomeNameKey": "cardiovascular system",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Local autoregulation versus systemic neural/humoral responses.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:15",
+      "facetNameKey": "caregiver counselling",
+      "facetName": "Caregiver counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:789f4bc3c95c57d3501b95b28c62e0831da497351c7a9385dc8f251cc8668ebb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE3.3",
+          "page": 330,
+          "rowBBox": [
+            51.3,
+            162.78,
+            103.1,
+            189.84
+          ],
+          "sourceBodySha256": "9325eb9d46b808e479a1ed6437d50deefc61ca3bf811ced45c10e618e4f6fe4d",
+          "editorialTaskSha256": "ada0cd9befe6a52860704653f87f03f8bbb52fdecd440867a9281c4ac3776d0c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Caregiver communication",
+      "proposedHomeNameKey": "caregiver communication",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated findings/uncertainty, referral and early support agreement; no unsupported disease-specific home inferred.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:16",
+      "facetNameKey": "caregiver immunization counselling",
+      "facetName": "Caregiver immunization counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9a36cfbc89552432cb18c6cc6d09bb621274b49b9b8ec755d63a4d94b5699908",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE18.7",
+          "page": 337,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            84.9
+          ],
+          "sourceBodySha256": "063773625c8b1383a5d4111a54efda6fd53f783e7157275bf2591bd400995bbf",
+          "editorialTaskSha256": "e972a6db8a41d94da9413190e84e34f10bb6a09092a7e29c694b0ea6492a60f4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Immunization",
+      "proposedHomeNameKey": "immunization",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Caregiver benefits/reactions/warning signs/follow-up counselling with teach-back.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:17",
+      "facetNameKey": "cartilage histology",
+      "facetName": "Cartilage histology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9924f9e7199c44ddb477e077d8adb5c809fb613a55989099d10c3cc7da5fa341",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN71.2",
+          "page": 145,
+          "rowBBox": [
+            51.2,
+            289.71,
+            122,
+            321.18
+          ],
+          "sourceBodySha256": "1ff79a1b1a47d7cd056f93933d91f4a384fa328b6ca04a30fed700a268be6886",
+          "editorialTaskSha256": "7ced253e963de66903a52e74b3a95cf89620e0a3ac09635228fe1e4db86cafdf",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cartilage",
+      "proposedHomeNameKey": "cartilage",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Hyaline/elastic/fibrocartilage slide identification and matrix mechanics.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:18",
+      "facetNameKey": "cataract development",
+      "facetName": "Cataract development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fd131bbfd5952da00e02b61d8995822e47ceef26a96ed0dbf2f992567b3bba6e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP8.2",
+          "page": 417,
+          "rowBBox": [
+            49.5,
+            266.82,
+            103.5,
+            296.16
+          ],
+          "sourceBodySha256": "586dd0ef1633856738586bdb0b83d996566ee3d82d3990965d17106d0c761a56",
+          "editorialTaskSha256": "6dedae8dbb79897f41c58a5f886094ecc77f90ac535882e316bccf589ef0f690",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cataract",
+      "proposedHomeNameKey": "cataract",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cataract"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cataract causes, stages and complications in representative cases.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:19",
+      "facetNameKey": "cataract preoperative assessment",
+      "facetName": "Cataract preoperative assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ca571edc9aa797e7241281cda86ab84189e63985366c984749d30d0b6359893d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP8.3",
+          "page": 417,
+          "rowBBox": [
+            49.5,
+            296.16,
+            103.5,
+            325.68
+          ],
+          "sourceBodySha256": "9c8c59b372089204fe42f2b629526ad87c347a3de38aea79733805ccaa448e60",
+          "editorialTaskSha256": "1152185c3f38ba5f3fbf6129233e91bd8cc78bb7df27e2afe5db9d9b9846e350",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cataract",
+      "proposedHomeNameKey": "cataract",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cataract"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated preoperative assessment and simulated surgery counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:20",
+      "facetNameKey": "cataract team participation",
+      "facetName": "Cataract team participation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:12d04c3ba4a9de3c80ebd7fc2e6a53f017a3e448f6520141d22700b0c5a47c3d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP8.6",
+          "page": 417,
+          "rowBBox": [
+            49.5,
+            442.14,
+            103.5,
+            460.38
+          ],
+          "sourceBodySha256": "2a09d3d3ac84dca56c523c10d08a2590a43b824e91527f309db2e152b1487d75",
+          "editorialTaskSha256": "6ebec65d66928ac465bb365366a464afb97e36a6ebd853167a5432fab3fbcaf7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cataract",
+      "proposedHomeNameKey": "cataract",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cataract"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Assigned supervised or simulated cataract team role and safety checks only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:21",
+      "facetNameKey": "cell injury mechanisms",
+      "facetName": "Cell injury mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9bf18c5e9efb532b6901a97eceb9ad49478cf00422a8c882bdbd4f98c2c5fa57",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA2.1",
+          "page": 187,
+          "rowBBox": [
+            51.5,
+            320.28,
+            105.6,
+            351.66
+          ],
+          "sourceBodySha256": "c48649b8158abf22a73d54285d2bf291f39931b6adb223cacacd535fead50c50",
+          "editorialTaskSha256": "a42810f019c9a1f0e2cb08b12378d7e45a7363a803827ed1e5d1315dc8102f19",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cell injury",
+      "proposedHomeNameKey": "cell injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Major insults and cellular/clinical injury consequences.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:22",
+      "facetNameKey": "cell injury specimens",
+      "facetName": "Cell injury specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:41e340599f55497be1f41811c320d077a8166595db415bf80fbe52872c9d6e34",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA2.8",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            124.5,
+            105.5,
+            159.42
+          ],
+          "sourceBodySha256": "07adddfd6c3c45165841e604feaed9f0912bed1a71f6c086e903222e58225a11",
+          "editorialTaskSha256": "20e01c28b0d5fa476fa83f9c49ea3cb32561a7ce0d820dad01889c05981b27ff",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cell injury",
+      "proposedHomeNameKey": "cell injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gross/microscopic injury pattern identification and consequences.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:23",
+      "facetNameKey": "central nervous system development",
+      "facetName": "Central nervous system development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e5d35235da08df6dddc717f3500cfe1974b52d53b8b7349ea2fc4fa35d4e83c1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN64.2",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            508.08,
+            122.2,
+            544.8
+          ],
+          "sourceBodySha256": "23fb71613935b2ec60a32ebfc47c27d149206dfa87a6c71b7ea274a5d4d36e77",
+          "editorialTaskSha256": "91755e5c95663a34710539e7b1714aeb36d5baa60b4b18d6209e851bce94fce3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Central nervous system",
+      "proposedHomeNameKey": "central nervous system",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Neural tube/vesicle derivatives mapped to major CNS regions.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:24",
+      "facetNameKey": "cerebellar circuitry",
+      "facetName": "Cerebellar circuitry",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:12d9abcd32e1f24133f4eeec121015a0f0795f9d25190dd9a834960ff043090f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN60.2",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            254.94,
+            121.9,
+            286.62
+          ],
+          "sourceBodySha256": "b753de0ff73ce61b0d80ef9a88464a04da2b2420bde8ff4bacb5c56eae43960e",
+          "editorialTaskSha256": "d7368eb776b4a7bf0f136c36a3fa6ee868c6c91c32d1d960b9ca9ca5134bd798",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cerebellum",
+      "proposedHomeNameKey": "cerebellum",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cerebellum"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cerebellar cortical inputs, Purkinje outputs and deep-nuclear downstream connections.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:25",
+      "facetNameKey": "cerebellar structure",
+      "facetName": "Cerebellar structure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:85bd6b694b5e480fd8847b1ffbb2134a111f682b074dc00be5353b898fa7ef66",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN60.1",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            209.22,
+            121.9,
+            254.94
+          ],
+          "sourceBodySha256": "d9d9b0e8b03647b770076f8aa9cfeabd0366f35a7fa9ef9acc4b71d435c966eb",
+          "editorialTaskSha256": "c1a1d5840dbe1f3e5f82fc20b1bb37e7ae187993a40fe81f6e5a7b331ed58f88",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cerebellum",
+      "proposedHomeNameKey": "cerebellum",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cerebellum"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model/specimen orientation and external/internal cerebellar landmarks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:26",
+      "facetNameKey": "cerebral angiographic landmarks",
+      "facetName": "Cerebral angiographic landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9d128e611d7c108e1fa660e171a963bc0a5e31f51c018b7ce9ad0c2ad1fe589c",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN43.9",
+          "page": 133,
+          "rowBBox": [
+            51.2,
+            324.48,
+            122.2,
+            357.96
+          ],
+          "sourceBodySha256": "d951e0c448c54176d8fa46d2a342f185d72e3dcc9e026e6b5c4c9a84b2a6dd06",
+          "editorialTaskSha256": "2a048c30396ce0b0e2e8ce9d16ff542076f7f4dd145077f2418bb2d1f9b75ae1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Brain vasculature",
+      "proposedHomeNameKey": "brain vasculature",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Carotid/vertebral angiogram orientation, visible branches and territories.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:27",
+      "facetNameKey": "cerebral angiographic routes",
+      "facetName": "Cerebral angiographic routes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a5ceaa35bde67697e6eb372ec745bb0a4f422288f753b522d85c8f60bd26877",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN43.8",
+          "page": 133,
+          "rowBBox": [
+            51.2,
+            288.78,
+            122.2,
+            324.48
+          ],
+          "sourceBodySha256": "3a9d4746701a2a41c0e1a50b7019163cc3b9d69c8b044bf5cbf9b3588657c35e",
+          "editorialTaskSha256": "bffe131b0d3c504d1e129dcc48f14ffd67fbf6ce7cbddc0e19a84b1c7495f34a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Brain vasculature",
+      "proposedHomeNameKey": "brain vasculature",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative arterial access routes and right/left origins; not catheterization performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:28",
+      "facetNameKey": "cervical cancer assessment",
+      "facetName": "Cervical cancer assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:65e608fb8a2022e70817dcd42e8ff6a06bf7dc2aad17aeeb19503fd2e0b83064",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG33.1",
+          "page": 439,
+          "rowBBox": [
+            49.1,
+            161.94,
+            103.1,
+            208.5
+          ],
+          "sourceBodySha256": "25ce6420bea56c87491ecaaf953bc2a0c78f6fab580b4c5d09eba81dfe9dc7b1",
+          "editorialTaskSha256": "cf6d982cdce1b0e63f6ebe5205c9dd9aeedeb50a4f0170207dfa7673844c8f88",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cervical cancer",
+      "proposedHomeNameKey": "cervical cancer",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cervical risk/pathology, differential, investigations and staging.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:29",
+      "facetNameKey": "cervical cancer prevention",
+      "facetName": "Cervical cancer prevention",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f05bc3f3e7c4d9867c7ed09dd1cff59df9e97e8096887cdcc5ab66e4832fbff",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG33.4",
+          "page": 439,
+          "rowBBox": [
+            49.1,
+            301.56,
+            103.1,
+            353.34
+          ],
+          "sourceBodySha256": "613b71d208521cc5c388f5365e563c0d26e8f675fe1a5a15dac5c379dd00d236",
+          "editorialTaskSha256": "291d5dc3c6de9c0080cb98b4de1382cbe567d00a4eb6abd5f02550751f268dc6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cervical cancer",
+      "proposedHomeNameKey": "cervical cancer",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-described vaccine/screening comparison and VIA/VILI/cytology/colposcopy roles; current guidance not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-04:30",
+      "facetNameKey": "cervical cancer treatment",
+      "facetName": "Cervical cancer treatment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b63c905e62d3ef9f02ca475caa5bfcfc813983e78303ec3351eecaf418143585",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG33.2",
+          "page": 439,
+          "rowBBox": [
+            49.1,
+            208.5,
+            103.1,
+            260.88
+          ],
+          "sourceBodySha256": "10f5ff0df81bace13009d2b5ee4f439016b300d78bafac97cbfa114092806e30",
+          "editorialTaskSha256": "206f600fbfb20ef813fca26f1ec7ec9f6842354bc8b1c1bca0fb362908be9340",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cervical cancer",
+      "proposedHomeNameKey": "cervical cancer",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-described stage-based surgery/radiation/systemic roles; current regimen guidance not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 18,
+    "existingNameHomeLinks": 10,
+    "newNameHomeLinks": 20,
+    "facetsWithoutInitialHomeProposal": 539
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "disposable PostgreSQL with synthetic Auth and reviewer prerequisites",
+  "checks": {
+    "conceptDraftMigrations": "passed",
+    "privateConceptAcceptance": "passed",
+    "learnerCatalogueUnchangedByAcceptance": true,
+    "adminStatusRpc": "passed",
+    "stagingRuntimeRpc": "passed",
+    "browserRoleRpcDenial": "passed"
+  },
+  "fullMigrationChainVerified": false,
+  "hostedChangesApplied": false,
+  "next": "Rehearse the full ordered staging schema bootstrap and validate authenticated Owner API preview before deployment."
+}

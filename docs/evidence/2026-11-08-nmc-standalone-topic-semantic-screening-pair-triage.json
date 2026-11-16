@@ -1,0 +1,1322 @@
+{
+  "schemaVersion": 1,
+  "sourceAudit": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-audit.json",
+    "gitBlobSha": "322fe1fd7bbc297ec5e9168205da5916d9513d90"
+  },
+  "totals": {
+    "pairs": 116,
+    "possibleSharedIdentity": 2,
+    "scopeCheckRequired": 9,
+    "relatedDistinctScope": 105
+  },
+  "rows": [
+    {
+      "topics": [
+        "adherence",
+        "adherence counselling"
+      ],
+      "proposedBy": [
+        "adherence counselling"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "ageing",
+        "cellular ageing"
+      ],
+      "proposedBy": [
+        "ageing"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "allergic rhinitis",
+        "vasomotor rhinitis"
+      ],
+      "proposedBy": [
+        "allergic rhinitis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "angle-closure glaucoma",
+        "open-angle glaucoma"
+      ],
+      "proposedBy": [
+        "angle-closure glaucoma"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "angle-closure glaucoma",
+        "secondary glaucoma"
+      ],
+      "proposedBy": [
+        "angle-closure glaucoma"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "antimicrobial chemotherapy",
+        "antimicrobial stewardship"
+      ],
+      "proposedBy": [
+        "antimicrobial chemotherapy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "arterial blood gas sampling",
+        "arterial sampling"
+      ],
+      "proposedBy": [
+        "arterial blood gas sampling",
+        "arterial sampling"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check arterial sampling specimen purpose and collection scope.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "arterial blood gas sampling",
+        "blood gas interpretation"
+      ],
+      "proposedBy": [
+        "arterial blood gas sampling"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "arterial sampling",
+        "blood gas interpretation"
+      ],
+      "proposedBy": [
+        "arterial sampling"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "automatic bladder",
+        "micturition"
+      ],
+      "proposedBy": [
+        "automatic bladder",
+        "micturition"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "bilirubin estimation",
+        "neonatal hyperbilirubinaemia"
+      ],
+      "proposedBy": [
+        "bilirubin estimation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "acid–base interpretation",
+        "blood gas interpretation"
+      ],
+      "proposedBy": [
+        "blood gas interpretation"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check whether acid–base interpretation is a facet of the blood gas objective.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cardiac cycle",
+        "cardiac impulse"
+      ],
+      "proposedBy": [
+        "cardiac cycle",
+        "cardiac impulse"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cervical cytology sampling",
+        "cervical punch biopsy"
+      ],
+      "proposedBy": [
+        "cervical cytology sampling",
+        "cervical punch biopsy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "community assessment",
+        "community diagnosis"
+      ],
+      "proposedBy": [
+        "community assessment",
+        "community diagnosis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "communicating investigation results",
+        "diagnostic communication"
+      ],
+      "proposedBy": [
+        "diagnostic communication"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "clinical record",
+        "discharge summary"
+      ],
+      "proposedBy": [
+        "discharge summary"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "endometrial cancer",
+        "endometrial carcinoma"
+      ],
+      "proposedBy": [
+        "endometrial cancer",
+        "endometrial carcinoma"
+      ],
+      "disposition": "possible-shared-identity",
+      "scopeNote": "Possible shared endometrial malignancy identity. Preserve clinical staging and pathology objectives and check the cancer label boundary.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "endometrial cancer",
+        "endometrial hyperplasia"
+      ],
+      "proposedBy": [
+        "endometrial cancer",
+        "endometrial hyperplasia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "endometrial carcinoma",
+        "endometrial hyperplasia"
+      ],
+      "proposedBy": [
+        "endometrial carcinoma",
+        "endometrial hyperplasia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "facial expression",
+        "facial palsy"
+      ],
+      "proposedBy": [
+        "facial expression",
+        "facial palsy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "carpal tunnel syndrome",
+        "flexor retinaculum"
+      ],
+      "proposedBy": [
+        "flexor retinaculum"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "down syndrome",
+        "genetic counselling"
+      ],
+      "proposedBy": [
+        "genetic counselling"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "capillary glucose",
+        "glucose estimation"
+      ],
+      "proposedBy": [
+        "glucose estimation"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check capillary collection against laboratory estimation and meter use.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "glucose estimation",
+        "glucose self-monitoring"
+      ],
+      "proposedBy": [
+        "glucose self-monitoring"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "haemoglobin",
+        "haemoglobin electrophoresis"
+      ],
+      "proposedBy": [
+        "haemoglobin electrophoresis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cardiac impulse",
+        "heart rate control"
+      ],
+      "proposedBy": [
+        "heart rate control"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cervical sympathetic chain",
+        "horner syndrome"
+      ],
+      "proposedBy": [
+        "horner syndrome"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "congenital hydrocephalus",
+        "hydrocephalus"
+      ],
+      "proposedBy": [
+        "hydrocephalus"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "iga nephropathy",
+        "iga vasculitis"
+      ],
+      "proposedBy": [
+        "iga nephropathy",
+        "iga vasculitis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cerebral palsy",
+        "infantile hemiplegia"
+      ],
+      "proposedBy": [
+        "infantile hemiplegia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "iron",
+        "iron deficiency anaemia"
+      ],
+      "proposedBy": [
+        "iron",
+        "iron deficiency anaemia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cardiovascular examination",
+        "jugular venous pressure"
+      ],
+      "proposedBy": [
+        "jugular venous pressure"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "knee joint",
+        "knee osteoarthritis"
+      ],
+      "proposedBy": [
+        "knee joint",
+        "knee osteoarthritis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "laparoscopic sterilization",
+        "laparoscopy"
+      ],
+      "proposedBy": [
+        "laparoscopic sterilization",
+        "laparoscopy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "carbohydrate digestion",
+        "malabsorption"
+      ],
+      "proposedBy": [
+        "malabsorption"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "expert testimony",
+        "medical testimony"
+      ],
+      "proposedBy": [
+        "medical testimony"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check expert opinion against general medical witness procedure.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "injury report",
+        "medico-legal reporting"
+      ],
+      "proposedBy": [
+        "medico-legal reporting"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "intoxication report",
+        "medico-legal reporting"
+      ],
+      "proposedBy": [
+        "medico-legal reporting"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "menopausal transition",
+        "menopause"
+      ],
+      "proposedBy": [
+        "menopausal transition",
+        "menopause"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check transition versus postmenopausal scope.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "metabolic acidosis",
+        "metabolic alkalosis"
+      ],
+      "proposedBy": [
+        "metabolic alkalosis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cystometry",
+        "micturition"
+      ],
+      "proposedBy": [
+        "micturition"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "nasal cavity",
+        "nasal endoscopy"
+      ],
+      "proposedBy": [
+        "nasal endoscopy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "nasal obstruction",
+        "nasal polyps"
+      ],
+      "proposedBy": [
+        "nasal obstruction",
+        "nasal polyps"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "disaster cycle",
+        "national disaster authority"
+      ],
+      "proposedBy": [
+        "national disaster authority"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "levels of prevention",
+        "natural history"
+      ],
+      "proposedBy": [
+        "natural history"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "hypothermia",
+        "neonatal hypothermia"
+      ],
+      "proposedBy": [
+        "neonatal hypothermia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "carcinogenesis",
+        "neoplasia"
+      ],
+      "proposedBy": [
+        "neoplasia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "micturition",
+        "neurogenic bladder"
+      ],
+      "proposedBy": [
+        "neurogenic bladder"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "automatic bladder",
+        "neurogenic bladder"
+      ],
+      "proposedBy": [
+        "neurogenic bladder"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "neurulation",
+        "notochord"
+      ],
+      "proposedBy": [
+        "neurulation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "corneal foreign body",
+        "ocular foreign body"
+      ],
+      "proposedBy": [
+        "ocular foreign body"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check anatomical scope and simulated removal requirements.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "carcinogenesis",
+        "oncogenesis"
+      ],
+      "proposedBy": [
+        "oncogenesis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "neoplasia",
+        "oncogenesis"
+      ],
+      "proposedBy": [
+        "oncogenesis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "congenital glaucoma",
+        "open-angle glaucoma"
+      ],
+      "proposedBy": [
+        "open-angle glaucoma"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "otalgia",
+        "otomicroscopy"
+      ],
+      "proposedBy": [
+        "otomicroscopy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "otomicroscopy",
+        "otorrhoea"
+      ],
+      "proposedBy": [
+        "otomicroscopy"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "epidemic control",
+        "outbreak investigation"
+      ],
+      "proposedBy": [
+        "outbreak investigation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "peripheral iv access",
+        "peripheral iv cannulation"
+      ],
+      "proposedBy": [
+        "peripheral iv access",
+        "peripheral iv cannulation"
+      ],
+      "disposition": "possible-shared-identity",
+      "scopeNote": "Possible shared peripheral cannulation identity. Preserve paediatric, safety and documentation objectives.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "emergency iv access",
+        "peripheral iv access"
+      ],
+      "proposedBy": [
+        "peripheral iv access"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check emergency context and paediatric procedure scope.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "emergency iv access",
+        "peripheral iv cannulation"
+      ],
+      "proposedBy": [
+        "peripheral iv cannulation"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check emergency context and documentation requirements.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "hyperandrogenism",
+        "polycystic ovary syndrome"
+      ],
+      "proposedBy": [
+        "polycystic ovary syndrome"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "population dynamics",
+        "population stabilization"
+      ],
+      "proposedBy": [
+        "population stabilization"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "national population policy",
+        "population stabilization"
+      ],
+      "proposedBy": [
+        "population stabilization"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "portal circulation",
+        "portosystemic connections"
+      ],
+      "proposedBy": [
+        "portal circulation",
+        "portosystemic connections"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "endometrial cancer",
+        "postmenopausal bleeding"
+      ],
+      "proposedBy": [
+        "postmenopausal bleeding"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "endometrial hyperplasia",
+        "postmenopausal bleeding"
+      ],
+      "proposedBy": [
+        "postmenopausal bleeding"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "delayed puberty",
+        "precocious puberty"
+      ],
+      "proposedBy": [
+        "precocious puberty"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "pregnancy recognition",
+        "pregnancy testing"
+      ],
+      "proposedBy": [
+        "pregnancy recognition",
+        "pregnancy testing"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "premedication",
+        "prescription writing"
+      ],
+      "proposedBy": [
+        "premedication"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "hyperparathyroidism",
+        "primary hyperparathyroidism"
+      ],
+      "proposedBy": [
+        "primary hyperparathyroidism"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "deep facial vein",
+        "pterygoid plexus"
+      ],
+      "proposedBy": [
+        "pterygoid plexus"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "precocious puberty",
+        "puberty"
+      ],
+      "proposedBy": [
+        "puberty"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "delayed puberty",
+        "puberty"
+      ],
+      "proposedBy": [
+        "puberty"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "radiation effects",
+        "radiation protection"
+      ],
+      "proposedBy": [
+        "radiation effects",
+        "radiation protection"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "occupational dosimetry",
+        "radiation protection"
+      ],
+      "proposedBy": [
+        "radiation protection"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "hoarseness",
+        "recurrent laryngeal injury"
+      ],
+      "proposedBy": [
+        "recurrent laryngeal injury"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "research proposal",
+        "research questions"
+      ],
+      "proposedBy": [
+        "research proposal"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "respiratory acidosis",
+        "respiratory alkalosis"
+      ],
+      "proposedBy": [
+        "respiratory acidosis",
+        "respiratory alkalosis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "safe surgery",
+        "safety communication"
+      ],
+      "proposedBy": [
+        "safety communication"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "medico-legal reporting",
+        "sample chain of custody"
+      ],
+      "proposedBy": [
+        "sample chain of custody"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "scalp emissary veins",
+        "scalp layers"
+      ],
+      "proposedBy": [
+        "scalp emissary veins"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "open-angle glaucoma",
+        "secondary glaucoma"
+      ],
+      "proposedBy": [
+        "secondary glaucoma"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "congenital glaucoma",
+        "secondary glaucoma"
+      ],
+      "proposedBy": [
+        "secondary glaucoma"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "neonatal sepsis",
+        "sepsis"
+      ],
+      "proposedBy": [
+        "sepsis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "nasal obstruction",
+        "septal deviation"
+      ],
+      "proposedBy": [
+        "septal deviation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "growth faltering",
+        "short stature"
+      ],
+      "proposedBy": [
+        "short stature"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "neonatal hypothermia",
+        "skin-to-skin warmth"
+      ],
+      "proposedBy": [
+        "skin-to-skin warmth"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "respectful specimen handling",
+        "specimen respect"
+      ],
+      "proposedBy": [
+        "specimen respect"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "splenectomy",
+        "splenic injury"
+      ],
+      "proposedBy": [
+        "splenic injury"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "statistical significance",
+        "statistical software"
+      ],
+      "proposedBy": [
+        "statistical significance"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "submandibular calculi",
+        "submandibular region"
+      ],
+      "proposedBy": [
+        "submandibular calculi"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "self-harm assessment",
+        "suicide risk assessment"
+      ],
+      "proposedBy": [
+        "suicide risk assessment"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "surgical consent",
+        "surgical ethics"
+      ],
+      "proposedBy": [
+        "surgical ethics"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "sexual violence survivor report",
+        "survivor examination"
+      ],
+      "proposedBy": [
+        "survivor examination"
+      ],
+      "disposition": "scope-check-required",
+      "scopeNote": "Check forensic report requirements against the broader examination scope.",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "survivor examination",
+        "survivor-centred professionalism"
+      ],
+      "proposedBy": [
+        "survivor-centred professionalism"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "olfaction",
+        "taste"
+      ],
+      "proposedBy": [
+        "taste"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "pharmacokinetics",
+        "therapeutic drug monitoring"
+      ],
+      "proposedBy": [
+        "therapeutic drug monitoring"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "cervical sympathetic chain",
+        "thoracic sympathetic chain"
+      ],
+      "proposedBy": [
+        "thoracic sympathetic chain"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "thyroid eye disease",
+        "thyrotoxicosis"
+      ],
+      "proposedBy": [
+        "thyroid eye disease"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "temporomandibular joint",
+        "tmj dislocation"
+      ],
+      "proposedBy": [
+        "tmj dislocation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "sternocleidomastoid",
+        "torticollis"
+      ],
+      "proposedBy": [
+        "torticollis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "lipid profile",
+        "total cholesterol estimation"
+      ],
+      "proposedBy": [
+        "total cholesterol estimation"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "hip joint",
+        "trendelenburg sign"
+      ],
+      "proposedBy": [
+        "trendelenburg sign"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "implantation",
+        "trophoblast development"
+      ],
+      "proposedBy": [
+        "trophoblast development"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "lymphadenopathy",
+        "tuberculous lymphadenitis"
+      ],
+      "proposedBy": [
+        "tuberculous lymphadenitis"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "uraemia",
+        "urea estimation"
+      ],
+      "proposedBy": [
+        "uraemia"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "syndromic sti management",
+        "urethral discharge"
+      ],
+      "proposedBy": [
+        "urethral discharge"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "urinary catheterization",
+        "urinary retention"
+      ],
+      "proposedBy": [
+        "urinary catheterization"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "urine concentration",
+        "urine formation"
+      ],
+      "proposedBy": [
+        "urine concentration"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "postpartum haemorrhage",
+        "uterine inversion"
+      ],
+      "proposedBy": [
+        "uterine inversion"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "safe vaccine practice",
+        "vaccine administration"
+      ],
+      "proposedBy": [
+        "vaccine administration"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "safe vaccine practice",
+        "vaccine counselling"
+      ],
+      "proposedBy": [
+        "vaccine counselling"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "ménière disease",
+        "vertigo"
+      ],
+      "proposedBy": [
+        "vertigo"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "genital warts",
+        "viral warts"
+      ],
+      "proposedBy": [
+        "viral warts"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    },
+    {
+      "topics": [
+        "compressive radial neuropathy",
+        "wrist drop"
+      ],
+      "proposedBy": [
+        "wrist drop"
+      ],
+      "disposition": "related-distinct-scope",
+      "mappingAccepted": false
+    }
+  ]
+}

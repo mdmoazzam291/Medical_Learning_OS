@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "checkedHead": "4f6acd257cd2e8e13f2db1cf7549c363eb855954",
+  "indexBlobSha": "be36201443fd5eecbf8b20211cac752f84c4ff36",
+  "proposalNames": [
+    "Acute kidney injury",
+    "Adherence",
+    "Age estimation",
+    "Amyloidosis",
+    "Atherosclerosis",
+    "Autoimmunity",
+    "Birth asphyxia",
+    "Blood pressure",
+    "Constipation",
+    "Diabetic ketoacidosis",
+    "Diaphragm",
+    "Enteric fever",
+    "Fetal growth restriction",
+    "Haematuria",
+    "Hyperkalaemia",
+    "Informed consent",
+    "Lumbar puncture",
+    "Neonatal resuscitation",
+    "Proteinuria",
+    "Stridor",
+    "Systemic lupus erythematosus",
+    "Thermoregulation",
+    "Type 2 diabetes",
+    "Urinalysis",
+    "Vaginal discharge",
+    "Arterial blood gas sampling",
+    "Endometrial carcinoma",
+    "Peripheral IV cannulation",
+    "Ocular foreign body",
+    "Corneal foreign body",
+    "Fetal age estimation",
+    "Physiological vaginal discharge",
+    "Rheumatic fever",
+    "Attention-deficit/hyperactivity disorder",
+    "Medical cause-of-death certification",
+    "Peptic ulcer",
+    "Population sex ratio",
+    "Acute otitis media",
+    "Cause of death coding",
+    "Essential medicines list",
+    "External ear",
+    "Facial nerve palsy",
+    "Mucosal chronic otitis media",
+    "Otitis media with effusion",
+    "Recurrent pregnancy loss",
+    "Rheumatic heart disease",
+    "Squamosal chronic otitis media",
+    "Vitamin K deficiency bleeding",
+    "Blood culture",
+    "Research ethics",
+    "Drug information",
+    "Basic life support",
+    "Pain assessment",
+    "Posterior triangle",
+    "Public health",
+    "Skeletal muscle",
+    "Urinary infection",
+    "Gestational trophoblastic neoplasia",
+    "Cardiac muscle",
+    "Malaria",
+    "Smooth muscle",
+    "Stroke",
+    "COPD",
+    "Contraceptive sterilization",
+    "Alcohol-related cirrhosis",
+    "Alcohol-related hepatic steatosis",
+    "Alcohol-related hepatitis",
+    "CT imaging",
+    "Differential leucocyte count",
+    "Disc prolapse",
+    "Echocardiography",
+    "FISH",
+    "Haemoglobin estimation",
+    "Male contraceptive methods",
+    "MRI imaging",
+    "PCR",
+    "Red cell count",
+    "Spermatogenesis"
+  ],
+  "familyAdditions": [
+    {
+      "name": "Alcohol-related cirrhosis",
+      "alternateLabels": [
+        "alcoholic cirrhosis"
+      ],
+      "relatedScope": "Alcohol-related liver disease",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "code": "GM5.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "code": "PA24.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatic steatosis",
+      "alternateLabels": [
+        "alcoholic fatty liver"
+      ],
+      "relatedScope": "Alcohol-related liver disease",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "code": "GM5.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "code": "PA24.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Alcohol-related hepatitis",
+      "alternateLabels": [
+        "alcoholic hepatitis"
+      ],
+      "relatedScope": "Alcohol-related liver disease",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+          "code": "GM5.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf"
+        },
+        {
+          "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+          "code": "PA24.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "CT imaging",
+      "alternateLabels": [
+        "computed tomography",
+        "ct scan"
+      ],
+      "relatedScope": "Imaging modalities",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+          "code": "AN54.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+          "code": "RD1.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Differential leucocyte count",
+      "alternateLabels": [
+        "differential leukocyte count",
+        "white cell differential"
+      ],
+      "relatedScope": "Blood practicals",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "code": "PA13.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "code": "PY2.11",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Disc prolapse",
+      "alternateLabels": [
+        "disc herniation",
+        "prolapsed intervertebral disc"
+      ],
+      "relatedScope": "Degenerative spine disease",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2caecfd3b78f618cd360b50a03b7cf24b2427c4f0f01f153516ce2d21080cca6",
+          "code": "OR6.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "d46bf82ef6f37d9f3259bf434a20728d8dd5fd7a8569d4e3fa92ae2e4b78f3ed"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c853fff15cc9d6d27d886e075b090c789e95d8d836295968ed92fd61d1bd423c",
+          "code": "AN50.4",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "efe7a92eb1565d764b7f75966ce548338231d6cf1132f41cde706252fb566878"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Echocardiography",
+      "alternateLabels": [
+        "cardiac ultrasound"
+      ],
+      "relatedScope": "Cardiac investigations",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:09f9c855e5c26b9912717ccb5d26a9372f1dae34ff8ed01c90efbd1ca506bf25",
+          "code": "GM1.17",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "4c4ab7a1d1755c812579a9d530f6c7276c7e543b60d0e6977dabaafd62b0869c"
+        },
+        {
+          "referenceId": "nmc-2024-ref:fee905096fd818032003a8c7cbb2b39a26d87833d05571fff3011080109c11c2",
+          "code": "GM2.13",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "6cffcf1e5daff030af4e9099d615372edd8bbc3adc714e6372957ccefb1a8338"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "FISH",
+      "alternateLabels": [
+        "fluorescence in situ hybridization",
+        "fluorescence in situ hybridisation"
+      ],
+      "relatedScope": "Molecular technologies",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+          "code": "BC10.7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+          "code": "AN75.5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemoglobin estimation",
+      "alternateLabels": [
+        "hemoglobin estimation",
+        "haemoglobin measurement"
+      ],
+      "relatedScope": "Blood practicals",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "code": "PA13.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "code": "PY2.11",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Male contraceptive methods",
+      "alternateLabels": [
+        "male contraception"
+      ],
+      "relatedScope": "Contraceptive methods",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:113adc5fc6cc529536a1af654f2dd62063cac3e09fa74c14e65d84ba1b1461a3",
+          "code": "OG21.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "227a2d87f29559b68346fdbe9481ef51ebff9e09d1321c403fd7d890ad64b909"
+        },
+        {
+          "referenceId": "nmc-2024-ref:4c385e001d8c2280a9f57e56499119ef80e0337d8414077b9dd53ad6d054bb1e",
+          "code": "PY9.6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "7831701de80ed35d2ffd01ff8111b3fb45ea800ce7e0579ef30bfdbe312fe588"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "MRI imaging",
+      "alternateLabels": [
+        "magnetic resonance imaging"
+      ],
+      "relatedScope": "Imaging modalities",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:b233f8f17efbf7c4bb6259709465021b450ffb054add38e896ff36c75b9d1ee6",
+          "code": "AN54.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "e227b269a7339e9b37afd752cd70db4a6658d9fc38d607272fd80809fb14d5ad"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+          "code": "RD1.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "PCR",
+      "alternateLabels": [
+        "polymerase chain reaction"
+      ],
+      "relatedScope": "Molecular technologies",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+          "code": "BC10.7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+          "code": "AN75.5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Red cell count",
+      "alternateLabels": [
+        "rbc count",
+        "erythrocyte count"
+      ],
+      "relatedScope": "Blood practicals",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+          "code": "PA13.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "589a8aaed30143ba19a86625f00715198d3ed381266b20f1b88f4e45d361f1e5"
+        },
+        {
+          "referenceId": "nmc-2024-ref:538eee6a1c595ddea6d2aff8483a1957f86b25220d8da46fc91208186ccfba2a",
+          "code": "PY2.11",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "f59defd440b4caa0ce37cf491c2e0cc243fab4defae6627faa28643bb71bf9a7"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spermatogenesis",
+      "alternateLabels": [
+        "sperm production"
+      ],
+      "relatedScope": "Gametogenesis",
+      "relationship": "named-component-of-broader-source-scope",
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:7b0352f96d379e342fb9c6f9480c80ff8c2c6a2e3bfab77af9b061cd066a2cbe",
+          "code": "PY9.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "015ebd8e6dc47aa800bea90b6c9578e3e17f6261f152702f001d09f738661fc2"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415",
+          "code": "AN77.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "c738ca427a7a4727f15eadb19ce9a0f575f3a7a0257303d00fb69fbc71265fe7"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "distinctCombinedReviewedReferences": 309,
+  "mappingAccepted": false,
+  "next": "Reconcile the 15 retained family scope decisions and close the 78-lead disposition audit."
+}

@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:5a6cec0f06b2b1420b8b0c95187bb7d54c15e6a2ee91e47bcc7523c2b9e26e2d",
+      "subjectId": "community-medicine",
+      "code": "CM9.1",
+      "page": 275,
+      "rowBBox": [
+        40.1,
+        372.96,
+        98.6,
+        406.68
+      ],
+      "sourceBodySha256": "2fab66128b7ca3790adaa2f9835df4897f3380768c3902c2646e57e2add3ddcf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Demography",
+      "draftLearningTask": "Explain the demographic cycle and distinguish demographic measures from vital statistics.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87028a54ae400ab94589dc0f4755aa32ef520329ea3a3a33defed4eac144ba2d",
+      "subjectId": "community-medicine",
+      "code": "CM9.2",
+      "page": 275,
+      "rowBBox": [
+        40.1,
+        406.68,
+        98.6,
+        451.92
+      ],
+      "sourceBodySha256": "5b5d4b66c9ccca3047ab77b449cf004c53d0b2762c5301c20cc7ae3f91fcb84b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Demographic indices",
+      "draftLearningTask": "Calculate and interpret birth, death and fertility rates from supplied data.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166",
+      "subjectId": "community-medicine",
+      "code": "CM9.3",
+      "page": 275,
+      "rowBBox": [
+        40.1,
+        451.92,
+        98.6,
+        483.12
+      ],
+      "sourceBodySha256": "849e7dae5e2a645f60697c77f9dfd2e84b584375242820f1a8b56dc6aee459a9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sex ratio",
+      "draftLearningTask": "Compare plausible drivers of declining sex ratios and explain social and health implications using dated data.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:42380f4a45f1be5cd9e0c2c3ccc9fe8af1f0c5c9294719d79ae4233d6eaf98c5",
+      "subjectId": "community-medicine",
+      "code": "CM9.4",
+      "page": 275,
+      "rowBBox": [
+        40.1,
+        483.12,
+        98.6,
+        514.68
+      ],
+      "sourceBodySha256": "d00847d6b22852febcfe04a3efb174ea9c4bda1d2fc714ec39f149cd8b34b65b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Population dynamics",
+      "draftLearningTask": "Use Indian data to explain population growth, age structure and consequences for services.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22775b577e445c53a645ff360cf769e258df704aaa988c818ebbb28a132574cb",
+      "subjectId": "community-medicine",
+      "code": "CM9.5",
+      "page": 275,
+      "rowBBox": [
+        40.1,
+        514.68,
+        98.6,
+        537.36
+      ],
+      "sourceBodySha256": "6f33bd2cff745b74f64245f89fcd19f9ed62d19d169819a252a8dd6d2cf2f158",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Population stabilization",
+      "draftLearningTask": "Compare voluntary, rights-based approaches to reducing unmet need and supporting population stabilization.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a14ba470ec93459de869757c5a054a7dfd9f862f33c92c1a5a2f36d19366e9ca",
+      "subjectId": "community-medicine",
+      "code": "CM9.6",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        107.04,
+        98.6,
+        124.68
+      ],
+      "sourceBodySha256": "a560c28e79f9b783d09aec651912d25e4f2397c24699433af3571a3770f60439",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National Population Policy",
+      "draftLearningTask": "Use the official policy to summarize its objectives and relate them to representative indicators.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83",
+      "subjectId": "community-medicine",
+      "code": "CM9.7",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        124.68,
+        98.6,
+        156.66
+      ],
+      "sourceBodySha256": "f634cbe89c9e124140ad089129c67d6285dd62b63d0ecef917e5af04666b3818",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vital statistics sources",
+      "draftLearningTask": "Compare census, SRS, NFHS and national sample surveys by purpose, coverage and limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:63bc2384988576fe39ba78409e0596008c409e070938977fe227cac558524c3a",
+      "subjectId": "community-medicine",
+      "code": "CM10.1",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        178.38,
+        98.6,
+        210.0
+      ],
+      "sourceBodySha256": "f4dae68f9bc84b71c271ccce0f370281b7eec5c0900ad9f7e2b5daead82abe88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Maternal and child health status",
+      "draftLearningTask": "Interpret dated reproductive, maternal, newborn and child health indicators and identify service gaps.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9f14be793e7303c8826784dbd2a8a169649084e0181187d473ac368fc240b463",
+      "subjectId": "community-medicine",
+      "code": "CM10.2",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        210.0,
+        98.6,
+        242.1
+      ],
+      "sourceBodySha256": "843fd2a561d851b70973f3f7ed21eb67a08ea97a26dbd1af50c00efacc5fd654",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "High-risk screening",
+      "draftLearningTask": "Choose screening approaches for representative high-risk groups and common problems and explain follow-up.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:005f5256a5a26a9ecc08ff20886c08bff010cfb455e2a4eb375bd2bbfaa4ae9a",
+      "subjectId": "community-medicine",
+      "code": "CM10.3",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        242.1,
+        98.6,
+        273.24
+      ],
+      "sourceBodySha256": "c6f3b7a0523ff1ed909b99961013c8042b45629298867991e33d266f3dbb873b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Local maternal and feeding practices",
+      "draftLearningTask": "Elicit local customs concerning pregnancy, delivery, lactation and feeding and distinguish supportive from potentially harmful practices.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2dd25e75727f7de0ce72004eebb0e01527d138ac131f347050a45b8b17ac6616",
+      "subjectId": "community-medicine",
+      "code": "CM10.4",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        273.24,
+        98.6,
+        304.92
+      ],
+      "sourceBodySha256": "5a012a355651599dbe6556a00c34ee84d4f7a0bbafcbb1f1ed3a957ff297a4d4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Child survival and safe motherhood",
+      "draftLearningTask": "Map interventions across pregnancy, childbirth, the newborn period and childhood and explain referral points.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:17192a950e6803d0ba016150ba152a461e85526069c0a3e888e3aade610b465a",
+      "subjectId": "community-medicine",
+      "code": "CM10.5",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        304.92,
+        98.6,
+        336.06
+      ],
+      "sourceBodySha256": "4913dba75fb14b313a955cd4ac2fd89f7a91afee868dd315416e86c6e6196339",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunization and childhood illness programmes",
+      "draftLearningTask": "Use current official documents to explain UIP, integrated neonatal and childhood illness management and related programme pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fcf75eb01266bc3018615c13821b08d13dc664e204ad74c12aa9e1be36b71389",
+      "subjectId": "community-medicine",
+      "code": "CM10.6",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        336.06,
+        98.6,
+        367.26
+      ],
+      "sourceBodySha256": "b2bbceb64fea765afb1a3ecd9c32c6526dd9269ad697192634c3ed32c0a645d1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Family planning methods",
+      "draftLearningTask": "Compare methods by effectiveness, suitability, advantages and limitations in representative cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:367814c83a398ce99b5858fb7039ca6e72e84470e9ae9721c86ac6c911ed7138",
+      "subjectId": "community-medicine",
+      "code": "CM10.7",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        367.26,
+        98.6,
+        396.6
+      ],
+      "sourceBodySha256": "c95e0590ee4dd2607a6bf52ce235ce4a15fedb3b0f5dc44bd53519f044feef6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Family welfare services",
+      "draftLearningTask": "Map programme organization, delivery and follow-up and explain operational responsibilities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a98a215cb3d86582f97bff4bc06161950c6cf9c67344c2a9573199ad5da9b79",
+      "subjectId": "community-medicine",
+      "code": "CM10.8",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        396.6,
+        98.6,
+        428.22
+      ],
+      "sourceBodySha256": "c0bdfdd118278036404564c7e791bac5740583a955ba50ff1eddd1fffd96703d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent health",
+      "draftLearningTask": "Relate adolescent development to clinical and counselling needs and use applicable reproductive and sexual health pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6faacfd70e1de8fb5eb0abd84bf594e2bb49c20786e3c695d5d8d7dd6d8b3374",
+      "subjectId": "community-medicine",
+      "code": "CM10.9",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        428.22,
+        98.6,
+        457.62
+      ],
+      "sourceBodySha256": "1b7e39c4da6d75f58facd2769c6fc81f93e2940013bd19d6496f9c9ea2038161",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Gender and empowerment",
+      "draftLearningTask": "Analyze how gender barriers affect health access and propose measures that support agency and equity.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:91a8ec888777fc583ebcf27843e145556fd3861d078461054a8cf7aa833ab2e6",
+      "subjectId": "community-medicine",
+      "code": "CM10.10",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        457.62,
+        98.6,
+        484.74
+      ],
+      "sourceBodySha256": "fbdcb402e62470ed8d9adafad993cef9e5436af3647a50b398a528e29da0b8ce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reproductive and child health services",
+      "draftLearningTask": "Coordinate a supervised or simulated clinic session covering service allocation, referrals and follow-up.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:de312f33674f4dee4c7efcf582ebdd8794ae4ff69b8381d201c66071535cf9a2",
+      "subjectId": "community-medicine",
+      "code": "CM11.1",
+      "page": 276,
+      "rowBBox": [
+        40.1,
+        502.86,
+        98.6,
+        538.38
+      ],
+      "sourceBodySha256": "03324a248a9f488be2f22acb0d13af1d94097c1adf4b346214793bea654e61c5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Occupational illness",
+      "draftLearningTask": "Use exposure history and presenting findings to recognize representative occupational illnesses, including agricultural exposures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:053ba5b33734984e5c2cab4830f3c36c48e74ce8c87f56051f47c3059b289d18",
+      "subjectId": "community-medicine",
+      "code": "CM11.2",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        107.04,
+        98.6,
+        139.62
+      ],
+      "sourceBodySha256": "54da6c0795aed6b670539bb52ead503759ffc42245bf0327ce8152af7625e325",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Employees State Insurance",
+      "draftLearningTask": "Use current official scheme documents to explain coverage, benefits and service access in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ab82411c123276552470d515852aebc52e0c0067388f5d81f840b5d845b6b1b0",
+      "subjectId": "community-medicine",
+      "code": "CM11.3",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        139.62,
+        98.6,
+        169.8
+      ],
+      "sourceBodySha256": "c0e03ab541b50b2b1d3c41308246484415e9b7e314b4b81b9fc568943515981c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Occupational hazard prevention",
+      "draftLearningTask": "Match representative hazards and risk factors to controls using the hierarchy of controls.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce93a78df577c6e91ed93ab388963f3f3d8248620155fbcb9277806ab97e0ed2",
+      "subjectId": "community-medicine",
+      "code": "CM11.4",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        169.8,
+        98.6,
+        188.4
+      ],
+      "sourceBodySha256": "99c289dd40494ca8c3fd72550a6c9e85814dc3bbc79be806b8f774e752b264af",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ergonomics",
+      "draftLearningTask": "Assess a sample workstation and recommend changes to fit the worker and reduce strain.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3597a578834ed45438a8fe41148111fa1f3789e1cac210170f310f43cc2fda37",
+      "subjectId": "community-medicine",
+      "code": "CM11.5",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        188.4,
+        98.6,
+        223.26
+      ],
+      "sourceBodySha256": "046db6d1159a16c710886ed3b892c24f40f5349e2bd34f535c7c409002627868",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Healthcare worker health",
+      "draftLearningTask": "Compare common occupational disorders in health professionals and explain prevention and management pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a",
+      "subjectId": "community-medicine",
+      "code": "CM11.6",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        223.26,
+        98.6,
+        255.84
+      ],
+      "sourceBodySha256": "d42853d3ca76e9cfabab7c0327a78dd3536cea74ec0f966b6d45191e7dc5fc41",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Industrial health services",
+      "draftLearningTask": "Design and run a simulated workplace response covering surveillance, incident management and referral.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:43f2f821cc5a3c170a433507074e0b6f64c40b9d6c0f501194c873e928b04b50",
+      "subjectId": "community-medicine",
+      "code": "CM12.1",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        282.9,
+        98.6,
+        300.12
+      ],
+      "sourceBodySha256": "3a1f9d7948828164909c9a7c2e43867be647296347e2c5eb5738bb32444a768f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Geriatric services",
+      "draftLearningTask": "Describe components of geriatric services and map care from community support to referral.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f17ea6207c18b0e15f1c70cffda1f58a37c16e42cf3c6eca4975bebeba92803e",
+      "subjectId": "community-medicine",
+      "code": "CM12.2",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        300.12,
+        98.6,
+        333.24
+      ],
+      "sourceBodySha256": "5f65b8f18921ca332dc42caddb2352ef4184f0be904af874f53db99575eca348",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health problems in older adults",
+      "draftLearningTask": "Compare representative chronic, functional, sensory, cognitive and psychosocial needs.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bf1cc21c460eb1d71f409de0bc9033c308b4a998bccef5f52c28d32ed0e57e3a",
+      "subjectId": "community-medicine",
+      "code": "CM12.3",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        333.24,
+        98.6,
+        363.96
+      ],
+      "sourceBodySha256": "4ad3dd38be264a235ead8f7197dd70046f813c6a2d71a0d6c4b4b7bba8b52687",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prevention in older adults",
+      "draftLearningTask": "Select representative preventive measures based on function, risks and preferences.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3bb28890c7a102b4ab5d7c0e0581ca55ff1a5732790a528c889ddf6cbfb1118f",
+      "subjectId": "community-medicine",
+      "code": "CM12.4",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        363.96,
+        98.6,
+        379.02
+      ],
+      "sourceBodySha256": "e1f822b91ffa76329b8cb4e404cf9bec8318ca51d35e967f37c9582c29e1db00",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National programme for older adults",
+      "draftLearningTask": "Use dated official guidance to map programme services across levels of care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8325ea071f356d4c9e95e10311e26f63fbcf9e7bfbb8674256c2e04a42b94ad8",
+      "subjectId": "community-medicine",
+      "code": "CM12.5",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        379.02,
+        98.6,
+        411.6
+      ],
+      "sourceBodySha256": "36360c52fa865352658ff9cb7aea2d9379b8e4d244b7c3db18bdd61579ae4daa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Early geriatric needs assessment",
+      "draftLearningTask": "Perform a simulated assessment of function, falls, cognition, nutrition and support and prioritize follow-up.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f789b4d750a04063eb67a64c1b64f5aab8187bb5a91db3a3cff4252b2eb97a5d",
+      "subjectId": "community-medicine",
+      "code": "CM13.1",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        431.7,
+        98.6,
+        450.0
+      ],
+      "sourceBodySha256": "04429b706176235cdd90abdb8e96bae6dc743d2d48a4741460e36202e6b14959",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Disaster management",
+      "draftLearningTask": "Define disaster management and explain how hazard, exposure, vulnerability and capacity shape impact.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dc25b72e7a031b56935b618743e6f0019855c86a0b50a28d0c0c7e4600207077",
+      "subjectId": "community-medicine",
+      "code": "CM13.2",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        450.0,
+        98.6,
+        467.82
+      ],
+      "sourceBodySha256": "d9e7c2be57cba10a6708f42bbb3551ddad8b33162a9dc062cd90204881488fda",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Disaster cycle",
+      "draftLearningTask": "Map mitigation, preparedness, response and recovery to a representative disaster.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ec422084ea97aa5448059616973592111371bbd96a46c135f0a4037d62b6d55f",
+      "subjectId": "community-medicine",
+      "code": "CM13.3",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        467.82,
+        98.6,
+        485.64
+      ],
+      "sourceBodySha256": "5a78c71354b1e284684aa81ec336159adb1035ab416d79211eff0054decbb062",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Human-caused disasters",
+      "draftLearningTask": "Compare Indian and international examples by causes, impacts and prevention opportunities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:edac41b44b8f4b37c97e30c42048257186797d5d0ecc2302cd49da85331869f7",
+      "subjectId": "community-medicine",
+      "code": "CM13.4",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        485.64,
+        98.6,
+        503.94
+      ],
+      "sourceBodySha256": "bddf36cc24c4cbeb422b5d21fb1f7c35776ab053e4f2db8b0f19a1f323ceb7c9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National disaster authority",
+      "draftLearningTask": "Use official material to explain NDMA responsibilities and coordination with state and local authorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7234cadb714769b6e449319984afc869a314278734c10dc897fb9c75770c3689",
+      "subjectId": "community-medicine",
+      "code": "CM13.5",
+      "page": 277,
+      "rowBBox": [
+        40.1,
+        503.94,
+        98.6,
+        531.3
+      ],
+      "sourceBodySha256": "5ba6ed8030b8ac4ddf52d260bcdd8346fb42c33539aeb90df2fd181bb0afaa2b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Disaster response simulation",
+      "draftLearningTask": "Participate in a tabletop exercise covering triage, communication, resource allocation and referral.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

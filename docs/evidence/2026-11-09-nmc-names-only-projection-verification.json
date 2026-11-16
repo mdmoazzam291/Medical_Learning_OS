@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "2ca30433edbb6d72fce860fd17de230ecd036d1c",
+  "projectionBlobSha": "4bcabb896a8fecdedcc18fee1c5169d7f4d09296",
+  "catalogueBlobSha": "4e042cc674fb29ad610d3d82aecb65f9c3e0286c",
+  "projectionChecks": "passed",
+  "summary": {
+    "concepts": 78,
+    "links": 146,
+    "references": 132,
+    "qualified": 24,
+    "headings": 2,
+    "aliases": 6,
+    "held": 1
+  },
+  "completionReporter": {
+    "executionScope": "local repository checkout with matching pinned catalogue",
+    "totals": {
+      "appearances": 2634,
+      "withProposedObjectives": 11,
+      "withDraftArtifactBindings": 3,
+      "historicalDeletions": 1
+    },
+    "sourceAccountingComplete": true,
+    "foundationComplete": false,
+    "productionStateVerified": false
+  },
+  "remaining": [
+    "Canonical identity and exact objective bindings",
+    "Provisional heading and alias metadata decisions",
+    "Unexplained PS2.1 asterisk",
+    "Learner-facing verification"
+  ],
+  "next": "Verify the completion reporter inputs on the draft branch and reconcile remaining names-only metadata."
+}

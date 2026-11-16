@@ -1,0 +1,1225 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-10.json",
+      "sha256": "8b42358aa9fe8aea57654b5ca3465604285d1edcaa555b5622147c744210f467"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-11.json",
+      "sha256": "92422976e793d8bed80b24fc30fa4a30f75e7a62566d1d1522cfb8bd3c6eda60"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-12.json",
+      "sha256": "0f7800bddee98ede8dd3e320717e82a539314538be0b1c5c8feb49663d3b74e1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-13.json",
+      "sha256": "7901c12dfa052dd80e0714f33c4cc99ad898256def2c63c4edef29b4aee3ff27"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-14.json",
+      "sha256": "5bad74049d84e3de5ae5e9aa40f54ef9c38f31ed275b58a61f31653039442651"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-15:01",
+      "facetNameKey": "midbrain landmarks",
+      "facetName": "Midbrain landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:94e3a1bffb98b44e24fcd453991e7549b961a02f8b3009311d775294c8cc4ed3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN61.1",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            329.82,
+            121.9,
+            374.46
+          ],
+          "sourceBodySha256": "66a57928df77b4fe138ac65dcd0e5e466eea14331411a3be1921e309ec27887d",
+          "editorialTaskSha256": "9adb331f2cd70019fcb37ea2e144f7de393ff24e2f23c66d3e7520d127c99cbb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Midbrain",
+      "proposedHomeNameKey": "midbrain",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Specimen orientation and source-named midbrain landmarks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:02",
+      "facetNameKey": "midbrain lesion localization",
+      "facetName": "Midbrain lesion localization",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d7fad23a61017a88a04dd3fd97f0c03c4d033f26dc6802db375c4c90bcfafc8d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN61.3",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            406.5,
+            121.9,
+            467.34
+          ],
+          "sourceBodySha256": "12b883755f3cbaeb061910c363bd3f43775edc29e553e1d8680b867ba5f23cc4",
+          "editorialTaskSha256": "891d364269cd225abf9d8d8eded9d492224ae84aa58a17f7cfeb69585cb3b7c9",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Midbrain",
+      "proposedHomeNameKey": "midbrain",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sectional Weber/Benedikt/Parinaud localization; syndromes remain distinct.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:03",
+      "facetNameKey": "migraine classification",
+      "facetName": "Migraine classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:01c3ad58603a35b283ebe5fb12c311bf765416ef2f53edae1d70d297e851c5b1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.3",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            174.48,
+            102.7,
+            202.02
+          ],
+          "sourceBodySha256": "6d839e1693ae659d82bd7896209c0e220193067fac9e2abc14565b0a5403ec96",
+          "editorialTaskSha256": "b3d5751e69853e0079728b98985d3b4fcd129c0b359b502e144f502b627cee62",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Migraine",
+      "proposedHomeNameKey": "migraine",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "migraine"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "With/without aura and representative variants, variants unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:04",
+      "facetNameKey": "migraine prevention",
+      "facetName": "Migraine prevention",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5c953d54784bff2a6d6bc5bb591aea8ada742c79681a09bac066801646c02b57",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.12",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            464.64,
+            102.7,
+            492.12
+          ],
+          "sourceBodySha256": "83277bf48a1b14b0089e93a752e2a5dd401def49ec304d843c6ec91694b8166c",
+          "editorialTaskSha256": "58fb4a7bdd616b496cb0ee0f04ace5752eb126711b7a2bf0a9aecbad7b4dc124",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Migraine",
+      "proposedHomeNameKey": "migraine",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "migraine"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preventive medicine indication/action/dosing-principle/harms comparison, not prescribing certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:05",
+      "facetNameKey": "modifiers of injury response",
+      "facetName": "Modifiers of injury response",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:36df88a22846f39443d722965234fc82b3e0ee133728c684aa3e83b2578ed727",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU1.2",
+          "page": 403,
+          "rowBBox": [
+            45,
+            224.46,
+            101.7,
+            245.64
+          ],
+          "sourceBodySha256": "32244971dd05373c50f0ee0c2933b6a399a03177792b504272504119f5e6ad5b",
+          "editorialTaskSha256": "920052f3540afd8da372dd9397bcec211db0581fffabf263edf02514251f5f9d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Trauma physiology",
+      "proposedHomeNameKey": "trauma physiology",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Severity/nutrition/infection/comorbidity modifiers of metabolic injury response.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:06",
+      "facetNameKey": "molecular basis of cancer",
+      "facetName": "Molecular basis of cancer",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7ef1323578926700dea01d814057dddaa0c0283e548e93ece55181aba578d8ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA6.2",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            223.44,
+            105.6,
+            258.78
+          ],
+          "sourceBodySha256": "2802a27160104997a773f5996121008f32d6ca54edad7bf5d0b21c48849b433a",
+          "editorialTaskSha256": "b3d0109da4916c451749728007e9b3d066c42fe737020a570823a76e374aaca5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Breast/colorectal examples of driver/suppressor/epigenetic progression mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:07",
+      "facetNameKey": "movement disorder classification",
+      "facetName": "Movement disorder classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bc542b2d6709a04485d74cd01a5d258cd699638362f2a8ac4df1bf9d034ae76d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.2",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            462.84,
+            102.7,
+            503.64
+          ],
+          "sourceBodySha256": "ee9d3693781c2bd755b9032923fa43cc2cd9966f44417f0e5b4646650282d033",
+          "editorialTaskSha256": "c2ecf85380ffb146523219621571ffa3424f7c7910c37398a221603b6e7c74c3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Movement disorders",
+      "proposedHomeNameKey": "movement disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Distribution/rhythm/repetition/modifier classification only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:08",
+      "facetNameKey": "movement disorder differential",
+      "facetName": "Movement disorder differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:abfd4bd23dea591d46dd318afdebea5baa1ac20d41be15e80292e2fa8e2f2302",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.5",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            167.04,
+            102.7,
+            207.78
+          ],
+          "sourceBodySha256": "fca5acf517fc4b9991dd3d40df3d6387de02ecd60fa32b01922ca33fc3154e04",
+          "editorialTaskSha256": "a69e28a6e0a1dfa48dbd3ea5b735c22fc54ef0f33cc329b54a4d5d3dc47e38d2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Movement disorders",
+      "proposedHomeNameKey": "movement disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated movement-disorder differential.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:09",
+      "facetNameKey": "movement disorder examination",
+      "facetName": "Movement disorder examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:444d383d655bd844811d72f8aa9e5b3632ff5dab12fe844942745f0452224da3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.4",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            167.04
+          ],
+          "sourceBodySha256": "ba563e77cc73beeeee37f3b35329a2432db247e6db65f1b4d401f20ef39ecc80",
+          "editorialTaskSha256": "47e271bc212430d27fad4c37593eb8a78360f3033e685b3005c505102515547c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Movement disorders",
+      "proposedHomeNameKey": "movement disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Demonstrated neurological examination/rating scale; scale version not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:10",
+      "facetNameKey": "movement disorder history",
+      "facetName": "Movement disorder history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:03524623522aeef48f3eee5238211d90fad3e66ff5d52dcebf82426dfa97e9ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.3",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            503.64,
+            102.7,
+            544.56
+          ],
+          "sourceBodySha256": "655d37f5b32ab621328d6656eaf3c831f3a4e9c9e834f3ebc733414cae15652d",
+          "editorialTaskSha256": "08d2859413904bc792db77763d3af96a1e6484f201a0c5279b5381541e78e2ad",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Movement disorders",
+      "proposedHomeNameKey": "movement disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Onset/course/triggers/relief/associated-feature history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:11",
+      "facetNameKey": "movement disorder localization",
+      "facetName": "Movement disorder localization",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6706c09951dbdb58f13d5b133083da0b18de6aa49c3d605822a1edd00d2025ae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.6",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            207.78,
+            102.7,
+            261.96
+          ],
+          "sourceBodySha256": "d2d80c7d8cd85f9ceee88ec8097d0fcf17ec8e22db43c4d53ad11234d39624ab",
+          "editorialTaskSha256": "e7af092f79d1d1c5c71192ed9afbeef8efa398c75b26a772a8e0471c5ebed1af",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Movement disorders",
+      "proposedHomeNameKey": "movement disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Likely site/nature/cause localization, not a confirmed diagnosis.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:12",
+      "facetNameKey": "muscle attachment sites",
+      "facetName": "Muscle attachment sites",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c058a86c3d3a9d6d7f2ddd12e63a60ef2814b7dea4bc43c303a23b01b5166ec8",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN8.2",
+          "page": 111,
+          "rowBBox": [
+            51.2,
+            108.42,
+            120.4,
+            153.06
+          ],
+          "sourceBodySha256": "25a6be8aa8b520701f2e02badf8b735a56afe0335105a119ee637cb272a8b1c8",
+          "editorialTaskSha256": "04b13c5b591b695c520e53d6474492f58616c92e0f96590d36b20ba6647fc938",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Upper-limb bones",
+      "proposedHomeNameKey": "upper-limb bones",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied upper-limb bone muscle footprints; muscles not invented beyond source.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:13",
+      "facetNameKey": "muscle identification",
+      "facetName": "Muscle identification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:138934aaae06c76c1890e23733a876236d474300aace8011030072b94d748c88",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN67.1",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            305.34,
+            121.9,
+            341.34
+          ],
+          "sourceBodySha256": "e1f824aeb7961a14849c0b133d91dc70b8602edb440eb98252cd4a97131efd6e",
+          "editorialTaskSha256": "1861aa325b0bcd66fd74300a359b8bc6762080cb36943586ef62ba0fd7ad6990",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Muscle tissue",
+      "proposedHomeNameKey": "muscle tissue",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Slide distinction of skeletal/cardiac/smooth tissue.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:14",
+      "facetNameKey": "muscle ultrastructure",
+      "facetName": "Muscle ultrastructure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4feb2313a12f48ae88009dd71316e2a8b47e4856afc2b1a376b93e36dba569af",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN67.3",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            366.18,
+            121.9,
+            390.66
+          ],
+          "sourceBodySha256": "4629c3b7ccc2f51a9456364768c4e1ae51430d3c2cb8b047f9081e006bda1ac7",
+          "editorialTaskSha256": "08905739c7373f7e0995823bd035050929b206aee1142df192bc679385dd1381",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Muscle tissue",
+      "proposedHomeNameKey": "muscle tissue",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Three muscle-type sarcomere/membrane/anchoring comparison without identity collapse.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:15",
+      "facetNameKey": "myringotomy anatomy",
+      "facetName": "Myringotomy anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0d35f7e099ca6ff4719fc8aa23016d34d660d5d1cc3c13a52974d3512a7b2ded",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN40.5",
+          "page": 131,
+          "rowBBox": [
+            51.2,
+            385.2,
+            121.7,
+            409.68
+          ],
+          "sourceBodySha256": "567d4beab6082eba1a093d422c4004f0f1870948f8b911291fcb2986602dbed1",
+          "editorialTaskSha256": "a02d13ac83649891d0746fc1749582756371663070773b36b7e379c49c8b569f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Tympanic membrane",
+      "proposedHomeNameKey": "tympanic membrane",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Diagram quadrants and ossicle/chorda relations for myringotomy rationale, not operative performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:16",
+      "facetNameKey": "neonatal resuscitation simulation",
+      "facetName": "Neonatal resuscitation simulation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a771321fd50da97943deb8420d8bdbef147f37439a19924431baaaf5c44f9aae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.2",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            463.08,
+            103.1,
+            494.76
+          ],
+          "sourceBodySha256": "b6d3f94bc35bcd53b392d278b37f3f5a84ede9cc16258284fa2939d029e83958",
+          "editorialTaskSha256": "21426b5f533a581d09a8c16163997aaf5b9f1ea0560f8911c3761dd7132e552b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Neonatal resuscitation",
+      "proposedHomeNameKey": "neonatal resuscitation",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "neonatal resuscitation"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-approved checklist simulation only, not independent neonatal resuscitation competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:17",
+      "facetNameKey": "neonatal thyroid screening",
+      "facetName": "Neonatal thyroid screening",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:367c51ec801ff8b6cd4603811f3dcc088c77ccccf943d346184322f3caaa640a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE30.2",
+          "page": 349,
+          "rowBBox": [
+            51.3,
+            106.14,
+            103.1,
+            121.2
+          ],
+          "sourceBodySha256": "e41572ba03dd06a4cd507079e10aef820f8ebf77b151a0d3b932faedf6021d38",
+          "editorialTaskSha256": "b1c5404a3d56736cddf94883d4bcc0e0c41bc6aee58d1dc70f6ea27c90f6bccb",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Congenital hypothyroidism",
+      "proposedHomeNameKey": "congenital hypothyroidism",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sample neonatal thyroid screening interpretation with confirmation/follow-up; screening is not diagnosis.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:18",
+      "facetNameKey": "nerve fibre properties",
+      "facetName": "Nerve fibre properties",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7892bcbd40f0f58e15beef34c0b8577ff069ec5f187b2abd15c1402d8517536f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY3.2",
+          "page": 151,
+          "rowBBox": [
+            58.5,
+            383.58,
+            107.8,
+            416.34
+          ],
+          "sourceBodySha256": "9fe7cbacbd452672ce609aae1cec57ad55807c4fb6951a6b584ec4e72518cd98",
+          "editorialTaskSha256": "061223901d853acc8c19e00cbde271d6ec791461247c632d0cbb306ec883ec2f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Nerve fibres",
+      "proposedHomeNameKey": "nerve fibres",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Fibre classes and strength-duration rheobase/chronaxie derivation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:19",
+      "facetNameKey": "nervous tissue ultrastructure",
+      "facetName": "Nervous tissue ultrastructure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e04fcd56edae76655599b6af50e48d1d2253c7b5cda09b0c52e6e1b43b1c9874",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN68.3",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            474.18,
+            121.9,
+            499.02
+          ],
+          "sourceBodySha256": "93d94bd6f7f528ca783e1e0d73d102168e46763279fde6ac0f79a929b05401bc",
+          "editorialTaskSha256": "9846eb6d6eb5e73f6e9f60e1bd306856cddb75230fd5f3326874af72eb4d03c9",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Nervous tissue",
+      "proposedHomeNameKey": "nervous tissue",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Electron-micrograph synapse/myelin organization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:20",
+      "facetNameKey": "neurological assessment",
+      "facetName": "Neurological assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b492d9ba2e70ff9e7c8f9bfd6363b5a685639ff912bfe28ffb8a8983e66c3577",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU17.5",
+          "page": 407,
+          "rowBBox": [
+            45,
+            112.92,
+            101.7,
+            143.7
+          ],
+          "sourceBodySha256": "fca6a1d3207f947b3b5914954db6435de5d9a6861ac449677a1d04395a8548f9",
+          "editorialTaskSha256": "903ba01aea014445e383f1ac26b48a3b7c96e318fb15aef799afc6c63fd00c22",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Head injury",
+      "proposedHomeNameKey": "head injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated head-injury findings and GCS calculation/documentation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:21",
+      "facetNameKey": "neurological examination in headache",
+      "facetName": "Neurological examination in headache",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7b998d2eedbe4dc5e0dc36c9f9bc6f94cc2336daecbaf636f8ea5e3683ce5c9b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.4",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            202.02,
+            102.7,
+            242.64
+          ],
+          "sourceBodySha256": "a04314429923cc35cc2208b34ecd4fc13dd63d6a689ae437682b8a20752fe257",
+          "editorialTaskSha256": "b0ab107e5eef2d170c5cf933f9f5cabcfe308aeade98a277af5e7a4075481943",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Headache",
+      "proposedHomeNameKey": "headache",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "headache"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Focal deficit/ICP/meningeal sign examination in headache context.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:22",
+      "facetNameKey": "neurosurgical referral",
+      "facetName": "Neurosurgical referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:685980fa795ecbd73510a760172dab25afc191eda30e6d0deef55f2315e373c5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.14",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            293.28,
+            102.7,
+            320.82
+          ],
+          "sourceBodySha256": "005aa0f0d00993aca02131cf39c0d550c5becacfdc705d03f0c0cd360aa18c91",
+          "editorialTaskSha256": "b4766c2755016b3e26d4b1031a36c68e10293c277115f66a8210a1ad61f40c03",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Haemorrhagic stroke",
+      "proposedHomeNameKey": "haemorrhagic stroke",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Haemorrhagic-stroke surgical evaluation indications, not surgery competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:23",
+      "facetNameKey": "newborn resuscitation principles",
+      "facetName": "Newborn resuscitation principles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.4",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            517.32,
+            103.1,
+            553.2
+          ],
+          "sourceBodySha256": "0324c5ad09eca40868a0cd41b4f3d6cbe1c72881b16955663d8666c1c188320c",
+          "editorialTaskSha256": "93860a7bee27154647bb746dbaec4b82a580ac4756f34d3d7c106ec5966884ae",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Neonatal resuscitation",
+      "proposedHomeNameKey": "neonatal resuscitation",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "neonatal resuscitation"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preparation/assessment/ventilation/difficulty explanation distinct from simulator performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:24",
+      "facetNameKey": "non-drug heart failure care",
+      "facetName": "Non-drug heart failure care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d1ff36cd320ba0fcc98b9ff482ac153c42da47797e1355b971e70d3221ed6d87",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.21",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            255.66,
+            102.7,
+            309.78
+          ],
+          "sourceBodySha256": "8388c070441b7856c833366d20e20a1367a679bf90034d24a4baf46ab79352fa",
+          "editorialTaskSha256": "649d762541e6587759eaf7fe45f046e72797c0fcfe3053233d217b525a38563d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated individualized sodium/activity/limitation counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:25",
+      "facetNameKey": "normal ecg practical",
+      "facetName": "Normal ECG practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:29884fa47f8bb6236984cc80e1e5de68d0b8a6f72c64decfe469958fcfa66388",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY5.15",
+          "page": 154,
+          "rowBBox": [
+            58.5,
+            277.74,
+            107.8,
+            310.5
+          ],
+          "sourceBodySha256": "e773bd72ea179395db02828443b99a380ce26b116759541e96d8e90b9e82328b",
+          "editorialTaskSha256": "deb00ac7b5a4c5db12af80e041c7a592fe78c917bdd83628c1e2aa386cb98637",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Electrocardiography",
+      "proposedHomeNameKey": "electrocardiography",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Volunteer/simulator lead placement, tracing and normal rate/rhythm/interval assessment.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:26",
+      "facetNameKey": "normal renal histology",
+      "facetName": "Normal renal histology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:26a6f3bc1a52c47ab2250e17f6e6cfed5321f8cd93be8ac1612a37714142d1bf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA27.1",
+          "page": 197,
+          "rowBBox": [
+            51.5,
+            473.34,
+            105.6,
+            490.98
+          ],
+          "sourceBodySha256": "10f674ba08f38c7309e050924e0e9eb5e4036ebc514bb1ae5b2bf53eff6a569e",
+          "editorialTaskSha256": "967e10f9ed301732cd77eff47def0011ab2e87e96c07483a6323ce4d04bb9e20",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Kidney",
+      "proposedHomeNameKey": "kidney",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "kidney"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cortex/medulla/glomerulus/tubule/vessel section labelling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:27",
+      "facetNameKey": "nutrition classification",
+      "facetName": "Nutrition classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c1e6279be1b7ff458602d19f14eaa0f5cea9de738530111e073437483b663298",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE9.6",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            84.9,
+            103.1,
+            117.48
+          ],
+          "sourceBodySha256": "3a01a62ffad2d6069a0d3a10b66948e4fc89119b42bfea11b40e653e84db8a85",
+          "editorialTaskSha256": "7f4af0ae4c46c5a8ac71bd95e598a4c848a060d0bd90c918f454f32dd0d09aef",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Nutritional assessment",
+      "proposedHomeNameKey": "nutritional assessment",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "nutritional assessment"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-based anthropometry/supporting findings classification, not universal nutritional competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:28",
+      "facetNameKey": "nutritional anaemia prevention",
+      "facetName": "Nutritional anaemia prevention",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a4c4291c720d9193f2c21029182021b710fc258803e0541e8c82a52d3c2483f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.16",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            390.9,
+            102.7,
+            418.26
+          ],
+          "sourceBodySha256": "d89e68ed101b9afbafbe47c630c92eea917f6c72fd15b3b4daf0901266329058",
+          "editorialTaskSha256": "9cd61a69c1fde5413dbc641a5f56c3f907900cbee15e2febf18bf2e85dfd04a5",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated dietary/preventive anaemia counselling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:29",
+      "facetNameKey": "obesity aetiology",
+      "facetName": "Obesity aetiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0345cd785a8b559fb97f132e6a5c60641ade237d096e5eb53578c8c8eefb5ba8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.2",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            228.24,
+            102.7,
+            255.6
+          ],
+          "sourceBodySha256": "23ce992c3f0ea0dc6a06cd284f884b6ef60ef6edc5083359c0fef23216ee2bcd",
+          "editorialTaskSha256": "9ccd00780389f6c92bfbf96b3100389a49d137b166f1fbb5e0fcdf67d4594f80",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:0a09c6200e02082f0892296b48eaa0428c9c1eb77eb8ec449ee526166a4ba3fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.2",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            275.52,
+            102.7,
+            302.82
+          ],
+          "sourceBodySha256": "23ce992c3f0ea0dc6a06cd284f884b6ef60ef6edc5083359c0fef23216ee2bcd",
+          "editorialTaskSha256": "9ccd00780389f6c92bfbf96b3100389a49d137b166f1fbb5e0fcdf67d4594f80",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve both source appearances even with identical task wording; not two independent competence receipts.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-15:30",
+      "facetNameKey": "obesity differential",
+      "facetName": "Obesity differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb97a0852a86a3cf4fa6857d7cc912368696d084fd24a65a7fab1d49d1f24e3e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.8",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            485.82,
+            102.7,
+            526.56
+          ],
+          "sourceBodySha256": "1b9a55dbe22fd1bd9d9b6d03e6a100858cea1405b8cbe859a5c408b31d958b36",
+          "editorialTaskSha256": "1dfac21086206db5ec5a471d03ced170a44efeb65ad04e893a6249e7e7752504",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptom/examination-based obesity differential prioritization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 31,
+    "distinctProposedHomes": 21,
+    "existingNameHomeLinks": 12,
+    "newNameHomeLinks": 18,
+    "facetsWithoutInitialHomeProposal": 209
+  }
+}

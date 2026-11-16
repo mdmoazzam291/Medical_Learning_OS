@@ -12,6 +12,9 @@ const securityHeaders = `/*
   Content-Security-Policy: default-src 'self'; script-src 'self' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self'; img-src 'self' https://iyapppmeieqhflnzslao.supabase.co; connect-src 'self' https://iyapppmeieqhflnzslao.supabase.co https://o4512152153751552.ingest.us.sentry.io; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'
 `;
 
+const productionOrigin = 'https://iyapppmeieqhflnzslao.supabase.co';
+const stagingOrigin = 'https://vwtdwafjrraptrgeshzt.supabase.co';
+
 const redirects = `/oauth/consent /web/oauth-consent.html 200\n`;
 
 async function copyPublicFile(relativePath, outputDirectory) {
@@ -23,8 +26,16 @@ async function copyPublicFile(relativePath, outputDirectory) {
   await copyFile(source, destination);
 }
 
-export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTPUT || defaultOutput } = {}) {
+export async function buildPages({
+  outputDirectory = process.env.MLOS_PAGES_OUTPUT || defaultOutput,
+  staging = false,
+  stagingPublishableKey,
+} = {}) {
+  if (staging ? !/^sb_publishable_[A-Za-z0-9_-]+$/.test(stagingPublishableKey ?? '') : stagingPublishableKey !== undefined) {
+    throw new Error('A publishable staging key is required only for an explicit staging build');
+  }
   const output = resolve(outputDirectory);
+  if (staging && output === defaultOutput) throw new Error('Choose a separate staging output directory');
   if (output === repoRoot || repoRoot.startsWith(`${output}/`)) {
     throw new Error('Refusing unsafe Pages output path');
   }
@@ -38,13 +49,25 @@ export async function buildPages({ outputDirectory = process.env.MLOS_PAGES_OUTP
 
   // Preserve the existing root learner route without widening the public surface.
   await copyFile(resolve(repoRoot, 'web/index.html'), resolve(output, 'index.html'));
-  await writeFile(resolve(output, '_headers'), securityHeaders, 'utf8');
+  if (staging) {
+    const config = { projectUrl: stagingOrigin, publishableKey: stagingPublishableKey };
+    await writeFile(resolve(output, 'web/cloud-config.js'), 'export const cloudConfig = ' + JSON.stringify(config, null, 2) + ';\n', 'utf8');
+  }
+  const headers = staging ? securityHeaders.replaceAll(productionOrigin, stagingOrigin) : securityHeaders;
+  await writeFile(resolve(output, '_headers'), headers, 'utf8');
   await writeFile(resolve(output, '_redirects'), redirects, 'utf8');
 
   return { outputDirectory: output, fileCount: publicFiles.length + 3 };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const result = await buildPages();
+  const args = process.argv.slice(2);
+  if (args.length > 1 || (args.length === 1 && args[0] !== '--staging')) {
+    throw new Error('Usage: node scripts/build-pages.js [--staging]');
+  }
+  const result = await buildPages({
+    staging: args[0] === '--staging',
+    stagingPublishableKey: process.env.MLOS_STAGING_PUBLISHABLE_KEY,
+  });
   console.log(`Cloudflare Pages bundle ready: ${result.outputDirectory} (${result.fileCount} files)`);
 }

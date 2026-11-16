@@ -1,0 +1,1213 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-03:01",
+      "facetNameKey": "asthma planning",
+      "facetName": "Asthma planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3838d1977001b28b8133fa1f3833f16c25055ae29284b8220c21eb3e01695169",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE28.3",
+          "page": 348,
+          "rowBBox": [
+            51.3,
+            170.88,
+            103.1,
+            203.4
+          ],
+          "sourceBodySha256": "f6859526e4dd0a399bda77c3cc4dfd5dc106bf3957d520b7bdb603f243395b1d",
+          "editorialTaskSha256": "69110585ddaa5b905d610766213b2d22dcf8636ef0daf7b6693940b4cfa54ad3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Asthma",
+      "proposedHomeNameKey": "asthma",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "asthma"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Severity-appropriate planning for a simulated child; not independent treatment competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:02",
+      "facetNameKey": "atherosclerosis epidemiology",
+      "facetName": "Atherosclerosis epidemiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.1",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            201.12,
+            102.7,
+            228.48
+          ],
+          "sourceBodySha256": "3c7c2a93b4ff410013550cffdb8ddbdd3ee1236e49a457e0d3b887ad89f7067b",
+          "editorialTaskSha256": "27e3a9d29fecab7747b3611b04f032f61334f7b3f4ff227770b5070b178e0e31",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Atherosclerosis",
+      "proposedHomeNameKey": "atherosclerosis",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "atherosclerosis"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Population patterns and antecedents of ischaemic risk; dated epidemiology not revalidated.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:03",
+      "facetNameKey": "autoimmune mechanisms",
+      "facetName": "Autoimmune mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdf95d3ab4fd619b0eb723aacd93f42e460719ee7c7da88ae31b614f980ac011",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.1",
+          "page": 293,
+          "rowBBox": [
+            44.2,
+            399.18,
+            102.7,
+            426.72
+          ],
+          "sourceBodySha256": "6c86c594a19c49c0acf399842d041d410fe1ad29673e5e078e2c947357a0a06f",
+          "editorialTaskSha256": "254cb131efa10de64dcb187c674db85aab2ab74933819d526ded6566b83c31a5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Autoimmunity",
+      "proposedHomeNameKey": "autoimmunity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "autoimmunity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Genetic susceptibility and loss of tolerance in representative disease mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:04",
+      "facetNameKey": "autopsy professionalism",
+      "facetName": "Autopsy professionalism",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b9929baec2692bbb7a4c3e1d8cd6c00de441c1842363abb9995cb1231e9d7e0e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.25",
+          "page": 219,
+          "rowBBox": [
+            45.5,
+            154.68,
+            95.2,
+            205.74
+          ],
+          "sourceBodySha256": "7123aec5a68eee4dc6adfa5015390698d28ac685aec10da34c8bc124c5773c5e",
+          "editorialTaskSha256": "720932cf6b1d2c5c0079d77b6e441dbb1f1b82de78664d8e5e5374af6a6b2038",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Autopsy",
+      "proposedHomeNameKey": "autopsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Respectful conduct, evidence handling and reasoned opinion in autopsy simulation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:05",
+      "facetNameKey": "autopsy teamwork",
+      "facetName": "Autopsy teamwork",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:03fd25676032629e91c723d4619be0ef39f9b1af49b458cc5f1ea849ff0fdddc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.26",
+          "page": 219,
+          "rowBBox": [
+            45.5,
+            205.74,
+            95.2,
+            259.74
+          ],
+          "sourceBodySha256": "9040b972dfcae37b635cbd1e5121644c7803c1d22cd9fc11b4de049870e9d16f",
+          "editorialTaskSha256": "27d7764b248aa97d02e15a7dbf10f853d7ac50ecd28509bdd0c4b6d5331eba1b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Autopsy",
+      "proposedHomeNameKey": "autopsy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Assigned teamwork roles in source-specified simulated death/exhumation contexts; no verified legal authority or independent autopsy competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:06",
+      "facetNameKey": "baby-friendly practices",
+      "facetName": "Baby-Friendly practices",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb68a53e70f46ac4aa50882184aed469a93b9c2b317bae00f6dd8000339b282f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE7.5",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            84.9,
+            103.1,
+            102.54
+          ],
+          "sourceBodySha256": "9060e8b8cbdb76e410adf3864bff0335b6439d6c89a6aa0faf1d884616861528",
+          "editorialTaskSha256": "814e47a1fe920e1413df738a456b10886760273e7fdaba89bd02e84d680403db",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Breastfeeding",
+      "proposedHomeNameKey": "breastfeeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Maternity/newborn practices supporting breastfeeding; no institutional accreditation claim.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:07",
+      "facetNameKey": "barium swallow anatomy",
+      "facetName": "Barium swallow anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8db929f26c797e149bf71881db6b14c12ea0227e9ae014b9df982494d1e60971",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN25.8",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            261.48,
+            122.2,
+            293.46
+          ],
+          "sourceBodySha256": "765a8730c7c2311d74e8d03b909a06716d3767d019b986bcf8d3793f0f4704c3",
+          "editorialTaskSha256": "29dd2bd4732a5153b5d31d6a62a7d2b5051ac40538fa38c7501890efe5ec903e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Oesophagus",
+      "proposedHomeNameKey": "oesophagus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "oesophagus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Barium swallow contrast column, constrictions and course to the gastro-oesophageal junction.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:08",
+      "facetNameKey": "basal ganglia circuits",
+      "facetName": "Basal ganglia circuits",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d5ae38ae22c001b8e7aa671d0fb38a1ea1e8b5626858ec6443049ea1a05abb45",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.12",
+          "page": 158,
+          "rowBBox": [
+            58.5,
+            370.62,
+            107.8,
+            397.92
+          ],
+          "sourceBodySha256": "6c8eb00d965b8b5212d65dd44bfdc7cafff019b0e2b32bfc8b09fbccbcd0894c",
+          "editorialTaskSha256": "fb217a9039000c33270ed5dcd0ffc5487ae5f79fb0b6b577f37ab39649b49875",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Basal ganglia",
+      "proposedHomeNameKey": "basal ganglia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "basal ganglia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Circuit tracing and simulated movement abnormality explanation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:09",
+      "facetNameKey": "bilirubin physiology",
+      "facetName": "Bilirubin physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:67b36bc3316de835f3de33221f5f7ddc92ba80e8abc5edb8315915e35a5850c8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.1",
+          "page": 290,
+          "rowBBox": [
+            44.2,
+            159.96,
+            102.7,
+            200.7
+          ],
+          "sourceBodySha256": "89f0f7d3833b2ce0ed5246ca06dd86030e66a0f197ac5eb6dcda4ab4f6ad5851",
+          "editorialTaskSha256": "3366a64a2120ee7be7d1a1d46f312a111f5fd0c5dca01f9641bfda138469335c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Bilirubin metabolism",
+      "proposedHomeNameKey": "bilirubin metabolism",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "bilirubin metabolism"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Production, conjugation, excretion and abnormal bilirubin patterns.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:10",
+      "facetNameKey": "birth asphyxia assessment",
+      "facetName": "Birth asphyxia assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f37c034b1ed72a2292879209a74fa579a28c23dd6c16a631ce774e675046dd7c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG18.3",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            494.76,
+            103.1,
+            517.32
+          ],
+          "sourceBodySha256": "ed24c78e3775289212d08b386bb6db57a20af1dfd0b2a4753da91ca9d2357ba5",
+          "editorialTaskSha256": "0ccd4813ff5698efb6078a6003fb3f7b539b24de964338b7e9a7e06027786c67",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Birth asphyxia",
+      "proposedHomeNameKey": "birth asphyxia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "birth asphyxia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Perinatal history/newborn findings and limits of individual indicators.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:11",
+      "facetNameKey": "blood culture interpretation",
+      "facetName": "Blood culture interpretation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.13",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            174.48,
+            102.7,
+            202.02
+          ],
+          "sourceBodySha256": "4928ca9c19d279a7e61d4981df3c884ba8ec85c071bf0f04509a34b9aa6a99bb",
+          "editorialTaskSha256": "37c519463383e8cf172f5f3e59bd86e57a457d989a9b29d283e3348cdcd61b8e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Blood culture",
+      "proposedHomeNameKey": "blood culture",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bloodstream infection versus contamination using sample results and clinical context.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:12",
+      "facetNameKey": "blood pressure assessment",
+      "facetName": "Blood pressure assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.11",
+          "page": 282,
+          "rowBBox": [
+            44.2,
+            214.86,
+            102.7,
+            255.66
+          ],
+          "sourceBodySha256": "e199132a77f753c1be257fcbd4dfbf43b5f966ef9f95a2d84da645e9349ae9c8",
+          "editorialTaskSha256": "ed07e8c8ec72d50104920b3200cf57e5e82f2a368d2fdbd03629dd9823959603",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Blood pressure",
+      "proposedHomeNameKey": "blood pressure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "blood pressure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Measurement and alterations in source-specified cardiac contexts; not universal haemodynamic competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:13",
+      "facetNameKey": "bone histology",
+      "facetName": "Bone histology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a080cd2903174aa99b02af1204e474f381113721cf6c36622b779aca4210226b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN71.1",
+          "page": 145,
+          "rowBBox": [
+            51.2,
+            259.32,
+            122,
+            289.71
+          ],
+          "sourceBodySha256": "1ef3b014b3e317ba60ea2e33f1e6ea7cdb6fb22cf6e68aadaa35573902b9d518",
+          "editorialTaskSha256": "5ae0a4a76ab324d79537e56d8d47c027e52dca71a55e9a537c0281dcd292ff45",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Bone",
+      "proposedHomeNameKey": "bone",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "bone"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Microscopic compact/trabecular organization, loading and remodelling.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:14",
+      "facetNameKey": "bony pelvis boundaries",
+      "facetName": "Bony pelvis boundaries",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b19777fefb133d0c3d18b7a63d2fd68d622bcdb1f838cd0a532ee905f036c060",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN53.2",
+          "page": 139,
+          "rowBBox": [
+            51.2,
+            351.72,
+            122.2,
+            382.68
+          ],
+          "sourceBodySha256": "15deb23448538ea2bfa7812f7f3db8463c962c43199d8199f56b0f107019a35f",
+          "editorialTaskSha256": "9bac5c2cffa4a475eb8771ddc0f9d4a9c3f9aef568a2e53026b417deb6c48832",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Bony pelvis",
+      "proposedHomeNameKey": "bony pelvis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Articulated pelvis orientation and inlet/cavity/outlet boundaries.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:15",
+      "facetNameKey": "brachial plexus structure",
+      "facetName": "Brachial plexus structure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d1e390bbc36cf60e99ad565227b19cddf9bedd2406e462b07d2c694047258794",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN10.3",
+          "page": 111,
+          "rowBBox": [
+            51.2,
+            478.86,
+            120.4,
+            528.96
+          ],
+          "sourceBodySha256": "9081bc31752d12040c410efa5b6129589a80621dc68d56a8a89cd9e666a10d93",
+          "editorialTaskSha256": "b3e60ad9334f28917988ad45071c15fe76bb210d4262405338150b31891b76e4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Brachial plexus",
+      "proposedHomeNameKey": "brachial plexus",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Roots to branches, relations, courses and territories on specimen/model.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:16",
+      "facetNameKey": "brachial plexus variation",
+      "facetName": "Brachial plexus variation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:de308577585e82fa2928b5265147b7172f8dd11d93147e1b77644381d7da744c",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN10.5",
+          "page": 112,
+          "rowBBox": [
+            51.2,
+            157.74,
+            120.4,
+            207.42
+          ],
+          "sourceBodySha256": "fb8687ec4c06a98032c0b8074c98b9869f5ec77d05e4c32fede86810d1638b00",
+          "editorialTaskSha256": "8011d9806eb79a46bb632ef5ae97e75bca385a4524f6dc67b068285084bceb72",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Brachial plexus",
+      "proposedHomeNameKey": "brachial plexus",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Standard versus variant plexus contributions and connections; variants unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:17",
+      "facetNameKey": "brain vascular anatomy",
+      "facetName": "Brain vascular anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:952300140b206ae8ae40edf76324d0e5163d48b28b6418db38fd5acf19d73fa5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.1",
+          "page": 310,
+          "rowBBox": [
+            44.2,
+            153.66,
+            102.7,
+            194.4
+          ],
+          "sourceBodySha256": "067bf22a5cd064b34215ae016f7ef2f19ee5b3171284106b9cbfb23b2ee51e62",
+          "editorialTaskSha256": "7b63e9632618daded92f020edcf2c8e24af3497f968044ae04fce6b87f9e1727",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Brain vasculature",
+      "proposedHomeNameKey": "brain vasculature",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Arterial territories linked to functions and representative deficits.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:18",
+      "facetNameKey": "breast cancer consent",
+      "facetName": "Breast cancer consent",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5dddefb11b8986394a9c22b2ec89e6e4ca20d35dd38b8d5eea0c0d4ebb71f852",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU25.4",
+          "page": 409,
+          "rowBBox": [
+            45,
+            231.18,
+            101.7,
+            266.1
+          ],
+          "sourceBodySha256": "7e569d038266b51c736672bb9fa2fb92440569afd8f6d72c0460c7b3a72d9371",
+          "editorialTaskSha256": "4a90b23ecf94ada8c9f0988c16af0cc8455188a65c5cbb7c5dc0f10f379c3ba1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Breast cancer",
+      "proposedHomeNameKey": "breast cancer",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated option counselling and informed consent, not actual clinical consent.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:19",
+      "facetNameKey": "breast development",
+      "facetName": "Breast development",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ef97acff09a814fe82f71aabc074c33ef316788d19324fb5444e0ed57392ed24",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-upper-limb-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN9.3",
+          "page": 111,
+          "rowBBox": [
+            51.2,
+            335.58,
+            120.4,
+            365.1
+          ],
+          "sourceBodySha256": "e32f26cf0924f212b978930ea352cf0ae63103dffcd87dcde3c3b58c3330d1bd",
+          "editorialTaskSha256": "de012356e545786aa3ed3779ff8ca85eb7fc480fc66b61ef03fbc329fe1000d4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Breast",
+      "proposedHomeNameKey": "breast",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "breast"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Developmental timeline, age changes and selected congenital variants; variants unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:20",
+      "facetNameKey": "breastfeeding benefits",
+      "facetName": "Breastfeeding benefits",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b78bc4c5ec5397677af14041e4e684a9ef35cdce419bad67129fdc0ea022e70d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE7.3",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            531.12,
+            103.1,
+            546.18
+          ],
+          "sourceBodySha256": "6535eff92e109f903616a3b6faca513ec6182d5c58bb0ac3ed85a06b5ba38955",
+          "editorialTaskSha256": "387f3db728a9ed4c7ceebb841557c0a3a30c40afd57ef4e23dc1f048a46872a6",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Breastfeeding",
+      "proposedHomeNameKey": "breastfeeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Infant and maternal nutritional/other benefits.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:21",
+      "facetNameKey": "breastfeeding counselling",
+      "facetName": "Breastfeeding counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cf8ae4a444f1ebc801ddb186acd5d85fbb0b2fc36adfaa84e9338d2adf956d0d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.17",
+          "page": 273,
+          "rowBBox": [
+            40.1,
+            107.04,
+            98.6,
+            135.96
+          ],
+          "sourceBodySha256": "4dc859d088f2ce70f8c76b054c59981c821e9c59a685a89a7fba813dddfd4188",
+          "editorialTaskSha256": "bf0289079b23dfb62dbeb6b7568db9b47292c1a02135baecdc169e7eed337160",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e2aa873251d31daf95bc2252dcd02a9b0e2b99f08f399c7dcd525e53b92fdd04",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG17.2",
+          "page": 434,
+          "rowBBox": [
+            49.1,
+            329.52,
+            103.1,
+            361.8
+          ],
+          "sourceBodySha256": "a96b20c3c95ec0526d16de58f818226820658d5f4015a0b9e1e4e1c1f1c56379",
+          "editorialTaskSha256": "2aeb79613b493b9dc8fae8f8fb2227a188bb534e79ad466db05885ffeb479941",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Breastfeeding",
+      "proposedHomeNameKey": "breastfeeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve simulated attachment/position correction and separate breast-care counselling task with teach-back.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:22",
+      "facetNameKey": "breastfeeding observation",
+      "facetName": "Breastfeeding observation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1a30d4460ad8f654e3f3c7fd9dd8605fcb80614c1501e2b7ebcb5ebedfcbf6ba",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE7.4",
+          "page": 332,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            84.9
+          ],
+          "sourceBodySha256": "c83a105e29b4ccdf61159c97ce18d9d61dee2223d4b59a37926309757a2796f1",
+          "editorialTaskSha256": "13bad1b96e376ea3089175a1b296e1c907b98038d849fb7c882ca4cca447339b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Breastfeeding",
+      "proposedHomeNameKey": "breastfeeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised observation of positioning/attachment, not independent counselling competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:23",
+      "facetNameKey": "breastfeeding technique",
+      "facetName": "Breastfeeding technique",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5a7564b281aefc3edb950baefe3cf578d147061b69f2fcc67af310da129d922a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.12",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            371.94,
+            98.6,
+            399.54
+          ],
+          "sourceBodySha256": "7a748e7857e27e293c49245dcd372f31cbc43118073f95f9d85146eed693110f",
+          "editorialTaskSha256": "22b716c7c78d512a229bec32b4e93452dd48b532a467a8db0a30c51839a3ab71",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Breastfeeding",
+      "proposedHomeNameKey": "breastfeeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "breastfeeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model demonstration of holds, attachment and manual expression.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:24",
+      "facetNameKey": "burn documentation",
+      "facetName": "Burn documentation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d39aaec6cfe868e5ae9f814a2ecea5dbc6d30378aa7b51c40b9334fc95f1860e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU4.3",
+          "page": 404,
+          "rowBBox": [
+            45,
+            68.34,
+            101.7,
+            89.94
+          ],
+          "sourceBodySha256": "ec39f9a27e9896081a835fe51ab0e41d73ffae9479d1bf01c9ebc7f160d416a5",
+          "editorialTaskSha256": "0dce79e925b35934fa40e125bc21b381abceda873c14c2b424b28dd6a6058f2f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Burns",
+      "proposedHomeNameKey": "burns",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "burns"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated medico-legal findings/circumstances documentation; current legal requirements not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:25",
+      "facetNameKey": "burn recovery counselling",
+      "facetName": "Burn recovery counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a3f98559b3cdc54eaa0a979eb7f32f426049d8db626acbdeb22a21c2345a22f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU4.4",
+          "page": 404,
+          "rowBBox": [
+            45,
+            89.94,
+            101.7,
+            123.96
+          ],
+          "sourceBodySha256": "fe0958f0ca49094bf8f56e2d04c3779ca144f967631ad6cc90015f47ffa10c6b",
+          "editorialTaskSha256": "4c04871884d0e2e47cbb6532823e2225c9f8d161eaf628effdf9462c3a1fc87d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Burns",
+      "proposedHomeNameKey": "burns",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "burns"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated recovery/rehabilitation discussion with explicit uncertainty.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:26",
+      "facetNameKey": "caesarean assistance",
+      "facetName": "Caesarean assistance",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4aaa195b5704fc88a254fa8caec68079d28e376842f5b54025257993f881fc30",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG37.1",
+          "page": 442,
+          "rowBBox": [
+            49.1,
+            194.64,
+            103.1,
+            216.78
+          ],
+          "sourceBodySha256": "99484b37319f96eace4ffe9b9c56e11e19f0c7275d6d105c8f230c9ccbd0d6b0",
+          "editorialTaskSha256": "515f6a8baf6a6001fc1c4cbd1b02a61cdaab41ce18cdf30e33a3393b844d356a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Caesarean section",
+      "proposedHomeNameKey": "caesarean section",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised observation/assistance with assigned role and safety checks only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:27",
+      "facetNameKey": "caesarean audit",
+      "facetName": "Caesarean audit",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e62ad5315b01c3154698752781844c96b30f07f67c1c09f955732e7d887feff0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG1.4",
+          "page": 427,
+          "rowBBox": [
+            49.1,
+            259.68,
+            103.1,
+            286.44
+          ],
+          "sourceBodySha256": "384552d4df7de5748956bbfbb10b863aba6abb403c2760fa0cbccfb699c419b0",
+          "editorialTaskSha256": "65ec98f0820b43ab76b08d3dc5630fe80cd94f44264002f81840a73bd3a33775",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Caesarean section",
+      "proposedHomeNameKey": "caesarean section",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Modified Robson grouping and rate contribution interpretation; no surgical competence implied.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:28",
+      "facetNameKey": "cancer course",
+      "facetName": "Cancer course",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e1d5f6c1e52713946dad11f84cca23ccb49a3a304e5e383abbee48b6b46d79f2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.4",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            523.8,
+            102.7,
+            543.72
+          ],
+          "sourceBodySha256": "d15124e5d39e39b340e1eb413e7dcde53748484b857ef57fa121fa6229832c67",
+          "editorialTaskSha256": "79fc15fa492a57cd56f14c838e96f4efb068b4cc9cf8523a5f16b3965cb4399f",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative malignant presentation, progression and complications; no exhaustive tumour enumeration.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:29",
+      "facetNameKey": "cancer differential",
+      "facetName": "Cancer differential",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:045cb81a47332caedd807e7ca3245ce3c462210d09d0a335bfccf79c0e430ac4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.10",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            303.36,
+            102.7,
+            344.04
+          ],
+          "sourceBodySha256": "52cb746775df771f7a7f21f04393ceba174efcdbb9d9afe80875770c5cfe1f09",
+          "editorialTaskSha256": "12765fe5adc74b1279074d3121544ee3c6798d305eaa94a6ebb2447d72de5867",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated malignant/nonmalignant differential prioritization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-03:30",
+      "facetNameKey": "cancer epidemiology in india",
+      "facetName": "Cancer epidemiology in India",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8de7939745c318492908de76c8aaafe0697c83bcbfead21aadb4d1bf43868391",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.1",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            441.72,
+            102.7,
+            469.08
+          ],
+          "sourceBodySha256": "dc50ca2e559a64e6a54915da957e072a10ab4f0828d597e51d038d5acc101abd",
+          "editorialTaskSha256": "fed8a5015d8f37dd3e85ba0600b929fc8d9ebe7a850394541db47a5b08677e64",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer",
+      "proposedHomeNameKey": "cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Dated Indian epidemiological comparison and inherited/modifiable risk distinctions; data not refreshed here.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 31,
+    "distinctProposedHomes": 20,
+    "existingNameHomeLinks": 20,
+    "newNameHomeLinks": 10,
+    "facetsWithoutInitialHomeProposal": 569
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "input": {
+    "path": "docs/evidence/2026-11-09-nmc-variant-cohort-reconciliation.json",
+    "blobSha": "ec359a79804b667c8975ffceab666f46ef6ecdf1"
+  },
+  "variants": [
+    {
+      "name": "Abnormal vaginal discharge",
+      "disposition": "scoped-search-alias",
+      "target": "Vaginal discharge",
+      "rationale": "Route the abnormal-discharge label to the shared assessment concept while retaining the abnormal-specific objective.",
+      "refs": [
+        {
+          "id": "nmc-2024-ref:6fc9df4678ff3f74f5731dde08889b2915ed3e630192cdcfe1e79b3e601d3fb1",
+          "code": "OG22.2",
+          "path": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Fetal age estimation",
+      "disposition": "separate-related-concept",
+      "target": "Age estimation",
+      "rationale": "Developmental and gestational dating has a distinct scope from forensic age reporting.",
+      "refs": [
+        {
+          "id": "nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610",
+          "code": "AN80.6",
+          "path": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Physiological vaginal discharge",
+      "disposition": "narrower-concept",
+      "target": "Vaginal discharge",
+      "rationale": "Recognition of normal variation has a separate scope from assessment of abnormal discharge.",
+      "refs": [
+        {
+          "id": "nmc-2024-ref:10b1f9e164d54d4d37df490fb24a40a0dde246e2dd7eaf818f9a0bcd1eda79be",
+          "code": "OG22.1",
+          "path": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Radiographic age estimation",
+      "disposition": "method-context",
+      "target": "Age estimation",
+      "rationale": "Film-based estimation is a method of age estimation with its own reporting objective.",
+      "refs": [
+        {
+          "id": "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735",
+          "code": "RD5.2",
+          "path": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ]
+}

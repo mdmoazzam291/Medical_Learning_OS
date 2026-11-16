@@ -1,0 +1,1183 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-06:01",
+      "facetNameKey": "context-sensitive complementary feeding",
+      "facetName": "Context-sensitive complementary feeding",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8a532d73450cdab1c3d22f44239ba218445c0bdcbfc74a6f3bae0d94887841d5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.18",
+          "page": 273,
+          "rowBBox": [
+            40.1,
+            135.96,
+            98.6,
+            176.94
+          ],
+          "sourceBodySha256": "76affe58a45b7333a15c087b10ab9d565ad18cc7c58b448c4e75048eb87f2085",
+          "editorialTaskSha256": "c100aba52c88a3cbc2bb23a49c8420be28b919037bb790c16934ab954e7d6915",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Complementary feeding",
+      "proposedHomeNameKey": "complementary feeding",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "complementary feeding"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "complementary feeding"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated caregiver counselling adapted to culture/budget; national guidance not reverified current.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:02",
+      "facetNameKey": "contraceptive anatomy",
+      "facetName": "Contraceptive anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d410a80c0f91e0c4d78b1ed0a5094d50712c8aef6854119576dd7f9f1e89ca05",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN77.5",
+          "page": 146,
+          "rowBBox": [
+            51.2,
+            507.3,
+            121.9,
+            532.14
+          ],
+          "sourceBodySha256": "59af4bb8b4f89559400ac58f84dd340fd73584f87e7700f6011da14d30da26d7",
+          "editorialTaskSha256": "63c8de81813aeee89c64f36a3e5fe77c30a8d413e702f760cd418f64ddbcab5b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Contraception",
+      "proposedHomeNameKey": "contraception",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "contraception"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Reproductive structures/events affected by methods, not all contraceptive selection competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:03",
+      "facetNameKey": "corneal transparency",
+      "facetName": "Corneal transparency",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3a6449576d3fa471c562d87fee384775442e5df98f9c199fb91879760fb7c4f6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP4.1",
+          "page": 415,
+          "rowBBox": [
+            49.5,
+            476.1,
+            103.5,
+            505.44
+          ],
+          "sourceBodySha256": "3d757c09cd82884e92797ec02f65204043eaef3cb92f4dbdbc0583f9475180ea",
+          "editorialTaskSha256": "578863262b03a716acfe6671b741ac24845f00cb1e44c4921eef1e3ecc9669af",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cornea",
+      "proposedHomeNameKey": "cornea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "cornea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Layers, hydration and surface integrity in transparency.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:04",
+      "facetNameKey": "coronary arterial anatomy",
+      "facetName": "Coronary arterial anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e79460b1b7e368ae2e01dd8c6698056afab0f89218d43f6acc3e2d7ec1651aca",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN22.3",
+          "page": 122,
+          "rowBBox": [
+            51.2,
+            153.42,
+            122.2,
+            201.66
+          ],
+          "sourceBodySha256": "f095d0776f7ca7aab52242ff2b0c67c3981d9b924ebb733f5549fb6987a1855c",
+          "editorialTaskSha256": "df753edfae0199fa997262224694d9f3f3fb3cea59e1b3fc6ff5c0c2730c56a2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Coronary arteries",
+      "proposedHomeNameKey": "coronary arteries",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Specimen tracing from aortic root and posterior interventricular origin for dominance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:05",
+      "facetNameKey": "coronary care admission",
+      "facetName": "Coronary care admission",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:134e826f9acd02c70ea2e56bc6dd99a6f00a5264f50a933aac20acafe61fbe6f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.14",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            181.14,
+            102.7,
+            221.76
+          ],
+          "sourceBodySha256": "fa1cdc3f6e22a889e4fc052bdf67eb6d71ac4d4e8c4222b3b0e4e19530e98a26",
+          "editorialTaskSha256": "18234ecad94ba753053b9b2fbfbc7bf7cc5943ba5ab430251e6e4d019ce9a807",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated monitored coronary-care selection and supportive measures.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:06",
+      "facetNameKey": "coronary complications",
+      "facetName": "Coronary complications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:25317e786ee62e32a2e4709a1a6ed2e1864f7ef8c6ca8dcaf3166b2310648d8b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.19",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            344.58,
+            102.7,
+            398.76
+          ],
+          "sourceBodySha256": "22cefeeccdd32cbddcb2267aeb6eef8522bc4dfeb87241e0a839172ef104fb74",
+          "editorialTaskSha256": "7ed602a62bed7e74fa7263bcbdb3ffe5b8f14fe73dae9a403df9596f3c2c735c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-named acute coronary complications and initial priorities; no exhaustive complication claim.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:07",
+      "facetNameKey": "coronary differential diagnosis",
+      "facetName": "Coronary differential diagnosis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8c1d567871588d168a2f5e42045e8b642ae82184dda76408af097a41d08b6cd7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.8",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            432.9,
+            102.7,
+            473.52
+          ],
+          "sourceBodySha256": "559f155ee7dced3e1fda8439baac76c4a682b4af77ec2660d66d652e27153257",
+          "editorialTaskSha256": "fd73e74b89bfb5033b7a18163783d4fe69cdaf41ec0d538a0d2d7a0164436f27",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Severity/findings-based likely and time-critical coronary scenario differential.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:08",
+      "facetNameKey": "coronary drug selection",
+      "facetName": "Coronary drug selection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b68be8b83a3c1328a6d4011c87721097e29610a5d90f643a0d4560fab00a2a93",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.23",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            480.78,
+            102.7,
+            521.58
+          ],
+          "sourceBodySha256": "3cfcee473667f0ec8e41fd99bc5cb9a9ae3d38018165026f61eae2f8dcdb79a9",
+          "editorialTaskSha256": "03f032ef70b7a56d3732fb5e507dec4aea0b0ac7e8a6e396c0f8c19f890ea81e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source-named drug-class indications and safety, not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:09",
+      "facetNameKey": "coronary history",
+      "facetName": "Coronary history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ee44e37a844eb0627eb2e6ee0aacbd76c4f7bbdf7150aae956ab6c77e2a75083",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.6",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            337.8,
+            102.7,
+            391.98
+          ],
+          "sourceBodySha256": "d4363977017ac7cf72941928df49d9e3c38c9af16ca9648e9e9bb628b336d866",
+          "editorialTaskSha256": "005931e1b04cf4185d1bcfb942b7e71f9291d5618b3eeef507fa604e45af605c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Symptom timing, risks, family/comorbid/medicine/prior-event history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:10",
+      "facetNameKey": "coronary pain",
+      "facetName": "Coronary pain",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3aeb646d3cbb3bf6ec5fdf558a4ba095ea0ecd37015d407e1935eb5ab276026a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.20",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            398.76,
+            102.7,
+            426.12
+          ],
+          "sourceBodySha256": "b213f3344dcc45b69f7968334811745ad04f9bd0d98e185e81660ffd50de3f31",
+          "editorialTaskSha256": "cc29eef61f04e8055998dc9a58599eca5c7a15c975924d072117c67e088bfb9b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Acute coronary pain assessment and response reassessment.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:11",
+      "facetNameKey": "coronary risk factors",
+      "facetName": "Coronary risk factors",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d32f60a2653c199c9aa8d56740ee6b54e28f79388da64a33769ce9c2709b2d73",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.2",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            228.48,
+            102.7,
+            255.84
+          ],
+          "sourceBodySha256": "f8e425dc0a7c456d2989d5e1abd476fad533ce5f65d6b913854cb13fe0460f16",
+          "editorialTaskSha256": "79b0bd4267e22ec1ab9facec4a44c353f9c7c812c7d175b7cc4f8a999e4c2f69",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Coronary artery disease",
+      "proposedHomeNameKey": "coronary artery disease",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Modifiable/nonmodifiable coronary risks and sample-case prevention priorities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:12",
+      "facetNameKey": "cost-conscious treatment planning",
+      "facetName": "Cost-conscious treatment planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:913ccb3f96adc7a26a443e51adfb5feb793cad10d71ab0e12cea5a8e0da04651",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG36.1",
+          "page": 441,
+          "rowBBox": [
+            49.1,
+            488.64,
+            103.1,
+            569.76
+          ],
+          "sourceBodySha256": "707b4067e0779f7ec3b2e19eb07a2040afa88601c778b9b92b2e0f963dec5974",
+          "editorialTaskSha256": "6648602ec6dd601c38f7995c3aa1a810f4b54acbad5a8a23b1d077357a7ea312",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Clinical care planning",
+      "proposedHomeNameKey": "clinical care planning",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Feasible patient-priority/severity/cost/institutional plan; no unsupported disease identity inferred.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:13",
+      "facetNameKey": "cost-conscious type 2 diabetes care",
+      "facetName": "Cost-conscious type 2 diabetes care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:daf31e12242d0c523ae517dd72a5ed29888e80732b8d3791d69e2f0452c290fe",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM11.17",
+          "page": 300,
+          "rowBBox": [
+            44.2,
+            513.54,
+            102.7,
+            540.9
+          ],
+          "sourceBodySha256": "c593ad7e2049eb9427f02f230ac3a408788df19be98cf7d9f5c967f694b66822",
+          "editorialTaskSha256": "59ff158334f349c94c13697a53fa4b9c4e0aecc684e531124922a6f98fb78f3b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Type 2 diabetes",
+      "proposedHomeNameKey": "type 2 diabetes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "type 2 diabetes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Type-2-specific individualized severity/complication/access/cost plan.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:14",
+      "facetNameKey": "covid-19 pathology",
+      "facetName": "COVID-19 pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:be245daaa8dd97f4563a29877feb57195ab4f85258e6cb46838679c1de3f13f9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.5",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            410.64,
+            105.6,
+            439.74
+          ],
+          "sourceBodySha256": "a3f1dae23d46d561c281e44b8632cab09b0f15d2465acf530bcda2b91cff653c",
+          "editorialTaskSha256": "7f7f17f89bac01585dd7e227ccf2c9bb9c5811d434247f361f7d6a3a38d7d158",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "COVID-19",
+      "proposedHomeNameKey": "covid-19",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Viral/host responses, lesions and contextual laboratory interpretation, not current management guidance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:15",
+      "facetNameKey": "craniovertebral movements",
+      "facetName": "Craniovertebral movements",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a1f5d34d64e29c19635351e3cf86320f9cc32e37eb847f46f4afe5926826781c",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN43.1",
+          "page": 132,
+          "rowBBox": [
+            51.2,
+            271.5,
+            121.6,
+            330.54
+          ],
+          "sourceBodySha256": "d20cfcb819ca66a70cc8d0d57141b2d9ecc1323613daa7e1de1bfa95ff170fd6",
+          "editorialTaskSha256": "295cc9dfe2fd6f7167c85f73ddcf3810997100c24c759a6b8d3c200832a85065",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Craniovertebral joints",
+      "proposedHomeNameKey": "craniovertebral joints",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model nodding/axial rotation with joint and muscle localization.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:16",
+      "facetNameKey": "critical care transport",
+      "facetName": "Critical care transport",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c392f2fc8c239c46fa3a8c68203b29c75e25581fa46af494836e87d21b613cc4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD4.2",
+          "page": 458,
+          "rowBBox": [
+            40.1,
+            300.12,
+            103.9,
+            341.4
+          ],
+          "sourceBodySha256": "aef4f296fdbb880267b35cbb975d5c5f631f030bae9905607e034ab854aac997",
+          "editorialTaskSha256": "27df81604e8eefff94c59bde34389651cffca6f82e05d8b9fa842cdd42cd5f36",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Critical care",
+      "proposedHomeNameKey": "critical care",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated transfer checklist including oxygen/monitoring/MRI compatibility; not independent transport certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:17",
+      "facetNameKey": "csf pathways",
+      "facetName": "CSF pathways",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6ce7e8833d14d6b5aadfad89db1b73144af2002a2c5418069c61577452341376",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN56.2",
+          "page": 140,
+          "rowBBox": [
+            51.2,
+            395.64,
+            122.2,
+            425.16
+          ],
+          "sourceBodySha256": "783d07d367755976f81a0ffbb502bb3f07dcbd883f827ee73ebe54d3cad569f2",
+          "editorialTaskSha256": "3903dc9a514dd0221d4d63c597fdd9e89da96d07ce1d1223fdd9bcd61faefa3e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cerebrospinal fluid",
+      "proposedHomeNameKey": "cerebrospinal fluid",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "cerebrospinal fluid"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Production, ventricular/subarachnoid flow, absorption and site-specific obstruction effects.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:18",
+      "facetNameKey": "cubital venous anatomy",
+      "facetName": "Cubital venous anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:33c3bd31c5d585933021c05c73a88661ef9059da31227f46c44417edd8e1455e",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-arm-forearm-hand-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN11.3",
+          "page": 113,
+          "rowBBox": [
+            51.2,
+            247.68,
+            120.4,
+            280.08
+          ],
+          "sourceBodySha256": "2bea8686b34f2a6e8857c5eb9657f9f9d5f269d82604a9a9f00c605df2b552ec",
+          "editorialTaskSha256": "0b0e684865906d8531432bce2af5e43be5bce03b504afcb667e0ef8d35b5389c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Superficial upper-limb veins",
+      "proposedHomeNameKey": "superficial upper-limb veins",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Elbow venous-pattern comparison and venipuncture anatomical rationale, not procedure competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:19",
+      "facetNameKey": "culture indications",
+      "facetName": "Culture indications",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5b5adede1f2b68cbf0244aa1627d9225b866d8169aff28ec4fb4b3bb4931f5fd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.11",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            204.48,
+            102.7,
+            245.1
+          ],
+          "sourceBodySha256": "9b730d48acfa9f637d2dae98c5c6eba32d86d902914cb6de30fb18a1b4f8130a",
+          "editorialTaskSha256": "d17dbf84fddb823e4fdf0213d0e804b20b853204f99cb13c45d24f4866619af2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Microbial culture",
+      "proposedHomeNameKey": "microbial culture",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated acute stool/blood culture indications; no organism assumed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:20",
+      "facetNameKey": "culture-directed antibiotics",
+      "facetName": "Culture-directed antibiotics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.16",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            269.94,
+            102.7,
+            310.68
+          ],
+          "sourceBodySha256": "10f7b9f08c14cd50f9d7d26fe301cbd105d91694298d59f5aedd7c7ccb2ffc31",
+          "editorialTaskSha256": "4386dc9661ad44a95c1f76e2fa24577496ad38ec56847aeb1ae86fdd183fe7b1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Antibiotic therapy",
+      "proposedHomeNameKey": "antibiotic therapy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Susceptibility-guided simulated targeted prescription.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:21",
+      "facetNameKey": "custodial death autopsy",
+      "facetName": "Custodial death autopsy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8b3e610a8f1d1b9958707809fed4601ac7bcd3fc9d66f58cacbdcac1f2df99a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.20",
+          "page": 218,
+          "rowBBox": [
+            45.5,
+            383.94,
+            95.2,
+            429.3
+          ],
+          "sourceBodySha256": "83ccf47d7fe20fddf288d2cc7597409c1518c52213b21346919885ec1e34ca3b",
+          "editorialTaskSha256": "3893d16ddea4e6574759cef67f2914c55efacf1c9f24b3c69b30cce3464a1d1e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Custodial death",
+      "proposedHomeNameKey": "custodial death",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated custodial-death documentation/examination/evidence planning under source NHRC guidance, not current legal validation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:22",
+      "facetNameKey": "custody examination",
+      "facetName": "Custody examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:62d3845758bdd2dbb5570f9ef87d91a93d0c1cd7fa2114127375cabaa42f63d9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.17",
+          "page": 234,
+          "rowBBox": [
+            45.5,
+            106.68,
+            95.2,
+            154.14
+          ],
+          "sourceBodySha256": "7df0b9a665a4622e679ca0a41a9c3c65bd03582e5c3774e3e64a980addb4a13e",
+          "editorialTaskSha256": "f5b77436d7083c358c7d4aac8a133ae2374b08874d105f418c9adfce98dc271c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Custodial examination",
+      "proposedHomeNameKey": "custodial examination",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated custody/court examination and report under source NHRC guidance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:23",
+      "facetNameKey": "cutaneous art reactions",
+      "facetName": "Cutaneous ART reactions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ca7cc1046f8349d7c83859ac2f0ca71291a3e52ddfa979ca70f8092844d0fccf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR11.2",
+          "page": 360,
+          "rowBBox": [
+            39.9,
+            200.94,
+            101.6,
+            268.56
+          ],
+          "sourceBodySha256": "ecbfc6eef26b74e9829d0f4a10386b6481b68ac4e5781959493d6f02bda5fb93",
+          "editorialTaskSha256": "dec22b9bc95a7992781db56ed4cc58f741f20023f4feec06006e532fa55e40ee",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Antiretroviral therapy",
+      "proposedHomeNameKey": "antiretroviral therapy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "antiretroviral therapy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "ART-related skin reactions and initial assessment/escalation; not all dermatological drug reactions.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:24",
+      "facetNameKey": "cysticercosis pathology",
+      "facetName": "Cysticercosis pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:65b46a3354f75c2b3d4f2b03b3631754ff81f996509eff7946ddde027c3a4eb4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.2",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            334.32,
+            105.6,
+            354.12
+          ],
+          "sourceBodySha256": "b963f96f2cd2c35030a0cffcda8be1252d8e3e3bf5d95931c095a3ab02008b26",
+          "editorialTaskSha256": "4b2e2cede356c0beb3ac6dd8ea187c70b4e48f7f98ac4486deaa9f761077ab0d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cysticercosis",
+      "proposedHomeNameKey": "cysticercosis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Tissue larval location/degeneration and inflammation/injury.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:25",
+      "facetNameKey": "d&c assistance",
+      "facetName": "D&C assistance",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5de0875b3408935d0e6265552282ce3079e7fcc201813fc7eb1a65b4786874ad",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG37.4",
+          "page": 442,
+          "rowBBox": [
+            49.1,
+            267.42,
+            103.1,
+            292.74
+          ],
+          "sourceBodySha256": "4f03e845afac71f9da509ab85c0f4704fd50bc83d2d11e742317c4297d74e404",
+          "editorialTaskSha256": "2a1d8c548366b6ae5fc51ca40c8a9339647a2b65bbdd9ecd4715d88fa90e807d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Dilatation and curettage",
+      "proposedHomeNameKey": "dilatation and curettage",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised observation/assistance, assigned indication and safety documentation, not independent procedure.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:26",
+      "facetNameKey": "day-case anaesthesia",
+      "facetName": "Day-case anaesthesia",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d67f4f980b702225eeb20da19d33b8c6f04fd1f6d68c6048cb8e6da3a8115ef0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS4.6",
+          "page": 453,
+          "rowBBox": [
+            46.7,
+            420.66,
+            98.1,
+            460.98
+          ],
+          "sourceBodySha256": "0e45de3af99b866f1e8cc6b8ef78d32e292abd0638f46813dff90273d7160eb3",
+          "editorialTaskSha256": "a9765b1d3b973f21c1256295c55ca7ed5d304c3440fec3cb2aa123f4cb9d0731",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Ambulatory surgery",
+      "proposedHomeNameKey": "ambulatory surgery",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Observed selection/recovery/discharge safeguards for day-case anaesthesia.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:27",
+      "facetNameKey": "death certification practical",
+      "facetName": "Death certification practical",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8ab9bde74d3961052da96568d1c436896571d8fc901bcd2fd706bd8c76b9cc24",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.5",
+          "page": 232,
+          "rowBBox": [
+            45.5,
+            267.72,
+            95.2,
+            306.6
+          ],
+          "sourceBodySha256": "cb80f6934dec122d574282b8f8f036019323454bdbaf28014ba5ce8f7e5c8f4a",
+          "editorialTaskSha256": "cb36ebbc4b402eef5deae51d80cf3f6d5fddd2ea590b041e051dd25069532dce",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Medical cause-of-death certification",
+      "proposedHomeNameKey": "medical cause-of-death certification",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated medical cause-of-death certificate completion, not actual certification authority.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:28",
+      "facetNameKey": "decontamination selection",
+      "facetName": "Decontamination selection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0e7b4aeb09b91e786f00814c8998c4db64eb5aa33306269d1ce3679f3ab08c60",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.13",
+          "page": 207,
+          "rowBBox": [
+            51.9,
+            286.2,
+            108.8,
+            335.88
+          ],
+          "sourceBodySha256": "95623debc209bfa8d642eedc300664800c032c69f5e25bdae32ffa02f47500f5",
+          "editorialTaskSha256": "dab6ce5b5dff2e04c2cbc4c695970c23a7b981348d1f87acedfc1ac3d6ef4a97",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Decontamination",
+      "proposedHomeNameKey": "decontamination",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Scenario-specific laboratory/clinical/surgical method choice; different targets and limits remain contextual.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:29",
+      "facetNameKey": "depression in primary care",
+      "facetName": "Depression in primary care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b721691babac3ebd8c36f31c94c63ce99e0506db31e3fb015cde07c81afb9ad3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+          "subjectId": "psychiatry",
+          "code": "PS5.1",
+          "page": 352,
+          "rowBBox": [
+            47.2,
+            483.06,
+            103.9,
+            524.64
+          ],
+          "sourceBodySha256": "c7a71258a91fa4e957f0ed12869b7bb506d7ea92580f7a2dd51b201d7e5f433f",
+          "editorialTaskSha256": "d6b5f9fda85860bf0464a8aa71bd85136279334ed4be82d697fae4385fb178ad",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Depression",
+      "proposedHomeNameKey": "depression",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "depression"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated depression/impairment/safety assessment and follow-up.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-06:30",
+      "facetNameKey": "depression red flags",
+      "facetName": "Depression red flags",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:94df5b00e56ee29b79a6c624c95b40a2c10930654105dfc603b589e47eae4ea0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+          "subjectId": "psychiatry",
+          "code": "PS5.2",
+          "page": 353,
+          "rowBBox": [
+            47.2,
+            117.18,
+            103.9,
+            145.56
+          ],
+          "sourceBodySha256": "d83cd069840fb07c5b6a7f134051f8623abbc69fb47a0d323940d4849680af9e",
+          "editorialTaskSha256": "4844fea05bcb471237e34a022a3a083bd9c4edb718679e41cdfb91408fd27b7c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Depression",
+      "proposedHomeNameKey": "depression",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "depression"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated urgent/severe risk recognition and referral communication.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 24,
+    "existingNameHomeLinks": 14,
+    "newNameHomeLinks": 16,
+    "facetsWithoutInitialHomeProposal": 479
+  }
+}

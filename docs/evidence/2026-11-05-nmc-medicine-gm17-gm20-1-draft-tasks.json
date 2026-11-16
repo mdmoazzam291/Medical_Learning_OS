@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:0b3ed2137d664224c714396dfc1e4ead86cd649b6d1bbaa053468e161f1bfe6e",
+      "subjectId": "medicine",
+      "code": "GM17.1",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        520.32,
+        102.7,
+        540.18
+      ],
+      "sourceBodySha256": "c4b125b328173718bedc227eb60ced74d97785658bc2b524ee745189d48db50c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Headache classification",
+      "draftLearningTask": "Distinguish primary and secondary headache by pattern and associated features.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e549ece720732c50bab23b09fe81dd6749b4186e280ed90525b73a5ee4e6518a",
+      "subjectId": "medicine",
+      "code": "GM17.2",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "de616c4d0a5775d2df1209a8d23c911ab12a59a617e0cf33ff9ba7687b31b0ef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Headache history",
+      "draftLearningTask": "Elicit and present onset, aura, triggers, relieving factors and associated symptoms.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:01c3ad58603a35b283ebe5fb12c311bf765416ef2f53edae1d70d297e851c5b1",
+      "subjectId": "medicine",
+      "code": "GM17.3",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        202.02
+      ],
+      "sourceBodySha256": "6d839e1693ae659d82bd7896209c0e220193067fac9e2abc14565b0a5403ec96",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Migraine classification",
+      "draftLearningTask": "Distinguish migraine with and without aura and recognize representative variants.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7b998d2eedbe4dc5e0dc36c9f9bc6f94cc2336daecbaf636f8ea5e3683ce5c9b",
+      "subjectId": "medicine",
+      "code": "GM17.4",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        202.02,
+        102.7,
+        242.64
+      ],
+      "sourceBodySha256": "a04314429923cc35cc2208b34ecd4fc13dd63d6a689ae437682b8a20752fe257",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurological examination in headache",
+      "draftLearningTask": "Demonstrate examination for focal deficits, raised intracranial pressure and meningeal signs.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2e30250999eb27c7d368a9668e6152d96567c5408a9bb5b289ac2a3e211fef5d",
+      "subjectId": "medicine",
+      "code": "GM17.5",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        242.64,
+        102.7,
+        283.44
+      ],
+      "sourceBodySha256": "ed3dc935bf8e5d2464d43695993beb7043de173d37f5a3e3fb222ccce401b1c9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Headache differential",
+      "draftLearningTask": "Present a prioritized differential and identify urgent alternatives.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c5788f73002ce55eff4a11e86a5900ff6cdfa0e780ba4ff3c611cf40db6c46c2",
+      "subjectId": "medicine",
+      "code": "GM17.6",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        283.44,
+        102.7,
+        324.18
+      ],
+      "sourceBodySha256": "0e9a6f33dcfeb930aea336cbd40570d4e024b265ba26d6e3e1f5f7ea922adc43",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Headache investigations",
+      "draftLearningTask": "Select and interpret representative tests and imaging based on clinical findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:50a76737fd315a2b519a5219248d27c7617fc8238c6e63ad7e6c28aecf77bc86",
+      "subjectId": "medicine",
+      "code": "GM17.7",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        324.18,
+        102.7,
+        351.54
+      ],
+      "sourceBodySha256": "7e3f4bee7f168d292eadcc1a7c888308b0d1ba20ccc2c8461303b0f1e4d60804",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lumbar puncture indications",
+      "draftLearningTask": "Explain when lumbar puncture is appropriate and compare CSF patterns across meningitis types.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:289455701592b233b9520c3ea61c74ccd1ce2419d2d3afd01866aa3420d5200e",
+      "subjectId": "medicine",
+      "code": "GM17.8",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        351.54,
+        102.7,
+        382.62
+      ],
+      "sourceBodySha256": "b1feb0d29db2079f22b0ab9b6e9463af64d18f30b5864331fd6b136c7d5515d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lumbar puncture technique",
+      "draftLearningTask": "Demonstrate preparation, positioning, sampling and safety checks on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:80831489d8e48f93e30c622131ffaa6f6ced58ecdd3efc2ecae248bbe6053fe9",
+      "subjectId": "medicine",
+      "code": "GM17.9",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        382.62,
+        102.7,
+        409.98
+      ],
+      "sourceBodySha256": "37bdbb1604d2b73a7cf78687c3be7d38a12a93d3db110a9b4f8533e49cb2e1f4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CSF interpretation",
+      "draftLearningTask": "Interpret opening pressure, cell count, glucose, protein and microbiology in sample reports.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:767972f4e78d963cea0ea3e76e71d1db87864afefabf71d85ad69ea79664b35c",
+      "subjectId": "medicine",
+      "code": "GM17.10",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        409.98,
+        102.7,
+        437.34
+      ],
+      "sourceBodySha256": "d1851d4c0b3a830af94b21a9bec65efd961fb4dc85d7e26a4428a63a9bd41924",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emergency headache care",
+      "draftLearningTask": "Identify admission and escalation criteria and explain immediate supportive measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:706e7c31f9af6f76d6c2f887798f11fc8e7eb14eae1aab367b6796b00d3c922c",
+      "subjectId": "medicine",
+      "code": "GM17.11",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        437.34,
+        102.7,
+        464.64
+      ],
+      "sourceBodySha256": "454fcfb5e4c4b56e661554d2c00b76c66f2803a669609445e0660052b069721f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute migraine medicines",
+      "draftLearningTask": "Compare indications, actions, dosing principles and adverse effects using a current reference.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5c953d54784bff2a6d6bc5bb591aea8ada742c79681a09bac066801646c02b57",
+      "subjectId": "medicine",
+      "code": "GM17.12",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        464.64,
+        102.7,
+        492.12
+      ],
+      "sourceBodySha256": "83277bf48a1b14b0089e93a752e2a5dd401def49ec304d843c6ec91694b8166c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Migraine prevention",
+      "draftLearningTask": "Compare indications, actions, dosing principles and adverse effects of representative preventive medicines.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:400413b4d8eed20c87bcc64149269f9e26fedd0e1208dea3bf95dece1416938b",
+      "subjectId": "medicine",
+      "code": "GM17.13",
+      "page": 309,
+      "rowBBox": [
+        44.2,
+        492.12,
+        102.7,
+        532.8
+      ],
+      "sourceBodySha256": "f4ac485fb11fea9b869a2e3a9a7994b1366dfa24c1bda03226bab077c7b1d965",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Meningitis medicines",
+      "draftLearningTask": "Compare representative bacterial, tuberculous and viral regimens using applicable guidance and explain dosing and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0741c87b004a789688878a53a80101935a46fbc1465dca260f6b904c800457c2",
+      "subjectId": "medicine",
+      "code": "GM17.14",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        133.8
+      ],
+      "sourceBodySha256": "e41fc531b798f05c426a651deeec491d53bc358ca20257204cb496cf9b79218d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Headache counselling",
+      "draftLearningTask": "Discuss lifestyle measures and preventive treatment with a simulated patient who has migraine or tension-type headache.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:952300140b206ae8ae40edf76324d0e5163d48b28b6418db38fd5acf19d73fa5",
+      "subjectId": "medicine",
+      "code": "GM18.1",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        194.4
+      ],
+      "sourceBodySha256": "067bf22a5cd064b34215ae016f7ef2f19ee5b3171284106b9cbfb23b2ee51e62",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Brain vascular anatomy",
+      "draftLearningTask": "Map major arterial territories to brain functions and representative deficits.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5f21e84be680313d3944d10c91106a6728623fb39581123ea1f870f8428f54af",
+      "subjectId": "medicine",
+      "code": "GM18.2",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        194.4,
+        102.7,
+        235.2
+      ],
+      "sourceBodySha256": "f5d55cfb5c79c18b2ff50e2d0d48e3c650de3705ae16d7cdf5a7b17cef962c25",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke mechanisms",
+      "draftLearningTask": "Classify ischaemic and haemorrhagic stroke and compare mechanisms and inherited and acquired risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd0cf3810cfac598c68c26ba67ede36d6f6228c51db3b0c30579ea68048515a2",
+      "subjectId": "medicine",
+      "code": "GM18.3",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        289.56
+      ],
+      "sourceBodySha256": "ca513a09c2e82998985a90352461d7defc717b64b30f2e9408637d15770a5d56",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke history",
+      "draftLearningTask": "Elicit and document symptom onset, last known well, progression and associated features.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:036e7ebce65ac4b604c1b5ee7d736a478068c719888eb8f5548529e265f626ce",
+      "subjectId": "medicine",
+      "code": "GM18.4",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        289.56,
+        102.7,
+        343.56
+      ],
+      "sourceBodySha256": "ca36ea65eb18df64d1e94232eed9d888e598f69caebd9bd524b51013f3c281a3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke examination",
+      "draftLearningTask": "Demonstrate and document a focused general and neurological examination in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f324d9218fc9addaf8e80ba2e8c7318fb5742a4084375392c9ecb11d9a5631c9",
+      "subjectId": "medicine",
+      "code": "GM18.5",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        343.56,
+        102.7,
+        411.12
+      ],
+      "sourceBodySha256": "5150e4749a0b764fd9dd04533fcdac1fe16f21da8f033a68fb0919b9452f2e6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurological localization",
+      "draftLearningTask": "Distinguish upper and lower motor neuron patterns and infer the side, site and likely nature of the lesion.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8f4f25b90fa2889434838604bcd52c396a7cb700dff1a7d22274eae4caaf969a",
+      "subjectId": "medicine",
+      "code": "GM18.6",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        411.12,
+        102.7,
+        478.92
+      ],
+      "sourceBodySha256": "10263a628a6e6c1b7d5f37866f3306f9c6beb3b4b95795c5f52aa2375d0bd1d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Speech examination",
+      "draftLearningTask": "Demonstrate and document speech and language assessment and distinguish representative deficits by localization.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cb4a8d1be0d2f03857a674acc5fd0a9a343355f22d7d5d3b7fe36009a0615912",
+      "subjectId": "medicine",
+      "code": "GM18.7",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        478.92,
+        102.7,
+        519.54
+      ],
+      "sourceBodySha256": "a4af1b0a108deca204318be0afcd52fcc13a55682a6b927f65bcaaef354589dc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurogenic bladder",
+      "draftLearningTask": "Compare storage and voiding disturbances and relate them to neurological localization.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b57fbf369e42bdb0d9e03aef736c90681c9d60d1e6224d04709d3424ac267ca5",
+      "subjectId": "medicine",
+      "code": "GM18.8",
+      "page": 310,
+      "rowBBox": [
+        44.2,
+        519.54,
+        102.7,
+        546.96
+      ],
+      "sourceBodySha256": "7d7448716744c3094ceee769b4c29965f6b31279477ba4d0efd285ea556989cd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke imaging",
+      "draftLearningTask": "Choose and interpret imaging to identify stroke type, site and likely cause.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:937bba4b457c9dd463efa5501337beb0d08523e7ad4dd8f4dc52df0d54cd7f8f",
+      "subjectId": "medicine",
+      "code": "GM18.9",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "68a9c0423be262c644d496a5b8c99a76b1bba7f0b3291946d8d3bbef2d58dbb3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke in young adults",
+      "draftLearningTask": "Select and interpret targeted investigations based on representative risk factors and presentation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8757c33fbb3f47999686fc737ad2563facd8fed2108b822d7a2ef8dd6566a711",
+      "subjectId": "medicine",
+      "code": "GM18.10",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "1aeb5c5d983ec8c170050514c18fe5730963c22ede2ade0075d31dbed9928b9a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Initial stroke support",
+      "draftLearningTask": "Explain immediate assessment, supportive care and escalation in simulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cb4d0b3893e63b807ff82bb9d1ddadd233e790ac69bc35c1b8973e0686a9611a",
+      "subjectId": "medicine",
+      "code": "GM18.11",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        215.22
+      ],
+      "sourceBodySha256": "df9745b156d3c406a683f966588d0e5b2f4fd7413a6e46f437b437061d7d9753",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ischaemic stroke treatment",
+      "draftLearningTask": "Use applicable guidance to explain management and thrombolysis eligibility, contraindications and escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:78f51194d5366a0ec5cbc2019192d3955a74ad383b6c848a420b323f06e3e3ef",
+      "subjectId": "medicine",
+      "code": "GM18.12",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        215.22,
+        102.7,
+        256.02
+      ],
+      "sourceBodySha256": "78b3734ebe74e4c0091b246b3581740f4fe8b66ba79c521314bd6b0e1705abad",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antiplatelets in stroke",
+      "draftLearningTask": "Explain their role, indications, timing considerations and contraindications in ischaemic stroke.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d3285911a5b3402cb4ba8b6c4569327432c31a8392cb627a202b7de929c4f567",
+      "subjectId": "medicine",
+      "code": "GM18.13",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        256.02,
+        102.7,
+        293.28
+      ],
+      "sourceBodySha256": "22c513c5334a9badb81e468a3c603af007cb67b7f2162e4d6a68139032d3e3cf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemorrhagic stroke care",
+      "draftLearningTask": "Explain stabilization, monitoring and specialist management priorities in a simulated case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:685980fa795ecbd73510a760172dab25afc191eda30e6d0deef55f2315e373c5",
+      "subjectId": "medicine",
+      "code": "GM18.14",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        293.28,
+        102.7,
+        320.82
+      ],
+      "sourceBodySha256": "005aa0f0d00993aca02131cf39c0d550c5becacfdc705d03f0c0cd360aa18c91",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neurosurgical referral",
+      "draftLearningTask": "Identify representative indications for surgical evaluation in haemorrhagic stroke.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cfa749e661afdafb5bb1fb24933677ad0fc5b28cb71154fd2d3fd82bb7c5ac44",
+      "subjectId": "medicine",
+      "code": "GM18.15",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        320.82,
+        102.7,
+        361.44
+      ],
+      "sourceBodySha256": "88bb968791d7a304d5e702638693cfaca42fdff14755bb313595b5dd764a937d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke rehabilitation",
+      "draftLearningTask": "Match functional deficits to multidisciplinary rehabilitation and reassessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:78c4887778f0db0aeb0ddd0bbce2a45b57e9bef6df09e4f9be1711d228d5d83c",
+      "subjectId": "medicine",
+      "code": "GM18.16",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        361.44,
+        102.7,
+        402.24
+      ],
+      "sourceBodySha256": "3d2a54df77e895711b5aba1805dbfa68c76f5ded7147a89b32b6ef06a398f792",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stroke counselling",
+      "draftLearningTask": "Explain diagnosis, treatment, prognosis and recovery uncertainty empathetically to a simulated patient and family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e",
+      "subjectId": "medicine",
+      "code": "GM19.1",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        422.1,
+        102.7,
+        462.84
+      ],
+      "sourceBodySha256": "d4aad1c40d69236d0bdb475ce0b6982b194bb5852df75d7ce466eee093048830",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement control anatomy",
+      "draftLearningTask": "Map cortical, basal ganglia and cerebellar circuits to motor functions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bc542b2d6709a04485d74cd01a5d258cd699638362f2a8ac4df1bf9d034ae76d",
+      "subjectId": "medicine",
+      "code": "GM19.2",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        462.84,
+        102.7,
+        503.64
+      ],
+      "sourceBodySha256": "ee9d3693781c2bd755b9032923fa43cc2cd9966f44417f0e5b4646650282d033",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder classification",
+      "draftLearningTask": "Classify movements by distribution, rhythm, repetition and modifying factors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:03524623522aeef48f3eee5238211d90fad3e66ff5d52dcebf82426dfa97e9ef",
+      "subjectId": "medicine",
+      "code": "GM19.3",
+      "page": 311,
+      "rowBBox": [
+        44.2,
+        503.64,
+        102.7,
+        544.56
+      ],
+      "sourceBodySha256": "655d37f5b32ab621328d6656eaf3c831f3a4e9c9e834f3ebc733414cae15652d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder history",
+      "draftLearningTask": "Elicit and present onset, course, triggers, relieving factors and associated symptoms.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:444d383d655bd844811d72f8aa9e5b3632ff5dab12fe844942745f0452224da3",
+      "subjectId": "medicine",
+      "code": "GM19.4",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        167.04
+      ],
+      "sourceBodySha256": "ba563e77cc73beeeee37f3b35329a2432db247e6db65f1b4d401f20ef39ecc80",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder examination",
+      "draftLearningTask": "Demonstrate and document general and neurological examination using an appropriate rating scale.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:abfd4bd23dea591d46dd318afdebea5baa1ac20d41be15e80292e2fa8e2f2302",
+      "subjectId": "medicine",
+      "code": "GM19.5",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        167.04,
+        102.7,
+        207.78
+      ],
+      "sourceBodySha256": "fca5acf517fc4b9991dd3d40df3d6387de02ecd60fa32b01922ca33fc3154e04",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder differential",
+      "draftLearningTask": "Prioritize likely causes from simulated history and examination findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6706c09951dbdb58f13d5b133083da0b18de6aa49c3d605822a1edd00d2025ae",
+      "subjectId": "medicine",
+      "code": "GM19.6",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        207.78,
+        102.7,
+        261.96
+      ],
+      "sourceBodySha256": "d2d80c7d8cd85f9ceee88ec8097d0fcf17ec8e22db43c4d53ad11234d39624ab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder localization",
+      "draftLearningTask": "Document the likely anatomical site, nature and cause of a representative disorder.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d",
+      "subjectId": "medicine",
+      "code": "GM19.7",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        261.96,
+        102.7,
+        302.76
+      ],
+      "sourceBodySha256": "aeadff21ac7ada61056189a449dc9ff31a691a4d8a9a8941de6b6f85c6549251",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Movement disorder imaging",
+      "draftLearningTask": "Select and interpret imaging based on the suspected cause and explain limitations.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0295bc03d1774782660bbea9cde38b0a9c7ae62bfe2549abb039196761766ea5",
+      "subjectId": "medicine",
+      "code": "GM19.8",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        302.76,
+        102.7,
+        347.34
+      ],
+      "sourceBodySha256": "5adedb6ff347a24963677b505ac557b735150520f677409b901b5988e56078c4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Parkinsonism medicines",
+      "draftLearningTask": "Compare drug actions, dosing principles, adverse effects and interactions using a current reference.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d9b0246064bb712f6e202acc6c14d76031c88e68ce8857f3e9ea25d154fd0db",
+      "subjectId": "medicine",
+      "code": "GM19.9",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        347.34,
+        102.7,
+        374.7
+      ],
+      "sourceBodySha256": "dbc8b4053229235ec19d1158dee07db62402632b225d12c92cd54caeb960e140",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Procedural movement disorder treatment",
+      "draftLearningTask": "Compare indications for surgery and botulinum toxin in representative disorders.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7ac74fb4c006a04505aa2d45acc25947d8b1251ca9c1a504f8cec12f02ce7bf4",
+      "subjectId": "medicine",
+      "code": "GM20.1",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        394.56,
+        102.7,
+        435.36
+      ],
+      "sourceBodySha256": "8c1d7a24cbf9d9bcaa4a4b0e9e6574fe72b663657f6fe1e1e80ee593da221e91",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Seizure terminology",
+      "draftLearningTask": "Distinguish seizure, convulsion and epilepsy using clinical examples.",
+      "mode": "knowledge"
+    }
+  ]
+}

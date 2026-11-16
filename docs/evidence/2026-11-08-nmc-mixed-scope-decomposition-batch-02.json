@@ -1,0 +1,4378 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-mixed-scope-decomposition-proposals",
+  "sourceHead": "f140347e019258e1c14fbd63fdaaab48b61f1fc8",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-mixed-scope-decomposition-batch-01.json",
+      "sha256": "9652ca1bee7e48e9886c9a24f5a8edb90ff90c03e1888dc20b8af0b2fcd95b4e"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "totals": {
+    "parentNames": 20,
+    "sourceTaskAppearances": 76,
+    "componentProposals": 243,
+    "mixedParentsWithoutDecompositionProposal": 29
+  },
+  "rows": [
+    {
+      "parentNameKey": "deformities",
+      "parentName": "Deformities",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR12.1",
+          "page": 449,
+          "rowBBox": [
+            49.1,
+            239.4,
+            103.1,
+            340.5
+          ],
+          "sourceBodySha256": "5f2828f4fd8efadeed03bd422b8b6c64d558efc3c2bb7b18881caa48650bf1ab",
+          "editorialTaskSha256": "c1f923b049d14e7ab9c784cbece302e1c864f6b8d3b41bea48c02422d106f37e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:01:01",
+          "name": "Scoliosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:01:02",
+          "name": "Spina bifida",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:01:03",
+          "name": "Developmental hip dysplasia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:01:04",
+          "name": "Torticollis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:01:05",
+          "name": "Clubfoot",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:01:06",
+          "name": "Deformity assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "developmental terminology",
+      "parentName": "Developmental terminology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN76.2",
+          "page": 146,
+          "rowBBox": [
+            51.2,
+            365.67,
+            121.9,
+            390.3
+          ],
+          "sourceBodySha256": "a8bc332495b0cf1d40dc3b7b6a24761140ec6b9837b67dc3b995a9a65578e72d",
+          "editorialTaskSha256": "b63588e6f3c7d5a37944dde06e55462d690bcb49ab3d141203d53cc733c52b15",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:02:01",
+          "name": "Ontogeny",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:02:02",
+          "name": "Phylogeny",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:02:03",
+          "name": "Pregnancy trimester",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:02:04",
+          "name": "Fetal viability",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:02:05",
+          "name": "Developmental terminology comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "drug toxicology i",
+      "parentName": "Drug toxicology I",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.17",
+          "page": 231,
+          "rowBBox": [
+            45.5,
+            124.02,
+            95.2,
+            241.8
+          ],
+          "sourceBodySha256": "79bfb7620f20ca62a23af1c734fcb60a7b513e13bd9aa016ca551409d0599da8",
+          "editorialTaskSha256": "dae63d12163004fa690cdd7612f91f37cd3dbca07a71dea7867e87c9c2f17988",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:03:01",
+          "name": "Paracetamol poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:02",
+          "name": "Salicylate poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:03",
+          "name": "Antibiotic toxicity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:04",
+          "name": "Sedative drug poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:05",
+          "name": "Antiseizure drug poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:06",
+          "name": "Psychiatric drug poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:07",
+          "name": "Drug exposure investigation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:03:08",
+          "name": "Drug poisoning treatment principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "drug toxicology ii",
+      "parentName": "Drug toxicology II",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.18",
+          "page": 231,
+          "rowBBox": [
+            45.5,
+            255.18,
+            95.2,
+            358.14
+          ],
+          "sourceBodySha256": "9f2c7913664dbbb7d2901c61a77da1e7994d8e2c1839c5675eeee01390ec94f4",
+          "editorialTaskSha256": "fdbfc0d9012789f04f0e029fb0908a5d065879a99b58279e859037d3f6f666d7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:04:01",
+          "name": "Opioid poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:02",
+          "name": "Anaesthetic toxicity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:03",
+          "name": "Muscle relaxant toxicity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:04",
+          "name": "Cardiotoxic plant poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:05",
+          "name": "Digitalis toxicity",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:06",
+          "name": "Insulin poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:04:07",
+          "name": "Agent-specific poisoning management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7f2b497ff32a802d6fb0953fd2ad43bdb116dc8b9d442e3ab70e2a5e98b0f504"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "early pregnancy concepts",
+      "parentName": "Early pregnancy concepts",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN78.5",
+          "page": 147,
+          "rowBBox": [
+            51.2,
+            249.54,
+            121.7,
+            274.38
+          ],
+          "sourceBodySha256": "29989e2f594ba8fe414a1ba81e0c9311bf5c3ce9e2552767f4f13946dcdd1890",
+          "editorialTaskSha256": "18c951b8e173fe3aff3c3ffc202258a96811bddb7888c7a689010d922217a75a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:05:01",
+          "name": "Decidual reaction",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:05:02",
+          "name": "Early pregnancy loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:05:03",
+          "name": "hCG pregnancy testing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:05:04",
+          "name": "Normal early pregnancy development",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "emergency radiographs",
+      "parentName": "Emergency radiographs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD5.3",
+          "page": 458,
+          "rowBBox": [
+            40.1,
+            519.9,
+            103.9,
+            547.74
+          ],
+          "sourceBodySha256": "a5d30acc04c1ed2c625edaf228ad49a85da6598893473ebd0344bbfc968b7eca",
+          "editorialTaskSha256": "7963eab8fa7f5fdcdf836162a3c777eb3d991519d3d522506aa50a5bb28836b4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:06:01",
+          "name": "Pneumoperitoneum",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:06:02",
+          "name": "Acute fracture",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:06:03",
+          "name": "Emergency chest radiograph interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:06:04",
+          "name": "Emergency abdominal radiograph interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:06:05",
+          "name": "Emergency skeletal radiograph interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:06:06",
+          "name": "Acute–chronic skeletal change distinction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "ent emergencies",
+      "parentName": "ENT emergencies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN2.10",
+          "page": 421,
+          "rowBBox": [
+            40,
+            219.36,
+            94.3,
+            273.54
+          ],
+          "sourceBodySha256": "63b87dcaf6bc349c8357d15c9167b15bb4f7c8c58da3c96d1a29b53faaffbab5",
+          "editorialTaskSha256": "92234f366bb71df0490a31c7f3bded5b7a5bcfff65dd92ced918a12ff32ed58a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:07:01",
+          "name": "Anterior nasal packing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:07:02",
+          "name": "Tracheostomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:07:03",
+          "name": "ENT foreign body management",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:07:04",
+          "name": "ENT resuscitation simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:07:05",
+          "name": "ENT airway escalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "essential medicines",
+      "parentName": "Essential medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH10.8",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            291.96,
+            105.7,
+            323.7
+          ],
+          "sourceBodySha256": "ca71aed9df4dafcb06337f16f5b284468ac296b04355feffc45346f2de18a894",
+          "editorialTaskSha256": "3be5156a22b8fc95870972355683351bad992abdb78cdad0cafd44df3cc4f9a8",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:08:01",
+          "name": "Essential medicine selection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:08:02",
+          "name": "Fixed-dose combinations",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:08:03",
+          "name": "Over-the-counter medicines",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:08:04",
+          "name": "Medicine product appraisal",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "first-trimester assessment",
+      "parentName": "First-trimester assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN79.6",
+          "page": 147,
+          "rowBBox": [
+            51.2,
+            440.34,
+            121.7,
+            464.82
+          ],
+          "sourceBodySha256": "17b8bd365137b837bbcc458016c2481dab0acbae4d4a3d8b620046cb295c7d99",
+          "editorialTaskSha256": "e281f57899d960032b485665fa258eaf9d3bf34ae672bf458b6efc357a57149b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:09:01",
+          "name": "Pregnancy recognition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:09:02",
+          "name": "Teratogenic developmental timing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:09:03",
+          "name": "Maternal serum AFP screening",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:09:04",
+          "name": "Early pregnancy assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:09:05",
+          "name": "Prenatal screening timing distinction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "general anaesthetic drugs",
+      "parentName": "General anaesthetic drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS4.1",
+          "page": 453,
+          "rowBBox": [
+            46.7,
+            226.86,
+            98.1,
+            297.12
+          ],
+          "sourceBodySha256": "24456dbf68c2f0bc7ac910b1332858eb8c5901814af5053632ff420156c6cf29",
+          "editorialTaskSha256": "398e803346d23c08b0097bf1ea0cb4103d1d142b330889da6a389d7c24a36b04",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:10:01",
+          "name": "Intravenous anaesthetic agents",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:02",
+          "name": "Inhaled anaesthetic agents",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:03",
+          "name": "Opioid analgesics",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:04",
+          "name": "Non-opioid analgesics",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:05",
+          "name": "Neuromuscular blockers",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:06",
+          "name": "Anticholinesterases",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:07",
+          "name": "Anaesthetic drug actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:10:08",
+          "name": "Anaesthetic drug adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "geriatrics",
+      "parentName": "Geriatrics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.14",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            405.36,
+            102.7,
+            446.16
+          ],
+          "sourceBodySha256": "d795a1fea057b559a2bdfe029bd4cf97626367832cd302e5ddd5da2d14410b4b",
+          "editorialTaskSha256": "93338f571b27386109f2dfb2ac1d6542901bc9880d4c9d57425a1edbf8b7ebee",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:11a0c8840b483cbec6692c33c0d44e33a677fcda931e8023f275e79d2db0302a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.18",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            174.48
+          ],
+          "sourceBodySha256": "b6e2831493ef7e6be1206210ec7e9a1b847b7b6900d9165295b7c574e192c2eb",
+          "editorialTaskSha256": "7c3a5f64b074239b54a0c25fa40d9fa6c59f8397fe4d80fc47df3cd35e312540",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1a54c56c0ca6f3bfe8295256a00822f8d2f6175a1b2faef3cc445dae994153a8",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.22",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            283.32,
+            102.7,
+            324.12
+          ],
+          "sourceBodySha256": "58c08722601ceb66c0e262e02ada3636b2a106fcb55189967a0ef43332e9b2af",
+          "editorialTaskSha256": "e27cc7e696fb11d3d92bbb363c67bcbceda205ca945cf3be5c92c8c68d20c7f6",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.9",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            201.36,
+            102.7,
+            242.16
+          ],
+          "sourceBodySha256": "6ab4f8ae3125a0f47a22172a5d4d9d9cbdf5c4f9f41b0307b4b75bd9edef29ab",
+          "editorialTaskSha256": "dcba22164bf23ac7e961d0f0e1edd3d474f1fc4f16d3d060297d0e5f748b6cc5",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:1e402f71965cba7735df906256fa9e2e9c3521d624abba7e269b3f9a01663610",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.2",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            337.74,
+            102.7,
+            365.1
+          ],
+          "sourceBodySha256": "0c6b8636b4df1a596890f924ddf2216a3cd1e60adbc94fe6911d0340638ddbe7",
+          "editorialTaskSha256": "875e7e1cc6dfc94623397b821292d5f30a32e090ccc692256779c36428381123",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.16",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            500.16,
+            102.7,
+            541.08
+          ],
+          "sourceBodySha256": "f20aecc45be9649d6460ede072dab4e8cc5e82e31012b3d9af0faaed9e038054",
+          "editorialTaskSha256": "a25841a08d0f6c2d7848f6f7860b66c322a8803829c4e43203b63cf30bac852e",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.19",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            174.48,
+            102.7,
+            215.22
+          ],
+          "sourceBodySha256": "c0f47fd7e292d50580df0b57e8bbb19b7d0c737d5169b133d3fbe989f283d09c",
+          "editorialTaskSha256": "f626e28efe04dc18bdd4b7444f1b168b4fe30ce74badd32fb8883907257bf908",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:59df6ab62ecfaf5499f219564b53ae1254be9d2342b945aab5835799def67574",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.12",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            323.64,
+            102.7,
+            364.44
+          ],
+          "sourceBodySha256": "dd0903c2a980f9e0d891da2272415482ea430374f2502b4878552671bfdec2f9",
+          "editorialTaskSha256": "9ed6615f1ee4e712211af0913ea5c11352759a452e0586ca7510b1155158adcd",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5f2f6fa7c81b2d0017adbff9ba24db36abbcb7d88e3a18ce73cd5047c8ee51ed",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.1",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            297.06,
+            102.7,
+            337.74
+          ],
+          "sourceBodySha256": "b9f97775f771a0e52ae9b10883df4ca3569c9e3bd2f4f4a2cc0b235c2eaed80f",
+          "editorialTaskSha256": "b8fe7a497cc5073b8db1a72bb4867e64376b8d72c2e1bbd6d4942c1740762a73",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.10",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            242.16,
+            102.7,
+            282.96
+          ],
+          "sourceBodySha256": "80d4163b8cc1ac8a4e575b1375b6d96005aab2c82bea28eded0bee7ba7c19141",
+          "editorialTaskSha256": "8c26242a2d47d79c32b6ec32f3103e06d1f600e1b8ae7e567e7483ed7ac764f0",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:918b610b66f1494c77df904354dd3a184d2da0f7a416c378b37227f0ed672d43",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.5",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            446.64,
+            102.7,
+            487.32
+          ],
+          "sourceBodySha256": "d566da5019527cd854ee9817e7115bd835ccc45825b0e1bb721fd4c16283df2b",
+          "editorialTaskSha256": "02327618eee0ced3b095822c0e8e21ec7644c28b5b2019545e4589250fdba38f",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.20",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            215.22,
+            102.7,
+            256.02
+          ],
+          "sourceBodySha256": "161443e3b84853c274007f806220826d352ea4e64bc0b062f103a55c04487f61",
+          "editorialTaskSha256": "c19fcc2771d2591ec6d656a23939227821f52f9252193037c28062eb152f4e63",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.6",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            487.32,
+            102.7,
+            541.56
+          ],
+          "sourceBodySha256": "020a7339aa1f2edca657e49f76efb52364a32bfa0f2a0dfe193bdbd58b1fd6bc",
+          "editorialTaskSha256": "ca34ba9fd59f0c41c2f0aae75b6d48e27f23d39e7742cf9605bfbda3d6045ed7",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.17",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            147.24
+          ],
+          "sourceBodySha256": "f7d57ee2492f49a5abcfc59b94d27a3ab04c1c7b991d5faf673da4f3b8a961f9",
+          "editorialTaskSha256": "88902fd96dc608c828be4f0fc7c61974f68817646ac360d636523b1d153f4997",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.21",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            256.02,
+            102.7,
+            283.32
+          ],
+          "sourceBodySha256": "a18c6342d4d659dca7009e7a8ee5c90f7341dbdb8c6ffc5aebbc4b1a20b09882",
+          "editorialTaskSha256": "0f0bfc6cda5a72f7a863c930ae985948a3514d052eed55f646955d2b46613707",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.13",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            364.44,
+            102.7,
+            405.36
+          ],
+          "sourceBodySha256": "c43cb1c63a73a0ad22d351ffde485d11c6fcf5c59e472cb95f3a933781510f39",
+          "editorialTaskSha256": "8d1ce64852a5c983ed936ee588f3480a2b1904ddfbadb147becdfe26c5763110",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.11",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            282.96,
+            102.7,
+            323.64
+          ],
+          "sourceBodySha256": "cb78f0dc031336161a23c609de7f44700f75ced8f138e9015080b20be2da3aba",
+          "editorialTaskSha256": "43fdb25fe0c8b2b775450d4c149eeedf949536aa4e1b1fd4ada8fa96489916a7",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.15",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            446.16,
+            102.7,
+            500.16
+          ],
+          "sourceBodySha256": "caca7ae7447e9bc0ec5e566028f7246fb06672c076f355ea9cadcd96116822fe",
+          "editorialTaskSha256": "f708b5d535e0b3612dfc9c6c48d4c058f28afc5b0a034010e3bf249eac4e32c0",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.4",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            405.84,
+            102.7,
+            446.64
+          ],
+          "sourceBodySha256": "dfc77e954868ec5a91ddc85744db5d62334e302f78a15079479ca45d57a8286c",
+          "editorialTaskSha256": "b75281029a110f9b4d5e6f7aaf8ccde11569026b080d5ba7b7172123f8b31720",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.8",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            160.56,
+            102.7,
+            201.36
+          ],
+          "sourceBodySha256": "b93bd33bfad989ff4785d8bb2865e02be0d4aa2a8ee4f15551db13314de237d9",
+          "editorialTaskSha256": "aa4a48320fcf3b25310db90d5c6b62642118537902405d53e48493cf50b0223f",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.3",
+          "page": 316,
+          "rowBBox": [
+            44.2,
+            365.1,
+            102.7,
+            405.84
+          ],
+          "sourceBodySha256": "1d169db261bae59b9a7885a3561ab520dacd0245633df8435d2fc9105a6d200b",
+          "editorialTaskSha256": "edd0c66991f605d6596ede5b7088c4e4b52431c7ec1585ff845beca5e2456991",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:fb05aee947626196f3481b5282dc4f86cf29a0900aa65a90318c7240cfd4052f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM25.7",
+          "page": 317,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            160.56
+          ],
+          "sourceBodySha256": "af3f37624954ca0fd85f11f8bb88c90fdcd4448b5c6ef6dd6e6598d3f152267e",
+          "editorialTaskSha256": "16ef1a606f93d82592afb7f643798466c8a81a926a0ef642affc2b7e8b2d383d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:11:01",
+          "name": "Fragility fracture",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:02",
+          "name": "Older-adult acute fracture care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:03",
+          "name": "Older-adult functional recovery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:04",
+          "name": "Secondary fracture prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:05",
+          "name": "Demographic ageing interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11a0c8840b483cbec6692c33c0d44e33a677fcda931e8023f275e79d2db0302a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:06",
+          "name": "Ageing service implications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11a0c8840b483cbec6692c33c0d44e33a677fcda931e8023f275e79d2db0302a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:07",
+          "name": "Older-adult undernutrition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a54c56c0ca6f3bfe8295256a00822f8d2f6175a1b2faef3cc445dae994153a8"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:08",
+          "name": "Older-adult nutrition assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a54c56c0ca6f3bfe8295256a00822f8d2f6175a1b2faef3cc445dae994153a8"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:09",
+          "name": "Stroke",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:10",
+          "name": "Older-adult stroke stabilization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:11",
+          "name": "Older-adult stroke rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:12",
+          "name": "Multidimensional older-adult assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1e402f71965cba7735df906256fa9e2e9c3521d624abba7e269b3f9a01663610"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:13",
+          "name": "Older-adult physical rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:14",
+          "name": "Older-adult social rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:15",
+          "name": "Physiotherapy role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:16",
+          "name": "Occupational therapy role",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:17",
+          "name": "Older-adult isolation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:18",
+          "name": "Older-adult abuse",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:19",
+          "name": "Older-adult family support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:20",
+          "name": "Degenerative joint disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:59df6ab62ecfaf5499f219564b53ae1254be9d2342b945aab5835799def67574"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:21",
+          "name": "Older-adult joint disease rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:59df6ab62ecfaf5499f219564b53ae1254be9d2342b945aab5835799def67574"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:22",
+          "name": "Common illnesses in older adults",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5f2f6fa7c81b2d0017adbff9ba24db36abbcb7d88e3a18ce73cd5047c8ee51ed"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:23",
+          "name": "COPD",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:24",
+          "name": "COPD exacerbation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:25",
+          "name": "Older-adult pulmonary rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:26",
+          "name": "Late-life depression",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:918b610b66f1494c77df904354dd3a184d2da0f7a416c378b37227f0ed672d43"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:27",
+          "name": "Late-life depression functional support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:918b610b66f1494c77df904354dd3a184d2da0f7a416c378b37227f0ed672d43"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:28",
+          "name": "Older-adult home care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:29",
+          "name": "Older-adult rehabilitation facilities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:30",
+          "name": "Older-adult residential services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:31",
+          "name": "Older-adult state support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:32",
+          "name": "Dementia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:33",
+          "name": "Dementia long-term care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:34",
+          "name": "Dementia rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:35",
+          "name": "Hearing loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:36",
+          "name": "Older-adult hearing rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:37",
+          "name": "Older-adult autonomy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:38",
+          "name": "Older-adult capacity assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:39",
+          "name": "Older-adult safeguarding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:40",
+          "name": "Proportional older-adult care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:41",
+          "name": "Falls",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:42",
+          "name": "Older-adult fall assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:43",
+          "name": "Fall recurrence prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:44",
+          "name": "Older-adult perioperative risk",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:45",
+          "name": "Perioperative mobility preservation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:46",
+          "name": "Visual loss",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:47",
+          "name": "Older-adult visual assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:48",
+          "name": "Low-vision support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:49",
+          "name": "Vascular events",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:50",
+          "name": "Older-adult vascular stabilization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:51",
+          "name": "Older-adult vascular rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:52",
+          "name": "Osteoporosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:53",
+          "name": "Older-adult bone health assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:54",
+          "name": "Osteoporosis rehabilitation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:55",
+          "name": "Delirium",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:56",
+          "name": "Delirium precipitant assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:57",
+          "name": "Delirium recovery support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:58",
+          "name": "Late-life personality change assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb05aee947626196f3481b5282dc4f86cf29a0900aa65a90318c7240cfd4052f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:11:59",
+          "name": "Late-life personality change functional support",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb05aee947626196f3481b5282dc4f86cf29a0900aa65a90318c7240cfd4052f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "gi pathology slides",
+      "parentName": "GI pathology slides",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA23.9",
+          "page": 195,
+          "rowBBox": [
+            51.5,
+            157.98,
+            105.6,
+            191.88
+          ],
+          "sourceBodySha256": "8e76cc48dc53476f236f1fe75318381db010df2e7edc0286a9e12536c56e4814",
+          "editorialTaskSha256": "c886690d03f3d05e1d9a6d84f3b92a7e69d7904ef0ffaaf62f87c47a5e037656",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:12:01",
+          "name": "Peptic ulcer pathology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:12:02",
+          "name": "Intestinal ulcer pathology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:12:03",
+          "name": "GI tumour pathology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:12:04",
+          "name": "GI pathology slide identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "haematopoiesis",
+      "parentName": "Haematopoiesis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA13.1",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            286.5,
+            105.6,
+            319.26
+          ],
+          "sourceBodySha256": "baa4e9e49f79810daeb1845bdfec23fd34502b5e6b71b6e89328112bf8ea7ec5",
+          "editorialTaskSha256": "9c8b3b9e6ced1934be1a7cdd09eb0dc77385e1d45d31615791761d8dc46016bd",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:13:01",
+          "name": "Bone marrow haematopoiesis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:13:02",
+          "name": "Extramedullary haematopoiesis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:13:03",
+          "name": "Haematology anticoagulant selection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:13:04",
+          "name": "Haematopoiesis site comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "imaging correlation",
+      "parentName": "Imaging correlation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD4.3",
+          "page": 458,
+          "rowBBox": [
+            40.1,
+            341.4,
+            103.9,
+            396.06
+          ],
+          "sourceBodySha256": "05d4546bd9cb691f2eb58a0ab3f2b03a30ef9269e6dc67f22da6edb1265ac5c2",
+          "editorialTaskSha256": "a1ef86f0f0b5e505c8e5488aff49ce9de575d74e9472af06ef7e6e823f0acb9d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:14:01",
+          "name": "Osteoarthritis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:14:02",
+          "name": "Venous thrombosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:14:03",
+          "name": "Cholecystitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:14:04",
+          "name": "Anatomy–imaging–pathophysiology correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infectious diseases",
+      "parentName": "Infectious Diseases",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.12",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            378.42,
+            102.7,
+            419.22
+          ],
+          "sourceBodySha256": "597ecf17e19ee362737c4dff7c9617a7022ece1c08e73318ae02501ad898f023",
+          "editorialTaskSha256": "67596ddf44248b6d13f46d63292bb26377de4ccb7d1d61ba79a5c16d52d59649",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:055f140032cda57c7b44a24a70e55efae078bb215e179e6b65fcb8f6a45b8167",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.6",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            174.06,
+            102.7,
+            201.42
+          ],
+          "sourceBodySha256": "de8668d69d03d613b7ff97b5aaae814955f8ac4e40e663b12f28440e67566b2a",
+          "editorialTaskSha256": "2782a76e640a7c8889de3fb6f7a8645aa439df8971426baac2ffc8c483165a03",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.30",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            153.66,
+            102.7,
+            181.14
+          ],
+          "sourceBodySha256": "16bdb4794eab35173f9012f72f5f4fc5bdacf5b8dd0cc9756e9c2f36fec389be",
+          "editorialTaskSha256": "c8200f5227e3a33923b439687c0ed7264178088c11091d4dd9d47a87eff91cb4",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:13d173ccc240d08072b7fa53df260ebac688a4e15a3edf8c9392f1ef156f25b1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.34",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            276.48,
+            102.7,
+            303.84
+          ],
+          "sourceBodySha256": "ba243e35261c0a640e4a791fdd65dbe7ae1878683eefd371ab72339a494e1572",
+          "editorialTaskSha256": "9ba070097d43b8b55baf078a47f2323bcc0dee5f1564be14c98cb5fb3fe32a8e",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:271f88182306029dc7682b261bc6a684f4532ef5c48d4d0def8b5c701557eb36",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.19",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            228.66,
+            102.7,
+            269.46
+          ],
+          "sourceBodySha256": "77e3f18230ccf5c54943fced249079a4e914496b60548f4e0cf8c3cf1599ee6e",
+          "editorialTaskSha256": "e3318ad75aa851a92407bd108c321399e1ca78e794bfee07e98ddfd33b6ba6b1",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.23",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            364.86,
+            102.7,
+            405.66
+          ],
+          "sourceBodySha256": "689137e083d73effff46a9064eded3ca3f3103b58684ebbeaeb5bbba879639ad",
+          "editorialTaskSha256": "474afb899d84c458a1bc41405f94b9475dc74dec76de30a81087f71622b8aed1",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.8",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            228.72,
+            102.7,
+            256.08
+          ],
+          "sourceBodySha256": "f9919aa9b8534ba066295da2e78dbeb4f4be94e316559ce19f092b2c5af00a87",
+          "editorialTaskSha256": "477113771a8d5c053eabde09dc2c65eb009c7ecb79c7749ac5125449ccdc2a88",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.27",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            487.68,
+            102.7,
+            515.04
+          ],
+          "sourceBodySha256": "a3759c720a2e438ab07ef646b961eeb5a32bf8b1d35e00f7e83536950016a163",
+          "editorialTaskSha256": "370acfd5d2eb7620edf8ab0697407b8b00c66dfb49838a4233d3a04db0bd0281",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.10",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            296.88,
+            102.7,
+            337.62
+          ],
+          "sourceBodySha256": "783261a9eb9c87285cd32993702643d18f0414384bd01cb88d241a5107060bda",
+          "editorialTaskSha256": "e564f9e516298a98042dcf5402f086731ff5be04de80f5ec41f6253678b590d9",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:585d0ff3adc4715aacc2fa1934c190d6caa3912be73443e211047d327f4315fd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.32",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            221.76,
+            102.7,
+            249.12
+          ],
+          "sourceBodySha256": "7ff017aa09a53189ca616feb86b42a6ba1cd2c317facf0de93cb8464f41c9e37",
+          "editorialTaskSha256": "f4c4b13604a820275e62927319f84e724d284ffddf03a56f6ad8fc4cd5ca3bba",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.9",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            256.08,
+            102.7,
+            296.88
+          ],
+          "sourceBodySha256": "b3c6fbae564b47becc6fd765ea602cbfc2ee88ef61a1d9178ccb15e0c4c8cfd3",
+          "editorialTaskSha256": "4bc37101f6f4a4d16e8bbfd93907e2c39b7f14b47cebd62b9782cd33bc62e24e",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.18",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            187.92,
+            102.7,
+            228.66
+          ],
+          "sourceBodySha256": "63995c48b32ca1295ece9ab871a3252e84beb9e50c437bc2ca583833eba93ce7",
+          "editorialTaskSha256": "4646f1aff50fcbd545a5c92c0d91039cde282916934e7293f728b96ccf2f0735",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:6772dddc8b65c4f8e7799c25de27feea47716c6ae2c297c33888b44e75abb5e6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.2",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            384.72,
+            102.7,
+            425.52
+          ],
+          "sourceBodySha256": "ddb04f42e2fe0d31b58b61479834f871215dda5c7d3a276e6f804948f81e0d21",
+          "editorialTaskSha256": "b18e07b99c8052939e49f32cd039081ba8e5e5ece62f187600fd416be3728c3b",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:7bc2f91d5d82247d27d498fa51935fb890e57326c83c291fc23295fc5de4d3ae",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.26",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            460.32,
+            102.7,
+            487.68
+          ],
+          "sourceBodySha256": "ea9dabc7ec71493bfdf1655324bce1d2afaf3154671634aa7b61fb5eb5de376a",
+          "editorialTaskSha256": "7e85eec7df4022a7d07983d53687a2281d2d7209ca1b09c58c9c18e0adb31558",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.22",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            337.62,
+            102.7,
+            364.86
+          ],
+          "sourceBodySha256": "922c96d0925bd09b2d0470731718403a133e9da6de026d3c1aa3740aa1a41f3f",
+          "editorialTaskSha256": "876ff3fa1bd2a1aa0ee2faeffdec7116425bb67cf9c04d850c0a9002243bb839",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:901bb2e562aba8004eebfbf669c2b5e45c494a5b862ff1b11b30c1d201ec0807",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.28",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            515.04,
+            102.7,
+            542.4
+          ],
+          "sourceBodySha256": "751c87d72474fd5b60cee3691b34bc8b2e32016628e09dc1e5c819769bf154f4",
+          "editorialTaskSha256": "5b320e42cb1c7a8c0a32383b66088dffbe2e62ea38f2f11b3f538c49524231b5",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9954957807ed754b56e80de1c6f45479181473a338d71874604da9833e599a42",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.35",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            303.84,
+            102.7,
+            331.2
+          ],
+          "sourceBodySha256": "296d34b51c690546b6b5033e79163b492f500e62491a62c87e24e243d06cfc3e",
+          "editorialTaskSha256": "c94fa6f8f1947b8b5b812f44cc8ca975e93990d0f0a4513e47fa4be4b014edda",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.1",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            343.92,
+            102.7,
+            384.72
+          ],
+          "sourceBodySha256": "ad6b66fb8484c9851f5eb8c289b543573937081f521769b4253f81ef98b9022b",
+          "editorialTaskSha256": "47e8ccdf87a8d5d93e549b69fa675b81fc7d44639da4d8d6fe8db41899433893",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.24",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            405.66,
+            102.7,
+            433.02
+          ],
+          "sourceBodySha256": "869839a4facf7ba22f2d2a0585c8b4379adea1a8169991042631df8542e7d603",
+          "editorialTaskSha256": "1ac7152fcd07a149d0467cdcdf55c967bdb382a4fb7080b3e2b430563942deb3",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a8c5fd0bc85e5650eeb18394547adc93bb9eebb833e4cf84f62feb30bb30278c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.4",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            479.64,
+            102.7,
+            533.88
+          ],
+          "sourceBodySha256": "fd0f0f70f2d61dea2db66e9b8fa6c71341eb04bd2b586600e2216a23eb2f7380",
+          "editorialTaskSha256": "cac1e23bdc5f27ea7b822e3ba6a99b30cee6f7c2e3f1c816567b1dec3692c4b3",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:adc434af1221f458b7cee430794d615708a27abbe5e17f547d06e5f745a7925b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.14",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            460.08,
+            102.7,
+            500.7
+          ],
+          "sourceBodySha256": "0ba4fe6bf9d105bdc230d792de066b2f6ab5e21e8eaba09acc525261bd27d226",
+          "editorialTaskSha256": "66a5cf3082c583b1a7c5fb86b12dada3e9db831129b00fc79868fbefa9f4eb76",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b4f2620ee1b5c0c5655e83ee6bf75d9d4402508424c574097d5675ecc3c72ba6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.31",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            181.14,
+            102.7,
+            221.76
+          ],
+          "sourceBodySha256": "eb690bdafa2808b50222c3878b6d772dac986508ba63ad8ff34738b4f3c6f0e1",
+          "editorialTaskSha256": "ca1ddd8caf844b2bd7c3732dcddc272fcee8041a433a7aea093348d901fc97f1",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.17",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            187.92
+          ],
+          "sourceBodySha256": "b50d5e940ea5d63f70b15a0fc981df56d4f05048f2d97cd60692c7da408fbc4f",
+          "editorialTaskSha256": "dd2bfa9cd3ae7f54bed7338f8a743dd92220d860d554780507dbb6d3f93ecdc3",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.33",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            249.12,
+            102.7,
+            276.48
+          ],
+          "sourceBodySha256": "164811959a51cb45c7969932d919db164a50967424c31eb61a8f00317d801592",
+          "editorialTaskSha256": "d23600e7e3d3b4982cf35c1c19989f39c661a4340e20e9a6e750161a26b7fd0a",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.5",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            174.06
+          ],
+          "sourceBodySha256": "9053926e3b6b4210b9e85cf678ad500855da56356c53697b743f5678929a6968",
+          "editorialTaskSha256": "3ec2e94db78a9d8cca75b0e27bf61790c2f33a00540f24b6076b0525b6b27f30",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.3",
+          "page": 318,
+          "rowBBox": [
+            44.2,
+            425.52,
+            102.7,
+            479.64
+          ],
+          "sourceBodySha256": "b8897dc87029c09feaf7ec248fc737504540028e10490edc5202e859bfdf236f",
+          "editorialTaskSha256": "e31c7f0e80e6d91ca33bfd08854c9945e9e3c04671d28a6e3e9f2d2b62e6e27a",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c65a84bfa6a0fc87b2869bf2392498a6a342a755e56fa2a0724371b933a99a10",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.15",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            500.7,
+            102.7,
+            541.44
+          ],
+          "sourceBodySha256": "4c04b5835a4a86c3ce350e47e383b274212f6e5e95632f968146866dcfaa6e03",
+          "editorialTaskSha256": "89fec22be67a6791ec2e1a0fd32d6331b530776bbc327cad1b9cf5a443dbee20",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.29",
+          "page": 321,
+          "rowBBox": [
+            44.2,
+            126.36,
+            102.7,
+            153.66
+          ],
+          "sourceBodySha256": "3c19380796128e5b095e529b96899bdf56fdce6e0c93e2a08ea114b7b26d13ef",
+          "editorialTaskSha256": "0fc16c495c69aba70f292777c9f1a26551b6e1fd87ab3ca500b04c9a3ae530d0",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:cd3632f2a0aac97f651723e91418f485865648cc666c957f3f64907c2172cf60",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.21",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            310.14,
+            102.7,
+            337.62
+          ],
+          "sourceBodySha256": "dd26842f99ce9abf8d9b5da74b3e199bd8eb089054b04c2ce1dc23547952cf35",
+          "editorialTaskSha256": "318f4d3c6c8fe5d4815cb4f2ff4e7fd1261f726dab73f8104745f238e45280e4",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:cde25bdd3eca7e73ac22bb9aa98904c5ccc4233dd1d57816ec58fbeba839a64a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.16",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            147.24
+          ],
+          "sourceBodySha256": "7c0731f92fc6495c390864a3dc9474b475f03377b8bf38a69b2c635f9e17cf9f",
+          "editorialTaskSha256": "45405a3d13da40cd4b6cc0632bc2ffe8fa2ece854f380df70d4b28b95e2e7670",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:dc0a169df46847b0f9bdd20e890a251f731b41b1cae6972219cbfd262f816961",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.7",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            201.42,
+            102.7,
+            228.72
+          ],
+          "sourceBodySha256": "83d8bc5ad483c8273ad36534047e026f9ab0a696005cb233585e6e44cf3ed246",
+          "editorialTaskSha256": "26808bf6d223ce7ed952ab2a9b2d5759a5856a27902a8547978394028a9e0e6b",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.13",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            419.22,
+            102.7,
+            460.08
+          ],
+          "sourceBodySha256": "95f4659a8e2df733cb023f9fb88e6cb8307e225e39d072cce9d01b6e80deb73f",
+          "editorialTaskSha256": "c283ae86d0c886649a273b634361b7cb9a0f90b913aa7534d823c169dffb947d",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e911855673dc645dafc7b35cdb8e7c6e72ae2099e9fd8e6e8b5b12be601c01c6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.25",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            433.02,
+            102.7,
+            460.32
+          ],
+          "sourceBodySha256": "94d121a5fb0498c21361c1ba5e81832a7b152ae0fa9b20e36193039cff009020",
+          "editorialTaskSha256": "e9c0f8953422627820490abd350c5625ec9f0a93adefcd59c94e5bf3cf07614b",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.11",
+          "page": 319,
+          "rowBBox": [
+            44.2,
+            337.62,
+            102.7,
+            378.42
+          ],
+          "sourceBodySha256": "8cfb048f291717eda7575fe1f898e6708bda0e6aab1e7ad47b605ba05615fd5f",
+          "editorialTaskSha256": "dcd4ec0330a7f3febcd15dc4bca5699bacb166098afb945363e23d6024cdab57",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM26.20",
+          "page": 320,
+          "rowBBox": [
+            44.2,
+            269.46,
+            102.7,
+            310.14
+          ],
+          "sourceBodySha256": "d90330a351b4fb4cf378bf5961b04659d6ea14bba71dee6142afaefe044178c9",
+          "editorialTaskSha256": "aa6568fcae05d3adcc2beab684c44c686fa7e9b3f3ad8fe1caf5e6060a4897f1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:15:01",
+          "name": "Encephalitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:02",
+          "name": "Meningitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:03",
+          "name": "CNS infection evaluation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:04",
+          "name": "Infectious disease diagnostic techniques",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:055f140032cda57c7b44a24a70e55efae078bb215e179e6b65fcb8f6a45b8167"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:05",
+          "name": "Malaria",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:06",
+          "name": "Malaria prescription simulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:07",
+          "name": "Infection counselling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:13d173ccc240d08072b7fa53df260ebac688a4e15a3edf8c9392f1ef156f25b1"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:08",
+          "name": "Actinomycosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:271f88182306029dc7682b261bc6a684f4532ef5c48d4d0def8b5c701557eb36"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:09",
+          "name": "Nocardiosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:271f88182306029dc7682b261bc6a684f4532ef5c48d4d0def8b5c701557eb36"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:10",
+          "name": "COVID-19",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:11",
+          "name": "SARS",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:12",
+          "name": "Influenza",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:13",
+          "name": "Skin and soft tissue infections",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:14",
+          "name": "Skin infection escalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:15",
+          "name": "Allergic aspergillosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:16",
+          "name": "Chronic aspergillosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:17",
+          "name": "Invasive aspergillosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:18",
+          "name": "Infectious diarrhoea",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:19",
+          "name": "Bacterial food poisoning",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:20",
+          "name": "Filariasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:585d0ff3adc4715aacc2fa1934c190d6caa3912be73443e211047d327f4315fd"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:21",
+          "name": "Hepatic abscess",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:22",
+          "name": "Visceral abscess",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:23",
+          "name": "Abscess source control",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:24",
+          "name": "Leptospirosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:25",
+          "name": "Brucellosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:26",
+          "name": "Plague",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:27",
+          "name": "Anthrax",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:28",
+          "name": "Staged infectious disease assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6772dddc8b65c4f8e7799c25de27feea47716c6ae2c297c33888b44e75abb5e6"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:29",
+          "name": "Superficial candidiasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc2f91d5d82247d27d498fa51935fb890e57326c83c291fc23295fc5de4d3ae"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:30",
+          "name": "Invasive candidiasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc2f91d5d82247d27d498fa51935fb890e57326c83c291fc23295fc5de4d3ae"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:31",
+          "name": "Varicella",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:32",
+          "name": "Herpes zoster",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:33",
+          "name": "Intestinal amoebiasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:901bb2e562aba8004eebfbf669c2b5e45c494a5b862ff1b11b30c1d201ec0807"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:34",
+          "name": "Extraintestinal amoebiasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:901bb2e562aba8004eebfbf669c2b5e45c494a5b862ff1b11b30c1d201ec0807"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:35",
+          "name": "Household infection prevention counselling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9954957807ed754b56e80de1c6f45479181473a338d71874604da9833e599a42"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:36",
+          "name": "Microbial adhesion",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:37",
+          "name": "Microbial invasion",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:38",
+          "name": "Microbial toxins",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:39",
+          "name": "Microbial immune evasion",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:40",
+          "name": "Rabies",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:41",
+          "name": "Rabies post-exposure prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:42",
+          "name": "Infectious disease systemic examination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a8c5fd0bc85e5650eeb18394547adc93bb9eebb833e4cf84f62feb30bb30278c"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:43",
+          "name": "Enteric Gram-negative bacillary infections",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:adc434af1221f458b7cee430794d615708a27abbe5e17f547d06e5f745a7925b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:44",
+          "name": "Leishmaniasis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b4f2620ee1b5c0c5655e83ee6bf75d9d4402508424c574097d5675ecc3c72ba6"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:45",
+          "name": "Enteric fever",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:46",
+          "name": "Cysticercosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:47",
+          "name": "Infection blood test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:48",
+          "name": "Infection smear interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:49",
+          "name": "Infection urine test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:50",
+          "name": "Infection chest imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:51",
+          "name": "Infection culture interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:52",
+          "name": "Infection respiratory sample interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:53",
+          "name": "Infection CSF interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:54",
+          "name": "Infection fluid test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:55",
+          "name": "Infection stool test interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:56",
+          "name": "Infectious disease history",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:57",
+          "name": "Travel exposure history",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:58",
+          "name": "Occupational infection exposure history",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:59",
+          "name": "Helicobacter pylori infection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c65a84bfa6a0fc87b2869bf2392498a6a342a755e56fa2a0724371b933a99a10"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:60",
+          "name": "Malaria",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:61",
+          "name": "Malaria clinical case integration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:62",
+          "name": "Herpes simplex infection",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cd3632f2a0aac97f651723e91418f485865648cc666c957f3f64907c2172cf60"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:63",
+          "name": "Pseudomonas infections",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cde25bdd3eca7e73ac22bb9aa98904c5ccc4233dd1d57816ec58fbeba839a64a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:64",
+          "name": "Burkholderia infections",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cde25bdd3eca7e73ac22bb9aa98904c5ccc4233dd1d57816ec58fbeba839a64a"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:65",
+          "name": "Acute febrile illness stabilization",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dc0a169df46847b0f9bdd20e890a251f731b41b1cae6972219cbfd262f816961"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:66",
+          "name": "Acute febrile illness source assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:dc0a169df46847b0f9bdd20e890a251f731b41b1cae6972219cbfd262f816961"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:67",
+          "name": "Tetanus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:68",
+          "name": "Botulism",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:69",
+          "name": "Gas gangrene",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:70",
+          "name": "Dengue",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e911855673dc645dafc7b35cdb8e7c6e72ae2099e9fd8e6e8b5b12be601c01c6"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:71",
+          "name": "Dengue severity assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e911855673dc645dafc7b35cdb8e7c6e72ae2099e9fd8e6e8b5b12be601c01c6"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:72",
+          "name": "Cystitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:73",
+          "name": "Pyelonephritis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:74",
+          "name": "Prostatitis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:75",
+          "name": "Scrub typhus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:76",
+          "name": "Epidemic typhus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:15:77",
+          "name": "Endemic typhus",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "laboratory technique observation",
+      "parentName": "Laboratory technique observation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.18",
+          "page": 170,
+          "rowBBox": [
+            58.5,
+            467.1,
+            108.2,
+            534.78
+          ],
+          "sourceBodySha256": "d17f084646fc55ef7c271200692c3cbc30dcd81b5f0a0fcc40801e4f6889d614",
+          "editorialTaskSha256": "418c3520dc8e59a262311baaee2643b4cf2799cb876a072f82f6c9195e05a269",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:16:01",
+          "name": "pH measurement",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:16:02",
+          "name": "Amino acid paper chromatography",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:16:03",
+          "name": "Protein electrophoresis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:16:04",
+          "name": "Laboratory technique observation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "major gynaecological procedures",
+      "parentName": "Major gynaecological procedures",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG34.5",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            154.08,
+            103.1,
+            229.5
+          ],
+          "sourceBodySha256": "c44976e9293bf4bd17b1c40fa0138b1fd712650fd86237718d8627413c71905a",
+          "editorialTaskSha256": "69edd5f4b5a760f97cce50d7c13de74c8508952fb408744283721f62b541535a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:17:01",
+          "name": "Hysterectomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:02",
+          "name": "Myomectomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:03",
+          "name": "Ovarian tumour surgery",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:04",
+          "name": "Staging laparotomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:05",
+          "name": "Pelvic floor repair",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:06",
+          "name": "Fothergill operation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:07",
+          "name": "Gynaecological laparoscopy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:08",
+          "name": "Hysteroscopy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:09",
+          "name": "Gynaecological procedure route selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:17:10",
+          "name": "Gynaecological procedure complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "medical imaging integration",
+      "parentName": "Medical imaging integration",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD7.3",
+          "page": 459,
+          "rowBBox": [
+            40.1,
+            247.26,
+            103.9,
+            301.98
+          ],
+          "sourceBodySha256": "9961a3a9b3ed6bd3bb67c8adc97121ca6df25e26550d7a2e0a19ffbbf95afcfd",
+          "editorialTaskSha256": "bb93e506279257f34d4b0868cef356953f76a38988064b2d20134f6e24a33ce9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:18:01",
+          "name": "Stroke",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:18:02",
+          "name": "Pulmonary embolism",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:18:03",
+          "name": "Heart failure",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:18:04",
+          "name": "Liver parenchymal disease",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:18:05",
+          "name": "Medical imaging case integration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "minor gynaecological procedures",
+      "parentName": "Minor gynaecological procedures",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG34.4",
+          "page": 440,
+          "rowBBox": [
+            49.1,
+            113.46,
+            103.1,
+            154.08
+          ],
+          "sourceBodySha256": "e9a36b5d7d3231c0ff733fa18d375150a92c9e55971d83edae0b64d83cf585cc",
+          "editorialTaskSha256": "0d77f1c50286a14514ded42ba5cbb48b61ad5d8b5aa23c38ea2da54cb469f022",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:19:01",
+          "name": "Dilatation and curettage",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:19:02",
+          "name": "Endometrial aspiration",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:19:03",
+          "name": "Endocervical curettage",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:19:04",
+          "name": "Cervical biopsy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:19:05",
+          "name": "Minor gynaecological procedure model demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:19:06",
+          "name": "Minor gynaecological procedure complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef1b3b29bbac1c5b14b109b66f713524b4cd4a95e75c78c19e1af0dcdcdca9e2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "muscle classification",
+      "parentName": "Muscle classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN3.1",
+          "page": 108,
+          "rowBBox": [
+            51.2,
+            488.88,
+            120.4,
+            517.02
+          ],
+          "sourceBodySha256": "d0db9d647566a52c58b92431651afefb510e532e90a8af4f4826fa477c71a99e",
+          "editorialTaskSha256": "071855d29cbc533c2b8c62c7cc548dea5d1711017ba3db28b6e411c50b76a044",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN67.2",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            341.34,
+            121.9,
+            366.18
+          ],
+          "sourceBodySha256": "d4dbf79b5a00a72708bf8b358b757d5a41084eda36e88c9ac7d278ad7e8766b7",
+          "editorialTaskSha256": "242d632efcbfd2f62961a9c012677797d626ef87a6a06c6d03b9468f98bad09e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-mixed-02:20:01",
+          "name": "Skeletal muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:02",
+          "name": "Cardiac muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:03",
+          "name": "Smooth muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:04",
+          "name": "Muscle structural classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:05",
+          "name": "Skeletal muscle size classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:06",
+          "name": "Skeletal muscle shape classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:07",
+          "name": "Skeletal muscle location classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:08",
+          "name": "Skeletal muscle action classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:09",
+          "name": "Skeletal muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:10",
+          "name": "Cardiac muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:11",
+          "name": "Smooth muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-mixed-02:20:12",
+          "name": "Muscle organization–function correlation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de"
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

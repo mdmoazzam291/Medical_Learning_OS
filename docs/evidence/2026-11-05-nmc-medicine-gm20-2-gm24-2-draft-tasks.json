@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:984ca90e1c9b3306d0b4423caf1611399c72726c586c6830b398464f38028b91",
+      "subjectId": "medicine",
+      "code": "GM20.2",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        435.36,
+        102.7,
+        489.54
+      ],
+      "sourceBodySha256": "fee2ff54bcccca42d3e1fa3e4c58039c398d07df777e8e7c7927b401665ff250",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Epilepsy assessment",
+      "draftLearningTask": "Classify epilepsies by cause and seizure type and justify clinical evaluation, EEG and imaging choices.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bba83b23139206962dc31a612f818b5286ff4fb48113169c58a054c32de725df",
+      "subjectId": "medicine",
+      "code": "GM20.3",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        489.54,
+        102.7,
+        516.9
+      ],
+      "sourceBodySha256": "fcb22b1d3b0116a3575439171babf91d1c68e97e38ef28fde8128d11beb1da61",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Epilepsy treatment",
+      "draftLearningTask": "Compare antiseizure medicines by clinical use, patient factors and interactions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:addbc993a77461fc0943428f7dcfb828f81dd6e75126e949ccc20d55aecbc3a5",
+      "subjectId": "medicine",
+      "code": "GM20.4",
+      "page": 312,
+      "rowBBox": [
+        44.2,
+        516.9,
+        102.7,
+        544.26
+      ],
+      "sourceBodySha256": "3d2199cf488ee64832574934bc78744e1de59bb65eae61d2bd1df5b08dadbe4f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Seizure safety counselling",
+      "draftLearningTask": "Demonstrate seizure first aid and explain recovery precautions and when to seek emergency help.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:106c25b4fd2b5b2e848f0c8d72987fba0060929bdcc1c23a8477623a9a0c4be2",
+      "subjectId": "medicine",
+      "code": "GM20.5",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        161.16
+      ],
+      "sourceBodySha256": "ab8db9168632c1863bed2fe10caffa474b109dba2bb83c29988b5366c0c2588b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute seizure care",
+      "draftLearningTask": "Use an approved protocol to explain stabilization, reversible causes and escalation for a simulated ongoing seizure.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:36c8e98a8417d17ef54265da962a0309a14501163fd5eb480bc8ffe21e9c0f29",
+      "subjectId": "medicine",
+      "code": "GM21.1",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        181.02,
+        102.7,
+        208.32
+      ],
+      "sourceBodySha256": "aacef56b69b2752b92d48037508fdf66011353fd8b88191b2d3186c78d1ed945",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Local venomous snakes",
+      "draftLearningTask": "Identify representative regional species from approved images and explain the limitations of identification.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1d6ca71af40cf37a310d83752c7248aadbf52d0ac6d7d1b48cc696c259859dc8",
+      "subjectId": "medicine",
+      "code": "GM21.2",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "2176592efa10ca759bb909cbb33a568e608f1c04aa248ba49e47956607c6b014",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Snakebite first aid",
+      "draftLearningTask": "Demonstrate field measures and teach safe transport and avoidance of harmful interventions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b35d042cedf3f843c3d5ed7f9201b9168ebac06456575c4b2bb2c09cbd3ae3db",
+      "subjectId": "medicine",
+      "code": "GM21.3",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        276.48
+      ],
+      "sourceBodySha256": "f4f03659704df3fe4dc40ab79c10ea55c5f54f12f09d0b767ceb339af4479ae1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Snakebite stabilization",
+      "draftLearningTask": "Prioritize airway, breathing, circulation and escalation in a simulated envenomation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5fb38bfc7b245056f57c47486c946015b2778dbcc3a190f5eceaf454aa5a9b0b",
+      "subjectId": "medicine",
+      "code": "GM21.4",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        276.48,
+        102.7,
+        317.4
+      ],
+      "sourceBodySha256": "4dc8eae4259d1e00676374ac030b306e64b0b45a19893f4423561a50e2d3d2cd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Snakebite history",
+      "draftLearningTask": "Document exposure, timing, circumstances and evolution without requiring capture or identification.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:69a375d863fe556e0d293dc9ce3c6dfa6bf268913b6a76b532ca2ea4fa1776e4",
+      "subjectId": "medicine",
+      "code": "GM21.5",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        317.4,
+        102.7,
+        371.46
+      ],
+      "sourceBodySha256": "89e0e1eecd92e6a66a64343931f1d2ed0f3b53f7b2adfac6025728ef0c571ee9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Snakebite examination",
+      "draftLearningTask": "Demonstrate local, general, cardiac and neurological assessment and document progression.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5aa6e33c08ed9f38227c6eab3788d85fe46ec17eb81f198d819d5e46107c3564",
+      "subjectId": "medicine",
+      "code": "GM21.6",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        371.46,
+        102.7,
+        412.26
+      ],
+      "sourceBodySha256": "86298f8382e3c13a26c8bcc3cd0a9e4ac569d3f3d37c779749dc3d351d6e444d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Snakebite investigations",
+      "draftLearningTask": "Select and interpret tests for representative envenomation patterns and explain their limitations.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3ac3b5f32a49a18d435d812ae82c09f14f787b600711fdbb811a9983fba1f27f",
+      "subjectId": "medicine",
+      "code": "GM21.7",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        412.26,
+        102.7,
+        439.62
+      ],
+      "sourceBodySha256": "e75e6069663082a803c0aa29a59cd3717896a808da154ae396f6af1538d4f9ca",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antivenom",
+      "draftLearningTask": "Use applicable guidance to explain indications, dosing principles and recognition and management of adverse reactions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2bf3055d041cd01462529be003e6ad8fbaa1e3a129e8574f221ceffb654eb84f",
+      "subjectId": "medicine",
+      "code": "GM21.8",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        439.62,
+        102.7,
+        466.92
+      ],
+      "sourceBodySha256": "bcdbe081ca8caee0bb1c934f0cc2c27afa5bef2d6cedd1a61803d5c6316057cf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Scorpion envenomation",
+      "draftLearningTask": "Recognize local and systemic effects and justify assessment, stabilization and therapy in simulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:86bb5ed59c4667b35390c7d43ed8c5d4ae5d03f44dccee6bf7e4257b03dc4454",
+      "subjectId": "medicine",
+      "code": "GM21.9",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        466.92,
+        102.7,
+        494.28
+      ],
+      "sourceBodySha256": "f88f15a31edb097e701644ed2c7ed28d9ee4455da35ccf57f8f4808eee75c579",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stings and other envenomation",
+      "draftLearningTask": "Distinguish local reactions from systemic toxicity or anaphylaxis and prioritize simulated care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:694edf9edbfeb2254a578130093e4634eecb9603b207407e943f34312b3c1712",
+      "subjectId": "medicine",
+      "code": "GM22.1",
+      "page": 313,
+      "rowBBox": [
+        44.2,
+        514.14,
+        102.7,
+        541.56
+      ],
+      "sourceBodySha256": "5941d6332fe4edde0921cf01ca5b1d2a2895fffbb0da51a201c6f565206b45da",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Poisoning stabilization",
+      "draftLearningTask": "Prioritize immediate assessment, supportive care and specialist escalation in a simulated exposure.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6fb15839fd3e930a7fd84db38deb4c0b80fb403470dc280ce73449bd72736f98",
+      "subjectId": "medicine",
+      "code": "GM22.2",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "a12b5ad7245e84bf1d1aa2906ddb0e18862eaa41f49cdcd58b4b06e6fda479ed",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Plant toxins",
+      "draftLearningTask": "Compare representative local plant exposures by mechanism, findings, prognosis and agent-specific management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:93cf6911b765d8751bc0bd9ba7fcb0171934907ee828161851acd280546f3a65",
+      "subjectId": "medicine",
+      "code": "GM22.3",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "6f7e7b4a4d5553eaf6a7396bdb7ef1f410fa801e5e9180fffb4530a03decdf47",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Corrosive poisoning",
+      "draftLearningTask": "Compare representative corrosives and explain injury mechanisms, assessment, prognosis and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b6c85011abe9c462548a3f4fb36e8bbf9e3ce77bd04e45676dbe76884ec51c67",
+      "subjectId": "medicine",
+      "code": "GM22.4",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        215.22
+      ],
+      "sourceBodySha256": "7f44a949e0cc5f0259db1d2cefec194b3ee8228e699a31a2b4f496b5c4af8e6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Drug overdose",
+      "draftLearningTask": "Compare locally relevant overdoses by toxicology, presentation, prognosis and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f",
+      "subjectId": "medicine",
+      "code": "GM22.5",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        215.22,
+        102.7,
+        242.58
+      ],
+      "sourceBodySha256": "b124646a06cf7484dc8b3a34ad05c4f556a513303c40b29934d3d6258c0cd958",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Toxidromes",
+      "draftLearningTask": "Infer a toxidrome from supplied vital signs, examination and exposure findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:73cabee5d352f6d0ab6dfe665084afbad429db4c7f2c53ae365251e27960a7c7",
+      "subjectId": "medicine",
+      "code": "GM22.6",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        242.58,
+        102.7,
+        283.38
+      ],
+      "sourceBodySha256": "0afbddfc96e18cc0c9e114bc776be3b6f96f75f23995f6a3e72616363e961b01",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Insecticide poisoning",
+      "draftLearningTask": "Compare organophosphate and carbamate poisoning by presentation, complications, prognosis and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14",
+      "subjectId": "medicine",
+      "code": "GM22.7",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        283.38,
+        102.7,
+        324.12
+      ],
+      "sourceBodySha256": "9f5becaebaf9ab3987c2633d6167ba92e5a1667e6535b3a244f325b9089ce64a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Phosphide poisoning",
+      "draftLearningTask": "Compare aluminium and zinc phosphide exposures and explain clinical course and supportive care priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9",
+      "subjectId": "medicine",
+      "code": "GM22.8",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        324.12,
+        102.7,
+        351.48
+      ],
+      "sourceBodySha256": "4fb090ab3c22aee6a5a6c696bc26a751962c6a5f6b89a3593d17bbfb5d37f162",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Toxic alcohol poisoning",
+      "draftLearningTask": "Distinguish methanol and ethylene glycol patterns and explain assessment, prognosis and specific management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:63ef761da202c4908a33eb541cbd7c778c5c180dabfe39ebba6fe6f4fb193658",
+      "subjectId": "medicine",
+      "code": "GM22.9",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        351.48,
+        102.7,
+        392.22
+      ],
+      "sourceBodySha256": "6411deabe306fddf09e953612f525cd06a724687653984e7c3da5b36b05bfbc9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Poison centre role",
+      "draftLearningTask": "Observe or review a poison-centre consultation and explain how it informs assessment and care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d0c0f153fc138be741f8039a33061e7db211b22d64b8fa9fd078950b515b0ffd",
+      "subjectId": "medicine",
+      "code": "GM22.10",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        392.22,
+        102.7,
+        419.52
+      ],
+      "sourceBodySha256": "47d09f4f748a73cb6a47af31c290efe11fe7ae4ab8a1a7daae11be6a6ec7de19",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Medico-legal poisoning issues",
+      "draftLearningTask": "Use applicable guidance to explain documentation, notification and evidence handling in suspected self-harm or assault.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b7b58b578e97dc36fb9ca7f26f5c0ad181c1cc707edbddb571e3ab72ca65c609",
+      "subjectId": "medicine",
+      "code": "GM22.11",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        419.52,
+        102.7,
+        446.88
+      ],
+      "sourceBodySha256": "46f51a75a6afbaf0cb950fbb12212780dab63dd5d20bed4b96472ddbc3204278",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Poisoning report",
+      "draftLearningTask": "Write a simulated medico-legal report separating history, observations and conclusions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b54b0a8650ab97d5ccbcc02f8936c28916081356f7f909214ca8e24778b590a7",
+      "subjectId": "medicine",
+      "code": "GM22.12",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        446.88,
+        102.7,
+        474.24
+      ],
+      "sourceBodySha256": "280f43fc3c47c10d746657a258a69b75fb5e6a824a88eaf320d22ba324d7ce1a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Family counselling after poisoning",
+      "draftLearningTask": "Explain clinical and medico-legal next steps empathetically to simulated relatives.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce0aa523f567fb203af973381f948ad59beb042f5f7aac37f5c1ec78aec83d1d",
+      "subjectId": "medicine",
+      "code": "GM22.13",
+      "page": 314,
+      "rowBBox": [
+        44.2,
+        474.24,
+        102.7,
+        515.16
+      ],
+      "sourceBodySha256": "680cf007db7e5036c02b5469ff1152986f1eb69a9bbe35eb0835774bc666e3e8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Self-harm assessment",
+      "draftLearningTask": "Identify immediate safety precautions and indications for psychiatric consultation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22b135590c5ac9531dc2584a2e79fa1b844268c7da6067e7ecdd1c5ed5a0a64c",
+      "subjectId": "medicine",
+      "code": "GM23.1",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "f138653cbb3583e4ded79b294ee7f81acfbca0471191a7b77157d48b39df8b37",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypercalcaemia causes",
+      "draftLearningTask": "Use a sample calcium and PTH panel to distinguish PTH-dependent and independent causes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b9b49794ee2c569d248484520f145fe3023f3965a47fc9e70fc5d89c720ef11",
+      "subjectId": "medicine",
+      "code": "GM23.2",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "f9bdfa9573532680af0f7100f0eb9d2851c96ba604e01d9285bc8b801ef6b1ec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Primary hyperparathyroidism",
+      "draftLearningTask": "Connect causes and manifestations to biochemical diagnosis and clinical assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5e688ca7fe5d198b5de2f8e8de638476f70dc55491ea535df54503028cb9b5c0",
+      "subjectId": "medicine",
+      "code": "GM23.3",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        194.4
+      ],
+      "sourceBodySha256": "23b0a2dbdbd42bd643fd55f775d3f8b38705050112082a350b41781efca25294",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypercalcaemia management",
+      "draftLearningTask": "Prioritize assessment and management using severity, symptoms and likely cause.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:271b801d03c801760be952e0ac9238dee0330275f8be5d50477fbdd72626afe1",
+      "subjectId": "medicine",
+      "code": "GM23.4",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        194.4,
+        102.7,
+        235.2
+      ],
+      "sourceBodySha256": "cd4d2f442977f424accf909eeec44ed44db84ea56633bcad181916ce46ea974a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyponatraemia assessment",
+      "draftLearningTask": "Classify likely causes from symptoms, tonicity and volume status and explain management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:35198b9023744dd6ef1e005ebe52b4ec6d51e2526a88da932a22b4c4035fc833",
+      "subjectId": "medicine",
+      "code": "GM23.5",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "9438601591a6656588665fd6d689bb6a0493b1987fb38840c63f11704f27ee66",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyponatraemia laboratory interpretation",
+      "draftLearningTask": "Integrate serum and urine results with clinical findings and justify management and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:65ca207fc755b106989212f695c8fcbdd49062beb9956bf86c57ab587aca56a4",
+      "subjectId": "medicine",
+      "code": "GM23.6",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        275.94,
+        102.7,
+        316.62
+      ],
+      "sourceBodySha256": "2d03354e17dbc5114657c8ee2657a582de77b6f98cde505e4564d9b89f1dfebd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypokalaemia",
+      "draftLearningTask": "Classify causes, interpret laboratory findings and justify evaluation, replacement and monitoring.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1068fc841594b94e42aae4f2f2451e5a10767b0807ffe97095cba41334e95878",
+      "subjectId": "medicine",
+      "code": "GM23.7",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        316.62,
+        102.7,
+        357.42
+      ],
+      "sourceBodySha256": "6b3be3026f85897c6ce13cfdefc67488488c2ea373ca6ce9d2296a265dda58c4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyperkalaemia",
+      "draftLearningTask": "Recognize clinical and laboratory features and explain immediate assessment and management priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a765a5719b866fe4d02a9dbe1bc1dfcfde191c2741b41f879f4ea87a22e3a2f",
+      "subjectId": "medicine",
+      "code": "GM23.8",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        357.42,
+        102.7,
+        398.16
+      ],
+      "sourceBodySha256": "96cda4a19b1e586d51ce1eb715fb26ede5e6d1528301c6c14b11f3fbbe04a3b0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Metabolic acidosis",
+      "draftLearningTask": "Classify causes and recognize representative laboratory and clinical patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:21549c916e51a103f73d270e10a2298705bb52c59dac79cb03fc2a79a88cc216",
+      "subjectId": "medicine",
+      "code": "GM23.9",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        398.16,
+        102.7,
+        425.52
+      ],
+      "sourceBodySha256": "be0a6364f5913a8e7e253d01d5933eee1023c3c3064980cf658a4812f25123c7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Metabolic alkalosis",
+      "draftLearningTask": "Compare representative mechanisms and interpret clinical and laboratory findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e146fde8d04565802ebfc4863d6bffb445b5ed853ae6f0dd2d89508338ce0d79",
+      "subjectId": "medicine",
+      "code": "GM23.10",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        425.52,
+        102.7,
+        452.88
+      ],
+      "sourceBodySha256": "df320ae1870e7fbf5ec6fd9acbbd7f36112fa0f85e3cdd152492add35d8ac2c1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory acidosis",
+      "draftLearningTask": "Relate hypoventilation causes to clinical findings and acute or chronic blood gas patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:00cfc026be395eee17591afc8bf3f371bbc2795a70ac187a07843dc5835df374",
+      "subjectId": "medicine",
+      "code": "GM23.11",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        452.88,
+        102.7,
+        480.24
+      ],
+      "sourceBodySha256": "ab7c131fd33d279d8cf6a30cffdbabe2aaa1cb597eef09b33a07134460cd26a3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory alkalosis",
+      "draftLearningTask": "Relate hyperventilation causes to clinical findings and blood gas patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b749ac0285ce32e7ff94991fe0076054c56ccd6d240d7b097ba7d8e4c603a3e0",
+      "subjectId": "medicine",
+      "code": "GM23.12",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        480.24,
+        102.7,
+        507.54
+      ],
+      "sourceBodySha256": "6659f3fea9fe95e9e2f61c87f8a32a7313af5b5f8581d768bc9aba1ac73035a5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acid–base interpretation",
+      "draftLearningTask": "Identify primary and mixed disorders from sample arterial blood gases and explain their clinical relevance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f35bdf1d4da03eea02ef49d05281ace14101f9ed451da22756454b672d8d9e79",
+      "subjectId": "medicine",
+      "code": "GM24.1",
+      "page": 315,
+      "rowBBox": [
+        44.2,
+        527.46,
+        102.7,
+        547.38
+      ],
+      "sourceBodySha256": "3f1d05997aaaabce5c95a68ee8884edb407aa8f1d37af26a0352439a78b98890",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutritional assessment",
+      "draftLearningTask": "Compare dietary history, anthropometry and clinical assessment methods for a hospitalized patient.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:43a92922ea42cd6488b7f18b37e543a11d009cb74a89dbbf66093f8082cd6f77",
+      "subjectId": "medicine",
+      "code": "GM24.2",
+      "page": 316,
+      "rowBBox": [
+        44.2,
+        145.08,
+        102.7,
+        172.44
+      ],
+      "sourceBodySha256": "f8cd16445af7a1540ecc7e82b066ae6c98d94a31715074342e3d6eebb7976431",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hospital malnutrition",
+      "draftLearningTask": "Identify causes of protein–energy malnutrition and explain effects on recovery and complications.",
+      "mode": "knowledge"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "ecb900c82ef9dfa96204ddb0521e83a1f841065f",
+  "reviewBasis": "Source-linked draft tasks. Retain compound source groupings.",
+  "rows": [
+    {
+      "nameKey": "ascites and peritonitis",
+      "componentNameKeys": [
+        "peritonitis"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "AN47.3"
+      ],
+      "scope": "Peritoneal spread of inflammation",
+      "disposition": "proposed-component-reuse",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cirrhosis and portal hypertension",
+      "componentNameKeys": [
+        "portal hypertension"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "GM5.5"
+      ],
+      "scope": "Portal hypertension scope needs original row confirmation",
+      "disposition": "verify-original-row",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "ckd and quality of life",
+      "componentNameKeys": [
+        "quality of life"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "GM10.24"
+      ],
+      "scope": "Quality of life in CKD",
+      "disposition": "proposed-component-reuse",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "ckd, glucose and blood pressure",
+      "componentNameKeys": [
+        "blood pressure"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "GM10.8"
+      ],
+      "scope": "Blood pressure in CKD and hypertension context",
+      "disposition": "proposed-component-reuse",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "confidentiality and disclosure",
+      "componentNameKeys": [
+        "confidentiality"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "GM6.21"
+      ],
+      "scope": "Confidentiality in a disclosure decision",
+      "disposition": "proposed-component-reuse",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "cranial fossae and foramina",
+      "componentNameKeys": [
+        "cranial fossae"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "AN26.3"
+      ],
+      "scope": "Cranial fossae and boundaries",
+      "disposition": "proposed-component-reuse",
+      "mappingAccepted": false
+    },
+    {
+      "nameKey": "diarrhoea and dysentery",
+      "componentNameKeys": [
+        "dysentery"
+      ],
+      "allComponentsMatched": false,
+      "sourceCodes": [
+        "GM16.6"
+      ],
+      "scope": "Dysentery scope needs original row confirmation",
+      "disposition": "verify-original-row",
+      "mappingAccepted": false
+    }
+  ]
+}

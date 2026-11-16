@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:84cab7078c923f79f7950006950c05fb57b443bc92501dd980235f68b7aa89b7",
+      "subjectId": "medicine",
+      "code": "GM14.10",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        153.66
+      ],
+      "sourceBodySha256": "b8a2c9d2cd29a692f27cc969be01fdfc058dde1cc3087e466ed470c5f5484ac8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Secondary obesity testing",
+      "draftLearningTask": "Select and interpret targeted tests when findings suggest a secondary cause.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:df9d81d45ab1555f3f073494c22620b37c377e80aa4472ce981ffd016d61e68a",
+      "subjectId": "medicine",
+      "code": "GM14.11",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "sourceBodySha256": "8acf4f17a103cabbacc4d51b01ea7b71b2a5728f1c213b980e902d5aa5cea077",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity lifestyle counselling",
+      "draftLearningTask": "Agree on feasible behavioural, dietary and activity changes with a simulated patient.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+      "subjectId": "medicine",
+      "code": "GM14.12",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        208.32
+      ],
+      "sourceBodySha256": "5adb4328f41f355f76783a7b037f272429713fbf36c9304559e56fae8a134a05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adherence barriers",
+      "draftLearningTask": "Explore barriers without judgment and revise a simulated care plan collaboratively.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:77ba3e36f84c77148566dff5bbdc1b2eda2b6880462da44e3e6caec94e12be82",
+      "subjectId": "medicine",
+      "code": "GM14.13",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        208.32,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "fb02958f09cb848cd4777b90c6cd977d0b9271f64f8d3cae93b3f0c5e26ce75a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity medicines and surgery",
+      "draftLearningTask": "Compare indications, drug mechanisms and adverse effects and explain bariatric eligibility and risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:42a7cb636d0a50f25ab2693c69e603aac07cc2fa0d63bff5ca5c78e59aa76b35",
+      "subjectId": "medicine",
+      "code": "GM14.14",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        289.86
+      ],
+      "sourceBodySha256": "e7093785b7f33f31b2fdba1df4a783ef14521e501f444fe5ab54222f17ae4c91",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obesity prevention",
+      "draftLearningTask": "Adapt prevention messages for patients, health workers and the public.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2036733ddac04433a6d8101d11e718a9514e7b18421706e7e1f657f23113221a",
+      "subjectId": "medicine",
+      "code": "GM15.1",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        320.52,
+        102.7,
+        361.32
+      ],
+      "sourceBodySha256": "6feb8c9dd8120c30398ffe36b4ded3ab458e68013caa9d993f517341a05b24af",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding causes",
+      "draftLearningTask": "Classify common upper and lower sources and identify representative risk factors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ed2750629037c50b24f391664632b457eb2a857b8f5f4458e61b018dfd9e5f25",
+      "subjectId": "medicine",
+      "code": "GM15.2",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        361.32,
+        102.7,
+        402.06
+      ],
+      "sourceBodySha256": "da222c9a11b099f5d8733c9c9a2650e74bfe251443edc10599288df0c3657922",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Initial GI bleed care",
+      "draftLearningTask": "Explain assessment and stabilization priorities for acute blood loss in simulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce4ca46b0157fe3e7cac2597ac5f5fa71512c037f48d69ac4fef37d8cae04314",
+      "subjectId": "medicine",
+      "code": "GM15.3",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        402.06,
+        102.7,
+        442.86
+      ],
+      "sourceBodySha256": "b0b5670f25780c8da867cdd69fe990f82dc76a28e9a96558a6d423e811f52b4a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute blood loss physiology",
+      "draftLearningTask": "Relate volume loss and compensatory responses to tissue perfusion.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b0f90ff68a69bbcf83d36d43a1a1149f16e3e6871785b7df74af7c8c8eb1aef",
+      "subjectId": "medicine",
+      "code": "GM15.4",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        442.86,
+        102.7,
+        497.04
+      ],
+      "sourceBodySha256": "6dd418b0ca7db091cfb39f829c44c4fce85ade7227fb0010af580f919b78d792",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding history",
+      "draftLearningTask": "Elicit and present route, quantity, duration, symptoms of volume loss, comorbidities and risks.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:065fc4928f13bfb73538e22312aeb0ac405aa1e6f7e97a26aa1546acff550662",
+      "subjectId": "medicine",
+      "code": "GM15.5",
+      "page": 305,
+      "rowBBox": [
+        44.2,
+        497.04,
+        102.7,
+        537.84
+      ],
+      "sourceBodySha256": "fb547eec9bf063c6a7e3b43cca4cbf5a9f9d28cbcaf31fb3097e8aead8dac0a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding examination",
+      "draftLearningTask": "Demonstrate general and abdominal examination and document volume status.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5a51b89332a08048ddf4b9fb3412c701cd439ee7e394fb58d3ccb1e80d408524",
+      "subjectId": "medicine",
+      "code": "GM15.6",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        167.04
+      ],
+      "sourceBodySha256": "a2c6a0c0632b056a36d929513956848352a89eb142b95d08c9045c0de7864d61",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Upper and lower bleeding",
+      "draftLearningTask": "Use clinical findings to estimate the source and recognize exceptions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2a089c5c6c5b893bcd555652ecd90139a365d2f045b000e88b437521736f85cd",
+      "subjectId": "medicine",
+      "code": "GM15.7",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        167.04,
+        102.7,
+        194.4
+      ],
+      "sourceBodySha256": "d7a0ab03371a6db71e8a143e68380792eb99916fbba844b76b8dac9606fcd691",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anorectal examination",
+      "draftLearningTask": "Demonstrate consent, positioning and anal and rectal examination on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d3d8ec3581f0b16f9caf8b69472140136a9af43ee48b1965ad09cda05555faa4",
+      "subjectId": "medicine",
+      "code": "GM15.8",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        194.4,
+        102.7,
+        248.76
+      ],
+      "sourceBodySha256": "7afbd22d019f02b9d5d825b43ae9ac9c3df04ea418b73a7665333550ab1a8bcc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding differential",
+      "draftLearningTask": "Prioritize likely and dangerous causes from supplied findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267",
+      "subjectId": "medicine",
+      "code": "GM15.9",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        248.76,
+        102.7,
+        289.32
+      ],
+      "sourceBodySha256": "dfcac8820c7437c7a455a5aeda36043efbd65db3fb204dbe184bbe46e15dd16a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Laboratory tests for GI bleeding",
+      "draftLearningTask": "Select and interpret blood counts, coagulation, stool, liver and H. pylori tests where indicated.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fcd6f07f50aa84684557baba16563313b7b81ff50a2f02b94d63c2aedc97f1cf",
+      "subjectId": "medicine",
+      "code": "GM15.10",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        289.32,
+        102.7,
+        330.12
+      ],
+      "sourceBodySha256": "0ff4ee125f093bfc9483bf679070492c333f281a20db8ef6f7e1b0747d2935c7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Endoscopy and imaging",
+      "draftLearningTask": "Explain indications and timing for upper endoscopy, colonoscopy and relevant imaging.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:84576a38ed05743f073288ad9d6374bd374d8deced151cd3485b0c5baeeaf447",
+      "subjectId": "medicine",
+      "code": "GM15.11",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        330.12,
+        102.7,
+        370.86
+      ],
+      "sourceBodySha256": "187e7e1e329a923bc1f7c558a6412bab2cf5a1f376fd887bf0b41cb603f8e294",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding care plan",
+      "draftLearningTask": "Present a simulated plan covering resuscitation, transfusion and haemostasis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cfd6b7debb0d528bef6c47f6e9d7dfc1bff8fd962670ce9d1815340192167368",
+      "subjectId": "medicine",
+      "code": "GM15.12",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        370.86,
+        102.7,
+        411.66
+      ],
+      "sourceBodySha256": "fe0c1415d94590965e21e3bfbb032bace58c5d4fb510f4d584c653e822c2049f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion and mismatch",
+      "draftLearningTask": "Compare component and whole blood indications and explain recognition and management of a suspected incompatible transfusion.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:37542b0ed2044ba9213d51e0ca6718cb7ab9f72e532270e51e5cb8277055c300",
+      "subjectId": "medicine",
+      "code": "GM15.13",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        411.66,
+        102.7,
+        452.34
+      ],
+      "sourceBodySha256": "46555209af2b3ca6467317b561dd5cfc2848c214d0f3fdf338f12b56cad16757",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion observation",
+      "draftLearningTask": "Observe compatibility testing and transfusion and document key safety checks.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4",
+      "subjectId": "medicine",
+      "code": "GM15.14",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        452.34,
+        102.7,
+        493.14
+      ],
+      "sourceBodySha256": "ea908f02100223ed3b7c85370c54e9a4155d77f7130c6dc9674dacf7a8295515",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vasoactive agents in upper GI bleeding",
+      "draftLearningTask": "Compare indications, actions and harms of relevant vasoactive medicines.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a834c389b781449c1d4cfed73f14e5f77c66201bda446cb8f4e3bea207e22702",
+      "subjectId": "medicine",
+      "code": "GM15.15",
+      "page": 306,
+      "rowBBox": [
+        44.2,
+        493.14,
+        102.7,
+        534.06
+      ],
+      "sourceBodySha256": "dfc077653e0def0fc97267dacebd56cf4f3e3d7b821894c6aac6e449e5981a27",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acid peptic pharmacotherapy",
+      "draftLearningTask": "Compare acid suppression and H. pylori eradication strategies by indication, mechanism and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8c7f997e88beead184d20e5986b45ba88fa753ae567b9fb2d86ffc5ba34bc29e",
+      "subjectId": "medicine",
+      "code": "GM15.16",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "bf818117c78f2f814a79b0ab833c77be815bc841d331dfc27d9045c52e023077",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Procedural haemostasis",
+      "draftLearningTask": "Identify when endoscopic or surgical intervention is indicated.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:080abab079a97a384a83d7fd7cb7640b3e12a92c33dcb44243038af68cb96a1b",
+      "subjectId": "medicine",
+      "code": "GM15.17",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        187.92
+      ],
+      "sourceBodySha256": "82cfcdac530dcb4938a38268aa76236a41c883c08a3cdd6f6a830a061e1c5339",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding escalation",
+      "draftLearningTask": "Use haemodynamic findings and response to initial care to justify the level and urgency of referral.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f1d64b1e197804e9eadcc5ee1b6976c7c56b1485b37a907cd729d0b193e4df72",
+      "subjectId": "medicine",
+      "code": "GM15.18",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        187.92,
+        102.7,
+        215.28
+      ],
+      "sourceBodySha256": "f03f9590c1eb448311ff3e7c5fc3b72d57ed5bd1ee27ef73b78aa18d5a9ca670",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "GI bleeding counselling",
+      "draftLearningTask": "Discuss the suspected cause and treatment options empathetically with a simulated patient and family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c4c7bf311c3aca1359a9eee1bbbf3332df9188f09b7c3309d1181eed18d9ed5b",
+      "subjectId": "medicine",
+      "code": "GM16.1",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "88900c2017567a562e47f49841fe4d6cb459dbf9adf118527a170fc3a88b6a4f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea causes",
+      "draftLearningTask": "Compare infectious and noninfectious causes of acute and chronic diarrhoea.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c0a5932933081b9ffc5800390333d3515c079b008f45d7ea5ee1b4a66457c9d7",
+      "subjectId": "medicine",
+      "code": "GM16.2",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        275.94,
+        102.7,
+        316.62
+      ],
+      "sourceBodySha256": "e272d9a0ea24e0f61eeb40b096a06b6fcd4fcdd83bccb8903328239d5ba201de",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute consequences of diarrhoea",
+      "draftLearningTask": "Explain dehydration, electrolyte disturbance and systemic effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c8567598f01815014cef5fe167aa999196b5a20dac27033bffcdd48b1c03274e",
+      "subjectId": "medicine",
+      "code": "GM16.3",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        316.62,
+        102.7,
+        357.42
+      ],
+      "sourceBodySha256": "c24fde50748c7e67d53e75f61d01aa5ba4bb2aa0175b9bf1cf502de576f85b17",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chronic consequences of diarrhoea",
+      "draftLearningTask": "Relate persistent symptoms and malabsorption to nutritional and systemic effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f8fb89101f4bbbda9654883fd93d6190509dffeb24baed5121b3c1623b6c3805",
+      "subjectId": "medicine",
+      "code": "GM16.4",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        357.42,
+        102.7,
+        398.16
+      ],
+      "sourceBodySha256": "8d87acac7d96345165184edcb2f76c7b9f28d2b29eca220f23c63ec22f63ebe4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea history",
+      "draftLearningTask": "Elicit and present course, diet, travel, sexual exposures and coexisting illness.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4114479d9b68d0eb173beb6e3c519c8155aee80c99ecd9b210ce1adf8d234835",
+      "subjectId": "medicine",
+      "code": "GM16.5",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        398.16,
+        102.7,
+        447.18
+      ],
+      "sourceBodySha256": "5a307f2c67a8da12afca599f6ba5f368af0cdc9f992453f009abeb723963b9e6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea examination",
+      "draftLearningTask": "Demonstrate assessment of hydration, systemic findings and the abdomen.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:13b82f0a7e37cf797983c7432af1dd9aa924cd484018a1e9a1992d5176564c5a",
+      "subjectId": "medicine",
+      "code": "GM16.6",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        447.18,
+        102.7,
+        487.92
+      ],
+      "sourceBodySha256": "39924077432de1bba699e042a39807b359bf18611cd0d49b3b67a6c2350b447d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea and dysentery",
+      "draftLearningTask": "Distinguish clinical patterns and explain how they guide evaluation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6497fc38d47f85767edc3d4e481afcafb1731efb9e40729d866651bcf0ddae03",
+      "subjectId": "medicine",
+      "code": "GM16.7",
+      "page": 307,
+      "rowBBox": [
+        44.2,
+        487.92,
+        102.7,
+        528.78
+      ],
+      "sourceBodySha256": "7b6f9599750cc7b8343170d6a9b2b3f66926b27539bd024c3550502fce7fcb0c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea differential",
+      "draftLearningTask": "Prioritize likely and serious causes using a simulated presentation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cc0590752c0101a6e1246fb6de484f603fc3d6b656bf40023a7654d9e60700b7",
+      "subjectId": "medicine",
+      "code": "GM16.8",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        149.76
+      ],
+      "sourceBodySha256": "ce69862acbe8184cd52f6bac4953ed38e60fa3331116276c3c230a53aa627069",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Initial diarrhoea investigations",
+      "draftLearningTask": "Select and interpret blood counts and stool findings where indicated.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:039787500a05015191e597a9866e75cbd209842d9b4524c185ee331bd2de55be",
+      "subjectId": "medicine",
+      "code": "GM16.9",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        149.76,
+        102.7,
+        177.0
+      ],
+      "sourceBodySha256": "b6e0cc16b6481de24ee7ecc002cc5bb9423d5f0bae9d804347330a3a2f9a7a11",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stool parasites",
+      "draftLearningTask": "Identify common parasitic forms on supplied stool microscopy.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bc74fbf5971990dbc9ccde914643b0563c33efceeb50df2c8570bc6988f9fea8",
+      "subjectId": "medicine",
+      "code": "GM16.10",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        177.0,
+        102.7,
+        204.48
+      ],
+      "sourceBodySha256": "87f088968be2f50829e72e1b2dadedb447d10abd898f089d6eceb7ed658a21f6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cholera microscopy",
+      "draftLearningTask": "Recognize suggestive motility in a teaching hanging-drop preparation and explain the need for confirmatory testing.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5b5adede1f2b68cbf0244aa1627d9225b866d8169aff28ec4fb4b3bb4931f5fd",
+      "subjectId": "medicine",
+      "code": "GM16.11",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        204.48,
+        102.7,
+        245.1
+      ],
+      "sourceBodySha256": "9b730d48acfa9f637d2dae98c5c6eba32d86d902914cb6de30fb18a1b4f8130a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Culture indications",
+      "draftLearningTask": "Decide when stool or blood culture is warranted in a simulated acute case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6e0443c9e83d074bb517e1aa6836349f20d500675a00b66f1977a890bd925074",
+      "subjectId": "medicine",
+      "code": "GM16.12",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        245.1,
+        102.7,
+        285.9
+      ],
+      "sourceBodySha256": "ff7efa948bd5767f4f0898bc25a4fd3e965f3742f1f1e176326af708d5043385",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chronic diarrhoea investigations",
+      "draftLearningTask": "Justify serology, colonoscopy, imaging and biopsy using clinical clues.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c06706726d9f2d690377d4795f2095e613792b8bf4380ae608707539671b3aa5",
+      "subjectId": "medicine",
+      "code": "GM16.13",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        285.9,
+        102.7,
+        326.64
+      ],
+      "sourceBodySha256": "a2b9d51959fdbb87b57f7ffe9e3ad11714567077100371162b033e644f45507c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antiparasitic therapy",
+      "draftLearningTask": "Compare indications, actions and harms of representative therapies by organism.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a2facd53c2a6220d50b8e7402b29a892e2f5af330608a6329daf0b0d3349b9a1",
+      "subjectId": "medicine",
+      "code": "GM16.14",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        326.64,
+        102.7,
+        367.32
+      ],
+      "sourceBodySha256": "653a0c202167a43bfc5e948a57a0f5dcda7ea05349fcfcfd50ca808e75a3443e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bacterial and viral diarrhoea therapy",
+      "draftLearningTask": "Compare supportive and organism-specific treatment and explain indications and adverse effects of medicines.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8e5e516fdcfa55353e086a79fde44f97d11a1feea46148799b3f277dcd90007d",
+      "subjectId": "medicine",
+      "code": "GM16.15",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        367.32,
+        102.7,
+        408.12
+      ],
+      "sourceBodySha256": "c678340192f31c0e1a4e2f6358a8b0118697f5f6cebc0a021ca1bfca5f11a6f2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Crohn disease and ulcerative colitis",
+      "draftLearningTask": "Distinguish representative presentations and explain findings that guide further evaluation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bccffa217d5e5da4ce76778ad96a312f04433a9e7d5fd84c09a5c70b50c860a6",
+      "subjectId": "medicine",
+      "code": "GM16.16",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        408.12,
+        102.7,
+        448.98
+      ],
+      "sourceBodySha256": "a1de88281e51b4d9b4e6f788a353204de9cdf9fdf72e3fa859b4d3ca712af38a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chronic diarrhoea pharmacotherapy",
+      "draftLearningTask": "Compare indication, mechanism and harms of cause-directed treatment, including immune therapies when appropriate.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b3612ea6fe103fd63e8b67009fc7e6054ecfbf29e4c885efd796ef0616bb6490",
+      "subjectId": "medicine",
+      "code": "GM16.17",
+      "page": 308,
+      "rowBBox": [
+        44.2,
+        448.98,
+        102.7,
+        489.6
+      ],
+      "sourceBodySha256": "773c0c9cdee8b0ee517c203185966857e9de0c5ddf175908179cdc1c16839459",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "IBD surgery",
+      "draftLearningTask": "Identify indications for surgery and explain how the role differs between Crohn disease and ulcerative colitis.",
+      "mode": "knowledge"
+    }
+  ]
+}

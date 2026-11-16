@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-component-decomposition",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "sourceUrl": "https://nmc.org.in/rules-regulation-nmc/33/file",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc",
+      "code": "GM28.11",
+      "pdfPage": 324,
+      "rowBBox": [
+        44.2,
+        228.24,
+        102.7,
+        268.92
+      ],
+      "sourceBodySha256": "a69ae001eba0401ed24f8f384a3ebe0ab7b7fec4bce1ebedfdfdbd54ba665a37",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null,
+      "scopeCaveat": "Editorial decomposition of source verbs and named treatment elements. Clinical and disease breadth is not fully enumerated.",
+      "components": [
+        {
+          "componentId": "nmc-component:gm28.11:test-principles@1",
+          "wording": "Explain the purposes and measured variables of pulmonary function testing.",
+          "assessmentPrompt": "Given a set of pulmonary function reports, explain what each test measures and the question it can answer.",
+          "expectedEvidence": "Connect each measurement to its physiological meaning; distinguish measurement from diagnosis.",
+          "evidenceStatus": "broader-test-scope-unbound",
+          "candidateObjectiveVersionIds": [],
+          "bindingStatus": "unbound",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.11:test-limitations@1",
+          "wording": "Discuss test quality, limitations and clinical context before interpreting results.",
+          "assessmentPrompt": "Compare an interpretable report with an inadequate-quality report and justify what conclusions can be supported.",
+          "expectedEvidence": "Identify technical limitations, withhold unsupported conclusions and request appropriate information.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.11:report-interpretation@1",
+          "wording": "Interpret pulmonary function findings and justify their clinical meaning.",
+          "assessmentPrompt": "Interpret a new report and discuss relevant alternative patterns using the supplied reference.",
+          "expectedEvidence": "Explain findings, clinical context and uncertainty rather than relying on a single printed value.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:a54d769a2db7aa80f396b6137515a35907de9eae3ade9256f63fb3edd876fa4c",
+      "code": "GM28.17",
+      "pdfPage": 324,
+      "rowBBox": [
+        44.2,
+        499.62,
+        102.7,
+        540.48
+      ],
+      "sourceBodySha256": "e92b677f9c4a5183e8bc8cda3e4be95baf86ad0c4d56b7200bd30aa178f2c99f",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null,
+      "scopeCaveat": "Editorial decomposition of source verbs and named treatment elements. Clinical and disease breadth is not fully enumerated.",
+      "components": [
+        {
+          "componentId": "nmc-component:gm28.17:bronchodilator-plan@1",
+          "wording": "Explain the bronchodilator element of an individualized therapeutic plan.",
+          "assessmentPrompt": "Using the supplied current reference, justify the role of bronchodilator therapy in the presented stable airway-disease case.",
+          "expectedEvidence": "Link the choice to the disease context, symptoms, risks and the supplied reference.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.17:corticosteroid-plan@1",
+          "wording": "Explain the inhaled corticosteroid element of an individualized therapeutic plan.",
+          "assessmentPrompt": "Explain whether and how inhaled corticosteroid treatment belongs in the presented plan using the supplied disease-specific reference.",
+          "expectedEvidence": "Explain indication, relevant constraints and follow-up without assuming all airway diseases use the same pathway.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.17:integrated-therapy-plan@1",
+          "wording": "Develop and defend a coherent therapeutic plan.",
+          "assessmentPrompt": "Compare two stable obstructive-airway-disease scenarios and justify the differences between their plans.",
+          "expectedEvidence": "Integrate disease context, technique, adherence, feasible access and reassessment.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "code": "GM28.18",
+      "pdfPage": 325,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "dd90ab4237ef57e07068c682c58fe6abbbba3fb67e920845bc68e1d9359338b7",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null,
+      "scopeCaveat": "Editorial decomposition of source verbs and named treatment elements. Clinical and disease breadth is not fully enumerated.",
+      "components": [
+        {
+          "componentId": "nmc-component:gm28.18:acute-bronchodilator-plan@1",
+          "wording": "Justify bronchodilator decisions within an acute exacerbation plan.",
+          "assessmentPrompt": "Explain initial bronchodilator decisions in an acute airway-disease scenario with a supplied current reference.",
+          "expectedEvidence": "State indication, urgency, patient constraints and how response will be reassessed.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.18:systemic-steroid-plan@1",
+          "wording": "Justify systemic corticosteroid decisions within an acute exacerbation plan.",
+          "assessmentPrompt": "Use the supplied reference to explain whether systemic corticosteroid treatment is indicated and what must be checked.",
+          "expectedEvidence": "Make an explicit indication-based decision and identify relevant risks and missing information.",
+          "evidenceStatus": "explicit-assessment-missing",
+          "candidateObjectiveVersionIds": [],
+          "bindingStatus": "unbound",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.18:antimicrobial-plan@1",
+          "wording": "Justify antimicrobial decisions within an acute exacerbation plan.",
+          "assessmentPrompt": "Compare exacerbation cases with different evidence relevant to antimicrobial use and defend each decision with the supplied reference.",
+          "expectedEvidence": "Distinguish an indication-based decision from routine treatment and identify uncertainty.",
+          "evidenceStatus": "explicit-assessment-missing",
+          "candidateObjectiveVersionIds": [],
+          "bindingStatus": "unbound",
+          "clinicalValidation": false
+        },
+        {
+          "componentId": "nmc-component:gm28.18:integrated-acute-plan@1",
+          "wording": "Develop and defend a coherent acute exacerbation management plan.",
+          "assessmentPrompt": "Present an initial plan, then revise it after deterioration or evidence suggesting an alternative diagnosis.",
+          "expectedEvidence": "Prioritize severity, alternatives, justified treatment and reassessment or escalation.",
+          "evidenceStatus": "pilot-candidate-partial",
+          "candidateObjectiveVersionIds": [
+            "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+          ],
+          "bindingStatus": "candidate-only",
+          "clinicalValidation": false
+        }
+      ]
+    }
+  ]
+}

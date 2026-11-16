@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "checkedCommit": "92fc11da2ffd1f313f71f63b2b0e48e786aefbfb",
+  "workflowRun": 42597567049,
+  "environment": "medical_learning_os_staging",
+  "readOnlyPreflight": {
+    "ownerApiDeployed": false,
+    "studyCatalogPresent": false,
+    "contentConceptAcceptancesPresent": false,
+    "contentAdminStatusRpcPresent": false,
+    "publicTableCount": 1
+  },
+  "protectedPreviewStatus": "blocked-on-staging-baseline",
+  "next": "Identify the supported staging migration baseline and verify runtime access and isolated test identities before deploying the matching Owner API and frontend."
+}

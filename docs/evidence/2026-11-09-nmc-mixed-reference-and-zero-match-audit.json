@@ -1,0 +1,837 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "bd97b7b2f3f12192295b21a71a07a8656de9f3ac",
+  "status": "proposed",
+  "reviewedDecisionCount": 32,
+  "referenceRoles": {
+    "nmc-2024-ref:da5438435abc5e4c54f3137d51bd676bd0d6608e16f219cc8aa0dcb8101b6f75": [
+      {
+        "name": "Antepartum haemorrhage",
+        "role": "incoming",
+        "code": "OG35.19"
+      },
+      {
+        "name": "Postpartum haemorrhage",
+        "role": "incoming",
+        "code": "OG35.19"
+      }
+    ],
+    "nmc-2024-ref:8270ae1505883fdc7e933197ec29f05ec4b223e15856d55e0a4c9ca87a95c8b2": [
+      {
+        "name": "Antepartum haemorrhage",
+        "role": "target",
+        "code": "OG10.1"
+      }
+    ],
+    "nmc-2024-ref:500afa295b747270ae1f8b671454858ca37eb4f268bd9f593e0ad159fe565028": [
+      {
+        "name": "Cervical cytology sampling",
+        "role": "incoming",
+        "code": "GM13.9"
+      }
+    ],
+    "nmc-2024-ref:247852e249d96958c3d64dc211bed852f3d5b581fdaeaf0ae704dc7a284f597f": [
+      {
+        "name": "Cervical cytology sampling",
+        "role": "target",
+        "code": "OG35.15"
+      }
+    ],
+    "nmc-2024-ref:64118d1cce7d79788ff4bad7d84e9239ce8aa35f236d5ed0e540c405a6a62c9d": [
+      {
+        "name": "Death by neurological criteria",
+        "role": "incoming",
+        "code": "FM2.3"
+      }
+    ],
+    "nmc-2024-ref:ae0a4fc2156fe9f0de1f3aa9aa1e22ec644f685729819e62e4080d72bd486110": [
+      {
+        "name": "Death by neurological criteria",
+        "role": "target",
+        "code": "PY12.7"
+      }
+    ],
+    "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a": [
+      {
+        "name": "Delayed puberty",
+        "role": "incoming",
+        "code": "PE30.6"
+      },
+      {
+        "name": "Precocious puberty",
+        "role": "incoming",
+        "code": "PE30.6"
+      }
+    ],
+    "nmc-2024-ref:2ca3cc8cf157e281ef512ba3877bf1aa266b36c59b2c68ed3318e3b75f324ee0": [
+      {
+        "name": "Delayed puberty",
+        "role": "target",
+        "code": "OG23.2"
+      }
+    ],
+    "nmc-2024-ref:b57a3a7a21ef7eb6c3a8eb55139766840ec4e7bd57da7d07fbd07cf0c609bfc1": [
+      {
+        "name": "Drowning",
+        "role": "incoming",
+        "code": "PY6.6"
+      },
+      {
+        "name": "Oxygen therapy",
+        "role": "incoming",
+        "code": "PY6.6"
+      }
+    ],
+    "nmc-2024-ref:73dff45bffaa1d5479457d5dd5baee1fa95e8a2cc009a81941d68b35545dca34": [
+      {
+        "name": "Drowning",
+        "role": "target",
+        "code": "FM3.4"
+      }
+    ],
+    "nmc-2024-ref:23f70d14a6674f916f89ae8dc611b0253e66c9d357d5cfc9655c9b89d70778b1": [
+      {
+        "name": "Fetal circulation",
+        "role": "incoming",
+        "code": "PY5.12"
+      }
+    ],
+    "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1": [
+      {
+        "name": "Fetal circulation",
+        "role": "target",
+        "code": "AN25.3"
+      }
+    ],
+    "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd": [
+      {
+        "name": "Foreign body aspiration",
+        "role": "incoming",
+        "code": "RD7.5"
+      }
+    ],
+    "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110": [
+      {
+        "name": "Foreign body aspiration",
+        "role": "target",
+        "code": "PE25.5"
+      }
+    ],
+    "nmc-2024-ref:88d69d75b2a78053599be90e99273e5dacdfd13bbc775ec38f7db0bacdf9ec6c": [
+      {
+        "name": "Haemostasis",
+        "role": "incoming",
+        "code": "PY2.1"
+      }
+    ],
+    "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62": [
+      {
+        "name": "Haemostasis",
+        "role": "target",
+        "code": "PY2.9"
+      }
+    ],
+    "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e": [
+      {
+        "name": "Haemostasis",
+        "role": "target",
+        "code": "PA5.4"
+      }
+    ],
+    "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99": [
+      {
+        "name": "Hearing loss",
+        "role": "incoming",
+        "code": "GM25.17"
+      }
+    ],
+    "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d": [
+      {
+        "name": "Hearing loss",
+        "role": "target",
+        "code": "EN4.14"
+      }
+    ],
+    "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2": [
+      {
+        "name": "Heart failure",
+        "role": "incoming",
+        "code": "RD7.3"
+      }
+    ],
+    "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af": [
+      {
+        "name": "Heart failure",
+        "role": "target",
+        "code": "PA26.3"
+      }
+    ],
+    "nmc-2024-ref:6361bbc1e31dc76c5a0aa5ec65c62a89d7640dab7c923337a25f402a76eb0bbe": [
+      {
+        "name": "Heart failure",
+        "role": "target",
+        "code": "PY5.13"
+      }
+    ],
+    "nmc-2024-ref:b812518857916a4985a6e6e2bb064f020ee6cecf01c899da34cfb0d14a988180": [
+      {
+        "name": "Hysteroscopy",
+        "role": "incoming",
+        "code": "OG34.5"
+      }
+    ],
+    "nmc-2024-ref:fc23e271d9c20e0800bc803473cd5be94b6d349801588645c4151ba9dcf07c17": [
+      {
+        "name": "Hysteroscopy",
+        "role": "target",
+        "code": "OG38.2"
+      }
+    ],
+    "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca": [
+      {
+        "name": "Infectious diarrhoea",
+        "role": "incoming",
+        "code": "GM26.10"
+      }
+    ],
+    "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb": [
+      {
+        "name": "Infectious diarrhoea",
+        "role": "target",
+        "code": "MI4.2"
+      }
+    ],
+    "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc": [
+      {
+        "name": "Lipid test interpretation",
+        "role": "incoming",
+        "code": "BC14.19"
+      },
+      {
+        "name": "Renal test interpretation",
+        "role": "incoming",
+        "code": "BC14.19"
+      }
+    ],
+    "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918": [
+      {
+        "name": "Lipid test interpretation",
+        "role": "target",
+        "code": "BC4.8"
+      }
+    ],
+    "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057": [
+      {
+        "name": "Non-opioid analgesics",
+        "role": "incoming",
+        "code": "AS4.1"
+      },
+      {
+        "name": "Opioid analgesics",
+        "role": "incoming",
+        "code": "AS4.1"
+      }
+    ],
+    "nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94": [
+      {
+        "name": "Non-opioid analgesics",
+        "role": "target",
+        "code": "PH2.7"
+      }
+    ],
+    "nmc-2024-ref:6140e6a51750279134402428973cf23170ce0210954d3bfd5fb2f92d365ad089": [
+      {
+        "name": "Nutritional assessment",
+        "role": "incoming",
+        "code": "CM5.9"
+      }
+    ],
+    "nmc-2024-ref:d99d246f692a50faf76d97c28a9b2b7d87e938b29005d1e9e4a0e31190f7a46c": [
+      {
+        "name": "Nutritional assessment",
+        "role": "target",
+        "code": "CM5.2"
+      }
+    ],
+    "nmc-2024-ref:f35bdf1d4da03eea02ef49d05281ace14101f9ed451da22756454b672d8d9e79": [
+      {
+        "name": "Nutritional assessment",
+        "role": "target",
+        "code": "GM24.1"
+      }
+    ],
+    "nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069": [
+      {
+        "name": "Opioid analgesics",
+        "role": "target",
+        "code": "PH3.4"
+      }
+    ],
+    "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1": [
+      {
+        "name": "Organophosphate poisoning",
+        "role": "incoming",
+        "code": "PH2.2"
+      }
+    ],
+    "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5": [
+      {
+        "name": "Organophosphate poisoning",
+        "role": "target",
+        "code": "PE14.2"
+      }
+    ],
+    "nmc-2024-ref:d1da02e3b911a979d1a521e3fab657ca95e119f9d5b6fcfc60da21fc00a22fa4": [
+      {
+        "name": "Otosclerosis",
+        "role": "incoming",
+        "code": "EN1.2"
+      }
+    ],
+    "nmc-2024-ref:2e2a9f07fd736484aba7b7ce2ded7cbb7aaef1654b23a382c3f63e3c0e7010fd": [
+      {
+        "name": "Otosclerosis",
+        "role": "target",
+        "code": "EN4.13"
+      }
+    ],
+    "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33": [
+      {
+        "name": "Oxygen therapy",
+        "role": "incoming",
+        "code": "GM28.19"
+      }
+    ],
+    "nmc-2024-ref:ad8b42d65278540419217b2a17921d772d9eee7c50053ff3b087beea4d1620cc": [
+      {
+        "name": "Oxygen therapy",
+        "role": "target",
+        "code": "AS11.2"
+      }
+    ],
+    "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c": [
+      {
+        "name": "Paracetamol poisoning",
+        "role": "incoming",
+        "code": "FM13.17"
+      }
+    ],
+    "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7": [
+      {
+        "name": "Paracetamol poisoning",
+        "role": "target",
+        "code": "PE14.3"
+      }
+    ],
+    "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed": [
+      {
+        "name": "pH measurement",
+        "role": "incoming",
+        "code": "BC14.18"
+      }
+    ],
+    "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7": [
+      {
+        "name": "pH measurement",
+        "role": "target",
+        "code": "BC14.2"
+      }
+    ],
+    "nmc-2024-ref:68f1064e8eb1583e8dcaddcb57143658040803846b9d37143240fd89b9fd2654": [
+      {
+        "name": "Postpartum haemorrhage",
+        "role": "target",
+        "code": "OG16.1"
+      }
+    ],
+    "nmc-2024-ref:cd078130cb670dc57c5d18f3c36c45b2ba175d5738d836d2a614a3b591453aef": [
+      {
+        "name": "Precocious puberty",
+        "role": "target",
+        "code": "OG23.3"
+      }
+    ],
+    "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b": [
+      {
+        "name": "Pregnancy recognition",
+        "role": "incoming",
+        "code": "AN79.6"
+      }
+    ],
+    "nmc-2024-ref:80c94cf12fccecaf5f1db07673e05449ba8a0e3c0de105d18415f7bf6ee81f7c": [
+      {
+        "name": "Pregnancy recognition",
+        "role": "target",
+        "code": "OG6.1"
+      }
+    ],
+    "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da": [
+      {
+        "name": "Prostatitis",
+        "role": "incoming",
+        "code": "GM26.11"
+      }
+    ],
+    "nmc-2024-ref:66732075966806fd63e14410d32640a914fecfbd1f1633384636bac2ed44fe0b": [
+      {
+        "name": "Prostatitis",
+        "role": "target",
+        "code": "PA28.5"
+      }
+    ],
+    "nmc-2024-ref:29f6a6504e613df1729a219d1cf599a9240c9378173b4dd5af5d4e9b0f64ab93": [
+      {
+        "name": "Renal test interpretation",
+        "role": "target",
+        "code": "GM10.13"
+      }
+    ],
+    "nmc-2024-ref:c74bb2efeff4a57834800a7c94f631d75a1e24011a3fd54a119e92f3860ce28f": [
+      {
+        "name": "Respiratory distress assessment",
+        "role": "incoming",
+        "code": "GM28.9"
+      }
+    ],
+    "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479": [
+      {
+        "name": "Respiratory distress assessment",
+        "role": "target",
+        "code": "PE24.8"
+      }
+    ],
+    "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d": [
+      {
+        "name": "Torticollis",
+        "role": "incoming",
+        "code": "OR12.1"
+      }
+    ],
+    "nmc-2024-ref:c74196034f600a466ef9398a9101160a67be1072129c98642ebef1130fff133f": [
+      {
+        "name": "Torticollis",
+        "role": "target",
+        "code": "AN29.4"
+      }
+    ],
+    "nmc-2024-ref:c4a591f98d48101f75985052ca25698fa2ff0d69446a4132f96cb04b463162c9": [
+      {
+        "name": "Tracheostomy",
+        "role": "incoming",
+        "code": "EN2.10"
+      }
+    ],
+    "nmc-2024-ref:9d3368c6d93efe91bff6e8a5619e4e6eab06a846576f1068dbb63eada9d3c539": [
+      {
+        "name": "Tracheostomy",
+        "role": "target",
+        "code": "EN4.44"
+      }
+    ],
+    "nmc-2024-ref:a80c0b83514ed178788eb48c565fa064fef271b8e87126ac0868fee98090ac71": [
+      {
+        "name": "Urinary catheterization",
+        "role": "incoming",
+        "code": "OR13.2"
+      }
+    ],
+    "nmc-2024-ref:20637b247511ad008003fddf8b118e0636ed461a9316cb0baed85a162ef67840": [
+      {
+        "name": "Urinary catheterization",
+        "role": "target",
+        "code": "OG35.20"
+      }
+    ],
+    "nmc-2024-ref:137674a3db0dfe467b24a1c45cbc470210aa0fae3e6c80bb0454e957b4d9e01e": [
+      {
+        "name": "Uterine prolapse",
+        "role": "incoming",
+        "code": "AN48.5"
+      }
+    ],
+    "nmc-2024-ref:abb0f475f6df3c8e3d2d0223b5d2f101d7ac1199450648fb8d808a4aafd381a6": [
+      {
+        "name": "Uterine prolapse",
+        "role": "target",
+        "code": "OG31.1"
+      }
+    ],
+    "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434": [
+      {
+        "name": "Vomiting",
+        "role": "incoming",
+        "code": "PY4.11"
+      }
+    ],
+    "nmc-2024-ref:ec51d1ddd62af2e8afdea5e3a47bfc2f3fa9a8029b248b4be15ad78ea3db1f7c": [
+      {
+        "name": "Vomiting",
+        "role": "target",
+        "code": "PE23.1"
+      }
+    ]
+  },
+  "zeroMatchScreen": [
+    {
+      "name": "Appendicitis",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "appendicitis"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58",
+          "code": "RD7.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Assault",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "assault"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:0e69f9564200cf9c82b18068de8dc7de63379de19057032a2da427e0edff2dc2",
+          "code": "FM10.13",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cardiac muscle",
+      "route": "screen-as-provisional-name",
+      "targets": [],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "code": "AN3.1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "code": "AN67.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Chest radiography",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "chest radiography"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466",
+          "code": "GM28.14",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cholecystitis",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "cholecystitis"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+          "code": "RD4.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Clubfoot",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "clubfoot"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:cb23adb55332f7b709f4664459cb7924281ee4f761747de8103313d5f7c9695d",
+          "code": "OR12.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Diarrhoea",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:d81c626f39fde8166630b5021e460de4d76de75bbd95b65b42690d349a164434",
+          "code": "PY4.11",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Episiotomy",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "episiotomy"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:841a1a6fc83e30028023896e8faca9fd0ff6fa2f16b2de36643999ca7fcff071",
+          "code": "OG15.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Herpes zoster",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "herpes zoster"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+          "code": "GM26.22",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "In vitro fertilization",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "in vitro fertilization"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "code": "FM8.12",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Malaria",
+      "route": "screen-as-provisional-name",
+      "targets": [],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+          "code": "GM26.30",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+          "code": "GM26.29",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Osteoarthritis",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "osteoarthritis"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+          "code": "RD4.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Pulmonary circulation",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "pulmonary circulation"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:23f70d14a6674f916f89ae8dc611b0253e66c9d357d5cfc9655c9b89d70778b1",
+          "code": "PY5.12",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Salicylate poisoning",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "salicylate poisoning"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:88d717bbed8e5d6f1ddace536ca66f402b5551f07edf9c4ac71f4b5de8ecc22c",
+          "code": "FM13.17",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Smooth muscle",
+      "route": "screen-as-provisional-name",
+      "targets": [],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+          "code": "AN3.1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+          "code": "AN67.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Stroke",
+      "route": "screen-as-provisional-name",
+      "targets": [],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+          "code": "GM25.9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+          "code": "RD7.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Surrogacy",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "surrogacy"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:66a7e7b4ebdd5a8b6143cd9a55383ed36c14730f4a462edee0f2fd86732dd300",
+          "code": "FM8.12",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tetanus",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "tetanus"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5",
+          "code": "GM26.13",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Tracheoesophageal fistula",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "tracheoesophageal fistula"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:be1f46aab2f1dea65ff5aaa13b61be515efb23e4733f6cabccc05b35405faf9c",
+          "code": "PE19.16",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Varicella",
+      "route": "compare-earlier-target-scope",
+      "targets": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "varicella"
+        }
+      ],
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+          "code": "GM26.22",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Compare the 16 earlier target scopes and source-screen the four remaining provisional names."
+}

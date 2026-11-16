@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-20.json",
+    "sha256": "36d71cebca3c10b08d79b2c9c41624b49c0548a35c3161f1face8b6a4d3878d5"
+  },
+  "reviewedTopics": 18,
+  "cumulativeReviewedTopics": 368,
+  "remainingTopics": 144,
+  "nextTopicNameKey": "puberty",
+  "rows": [
+    {
+      "topicNameKey": "pregnancy recognition",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:80c94cf12fccecaf5f1db07673e05449ba8a0e3c0de105d18415f7bf6ee81f7c"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:e7ac53686114d341f198191a172db22b9567a802800397f8371997693f0ab8a7"
+      ],
+      "scopeComparison": "Suspected pregnancy assessment and test interpretation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "pregnancy testing",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e7ac53686114d341f198191a172db22b9567a802800397f8371997693f0ab8a7"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:80c94cf12fccecaf5f1db07673e05449ba8a0e3c0de105d18415f7bf6ee81f7c"
+      ],
+      "scopeComparison": "hCG timing and urine and serum pregnancy tests",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "premedication",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3bdbf779c020e8beb62fa4051089a0e5300ba03cc0e55733d9715b5b59892917"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:86dbd8612eb1e01a358bd541bd9de11c4a7b8a592dbee133d8823f2a3f4cda80"
+      ],
+      "scopeComparison": "Simulated premedication prescription and contraindications",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "preputial anatomy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:243fdd1292ff63a5bde13c1f54031b2fb287316d9e7226084b11bce8c7f8d822"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Preputial anatomy, phimosis and circumcision",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "prescription writing",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:86dbd8612eb1e01a358bd541bd9de11c4a7b8a592dbee133d8823f2a3f4cda80"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Simulated rational prescription writing",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "primary health care",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:dc0a61a996ec4eb6f42f826f67a603474ecf813c148085ec6ad74636be81db30"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Primary health care principles and components",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "primary hyperparathyroidism",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6b9b49794ee2c569d248484520f145fe3023f3965a47fc9e70fc5d89c720ef11"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:cc44b6d426e3a07daf2f5cc8ad9c4323df856649c4ded8705d0c6a00939908b9"
+      ],
+      "scopeComparison": "Primary hyperparathyroidism and biochemical assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "primitive streak",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9340fa82033b93ac24e41d64ffd566d6a974faa08b33f13877c7e1941a581587"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Primitive streak and germ layer formation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "proptosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8d0c9035284d2c2c4c28d9e2ea91467cbec9d2754ac5f6f0eadc7fae199bc15c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Proptosis assessment and differential",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "prostate carcinoma",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c1dc67f6cc2739005b3d11e457ed82e1953a7d91075d060f4bb9f0e5f568cb71"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Prostate carcinoma morphology and spread",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "prostatitis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:66732075966806fd63e14410d32640a914fecfbd1f1633384636bac2ed44fe0b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Prostatitis aetiology and pathology",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "protein digestion",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Proteolysis and intestinal amino acid and peptide uptake",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "protein structure",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Protein structural levels, folding and function",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "protein targeting",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Protein targeting and sorting signals",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "protein–energy malnutrition",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Protein–energy malnutrition patterns and biochemical consequences",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "proximal humeral fracture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:cd6a7ecb78881f0ebc50a703392d86f0a24eb81a1897a26ff3bd9720d92be59d"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Proximal humeral fracture assessment and imaging",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "pterygium",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:9ddcf94646ab37fc4f2127b4ee0d78fa751aea30f110e452479a05fc7d461491"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Pterygium assessment and differentiation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "pterygoid plexus",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c10f726e7a1270a55fe1482fd45016f9e5c5afdaabf9f638a0575f541768fc49"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:89f3e99d6a7abb2aa88ccd79f4d520e853edd97cebe7feed4c5846a8ec2dbefc"
+      ],
+      "scopeComparison": "Pterygoid venous plexus communications",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

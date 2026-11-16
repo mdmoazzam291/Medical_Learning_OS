@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "sourceWorklist": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-binding-worklist.json",
+    "sha256": "63676168a7a5b6f87c5f24e71e8992e0bcdff4e2a7029c7d1712210f1f91e834"
+  },
+  "previousBatch": {
+    "path": "docs/evidence/2026-11-08-nmc-standalone-topic-semantic-screening-batch-04.json",
+    "sha256": "760510245ff32926b5a3d3ffe96e7ede02803de212a866f8d381fcbad89271ff"
+  },
+  "reviewedTopics": 15,
+  "cumulativeReviewedTopics": 80,
+  "remainingTopics": 432,
+  "nextTopicNameKey": "conflict resolution",
+  "rows": [
+    {
+      "topicNameKey": "cervical cytology sampling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:247852e249d96958c3d64dc211bed852f3d5b581fdaeaf0ae704dc7a284f597f"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:3f57836be8c325cd86817a8503d1eced201e3c13189e0989747f5919b4fa19a3"
+      ],
+      "scopeComparison": "Simulated Pap specimen collection and adequacy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cervical punch biopsy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3f57836be8c325cd86817a8503d1eced201e3c13189e0989747f5919b4fa19a3"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:247852e249d96958c3d64dc211bed852f3d5b581fdaeaf0ae704dc7a284f597f"
+      ],
+      "scopeComparison": "Simulated cervical tissue biopsy, specimen labelling and haemostasis",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cervical sympathetic chain",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:220e194bb4153f6e405863f486e8e53eb9c0b19f6479d6dab900f4070a6d977b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cervical sympathetic chain and ganglia anatomy",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cervicitis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:3a28e01ea4d0805124b6121071d1b35d2fa388c50e57920d3f7703a48741ddb3"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Cervicitis aetiology and inflammatory morphology",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "chorionic villus sampling",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c19653105f105a34f76ff4aaa547cd14f0c515773bf84ce10b12a072170aa6d3"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Chorionic villus sampling indications, routes and limitations",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "clavicle fracture",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:120c74c8a7f6172de27f9e76934a2116399ee223ccacf357855f1a25f2f2f5c7"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Clavicle fracture assessment, imaging and management",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "claw hand",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5caf37bb75be0668e6bfa8cfa4c6f34cde736885a80a802bbf04b064211fb7a4"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Claw hand biomechanics",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "clinical record",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b58b980165b748ed6b8d29e0c820944032041512c9aa5fc9a60a8c5d473eab78"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Clinical case documentation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "cold chain",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:8aa1f6d2e46680007a4be6fe1fcd9c7dec7d431872b01351dce7286ce2f24716"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Vaccine cold chain",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "colorectal cancer",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6d9310b16f7f87c10cd42f53949909de38c162759a2c1581dc4eff19340aec5c"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Colorectal tumour pathways, morphology and presentation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "colour vision",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c9fc7ee5d73e4a2a49af38828719d543f1985f91ff7b02f39d2cf5a714adec9f"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Colour processing and colour vision deficiencies",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "communicating investigation results",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:589d161b5a84c8dd037f8d73066c3370d99cd1f963f277f764ff0a93c914c22b"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Communication of investigation results and follow-up",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "community assessment",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:b5c4de4601c8ae2945a423a5e07219ebb8954c73eed9b2ccdc8b7bcc3792fa54"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:d3ff81a449db158afcf36e78861205df6909299c83e49a8d6ad2719ab5d1236e"
+      ],
+      "scopeComparison": "Individual, family and community assessment",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "community diagnosis",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:d3ff81a449db158afcf36e78861205df6909299c83e49a8d6ad2719ab5d1236e"
+      ],
+      "candidateSourceReferenceIds": [
+        "nmc-2024-ref:b5c4de4601c8ae2945a423a5e07219ebb8954c73eed9b2ccdc8b7bcc3792fa54"
+      ],
+      "scopeComparison": "Community problem identification and prioritisation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topicNameKey": "compressive radial neuropathy",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:94082581a479f855e193bd06e0a3ba7921224e1cf579ca088266aabbc0b9c712"
+      ],
+      "candidateSourceReferenceIds": [],
+      "scopeComparison": "Compressive radial neuropathy localisation",
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

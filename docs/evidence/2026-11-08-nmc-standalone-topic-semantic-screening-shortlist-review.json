@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "sourceTriageBlobSha": "27d3f8162a5e35d54955fb52fe4ecab33311e8fd",
+  "reviewedPairs": 11,
+  "distinctSourceReferences": 20,
+  "rows": [
+    {
+      "topics": [
+        "arterial blood gas sampling",
+        "arterial sampling"
+      ],
+      "disposition": "shared-identity-proposal",
+      "proposedScopeName": "Arterial blood gas sampling",
+      "sources": [
+        {
+          "topic": "arterial blood gas sampling",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+              "code": "GM10.15"
+            }
+          ]
+        },
+        {
+          "topic": "arterial sampling",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+              "code": "GM3.8"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "acid–base interpretation",
+        "blood gas interpretation"
+      ],
+      "disposition": "related-distinct",
+      "proposedScopeName": "Mixed acid–base disorders and full blood gas interpretation",
+      "sources": [
+        {
+          "topic": "acid–base interpretation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:b749ac0285ce32e7ff94991fe0076054c56ccd6d240d7b097ba7d8e4c603a3e0",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+              "code": "GM23.12"
+            }
+          ]
+        },
+        {
+          "topic": "blood gas interpretation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:0fb2b00f258b6b17a8ce8b0d224834da45e075a19b0e2242ca6e78c094042a8b",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+              "code": "GM3.9"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "endometrial cancer",
+        "endometrial carcinoma"
+      ],
+      "disposition": "shared-identity-proposal",
+      "proposedScopeName": "Endometrial carcinoma",
+      "sources": [
+        {
+          "topic": "endometrial cancer",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:059992fb2404cc881541285e5c7920a0a2b0c132a804ae4ea3b8aac5bb7c5f9f",
+              "path": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+              "code": "OG34.1"
+            }
+          ]
+        },
+        {
+          "topic": "endometrial carcinoma",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+              "path": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+              "code": "PA29.2"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "capillary glucose",
+        "glucose estimation"
+      ],
+      "disposition": "related-distinct",
+      "proposedScopeName": "Capillary sampling and laboratory glucose estimation",
+      "sources": [
+        {
+          "topic": "capillary glucose",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:90dfbdb2c9b7ee62047591f7df922675fc7fb3585ca3651983e29049ca3f050a",
+              "path": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+              "code": "GM11.12"
+            }
+          ]
+        },
+        {
+          "topic": "glucose estimation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
+              "path": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+              "code": "BC14.7"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "expert testimony",
+        "medical testimony"
+      ],
+      "disposition": "related-distinct",
+      "proposedScopeName": "Expert opinion and medical witness procedure",
+      "sources": [
+        {
+          "topic": "expert testimony",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:53bf8a71b13bc362e1bdc8d5cae034b41b6be2563dc28513c47cfcd1548ca00d",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+              "code": "FM14.20"
+            }
+          ]
+        },
+        {
+          "topic": "medical testimony",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:fbb9a18355017d1bc32e964c089ca681ca49cdcd3d50d88a27566e5b694e622b",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+              "code": "FM1.5"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "menopausal transition",
+        "menopause"
+      ],
+      "disposition": "related-distinct",
+      "proposedScopeName": "Menopausal transition physiology and menopause care",
+      "sources": [
+        {
+          "topic": "menopausal transition",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:d205fa50e1a2e6669f1843e3f41fea0576051ac8f3870254dc9080eafe4ffc64",
+              "path": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+              "code": "PY9.9"
+            }
+          ]
+        },
+        {
+          "topic": "menopause",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:672e00a5b58689e096159da340f2abb020944f3d97b4c2b3bb8e4c28f0141e2a",
+              "path": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+              "code": "OG32.1"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "corneal foreign body",
+        "ocular foreign body"
+      ],
+      "disposition": "scope-unresolved",
+      "proposedScopeName": "Corneal removal and broader ocular foreign body removal",
+      "sources": [
+        {
+          "topic": "corneal foreign body",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:3d1ef7b8426cec2c226f6b0e0058cb8da10aeee0391f1ed5a261413de61fbee4",
+              "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+              "code": "OP4.9"
+            }
+          ]
+        },
+        {
+          "topic": "ocular foreign body",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:eb2117c85ac67d03354652dddad865b436999eed0fdb9bfa4b99126e2399747e",
+              "path": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+              "code": "OP3.6"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "peripheral iv access",
+        "peripheral iv cannulation"
+      ],
+      "disposition": "shared-identity-proposal",
+      "proposedScopeName": "Peripheral IV cannulation",
+      "sources": [
+        {
+          "topic": "peripheral iv access",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+              "code": "PE15.3"
+            },
+            {
+              "id": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+              "path": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+              "code": "AS9.1"
+            }
+          ]
+        },
+        {
+          "topic": "peripheral iv cannulation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+              "code": "PE23.10"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "emergency iv access",
+        "peripheral iv access"
+      ],
+      "disposition": "context-facet-proposal",
+      "proposedScopeName": "Emergency peripheral IV access",
+      "sources": [
+        {
+          "topic": "emergency iv access",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+              "code": "PE24.13"
+            }
+          ]
+        },
+        {
+          "topic": "peripheral iv access",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+              "code": "PE15.3"
+            },
+            {
+              "id": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+              "path": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+              "code": "AS9.1"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "emergency iv access",
+        "peripheral iv cannulation"
+      ],
+      "disposition": "context-facet-proposal",
+      "proposedScopeName": "Emergency peripheral IV access",
+      "sources": [
+        {
+          "topic": "emergency iv access",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+              "code": "PE24.13"
+            }
+          ]
+        },
+        {
+          "topic": "peripheral iv cannulation",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+              "path": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+              "code": "PE23.10"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    },
+    {
+      "topics": [
+        "sexual violence survivor report",
+        "survivor examination"
+      ],
+      "disposition": "related-distinct",
+      "proposedScopeName": "Survivor examination planning and sexual violence survivor reporting",
+      "sources": [
+        {
+          "topic": "sexual violence survivor report",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:3811ace99f346fa1ac7e5cd04874142105fcf4ab46dc52b7a0db5ce70c618828",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+              "code": "FM14.14"
+            }
+          ]
+        },
+        {
+          "topic": "survivor examination",
+          "refs": [
+            {
+              "id": "nmc-2024-ref:9daafa3924a9f9e56257d627478836bc0bb6bd09b450f190b8e00a64552dbe8c",
+              "path": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+              "code": "FM8.2"
+            }
+          ]
+        }
+      ],
+      "mappingAccepted": false,
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null
+    }
+  ]
+}

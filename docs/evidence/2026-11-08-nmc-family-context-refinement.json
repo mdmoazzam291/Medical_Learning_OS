@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-context-refinement",
+  "sourceHead": "c8b0410203de4e9c51be97625db4105742083541",
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "canonicalIdentityAllocation": false,
+  "automaticMerging": false,
+  "coverageFraction": null,
+  "totals": {
+    "familyContextHomes": 3,
+    "facetBindings": 4,
+    "singleHomeFacetLinks": 396,
+    "sharedScopeFacets": 2,
+    "unrepresentedSelectedFacets": 0
+  },
+  "rows": [
+    {
+      "facetNameKey": "female reproductive pharmacotherapy",
+      "componentProposalIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
+      ],
+      "targetHomeProposalId": "editorial-home:female-reproductive-function",
+      "targetNameKey": "female reproductive function",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "canonicalConceptId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "facetNameKey": "neurodegeneration pharmacotherapy",
+      "componentProposalIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+      ],
+      "targetHomeProposalId": "editorial-home:neurodegenerative-disease",
+      "targetNameKey": "neurodegenerative disease",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "canonicalConceptId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "facetNameKey": "physical torture sequelae",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "targetHomeProposalId": "editorial-home:torture",
+      "targetNameKey": "torture",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "canonicalConceptId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    },
+    {
+      "facetNameKey": "psychological torture sequelae",
+      "componentProposalIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:6a2528b0897ccb527d6d3a2ba9d2a9997c1d21a11c15ae2091df39400d270900"
+      ],
+      "targetHomeProposalId": "editorial-home:torture",
+      "targetNameKey": "torture",
+      "targetScopeType": "family-context-only",
+      "targetCoverage": "unverified",
+      "canonicalConceptId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false
+    }
+  ]
+}

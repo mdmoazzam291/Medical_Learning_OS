@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "disposable-database-pass",
+  "scope": "Five baseline migrations and selected existing Admin and acceptance SQL; synthetic Auth users and reviewer-grants table",
+  "verified": {
+    "emptyCatalogue": true,
+    "emptyPrivateAcceptanceRegistry": true,
+    "serviceRoleAdminStatusDifferentiatesTestUsers": true,
+    "anonAndAuthenticatedDeniedDirectRpcAndPrivateTable": true
+  },
+  "remaining": [
+    "Owner dashboard dependencies and hosted schema bootstrap",
+    "Actual staging Auth sessions and deployed frontend and Owner API"
+  ],
+  "hostedChangesApplied": false
+}

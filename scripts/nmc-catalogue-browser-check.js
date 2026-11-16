@@ -35,7 +35,7 @@ try{
   await page.getByRole('button',{name:'Find learning material',exact:true}).click();
   await page.getByRole('link',{name:'Sign in to find learning material',exact:true}).waitFor();
   let libraryMode='normal',libraryCalls=0;
-  const fixture={concepts:[{conceptId:'existing-anemia',label:'Anemia',aliases:[],classification:{subjects:['medicine','pediatrics']}}],questions:[{questionId:'q1',conceptLinks:[{conceptId:'existing-anemia',role:'primary'}]}],notes:[{noteVersionId:'n1',conceptId:'existing-anemia'}]};
+  const fixture={concepts:[{conceptId:'existing-anemia',label:'Anemia',aliases:[],classification:{subjects:['medicine','pediatrics'],systems:['hematology'],organs:['blood']}}],questions:[{questionId:'q1',conceptLinks:[{conceptId:'existing-anemia',role:'primary'}]}],notes:[{noteVersionId:'n1',conceptId:'existing-anemia'}]};
   await page.route('https://iyapppmeieqhflnzslao.supabase.co/**',async route=>{
    const path=new URL(route.request().url()).pathname;
    if(path.endsWith('/content-library-api/library')){
@@ -80,6 +80,26 @@ try{
   await page.evaluate(()=>{localStorage.removeItem('mlos-supabase-auth-v1');window.dispatchEvent(new StorageEvent('storage',{key:'mlos-supabase-auth-v1'}));});
   assert.equal(await page.locator('.nmc-concept').count(),0,'logout clears discovery panels');
 
+  await page.getByRole('link',{name:'Integrated',exact:true}).click();
+  await page.getByRole('link',{name:'Sign in to browse published concepts',exact:true}).waitFor();
+  await page.evaluate(()=>{
+   localStorage.setItem('mlos-supabase-auth-v1',JSON.stringify({accessToken:'synthetic',refreshToken:'synthetic',expiresAt:2100000000,user:{id:'11111111-1111-4111-8111-111111111111',email:'fixture@example.invalid'}}));
+   window.dispatchEvent(new StorageEvent('storage',{key:'mlos-supabase-auth-v1'}));
+  });
+  await page.getByLabel('System',{exact:true}).selectOption('hematology');
+  await page.getByLabel('Organ',{exact:true}).selectOption('blood');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  const integratedConcept=page.getByRole('link',{name:'Anemia',exact:true});
+  await integratedConcept.waitFor();
+  assert.equal(await integratedConcept.getAttribute('href'),'/web/library.html?view=overview&concept=existing-anemia');
+  assert.equal(await integratedConcept.count(),1);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,name+' integrated overflow');
+  await page.evaluate(()=>{localStorage.removeItem('mlos-supabase-auth-v1');window.dispatchEvent(new StorageEvent('storage',{key:'mlos-supabase-auth-v1'}));});
+  await page.getByRole('link',{name:'Sign in to browse published concepts',exact:true}).waitFor();
+  await page.goBack();
+  await page.goBack();
+  await page.goBack();
+  await page.getByRole('status').filter({hasText:'2 source reference appearances'}).waitFor();
   await page.locator('.nmc-topic summary').click();
   assert.equal(await page.locator('.nmc-references li').count(),2);
   assert.equal(await page.locator('.nmc-references a').first().getAttribute('href').then(h=>h.startsWith('https://nmc.org.in/')),true);
@@ -92,6 +112,15 @@ try{
   await page.getByRole('button',{name:'Clear',exact:true}).click();
   await page.locator('#nmc-search').fill('PY9.1');await page.getByRole('button',{name:'Search',exact:true}).click();
   await page.locator('.nmc-topic summary').click();await page.getByRole('link',{name:'Read October clarification',exact:true}).waitFor();
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.locator('#nmc-search').fill('MI8.3');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.locator('.nmc-topic summary').click();
+  await page.getByText('Editorial search alias: MI8.3',{exact:false}).waitFor();
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.locator('#nmc-search').fill('Pancreatic disorders');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await page.getByRole('status').filter({hasText:'3 source reference appearances'}).waitFor();
   assert.deepEqual(errors,[],name+' browser errors');
   await page.screenshot({path:join(screenshots,'nmc-catalogue-'+name+'.png'),fullPage:true});
   await page.close();console.log(name+': search/filter/pagination/reload/history/source/amendment/overflow passed');

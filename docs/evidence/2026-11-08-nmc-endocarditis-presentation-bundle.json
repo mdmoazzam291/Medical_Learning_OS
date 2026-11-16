@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-component-learning-bundle",
+  "componentId": "nmc-component:gm1.19:endocarditis-1@1",
+  "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+  "canonicalConceptId": null,
+  "canonicalObjectiveVersionId": null,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "coverageFraction": null,
+  "source": {
+    "url": "https://www.heart.org/en/health-topics/infective-endocarditis",
+    "version": "AHA Infective Endocarditis patient information",
+    "checkedDate": "2026-11-08",
+    "locators": [
+      "What are the symptoms of endocarditis?"
+    ],
+    "use": "Original bounded summary and fictional scenarios; no reproduced tables."
+  },
+  "teaching": {
+    "artifactVersionId": "nmc:endocarditis:presentation-comparison:teaching@1",
+    "body": "Compare time course and symptom patterns. Acute presentations may begin suddenly; subacute presentations develop more gradually, with features such as low-grade fever, fatigue or weight loss. These patterns support description and suspicion, not a definitive diagnosis or organism assignment. Explain uncertainty and the need for further clinical evidence."
+  },
+  "cases": [
+    {
+      "artifactVersionId": "nmc:endocarditis:presentation-comparison:case-a@1",
+      "fictional": true,
+      "familyId": "nmc:endocarditis:presentation-comparison",
+      "inputs": "Two fictional adults are referred for possible endocarditis. Patient A developed fever and chills abruptly over two days. Patient B reports several weeks of fatigue, low-grade fever and weight loss. Cultures and imaging are not supplied.",
+      "prompt": "Compare the time courses and explain what may and may not be concluded from these histories.",
+      "draftKey": [
+        "Describe A as acute in time course and B as a subacute pattern.",
+        "Explain that these histories alone do not confirm endocarditis.",
+        "Do not assign an organism or treatment regimen without further evidence."
+      ]
+    },
+    {
+      "artifactVersionId": "nmc:endocarditis:presentation-comparison:case-b@1",
+      "fictional": true,
+      "familyId": "nmc:endocarditis:presentation-comparison",
+      "inputs": "A fictional adult initially reports weeks of fatigue and low-grade fever. Today the patient reports new sudden breathlessness. No examination findings, observations or investigations are supplied.",
+      "prompt": "Explain how the changed history affects your reasoning and what information is now missing. Does the earlier gradual course establish present stability?",
+      "draftKey": [
+        "Recognize that new acute symptoms require prompt clinical reassessment.",
+        "Do not assume stability from the previous gradual course.",
+        "Request current physiological observations and clinical assessment; acknowledge that the cause is unresolved."
+      ]
+    }
+  ],
+  "rubric": {
+    "artifactVersionId": "nmc:endocarditis:presentation-comparison:rubric@1",
+    "dimensions": [
+      "Compares time course accurately",
+      "Recognizes diagnostic uncertainty",
+      "Avoids unsupported organism or treatment inference",
+      "Responds appropriately to changed symptoms"
+    ],
+    "recording": "Record each dimension separately and record prompting.",
+    "validated": false,
+    "passThreshold": null
+  },
+  "remainingScope": [
+    "Organism-specific patterns",
+    "Full clinical examination",
+    "Pediatric disease",
+    "Canonical objective and identity binding"
+  ]
+}

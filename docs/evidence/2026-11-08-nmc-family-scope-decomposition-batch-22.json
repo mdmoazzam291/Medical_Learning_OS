@@ -1,0 +1,1926 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 22,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+      "sha256": "d73d8f162382d10a978b97526956759a6f569c707f2eed24d0968177216b1cc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+      "sha256": "cc0ba2a8e4f79139c67ba6279cec7c0bad490a11e7d7d2c623d2ff07e71b05aa"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+      "sha256": "94432d89808a86487cd26062bb47f73c8f07edcdad5783feafda405555fd6ba1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+      "sha256": "c7151bc83f20df5684e3e9e95733a5cda0ee2ea60e8142b4dd579c91ecc0872a"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-16.json",
+      "sha256": "1732353578a16e2bf8c302962c0cee29a8c0a661e76f9d45c00352f3cf116f1c"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-17.json",
+      "sha256": "5945d172acea5370789b41495fc88ff120594c7235d51dff323e3bf5ed597684"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-18.json",
+      "sha256": "96ff1d6e8322fac6952bc83b2a3d2fbc6fb17b1a81f4f24f4cbb7a7b42248525"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+      "sha256": "004d7030dfa02a5f7fa686fa0d0df1d17ad55453f5fd0d5c428e2ac04b7f5e2f"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-20.json",
+      "sha256": "330abe6df59ad3b531fb0d9a7975e57b2eda344ad3d61e4ae042324765be19d3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-21.json",
+      "sha256": "c2b207bd07226f7453a108f130371db4d64b7e2f4f94546bd3dc3ee99570154e"
+    }
+  ],
+  "sourceHead": "e81bd09cf67dbd6b736d820e1f41e43c6aaa92f5",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 22,
+    "sourceTaskAppearances": 22,
+    "componentProposals": 91,
+    "familyParentsWithoutDecompositionProposal": 0
+  },
+  "rows": [
+    {
+      "parentNameKey": "vaccines",
+      "parentName": "Vaccines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH9.4",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            306.42,
+            105.7,
+            329.46
+          ],
+          "sourceBodySha256": "ec8a2c51a94ac162566a53884173f75fa8b7c190d5276f29522216faba97389d",
+          "editorialTaskSha256": "c7cd9d4488c3994e1992dd9f46caa9c80083f280894f39f4a72b019b22fa3695",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:01:01",
+          "name": "Vaccine type classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:01:02",
+          "name": "Vaccine selection principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:01:03",
+          "name": "Vaccine safe-use principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vascular histology",
+      "parentName": "Vascular histology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN69.1",
+          "page": 144,
+          "rowBBox": [
+            51.2,
+            517.68,
+            121.9,
+            542.94
+          ],
+          "sourceBodySha256": "3ae974d496ae0c6e8e8d7065d83b2cd62e791f34f516ae7a970f2510bf66f340",
+          "editorialTaskSha256": "29e46ec5b56ff21618d632e6b63660234070a8a8fe7f65468c0cf0f55fe75afa",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:02:01",
+          "name": "Elastic artery slide identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:02:02",
+          "name": "Muscular artery slide identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:02:03",
+          "name": "Capillary slide identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:02:04",
+          "name": "Vascular histological classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vascular pathology terminology",
+      "parentName": "Vascular pathology terminology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN5.8",
+          "page": 110,
+          "rowBBox": [
+            51.2,
+            139.74,
+            120.4,
+            171.06
+          ],
+          "sourceBodySha256": "2d6be3a3a6785808d8bc61c23685b18da83321fdf1d79841e3b9b1a805c18276",
+          "editorialTaskSha256": "709063742846b24611d0f4828e6d45f2471a9365961323dc9de80c801a862067",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:03:01",
+          "name": "Thrombosis example recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:03:02",
+          "name": "Infarction example recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:03:03",
+          "name": "Aneurysm example recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:03:04",
+          "name": "Vascular process distinguishing features",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vascular ultrastructure",
+      "parentName": "Vascular ultrastructure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN69.3",
+          "page": 145,
+          "rowBBox": [
+            51.2,
+            133.26,
+            122,
+            154.14
+          ],
+          "sourceBodySha256": "8fdd43058ad48b933a45f7514f03f0804d58fd2df055bbaa8eb01821f16bb068",
+          "editorialTaskSha256": "d05a5e6f78710f9f932f3be56f3fd35d2e8127fe52d1bee18d346979577e8692",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:04:01",
+          "name": "Vascular endothelial junctions",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:04:02",
+          "name": "Vascular basal lamina",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:04:03",
+          "name": "Vascular supporting structures",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:04:04",
+          "name": "Vessel-type ultrastructure comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vasoactive agents in upper gi bleeding",
+      "parentName": "Vasoactive agents in upper GI bleeding",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.14",
+          "page": 306,
+          "rowBBox": [
+            44.2,
+            452.34,
+            102.7,
+            493.14
+          ],
+          "sourceBodySha256": "ea908f02100223ed3b7c85370c54e9a4155d77f7130c6dc9674dacf7a8295515",
+          "editorialTaskSha256": "f618ad945b34f45d315ae0b28ba9cfad1b771899ef3b38b016afac0b3d2b607e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:05:01",
+          "name": "Upper GI bleeding vasoactive drug indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:05:02",
+          "name": "Upper GI bleeding vasoactive drug actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:05:03",
+          "name": "Upper GI bleeding vasoactive drug harms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1d739f0606faf7ef415426e626e4bc207034627592608bac58d02ec7bcbfe8a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vector identification",
+      "parentName": "Vector identification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c9fb5a541b6a34bd22c4b00b27796f54495fb57a9c1bea39c38a7ad133ac8d3d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM3.7",
+          "page": 270,
+          "rowBBox": [
+            40.1,
+            474.12,
+            98.6,
+            519.48
+          ],
+          "sourceBodySha256": "bfc7ec99daf70d14153233675d49726f2062741471646c0fcb2fa4b7ccf563c5",
+          "editorialTaskSha256": "e458059a3c5127f488b52fc2d56cf10da0c1841136c28e023f636da81ce2681b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:06:01",
+          "name": "Public health vector specimen identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c9fb5a541b6a34bd22c4b00b27796f54495fb57a9c1bea39c38a7ad133ac8d3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:06:02",
+          "name": "Public health vector image identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c9fb5a541b6a34bd22c4b00b27796f54495fb57a9c1bea39c38a7ad133ac8d3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:06:03",
+          "name": "Vector life-stage control matching",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c9fb5a541b6a34bd22c4b00b27796f54495fb57a9c1bea39c38a7ad133ac8d3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vector-borne disease programmes",
+      "parentName": "Vector-borne disease programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:17fb4170ba63a8c05d830a2fc9d2abca6e0f4df90633cf51d4aa9a7ca03b2815",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM3.6",
+          "page": 270,
+          "rowBBox": [
+            40.1,
+            436.92,
+            98.6,
+            474.12
+          ],
+          "sourceBodySha256": "4b7b3c9df2570aed873442de68a383df6be777f9eb7c2f48c3fc04c584a9b8b9",
+          "editorialTaskSha256": "b4b14dfec28a505214fc7379f90903f49f7612f37e6d6357684aba78b9043b2b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:07:01",
+          "name": "Vector-borne disease transmission",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17fb4170ba63a8c05d830a2fc9d2abca6e0f4df90633cf51d4aa9a7ca03b2815"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:07:02",
+          "name": "Source-bound Indian vector surveillance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17fb4170ba63a8c05d830a2fc9d2abca6e0f4df90633cf51d4aa9a7ca03b2815"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:07:03",
+          "name": "Source-bound Indian vector control",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17fb4170ba63a8c05d830a2fc9d2abca6e0f4df90633cf51d4aa9a7ca03b2815"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vector-borne febrile illness",
+      "parentName": "Vector-borne febrile illness",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE31.13",
+          "page": 350,
+          "rowBBox": [
+            51.3,
+            321.54,
+            103.1,
+            375.96
+          ],
+          "sourceBodySha256": "03c37bee0ada1cd04e34e4b4c12e3cb7c09cb32db7e7bc92a7a62fcbc101f73b",
+          "editorialTaskSha256": "74bcdde951ef0b9e8131826327869e1109811b280e7a7ab1e60aeb461646580d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:08:01",
+          "name": "Dengue clinical findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:08:02",
+          "name": "Chikungunya clinical findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:08:03",
+          "name": "Other vector-borne febrile infection findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:08:04",
+          "name": "Vector-borne febrile illness complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:08:05",
+          "name": "Vector-borne febrile illness management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "ventilatory mechanics",
+      "parentName": "Ventilatory mechanics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1fb1b56813a7d9d5639621e57f797cd5a38b908e52fed0556fd8707e188517e5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY6.2",
+          "page": 154,
+          "rowBBox": [
+            58.5,
+            393.3,
+            107.8,
+            426.06
+          ],
+          "sourceBodySha256": "83a0b1ceabcb85a79bdede8aa9e30ebf95aa87b7fb2dfd8001ec3e91ded3f938",
+          "editorialTaskSha256": "441b295121e035ab739ec89085c81af824e0ce90ce8aaf7d7347a00e24539fdb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:09:01",
+          "name": "Breathing pressure changes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fb1b56813a7d9d5639621e57f797cd5a38b908e52fed0556fd8707e188517e5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:09:02",
+          "name": "Static lung volumes",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fb1b56813a7d9d5639621e57f797cd5a38b908e52fed0556fd8707e188517e5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:09:03",
+          "name": "Static lung capacities",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fb1b56813a7d9d5639621e57f797cd5a38b908e52fed0556fd8707e188517e5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:09:04",
+          "name": "Dynamic ventilatory measurements",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1fb1b56813a7d9d5639621e57f797cd5a38b908e52fed0556fd8707e188517e5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "ventricular anatomy",
+      "parentName": "Ventricular anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN63.1",
+          "page": 143,
+          "rowBBox": [
+            51.2,
+            350.34,
+            122.2,
+            401.88
+          ],
+          "sourceBodySha256": "6840b3603a79c10f5b561a54a27d9f1dc85142cbe423213aaa3edea99cc3bb2e",
+          "editorialTaskSha256": "4423d948ef101b440fd7fedcd1d420bf54df8df2231cdd4c0e2bdbf8a9ae49e0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:10:01",
+          "name": "Lateral ventricle parts and boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:10:02",
+          "name": "Third ventricle parts and boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:10:03",
+          "name": "Fourth ventricle parts and boundaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:10:04",
+          "name": "Ventricular section landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vertebral canal",
+      "parentName": "Vertebral canal",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN42.1",
+          "page": 132,
+          "rowBBox": [
+            51.2,
+            126.42,
+            121.6,
+            168.18
+          ],
+          "sourceBodySha256": "97440b6e9d4a32d452ed9c1a471c87058ab0955d8faecfc5bcc88ae13e67ccec",
+          "editorialTaskSha256": "d48fce292d75ecd250a8d0bdd78ad6aff4a6ed88f040a3834fd8db654eb31376",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:11:01",
+          "name": "Level-specific cord identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:11:02",
+          "name": "Level-specific cauda equina identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:11:03",
+          "name": "Vertebral canal meninges",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:11:04",
+          "name": "Vertebral canal roots",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:11:05",
+          "name": "Vertebral canal vessels",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:11:06",
+          "name": "Epidural contents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "viral childhood illnesses",
+      "parentName": "Viral childhood illnesses",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE31.10",
+          "page": 350,
+          "rowBBox": [
+            51.3,
+            185.1,
+            103.1,
+            239.58
+          ],
+          "sourceBodySha256": "1589f0bdf7cbffbf88fed79b53789cef948d5057e68b75f074ddd0c03ff7f7a0",
+          "editorialTaskSha256": "3789ca51e24e153ab5a5b85e7b5f729dab2b96844a710e85d28c997649e02a6b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:12:01",
+          "name": "Measles",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:02",
+          "name": "Mumps",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:03",
+          "name": "Rubella",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:04",
+          "name": "Varicella",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "varicella"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:05",
+          "name": "Childhood viral illness mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:06",
+          "name": "Childhood viral illness findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:07",
+          "name": "Childhood viral illness complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:12:08",
+          "name": "Childhood viral illness care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "viral skin infections",
+      "parentName": "Viral skin infections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR8.1",
+          "page": 357,
+          "rowBBox": [
+            39.9,
+            367.44,
+            101.6,
+            408.12
+          ],
+          "sourceBodySha256": "eca6716d822812f21a06e2d251a74e9d4500ab006a601aff7b5f2f4b4288f007",
+          "editorialTaskSha256": "1040828910956ff9d09b41350919c67b2ec299f428517adc214c563f7a37cb03",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:13:01",
+          "name": "Adult viral skin infection agents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:13:02",
+          "name": "Paediatric viral skin infection agents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:13:03",
+          "name": "Viral skin infection pathogenesis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:13:04",
+          "name": "Viral skin infection appearance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:13:05",
+          "name": "Viral skin infection management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7bc7fca1ceed2577c7353adb1d1b87f12d4617772188a4374aa1272329e38fc2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "visceral surface projections",
+      "parentName": "Visceral surface projections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN55.2",
+          "page": 140,
+          "rowBBox": [
+            51.2,
+            279,
+            122.2,
+            328.32
+          ],
+          "sourceBodySha256": "f3b128c3b2918a0da01d07389e2a3d35ddc1fcdb515e789550700798722623c1",
+          "editorialTaskSha256": "da366ed61fe0109fb4e5c01d30ce4b374e9ba10b68e556e5bc2ce7855ae3c9b6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:14:01",
+          "name": "Stomach surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:02",
+          "name": "Liver surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:03",
+          "name": "Gallbladder fundus surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:04",
+          "name": "Spleen surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:05",
+          "name": "Duodenum surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:06",
+          "name": "Pancreas surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:07",
+          "name": "Ileocaecal junction surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:08",
+          "name": "Kidney surface projections",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:14:09",
+          "name": "Mesenteric root surface projection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:078430668144284452990cd9283d97a7fec09e97d9a44624b9ac183e0caef723"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vital statistics sources",
+      "parentName": "Vital statistics sources",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM9.7",
+          "page": 276,
+          "rowBBox": [
+            40.1,
+            124.68,
+            98.6,
+            156.66
+          ],
+          "sourceBodySha256": "f634cbe89c9e124140ad089129c67d6285dd62b63d0ecef917e5af04666b3818",
+          "editorialTaskSha256": "c79d70288de1a6616e32723a3e1b8e13e366531ff662e3d3cc914480795933c4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:15:01",
+          "name": "Census purpose and coverage",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:15:02",
+          "name": "SRS purpose and coverage",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:15:03",
+          "name": "NFHS purpose and coverage",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:15:04",
+          "name": "National sample survey purpose and coverage",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:15:05",
+          "name": "Vital statistics source limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7e71c7fcafe812f6bae41e0703047f502f05d8f3a55bb79f80d326d0480b3b83"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vitamin d disorders",
+      "parentName": "Vitamin D disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE12.3",
+          "page": 334,
+          "rowBBox": [
+            51.3,
+            169.26,
+            103.1,
+            201.84
+          ],
+          "sourceBodySha256": "6f6e15a22265fe49d11050ce250faa2f6d477c0b9b745da4ce1910c9d0f05efe",
+          "editorialTaskSha256": "0f3e4a0af7c17a2be4aa21da4c35cd6d829d4e7a0886e8b02cea57d511f4def3",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:16:01",
+          "name": "Rickets clinical and laboratory differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:16:02",
+          "name": "Vitamin D excess clinical and laboratory differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:16:03",
+          "name": "Vitamin D disorder management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "vitamins",
+      "parentName": "Vitamins",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC8.1",
+          "page": 166,
+          "rowBBox": [
+            58.7,
+            124.5,
+            108.5,
+            160.14
+          ],
+          "sourceBodySha256": "13969f767dc55675adcace7e8ecac6bd87aafa9f08096cf5a8478114ed310283",
+          "editorialTaskSha256": "b37c04bea1f02d2e5d6acc39090f6936570e339e88f96c2018c44c20a2637afe",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:17:01",
+          "name": "Major vitamin biochemical roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:17:02",
+          "name": "Vitamin deficiency finding prediction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "waste management rules",
+      "parentName": "Waste management rules",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:52d6039ad6afa16087a75ab841bdfe29f4ab67643f8d02ec1a592c7af51bbd1c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM14.3",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            165.06,
+            98.6,
+            182.88
+          ],
+          "sourceBodySha256": "94930a0da5c67ec44894b66bbe8907eba7ff109b14fac3e25d05b1f7e755253d",
+          "editorialTaskSha256": "efb738292309e7df8cc74080aeeb2d8eb0f81c93f6bb1b363caecbc8e5a7fdc1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:18:01",
+          "name": "Source-bound Indian biomedical waste institutional duties",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:52d6039ad6afa16087a75ab841bdfe29f4ab67643f8d02ec1a592c7af51bbd1c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "waste treatment methods",
+      "parentName": "Waste treatment methods",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ce4ce71475d303a3e5fe964f521f5b606936f4297699970b390f871ed7803eab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM14.2",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            147.24,
+            98.6,
+            165.06
+          ],
+          "sourceBodySha256": "d7d92075fc66ee96cb73953931fc4a9d728c0cefd90ef97797f3650677720f45",
+          "editorialTaskSha256": "bc1f7f19a34f97ac0c039a888db6f4c9060371546a212c2f07c5bebded04b908",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:19:01",
+          "name": "Waste category-treatment matching",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ce4ce71475d303a3e5fe964f521f5b606936f4297699970b390f871ed7803eab"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:19:02",
+          "name": "Waste treatment limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ce4ce71475d303a3e5fe964f521f5b606936f4297699970b390f871ed7803eab"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "waterborne disease",
+      "parentName": "Waterborne disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM3.3",
+          "page": 270,
+          "rowBBox": [
+            40.1,
+            353.04,
+            98.6,
+            382.38
+          ],
+          "sourceBodySha256": "fce61879611d5c94d93eb357447689ab6ae2381a62782a1eebc11a17245f0f11",
+          "editorialTaskSha256": "1c1051aad361ff884522ad7dd6dc2a738b920d5fa380f75570e025ac6a16dab7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:20:01",
+          "name": "Waterborne diarrhoeal transmission",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:20:02",
+          "name": "Waterborne hepatitis transmission",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:20:03",
+          "name": "Waterborne infection prevention points",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "weapon examination",
+      "parentName": "Weapon examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1245086f697d45e89d5f11d301c4471a4d0605e4340f7164652468e2445f9238",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.6",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            241.86,
+            94,
+            275.7
+          ],
+          "sourceBodySha256": "329404c2b9c717483d9e9aa11d08750b52b98cd422c8f10e0de0196e4daa21eb",
+          "editorialTaskSha256": "1fb9ca17b6fa982d9194c1400e5d5c82bf271bcd47b5ef62baa06944d9d36712",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:21:01",
+          "name": "Weapon category comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1245086f697d45e89d5f11d301c4471a4d0605e4340f7164652468e2445f9238"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:21:02",
+          "name": "Weapon examination documentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1245086f697d45e89d5f11d301c4471a4d0605e4340f7164652468e2445f9238"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:21:03",
+          "name": "Weapon item preservation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1245086f697d45e89d5f11d301c4471a4d0605e4340f7164652468e2445f9238"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "zoonoses",
+      "parentName": "Zoonoses",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI9.1",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            353.58,
+            108.8,
+            416.22
+          ],
+          "sourceBodySha256": "f494b7f40c74b45a598a417eb61d26bf82912f1e865a4bd116b2340f01207e53",
+          "editorialTaskSha256": "fe64a3e1ec44761d5a7fb27c7dad34532856bed1e2e2bd7fc5ee259f2768436d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-22:22:01",
+          "name": "Zoonosis classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:02",
+          "name": "Zoonotic reservoirs",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:03",
+          "name": "Zoonotic vectors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:04",
+          "name": "Zoonotic transmission routes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:05",
+          "name": "Zoonotic illness",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:06",
+          "name": "Zoonosis diagnosis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-22:22:07",
+          "name": "Zoonosis prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

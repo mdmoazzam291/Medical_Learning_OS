@@ -1,0 +1,2570 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+      "sha256": "d73d8f162382d10a978b97526956759a6f569c707f2eed24d0968177216b1cc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+      "sha256": "cc0ba2a8e4f79139c67ba6279cec7c0bad490a11e7d7d2c623d2ff07e71b05aa"
+    }
+  ],
+  "sourceHead": "89ac124990ba128f1b4fc17513d7859af8f26a4a",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 31,
+    "componentProposals": 124,
+    "familyParentsWithoutDecompositionProposal": 232
+  },
+  "rows": [
+    {
+      "parentNameKey": "mental health concepts",
+      "parentName": "Mental health concepts",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM15.1",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            223.2,
+            98.6,
+            254.64
+          ],
+          "sourceBodySha256": "792789324f056ac59e906adb6f44f45a256edbd4ae17e121b4dfa1630ebb3001",
+          "editorialTaskSha256": "ef750b0107096ab43fa6c09b98bd99b4b25b0eded58a014e4d8dec360a72d19f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:01:01",
+          "name": "Mental health",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:01:02",
+          "name": "Wellbeing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:01:03",
+          "name": "Social influences on mental health",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:01:04",
+          "name": "Environmental influences on mental health",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "mental healthcare law",
+      "parentName": "Mental healthcare law",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0763be5477cf9ebec0ff07f3f86ebcbd7880f405fdb94558029bdfbbcc8f3f3d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM11.6",
+          "page": 228,
+          "rowBBox": [
+            45.5,
+            85.86,
+            95.2,
+            129.06
+          ],
+          "sourceBodySha256": "87ec3b8177839d1d869e2f18f70225ebc35881e0c6ace55aee21add658425e03",
+          "editorialTaskSha256": "26567c0e289af55c961ff781c5455b715fbf5f9807e87d832039bc1ef340d74d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:02:01",
+          "name": "Source-bound mental healthcare admission law",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0763be5477cf9ebec0ff07f3f86ebcbd7880f405fdb94558029bdfbbcc8f3f3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:02:02",
+          "name": "Source-bound mental healthcare care provisions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0763be5477cf9ebec0ff07f3f86ebcbd7880f405fdb94558029bdfbbcc8f3f3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:02:03",
+          "name": "Source-bound mental healthcare discharge law",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0763be5477cf9ebec0ff07f3f86ebcbd7880f405fdb94558029bdfbbcc8f3f3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:02:04",
+          "name": "Simulated mental healthcare law application",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0763be5477cf9ebec0ff07f3f86ebcbd7880f405fdb94558029bdfbbcc8f3f3d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "metabolic bone disorders",
+      "parentName": "Metabolic bone disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR7.1",
+          "page": 448,
+          "rowBBox": [
+            49.1,
+            203.64,
+            103.1,
+            266.46
+          ],
+          "sourceBodySha256": "f906818de2fcff04c2700330b80fca08c97eb6cf0aef0c30a6247599e6193b95",
+          "editorialTaskSha256": "84ef342017fa36e6eed216a468888064e500fe87ce18defd23d2dc2eca243b06",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:03:01",
+          "name": "Osteoporosis",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:03:02",
+          "name": "Osteomalacia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:03:03",
+          "name": "Rickets",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:03:04",
+          "name": "Paget disease of bone",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "paget disease of bone"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:03:05",
+          "name": "Rachitic deformity assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:03:06",
+          "name": "Rachitic deformity management principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5290ca6f96341916c67081f1a45f4c2e82b3cc886962f346c1cd4a812600d4f0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "metal poisoning",
+      "parentName": "Metal poisoning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.13",
+          "page": 230,
+          "rowBBox": [
+            45.5,
+            320.28,
+            95.2,
+            377.88
+          ],
+          "sourceBodySha256": "f8cdc9b3a313b3177000d3b52a029c03c293812b089d0d13755fce9e416aa10c",
+          "editorialTaskSha256": "85c48a6e97a17fb49bdbd0917738bd63cad9ccb2d1dbdbc0bb7065ead7537506",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:04:01",
+          "name": "Arsenic exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:02",
+          "name": "Lead exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:03",
+          "name": "Mercury exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:04",
+          "name": "Copper exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:05",
+          "name": "Iron exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:06",
+          "name": "Metal poisoning diagnostic principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:04:07",
+          "name": "Metal poisoning treatment principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:797e67fe7eaa4060d0b62d5cd7f62e5c731e168e3e2ce989adf297ca1d780ed0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "microbial detection",
+      "parentName": "Microbial detection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.4",
+          "page": 206,
+          "rowBBox": [
+            51.9,
+            343.02,
+            108.8,
+            374.64
+          ],
+          "sourceBodySha256": "20d0c01f7864443e5e0d321cdeb9d8b90dc785b56b47e217a37f4c828f99d038",
+          "editorialTaskSha256": "18b85e50bc1246e5d75716304e3741fdbcbb94f539c784f1d8c35e66e12e81e2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:05:01",
+          "name": "Microscopy test selection for infection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:05:02",
+          "name": "Culture test selection for infection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:05:03",
+          "name": "Antigen detection test selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:05:04",
+          "name": "Molecular test selection for infection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "microbial groups",
+      "parentName": "Microbial groups",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.2",
+          "page": 206,
+          "rowBBox": [
+            51.9,
+            242.58,
+            108.8,
+            289.68
+          ],
+          "sourceBodySha256": "07546bf93e99840ea33961e32b55a14f9f5e204b343dbda41eddf87dacc25183",
+          "editorialTaskSha256": "33ce15f81f1c599b0697ddca656b072eed831f488373e3968c0d37d5b049da2f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:06:01",
+          "name": "Bacterial structure and growth",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:06:02",
+          "name": "Viral structure and growth",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:06:03",
+          "name": "Fungal structure and growth",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:06:04",
+          "name": "Parasitic structure and growth",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:06:05",
+          "name": "Microbial group classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:06:06",
+          "name": "Representative microbial group infections",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "microbiology history",
+      "parentName": "Microbiology history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.1",
+          "page": 206,
+          "rowBBox": [
+            51.9,
+            187.86,
+            108.8,
+            242.58
+          ],
+          "sourceBodySha256": "1839da9d7685b20962b610f24b6dfe8dc40d2600bac31d9327a0c7a90f3bc719",
+          "editorialTaskSha256": "27c55289da689354fe9b282ff39c815ef602a85bdb06dfb2529e9e4645e42f6d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:07:01",
+          "name": "Landmark microbiology discoveries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:07:02",
+          "name": "Historical discoveries in modern microbiology practice",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:07:03",
+          "name": "Beneficial microbial roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:07:04",
+          "name": "Microbial disease roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "microcytic anaemia",
+      "parentName": "Microcytic anaemia",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA14.1",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            426.18,
+            105.6,
+            455.7
+          ],
+          "sourceBodySha256": "dd5a91ac4c28b75973426de772ae94e3ea9d171e24489b3c7a78ac3aea41dc44",
+          "editorialTaskSha256": "fba92f31b9c2d08dfccbdd3353200e3adf7bbfa21681b1739e35836507876232",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:08:01",
+          "name": "Iron metabolism",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "iron metabolism"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:08:02",
+          "name": "Microcytic anaemia indices",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:08:03",
+          "name": "Microcytic anaemia iron studies",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:08:04",
+          "name": "Microcytic cause differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "midbrain sections",
+      "parentName": "Midbrain sections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN61.2",
+          "page": 142,
+          "rowBBox": [
+            51.2,
+            374.46,
+            121.9,
+            406.5
+          ],
+          "sourceBodySha256": "9a0e9e2c8ec784de2aab5e558eeb7197dafb8af7b90e43090429b97e982835cc",
+          "editorialTaskSha256": "843ef01028a5438d135ea8dd948c7734007a34af57b6e1b4d823d2be8bf2acec",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:09:01",
+          "name": "Midbrain superior collicular section",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:09:02",
+          "name": "Midbrain inferior collicular section",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:09:03",
+          "name": "Midbrain section nuclei",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:09:04",
+          "name": "Midbrain section tracts",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:09:05",
+          "name": "Midbrain section decussations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "minimally invasive surgery",
+      "parentName": "Minimally invasive surgery",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU16.1",
+          "page": 406,
+          "rowBBox": [
+            45,
+            437.7,
+            101.7,
+            495.6
+          ],
+          "sourceBodySha256": "2e1e777fb0406b2ac18cb8b939e7967132f1cbacd2af21688ccd50a8c4294956",
+          "editorialTaskSha256": "e092d383a5620a5a3e7e28d5024610b5da3ec83b6d211ebc2909ea7e69d9a5f1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:10:01",
+          "name": "Minimally invasive surgery indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:10:02",
+          "name": "Minimally invasive surgery benefits",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:10:03",
+          "name": "Minimally invasive surgery limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:10:04",
+          "name": "Minimally invasive versus open approaches",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b6640c7815ed6472038b32ed9219e94a2bd42255e00324a84e1c0a355c859ee"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "minor carbohydrate pathways",
+      "parentName": "Minor carbohydrate pathways",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC3.4",
+          "page": 163,
+          "rowBBox": [
+            58.7,
+            271.44,
+            108.5,
+            315.3
+          ],
+          "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+          "editorialTaskSha256": "fe229de80e9d15cd1385212769f213439100366d815aac83554b949688ffe2b9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:11:01",
+          "name": "Fructose pathways",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:11:02",
+          "name": "Galactose pathways",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:11:03",
+          "name": "Polyol pathways",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:11:04",
+          "name": "Uronic acid pathways",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:11:05",
+          "name": "Minor carbohydrate pathway disorders",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "molecular microbiology",
+      "parentName": "Molecular microbiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.3",
+          "page": 206,
+          "rowBBox": [
+            51.9,
+            289.68,
+            108.8,
+            343.02
+          ],
+          "sourceBodySha256": "3f25ed3802e1160f11fb6860404fc4986b43d9a43befb8bccc29f102725f1ee8",
+          "editorialTaskSha256": "7ae7fd165e78b0d72a839ca847822edb430645f15a6d330bc0c7e1d78a13bf62",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:12:01",
+          "name": "Molecular microbial genetic targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:12:02",
+          "name": "Molecular microbial diagnostic methods",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:12:03",
+          "name": "Molecular microbial diagnostic questions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "molecular technologies",
+      "parentName": "Molecular technologies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC10.7",
+          "page": 167,
+          "rowBBox": [
+            58.7,
+            371.82,
+            108.5,
+            429.06
+          ],
+          "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+          "editorialTaskSha256": "69ababefd87f9f23750ad9630bde510a6c6b1839ffcebd57fd1ed589475dff5e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:13:01",
+          "name": "Recombinant DNA technology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:02",
+          "name": "PCR",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:03",
+          "name": "Microarrays",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:04",
+          "name": "FISH",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:05",
+          "name": "CRISPR",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:06",
+          "name": "Molecular technology applications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:13:07",
+          "name": "Molecular technology limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "monogenic obesity",
+      "parentName": "Monogenic obesity",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f154f222cea49350dc7ba4079406662ecbb974ab411565100657cc5745fdd016",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.3",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            302.82,
+            102.7,
+            322.68
+          ],
+          "sourceBodySha256": "6584a1555e35b146798b368ba9e907f491e141eca8104f9e37a2a97ed0b1b8d0",
+          "editorialTaskSha256": "5e2406db385790ae5bf22d5c891bf003922101e272bbc38231ab39b6a0499433",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:14:01",
+          "name": "Monogenic obesity presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f154f222cea49350dc7ba4079406662ecbb974ab411565100657cc5745fdd016"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:14:02",
+          "name": "Monogenic obesity mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f154f222cea49350dc7ba4079406662ecbb974ab411565100657cc5745fdd016"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "motor lesion patterns",
+      "parentName": "Motor lesion patterns",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+          "packetPath": "docs/evidence/2026-11-04-nmc-neurophysiology-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY10.9",
+          "page": 158,
+          "rowBBox": [
+            58.5,
+            267.3,
+            107.8,
+            310.5
+          ],
+          "sourceBodySha256": "baeacc58aa9fa24ef6b716b945e641a7c74c5fb8c111e599c997975d80d336bb",
+          "editorialTaskSha256": "a25d08e1d50b8ac352a1c6c50c357fea242b8211837d4353098353a1b1fedda7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:15:01",
+          "name": "Simulated upper motor neuron pattern recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:15:02",
+          "name": "Simulated lower motor neuron pattern recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:15:03",
+          "name": "Descending motor control in motor lesion patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "movement control anatomy",
+      "parentName": "Movement control anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.1",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            422.1,
+            102.7,
+            462.84
+          ],
+          "sourceBodySha256": "d4aad1c40d69236d0bdb475ce0b6982b194bb5852df75d7ce466eee093048830",
+          "editorialTaskSha256": "6038bb2f6cf732104f3e7c52b4951d2d390f0080ce63ae7d5f18fd21ea2ffefb",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:16:01",
+          "name": "Cortical motor circuits",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:16:02",
+          "name": "Basal ganglia motor circuits",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:16:03",
+          "name": "Cerebellar motor circuits",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:16:04",
+          "name": "Movement circuit functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d1978e60ec0021f920b3c080b160c2d7a502a492530ca9fb746a5af40bdf914e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "movement disorder imaging",
+      "parentName": "Movement disorder imaging",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM19.7",
+          "page": 312,
+          "rowBBox": [
+            44.2,
+            261.96,
+            102.7,
+            302.76
+          ],
+          "sourceBodySha256": "aeadff21ac7ada61056189a449dc9ff31a691a4d8a9a8941de6b6f85c6549251",
+          "editorialTaskSha256": "3f44217f6ecf3adcfc4e03131c3231b2f074e08e9e185e51e48894ed6b4732a0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:17:01",
+          "name": "Movement disorder imaging selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:17:02",
+          "name": "Movement disorder imaging interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:17:03",
+          "name": "Movement disorder imaging limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:648c2e1ea5085c7ae65527ec5535dd6f5575d7a30fe49774bf067f8128dff37d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "multiple gestation",
+      "parentName": "Multiple gestation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG11.1",
+          "page": 430,
+          "rowBBox": [
+            49.1,
+            386.16,
+            103.1,
+            430.02
+          ],
+          "sourceBodySha256": "61ea5b7c94746cb27e95c31936349ea875df692bdf7ddd8fdc202340ab6b5188",
+          "editorialTaskSha256": "3b20abf3a2dc7440ae1a10f2adc250860c00f14ff33a7fc62ccf21b26367e49d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:18:01",
+          "name": "Multiple gestation chorionicity",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:18:02",
+          "name": "Multiple gestation clinical findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:18:03",
+          "name": "Multiple gestation investigations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:18:04",
+          "name": "Multiple gestation complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:18:05",
+          "name": "Multiple gestation surveillance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8fa0af1b7ff1eb65468a7474fc2081c51a56b58527d464b23e1ddf4f8adf2db0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "muscle fibre types",
+      "parentName": "Muscle fibre types",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY3.6",
+          "page": 151,
+          "rowBBox": [
+            58.5,
+            508.08,
+            107.8,
+            535.44
+          ],
+          "sourceBodySha256": "46ce4fc78a2bae133a752fb61213f7cd61e0b002f0aa7cc29b90064228dcea9b",
+          "editorialTaskSha256": "780aa2958af956dc4e2f202b6a1e7288cecdf8920742891299334a9e5a2d1235",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:19:01",
+          "name": "Muscle fibre type structure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:19:02",
+          "name": "Muscle fibre type function",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:19:03",
+          "name": "Ionic basis of muscle fibre electrical activity",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ee5c519bd59925a8ac67beb20ed44f9ef497b3ac1b8fc4d488cce2a66da69b33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "muscles of mastication",
+      "parentName": "Muscles of mastication",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN33.2",
+          "page": 128,
+          "rowBBox": [
+            51.2,
+            229.08,
+            121.9,
+            276.24
+          ],
+          "sourceBodySha256": "f5ef4588293153aa68501fde17b892ace88c2c33e092ea20dfccc1263c43ee37",
+          "editorialTaskSha256": "54cffee86961b1915249b479a66b2fe39a23b303f0eae3e1026bee735028cd65",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:20:01",
+          "name": "Masticatory muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:20:02",
+          "name": "Masticatory muscle fibre direction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:20:03",
+          "name": "Masticatory muscle motor supply",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:20:04",
+          "name": "Model identification of masticatory muscles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:20:05",
+          "name": "Jaw movement demonstration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "musculoskeletal signs",
+      "parentName": "Musculoskeletal signs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.6",
+          "page": 294,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            133.8
+          ],
+          "sourceBodySha256": "5bd550190077ee64eb70355182f9f2b94fbb6ccc504036c65e2dc4fe8e426bd6",
+          "editorialTaskSha256": "54b6c3eb1a44874aa9d339fc6d0496c1584888522930863bc8c1c5d1adab0ae2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:21:01",
+          "name": "Articular disease symptoms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:21:02",
+          "name": "Articular disease examination findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:21:03",
+          "name": "Periarticular disease symptoms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:21:04",
+          "name": "Periarticular disease examination findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5aaceecdd86aa94e787fa02df0795997e0d49850c14bbb217840bd6d23ee19a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "myopathies",
+      "parentName": "Myopathies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ad6622ac201e657850ca429c73aebbc22f783947f017225bfd5f39226af43e87",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY3.10",
+          "page": 152,
+          "rowBBox": [
+            58.5,
+            196.38,
+            107.8,
+            218.7
+          ],
+          "sourceBodySha256": "74149ebb94e38df21390d5592bd89f99acaaf7489a5c34fc26fb0086dd36854b",
+          "editorialTaskSha256": "e1bc3cfca547858b8533dd5e20fa7ed0d2c4df26d9c33452792dbd370b92ed84",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:22:01",
+          "name": "Myopathy mechanism grouping",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ad6622ac201e657850ca429c73aebbc22f783947f017225bfd5f39226af43e87"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:22:02",
+          "name": "Myopathy impaired muscle function",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ad6622ac201e657850ca429c73aebbc22f783947f017225bfd5f39226af43e87"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national anaemia control",
+      "parentName": "National anaemia control",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.5",
+          "page": 345,
+          "rowBBox": [
+            51.3,
+            503.52,
+            103.1,
+            523.86
+          ],
+          "sourceBodySha256": "fe21c3605e3dca5c95373140c59826b167c683a810999323ea6b18d711933d12",
+          "editorialTaskSha256": "cbb0b6c48ca0b70be546cfb47041ddbccdaa6abc41e3a1cc71396810e0607b11",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE13.2",
+          "page": 334,
+          "rowBBox": [
+            51.3,
+            492.78,
+            103.1,
+            525.36
+          ],
+          "sourceBodySha256": "5b78ca56f0bce87cfb5b09371a14c024a72de8d947528f2eea6adbd7b054d951",
+          "editorialTaskSha256": "1885a9468f547adde42cdcb2c44703bc07966a5f109a4067f7702be79c6fc875",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:23:01",
+          "name": "Source-bound anaemia programme target groups",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5",
+            "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:23:02",
+          "name": "Source-bound anaemia programme prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:23:03",
+          "name": "Source-bound anaemia programme treatment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:23:04",
+          "name": "Source-bound anaemia programme interventions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:23:05",
+          "name": "Source-bound anaemia programme monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5",
+            "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national immunization programme",
+      "parentName": "National immunization programme",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:abce99daeb111c33d77aa6cb4a854b3f88bbea3cc2dd49d947621f50e7520b33",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE18.1",
+          "page": 336,
+          "rowBBox": [
+            51.3,
+            257.34,
+            103.1,
+            289.92
+          ],
+          "sourceBodySha256": "9c50bc5e93d619fae5a907a5ff1512660722daf4e2d23a089fb6dc65212fd626",
+          "editorialTaskSha256": "c54bdd48334855af4e7cdc38031c559b07f090ab0987463de899dee9cd8fde89",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:24:01",
+          "name": "Source-bound immunization programme components",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:abce99daeb111c33d77aa6cb4a854b3f88bbea3cc2dd49d947621f50e7520b33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:24:02",
+          "name": "Source-bound immunization schedule record review",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:abce99daeb111c33d77aa6cb4a854b3f88bbea3cc2dd49d947621f50e7520b33"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national infection programmes",
+      "parentName": "National infection programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI9.6",
+          "page": 213,
+          "rowBBox": [
+            51.9,
+            109.44,
+            108.8,
+            150.48
+          ],
+          "sourceBodySha256": "09e84bf27a51691504e06ec1c31aa14b64575469c7fb7e886b4162feabe46ad7",
+          "editorialTaskSha256": "ec2374a9c09437ba5a1691e3155fe25efa62f8ae87e1bae91c2b6412bfba9484",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:25:01",
+          "name": "Source-bound Indian infection programme prevention roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:25:02",
+          "name": "Source-bound Indian infection programme diagnostic roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:25:03",
+          "name": "Source-bound infection reference centre roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national mental health programme",
+      "parentName": "National mental health programme",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c98e401875099593682f96fe7901f3633ac74abb0037129db4ae89e7baac05ce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM15.3",
+          "page": 278,
+          "rowBBox": [
+            40.1,
+            285.36,
+            98.6,
+            313.32
+          ],
+          "sourceBodySha256": "57e666de9c37d67c274bd9ae9b813ead3bd9de9d246daf478419574a39a2c04a",
+          "editorialTaskSha256": "3b69377e26ca8f62f3d5b42d9fde8b0ab01d03fde0461d85bf4ad5cfa5fcf605",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:26:01",
+          "name": "Source-bound mental health community services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c98e401875099593682f96fe7901f3633ac74abb0037129db4ae89e7baac05ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:26:02",
+          "name": "Source-bound mental health district services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c98e401875099593682f96fe7901f3633ac74abb0037129db4ae89e7baac05ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:26:03",
+          "name": "Source-bound mental health referral services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c98e401875099593682f96fe7901f3633ac74abb0037129db4ae89e7baac05ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national nutrition programmes",
+      "parentName": "National nutrition programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.6",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            150.78,
+            98.6,
+            197.88
+          ],
+          "sourceBodySha256": "ceaf3d5f3514205e82b4e496d51335f3fe7d16f6c20217b2f5a90e38960eb285",
+          "editorialTaskSha256": "e3d1f5b5c664046e53c1a9c903f8b8748c10dc9b34ff91d245953d24b058f022",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:27:01",
+          "name": "Source-bound national nutrition policy objectives",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:27:02",
+          "name": "Source-bound nutrition programme objectives",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:27:03",
+          "name": "Source-bound nutrition programme beneficiaries",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:27:04",
+          "name": "Source-bound nutrition programme delivery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:27:05",
+          "name": "Source-bound ICDS services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:48fa3b34684fa15bdb9cbdb9d7cef8f9a2f2073b812b552775c2714f2b6cc110"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national programme for older adults",
+      "parentName": "National programme for older adults",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3bb28890c7a102b4ab5d7c0e0581ca55ff1a5732790a528c889ddf6cbfb1118f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM12.4",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            363.96,
+            98.6,
+            379.02
+          ],
+          "sourceBodySha256": "e1f822b91ffa76329b8cb4e404cf9bec8318ca51d35e967f37c9582c29e1db00",
+          "editorialTaskSha256": "d9baad392b97ed9a070e38d598784518dd49e0b1f3e11f05e6625df022ec7a28",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:28:01",
+          "name": "Source-bound older adult programme services",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb28890c7a102b4ab5d7c0e0581ca55ff1a5732790a528c889ddf6cbfb1118f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:28:02",
+          "name": "Older adult programme levels of care",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb28890c7a102b4ab5d7c0e0581ca55ff1a5732790a528c889ddf6cbfb1118f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "national programmes",
+      "parentName": "National programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG1.5",
+          "page": 427,
+          "rowBBox": [
+            49.1,
+            286.44,
+            103.1,
+            326.76
+          ],
+          "sourceBodySha256": "4d369f138903d18551cd9a8ea87080527e7d506cea9b46a0ae55d71646611f52",
+          "editorialTaskSha256": "d5235ac5f25646da6d1fea7577b81b911d285316502da7865353b809bf269a44",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:29:01",
+          "name": "Source-bound JSY purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:29:02",
+          "name": "Source-bound JSSK purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:29:03",
+          "name": "Source-bound SUMAN purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:29:04",
+          "name": "Source-bound Anaemia Mukt Bharat purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:29:05",
+          "name": "Source-bound vital registration purpose",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31259d29df5f81be56457cd39dac2c82d32ad0828e7e74f57bb8c8c4072a45a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "neonatal respiratory distress",
+      "parentName": "Neonatal respiratory distress",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE19.5",
+          "page": 338,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            93.48
+          ],
+          "sourceBodySha256": "d7ad67b94a610d2cc6f17065f834bfd7e40e6ccf1e005d5a25333817a4bcb430",
+          "editorialTaskSha256": "4e09e7db968cfa05a62bc081766a5a4f0a054377b417c009a26dcd3aa078786b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-14:30:01",
+          "name": "Neonatal meconium aspiration presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:30:02",
+          "name": "Neonatal meconium aspiration management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:30:03",
+          "name": "Transient tachypnoea presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:30:04",
+          "name": "Transient tachypnoea management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-14:30:05",
+          "name": "Other neonatal respiratory distress causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

@@ -1,0 +1,1171 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-01:01",
+      "facetNameKey": "abdominal muscle attachments",
+      "facetName": "Abdominal muscle attachments",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:92cc43c514b75ced82fba404b92b65f156af0c155f302c9eec648e3bd0290de1",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN44.6",
+          "page": 134,
+          "rowBBox": [
+            51.2,
+            185.46,
+            122.2,
+            234.78
+          ],
+          "sourceBodySha256": "21aadefbdcd8c368245d845e218f0837556aa8abca407cf923f9c8d670dff9e3",
+          "editorialTaskSha256": "a38ce4bd5ab16af64ee192396447ea834d6bdbf1eb73c4c0e4fdfd4aa533c90c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Anterolateral abdominal muscles",
+      "proposedHomeNameKey": "anterolateral abdominal muscles",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Anterolateral attachments and aponeurotic continuity only; unnamed muscles remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:02",
+      "facetNameKey": "abdominal surface landmarks",
+      "facetName": "Abdominal surface landmarks",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e769d439873455960c06afb770913674b5e9acc41360bb989f2f3906fd5087d0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN55.1",
+          "page": 140,
+          "rowBBox": [
+            51.2,
+            239.4,
+            122.2,
+            279
+          ],
+          "sourceBodySha256": "aeed18fd08e5b0c1104819c5397e1e7f17556901fcb1c680e345914451420f98",
+          "editorialTaskSha256": "baee62fbe9eb6c50671cbf8c3cd444b57c555dba40813b4099636ea7a8614ae2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Abdominal surface anatomy",
+      "proposedHomeNameKey": "abdominal surface anatomy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model marking of source-named planes, regions and clinical landmarks.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:03",
+      "facetNameKey": "abdominal surface map",
+      "facetName": "Abdominal surface map",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:40477270434159802e261cec0311fc176fa3d442c232e5bf99051a584eb2ed0b",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN44.1",
+          "page": 133,
+          "rowBBox": [
+            51.2,
+            377.04,
+            122.2,
+            423.48
+          ],
+          "sourceBodySha256": "2f6575c6cac57676720e7347484115cf6649b9b3d73563c4a800efe3eee9a9f5",
+          "editorialTaskSha256": "a0efb643bf56b6404528bb4399a2307bd636914ebb2bc8e629fea43f67ef4813",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Abdominal surface anatomy",
+      "proposedHomeNameKey": "abdominal surface anatomy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Model reference lines, linea alba, linea semilunaris, nine regions and four quadrants.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:04",
+      "facetNameKey": "acid peptic pharmacotherapy",
+      "facetName": "Acid peptic pharmacotherapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a834c389b781449c1d4cfed73f14e5f77c66201bda446cb8f4e3bea207e22702",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.15",
+          "page": 306,
+          "rowBBox": [
+            44.2,
+            493.14,
+            102.7,
+            534.06
+          ],
+          "sourceBodySha256": "dfc077653e0def0fc97267dacebd56cf4f3e3d7b821894c6aac6e449e5981a27",
+          "editorialTaskSha256": "a3c84ce877d088ce97ccd1afcf0bedcd1b2b711b5dae7323241399627e24b372",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acid peptic disease",
+      "proposedHomeNameKey": "acid peptic disease",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acid peptic disease"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Acid suppression and H. pylori strategy comparison; not full acid-peptic disease coverage.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:05",
+      "facetNameKey": "acls participation",
+      "facetName": "ACLS participation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a698cb0665f4ad3e07547c777820480b5255ac8c80770ea9b02a47d2cbac5587",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.21",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            426.12,
+            102.7,
+            453.42
+          ],
+          "sourceBodySha256": "01be3e2f17ecac7ba7d6b01f6a251fb51f5406459d28f44cb6948d1b99391f71",
+          "editorialTaskSha256": "43a69261ff6ca61367bf72d9788a972051ad77fafb0419799aec63a3d02480e1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Advanced cardiac life support",
+      "proposedHomeNameKey": "advanced cardiac life support",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Observation and an assigned supervised exercise role only; no independent ACLS competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:06",
+      "facetNameKey": "acne assessment",
+      "facetName": "Acne assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7cad061a754ce6a58eb954991ce15e963d0cd215d01df9430c4dc079f2ad5b92",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR1.1",
+          "page": 356,
+          "rowBBox": [
+            39.9,
+            219,
+            101.6,
+            259.8
+          ],
+          "sourceBodySha256": "e6965a01526d77bdd8770ec2a63689e8a67a343600cc5ee7c64727e5a1ac3a88",
+          "editorialTaskSha256": "30a05d3d02439f296db6c8191b09abf1ff22163e78c23e38c6ec5a6fec439ac5",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Acne",
+      "proposedHomeNameKey": "acne",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Lesion identification, severity and risk elicitation in a sample case.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:07",
+      "facetNameKey": "acne management",
+      "facetName": "Acne management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e46d76713179380d6400db31340d51426c89ca362fee5f36342afe6c211ab25c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR1.2",
+          "page": 356,
+          "rowBBox": [
+            39.9,
+            259.8,
+            101.6,
+            313.92
+          ],
+          "sourceBodySha256": "d32d83f0194af923931749847d09111c8714077306db554a4df206ce214cf023",
+          "editorialTaskSha256": "abba75310fdddfa4ab3b755af3d36c2d5b063c4272cfbd92cf3b3ebd6a32c857",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acne",
+      "proposedHomeNameKey": "acne",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Severity-based planning, scarring risk and follow-up.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:08",
+      "facetNameKey": "acute blood loss physiology",
+      "facetName": "Acute blood loss physiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ce4ca46b0157fe3e7cac2597ac5f5fa71512c037f48d69ac4fef37d8cae04314",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.3",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            402.06,
+            102.7,
+            442.86
+          ],
+          "sourceBodySha256": "b0b5670f25780c8da867cdd69fe990f82dc76a28e9a96558a6d423e811f52b4a",
+          "editorialTaskSha256": "35dd180aa350a9b42d14220a5a16517e16452acedca13f0d875627ebee00afe6",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute blood loss",
+      "proposedHomeNameKey": "acute blood loss",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Volume-loss compensation and tissue perfusion; broader haemorrhage management is not implied.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:09",
+      "facetNameKey": "acute consequences of diarrhoea",
+      "facetName": "Acute consequences of diarrhoea",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c0a5932933081b9ffc5800390333d3515c079b008f45d7ea5ee1b4a66457c9d7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.2",
+          "page": 307,
+          "rowBBox": [
+            44.2,
+            275.94,
+            102.7,
+            316.62
+          ],
+          "sourceBodySha256": "e272d9a0ea24e0f61eeb40b096a06b6fcd4fcdd83bccb8903328239d5ba201de",
+          "editorialTaskSha256": "3b1b750adb7140a4129f851feae7a7b31a9f3be316d8da2cb9122bfd52e1a4e8",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Diarrhoea",
+      "proposedHomeNameKey": "diarrhoea",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "diarrhoea"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Dehydration, electrolyte disturbance and systemic acute consequences.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:10",
+      "facetNameKey": "acute coronary medicines",
+      "facetName": "Acute coronary medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2bdf500ccc3b3d6237a572b0185e1224b0d9aa481b1579ce55c455d2c26d5ffd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.15",
+          "page": 285,
+          "rowBBox": [
+            44.2,
+            221.76,
+            102.7,
+            249.12
+          ],
+          "sourceBodySha256": "5e8564f7026e17ac9128e964e98bfc6273275e7630d4092c756c1a711a99a921",
+          "editorialTaskSha256": "19251ae8646654f7bc0c7084f72b1215d5832831e217c085ae5430b9b3bb17be",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute coronary syndromes",
+      "proposedHomeNameKey": "acute coronary syndromes",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute coronary syndromes"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated drug selection and safety checks, not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:11",
+      "facetNameKey": "acute kidney injury course",
+      "facetName": "Acute kidney injury course",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.3",
+          "page": 298,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            126.36
+          ],
+          "sourceBodySha256": "48ef9726cbee77c554f78efed99aba7988e5d5c22cdf0a75dbf8d1059e402f5b",
+          "editorialTaskSha256": "39a5aa15a88d9b4c88350fb3e29c9037cb5115a8d693a4f8a30af31ae71f74cc",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute kidney injury",
+      "proposedHomeNameKey": "acute kidney injury",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute kidney injury"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Clinical evolution, complications and treatment priorities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:12",
+      "facetNameKey": "acute kidney injury management",
+      "facetName": "Acute kidney injury management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f47bb3a96df75eb5aee10c27bada79cff98fe656c18109ba55d32caba214379d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.19",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            208.32,
+            102.7,
+            249.12
+          ],
+          "sourceBodySha256": "9d8dca2e9ceb7b903cc5a1a176b2f0369e7c0c3b9cf391a757a44239bb918636",
+          "editorialTaskSha256": "bc7985c5e2d45aea8bfd9cffc396f0d290b45157a2c6d0e2a7af93f0bd2ed2c0",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute kidney injury",
+      "proposedHomeNameKey": "acute kidney injury",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute kidney injury"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated volume/diet/medicine/monitoring/dialysis assessment priorities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:13",
+      "facetNameKey": "acute kidney injury mechanisms",
+      "facetName": "Acute kidney injury mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.2",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            519.66,
+            102.7,
+            547.02
+          ],
+          "sourceBodySha256": "f4c38f53e827360ee60c91cb5009363f1a2dbc32b41b64da3143abd4f9eb4c58",
+          "editorialTaskSha256": "a0a717e658cdda65295ba360bab9b741b16ba790a62bffaa829b6a778663f074",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute kidney injury",
+      "proposedHomeNameKey": "acute kidney injury",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute kidney injury"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Prerenal/intrinsic/postrenal mechanisms and clinical clues.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:14",
+      "facetNameKey": "acute migraine medicines",
+      "facetName": "Acute migraine medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:706e7c31f9af6f76d6c2f887798f11fc8e7eb14eae1aab367b6796b00d3c922c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM17.11",
+          "page": 309,
+          "rowBBox": [
+            44.2,
+            437.34,
+            102.7,
+            464.64
+          ],
+          "sourceBodySha256": "454fcfb5e4c4b56e661554d2c00b76c66f2803a669609445e0660052b069721f",
+          "editorialTaskSha256": "13ed5856821c1c408a0e7bdcf514f255e2b1a5e888f41379ad367f21771abcf4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Migraine",
+      "proposedHomeNameKey": "migraine",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "migraine"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Acute medicines, source-reference dosing principles and adverse effects; reference not reverified current.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:15",
+      "facetNameKey": "acute seizure care",
+      "facetName": "Acute seizure care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:106c25b4fd2b5b2e848f0c8d72987fba0060929bdcc1c23a8477623a9a0c4be2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM20.5",
+          "page": 313,
+          "rowBBox": [
+            44.2,
+            133.8,
+            102.7,
+            161.16
+          ],
+          "sourceBodySha256": "ab8db9168632c1863bed2fe10caffa474b109dba2bb83c29988b5366c0c2588b",
+          "editorialTaskSha256": "ac8abfcb33119c15400eb286c6fdf4870fd6abb25bfaf680875e38af12cafa02",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Seizure",
+      "proposedHomeNameKey": "seizure",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated ongoing seizure under a source-approved protocol; not epilepsy identity or independent competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:16",
+      "facetNameKey": "additional pneumonia testing",
+      "facetName": "Additional pneumonia testing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:75003b02a58cf526dccb67707d7b34d2e0d69b0ca2d26429001a7266fcd18f2e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.14",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            202.02,
+            102.7,
+            229.2
+          ],
+          "sourceBodySha256": "3bf145ae4d342e4859b0e37678dfec2c83b188270528ed478f95780c40128b63",
+          "editorialTaskSha256": "632f1e4209ff9a7489c823ae25463b6a591860a17c7fc028935fca6be222b291",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Pneumonia",
+      "proposedHomeNameKey": "pneumonia",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Pneumonia-specific additional testing and management impact.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:17",
+      "facetNameKey": "adherence barriers",
+      "facetName": "Adherence barriers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0291898c659942f9406b5af558391e7df653a3abfff64a30f89b981f0f7ac10",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.12",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            181.14,
+            102.7,
+            208.32
+          ],
+          "sourceBodySha256": "5adb4328f41f355f76783a7b037f272429713fbf36c9304559e56fae8a134a05",
+          "editorialTaskSha256": "c33ab342ab43e54f719e742001ccf295a8616e1113c8467988069e3b25e1a267",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Adherence",
+      "proposedHomeNameKey": "adherence",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "adherence"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Nonjudgmental barrier exploration and collaborative simulated care-plan revision.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:18",
+      "facetNameKey": "admission criteria",
+      "facetName": "Admission criteria",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6e87e8b4b3e39696537bfed544c445f9968f8af31cb3fa958038f5c05a329706",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM3.17",
+          "page": 287,
+          "rowBBox": [
+            44.2,
+            310.68,
+            102.7,
+            351.48
+          ],
+          "sourceBodySha256": "68864c31c01eb3a6dd75286ee2d1799b832bb442ee592886f034566208459c9d",
+          "editorialTaskSha256": "ef2d7e08a0a297b7d7cb5190fa479b6ac8e54d68fcc4baa89d41efdcff190e7a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Pneumonia",
+      "proposedHomeNameKey": "pneumonia",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Pneumonia source GM3.17 limits otherwise generic admission wording.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:19",
+      "facetNameKey": "adolescent clinic observation",
+      "facetName": "Adolescent clinic observation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ea117179c70b46b92ef7b7ef848371c3b45ee1f959d30e0f616e43406a0ec887",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE6.10",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            367.92,
+            103.1,
+            393.18
+          ],
+          "sourceBodySha256": "7163570f94e104265bf356b6447be7f237b6838495143435519ea6314b414eec",
+          "editorialTaskSha256": "a3e67b8957aac9a07d5b5bb92ee1b9fb94b875e7d676c7a98f41f49255c6d71f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Adolescent-friendly services",
+      "proposedHomeNameKey": "adolescent-friendly services",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "adolescent-friendly services"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Clinic workflow observation only; no independent service-delivery competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:20",
+      "facetNameKey": "adolescent confidentiality",
+      "facetName": "Adolescent confidentiality",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3107f8ddadbfeceff8e1927992c37002d8752d77ff67d0022cbcc6b778c65aab",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE6.7",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            169.44,
+            103.1,
+            201.96
+          ],
+          "sourceBodySha256": "faee0c29ff187878e624757d46c9c53d79335307a25221293a94e7410bbbf57c",
+          "editorialTaskSha256": "8e6abd3bf65ca407c59d65ae4a501915d1aa22f4152b577180a511e7e2f091ea",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Patient confidentiality",
+      "proposedHomeNameKey": "patient confidentiality",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "patient confidentiality"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Adolescent private consultation with confidentiality limits retained.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:21",
+      "facetNameKey": "adolescent health check",
+      "facetName": "Adolescent health check",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ae99f1df4b5aa2821f02cb273456c4ad13bf66ea208957dada5300ec74c4b0b1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe1-pe7-8-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE6.8",
+          "page": 331,
+          "rowBBox": [
+            51.3,
+            201.96,
+            103.1,
+            260.04
+          ],
+          "sourceBodySha256": "627d8f58007f411fd5c471f14806a05e65e4848528cfcff2e27710dfe7be7df1",
+          "editorialTaskSha256": "40edd55033278fd20c251665acc4c40d6600d5ad4cf0a219c63ee3cb459aff0d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Adolescent health",
+      "proposedHomeNameKey": "adolescent health",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "adolescent health"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "adolescent health"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated adolescent check, development and screening tasks only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:22",
+      "facetNameKey": "adolescent nutrition",
+      "facetName": "Adolescent nutrition",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ce6c07a139035b5c64d6d38d0e1872ae850e11efcb3de83dd46a7b6db056b8ad",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE10.6",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            412.02,
+            103.1,
+            429.18
+          ],
+          "sourceBodySha256": "5c8c051453d016dc10ffc96a49bbdf4bca4e09757fdab04fbf016b26e24531b8",
+          "editorialTaskSha256": "4b5e604194d30df3b2f7a8b772a8e051a27915663f33f7732bf12d41c29730cd",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Adolescent health",
+      "proposedHomeNameKey": "adolescent health",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "adolescent health"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "adolescent health"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Adolescent nutritional needs and common nutrition problems.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:23",
+      "facetNameKey": "adrenal anatomy",
+      "facetName": "Adrenal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:69eb58f9657ceb6b4a90ff5433fb18f75f4361d0607135d7aed795557e4977aa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU23.1",
+          "page": 408,
+          "rowBBox": [
+            45,
+            411.66,
+            101.7,
+            433.38
+          ],
+          "sourceBodySha256": "0ef50f5103a211d560dd66078d5335925b4894309ec9486b935aabe3a29bfd4a",
+          "editorialTaskSha256": "206e9bd07622f567bebc7b4731d05fc8ac29184286827a4ec96b899a75eee742",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Adrenal gland",
+      "proposedHomeNameKey": "adrenal gland",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "adrenal gland"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Adrenal surgical relations and vascular supply.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:24",
+      "facetNameKey": "adrenal function",
+      "facetName": "Adrenal function",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e43b310d0288e5e073fb7ec203d95907a9607470a28edab02b0c91a7d869ae46",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY8.4",
+          "page": 156,
+          "rowBBox": [
+            58.5,
+            363.78,
+            107.8,
+            404.46
+          ],
+          "sourceBodySha256": "dcb1bb9224bda0279f30ac487b1871eb87934da53d42b01f7c9d9e39e61c5b85",
+          "editorialTaskSha256": "c828e2560ab7eedef903b76b262b26d192ed9f2fe317597f0e3944ec81deb628",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Adrenal gland",
+      "proposedHomeNameKey": "adrenal gland",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "adrenal gland"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cortical/medullary hormone physiology and representative test interpretation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:25",
+      "facetNameKey": "adult protein planning",
+      "facetName": "Adult protein planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3d5577ce5f63bf42e462ce5f870d09fc76f267983c4fb4ae45bcb010dd646bc1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.11",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            330.9,
+            98.6,
+            371.94
+          ],
+          "sourceBodySha256": "314e620b1f4291151ce9d196ac6f29bb892ad043b6d6374a27a1e230f62dd9e6",
+          "editorialTaskSha256": "16fa5cc322184f3cfefefc5e460d90413ee38b9d71e71c47f1c81d166c67bdbd",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Protein requirements",
+      "proposedHomeNameKey": "protein requirements",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Adult menu protein adequacy against applicable ICMR-NIN reference; reference not reverified current.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:26",
+      "facetNameKey": "affordable diet planning",
+      "facetName": "Affordable diet planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6adbd3e09ad082907b125375a9e983a671c9832364ea90efeeedf002add47ad3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.4",
+          "page": 271,
+          "rowBBox": [
+            40.1,
+            462.72,
+            98.6,
+            508.14
+          ],
+          "sourceBodySha256": "4e83e5f62f490559921a96bad5245e1b569e3932023cd951ab99e2bb613378ae",
+          "editorialTaskSha256": "7d25e17695b5557b2392675e1675a1636d0428192f11159c80d01f66a8ebe4c0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Dietary planning",
+      "proposedHomeNameKey": "dietary planning",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated family diet, local food affordability and individual needs.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:27",
+      "facetNameKey": "age estimation report",
+      "facetName": "Age estimation report",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2062a41ac7563fa504cfaa39fe24fa226453bc4bb664974583ac358676324f96",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.4",
+          "page": 232,
+          "rowBBox": [
+            45.5,
+            210.42,
+            95.2,
+            254.34
+          ],
+          "sourceBodySha256": "c780625fa3830452aa0d2383d3ad2fc3ada9370c1b53f72a712022230f7101c9",
+          "editorialTaskSha256": "dc12b32e5bfcfabec8bc2e5f5f8371461074115bd758b6928c74680a2c6e6323",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Age estimation",
+      "proposedHomeNameKey": "age estimation",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "age estimation"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated age-estimation report with explicit uncertainty.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:28",
+      "facetNameKey": "airway anatomy",
+      "facetName": "Airway anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:32d346fa3af22607f9ac6c53c4fb768d982cc2aca27e4eb5f2e2a815d7cbf56c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS4.2",
+          "page": 453,
+          "rowBBox": [
+            46.7,
+            297.12,
+            98.1,
+            317.52
+          ],
+          "sourceBodySha256": "0c4849468bebfaab87c7a6cf722cf5ee4e6b391b6931982b10e95511e4d95f2f",
+          "editorialTaskSha256": "9fe141f9c18aade498a2e88d358483cf0681e1ae8a2393b0c424355a59b1941c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Airway",
+      "proposedHomeNameKey": "airway",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Airway landmarks for assessment and device selection.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:29",
+      "facetNameKey": "airway positioning",
+      "facetName": "Airway positioning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1b30cffd09eb30040c3cea97a439d83b49c477128a563e58ea0931c19181d2c7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.9",
+          "page": 343,
+          "rowBBox": [
+            51.3,
+            281.1,
+            103.1,
+            322.14
+          ],
+          "sourceBodySha256": "ca9aba407d08d959d79103639db93a97c2b1dfbff647f10e752a8c4288871d95",
+          "editorialTaskSha256": "750e0f2ec5860fb8ee2b67005758c55cc1969668441a46106282fcf8b68541db",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Airway",
+      "proposedHomeNameKey": "airway",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Infant/child airway positioning in simulation; distinct from independent airway management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-01:30",
+      "facetNameKey": "amniotomy observation",
+      "facetName": "Amniotomy observation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7e811310159434b528a4d57120cee1da74b93a143e62bdeff30fd60a9213c5d9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG13.5",
+          "page": 432,
+          "rowBBox": [
+            49.1,
+            432.18,
+            103.1,
+            465.3
+          ],
+          "sourceBodySha256": "bd132808edf563628f23374fff2ac09043c3b9fe0586b85312f3bb42f86beecc",
+          "editorialTaskSha256": "44438fe5065750b931010b7ca3034e5df4212dc9dc2d2f31af03a167ae7791c2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Amniotomy",
+      "proposedHomeNameKey": "amniotomy",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supervised observation or assistance; indications, precautions and documentation, not independent performance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 22,
+    "existingNameHomeLinks": 15,
+    "newNameHomeLinks": 15,
+    "facetsWithoutInitialHomeProposal": 629
+  }
+}

@@ -1,0 +1,2819 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-12.json",
+      "sha256": "d73d8f162382d10a978b97526956759a6f569c707f2eed24d0968177216b1cc3"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-13.json",
+      "sha256": "cc0ba2a8e4f79139c67ba6279cec7c0bad490a11e7d7d2c623d2ff07e71b05aa"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-14.json",
+      "sha256": "94432d89808a86487cd26062bb47f73c8f07edcdad5783feafda405555fd6ba1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-15.json",
+      "sha256": "c7151bc83f20df5684e3e9e95733a5cda0ee2ea60e8142b4dd579c91ecc0872a"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-16.json",
+      "sha256": "1732353578a16e2bf8c302962c0cee29a8c0a661e76f9d45c00352f3cf116f1c"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-17.json",
+      "sha256": "5945d172acea5370789b41495fc88ff120594c7235d51dff323e3bf5ed597684"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-18.json",
+      "sha256": "96ff1d6e8322fac6952bc83b2a3d2fbc6fb17b1a81f4f24f4cbb7a7b42248525"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-19.json",
+      "sha256": "004d7030dfa02a5f7fa686fa0d0df1d17ad55453f5fd0d5c428e2ac04b7f5e2f"
+    }
+  ],
+  "sourceHead": "de23a6f0d1f2171e1f439fbaca585597f859a907",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 32,
+    "componentProposals": 141,
+    "familyParentsWithoutDecompositionProposal": 52
+  },
+  "rows": [
+    {
+      "parentNameKey": "substance dependence",
+      "parentName": "Substance dependence",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH3.9",
+          "page": 177,
+          "rowBBox": [
+            51.7,
+            378.54,
+            105.7,
+            432.54
+          ],
+          "sourceBodySha256": "f83d9fc166116de58080db31cfa06f1ebae09cb32f1f617b193630c22f8e10de",
+          "editorialTaskSha256": "eab6fa24e5b3a46eb31851e2e28b3828d8f97af3db963d5687f4274f3dea2192",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:01:01",
+          "name": "Commonly misused drug classes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:01:02",
+          "name": "Dependence versus addiction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:01:03",
+          "name": "Substance dependence assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:01:04",
+          "name": "Substance dependence management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "substance use disorders",
+      "parentName": "Substance use disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55",
+          "packetPath": "docs/evidence/2026-11-05-nmc-psychiatry-ps1-ps13-draft-tasks.json",
+          "subjectId": "psychiatry",
+          "code": "PS3.1",
+          "page": 352,
+          "rowBBox": [
+            47.2,
+            368.4,
+            103.9,
+            411.66
+          ],
+          "sourceBodySha256": "520a6c7bfda4e0bcb3f3befe23d1a007e17ccd12941bc48bf18a9d779278dc4f",
+          "editorialTaskSha256": "507760d89d4c9ed7359f57433a1954b3a2eb56e3d53bc6b2404444032cb0269f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:02:01",
+          "name": "Alcohol-related substance use presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:02:02",
+          "name": "Nicotine-related substance use presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:02:03",
+          "name": "Locally relevant substance use presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:02:04",
+          "name": "Substance use assessment pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:02:05",
+          "name": "Substance use management pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e9e2ac01b1f3df9fdf64d2b38028b49d02c8d9c12e7abc8a7c0aabced8971c55"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "sudden natural death",
+      "parentName": "Sudden natural death",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:89f199b6440315818a190362e652710f1ffd1b1781381c3d7b7413199812b936",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.5",
+          "page": 217,
+          "rowBBox": [
+            45.5,
+            196.38,
+            95.2,
+            225.18
+          ],
+          "sourceBodySha256": "69a46ebdd7c025df1d400acbbf37144afd4cb96732de3e493e74dfc153bbde8b",
+          "editorialTaskSha256": "4e0766048682314f0c377a0a37678c16847fedc87eb684a6f0628b2e9a1128b9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:03:01",
+          "name": "Sudden natural death mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89f199b6440315818a190362e652710f1ffd1b1781381c3d7b7413199812b936"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:03:02",
+          "name": "Sudden natural death history evidence",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89f199b6440315818a190362e652710f1ffd1b1781381c3d7b7413199812b936"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:03:03",
+          "name": "Sudden natural death post-mortem evidence",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89f199b6440315818a190362e652710f1ffd1b1781381c3d7b7413199812b936"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "superficial facial muscles",
+      "parentName": "Superficial facial muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN28.6",
+          "page": 125,
+          "rowBBox": [
+            51.2,
+            479.88,
+            121.6,
+            529.62
+          ],
+          "sourceBodySha256": "97a83131afd646715a1f341b055e8abaa3dd51bbb3c8ea1db75371dd12a6c1ea",
+          "editorialTaskSha256": "fe35de8a93165f29ec2a6870ffc0b8831708e06123a31c48934c57f643a843df",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:04:01",
+          "name": "Superficial facial muscle identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:04:02",
+          "name": "Superficial facial muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:04:03",
+          "name": "Superficial facial muscle visible actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "surgical contraception",
+      "parentName": "Surgical contraception",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8570e7a44b5562197aebdba35fb7929eabb8afcb03b7f5b681394c6e2eef61f7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM8.13",
+          "page": 224,
+          "rowBBox": [
+            45.5,
+            100.2,
+            93.7,
+            143.76
+          ],
+          "sourceBodySha256": "a2587e0075d926c86ff0e1a3c8b43f11e27a1fd9f5b440b3550dbbb958053ba1",
+          "editorialTaskSha256": "b16eb9419175ed8e9431db9d3ddf31ca24948d68c771616bbda5e2b00fbb70df",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:05:01",
+          "name": "Vasectomy",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8570e7a44b5562197aebdba35fb7929eabb8afcb03b7f5b681394c6e2eef61f7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:05:02",
+          "name": "Tubal contraception procedures",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8570e7a44b5562197aebdba35fb7929eabb8afcb03b7f5b681394c6e2eef61f7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:05:03",
+          "name": "Surgical contraception programme roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8570e7a44b5562197aebdba35fb7929eabb8afcb03b7f5b681394c6e2eef61f7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "surgical infection",
+      "parentName": "Surgical infection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU6.1",
+          "page": 404,
+          "rowBBox": [
+            45,
+            272.52,
+            101.7,
+            308.94
+          ],
+          "sourceBodySha256": "4475460b577b21fed58074ba08764b018d321add67d4faa2a4effca9aa6e199b",
+          "editorialTaskSha256": "7009fcf11e7cadf3a0a5971d149e658ad96f6a98f8deac5c4d001fb9a94aab60",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:06:01",
+          "name": "Surgical infection source classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:06:02",
+          "name": "Surgical infection mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:06:03",
+          "name": "Surgical infection risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:acf7bbee4c93013773f2acafb902ec43c6335e35074aaec01768931d1e09c459"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "surgical pain management",
+      "parentName": "Surgical pain management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU11.5",
+          "page": 405,
+          "rowBBox": [
+            45,
+            410.28,
+            101.7,
+            447.48
+          ],
+          "sourceBodySha256": "06d9c3fbeed69a5fa1804b6133be17523567d7fe3952ecfed663da4ceedc7794",
+          "editorialTaskSha256": "32a992e32d4e276df2355f676c495fe43f71129e2b50aab71e46fc35e120f2cf",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:07:01",
+          "name": "Acute postoperative pain approaches",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:07:02",
+          "name": "Chronic surgical pain approaches",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:07:03",
+          "name": "Surgical pain reassessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:07:04",
+          "name": "Surgical pain adverse-effect monitoring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d57d0c5faab12409c367b9dda652ad540367324d139a96ee31bf95f6fd77cfcf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "synapse types",
+      "parentName": "Synapse types",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:11e19993a3ca9dee0f1fc197fefaca23a5771d3c3fa92a8c5f33e5301f348373",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-opening-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN7.7",
+          "page": 110,
+          "rowBBox": [
+            51.2,
+            452.88,
+            120.4,
+            467.94
+          ],
+          "sourceBodySha256": "be2a0fda6162f064a33a4f39c2b702bdf16e1d837bb9cac9b4f9d87cd177695a",
+          "editorialTaskSha256": "5493214a017c7ca8379b766d2f6ed080948049a63394862385b1d47f60249064",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:08:01",
+          "name": "Labelled synapse comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11e19993a3ca9dee0f1fc197fefaca23a5771d3c3fa92a8c5f33e5301f348373"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:08:02",
+          "name": "Synapse feature-based classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11e19993a3ca9dee0f1fc197fefaca23a5771d3c3fa92a8c5f33e5301f348373"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "systemic glomerular injury",
+      "parentName": "Systemic glomerular injury",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA27.7",
+          "page": 198,
+          "rowBBox": [
+            51.5,
+            295.5,
+            105.6,
+            323.22
+          ],
+          "sourceBodySha256": "464f5efcb0e33799dae3d585b8448fe2632a544e1ff3df71dd95a01948747494",
+          "editorialTaskSha256": "8e379b8f87826812d53b8516d2de198c8f00870c85268c69beec15149f58cc48",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:09:01",
+          "name": "Diabetic glomerular lesion morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:09:02",
+          "name": "Lupus glomerular lesion morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:09:03",
+          "name": "Systemic glomerular lesion clinical data",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:09:04",
+          "name": "Other systemic glomerular lesions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "target-organ injury",
+      "parentName": "Target-organ injury",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM8.7",
+          "page": 295,
+          "rowBBox": [
+            44.2,
+            415.8,
+            102.7,
+            443.16
+          ],
+          "sourceBodySha256": "ba6418f9fb93a45894233604fe4ad201f42539fd9c9f4989a168e8eb44f048a5",
+          "editorialTaskSha256": "682512f7bc92c46c4913b0a9a2d8c2618a251b889beda5ffd9b4696646c28697",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:10:01",
+          "name": "Cardiac target-organ complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:10:02",
+          "name": "Renal target-organ complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:10:03",
+          "name": "Retinal target-organ complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:10:04",
+          "name": "Neurological target-organ complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:10:05",
+          "name": "Vascular target-organ complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "temperature stress",
+      "parentName": "Temperature stress",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-integrated-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY12.2",
+          "page": 159,
+          "rowBBox": [
+            58.5,
+            458.82,
+            107.8,
+            491.58
+          ],
+          "sourceBodySha256": "78d851959ac141f5707d48c7c1589c911bb13aa633663669c0bf1827d4a4c4ce",
+          "editorialTaskSha256": "3f648bf700e91c3dc1284dea03f0d1c4a91a11c4ec6af79c744124af67b5f556",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:11:01",
+          "name": "Heat adaptation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:11:02",
+          "name": "Cold adaptation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:11:03",
+          "name": "Fever mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:11:04",
+          "name": "Cold injury mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:11:05",
+          "name": "Heatstroke mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:edac1ea22e4fffc00bc36896186abfdcf92ce6f2fc3b26298e8f2f315f188761"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "testicular tumours",
+      "parentName": "Testicular tumours",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA28.1",
+          "page": 199,
+          "rowBBox": [
+            51.5,
+            328.62,
+            105.6,
+            375.78
+          ],
+          "sourceBodySha256": "780dcdc127cfc929a1ea939cc4c8a81358817b0ef8cd3a0ff355bebc84247602",
+          "editorialTaskSha256": "ec4dd65db12837752cbd16bc7f7d7173b46d5743e7d4bc9df8b3f78fcc6cf7ce",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:610a1cf4cc11708be7ad32207ae8d2109251ad0bbfade62367d91dad0dddc48a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU30.6",
+          "page": 412,
+          "rowBBox": [
+            45,
+            432.6,
+            101.7,
+            468.3
+          ],
+          "sourceBodySha256": "8e86d8413181cf79aa31642ecfb782cf0d1a7aaf9d244746565acd3163da938e",
+          "editorialTaskSha256": "0c5d4871507c71d637cceee9fd19d81c8ad8ac7a6701de22f1dab642fceaa8aa",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:12:01",
+          "name": "Testicular tumour pathological classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:02",
+          "name": "Testicular tumour mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:03",
+          "name": "Testicular tumour morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:04",
+          "name": "Testicular tumour diagnostic markers",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:05",
+          "name": "Testicular tumour spread",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:06",
+          "name": "Testicular tumour clinical classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:610a1cf4cc11708be7ad32207ae8d2109251ad0bbfade62367d91dad0dddc48a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:07",
+          "name": "Testicular tumour recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:610a1cf4cc11708be7ad32207ae8d2109251ad0bbfade62367d91dad0dddc48a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:08",
+          "name": "Testicular tumour investigations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:610a1cf4cc11708be7ad32207ae8d2109251ad0bbfade62367d91dad0dddc48a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:12:09",
+          "name": "Testicular tumour treatment principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:610a1cf4cc11708be7ad32207ae8d2109251ad0bbfade62367d91dad0dddc48a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "therapeutic diets",
+      "parentName": "Therapeutic diets",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE10.5",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            379.38,
+            103.1,
+            412.02
+          ],
+          "sourceBodySha256": "dd9a6a905d26d3849de47671eb4cb704c86604c48d0b801ccd1d698fffe54b8d",
+          "editorialTaskSha256": "0b15c0697dd764ed9f7d21a031ff4bbb5dcac0c1076c1a036b9754509aabc0e1",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:13:01",
+          "name": "Locally prepared therapeutic diets",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:13:02",
+          "name": "Ready-to-use therapeutic diets",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:13:03",
+          "name": "Therapeutic diet practical constraints",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thoracic splanchnic nerves",
+      "parentName": "Thoracic splanchnic nerves",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN23.6",
+          "page": 123,
+          "rowBBox": [
+            51.2,
+            157.74,
+            121.9,
+            182.64
+          ],
+          "sourceBodySha256": "24398b4e62ca95df4c8810430f20eb8d1a78f38edad039477e642e3af8cdb87e",
+          "editorialTaskSha256": "3b3a9756238643639fb0f80722f829c3877c286ff95342715ecd27c726114f1e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:14:01",
+          "name": "Greater thoracic splanchnic nerve origins and course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:14:02",
+          "name": "Lesser thoracic splanchnic nerve origins and course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:14:03",
+          "name": "Least thoracic splanchnic nerve origins and course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:14:04",
+          "name": "Thoracic splanchnic routes to abdominal plexuses",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thoracic surface marking",
+      "parentName": "Thoracic surface marking",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN25.9",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            293.46,
+            122.2,
+            339.24
+          ],
+          "sourceBodySha256": "21e47bfb2b3d496121b82154b67485df5cb64e2c51c28c8ac8beaeb19dc95e91",
+          "editorialTaskSha256": "019ffeb01d93c6038ad2d2d8db2f110f73edb80547bd1d3a70943d4c3bc3419e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:15:01",
+          "name": "Pleural reflection surface marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:02",
+          "name": "Lung margin surface marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:03",
+          "name": "Lung fissure surface marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:04",
+          "name": "Tracheal surface marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:05",
+          "name": "Cardiac border surface marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:06",
+          "name": "Apex beat marking",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:07",
+          "name": "Projected cardiac valve positions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:15:08",
+          "name": "Valve auscultation sites",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thoracoabdominal sections",
+      "parentName": "Thoracoabdominal sections",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-sectional-imaging-neuroanatomy-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN51.1",
+          "page": 138,
+          "rowBBox": [
+            51.2,
+            226.8,
+            122.2,
+            271.8
+          ],
+          "sourceBodySha256": "d2058d5dadb41b1d4c9d4d3d7c7a21cee4def6cb16fe46ba04f603165da4fe07",
+          "editorialTaskSha256": "f4f96df193df2b1a4f969abf840077ba421b8655e4716ed334873eb496025187",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:16:01",
+          "name": "T8 axial section orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:16:02",
+          "name": "T10 axial section orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:16:03",
+          "name": "L1 axial section orientation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:16:04",
+          "name": "Thoracoabdominal section organ identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:16:05",
+          "name": "Thoracoabdominal section vessel identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:16:06",
+          "name": "Thoracoabdominal section vertebral landmarks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8aa0a3800931598dd6c768c8a94037f05f0b2439dce7f81ca38890198afb09c3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid cancer",
+      "parentName": "Thyroid cancer",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:519528ae9cf8fbe3303cb94de61bc95571ee4cce49359e15f24bd04c29ef1535",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU22.4",
+          "page": 408,
+          "rowBBox": [
+            45,
+            302.76,
+            101.7,
+            336.9
+          ],
+          "sourceBodySha256": "974df2043b23b4085f223a7a2a4492e05ed69978e2f05fbf6c7c767fdef28a85",
+          "editorialTaskSha256": "2a5ac0b597467273dff6a29d5000dcc7ec4d51d879e61775fedd69b8b2df9890",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:17:01",
+          "name": "Thyroid cancer clinical classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:519528ae9cf8fbe3303cb94de61bc95571ee4cce49359e15f24bd04c29ef1535"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:17:02",
+          "name": "Thyroid cancer presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:519528ae9cf8fbe3303cb94de61bc95571ee4cce49359e15f24bd04c29ef1535"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:17:03",
+          "name": "Thyroid cancer management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:519528ae9cf8fbe3303cb94de61bc95571ee4cce49359e15f24bd04c29ef1535"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid disease mechanisms",
+      "parentName": "Thyroid disease mechanisms",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.1",
+          "page": 301,
+          "rowBBox": [
+            44.2,
+            385.98,
+            102.7,
+            440.22
+          ],
+          "sourceBodySha256": "a34f691f082f30c8e044a5c5ae51c1378033be8c2689ff7057baa1409cc0285e",
+          "editorialTaskSha256": "f19e912e081449fa24388e9a69a7058c762aa006b086f45188f35e81103406e7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:18:01",
+          "name": "Thyroid disease epidemiology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:18:02",
+          "name": "Thyroid disease genetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:18:03",
+          "name": "Iodine-deficiency thyroid mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:18:04",
+          "name": "Autoimmune thyroid mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:eb4da550bf1ed7ae6c889402a51cbb47cd1b1f94020f4fdcf3f5cfd631c5539a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid disorders in pregnancy",
+      "parentName": "Thyroid disorders in pregnancy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG12.9",
+          "page": 431,
+          "rowBBox": [
+            49.1,
+            459.54,
+            103.1,
+            490.86
+          ],
+          "sourceBodySha256": "8a0371e1e2b844e7e1f157926c82bc54c5470410b6e4eb0cbe85fc98f72dff06",
+          "editorialTaskSha256": "3c12a5d449a75b396cd5787762d2241c525e6353b0c921fea85d58a45007475b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:19:01",
+          "name": "Thyroid disorder mechanisms in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:19:02",
+          "name": "Thyroid disorder prevention in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:19:03",
+          "name": "Thyroid testing in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:19:04",
+          "name": "Thyroid disorder fetal risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:19:05",
+          "name": "Thyroid disorder management in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c575167acca173808d181b3d2767926d4884e416b20b9edbc4ca0bf445e5f60b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid functional disorders",
+      "parentName": "Thyroid functional disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA31.3",
+          "page": 201,
+          "rowBBox": [
+            51.5,
+            398.04,
+            105.6,
+            431.16
+          ],
+          "sourceBodySha256": "56e2d3f702b2673258d856360079d0d02aa5b6b9a8710638437b9a3887393cae",
+          "editorialTaskSha256": "114f66808e607d80aae759e9beaeb4e5c45828d7aecae3db11b6450acb4dad18",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:20:01",
+          "name": "Thyrotoxicosis mechanisms and manifestations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:20:02",
+          "name": "Hypothyroidism mechanisms and manifestations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:20:03",
+          "name": "Thyroid functional disorder laboratory patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:20:04",
+          "name": "Thyroid functional disorder imaging patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:20:05",
+          "name": "Thyroid functional disorder course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid medicines",
+      "parentName": "Thyroid medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH7.3",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            456.96,
+            105.7,
+            498
+          ],
+          "sourceBodySha256": "62f4a7cfaf2ce5593b26eb26819ed8bf2bca7ed1bf9d524c51bea6f700e499f9",
+          "editorialTaskSha256": "114aa129dd2b4a8227c940b25df32920fa28d9f4fa5b160c38877dc0d723e3c6",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:21:01",
+          "name": "Thyroid replacement drug kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:21:02",
+          "name": "Antithyroid drug kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:21:03",
+          "name": "Thyroid medicine actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:21:04",
+          "name": "Thyroid medicine adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:21:05",
+          "name": "Simulated thyroid treatment planning",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid pharmacology",
+      "parentName": "Thyroid pharmacology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.12",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            338.64,
+            102.7,
+            366
+          ],
+          "sourceBodySha256": "4cd09a017fcf6fae09f2bfe0bb711d19fb171fc5933c49100208c0e1ed6517cc",
+          "editorialTaskSha256": "153b2f182ce03a80bac9d5ae4ff25f9f21a8740fd476914162958b1d019381c4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:22:01",
+          "name": "Levothyroxine indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:22:02",
+          "name": "Levothyroxine mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:22:03",
+          "name": "Antithyroid medicine indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:22:04",
+          "name": "Antithyroid medicine mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:22:05",
+          "name": "Thyroid pharmacology adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:22:06",
+          "name": "Thyroid pharmacology interactions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b2d666863b785de5e607e34814939e4619cee369cc1359761a2e5f34f94891f1"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid swellings",
+      "parentName": "Thyroid swellings",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ad3c7841a33acb3b385cfadda7bdc58f4d7adba468d07046e311f6d2123ddb7c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU22.2",
+          "page": 408,
+          "rowBBox": [
+            45,
+            237.84,
+            101.7,
+            259.08
+          ],
+          "sourceBodySha256": "27b7911b4051b751d2c9decd805c70e37dfd226662218f4a2f1f618474ca35b8",
+          "editorialTaskSha256": "f7f374f1981e298b7c49dbab508995b900890937fa608abd8fb74c5fb17cb510",
+          "mode": "knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA31.1",
+          "page": 201,
+          "rowBBox": [
+            51.5,
+            323.22,
+            105.6,
+            354.54
+          ],
+          "sourceBodySha256": "ba50445a765bf58891a7d1c82b9a81641e35899a8c0d97158455a5cc15922d5b",
+          "editorialTaskSha256": "b79f89f3a091de5f4a3026f62bf0d649b618a92aa90bc8e6fa5880039e60e927",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:23:01",
+          "name": "Diffuse thyroid enlargement mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ad3c7841a33acb3b385cfadda7bdc58f4d7adba468d07046e311f6d2123ddb7c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:23:02",
+          "name": "Thyroid nodule mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ad3c7841a33acb3b385cfadda7bdc58f4d7adba468d07046e311f6d2123ddb7c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:23:03",
+          "name": "Diffuse and nodular thyroid classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:23:04",
+          "name": "Thyroid iodine-exposure mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:23:05",
+          "name": "Other thyroid enlargement causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:23:06",
+          "name": "Thyroid enlargement morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyroid tumours",
+      "parentName": "Thyroid tumours",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA31.4",
+          "page": 201,
+          "rowBBox": [
+            51.5,
+            431.16,
+            105.6,
+            473.28
+          ],
+          "sourceBodySha256": "1ec8cbc46f67bce895b0a4b9c24dcfdf7b8f3c7cec4b6803297e11ad60d868d1",
+          "editorialTaskSha256": "75c42d2e7a894a6fb830f60b6760b786f914e2bd4827d278f057cf0cd1a2391d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:24:01",
+          "name": "Thyroid tumour pathological classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:24:02",
+          "name": "Thyroid tumour risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:24:03",
+          "name": "Thyroid tumour mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:24:04",
+          "name": "Thyroid tumour morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:24:05",
+          "name": "Thyroid tumour laboratory features",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:24:06",
+          "name": "Thyroid tumour complications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "thyrotoxicosis treatment choices",
+      "parentName": "Thyrotoxicosis treatment choices",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8e2332a2f16f3914afb1eeaa2b530aeceeedd7cba5b1fddff85b8385cf90de10",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.14",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            393.36,
+            102.7,
+            420.72
+          ],
+          "sourceBodySha256": "1c2ec0ccbf2d4b240fc03a7d6d0dccb93da11c2f7b081b0a08bc6c16b53ccbcd",
+          "editorialTaskSha256": "9f77cf7d92c579a5c459a2bd21ecf34d65c7871f32f78fcdcd927bd10505e232",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:25:01",
+          "name": "Thionamide indications and limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e2332a2f16f3914afb1eeaa2b530aeceeedd7cba5b1fddff85b8385cf90de10"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:25:02",
+          "name": "Radioiodine indications and limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e2332a2f16f3914afb1eeaa2b530aeceeedd7cba5b1fddff85b8385cf90de10"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:25:03",
+          "name": "Thyroid surgery indications and limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8e2332a2f16f3914afb1eeaa2b530aeceeedd7cba5b1fddff85b8385cf90de10"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "toxic alcohol poisoning",
+      "parentName": "Toxic alcohol poisoning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.8",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            324.12,
+            102.7,
+            351.48
+          ],
+          "sourceBodySha256": "4fb090ab3c22aee6a5a6c696bc26a751962c6a5f6b89a3593d17bbfb5d37f162",
+          "editorialTaskSha256": "9be22e44c4d31cd66bd32eb49b50bc241652e3219146f878bade07379c9d0a1a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:26:01",
+          "name": "Methanol poisoning patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:26:02",
+          "name": "Ethylene glycol poisoning patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:26:03",
+          "name": "Toxic alcohol assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:26:04",
+          "name": "Toxic alcohol prognosis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:26:05",
+          "name": "Toxic alcohol specific management principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "toxic inhalation",
+      "parentName": "Toxic inhalation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.16",
+          "page": 231,
+          "rowBBox": [
+            45.5,
+            52.38,
+            95.2,
+            124.02
+          ],
+          "sourceBodySha256": "40e2aa9d2caef6ce7e6814838c626c5fce7b7d9754cd21edad0584a163158abe",
+          "editorialTaskSha256": "dde41e6171e21e6f3c408863063d9d9b25c84fc2deaa72191cd3b9d55c8c3780",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:27:01",
+          "name": "Ammonia inhalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:02",
+          "name": "Carbon monoxide inhalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:03",
+          "name": "Cyanide inhalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:04",
+          "name": "Methyl isocyanate inhalation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:05",
+          "name": "Riot-control agent exposure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:06",
+          "name": "Simulated toxic inhalation supportive measures",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:27:07",
+          "name": "Simulated toxic inhalation specific measures",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6247b00c6673d682f4920c3a990c6255f41a5793ff02e05760eae041e49624d3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "toxicology terminology",
+      "parentName": "Toxicology terminology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:800be51747fd880d3779cde41f8cbd59597cecb60da000fd71274f59e552cdd7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM13.2",
+          "page": 229,
+          "rowBBox": [
+            45.5,
+            277.08,
+            95.2,
+            302.94
+          ],
+          "sourceBodySha256": "ae30b8a08ce232e183dc2354b7a4950288b11255fbc8035d0420814c511cbc31",
+          "editorialTaskSha256": "fc47dfa5d039b1b73e0f9cc058ee6e3ecc7d8c5775549d780b1c5e6f35d6a2e9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:28:01",
+          "name": "Clinical toxicology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:800be51747fd880d3779cde41f8cbd59597cecb60da000fd71274f59e552cdd7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:28:02",
+          "name": "Forensic toxicology",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:800be51747fd880d3779cde41f8cbd59597cecb60da000fd71274f59e552cdd7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:28:03",
+          "name": "Dose-toxicity relationship",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:800be51747fd880d3779cde41f8cbd59597cecb60da000fd71274f59e552cdd7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:28:04",
+          "name": "Exposure-toxicity relationship",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:800be51747fd880d3779cde41f8cbd59597cecb60da000fd71274f59e552cdd7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "toxidromes",
+      "parentName": "Toxidromes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM22.5",
+          "page": 314,
+          "rowBBox": [
+            44.2,
+            215.22,
+            102.7,
+            242.58
+          ],
+          "sourceBodySha256": "b124646a06cf7484dc8b3a34ad05c4f556a513303c40b29934d3d6258c0cd958",
+          "editorialTaskSha256": "e166b84d990b4ce52e08fd88b0b7d40c4e6036edb5f06a5a482fbed76e16c5bd",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:29:01",
+          "name": "Toxidrome vital sign interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:29:02",
+          "name": "Toxidrome examination interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:29:03",
+          "name": "Toxidrome exposure interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "tracheal anatomy",
+      "parentName": "Tracheal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN24.6",
+          "page": 123,
+          "rowBBox": [
+            51.2,
+            396.42,
+            121.9,
+            421.26
+          ],
+          "sourceBodySha256": "daccb2f8ed602f3c65233e05a9f07004d2ef235800bfa570d47df7197e19db93",
+          "editorialTaskSha256": "5f837c5feb32ae3bfdbf5cfa368c2517437df9e8d94818f145994b4d1889040e",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-20:30:01",
+          "name": "Tracheal cervical origin",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:02",
+          "name": "Carina",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:03",
+          "name": "Tracheal length estimation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:04",
+          "name": "Cervical tracheal relations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:05",
+          "name": "Thoracic tracheal relations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:06",
+          "name": "Tracheal vascular pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:07",
+          "name": "Tracheal lymphatic pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-20:30:08",
+          "name": "Tracheal neural pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

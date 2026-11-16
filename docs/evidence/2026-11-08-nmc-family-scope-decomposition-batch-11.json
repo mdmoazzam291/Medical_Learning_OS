@@ -1,0 +1,2498 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    }
+  ],
+  "sourceHead": "2013ff7c315b1c2c1dbc4ca287263808a9e06e0c",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 30,
+    "componentProposals": 119,
+    "familyParentsWithoutDecompositionProposal": 322
+  },
+  "rows": [
+    {
+      "parentNameKey": "indian medico-legal framework",
+      "parentName": "Indian medico-legal framework",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM1.3",
+          "page": 215,
+          "rowBBox": [
+            45.5,
+            355.08,
+            95.2,
+            428.52
+          ],
+          "sourceBodySha256": "0ef99c2ce4e75502fc7589be8fdd3c2da2d0222fa68fc8b4265bad6865767282",
+          "editorialTaskSha256": "192a8a46e7e537ca5bb6f213670db8d0c85a9a28e9f55392fc669d8f8f458f64",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:01:01",
+          "name": "Indian medico-legal case classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:01:02",
+          "name": "Civil case classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:01:03",
+          "name": "Criminal case classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:01:04",
+          "name": "Offence categories",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:01:05",
+          "name": "Police inquests",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:01:06",
+          "name": "Magistrate inquests",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d95ff701122a1fb7961b13a5de6e110165dc80aec77663036f287f036a628c90"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "industrial health services",
+      "parentName": "Industrial health services",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm9-cm13-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM11.6",
+          "page": 277,
+          "rowBBox": [
+            40.1,
+            223.26,
+            98.6,
+            255.84
+          ],
+          "sourceBodySha256": "d42853d3ca76e9cfabab7c0327a78dd3536cea74ec0f966b6d45191e7dc5fc41",
+          "editorialTaskSha256": "b8ea962b2e9bf32598c4448282b624aaad974aabbb57fe8e4fd0ca93c0b4f870",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:02:01",
+          "name": "Workplace health surveillance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:02:02",
+          "name": "Workplace incident management",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:02:03",
+          "name": "Workplace referral",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:02:04",
+          "name": "Simulated workplace response",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:11015573ba349ef2b2409cc65a8d30d3c6f5b39820bafc5e6e8b797a7391940a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infant feeding practices",
+      "parentName": "Infant feeding practices",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.16",
+          "page": 272,
+          "rowBBox": [
+            40.1,
+            494.52,
+            98.6,
+            522
+          ],
+          "sourceBodySha256": "b33acb2bbcebb5f1fdde17171a422bf73c66cbdd9d9fe0491c450cd0b69d70d9",
+          "editorialTaskSha256": "b357fecfcad40cfe42b224efcb3b764b00c8b598710718a64abb0e22b1751bb0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:03:01",
+          "name": "Breastfeeding",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "breastfeeding"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:03:02",
+          "name": "Complementary feeding",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "complementary feeding"
+            },
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "complementary feeding"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:03:03",
+          "name": "Infant feeding practices",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:89dde40237a298306af129a1ff44111f2cc591e9a181ffaf7cd6962d4cd3e4d2"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "infant feeding practices"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infection control practice",
+      "parentName": "Infection control practice",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI10.3",
+          "page": 213,
+          "rowBBox": [
+            51.9,
+            262.08,
+            108.8,
+            303.12
+          ],
+          "sourceBodySha256": "7c9432ccc80806d8d0fb506270dfc243be9d57d68303d48592cb99fc9b46798e",
+          "editorialTaskSha256": "0c0f02dc385c6f3dda8ff24affdf5ebafa011b0a4974c7fdb86481fda73aab46",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:04:01",
+          "name": "Hand hygiene",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:04:02",
+          "name": "PPE donning",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:04:03",
+          "name": "PPE doffing",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:04:04",
+          "name": "Biomedical waste segregation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:04:05",
+          "name": "Simulated infection control practice",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infection precautions",
+      "parentName": "Infection precautions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI10.2",
+          "page": 213,
+          "rowBBox": [
+            51.9,
+            221.04,
+            108.8,
+            262.08
+          ],
+          "sourceBodySha256": "dc6776b553862114fb9a83ef905c03b22157af35ef6c70421197f6a76a920f74",
+          "editorialTaskSha256": "4f6923d95b0d342c8261313dd07d9cf1302d2ee22ca184a59a74a738bc1646d0",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:05:01",
+          "name": "Standard precautions",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "standard precautions"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:05:02",
+          "name": "Transmission-based precautions",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:05:03",
+          "name": "Infection control committee",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infection-associated cancer",
+      "parentName": "Infection-associated cancer",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f09b0dff013f1c3158d5e6dd0e27b35188c8f639ed3f491b32746c0280eb4a3c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.3",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            496.44,
+            102.7,
+            523.8
+          ],
+          "sourceBodySha256": "705b805c53196bf90998561b02be2ae00847b1c28f35d00b867b04ed4e5b6eaf",
+          "editorialTaskSha256": "1edda5b749878495e129596b3cbec4cc5950aa81e61b59c8b04f3ee27f1a10ed",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:06:01",
+          "name": "Infection-associated malignancy mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f09b0dff013f1c3158d5e6dd0e27b35188c8f639ed3f491b32746c0280eb4a3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:06:02",
+          "name": "Infection-associated malignancy prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f09b0dff013f1c3158d5e6dd0e27b35188c8f639ed3f491b32746c0280eb4a3c"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infection-associated cancers",
+      "parentName": "Infection-associated cancers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI9.4",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            498.3,
+            108.8,
+            539.4
+          ],
+          "sourceBodySha256": "bcd2aa6ad21ab0c3b7f035d28b689a64efb86ad5bef47c6af03fa6496b33b28d",
+          "editorialTaskSha256": "2d32dd4247241d9a12a3338d4795598b61d19244b3be43f86f1ba5fd81f78626",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:07:01",
+          "name": "Microbial oncogenic mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:07:02",
+          "name": "Viral oncogenic mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:07:03",
+          "name": "Oncogenic exposure prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infectious anaemia",
+      "parentName": "Infectious anaemia",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI3.9",
+          "page": 209,
+          "rowBBox": [
+            51.9,
+            190.08,
+            108.8,
+            227.52
+          ],
+          "sourceBodySha256": "7216157f661865f10f4472ad272084522b062ea555e415910bd30cbba0bccfce",
+          "editorialTaskSha256": "282e03fba95adc429b7876672a1973463a8f3935d94841ebc3c71d77a0213be2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:08:01",
+          "name": "Infection-associated blood loss",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:08:02",
+          "name": "Infection-associated haemolysis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:08:03",
+          "name": "Infection-associated impaired erythropoiesis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:08:04",
+          "name": "Organism classification by anaemia mechanism",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infectious diarrhoea",
+      "parentName": "Infectious diarrhoea",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.2",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            68.34,
+            108.8,
+            115.14
+          ],
+          "sourceBodySha256": "8a1c499ce560fb6a2b8b19a8d9fcd1dcb726765baef3512c4270a730f1730927",
+          "editorialTaskSha256": "6daa249fd76f40021aed7eee7db9a743af1a45fd4c3d46497595f73738042703",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:09:01",
+          "name": "Infectious diarrhoea epidemiology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:09:02",
+          "name": "Infectious diarrhoea agent morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:09:03",
+          "name": "Infectious diarrhoea mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:09:04",
+          "name": "Infectious diarrhoea presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:09:05",
+          "name": "Infectious diarrhoea diagnostic tests",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infectious dysentery",
+      "parentName": "Infectious dysentery",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.3",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            115.14,
+            108.8,
+            157.68
+          ],
+          "sourceBodySha256": "4199e5de70eeb1e30066976d98f9214d1f90a63a83de43b602af1a55b6b565f8",
+          "editorialTaskSha256": "6daa249fd76f40021aed7eee7db9a743af1a45fd4c3d46497595f73738042703",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:10:01",
+          "name": "Infectious dysentery epidemiology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:10:02",
+          "name": "Infectious dysentery agent morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:10:03",
+          "name": "Infectious dysentery mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:10:04",
+          "name": "Infectious dysentery presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:10:05",
+          "name": "Infectious dysentery diagnostic tests",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infectious tissue injury",
+      "parentName": "Infectious tissue injury",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA10.4",
+          "page": 190,
+          "rowBBox": [
+            51.5,
+            372.48,
+            105.6,
+            410.64
+          ],
+          "sourceBodySha256": "4e102e6eb5234a8504821e24a1a50d9ff5e88b41863044c88271c7deeb031219",
+          "editorialTaskSha256": "35ce59315a8e8ad369439d661038b7e5fe3fab31352617db79fc7eefd2c84262",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:11:01",
+          "name": "Bacterial tissue injury",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:11:02",
+          "name": "Viral tissue injury",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:11:03",
+          "name": "Protozoal tissue injury",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:11:04",
+          "name": "Helminthic tissue injury",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:11:05",
+          "name": "Infectious tissue injury host response",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:11:06",
+          "name": "Infectious tissue injury morphology",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infective skin lesions",
+      "parentName": "Infective skin lesions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI5.4",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            115.14,
+            108.8,
+            146.88
+          ],
+          "sourceBodySha256": "30c4c20f6a4a6a5f34cb139d38564347bca66cb5a1e38fff260641a515aae898",
+          "editorialTaskSha256": "221c2358174f748c16454afc4e7cfd1467f5fb6773a2de85276ea47e06c2d3e7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:12:01",
+          "name": "Infectious skin lesions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:12:02",
+          "name": "Noninfectious skin lesions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:12:03",
+          "name": "Systemic infections with cutaneous findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:12:04",
+          "name": "Skin lesion differentiation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "infertility drugs",
+      "parentName": "Infertility drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH7.9",
+          "page": 181,
+          "rowBBox": [
+            51.7,
+            372.96,
+            105.7,
+            397.44
+          ],
+          "sourceBodySha256": "7e25f5d55657ed1c03369625f9205b17bb7a91a25d9cd3bff12120e67a284f88",
+          "editorialTaskSha256": "57484c1c1417cb545d50da147abffec53f5d1efea0a2c4e6c8dd72c6144aeb79",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:13:01",
+          "name": "Fertility medicine physiological targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:13:02",
+          "name": "Fertility medicine clinical roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "inflammatory polyarthritis",
+      "parentName": "Inflammatory polyarthritis",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR5.1",
+          "page": 447,
+          "rowBBox": [
+            49.1,
+            448.14,
+            103.1,
+            514.86
+          ],
+          "sourceBodySha256": "a6e2f02c568b27c3290762ab4ce61e0cf52be7d4e1896650272342f25fa56631",
+          "editorialTaskSha256": "e0609de4da72ecfe6e851ffb4ac7461f7e1358bb8e0f864ddf083bba30205d73",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:14:01",
+          "name": "Rheumatoid presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:14:02",
+          "name": "Axial spondyloarthritis presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:14:03",
+          "name": "Psoriatic presentations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:14:04",
+          "name": "Inflammatory polyarthritis joint patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:14:05",
+          "name": "Inflammatory polyarthritis extra-articular findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:14:06",
+          "name": "Inflammatory polyarthritis investigations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5366038f35bd89f42416c0377bc062a613de7cedc8e51b41dcee9a917d1e0b2a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "information flow",
+      "parentName": "Information flow",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC10.4",
+          "page": 167,
+          "rowBBox": [
+            58.7,
+            266.34,
+            108.5,
+            308.46
+          ],
+          "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+          "editorialTaskSha256": "c7eb0e6d2688347a53bf62b917f479fa887e32897e904449105c251c592794e4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:15:01",
+          "name": "DNA replication",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:15:02",
+          "name": "Transcription",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:15:03",
+          "name": "Translation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "inguinal hernias",
+      "parentName": "Inguinal hernias",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ca6881ed0d22570fc6045dba1e0ed60b2653a12b12955352e833050659b5e512",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-abdomen-pelvis-spine-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN44.5",
+          "page": 134,
+          "rowBBox": [
+            51.2,
+            158.46,
+            122.2,
+            185.46
+          ],
+          "sourceBodySha256": "f8168e129491674d180765a20e9779d190b512d3bd3e76c932a084bbb5df4e1a",
+          "editorialTaskSha256": "13fbdddb839ed4c19bc09ad1821ab19fcf786f54c16ed4c55506023af3c80328",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:16:01",
+          "name": "Direct inguinal hernia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca6881ed0d22570fc6045dba1e0ed60b2653a12b12955352e833050659b5e512"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:16:02",
+          "name": "Indirect inguinal hernia",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca6881ed0d22570fc6045dba1e0ed60b2653a12b12955352e833050659b5e512"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:16:03",
+          "name": "Hernia routes relative to the deep inguinal ring",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca6881ed0d22570fc6045dba1e0ed60b2653a12b12955352e833050659b5e512"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:16:04",
+          "name": "Hernia routes relative to inferior epigastric vessels",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ca6881ed0d22570fc6045dba1e0ed60b2653a12b12955352e833050659b5e512"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "inheritance patterns",
+      "parentName": "Inheritance patterns",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN74.1",
+          "page": 145,
+          "rowBBox": [
+            51.2,
+            476.64,
+            122,
+            509.4
+          ],
+          "sourceBodySha256": "03720f1662f836e43ad85dc757e262319c5532cd6664abf03cf05d070a5ed000",
+          "editorialTaskSha256": "490b1f88df66b7eaefcd9daa200bcf60ec5c06f7636e9e67796eb778f33fb849",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:17:01",
+          "name": "Mendelian inheritance",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:17:02",
+          "name": "Non-Mendelian inheritance",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:17:03",
+          "name": "Inheritance pattern comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "initial cancer investigations",
+      "parentName": "Initial cancer investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.11",
+          "page": 303,
+          "rowBBox": [
+            44.2,
+            344.04,
+            102.7,
+            384.78
+          ],
+          "sourceBodySha256": "be4126505f37d1c8c4ee2a21af0753afef5a1b480cb0dda8a2223059791bbd23",
+          "editorialTaskSha256": "a72886478d7302d396e8af686da08191dee0ce0074850b500ce1954ee2667787",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:18:01",
+          "name": "Blood count interpretation in initial cancer assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:18:02",
+          "name": "Faecal occult blood interpretation in initial cancer assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:18:03",
+          "name": "PSA interpretation in initial cancer assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:18:04",
+          "name": "Initial cancer investigation selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fdab129b345bb4a3151210a4ad1213d1de726a35c53843994df71ae708406d48"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "initial cardiac tests",
+      "parentName": "Initial cardiac tests",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5d9e58a4598f40a5835d1deb9782aa96f30ac6184b7e33ff5837a8a970c64c63",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.15",
+          "page": 282,
+          "rowBBox": [
+            44.2,
+            378.06,
+            102.7,
+            421.2
+          ],
+          "sourceBodySha256": "6dbbfed8b31a0b0975bceec48a7ebcb7f27dc52d10abe6d63f601d73bb342a20",
+          "editorialTaskSha256": "8d7853b012159b052ec50651e297b1a9a22a80acbc2376cdd8f1de24181c9b62",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:19:01",
+          "name": "ECG selection and interpretation in cardiac assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d9e58a4598f40a5835d1deb9782aa96f30ac6184b7e33ff5837a8a970c64c63"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:19:02",
+          "name": "Chest radiography selection and interpretation in cardiac assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d9e58a4598f40a5835d1deb9782aa96f30ac6184b7e33ff5837a8a970c64c63"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:19:03",
+          "name": "Blood culture indications in cardiac assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5d9e58a4598f40a5835d1deb9782aa96f30ac6184b7e33ff5837a8a970c64c63"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "initial diarrhoea investigations",
+      "parentName": "Initial diarrhoea investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:cc0590752c0101a6e1246fb6de484f603fc3d6b656bf40023a7654d9e60700b7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM16.8",
+          "page": 308,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            149.76
+          ],
+          "sourceBodySha256": "ce69862acbe8184cd52f6bac4953ed38e60fa3331116276c3c230a53aa627069",
+          "editorialTaskSha256": "2cfa1ce6077c341fe2ec19e23bd3080f00aa763a3f628fed76e17f8ff7fc7d0f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:20:01",
+          "name": "Blood count selection and interpretation in diarrhoea",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cc0590752c0101a6e1246fb6de484f603fc3d6b656bf40023a7654d9e60700b7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:20:02",
+          "name": "Stool finding interpretation in diarrhoea",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:cc0590752c0101a6e1246fb6de484f603fc3d6b656bf40023a7654d9e60700b7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "injury healing",
+      "parentName": "Injury healing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.4",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            95.94,
+            94,
+            129.42
+          ],
+          "sourceBodySha256": "4f8920bfe878c24c26b46f5e90a89581c10cd1765311dbe76388bdcb3083a73c",
+          "editorialTaskSha256": "cf21ca1a89c70d3ff6e1c41ab84f8a3fdd7302df797858248bc218d24169acf2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:21:01",
+          "name": "Wound healing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "wound healing"
+            },
+            {
+              "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+              "nameKey": "wound healing"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:21:02",
+          "name": "Fracture healing",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:21:03",
+          "name": "Injury age estimation limits",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:31acc727dce64a775366bea8227378bf73f6cd3c806f589461b36baf316a60d7"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "injury specimens",
+      "parentName": "Injury specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm10-fm14-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM14.9",
+          "page": 232,
+          "rowBBox": [
+            45.5,
+            426.78,
+            95.2,
+            484.44
+          ],
+          "sourceBodySha256": "f366c3d2047e607329cc299470d33e770c3c23185c3caa9a936f59a6c78d3842",
+          "editorialTaskSha256": "92dcdc431e926daf639fd3b88084cba343f153d9a447646074747fa2c55efb7f",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:22:01",
+          "name": "Blunt injury specimens",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:22:02",
+          "name": "Firearm injury specimens",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:22:03",
+          "name": "Thermal injury specimens",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:22:04",
+          "name": "Skeletal injury specimens",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:22:05",
+          "name": "Supported medico-legal injury inferences",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:5a801fdc7b7ef15c1a2aa8ee56300763a4a4085e02808b95d5c3af5d06bdf5a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "integrated infant feeding counselling",
+      "parentName": "Integrated infant feeding counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:485d7aebf6d0f7572d21cedd4dd42aa5b1e5462bdeac93b99286672ef72525c6",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm5-cm8-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM5.22",
+          "page": 273,
+          "rowBBox": [
+            40.1,
+            273.18,
+            98.6,
+            296.58
+          ],
+          "sourceBodySha256": "4980e28440e1c55c86f9326a9091088b042b00ff8dfa372e0733e7d226a757d7",
+          "editorialTaskSha256": "309385f717b2fc2a703742937b480eb14bd03c8f7f8080e7a1af08fc25213ca8",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:23:01",
+          "name": "Simulated breastfeeding counselling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:485d7aebf6d0f7572d21cedd4dd42aa5b1e5462bdeac93b99286672ef72525c6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:23:02",
+          "name": "Simulated complementary feeding counselling",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:485d7aebf6d0f7572d21cedd4dd42aa5b1e5462bdeac93b99286672ef72525c6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:23:03",
+          "name": "Infant feeding follow-up planning",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:485d7aebf6d0f7572d21cedd4dd42aa5b1e5462bdeac93b99286672ef72525c6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "integrated metabolism",
+      "parentName": "Integrated metabolism",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC7.1",
+          "page": 165,
+          "rowBBox": [
+            58.7,
+            448.74,
+            108.5,
+            475.08
+          ],
+          "sourceBodySha256": "f1bfdab5e470ada693c94b6ce6219bbb18ac22427f3374221f4086af18ebf0af",
+          "editorialTaskSha256": "d76dc727f41002e8794bc24a0b5a98e77cceeba67c24bf893224dae381204a73",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:24:01",
+          "name": "Carbohydrate flux across tissues",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:24:02",
+          "name": "Lipid flux across tissues",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:24:03",
+          "name": "Protein flux across tissues",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:24:04",
+          "name": "Fed-state integrated metabolism",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:24:05",
+          "name": "Fasting-state integrated metabolism",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:24:06",
+          "name": "Prolonged-fasting integrated metabolism",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intercostal muscle layers",
+      "parentName": "Intercostal muscle layers",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN21.4",
+          "page": 121,
+          "rowBBox": [
+            51.2,
+            108.42,
+            122.2,
+            153.42
+          ],
+          "sourceBodySha256": "b41793ad40cd4fd009a96cde25cbb1411b673125f470e5197422aebc9054aa89",
+          "editorialTaskSha256": "d07eba95c4da50cd3813428a476e907e203ad2f6a8163717808531c62c26a3a4",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:25:01",
+          "name": "Intercostal muscle layer extent",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:25:02",
+          "name": "Intercostal muscle attachments",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:25:03",
+          "name": "Intercostal muscle fibre direction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:25:04",
+          "name": "Intercostal muscle innervation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:25:05",
+          "name": "Intercostal contribution to rib movement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:25:06",
+          "name": "Intercostal layer identification on models",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "international health",
+      "parentName": "International health",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM18.1",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            234.36,
+            98.6,
+            249.78
+          ],
+          "sourceBodySha256": "2739d79734880e201c8dde3cc5913e7263aa1d607067cc6740e2d03d7874dd0c",
+          "editorialTaskSha256": "2cefa58ab87ea05faf2e0679a2969580d90c6334d1edf70971532af743cf2b6b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:26:01",
+          "name": "Cross-border health risks",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:26:02",
+          "name": "Shared international health resources",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:26:03",
+          "name": "International health cooperation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "international health agencies",
+      "parentName": "International health agencies",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:28b07c8880964c2ee00e88dbc66ae64f24afed27b8fb4e9ba28300b0280741f4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM18.2",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            249.78,
+            98.6,
+            267.36
+          ],
+          "sourceBodySha256": "325d3a86510246a8f5e60350a4caf89b28198ef6c8608a0b4347080a602980be",
+          "editorialTaskSha256": "7fa7e9820b2110fff7dec245f3228985e2da9649511fa482b8bc3029d5abae70",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:27:01",
+          "name": "International health agency mandates",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:28b07c8880964c2ee00e88dbc66ae64f24afed27b8fb4e9ba28300b0280741f4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:27:02",
+          "name": "International health agency functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:28b07c8880964c2ee00e88dbc66ae64f24afed27b8fb4e9ba28300b0280741f4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:27:03",
+          "name": "International health agency support modes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:28b07c8880964c2ee00e88dbc66ae64f24afed27b8fb4e9ba28300b0280741f4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intestinal anthelmintics",
+      "parentName": "Intestinal anthelmintics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH8.9",
+          "page": 182,
+          "rowBBox": [
+            51.7,
+            473.16,
+            105.7,
+            504.84
+          ],
+          "sourceBodySha256": "0ca51ab808b04c80bca2ea6ac1bebbf3d5f39f621a90166ff89bb65a4eacd63f",
+          "editorialTaskSha256": "a1aff08eddafb6a24271cab267fdc937fee0a1abf872a460f436054e75110893",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:28:01",
+          "name": "Intestinal anthelmintic kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:28:02",
+          "name": "Intestinal anthelmintic targets",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:28:03",
+          "name": "Intestinal anthelmintic adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:28:04",
+          "name": "Intestinal anthelmintic agent selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intestinal disorders",
+      "parentName": "Intestinal disorders",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ebab7a69ef278443fb8671b89bb6bafd0bba06c3e027df31f3ffb81c9d80bc19",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.14",
+          "page": 411,
+          "rowBBox": [
+            45,
+            145.38,
+            101.7,
+            196.56
+          ],
+          "sourceBodySha256": "92e2ed90d3b067c034bf4ca6356c3dc5f37fda941d9cd689772b536703bc8fe8",
+          "editorialTaskSha256": "840dd54b4dc08c82d7cd318072edd15db6e1353738df99c349b814a70853e624",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:29:01",
+          "name": "Small bowel disorders",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ebab7a69ef278443fb8671b89bb6bafd0bba06c3e027df31f3ffb81c9d80bc19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:29:02",
+          "name": "Large bowel disorders",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ebab7a69ef278443fb8671b89bb6bafd0bba06c3e027df31f3ffb81c9d80bc19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:29:03",
+          "name": "Neonatal intestinal obstruction",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ebab7a69ef278443fb8671b89bb6bafd0bba06c3e027df31f3ffb81c9d80bc19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:29:04",
+          "name": "Short bowel syndrome",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ebab7a69ef278443fb8671b89bb6bafd0bba06c3e027df31f3ffb81c9d80bc19"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intestinal secretions",
+      "parentName": "Intestinal secretions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY4.6",
+          "page": 152,
+          "rowBBox": [
+            58.5,
+            449.4,
+            107.8,
+            476.76
+          ],
+          "sourceBodySha256": "fbd340cd916e047c9ed7884886cbcf7bd0ee09aa1f06e189be5712a1a501c1ba",
+          "editorialTaskSha256": "fbf037a6144b08513f9d162cf93feaae4adfb42fc3820c07331e097f7533c4f5",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-11:30:01",
+          "name": "Intestinal secretion composition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:30:02",
+          "name": "Intestinal secretion origin",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:30:03",
+          "name": "Intestinal secretion regulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:30:04",
+          "name": "Intestinal secretion digestive roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-11:30:05",
+          "name": "Intestinal secretion protective roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:1b9ecfcb19e749abf4f710a3334930d981857064f406740f37b67e1a50b4ce6d"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

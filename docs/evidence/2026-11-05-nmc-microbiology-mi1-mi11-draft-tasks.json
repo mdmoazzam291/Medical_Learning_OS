@@ -1,0 +1,1398 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6",
+      "subjectId": "microbiology",
+      "code": "MI1.1",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        187.86,
+        108.8,
+        242.58
+      ],
+      "sourceBodySha256": "1839da9d7685b20962b610f24b6dfe8dc40d2600bac31d9327a0c7a90f3bc719",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Microbiology history",
+      "draftLearningTask": "Connect landmark discoveries to modern practice and distinguish beneficial microbial roles from disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b",
+      "subjectId": "microbiology",
+      "code": "MI1.2",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        242.58,
+        108.8,
+        289.68
+      ],
+      "sourceBodySha256": "07546bf93e99840ea33961e32b55a14f9f5e204b343dbda41eddf87dacc25183",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Microbial groups",
+      "draftLearningTask": "Compare bacteria, viruses, fungi and parasites by structure, growth, classification and representative infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149",
+      "subjectId": "microbiology",
+      "code": "MI1.3",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        289.68,
+        108.8,
+        343.02
+      ],
+      "sourceBodySha256": "3f25ed3802e1160f11fb6860404fc4986b43d9a43befb8bccc29f102725f1ee8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Molecular microbiology",
+      "draftLearningTask": "Explain genetic targets and compare molecular diagnostic methods by the questions they answer.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a",
+      "subjectId": "microbiology",
+      "code": "MI1.4",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        343.02,
+        108.8,
+        374.64
+      ],
+      "sourceBodySha256": "20d0c01f7864443e5e0d321cdeb9d8b90dc785b56b47e217a37f4c828f99d038",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Microbial detection",
+      "draftLearningTask": "Choose microscopy, culture, antigen detection or molecular testing for representative infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:11e5d1a71614d25bbf3c1d5893434856e64d57c7d05411750c6282e59601a840",
+      "subjectId": "microbiology",
+      "code": "MI1.5",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        374.64,
+        108.8,
+        416.04
+      ],
+      "sourceBodySha256": "d3cb755388b17f17312342258607aa2ccd7496c2480e38c46d265fb81c067aae",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Specimen planning",
+      "draftLearningTask": "Select specimens, patient instructions, collection timing and transport conditions for representative tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:211d26838437468f3a940b9801f14ef51208fed99d2faf2b71a4f54e18508d8c",
+      "subjectId": "microbiology",
+      "code": "MI1.6",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        416.04,
+        108.8,
+        457.08
+      ],
+      "sourceBodySha256": "4ac55f786495c9d3eae4ea42bf4f6e769274a02af5328bf1ea91e0dd7fb17b0c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Specimen collection",
+      "draftLearningTask": "Demonstrate patient instruction, collection, labelling and transport in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:70ac758f1c34157f4ad68c542d7e37acad955acf66ebc580445868fbbcedc9ff",
+      "subjectId": "microbiology",
+      "code": "MI1.7",
+      "page": 206,
+      "rowBBox": [
+        51.9,
+        457.08,
+        108.8,
+        511.86
+      ],
+      "sourceBodySha256": "1d909492b8d145affc45d97477f6b17e344e51cf10e5bd1ed30690002cc1a305",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Specimen respect",
+      "draftLearningTask": "Demonstrate respectful and traceable handling of a simulated patient specimen.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0155764603d20a8a58a5b706650568bdf19d95d98f2d81cbb598b7552e8a7c23",
+      "subjectId": "microbiology",
+      "code": "MI1.8",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        114.78
+      ],
+      "sourceBodySha256": "85683970120eaadc2b306e3eb1bca4b482ac26349f73554ef3807712ead2ee83",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diagnostic communication",
+      "draftLearningTask": "Role-play collection instructions and pretest and post-test discussions with patients, relatives and clinicians.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:85bbc25aedca3793adbb80760b84996d6a0aebebe1d01be4ae63924eeef0a466",
+      "subjectId": "microbiology",
+      "code": "MI1.9",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        114.78,
+        108.8,
+        155.88
+      ],
+      "sourceBodySha256": "192eca3ad7d882cea2109106032f33c43c9a86d84268bb1bf516ed7529221935",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Confidentiality",
+      "draftLearningTask": "Demonstrate secure handling and communication of an identifiable laboratory result.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+      "subjectId": "microbiology",
+      "code": "MI1.10",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        155.88,
+        108.8,
+        196.92
+      ],
+      "sourceBodySha256": "2305a61bf6048598b490c5742175a2388450138aa35c2dd54c86f52dee2f121f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Staining and stool microscopy",
+      "draftLearningTask": "Perform Gram and Ziehl–Neelsen staining and routine stool examination on approved teaching material and report findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:49438fa2b758d33967bf4f65308369ccca9ca5c5e256a7969f0508160b9f8070",
+      "subjectId": "microbiology",
+      "code": "MI1.11",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        196.92,
+        108.8,
+        227.88
+      ],
+      "sourceBodySha256": "75badc01aa70bcb4a2ad5b6fcdb69292a98772f237a0d3dee8c01937b0da1453",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infection epidemiology",
+      "draftLearningTask": "Use transmission patterns and population data to explain a representative outbreak and its control.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+      "subjectId": "microbiology",
+      "code": "MI1.12",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        227.88,
+        108.8,
+        286.2
+      ],
+      "sourceBodySha256": "3e28f3f0a33a74ce3abf83b58f093b47393cd03a7ad8618be361d808351a4a88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sterilization and disinfection",
+      "draftLearningTask": "Compare mechanisms, applications and quality controls of physical and chemical methods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0e7b4aeb09b91e786f00814c8998c4db64eb5aa33306269d1ce3679f3ab08c60",
+      "subjectId": "microbiology",
+      "code": "MI1.13",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        286.2,
+        108.8,
+        335.88
+      ],
+      "sourceBodySha256": "95623debc209bfa8d642eedc300664800c032c69f5e25bdae32ffa02f47500f5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Decontamination selection",
+      "draftLearningTask": "Select a method for representative laboratory, clinical and surgical scenarios and justify it.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7",
+      "subjectId": "microbiology",
+      "code": "MI2.1",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        355.98,
+        108.8,
+        398.52
+      ],
+      "sourceBodySha256": "dafee9c096df724d6b2393439119f62fb09c368548740154c65e7ddb868d99c4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Innate and adaptive immunity",
+      "draftLearningTask": "Compare barriers and immune responses in health and disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c",
+      "subjectId": "microbiology",
+      "code": "MI2.2",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        398.52,
+        108.8,
+        445.68
+      ],
+      "sourceBodySha256": "2ac079ee255d73d11991949a55f59d8d879c3dbd43cfe741696c2bfcb99c16e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immune components",
+      "draftLearningTask": "Map immune organs and cells and explain how antigens, antibodies and complement interact.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e",
+      "subjectId": "microbiology",
+      "code": "MI2.3",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        445.68,
+        108.8,
+        492.48
+      ],
+      "sourceBodySha256": "c4921ee0f73bbafd8d86f5d640f018c69a7445c213e7177760d67ea1ee532c71",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Humoral and cellular responses",
+      "draftLearningTask": "Compare antibody and cellular effector mechanisms during representative infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ac682bea4dacea0ee231e6b8b12087da970dcabe90c31aeb31fc913478813ff7",
+      "subjectId": "microbiology",
+      "code": "MI2.4",
+      "page": 207,
+      "rowBBox": [
+        51.9,
+        492.48,
+        108.8,
+        539.7
+      ],
+      "sourceBodySha256": "958a8d5c91b893a1826d79bbd14691f6c3d2fdd8d339a99ff04556faf31df54d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pathogen-specific immunity",
+      "draftLearningTask": "Compare host defences against bacterial, mycobacterial, viral, fungal and parasitic infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5",
+      "subjectId": "microbiology",
+      "code": "MI2.5",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        115.14
+      ],
+      "sourceBodySha256": "c12f2c0634b1a28a47975168e43262ea468cb7199aab9cc0066de25d1c05b282",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immune diagnostic tests",
+      "draftLearningTask": "Explain how representative assays detect host responses and how timing affects interpretation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8",
+      "subjectId": "microbiology",
+      "code": "MI2.6",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        115.14,
+        108.8,
+        162.3
+      ],
+      "sourceBodySha256": "c1884fedf54ac7ab86e2665d8cf9009651d700d15ab17e4695937aff37e96cb4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immunoprophylaxis",
+      "draftLearningTask": "Compare active and passive protection and explain how population immunity affects transmission.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+      "subjectId": "microbiology",
+      "code": "MI2.7",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        162.3,
+        108.8,
+        209.46
+      ],
+      "sourceBodySha256": "65677ea3bac682484087268d749f0ad9b26a5cb2ead4bea8e20aff58da2e7b01",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immune disorders",
+      "draftLearningTask": "Compare hypersensitivity, autoimmunity and immunodeficiency and select representative laboratory investigations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bb8e0a85299ef97f5fb73bfe9af0ebacce44a7bafa0aeeda2e674c0727178714",
+      "subjectId": "microbiology",
+      "code": "MI2.8",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        209.46,
+        108.8,
+        241.08
+      ],
+      "sourceBodySha256": "50d882144c3078aa5e12ebdec33bcf1bce2b6956f79909faf2d23cd799adbb9d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transplant and tumour immunity",
+      "draftLearningTask": "Explain graft recognition, tumour surveillance and escape and their implications for management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:be22a74ce1d18df7e723b9c0a20e47da3f987bda1e5f51a1b0bfa2be2c1531bd",
+      "subjectId": "microbiology",
+      "code": "MI3.1",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        262.38,
+        108.8,
+        295.44
+      ],
+      "sourceBodySha256": "b9e2fab87b837e24e606339376520870f6c8864a5a4783b2df1f99e0e4b72252",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatic fever",
+      "draftLearningTask": "Trace poststreptococcal injury and relate presentation, sequelae and laboratory evidence.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "code": "MI3.2",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        295.44,
+        108.8,
+        327.12
+      ],
+      "sourceBodySha256": "fb43508d71d1b009e1833705f319a2205531dbb23eb7176695a7c710c43d519a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective endocarditis",
+      "draftLearningTask": "Classify representative cases and relate organisms and host factors to pathogenesis and presentation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f9680378abb19aaba17d00f5303e46fb0e35ea334f903fd5140eb9e3cfdf92fc",
+      "subjectId": "microbiology",
+      "code": "MI3.3",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        327.12,
+        108.8,
+        367.44
+      ],
+      "sourceBodySha256": "c8cd6f79cd02da1b210d37c88dd7cd2c4c6072d524bf5789aa01e4684af89b79",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Endocarditis diagnostics",
+      "draftLearningTask": "Explain blood culture collection and processing and integrate microbiology with other diagnostic findings in suspected endocarditis or sepsis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20",
+      "subjectId": "microbiology",
+      "code": "MI3.4",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        367.44,
+        108.8,
+        425.46
+      ],
+      "sourceBodySha256": "1fd828f8e4c1be41ac22136fab027027b7afd57a56827b3a66383e8af9302a18",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Rheumatic fever and endocarditis cases",
+      "draftLearningTask": "Interpret representative microscopy, serology and cultures in suspected cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c9047871596072c6cc4de2f46756cbb3f22e6264ab456bf3b427ce3a34e7050e",
+      "subjectId": "microbiology",
+      "code": "MI3.5",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        425.46,
+        108.8,
+        472.62
+      ],
+      "sourceBodySha256": "b9096c3dfb1d8462f85f0bae7dc227799a2f817051ed7ec064528fcd01dafc9d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever of unknown origin",
+      "draftLearningTask": "Distinguish major categories and select microbiological investigations based on exposures and clinical clues.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+      "subjectId": "microbiology",
+      "code": "MI3.6",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        472.62,
+        108.8,
+        526.98
+      ],
+      "sourceBodySha256": "e0f6fbf1b245accd27c504c9669f36d4ceb4084643cd46ad80f5100097bdd374",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enteric fever",
+      "draftLearningTask": "Compare causative organisms and trace pathogenesis, clinical evolution, complications, diagnosis and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+      "subjectId": "microbiology",
+      "code": "MI3.7",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        130.68
+      ],
+      "sourceBodySha256": "4d61edf4531aaeab622cd83be8077ed905f7c97639c1e9c7dd252c92fce10200",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enteric fever testing",
+      "draftLearningTask": "Select tests by illness duration and distinguish investigation of suspected carriage.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+      "subjectId": "microbiology",
+      "code": "MI3.8",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        130.68,
+        108.8,
+        190.08
+      ],
+      "sourceBodySha256": "4c39a3a5410f1a988154c29d2b3e74dcc0435d310d198795cd7f16f9e49e90b0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enteric fever results",
+      "draftLearningTask": "Interpret representative culture and serology results and explain limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27",
+      "subjectId": "microbiology",
+      "code": "MI3.9",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        190.08,
+        108.8,
+        227.52
+      ],
+      "sourceBodySha256": "7216157f661865f10f4472ad272084522b062ea555e415910bd30cbba0bccfce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious anaemia",
+      "draftLearningTask": "Classify organisms by mechanisms of anaemia including blood loss, haemolysis and impaired production.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa",
+      "subjectId": "microbiology",
+      "code": "MI3.10",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        227.52,
+        108.8,
+        282.24
+      ],
+      "sourceBodySha256": "8d681a53d95ddadc792a977ff03a0e3780cac30e162edefc8f4e057e73674e9b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia-associated parasites",
+      "draftLearningTask": "Compare morphology, life cycles, injury, diagnosis and prevention of representative parasites.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be",
+      "subjectId": "microbiology",
+      "code": "MI3.11",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        282.24,
+        108.8,
+        340.62
+      ],
+      "sourceBodySha256": "94ffb9cc750c3ff78dded29d63b6a9fb267bc153944d8eaa5d1bc8bfcb7902cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemoparasites",
+      "draftLearningTask": "Compare malaria, visceral leishmaniasis and filariasis by morphology, life cycle, presentation, tests and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e5bebcc10cee836b56d9deb3a8a0d2b038323bafafaecb0c1747630e0cc995e3",
+      "subjectId": "microbiology",
+      "code": "MI3.12",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        340.62,
+        108.8,
+        394.98
+      ],
+      "sourceBodySha256": "7832d1e518cbf8bfa7b55e92f3d20435913bb5e4203d188facf88d9462add0cf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Malaria species differentiation",
+      "draftLearningTask": "Use representative smear findings to distinguish falciparum from other malaria species and explain the limits of serology in acute diagnosis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ead4e7b4c95e124e5dd3cca329d85bce6697f8883ee690cfe285ab82c6079c50",
+      "subjectId": "microbiology",
+      "code": "MI3.13",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        394.98,
+        108.8,
+        442.14
+      ],
+      "sourceBodySha256": "7d8a1367cd0eaf56bf3852d8770a585bad9fba1230c299c2a4c77d815b042a74",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV microbiology",
+      "draftLearningTask": "Trace transmission and disease progression and explain opportunistic infections, diagnosis, prevention and management principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+      "subjectId": "microbiology",
+      "code": "MI4.1",
+      "page": 209,
+      "rowBBox": [
+        51.9,
+        466.2,
+        108.8,
+        507.3
+      ],
+      "sourceBodySha256": "7da8ac9eb156e74c42d125dfe3359cc637aa9be615ad08dae6ff8e70ed3d5e6f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea, dysentery and food poisoning",
+      "draftLearningTask": "Distinguish clinical syndromes and match representative organisms to each.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb",
+      "subjectId": "microbiology",
+      "code": "MI4.2",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        115.14
+      ],
+      "sourceBodySha256": "8a1c499ce560fb6a2b8b19a8d9fcd1dcb726765baef3512c4270a730f1730927",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious diarrhoea",
+      "draftLearningTask": "Compare representative agents by epidemiology, morphology, mechanisms, presentation and diagnostic tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144",
+      "subjectId": "microbiology",
+      "code": "MI4.3",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        115.14,
+        108.8,
+        157.68
+      ],
+      "sourceBodySha256": "4199e5de70eeb1e30066976d98f9214d1f90a63a83de43b602af1a55b6b565f8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious dysentery",
+      "draftLearningTask": "Compare representative agents by epidemiology, morphology, mechanisms, presentation and diagnostic tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ea2f8ac41bd16a12f95a7f9fc2b39221acaf4792a430aac3e418bb2a6337639b",
+      "subjectId": "microbiology",
+      "code": "MI4.4",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        157.68,
+        108.8,
+        198.72
+      ],
+      "sourceBodySha256": "966521c77418ffcc5bfeed008b48cc8a0f16eaaf987a39fbf1936811e7fe6300",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Stool specimen identification",
+      "draftLearningTask": "Identify representative causative agents on supplied stool microscopy and report distinguishing features.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9ae6427dfe51efe8b447442d7ec66d49f7060044f54672714a966e7d44962ecc",
+      "subjectId": "microbiology",
+      "code": "MI4.5",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        198.72,
+        108.8,
+        239.76
+      ],
+      "sourceBodySha256": "b828483d510f51d1f3cf7e745bf875a190ececbe82b63a4f0b8393ce9a8e2c82",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Food poisoning",
+      "draftLearningTask": "Compare major microbial causes and distinguish toxin-mediated illness from infection using timing and laboratory findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f11785109a9660cc566818f568529a4332eebc857dc7fdae5049e2ba3b3a6a44",
+      "subjectId": "microbiology",
+      "code": "MI4.6",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        239.76,
+        108.8,
+        280.8
+      ],
+      "sourceBodySha256": "6c9a5070c4687a21464648983cd81ab7afbf748375e3fb4907750ed925a8347d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infectious peptic disease",
+      "draftLearningTask": "Relate Helicobacter pylori to acid peptic disease and compare diagnostic and eradication principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
+      "subjectId": "microbiology",
+      "code": "MI4.7",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        280.8,
+        108.8,
+        321.84
+      ],
+      "sourceBodySha256": "c9607eba14f1dbdc35fc5c9b05a3eccb8dc2fe85377a5dc580ae7b079a27eec4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Viral hepatitis",
+      "draftLearningTask": "Compare transmission, pathogenesis, presentation and complications across major hepatitis viruses.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a98daa2a27060984baba8ae5fadaf238e6d02e95486c73e9fc4945d63444868f",
+      "subjectId": "microbiology",
+      "code": "MI4.8",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        321.84,
+        108.8,
+        362.94
+      ],
+      "sourceBodySha256": "f5bd955a01dbba93aed7d5913c52c33aca0417b56bc4f1c05bed0a80a6815531",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hepatitis diagnostics and prevention",
+      "draftLearningTask": "Compare viral markers and prevention strategies by hepatitis virus.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2f66649c02e129d6cf9efa1070a23d826a0889212a9b0e4b65b4c7e2791eee09",
+      "subjectId": "microbiology",
+      "code": "MI4.9",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        362.94,
+        108.8,
+        425.58
+      ],
+      "sourceBodySha256": "56f0da4952817d5e250de55e6ca053d12f471b603b1a7864d45e79154e214148",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hepatitis marker interpretation",
+      "draftLearningTask": "Select and interpret markers in representative cases to distinguish infection type and phase.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d",
+      "subjectId": "microbiology",
+      "code": "MI5.1",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        452.16,
+        108.8,
+        493.2
+      ],
+      "sourceBodySha256": "a8bf6b65cda5775bcb75031183cfc5c9cbd8a57716ceae171c8d08e5401385b7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaerobic infection",
+      "draftLearningTask": "Relate representative organisms to predisposing conditions, clinical course and suitable specimen handling and tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f",
+      "subjectId": "microbiology",
+      "code": "MI5.2",
+      "page": 210,
+      "rowBBox": [
+        51.9,
+        493.2,
+        108.8,
+        534.3
+      ],
+      "sourceBodySha256": "55144ab8736d2d72d9e1b1b5f6bd083249fed1fde8eaafe4095f8d36c3b972af",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bone and joint infection",
+      "draftLearningTask": "Compare representative bacterial, fungal, viral and parasitic causes and select tests by mechanism and clinical setting.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534",
+      "subjectId": "microbiology",
+      "code": "MI5.3",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        115.14
+      ],
+      "sourceBodySha256": "6cb9d81ba8b6c456677c5923867f5b23cf8196220faa4e12f20cd71f72515f2e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skin and soft tissue infection",
+      "draftLearningTask": "Compare representative microbial causes by depth, clinical course and diagnostic approach.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3",
+      "subjectId": "microbiology",
+      "code": "MI5.4",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        115.14,
+        108.8,
+        146.88
+      ],
+      "sourceBodySha256": "30c4c20f6a4a6a5f34cb139d38564347bca66cb5a1e38fff260641a515aae898",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective skin lesions",
+      "draftLearningTask": "Differentiate infectious and noninfectious lesions and recognize representative systemic infections with cutaneous findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3125049e015e51b9167027111411271d35d8bb95d1223a710ca120e0dbea6a47",
+      "subjectId": "microbiology",
+      "code": "MI5.5",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        146.88,
+        108.8,
+        193.68
+      ],
+      "sourceBodySha256": "5a720ef659ad6a40f241be40175dd11acf322ffdc8b8b8bf282f1f5f22fb6817",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cutaneous mycobacteria",
+      "draftLearningTask": "Compare representative presentations and complications and select appropriate sampling and laboratory methods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2192f181c5ffa328da3475110bbd81386e5a7e032c27763d1555b3717732ddac",
+      "subjectId": "microbiology",
+      "code": "MI6.1",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        213.78,
+        108.8,
+        254.88
+      ],
+      "sourceBodySha256": "5aa9398a2436b5870470adbb6c0d642641f012c2cafa2b6f7f54f9ac6c5cc4d3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Meningitis microbiology",
+      "draftLearningTask": "Compare representative bacterial, viral, fungal and parasitic causes by pathogenesis, course and diagnostic workup.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:98a90e12a87beed199805af7506d062d1bb6a47a8bc183f741d2e08ef5418591",
+      "subjectId": "microbiology",
+      "code": "MI6.2",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        254.88,
+        108.8,
+        295.92
+      ],
+      "sourceBodySha256": "d9ce772a9cbd44715827c7db7847ac206cf817584d0fa51e084655a33836b1b4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Encephalitis microbiology",
+      "draftLearningTask": "Compare representative microbial causes by exposure, pathogenesis, clinical course and diagnostic workup.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f67b8288f33c0ea2c0c20bd9afb40c5727668af86690d17ad6e7b6cf1d974cff",
+      "subjectId": "microbiology",
+      "code": "MI6.3",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        295.92,
+        108.8,
+        350.28
+      ],
+      "sourceBodySha256": "18cbb1f70169405cfd4369093aadbebce9bcb29e7770246da3927e67e4038c08",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CNS specimen interpretation",
+      "draftLearningTask": "Interpret supplied Gram stains, CSF findings and cultures alongside other tests to distinguish likely causes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dbb0ed68638624fad3b303b43f359d675ba671696eab145c8204ac4032f41407",
+      "subjectId": "microbiology",
+      "code": "MI7.1",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        375.84,
+        108.8,
+        416.94
+      ],
+      "sourceBodySha256": "69ebbc2e01d3b16dab6eb3979a2c724ff74ca7ff659c49d284d73f71f6a824af",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Upper respiratory infection",
+      "draftLearningTask": "Compare representative microbial causes, diagnostic approaches and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29",
+      "subjectId": "microbiology",
+      "code": "MI7.2",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        416.94,
+        108.8,
+        457.98
+      ],
+      "sourceBodySha256": "2d91be1368db703939ca944b106914f4b3f5ea78377fc2742b0ea3b9cfb6da9d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lower respiratory infection",
+      "draftLearningTask": "Compare bacterial, mycobacterial, viral, fungal and parasitic causes and select tests and prevention measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8d160b85d57bc1614fe175f9f9cd66dd592d30d2f73403ef592447a28aa99a89",
+      "subjectId": "microbiology",
+      "code": "MI7.3",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        457.98,
+        108.8,
+        499.02
+      ],
+      "sourceBodySha256": "1e11c230d0fe68a904e3c725c43c4aeeb246c83ee9e23c705abb6c2580949f35",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lower respiratory risk contexts",
+      "draftLearningTask": "Predict likely pathogens by age, immune status and community or healthcare setting.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:acc718c7fa2013c251b3c315804faedc4d795ce253b3e73c59e922681ed623d8",
+      "subjectId": "microbiology",
+      "code": "MI7.4",
+      "page": 211,
+      "rowBBox": [
+        51.9,
+        499.02,
+        108.8,
+        540.12
+      ],
+      "sourceBodySha256": "c969c7cf1a0df78187eec6ab976c74d25c2c46af9620464801f8fdb2d0220704",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Upper respiratory stains",
+      "draftLearningTask": "Interpret supplied Gram or Albert-stained throat smears and correlate findings with the clinical scenario.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9b48a0b828dfa66e4fc95a83e79614cb1c8f77c48f8a1ba856f525a1d702a03d",
+      "subjectId": "microbiology",
+      "code": "MI7.5",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        122.7
+      ],
+      "sourceBodySha256": "9f5fe15a96f98a1569bea4feab70637fde9d8b7fff53ce8eb4d387cd32908bdd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lower respiratory stains",
+      "draftLearningTask": "Interpret supplied Gram and acid-fast stains from lower respiratory samples and correlate findings with clinical data.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb",
+      "subjectId": "microbiology",
+      "code": "MI8.1",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        152.28,
+        108.8,
+        193.32
+      ],
+      "sourceBodySha256": "e0dd108c9e123813c84b4aa2912fb4cdfa30d12e295045aab6e10178c4457cb0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Genitourinary infections",
+      "draftLearningTask": "Compare representative bacterial, viral, fungal and parasitic causes and select appropriate specimens and tests.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e9af4329a314e4bade8c00066a88cf66d43825c9d2519e1c61008a2ba2a23cc1",
+      "subjectId": "microbiology",
+      "code": "MI8.2",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        193.32,
+        108.8,
+        253.8
+      ],
+      "sourceBodySha256": "6afbb8d52cecde58f6a5a3763b13d64e3a6c46072b135b838bf78bbfc554a378",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sexually transmitted infections",
+      "draftLearningTask": "Compare representative bacterial and viral STIs by pathogenesis, diagnostic testing and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:460bbe029de2ea2d5834013273347fa38089e1702db2cbc26248d0923c44f760",
+      "subjectId": "microbiology",
+      "code": "MI8.4",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        281.58,
+        108.8,
+        322.62
+      ],
+      "sourceBodySha256": "e6cbb88e1bfecbba40c89b970445dfda5e3d9cd3e1416db3a4d3846fb8174655",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Urinary tract infections",
+      "draftLearningTask": "Distinguish representative UTI settings, explain mechanisms and choose collection and diagnostic methods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947",
+      "subjectId": "microbiology",
+      "code": "MI9.1",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        353.58,
+        108.8,
+        416.22
+      ],
+      "sourceBodySha256": "f494b7f40c74b45a598a417eb61d26bf82912f1e865a4bd116b2340f01207e53",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Zoonoses",
+      "draftLearningTask": "Classify representative zoonoses and map reservoirs, vectors or transmission routes, illness, diagnosis and prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:024164cd3026557ed677a87ea680580cd18d12f2861a3109430faee4f8a550fa",
+      "subjectId": "microbiology",
+      "code": "MI9.2",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        416.22,
+        108.8,
+        457.26
+      ],
+      "sourceBodySha256": "3015ee98fd70c60c5eceadcc68c00a4bb2f797ac48a8055bf8f824c5c1212ee5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Opportunistic infections",
+      "draftLearningTask": "Link host risk factors to representative opportunistic agents and select suitable laboratory investigations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7cee991a8fa8510b14989679fe7c1475da6bdb04929219dc05091558d2823e4d",
+      "subjectId": "microbiology",
+      "code": "MI9.3",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        457.26,
+        108.8,
+        498.3
+      ],
+      "sourceBodySha256": "889b58e0dd67e2ca9d3aa7727bf38f7b70251d11a837965718bdd5698cb0f781",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Investigation selection",
+      "draftLearningTask": "Choose a microbiological test in a simulated case and interpret the report in clinical context.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f",
+      "subjectId": "microbiology",
+      "code": "MI9.4",
+      "page": 212,
+      "rowBBox": [
+        51.9,
+        498.3,
+        108.8,
+        539.4
+      ],
+      "sourceBodySha256": "bcd2aa6ad21ab0c3b7f035d28b689a64efb86ad5bef47c6af03fa6496b33b28d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infection-associated cancers",
+      "draftLearningTask": "Explain representative microbial and viral oncogenic mechanisms and link preventable exposures to prevention measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0eed1abc36cb49be2c1790dda5912355632627993958914f8b9e5e92b39f0bcb",
+      "subjectId": "microbiology",
+      "code": "MI9.5",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        68.34,
+        108.8,
+        109.44
+      ],
+      "sourceBodySha256": "a31caebd127b2bfbb6230ec69a9a40e4b8ac680f7f37088ec108fdae7eb7223e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emerging infections",
+      "draftLearningTask": "Compare drivers of emergence and re-emergence and propose surveillance and control measures for a scenario.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9",
+      "subjectId": "microbiology",
+      "code": "MI9.6",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        109.44,
+        108.8,
+        150.48
+      ],
+      "sourceBodySha256": "09e84bf27a51691504e06ec1c31aa14b64575469c7fb7e886b4162feabe46ad7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National infection programmes",
+      "draftLearningTask": "Match representative Indian infection programmes and reference centres to their prevention and diagnostic roles using current programme documents.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b",
+      "subjectId": "microbiology",
+      "code": "MI10.1",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        176.7,
+        108.8,
+        221.04
+      ],
+      "sourceBodySha256": "84e75b8f15dbf916d4dc65316ca8eeb3769c60ca39e5de5607f6615eda22abe9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Healthcare-associated infection",
+      "draftLearningTask": "Define healthcare-associated infection and relate common agents and infection types to breaks in transmission.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149",
+      "subjectId": "microbiology",
+      "code": "MI10.2",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        221.04,
+        108.8,
+        262.08
+      ],
+      "sourceBodySha256": "dc6776b553862114fb9a83ef905c03b22157af35ef6c70421197f6a76a920f74",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infection precautions",
+      "draftLearningTask": "Compare standard and transmission-based precautions and explain the role of the infection control committee.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38",
+      "subjectId": "microbiology",
+      "code": "MI10.3",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        262.08,
+        108.8,
+        303.12
+      ],
+      "sourceBodySha256": "7c9432ccc80806d8d0fb506270dfc243be9d57d68303d48592cb99fc9b46798e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infection control practice",
+      "draftLearningTask": "Demonstrate hand hygiene, PPE donning and doffing, and biomedical waste segregation in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a220eb4f61f0467b6cedb16365d63a36a00c66a94e88b96bcb128fe1d7a0b490",
+      "subjectId": "microbiology",
+      "code": "MI10.4",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        303.12,
+        108.8,
+        334.44
+      ],
+      "sourceBodySha256": "09f30c1cf6b0e2e5cdcaf83dde7be519a7300856d11ea064f29c545f84033867",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Environmental surveillance",
+      "draftLearningTask": "Explain sampling and interpretation for microbial contamination of food, water and hospital air.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e92bdcf74707f1775649c38dda70c1050fc67feafc496923d789cc5de2e5ff5a",
+      "subjectId": "microbiology",
+      "code": "MI10.5",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        334.44,
+        108.8,
+        375.12
+      ],
+      "sourceBodySha256": "6818b97a2426be1a6a19d9bfeb9bdb476cff11011e20475407fc8a35f0298d0e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Resistance in healthcare",
+      "draftLearningTask": "Link selection and transmission of resistant pathogens to representative healthcare infections and control measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8790dc58550645cc92ccd9e32d7b129e469ff319f6298a431fdba46621ce8f6e",
+      "subjectId": "microbiology",
+      "code": "MI11.1",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        397.08,
+        108.8,
+        451.74
+      ],
+      "sourceBodySha256": "24724ba6f7c58db67ad81388c46503cf338aa2bc0a18b6865a9ab74c805898e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Susceptibility testing",
+      "draftLearningTask": "Compare genetic and phenotypic resistance mechanisms and interpret a representative susceptibility report.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:706879b38e0766b9eee2351928a9de41a9890876090fce72307c0db412b8e004",
+      "subjectId": "microbiology",
+      "code": "MI11.2",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        451.74,
+        108.8,
+        492.84
+      ],
+      "sourceBodySha256": "95b0065b60d02cee58a32958a0bed701cd258d1dce4b7f98d55f5934ad949719",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Intrinsic and acquired resistance",
+      "draftLearningTask": "Distinguish intrinsic from acquired resistance and relate antimicrobial spectrum to representative organisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f702cf08402c184aa2050eb44b358d7aec07f60409119cf267f2ce5757be8d3d",
+      "subjectId": "microbiology",
+      "code": "MI11.3",
+      "page": 213,
+      "rowBBox": [
+        51.9,
+        492.84,
+        108.8,
+        533.88
+      ],
+      "sourceBodySha256": "a04e165970b3a200679a77f9b8e3ef88bfacb5efddb9f8f1431206a1f97050e5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antimicrobial stewardship",
+      "draftLearningTask": "Explain stewardship and justify a simulated prescribing decision using microbiology, review and de-escalation principles.",
+      "mode": "knowledge"
+    }
+  ]
+}

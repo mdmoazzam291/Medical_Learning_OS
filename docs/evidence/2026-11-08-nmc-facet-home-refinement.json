@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-facet-home-refinement",
+  "sourceHead": "55fd2cb63f8b0a0e726bafd32b4a74964803d691",
+  "basis": "existing-editorial-components-and-draft-task-scopes",
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "canonicalIdentityAllocation": false,
+  "automaticMerging": false,
+  "coverageFraction": null,
+  "totals": {
+    "facetsExamined": 19,
+    "specificHomeProposals": 15,
+    "retainedScopeGaps": 4,
+    "addedHomeLabels": 11,
+    "reusedExistingNameCandidates": 1
+  },
+  "rows": [
+    {
+      "facetNameKey": "bite treatment",
+      "previousHomeLabel": "Poisoning and envenomation",
+      "proposedHomeLabel": "Bites",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+          "subjectId": "pharmacology",
+          "code": "PH9.2",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            166.92,
+            105.7,
+            207.6
+          ],
+          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "drug poisoning treatment",
+      "previousHomeLabel": "Poisoning and envenomation",
+      "proposedHomeLabel": "Drug poisoning",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+          "subjectId": "pharmacology",
+          "code": "PH9.2",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            166.92,
+            105.7,
+            207.6
+          ],
+          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "insecticide poisoning treatment",
+      "previousHomeLabel": "Poisoning and envenomation",
+      "proposedHomeLabel": "Insecticide poisoning",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+          "subjectId": "pharmacology",
+          "code": "PH9.2",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            166.92,
+            105.7,
+            207.6
+          ],
+          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "sting treatment",
+      "previousHomeLabel": "Poisoning and envenomation",
+      "proposedHomeLabel": "Stings",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+          "subjectId": "pharmacology",
+          "code": "PH9.2",
+          "page": 183,
+          "rowBBox": [
+            51.7,
+            166.92,
+            105.7,
+            207.6
+          ],
+          "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "bone marrow interpretation",
+      "previousHomeLabel": "Bone marrow examination",
+      "proposedHomeLabel": "Bone marrow examination",
+      "disposition": "scope-still-unresolved",
+      "componentProposalIds": [
+        "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+        "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+          "subjectId": "medicine",
+          "code": "GM9.8",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            152.28,
+            102.7,
+            179.52
+          ],
+          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
+          "subjectId": "medicine",
+          "code": "GM9.8",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            179.52,
+            102.7,
+            207.06
+          ],
+          "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json"
+        }
+      ],
+      "reason": "procedure-result-scope-not-yet-separated",
+      "alternativeNameCandidates": [
+        {
+          "nameKey": "bone marrow aspiration",
+          "componentProposalIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105"
+          ]
+        },
+        {
+          "nameKey": "bone marrow biopsy",
+          "componentProposalIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105:name-component:03"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105"
+          ]
+        }
+      ]
+    },
+    {
+      "facetNameKey": "chronic liver disease signs",
+      "previousHomeLabel": "Gastrointestinal and liver disease",
+      "proposedHomeLabel": "Chronic liver disease",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
+          "subjectId": "pediatrics",
+          "code": "PE23.18",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            300.66,
+            103.1,
+            355.14
+          ],
+          "sourceBodySha256": "75b02b6bcb9a600b600357c010ee4ccc37bd4fbae7dc3b216e2fb20c1133e683",
+          "mode": "performance-and-knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "poor growth signs",
+      "previousHomeLabel": "Gastrointestinal and liver disease",
+      "proposedHomeLabel": "Growth",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
+          "subjectId": "pediatrics",
+          "code": "PE23.18",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            300.66,
+            103.1,
+            355.14
+          ],
+          "sourceBodySha256": "75b02b6bcb9a600b600357c010ee4ccc37bd4fbae7dc3b216e2fb20c1133e683",
+          "mode": "performance-and-knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "vitamin deficiency signs",
+      "previousHomeLabel": "Gastrointestinal and liver disease",
+      "proposedHomeLabel": "Vitamin deficiencies",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
+          "subjectId": "pediatrics",
+          "code": "PE23.18",
+          "page": 342,
+          "rowBBox": [
+            51.3,
+            300.66,
+            103.1,
+            355.14
+          ],
+          "sourceBodySha256": "75b02b6bcb9a600b600357c010ee4ccc37bd4fbae7dc3b216e2fb20c1133e683",
+          "mode": "performance-and-knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "direct cause of death",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Cause of death",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:04"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94.0,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "injury determinants",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Injuries",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94.0,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "secondary cause of death",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Cause of death",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:05"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94.0,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "wound care observation",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Wounds",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175",
+          "subjectId": "surgery",
+          "code": "SU5.3",
+          "page": 404,
+          "rowBBox": [
+            45.0,
+            195.12,
+            101.7,
+            229.98
+          ],
+          "sourceBodySha256": "28cc0a6d16e29646a27aa3e2477ec94e4b2851beb1ac3ff2f4796a96121ed0a1",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "wound classification",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Wounds",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175",
+          "subjectId": "surgery",
+          "code": "SU5.3",
+          "page": 404,
+          "rowBBox": [
+            45.0,
+            195.12,
+            101.7,
+            229.98
+          ],
+          "sourceBodySha256": "28cc0a6d16e29646a27aa3e2477ec94e4b2851beb1ac3ff2f4796a96121ed0a1",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "wound healing determinants",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Wound healing",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94.0,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "wound management",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Wounds",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:5f6ccbfaef5cb51ca5358693e51eb1bc3eb690364801777359f19659c1ddb175",
+          "subjectId": "surgery",
+          "code": "SU5.3",
+          "page": 404,
+          "rowBBox": [
+            45.0,
+            195.12,
+            101.7,
+            229.98
+          ],
+          "sourceBodySha256": "28cc0a6d16e29646a27aa3e2477ec94e4b2851beb1ac3ff2f4796a96121ed0a1",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "wound report drafting",
+      "previousHomeLabel": "Wounds",
+      "proposedHomeLabel": "Wound reporting",
+      "disposition": "specific-authoring-home-proposed",
+      "componentProposalIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e0ebc11670c84ce3f5738cfaccc67477a39c69210bfb3802f7a42e377cc792a2",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.5",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            199.02,
+            94.0,
+            241.86
+          ],
+          "sourceBodySha256": "f0ef84956f62b9919918d975f49d4b2e8d7c44bcf6bab1d580490d5a426c9582",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json"
+        }
+      ]
+    },
+    {
+      "facetNameKey": "female reproductive pharmacotherapy",
+      "previousHomeLabel": "Female reproductive function",
+      "proposedHomeLabel": "Female reproductive function",
+      "disposition": "scope-still-unresolved",
+      "componentProposalIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81:name-component:01"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+          "subjectId": "pharmacology",
+          "code": "PH7.7",
+          "page": 181,
+          "rowBBox": [
+            51.7,
+            277.92,
+            105.7,
+            340.26
+          ],
+          "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
+          "mode": "performance-and-knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json"
+        }
+      ],
+      "reason": "broad-function-and-medicine-scope-not-yet-separated",
+      "alternativeNameCandidates": []
+    },
+    {
+      "facetNameKey": "neurodegeneration pharmacotherapy",
+      "previousHomeLabel": "Neurodegenerative disease",
+      "proposedHomeLabel": "Neurodegenerative disease",
+      "disposition": "scope-still-unresolved",
+      "componentProposalIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2:name-component:02"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2",
+          "subjectId": "pharmacology",
+          "code": "PH3.7",
+          "page": 177,
+          "rowBBox": [
+            51.7,
+            280.98,
+            105.7,
+            345.78
+          ],
+          "sourceBodySha256": "99541bffa3a4b0e126c679c976135b428b2099a242ab8c55d0b1eb8f24a6ce4d",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json"
+        }
+      ],
+      "reason": "broad-family-not-equivalent-to-drug-induced-parkinsonism",
+      "alternativeNameCandidates": []
+    },
+    {
+      "facetNameKey": "scleral disease referral",
+      "previousHomeLabel": "Scleral disease",
+      "proposedHomeLabel": "Scleral disease",
+      "disposition": "scope-still-unresolved",
+      "componentProposalIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:03"
+      ],
+      "sourceReferenceIds": [
+        "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+      ],
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4",
+          "subjectId": "ophthalmology",
+          "code": "OP5.2",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            363.0,
+            103.5,
+            396.96
+          ],
+          "sourceBodySha256": "11cd0f5f564d5aba050f5a99e1960ea297a50bf7c51fedb7fb755149f0a4e9eb",
+          "mode": "knowledge",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json"
+        }
+      ],
+      "reason": "shared-referral-scope-needs-per-condition-check",
+      "alternativeNameCandidates": [
+        {
+          "nameKey": "episcleritis",
+          "componentProposalIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:01"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+          ]
+        },
+        {
+          "nameKey": "scleritis",
+          "componentProposalIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4:name-component:02"
+          ],
+          "sourceReferenceIds": [
+            "nmc-2024-ref:0a52c553ea276a43e05a9ad125703a842be877a8a94dcd01f5677abf391c88e4"
+          ]
+        }
+      ]
+    }
+  ]
+}

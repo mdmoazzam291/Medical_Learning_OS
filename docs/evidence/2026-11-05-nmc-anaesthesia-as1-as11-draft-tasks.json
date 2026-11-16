@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:28b5f79d3e3c327385d55b14eff6fc27ff350bc607fe89d8edf7ec64df48bd05",
+      "subjectId": "anaesthesia",
+      "code": "AS1.1",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        307.92,
+        98.1,
+        322.02
+      ],
+      "sourceBodySha256": "c9b237850ca1479b0a2ff9c859a0e26e7eb3f6368be4f06135446b2e6b9e4192",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "History",
+      "draftLearningTask": "Trace milestones that made anaesthesia a modern specialty.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3547f162f24e42f698653a456d7fa016eb7944661cff6b2a9b967c89432b36c8",
+      "subjectId": "anaesthesia",
+      "code": "AS1.2",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        322.02,
+        98.1,
+        361.2
+      ],
+      "sourceBodySha256": "42ed0bde7fe37afe4ac7c8728a5149d0566eadaa267e0f564ab822b932ec55d1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Clinical roles",
+      "draftLearningTask": "Map anaesthesiology roles across perioperative care, critical care, pain, labour analgesia and resuscitation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1f2904bf1ca0f6ff83af384389d85a63459218c11f739d31758e34122ad62578",
+      "subjectId": "anaesthesia",
+      "code": "AS1.3",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        361.2,
+        98.1,
+        386.52
+      ],
+      "sourceBodySha256": "9e9cb75d103718b6ea132cfc6b0bc3d7d6dfe842569073cc19e7184f96427e88",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ethics",
+      "draftLearningTask": "Apply consent, confidentiality and benefit–risk principles to a simulated perioperative case.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:009beeb379b6d247e3daa15046c638a7652773c4d4c31d7296876a3ddde7c8b9",
+      "subjectId": "anaesthesia",
+      "code": "AS1.4",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        386.52,
+        98.1,
+        400.62
+      ],
+      "sourceBodySha256": "f5a47f95e1f9562ee1982c63627177dab916a9bba972a915c974949a7c667116",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Career pathways",
+      "draftLearningTask": "Compare training and practice roles within the specialty.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:23e27f5b05b67c7cdb5c3364a36dc5f30deaf012ee48acf3e7babe36505f3ab1",
+      "subjectId": "anaesthesia",
+      "code": "AS2.1",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        414.78,
+        98.1,
+        444.36
+      ],
+      "sourceBodySha256": "6ae8ec867dbe84db35e3bf8069632b4a026de009e1bf661d64308f3c678f848f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Basic life support",
+      "draftLearningTask": "Explain indications and demonstrate age-appropriate basic life support in adult, child and neonatal simulations.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:286009af4975614d4bdbc15924d75a73d7ab6c862d7747219c698100ee9e5e61",
+      "subjectId": "anaesthesia",
+      "code": "AS2.2",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        444.36,
+        98.1,
+        466.92
+      ],
+      "sourceBodySha256": "c4b4e1efc1644f5edca0edb57c08922c3409141f447aad77a97a24ed712da00b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Advanced life support",
+      "draftLearningTask": "Demonstrate adult and paediatric advanced life support in simulation using approved algorithms and team roles.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d161b6982b628fd889cbd0f62724e12e068cd5fc6d8ec1de94d4a125d19dd02a",
+      "subjectId": "anaesthesia",
+      "code": "AS3.1",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        483.18,
+        98.1,
+        497.7
+      ],
+      "sourceBodySha256": "af4a207b0e3e7bb1d9d3e57cb4596c270958a1b069c1d8e3cd16254a5ffdef78",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative evaluation",
+      "draftLearningTask": "Outline risk assessment, optimization and communication before surgery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:52b957290b9bf85555c3861f61d8cafe127a2b0249a8a53dc56af65b6a957291",
+      "subjectId": "anaesthesia",
+      "code": "AS3.2",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        497.7,
+        98.1,
+        535.26
+      ],
+      "sourceBodySha256": "36e077a93394e6a27f9a694c2b5eff917860aa47d04de37aa74bcfc7fbe3ffe0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative history",
+      "draftLearningTask": "Elicit, present and document relevant medical, medication and anaesthetic history in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:42ea14e55a790fcd9391510f5da0159da00d2b9dc016e37856fd3b36c7f6c9b4",
+      "subjectId": "anaesthesia",
+      "code": "AS3.3",
+      "page": 452,
+      "rowBBox": [
+        46.7,
+        535.26,
+        98.1,
+        558.9
+      ],
+      "sourceBodySha256": "628cca227c3e631c2410d49f46477c9c307aa9909cee0750fb35aa9b1c49a931",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative examination",
+      "draftLearningTask": "Perform and document a focused examination including airway and cardiopulmonary assessment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eeeab30b4b08fadd4ac964918839dd21f60c78e4e89b063875d946994a6c2036",
+      "subjectId": "anaesthesia",
+      "code": "AS3.4",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        124.44,
+        98.1,
+        155.1
+      ],
+      "sourceBodySha256": "3dfd0781f61adb55d2e020ea57d44e1a3e5b44bab4bf87f17e70c03aab26c2cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative tests",
+      "draftLearningTask": "Select and interpret tests based on patient factors and the proposed operation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:67f718e6459bfb45d1ebb8a9745359155d738020d938c310964356a85d8dd052",
+      "subjectId": "anaesthesia",
+      "code": "AS3.5",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        155.1,
+        98.1,
+        183.48
+      ],
+      "sourceBodySha256": "9c480397f6cf9feb5cedb8bd8605b7cb7ecbc20868b2180835eb9f257bf68a90",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Readiness for surgery",
+      "draftLearningTask": "Integrate assessment findings and justify proceeding, optimizing or escalating a simulated case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3bdbf779c020e8beb62fa4051089a0e5300ba03cc0e55733d9715b5b59892917",
+      "subjectId": "anaesthesia",
+      "code": "AS3.6",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        183.48,
+        98.1,
+        206.94
+      ],
+      "sourceBodySha256": "75a142e807f6c7a1f30f80fff0fe4d2d9afb0a5fbde7e2471e6b32a159d48eb0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Premedication",
+      "draftLearningTask": "Write and justify a simulated prescription that accounts for risks and contraindications.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4e2772917749fb5450ebd90656261f07e08d52fec8c1e85a750f51c08c515057",
+      "subjectId": "anaesthesia",
+      "code": "AS4.1",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        226.86,
+        98.1,
+        297.12
+      ],
+      "sourceBodySha256": "24456dbf68c2f0bc7ac910b1332858eb8c5901814af5053632ff420156c6cf29",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "General anaesthetic drugs",
+      "draftLearningTask": "Compare intravenous and inhaled agents, opioid and non-opioid analgesics, neuromuscular blockers and anticholinesterases by action and relevant adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:32d346fa3af22607f9ac6c53c4fb768d982cc2aca27e4eb5f2e2a815d7cbf56c",
+      "subjectId": "anaesthesia",
+      "code": "AS4.2",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        297.12,
+        98.1,
+        317.52
+      ],
+      "sourceBodySha256": "0c4849468bebfaab87c7a6cf722cf5ee4e6b391b6931982b10e95511e4d95f2f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Airway anatomy",
+      "draftLearningTask": "Identify landmarks and explain how anatomy informs airway assessment and device selection.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:01c2d056a8bf28ba7f9db82ff88d34188d4f9c36a37b6e0bb8eaeb55a952621e",
+      "subjectId": "anaesthesia",
+      "code": "AS4.3",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        317.52,
+        98.1,
+        356.88
+      ],
+      "sourceBodySha256": "2c638db4a41e110667ee7fa9be40a1bf048904ddafbf2882c876786639225443",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Induction and maintenance",
+      "draftLearningTask": "Observe or review a demonstration and describe preparation, induction and maintenance checkpoints.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0dda10aa4b5f6dbb6481f4d20f7798f305a9da8478637bc47748c60eb696fed1",
+      "subjectId": "anaesthesia",
+      "code": "AS4.4",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        356.88,
+        98.1,
+        396.24
+      ],
+      "sourceBodySha256": "1aa235bc36855c816f501b133627824c88855004289704673a6bee7ee1bb2a04",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Organ support",
+      "draftLearningTask": "Observe a perioperative demonstration and explain measures used to maintain ventilation, circulation and temperature.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8b5a47fac86c81d15610712607a105ebffdd98f9df65ceb75d5ce1a21e46db6e",
+      "subjectId": "anaesthesia",
+      "code": "AS4.5",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        396.24,
+        98.1,
+        420.66
+      ],
+      "sourceBodySha256": "f8d420cfb659eaf581a42a5d05f54b0e8a3d7bab19210606abd25b7d2b8d7207",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Intraoperative monitoring",
+      "draftLearningTask": "Observe monitor setup and explain the purpose and interpretation of representative readings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d67f4f980b702225eeb20da19d33b8c6f04fd1f6d68c6048cb8e6da3a8115ef0",
+      "subjectId": "anaesthesia",
+      "code": "AS4.6",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        420.66,
+        98.1,
+        460.98
+      ],
+      "sourceBodySha256": "0e45de3af99b866f1e8cc6b8ef78d32e292abd0638f46813dff90273d7160eb3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Day-case anaesthesia",
+      "draftLearningTask": "Describe observed selection, recovery and discharge safeguards for ambulatory surgery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:96fbc9e06aa663b4040c6531c8d7ed3dcaeb2e6648ec6a0b2dae5083438ee809",
+      "subjectId": "anaesthesia",
+      "code": "AS4.7",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        460.98,
+        98.1,
+        501.78
+      ],
+      "sourceBodySha256": "5a6661aa544e729e22a02ef7f13faf79a798863b69c4aa63a98c58c376f75b55",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Remote-site anaesthesia",
+      "draftLearningTask": "Explain observed preparation, monitoring, emergency access and recovery arrangements outside theatre.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a4d8618d895e5f35d29a97a839343d1a70596bec797943f87af90c9fa57b50c3",
+      "subjectId": "anaesthesia",
+      "code": "AS5.1",
+      "page": 453,
+      "rowBBox": [
+        46.7,
+        519.9,
+        98.1,
+        550.62
+      ],
+      "sourceBodySha256": "04ce74c33ffa07eeeb8ce8e11c56f604b5b62c177486f60ba0c7166b5d54b167",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Regional techniques",
+      "draftLearningTask": "Compare indications, principles and limitations of spinal, epidural and combined techniques.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eec651f08e65633e4f8d9be511e0fe7e365ccad07e8392a1d85c2db496069ca3",
+      "subjectId": "anaesthesia",
+      "code": "AS5.2",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        106.8,
+        98.1,
+        137.94
+      ],
+      "sourceBodySha256": "3df5b4b149b09a857163e1cd893da5a916b667f0682b0bd204947d9467e32624",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Regional anatomy",
+      "draftLearningTask": "Identify brachial plexus, subarachnoid and epidural landmarks on diagrams or models.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a2725149ef4e25d4f0bf9b0df20a800ed93eeb9eb471c656f37b8c9dc3cac5cd",
+      "subjectId": "anaesthesia",
+      "code": "AS5.3",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        137.94,
+        98.1,
+        165.48
+      ],
+      "sourceBodySha256": "5256d5ba035996ab7588ab7ec5001df45c55ff11956307d2d6063347849dad5e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral blocks",
+      "draftLearningTask": "Observe a demonstration and explain preparation, localization, monitoring and safety checks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:79c8bb2933932d865442b448e8fddaadd599d2ee63b8b7bc331ba8b071904c90",
+      "subjectId": "anaesthesia",
+      "code": "AS5.5",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        192.54,
+        98.1,
+        215.16
+      ],
+      "sourceBodySha256": "75b90d1591f3add14abd00e7c3e950dfc599a1fe5f960913f98ccce3d2321ed4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Caudal epidural",
+      "draftLearningTask": "Describe an observed demonstration and compare adult and paediatric anatomical and procedural considerations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:74907f95a7902df2058958d966dff32bcd60cdb5021daf5cc3a0e82ad1ca440d",
+      "subjectId": "anaesthesia",
+      "code": "AS5.6",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        215.16,
+        98.1,
+        238.68
+      ],
+      "sourceBodySha256": "a3aa7acceeae2ca97aa168f465b07acafa00ea670c7643eae8b55cae10bf64b3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Common surgical blocks",
+      "draftLearningTask": "Observe representative blocks including brachial plexus approaches and explain their targets and steps.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c6e44c9e8efffb4f1fef67663f19876c67727b10b393e4aa9765d78a8811ad70",
+      "subjectId": "anaesthesia",
+      "code": "AS6.1",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        277.5,
+        98.1,
+        304.62
+      ],
+      "sourceBodySha256": "2850ea322f0a1f86c521908c7870d7b96be60adc64dd27371acc482025b5712d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Recovery monitoring",
+      "draftLearningTask": "Outline recovery assessment and resuscitation priorities in a simulated deterioration.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5aaeca2d92eef48081860d9b8c504af8bf5e9f5c995c948cba055ddfaeeee672",
+      "subjectId": "anaesthesia",
+      "code": "AS6.2",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        304.62,
+        98.1,
+        327.18
+      ],
+      "sourceBodySha256": "d58797dc4863c376b043e8375e8b3242b7c680767fed04171e40903139ba7f92",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Crash cart",
+      "draftLearningTask": "Identify observed crash cart contents and explain the use of key recovery equipment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cc64e92f823c6b09c46358281e8f66e309ee47691ede6cd2660b3eb95a7d2d73",
+      "subjectId": "anaesthesia",
+      "code": "AS6.3",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        327.18,
+        98.1,
+        354.24
+      ],
+      "sourceBodySha256": "bb4a5bf527013c8e381a3c02a7e3b6557c98b4224f54767dce9e22f59708fecc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Recovery complications",
+      "draftLearningTask": "Recognize representative postoperative complications and justify initial assessment and escalation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e7e2437f24287f93e998cc22a4b38d256bbd13f889ea15ac8fa8a1707a693021",
+      "subjectId": "anaesthesia",
+      "code": "AS7.1",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        376.86,
+        98.1,
+        398.94
+      ],
+      "sourceBodySha256": "2839a8975cfc87ad7dd5f93d23f47556542a62a29882149b373bde2bb699771d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ICU functions",
+      "draftLearningTask": "Use an ICU visit or equivalent observation to describe staffing, monitoring and organ support functions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:434c78d3cab2fc9ee1be1fa50b011b26671107572f4b5ca7b7bfcd0a8f327e39",
+      "subjectId": "anaesthesia",
+      "code": "AS7.2",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        398.94,
+        98.1,
+        421.5
+      ],
+      "sourceBodySha256": "7246941e05c61b732d6f1632feea00290a41ec0d70af1506b89e32a6f8018283",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ICU admission and discharge",
+      "draftLearningTask": "Apply representative admission and step-down criteria to simulated cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d980c1bac7fdad0441176036e3fc2154c7c1e1f207601a7010f3d13f0abd1d02",
+      "subjectId": "anaesthesia",
+      "code": "AS7.3",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        421.5,
+        98.1,
+        439.62
+      ],
+      "sourceBodySha256": "d60f452bcf3891c7f71adb451d1693d640bf9030300fa4bbb807c8d4f5c97525",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Unconscious patient",
+      "draftLearningTask": "Describe an observed or simulated structured assessment and stabilization of an unconscious patient.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:087799c3bdde841631e4076e52a4d162ae415652692a541529b96033f3b312b1",
+      "subjectId": "anaesthesia",
+      "code": "AS7.4",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        439.62,
+        98.1,
+        457.74
+      ],
+      "sourceBodySha256": "f13df107f5ed300b12b93efe2d92ff47f22aebd786fc3d49cb5a0be8d20b5163",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ventilator setup",
+      "draftLearningTask": "Observe setup and explain circuit checks, initial settings and alarm verification.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bb269f5d845c571894dfc1c250439e52fba8f19f70762e8ebd8bcea0ecf966a7",
+      "subjectId": "anaesthesia",
+      "code": "AS7.5",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        457.74,
+        98.1,
+        475.32
+      ],
+      "sourceBodySha256": "1a7996e4e3bd794247ab9ee4792e8ba04fd7645895ae8e82bca6288d92c03707",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ICU monitoring",
+      "draftLearningTask": "Explain observed monitoring choices and relate trends to organ function.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f40c554ad68f8420698ad09e5910229f958366cbe860211fbca1ec5d74a731bf",
+      "subjectId": "anaesthesia",
+      "code": "AS8.1",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        493.44,
+        98.1,
+        520.44
+      ],
+      "sourceBodySha256": "6ab0cb35bb26cae23b21f4d751cb332e14b9f89a2076e236243150f81cff8877",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pain pathways",
+      "draftLearningTask": "Trace nociceptive pathways and explain modulation and sensitization.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9a853c8c834714e0670cb3b656539b4fdf4d18e2c2b354e9d0fa7e7ef4e83652",
+      "subjectId": "anaesthesia",
+      "code": "AS8.2",
+      "page": 454,
+      "rowBBox": [
+        46.7,
+        520.44,
+        98.1,
+        552.12
+      ],
+      "sourceBodySha256": "b6f211a5dff403a20de739f317186bb6240759077be72667d66cb3348aed2a61",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pain assessment",
+      "draftLearningTask": "Elicit location, intensity, quality, tolerance and functional effect from a simulated patient or surrogate.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9f08d22f1bbd0230ac87c5864f015f7fb45e0cc7228d29b005b5b685f9bcfda9",
+      "subjectId": "anaesthesia",
+      "code": "AS8.3",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        106.8,
+        98.5,
+        129.42
+      ],
+      "sourceBodySha256": "4bf611753b1b5154551df6723b072e194cb7da6bdf574d47f1325cd159069aa0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Analgesic drugs",
+      "draftLearningTask": "Compare representative agents by target, clinical role and adverse effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:eb9b7b4a7d23c34ccaab5cb7f80d368682840de18b791217cef317ac9d180d95",
+      "subjectId": "anaesthesia",
+      "code": "AS8.4",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        129.42,
+        98.5,
+        143.64
+      ],
+      "sourceBodySha256": "51b421911663a92007bf2bed4113c53c18d5f31b17291b131c8d1f26cfa55471",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Palliative pain",
+      "draftLearningTask": "Explain how assessment, goals and treatment burden inform multimodal pain care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1d68cdac65fb8ae3b486da822fa0c519d64c9a3b88aaa4d9413ded5c5a9a5ddc",
+      "subjectId": "anaesthesia",
+      "code": "AS8.5",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        143.64,
+        98.5,
+        160.74
+      ],
+      "sourceBodySha256": "cef719f65763cbedf6b9c24052c164bd16726fe40fc818db89d6f244116e1ba8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Terminal pain",
+      "draftLearningTask": "Use a simulated case to discuss symptom relief, reassessment and patient preferences near the end of life.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+      "subjectId": "anaesthesia",
+      "code": "AS9.1",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        178.86,
+        98.5,
+        196.98
+      ],
+      "sourceBodySha256": "91bc2c9da2aba14fc3dca1e02db3a96aee4b131c732b34fd7f3b34ee7b4f585a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral IV access",
+      "draftLearningTask": "Demonstrate peripheral cannulation and safe disposal in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7c4c94bb70152e7690c0f0bb191759628f4e47405b725cc84629cc4539342d56",
+      "subjectId": "anaesthesia",
+      "code": "AS9.2",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        196.98,
+        98.5,
+        215.04
+      ],
+      "sourceBodySha256": "292b7a5dccfc56d5ab6a8c2e40c7787ade39512405ae6c7edab5db509ec1366a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Central access",
+      "draftLearningTask": "Demonstrate preparation and central venous access on a task trainer with supervision.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e2e309aa784d685f4efe1e60d4b6d0df09fbea9eb0e1ec6320bfcedf559e6052",
+      "subjectId": "anaesthesia",
+      "code": "AS9.3",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        215.04,
+        98.5,
+        229.2
+      ],
+      "sourceBodySha256": "09e525e31d499dfef01e53c49a9c932b04aed914d2d7307cb51dd9fb6985d2d8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative fluids",
+      "draftLearningTask": "Explain how clinical findings and procedure context guide fluid selection and reassessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:faa12d4b0d2e051a3fc1df1b47784973b402ae5821533a5a293ac4f17bac23f2",
+      "subjectId": "anaesthesia",
+      "code": "AS9.4",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        229.2,
+        98.5,
+        250.86
+      ],
+      "sourceBodySha256": "7f10d18c1953a22a11ad75560c5be7e0827a76014a38952bae8e9803ad91e588",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Preoperative blood products",
+      "draftLearningTask": "Match blood components to representative indications and explain preoperative checks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ada235348419626a50fe5ad14935ec13b552d9a3d21e0b3b6008da60077318b4",
+      "subjectId": "anaesthesia",
+      "code": "AS10.1",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        268.98,
+        98.5,
+        286.14
+      ],
+      "sourceBodySha256": "8ebd8c1f217685c840cea1eae788024ffa7597501af81f165432d18acd679159",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Positioning hazards",
+      "draftLearningTask": "Relate common surgical positions to pressure, nerve and cardiopulmonary risks.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4060ed9575859cd70049bc36d1308ec1a3685f3dfdac9f5f36bf9939b0fe7bde",
+      "subjectId": "anaesthesia",
+      "code": "AS10.2",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        286.14,
+        98.5,
+        309.78
+      ],
+      "sourceBodySha256": "499ce3ff8142c74d1fb93bc2fc20536b718555e4226035583236de7fa1d12bde",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Perioperative hazards",
+      "draftLearningTask": "Identify representative hazards and explain corresponding prevention measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2073d77bbfa924ee053ee88d0ece313d77134a9050ebba1f8275052805eb2e6b",
+      "subjectId": "anaesthesia",
+      "code": "AS10.3",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        309.78,
+        98.5,
+        324.0
+      ],
+      "sourceBodySha256": "2adaa99b8b7e5841181d85bf0024180c878bf22efe4d8affe14d3d0a2a1f9146",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Safety communication",
+      "draftLearningTask": "Explain how briefings, closed-loop communication and handovers prevent errors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ddcbee571be5c8bc60d19a4dd28b5a21d21361c157e52ed867f87b09766881d3",
+      "subjectId": "anaesthesia",
+      "code": "AS10.4",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        324.0,
+        98.5,
+        346.56
+      ],
+      "sourceBodySha256": "1682044672f7f40a12bd93c32ae476bf6ea6d20d9cd13a7d904fd5447af7ac3d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaesthesia errors",
+      "draftLearningTask": "Classify representative medical and medication errors and identify prevention and reporting steps.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0e6a9dc83da71fe55f8ce36d1da3afa93cc53827a1c14ae82a34212c82d27899",
+      "subjectId": "anaesthesia",
+      "code": "AS11.1",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        364.68,
+        98.5,
+        432.66
+      ],
+      "sourceBodySha256": "070e1b528a89708c941168f57b6a5335682cc7279d15e3ef1597285542c79b1e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oxygen devices",
+      "draftLearningTask": "Select and demonstrate setup of nasal cannula, simple mask, Venturi mask, non-rebreather, bag-mask and high-flow nasal oxygen in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ad8b42d65278540419217b2a17921d772d9eee7c50053ff3b087beea4d1620cc",
+      "subjectId": "anaesthesia",
+      "code": "AS11.2",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        432.66,
+        98.5,
+        477.48
+      ],
+      "sourceBodySha256": "7ca0f84714518b54f561b697de03cc2a927c792736c885bc673dd14866f2e627",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oxygen therapy",
+      "draftLearningTask": "Demonstrate adjustment of flow and inspired oxygen and explain monitoring and safety checks.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c05303597049864c3f2bbe1611be3ff1df01751caeedef341ea00f5fa56340c4",
+      "subjectId": "anaesthesia",
+      "code": "AS11.3",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        477.48,
+        98.5,
+        504.84
+      ],
+      "sourceBodySha256": "91a42a70086bb2b60a16f8e0460844549f79620c109ff013e6d6100465540150",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Airway opening",
+      "draftLearningTask": "Demonstrate head tilt, chin lift and jaw thrust on a simulator and explain selection.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b93b21ebc1cbfeff0439366d0b13eae3bdc31b76ff7e2f00bb3450a7b276d2a2",
+      "subjectId": "anaesthesia",
+      "code": "AS11.4",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        504.84,
+        98.5,
+        532.2
+      ],
+      "sourceBodySha256": "3b9b91601be2838a6bdb80995d1210463e6b04c4c8fb41bc95e51cb76996c827",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Airway adjuncts",
+      "draftLearningTask": "Demonstrate selection, sizing and insertion of oropharyngeal and nasopharyngeal airways on a simulator.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd87a7618d4efb0e5011ffa87f6917cca74694c227ebdc4ab3857622738788cf",
+      "subjectId": "anaesthesia",
+      "code": "AS11.5",
+      "page": 455,
+      "rowBBox": [
+        46.7,
+        532.2,
+        98.5,
+        559.56
+      ],
+      "sourceBodySha256": "e58d3ce266e67f3110a7d1072fd0b3e40058da7b38524cde6ba60ffacff60b34",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Advanced airway",
+      "draftLearningTask": "Explain indications and demonstrate an advanced airway sequence on a simulator, including confirmation and reassessment.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d546bd2fdd3914ca0fee1d4fde8df7ae950b3bcc9c0b28a71fee6f67ba87b0aa",
+      "subjectId": "anaesthesia",
+      "code": "AS11.6",
+      "page": 456,
+      "rowBBox": [
+        46.7,
+        134.28,
+        98.8,
+        161.64
+      ],
+      "sourceBodySha256": "15f72bb4012017c22f402dfcd52df9d9124b0315049d83f2b9a8778b8b9a7586",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Mechanical ventilation",
+      "draftLearningTask": "Explain major settings and demonstrate how changes affect ventilation and oxygenation in simulation.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

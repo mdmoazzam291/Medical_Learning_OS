@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:e154f6b357f72e3f6c9b0145f7a857485889b72f393d9917b5c0168623023941",
+      "subjectId": "anatomy",
+      "code": "AN1.1",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        184.68,
+        120.4,
+        227.58
+      ],
+      "sourceBodySha256": "a9a0c4f163e8a1cf2c8d5a524de96472d049c7881ac486ae07e92ec579f3f20a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anatomical orientation and movement",
+      "draftLearningTask": "Use a model to demonstrate the reference position, identify a requested plane, and describe the side, relative position and movement of a marked structure.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8e7227072301a3850df8f05fda4580c17507031399d1da57e79543c499e3cc14",
+      "subjectId": "anatomy",
+      "code": "AN1.2",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        227.58,
+        120.4,
+        247.68
+      ],
+      "sourceBodySha256": "fcdaf4f1725050562473b54d8627f6163a559ced46cd109d4573d42248563d94",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bone and marrow composition",
+      "draftLearningTask": "Annotate a bone section to distinguish its tissue and marrow components and summarize the composition of each.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3f25505fdafa6036973ff2ba9106d3a973df45596b8567a53678a69d87b574f2",
+      "subjectId": "anatomy",
+      "code": "AN2.1",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        266.04,
+        120.4,
+        298.14
+      ],
+      "sourceBodySha256": "06f9ccd8af99297e1a4beece8e0f8394b1e1c05ab32e5549bcd46bddfd4819e9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bone types and structure",
+      "draftLearningTask": "Compare specimens from different bone types. Label their parts, explain their distinguishing features, and trace the routes of their vessels and nerves.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:23c1583ce1f0e7407d439b931e0a7dade3ada5dd7e0abb6f5922ea74ec0975e3",
+      "subjectId": "anatomy",
+      "code": "AN2.2",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        298.14,
+        120.4,
+        329.4
+      ],
+      "sourceBodySha256": "6cb3568ebce8bb637d4a863c2d9822e9e09e8f10c0d811491f5e4972efd2e020",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ossification and epiphyses",
+      "draftLearningTask": "Use a sequence of developmental diagrams to explain the order of ossification, classify the labelled epiphyses and describe why each type matters.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ef17433bbde31febb57741b2021825544c2a8d41b9d296fb6ae8034a625d40f0",
+      "subjectId": "anatomy",
+      "code": "AN2.3",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        329.4,
+        120.4,
+        361.44
+      ],
+      "sourceBodySha256": "15d1002043a09100b6fe83b0bb5d4c5dd2ff0677061a7a2c27fffc66ce887374",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sesamoid bones",
+      "draftLearningTask": "Identify a sesamoid bone on a model and explain how its position distinguishes it from nearby bones.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a87902ebfebd099f6aebd573087b1a547abc39c2bd7a937ac5bd10d429646f74",
+      "subjectId": "anatomy",
+      "code": "AN2.4",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        361.44,
+        120.4,
+        392.4
+      ],
+      "sourceBodySha256": "54b2191ae48950e984ac13f8fd5a47cdd8060e6124b25d4a27a7504193546cc4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cartilage types",
+      "draftLearningTask": "Compare labelled cartilage specimens by structure and match each type to anatomical locations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d9d18d6b45146699c0b2b10d49670c3a6227fc93396cd8513c7adb3d349da917",
+      "subjectId": "anatomy",
+      "code": "AN2.5",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        392.4,
+        120.4,
+        440.64
+      ],
+      "sourceBodySha256": "25cfcd9f319aec2318154d709a393b3295b5e553c7dd4a8b63be11d3676c5cb1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint classification and movement",
+      "draftLearningTask": "Classify joints on models, give an example of each requested subtype and demonstrate the movements allowed by selected joints.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8988eba110cf95f940f049df0b7b22bee8b8de0da075d7081b051118d50bebd3",
+      "subjectId": "anatomy",
+      "code": "AN2.6",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        440.64,
+        120.4,
+        471.96
+      ],
+      "sourceBodySha256": "5363225176452a1f262b9f9d71e7ed98b3c04c9ef15f415746687856827e4e9e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Joint innervation",
+      "draftLearningTask": "Use a labelled limb diagram to explain the innervation of a selected joint and apply Hilton\u2019s law to the structures shown.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:01858e701637987eeaebfd20c48a87ae09160424fa12dcbcb2b095aebcab5af2",
+      "subjectId": "anatomy",
+      "code": "AN3.1",
+      "page": 108,
+      "rowBBox": [
+        51.2,
+        488.88,
+        120.4,
+        517.02
+      ],
+      "sourceBodySha256": "d0db9d647566a52c58b92431651afefb510e532e90a8af4f4826fa477c71a99e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Muscle classification",
+      "draftLearningTask": "Sort muscle examples by tissue structure and describe selected skeletal muscles by size, shape, location and action.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f9aaac090d5029cf7f6dfec0e2d80c483576f1fb5f810f4d30d5743c8bb71ccf",
+      "subjectId": "anatomy",
+      "code": "AN3.2",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        108.42,
+        120.4,
+        139.74
+      ],
+      "sourceBodySha256": "c79bf4e08bfb15577f73f1c41e9f8e2b9df9a8240cda84dbef764b605996e927",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skeletal muscle and attachments",
+      "draftLearningTask": "Label a muscle and its attachments, then distinguish a tendon from an aponeurosis using examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4bb0771819c12a967ba18322ccc84e59705b432ee70ba919aef435d8f3979e14",
+      "subjectId": "anatomy",
+      "code": "AN3.3",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        139.74,
+        120.4,
+        172.5
+      ],
+      "sourceBodySha256": "9cb11cf9c4c72b17f3d884b6be9dde5ff65876d7b9be43192386e24c0898959d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shunt and spurt muscles",
+      "draftLearningTask": "Compare the pull of a shunt and a spurt muscle on a joint model and explain the contribution of each to the movement shown.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e547eeecc0016bc03077300ec4415238b20afeeb056d0e83055ce44d0b91ee25",
+      "subjectId": "anatomy",
+      "code": "AN4.1",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        189.42,
+        120.4,
+        218.22
+      ],
+      "sourceBodySha256": "84546de0996b268a426476be01b87503cf5f8ebcbec4b3296c8efe3ba99acafc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skin types and dermatomes",
+      "draftLearningTask": "Compare skin types at selected sites and locate a requested dermatome on a body diagram.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:566dc2d97d4168493c18da78db215c97fdd35c82809728e88b1115c66bfb36a4",
+      "subjectId": "anatomy",
+      "code": "AN4.2",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        218.22,
+        120.4,
+        249.84
+      ],
+      "sourceBodySha256": "808c7ed6bf3a51339b6e3c82625831330ac0735926a029ff12bc22067e984b99",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skin structure and appendages",
+      "draftLearningTask": "Identify skin layers and appendages on a section or model and relate one observed feature to a clinical example.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:99ac270c24814d8a033c7d2005268b365da810dda220850d5e94e02969d23825",
+      "subjectId": "anatomy",
+      "code": "AN4.3",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        249.84,
+        120.4,
+        281.94
+      ],
+      "sourceBodySha256": "c6293cfe57ea6c4eb5ef1daf2cc94e24cc24e32e98748a1fd8cda1536d68854f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Superficial fascia and fat distribution",
+      "draftLearningTask": "Identify the contents of superficial fascia in a specimen or diagram and compare its modifications and fat distribution at selected sites.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0391bca5df0a041604a8dc4897f7b2cdea053d8c57de27f178be03791e3f4e29",
+      "subjectId": "anatomy",
+      "code": "AN4.4",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        281.94,
+        120.4,
+        312.84
+      ],
+      "sourceBodySha256": "a52c5444ebedad6e32e59cc752b72c4bfa2a0478d783f9d31c5a0a5ddcb17532",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Deep fascia and its modifications",
+      "draftLearningTask": "Identify deep fascia modifications on a model, locate each example and explain its function.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce6704848c955a866a9628e3023aed7a8fedee03b8d8c53cb00d5fc725d3f0d1",
+      "subjectId": "anatomy",
+      "code": "AN4.5",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        312.84,
+        120.4,
+        328.98
+      ],
+      "sourceBodySha256": "0e96d44e790621f88b9546535faa82028374058570a0865942cf9ddfce96fbf6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anatomy of skin incisions",
+      "draftLearningTask": "Compare proposed incision directions on a skin diagram and explain the anatomical principle and surgical implication of each.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bc97a513f99ca3ac0e79f7c17cd852dc9efccd49c2d361ae3a9b086ed1ea8d12",
+      "subjectId": "anatomy",
+      "code": "AN5.1",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        347.34,
+        120.4,
+        378.15
+      ],
+      "sourceBodySha256": "8cd4a596177c8d69560a22f879d509f37bb91b3eaebbb1a46ca453ec073b2f58",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Blood and lymphatic vascular systems",
+      "draftLearningTask": "Compare the routes and roles of blood vessels and lymphatic vessels on a labelled diagram.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:51527d5320dd5cd16d889fa366eedadefbb09094b18b85efc38bc07b187bbda4",
+      "subjectId": "anatomy",
+      "code": "AN5.2",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        378.15,
+        120.4,
+        404.88
+      ],
+      "sourceBodySha256": "246d2cd74b0158d67d35bda440b327ee8998fd6dc0144ccdeed23a77716994ba",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pulmonary and systemic circulation",
+      "draftLearningTask": "Trace blood through the pulmonary and systemic circuits and identify their connection points.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d6e389cdc8d406216d14008c4ca07203a06e7c2a893f90f84eca4bd599b8d4e",
+      "subjectId": "anatomy",
+      "code": "AN5.3",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        404.88,
+        120.4,
+        431.58
+      ],
+      "sourceBodySha256": "326c1eccf5848d964fe2b63b9cfcec9d60637d1f2a87756892e8e798e9bac65d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arteries, veins and vascular sinuses",
+      "draftLearningTask": "Compare the gross features of an artery, vein and vascular sinus using labelled examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8cfff599fe29270fb4e71824ebac57d283f1f21b0a9fc332202aab40db06c537",
+      "subjectId": "anatomy",
+      "code": "AN5.4",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        431.58,
+        120.4,
+        463.26
+      ],
+      "sourceBodySha256": "ff7072b6c6e3182a45b64ce4e6103e8e8d4f8a8a1220a0fd6adcdb78b094fa80",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arterial vessel classes",
+      "draftLearningTask": "Compare elastic arteries, muscular arteries and arterioles by gross structure and explain the function of each class.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7f0f95cc83575449dd4876f262dc868f641e23ce3fd9bff623e39b8095f25e81",
+      "subjectId": "anatomy",
+      "code": "AN5.5",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        463.26,
+        120.4,
+        492.42
+      ],
+      "sourceBodySha256": "db2f780ef12933d5f8191fc9df492bf4b8a2feabf34448afe83584df58861547",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Portal circulation",
+      "draftLearningTask": "Trace a portal circuit on a diagram and explain which features make it a portal arrangement.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:36aa8b61bc7bb4b22f81dfd9513fff54033164e73194357860f97179e9d546df",
+      "subjectId": "anatomy",
+      "code": "AN5.6",
+      "page": 109,
+      "rowBBox": [
+        51.2,
+        492.42,
+        120.4,
+        521.94
+      ],
+      "sourceBodySha256": "51ae6f4e72438e2bdc079fe0cf6f6494503fcc9b5db2f12a9ba7bf6ad195653e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anastomoses and collateral circulation",
+      "draftLearningTask": "Identify examples of anastomoses, trace a potential collateral route and compare it with the supply of an end artery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:83e7f3e670b5a8310f0380b5b3f3a7491786babaa5c176ee57be255342949ae8",
+      "subjectId": "anatomy",
+      "code": "AN5.7",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        108.42,
+        120.4,
+        139.74
+      ],
+      "sourceBodySha256": "40d882a6ff7d69187f9c2fa0c4ad28fa1c776a4715a1585fd618affff5c89796",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Microvascular flow regulation",
+      "draftLearningTask": "Use a microvascular diagram to explain how metarterioles, precapillary sphincters and arteriovenous connections affect flow.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:be8beaadcfde1325137aa46642820479eae61917fa94a3d96022f2ceed9193a5",
+      "subjectId": "anatomy",
+      "code": "AN5.8",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        139.74,
+        120.4,
+        171.06
+      ],
+      "sourceBodySha256": "2d6be3a3a6785808d8bc61c23685b18da83321fdf1d79841e3b9b1a805c18276",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vascular pathology terminology",
+      "draftLearningTask": "Distinguish thrombosis, infarction and aneurysm using three labelled examples and explain which feature identifies each process.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:19832a4b32afb4b95bc518be9410096c164840267429e55cceb95d49d7f89a5c",
+      "subjectId": "anatomy",
+      "code": "AN6.1",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        189.42,
+        120.4,
+        218.22
+      ],
+      "sourceBodySha256": "920efc734e82165a6915dca06defc8643b308bbafa7bcd7dde7b6c83e27edbfa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lymphatic system organization",
+      "draftLearningTask": "Label the main lymphatic components on a diagram and explain the role of each.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b8ad20e9c6d7e878d9ea19935d9a612e883ce1b97339b683a3c49cda85a0ec55",
+      "subjectId": "anatomy",
+      "code": "AN6.2",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        218.22,
+        120.4,
+        234.0
+      ],
+      "sourceBodySha256": "8d38c96fe140e686eef58a4c58d8ed8a32c1bce3cf85cae941e3357cac4b8b9f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lymphatic capillaries and flow",
+      "draftLearningTask": "Identify features of a lymphatic capillary and trace lymph from tissue entry toward its return to the circulation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bb38391ac1d319b833c1a3df8b6cde59f2030efe81095faf41716ecba5daad9d",
+      "subjectId": "anatomy",
+      "code": "AN6.3",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        234.0,
+        120.4,
+        263.58
+      ],
+      "sourceBodySha256": "f67f75d394ce068a91a34585cd69a24e0f7fd00f90193e6952f411497676c708",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lymphatic obstruction and routes of spread",
+      "draftLearningTask": "Explain a simulated lymphatic obstruction using a drainage diagram and compare potential lymphatic and venous routes of tumour spread.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:83dedebb9b53528b29a21541486079e19c40e7d61e1150755f58aafa57a0664e",
+      "subjectId": "anatomy",
+      "code": "AN7.1",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        285.54,
+        120.4,
+        318.24
+      ],
+      "sourceBodySha256": "f75bef30586790deae09fab3b099f87a65dcb4cf6876815896026cd90046c587",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nervous system organization",
+      "draftLearningTask": "Draw an organizational map of the central, peripheral and autonomic components and place examples in their corresponding groups.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f4231740478f3d3e7cb1b00dad7600f7cb3511842cec000a54d0bacb6059c693",
+      "subjectId": "anatomy",
+      "code": "AN7.2",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        318.24,
+        120.4,
+        349.98
+      ],
+      "sourceBodySha256": "05967dd72a75af494b32e1d81854d5ce389b5a9ba5b6169113317172296a9892",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nervous tissue components",
+      "draftLearningTask": "Identify the major cellular components of nervous tissue and match each to its function.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a8a6751a89c943947f7362aed9cc4eb096766217a2b875c7e4d7e17b5253be77",
+      "subjectId": "anatomy",
+      "code": "AN7.3",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        349.98,
+        120.4,
+        380.94
+      ],
+      "sourceBodySha256": "75b015d81aa4501896d4e8e3c92af4c8d5f14328fc1f318295954aedbd40d4e8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Neuron structure and classification",
+      "draftLearningTask": "Label the parts of a neuron and classify examples by their processes, size and function.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1651a3d3396979e9f889ec219e770d79062c9279e0df6a2f2cf86c5311ac2f12",
+      "subjectId": "anatomy",
+      "code": "AN7.4",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        380.94,
+        120.4,
+        408.6
+      ],
+      "sourceBodySha256": "2c6bef1717a72306a05dc80a32c3530d80607dbfab446cfce17beda4853e9c17",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Spinal nerve anatomy",
+      "draftLearningTask": "Trace the parts of a typical spinal nerve on a labelled diagram and distinguish roots from branches.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:000be95df05a937000deef7dd6cffc16fbc4a78e3612afc7b88d73bb523d5469",
+      "subjectId": "anatomy",
+      "code": "AN7.5",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        408.6,
+        120.4,
+        423.36
+      ],
+      "sourceBodySha256": "9f4628f951aa217f31d66ad73029f80438ee2d7b592274031667c53535d8cd8e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sensory and motor muscle innervation",
+      "draftLearningTask": "Trace sensory and motor connections to a muscle on a diagram and explain the role of each route.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a475651b83d13d51e5faa456e693955db25fa9d60d3b254e64cc36074ef4c4e4",
+      "subjectId": "anatomy",
+      "code": "AN7.6",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        423.36,
+        120.4,
+        452.88
+      ],
+      "sourceBodySha256": "0378a363b57a422d9cd50eb061ad73f88ce13a5a6c11fe7a559406c7562715ed",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Muscle denervation",
+      "draftLearningTask": "Use a simulated loss of muscle innervation to predict affected functions and explain the anatomical basis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:11e19993a3ca9dee0f1fc197fefaca23a5771d3c3fa92a8c5f33e5301f348373",
+      "subjectId": "anatomy",
+      "code": "AN7.7",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        452.88,
+        120.4,
+        467.94
+      ],
+      "sourceBodySha256": "be2a0fda6162f064a33a4f39c2b702bdf16e1d837bb9cac9b4f9d87cd177695a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Synapse types",
+      "draftLearningTask": "Compare labelled examples of synapses and classify them using the features shown.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7e51c12f7c4e1b1ed065e12ddbe7a9780274ad0af1e55a113b6a3c5fc6264d21",
+      "subjectId": "anatomy",
+      "code": "AN7.8",
+      "page": 110,
+      "rowBBox": [
+        51.2,
+        467.94,
+        120.4,
+        481.98
+      ],
+      "sourceBodySha256": "b1624916035d7de23060515638e75412eea1733fbf3ae163b2cc0a63d57e1e0b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Sympathetic and spinal ganglia",
+      "draftLearningTask": "Compare the location and organization of sympathetic and spinal ganglia on a labelled diagram.",
+      "mode": "knowledge"
+    }
+  ]
+}

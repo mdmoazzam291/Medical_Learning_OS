@@ -1,3 +1,1687 @@
+## Mixed cross-cohort names and context leads
+
+Checked 2026-11-09T06:32:04.652Z on PR #415 from 97f1c6cc7f6a331f7f3c8afb2255cb8bc63136cd.
+
+Compared 57 mixed leads with consolidated labels and exact source-index entries. Routed Urinary tract infection to the existing Urinary infection proposal while preserving its distinct source scope. Traced four context leads to existing proposal records and kept parent scope pending. All bindings remain pending. Full repository checks were not run.
+
+Next verify the source tasks for the four context leads and resolve the shared-name candidates with existing source-index matches before adding names.
+
+---
+
+## Mixed names-only registry and scope reconciliation
+
+Checked 2026-11-09T06:28:46.335Z on PR #415 from 5843ce3566aadccf15449815f3ebbae71725dd59.
+
+Proposed COPD as a broader name for GM25.10 and kept both narrower draft scopes separate. Reconciled 49 zero-match leads and seven other scope routes and verified 44 distinct source references against the catalogue. No bindings were accepted. Full repository checks were not run.
+
+Next compare provisional names and alternate terms across earlier proposal cohorts, including Urinary tract infection versus Urinary infection, then consolidate collision-free leads and check the four context parents in the same run where possible.
+
+---
+
+## Mixed shared-name live registry readback
+
+Checked 2026-11-09T06:26:15.543Z on PR #415 from 3745a75dd1d8e8f233575c890232881f8bfe3ad7.
+
+Checked all 50 mixed shared-name candidates. 1 had possible registry matches for the tested terms. Bindings remain pending. Full repository checks were not run.
+
+Next compare matched registry scopes with source tasks before deciding reuse, and keep zero-match leads provisional.
+
+---
+
+## NMC mixed reuse evidence reconciliation and routing
+
+Checked 2026-11-09T06:24:25.124Z on PR #415 from e8f90155b1f56838585bcbb9646505a04c4d6d2a.
+
+Reconciled four incoming references with three existing names. The inventory now accounts for 122 distinct source references across 58 proposed names. Routed all 57 remaining mixed leads by recorded scope and kept registry status unverified for each. Bindings remain pending. Full repository checks were not run.
+
+Next batch the shared-name leads for a live registry comparison while preserving distinct scope and separate source references.
+
+---
+
+## NMC mixed reuse source scope decisions
+
+Checked 2026-11-09T06:22:35.112Z on PR #415 from 7eee000cac9a89dca4cb93b5b1edab9992dcc567.
+
+Compared source tasks for Constipation, Enteric fever and Skeletal muscle. Proposed reuse of all three names with four separate incoming source references. Retained compound and comparative scope at component level. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the four source references with the names-only evidence inventory and route the remaining mixed reuse leads by scope and registry status.
+
+---
+
+## Mixed reuse and consolidated name overlap
+
+Checked 2026-11-09T06:20:29.315Z on PR #415 from 6bce1f919113c70969c0830bc2014c9e39cd1468.
+
+Compared all 60 mixed reuse leads with the 58-name inventory and its aliases and contexts. Found 3 label matches, 0 leads sharing occurrence evidence, and 3 sharing target evidence. Preserved existing scope dispositions. Bindings remain pending. Full repository checks were not run.
+
+Next inspect overlapping leads against their exact source tasks before recording reuse or distinct scope.
+
+---
+
+## NMC names-only completion audit
+
+Checked 2026-11-09T06:18:13.386Z on PR #415 from d5f63c5f0c74838b6d476ad0ee5415476e84f914.
+
+Verified 570 standalone worklist dispositions and 58 proposed names. The repository completion reporter passed source accounting for 2634 appearances and reports 11 with proposed objectives and three with draft artifact bindings. Foundation remains incomplete. Prioritized reconciling 60 mixed reuse leads with the consolidated names-only inventory. Full repository checks were not run.
+
+Next compare the 60 mixed reuse leads with the 58-name inventory and flag overlap by scope and source reference.
+
+---
+
+## Consolidated 58-name NMC proposal inventory
+
+Checked 2026-11-09T06:16:19.222Z on PR #415 from fde24816a22310ded8a7b994baf260eeaff4d862.
+
+Live registry returned zero matches for the tested gestational terms. Added Gestational trophoblastic neoplasia to the proposal inventory with separate OG9.5 and PA29.5 source references. Verified 58 names and 118 distinct source references. All bindings remain pending. Full repository checks were not run.
+
+Next audit the names-only deliverables against the Foundation completion tracker and identify the highest-priority remaining names-only gap.
+
+---
+
+## NMC standalone disposition coverage and gestational scope
+
+Checked 2026-11-09T06:10:59.572Z on PR #415 from fc7c2f016de201ba9d227196db9d3bdeb4d31612.
+
+Verified that all 570 standalone worklist rows have one recorded disposition with exact source-reference agreement. Reconciled Gestational trophoblastic neoplasia as a distinct names-only candidate with separate OG9.5 and PA29.5 references. It remains outside the 57-name inventory pending a registry collision check. All bindings remain pending. Full repository checks were not run.
+
+Next check the gestational name and aliases against the live registry before consolidation.
+
+---
+
+## Consolidated 57-name NMC proposal inventory
+
+Checked 2026-11-09T06:06:31.668Z on PR #415 from 68e21f6d78c10a8b565d2945ab472c47679f7cae.
+
+Reconciled 57 names, three aliases and 13 contexts with 116 distinct source references. Verified normalized labels and parent links and recorded 7 references with multiple evidence roles. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the source-confirmed gestational naming decision with the consolidated inventory and verify final worklist disposition coverage.
+
+---
+
+## NMC names-only context parent proposals
+
+Checked 2026-11-09T06:01:51.878Z on PR #415 from 340dd6098e08b3002590e01bac3eda3191014ba8.
+
+Prepared nine parent name proposals for ten context leads. Verified 14 distinct parent-evidence references against the pinned catalogue. Blood culture, Research ethics and Skeletal muscle use facet evidence for their broader names. Context references and their evidence roles remain separate. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile the nine parent names and ten context leads with the 48-name inventory and account for any shared source references by role.
+
+---
+
+## NMC context parent source and registry trace
+
+Checked 2026-11-09T05:59:58.198Z on PR #415 from 83831aa0aa5b56ba625145f07d6bd388d2834fe5.
+
+Traced nine parent names for ten contexts. Six have exact source-index appearances and three have home-proposal leads. Live registry returned zero matches for tested terms. Bindings remain pending. Full repository checks were not run.
+
+Next inspect the three home-proposal scopes and assemble supported parent names with separate context references.
+
+---
+
+## NMC procedure and narrower context parent reconciliation
+
+Checked 2026-11-09T05:55:11.118Z on PR #415 from e5d901166fe1735fb72745ef6bde05ff931189dd.
+
+Grouped 13 comparisons into ten context leads and verified 11 distinct catalogue references. 0 proposed parents appear in the 48-name inventory. Distinguished parent-scope evidence from context-scope evidence. All bindings remain pending. Full repository checks were not run.
+
+Next trace the missing parent names through the source inventories and canonical registry before proposing parent identities or adding contexts.
+
+---
+
+## Consolidated 48-name NMC proposal inventory
+
+Checked 2026-11-09T05:53:25.615Z on PR #415 from 5f45e613ad43cce908b06a830fc366df8b8b80b6.
+
+Reconciled the 11 names and otitis context with the 37-name inventory. Verified 48 names, three aliases, three contexts and 96 distinct references with no cross-cohort reference overlap or normalized label collisions. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile the remaining narrower and procedure contexts against the consolidated inventory, verifying their parent names and retaining separate source references.
+
+---
+
+## Eleven distinct-scope names-only proposals
+
+Checked 2026-11-09T05:45:08.774Z on PR #415 from 9548fe9ec1e0ba0daee4df949ee9e011a9e3e85d.
+
+Prepared 11 names and one acute suppurative otitis context. Verified 12 distinct reference IDs in the pinned catalogue. Preserved observed competency code spacing and compared the otitis codes after removing whitespace. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile the 11 names and scoped context against the 37-name inventory and check source-reference overlap before consolidation.
+
+---
+
+## Acute otitis scope and distinct-name registry check
+
+Checked 2026-11-09T05:42:21.634Z on PR #415 from f296c2ea06d10b5b0d2ccd090c3f6e7fc6e1200f.
+
+Compared PE25.1 with EN4.3. Proposed one acute otitis name with a suppurative context and separate source objectives. Live registry returned zero matches for tested terms covering 11 separately routed names. All bindings remain pending. Full repository checks were not run.
+
+Next assemble the 11 names-only proposals with source references and preserve the scoped otitis relationship.
+
+---
+
+## NMC distinct-scope routing
+
+Checked 2026-11-09T05:39:30.919Z on PR #415 from d6cfb3e9cb1589dc389c2632ddad8078aa1451c8.
+
+Grouped 28 comparisons across 24 source topics and recorded provisional routing. Kept acute suppurative otitis media open for direct source comparison with acute otitis media. All bindings remain pending. Full repository checks were not run.
+
+Next compare the acute otitis media source tasks and check the separately routed concept names against the registry.
+
+---
+
+## NMC names-only inventory and remaining scope accounting
+
+Checked 2026-11-09T05:37:37.112Z on PR #415 from d50f50abd785c90224c237caa24aea63b9a3f448.
+
+Reconciled 37 proposed names, three aliases and 84 distinct source references. Accounted for all 28 distinct-scope comparisons and the prior gestational resolution separately from the five incorporated leads. Bindings remain pending. Full repository checks were not run.
+
+Next group the distinct-scope comparisons by source topic and identify which need a separate name or a narrower context.
+
+---
+
+## Five names-only NMC variant proposals
+
+Checked 2026-11-09T05:35:48.551Z on PR #415 from 72bfec1f1dad2d89e67a407feba5e20932ff25f2.
+
+Prepared five provisional names and two proposed aliases. Verified all five distinct source IDs and competency codes against the pinned catalogue. Preserved Cause of death as a separate scope from certification. Objective versions and bindings remain pending. Full repository checks were not run.
+
+Next reconcile the five proposals and aliases with the 32-name inventory, then account for the remaining distinct-scope variants.
+
+---
+
+## Five NMC reuse leads registry preflight
+
+Checked 2026-11-09T05:33:58.720Z on PR #415 from 404d383eab518f55212288c9aa9a33d696ee8f83.
+
+Checked five reuse leads against the 32-name inventory, neighboring variant dispositions and live registry terms. No inventory name or live registry match was found. Neighboring narrower or related scopes stay separate. Bindings remain pending. Full repository checks were not run.
+
+Next assemble the five names-only candidates with their separate source references and proposed aliases.
+
+---
+
+## Remaining NMC naming variant dispositions
+
+Checked 2026-11-09T05:31:51.345Z on PR #415 from 2675f694af0aaf9c27a7a58752c2018abdec6486.
+
+Reconciled all 34 remaining comparisons with their indexed source-scope reviews. Retained shared-name and alias leads, narrower and related distinct scopes, and the prior source-confirmed gestational naming decision. All mappings remain pending. Full repository checks were not run.
+
+Next check the shared-name and alias leads for conflicting dispositions and canonical registry collisions before incorporating names or aliases.
+
+---
+
+## Names-only variant inventory reconciliation
+
+Checked 2026-11-09T05:30:08.678Z on PR #415 from f64209c706a68d67ba71c0245adb0891e987373f.
+
+Production registry readback returned zero matches for the two proposed identities under the recorded terms. Reconciled all four dispositions into a 32-name inventory with 79 distinct references. Preserved both new proposals, the scoped search alias, the radiographic method context, and the earlier relationships. All mappings remain pending. Full repository checks were not run.
+
+Next review the remaining variant comparisons for reusable names, distinct scope and unresolved decisions without adding objective wording.
+
+---
+
+## Four overlapping names-only variant dispositions
+
+Checked 2026-11-09T05:26:27.293Z on PR #415 from 0c3b59318fbfa2e5a5ad385a7495cb86950514d5.
+
+Verified four distinct source draft references. Proposed a scoped search alias for abnormal vaginal discharge, a narrower concept for physiological vaginal discharge, a separate related fetal age concept and a radiographic method context. All bindings remain pending. Full repository checks were not run.
+
+Next reconcile these four dispositions with the names-only inventory and check the two proposed new identities for registry collisions.
+
+---
+
+## Variant cohort reconciliation
+
+Checked 2026-11-09T05:24:00.153Z on PR #415 from 7151d56f59de27e62b33d80569832f3d1ddcf95b.
+
+Accounted for 38 comparisons across 33 worklist rows, including the previously resolved gestational scope. Found 4 comparisons targeting consolidated proposal names. Preserved prior dispositions and separate source references. All mappings remain pending. Full repository checks were not run.
+
+Next review the overlapping variant candidates for alias or narrower-scope treatment before adding any new names.
+
+---
+
+## Consolidated names-only NMC proposal inventory
+
+Checked 2026-11-09T05:22:02.088Z on PR #415 from fb7f06513577a44c2140fde6cdcaea45f07e5746.
+
+Reconciled 25 exact-label proposals and five semantic-screening proposals. Verified 30 distinct normalized names and 75 distinct source references including the emergency IV context. No cross-cohort merge was proposed after comparing scopes. The ocular relationship and emergency IV context are retained. Bindings remain pending. Full repository checks were not run.
+
+Next review the variant-disposition cohort against this inventory and preserve any unresolved scope differences.
+
+---
+
+## Exact-label names-only proposals
+
+Checked 2026-11-09T05:20:20.957Z on PR #415 from 38775ab941c03249ff9fa62392472f0d61d29c7d.
+
+Prepared 25 names-only concept proposals, preserving 65 reference occurrences across 65 distinct source IDs. Verified each reference in the pinned catalogue and matched every name to its zero-match registry readback. Objective versions and bindings remain pending. Full repository checks were not run.
+
+Next reconcile the 25 proposals with the prior five names-only proposals and check any shared references or overlapping scope before consolidating the proposal inventory.
+
+---
+
+## Exact-label live registry readback
+
+Checked 2026-11-09T05:18:39.013Z on PR #415 from c5cf59792c72ac72065e21f0473224e7bd5bfd06.
+
+Compared all 25 names and recorded synonym terms against production labels and aliases across the published catalogue, accepted identities and saved drafts. Zero matches for the tested terms. All mappings remain pending. Full repository checks were not run.
+
+Next assemble the 25 names-only proposals with their distinct source references and retain the readback as collision evidence.
+
+---
+
+## Exact-label NMC reuse reconciliation
+
+Checked 2026-11-09T05:16:47.073Z on PR #415 from 2c2ad12592a2faf19f61f5ee82f17e9fa29c2f50.
+
+Reconciled all 25 worklist rows to their source-scope reviews. All 25 are shared-name candidates with distinct source objectives. 0 have an exact normalized label or alias match in the historical registry snapshot. Full repository checks were not run.
+
+Next verify exact labels and synonyms against the current canonical registry before proposing reuse or new names.
+
+---
+
+## Names-only objective-version gaps
+
+Checked 2026-11-09T05:15:02.429Z on PR #415 from 41e44ef843de10ef445cea8066e24c51f50df516.
+
+Checked the exact-link inventory plus Foundation draft and preparation objective registries. Recorded ten objective-version gaps within those checked inventories. No objective wording, IDs or bindings were created. Full repository checks were not run.
+
+Next return to the names-only worklist and reconcile the exact-label reuse cohort separately from objective authoring.
+
+---
+
+## Names-only exact catalogue and objective inventory
+
+Checked 2026-11-09T05:11:31.055Z on PR #415 from 28d464789b4c8ad84a1b193af8ade6bcc28666c7.
+
+Verified ten reference IDs and competency codes against the pinned catalogue. 10 meet catalogue eligibility rules. 0 have an exact objective-version link in the scanned repository JSON inventory. Full repository checks were not run.
+
+Next reconcile missing exact links with the remaining objective inventory or record them as objective-version gaps. Keep bindings pending and continue names-only work.
+
+---
+
+## Names-only binding contract preflight
+
+Checked 2026-11-09T05:01:56.674Z on PR #415 from 8fef950717e5dcfc97bd6047aaba4d1ae1ccca23.
+
+Compared all ten candidates with the Foundation draft binding contract and verified source-row evidence. The evidence manifest is preflight metadata. Every candidate still needs a resolved canonical identity and a distinct objective version. No runtime bindings were submitted. Full repository checks were not run.
+
+Next run a read-only exact catalogue and objective inventory check for all ten references to distinguish missing versions from versions already available elsewhere.
+
+---
+
+## Draft names-only binding manifest
+
+Checked 2026-11-09T04:59:49.310Z on PR #415 from 59bdb0242291e4aecd70a3b0a24214ead4257a9f.
+
+Prepared ten distinct pending binding candidates across five proposed identities. Verified each reference ID and competency code against its draft-task row. Kept the emergency IV context and ocular scope relationship explicit. Canonical concept and objective version IDs are unset. Full repository checks were not run.
+
+Next check the draft manifest against the existing binding contract and identify the exact identity and objective version prerequisites for each candidate.
+
+---
+
+## Names-only proposal worklist reconciliation
+
+Checked 2026-11-09T04:55:50.992Z on PR #415 from 6bdbf968194906b83fe4a3c5d20468986528b49b.
+
+Reconciled five proposals and the emergency IV context against the exact worklist rows and source draft tasks. All ten source references are distinct and accounted for. Both proposed relationships have valid endpoints. No mappings are accepted. Full repository checks were not run.
+
+Next prepare a draft binding candidate manifest for the reconciled references with separate objectives and explicit pending status.
+
+---
+
+## Ocular names-only identity proposals
+
+Checked 2026-11-09T04:54:02.814Z on PR #415 from cc85a8941e0ecf52a3adf6d37bac60951991f299.
+
+Prepared two names-only proposals with separate OP3.6 and OP4.9 references and a proposed narrower-scope relationship. Verified both exact draft-task references and pinned the scope and registry evidence. Bindings remain pending. Full repository checks were not run.
+
+Next reconcile all five names-only proposals against the screening worklist and confirm the source-reference and relationship accounting before preparing any binding candidates.
+
+---
+
+## Ocular canonical registry readback
+
+Checked 2026-11-09T04:52:27.966Z on PR #415 from a765d8e383b3a2efd253a578bc0e136d8e9d2d96.
+
+Read-only production lookup found zero candidates in the published catalogue, accepted identities and saved draft revisions for the recorded ocular terms. Bindings remain pending. Full repository checks were not run.
+
+Next prepare the two names-only ocular identity proposals with separate OP3.6 and OP4.9 references and the proposed narrower-scope relationship.
+
+---
+
+## Standalone ocular scope comparison
+
+Checked 2026-11-09T04:50:27.129Z on PR #415 from 9448a57fff58a28ee17e68c81a749cdacc7acc0f.
+
+Verified OP3.6 and OP4.9 against their pinned draft-task rows. Proposed two related names with a narrower-scope relationship and separate source objectives. Decision is provisional and based on repository draft tasks. Bindings remain pending. Full repository checks were not run.
+
+Next verify the two ocular names and aliases against the canonical registry and reconcile any existing identities before proposing bindings.
+
+---
+
+## Standalone names-only identity proposals
+
+Checked 2026-11-09T04:47:10.120Z on PR #415 from a529fd38efc3dcc782bc86fe6089d7dfcca31e62.
+
+Prepared three proposed names with seven separate source references and one emergency IV context reference. Verified all eight IDs in their draft-task files. All mappings remain pending. Full repository checks were not run.
+
+Next trace the unresolved ocular comparison to its exact source scope before proposing reuse or distinct identities.
+
+---
+
+## Standalone semantic screening batch 03
+
+Checked 2026-11-09T03:08:04.509Z on PR #415 at a817727778399a052594dc69314759629ea907c4. Implementation commit bce6ca35ddad085d67605fa24a3f4e6bd8d81d47.
+
+Reviewed 18 topics from Autism through Capillary glucose. Five have source-linked comparisons. Source accounting and both report verifiers passed. Full repository checks remain unrun. Cumulative review covers 51 of 512 topics. Resume at Carbohydrate digestion with 461 remaining. Bindings remain pending.
+
+---
+
+## Standalone semantic screening batch 02
+
+Checked 2026-11-09T03:05:38.570Z on PR #415 at 42fc6b04e3e566868dc155a7b3b97ed4a0149c64. Implementation commit 0f62374caa31cc321678c0ad8fcbc470b2dd4223.
+
+Reviewed 17 topics from Allergic rhinitis through Ascitic fluid analysis. Eight have source-linked comparisons, including overlap between arterial sampling and arterial blood gas sampling. All mappings remain pending. Source reference accounting and both report verifiers passed. Full repository checks remain unrun.
+
+Cumulative review covers 33 of 512 topics. Resume at Autism with 479 remaining.
+
+---
+
+## Standalone semantic screening batch 01
+
+Checked 2026-11-09T03:03:48.164Z on PR #415 at 7c0ff866508856f1fa257c697f42ee8e2958cd1c. Implementation commit d90e4ca2762ca3cfb62a7e7387714e7fa3695cde.
+
+Reviewed the first 16 of 512 pending topics against their source tasks and selected related labels. Five topics have source-linked comparison leads. All mappings remain pending. Source reference accounting and both report verifiers passed. Full repository checks remain unrun.
+
+Next review starts at Allergic rhinitis. There are 496 topics left in this screening queue.
+
+---
+
+## OG9 source audit
+
+Checked 2026-11-09T03:01:48.652Z on PR #415 at b05c282a41c5de365fec79d862715b9ce4abd2da. Implementation commit e75e360ee73baec8fd373d0d8ce38b7d9f384dab.
+
+Current branch OG9.6 draft and queue agree on Hyperemesis. The official 12 September 2024 curriculum specifies hyperemesis gravidarum. Closed the stale conflict flag and recorded that proposed topic name. Official excerpt comparison covers OG9.4 through OG9.6. OG9.1 through OG9.3 were inspected locally only. Both standalone report verifiers and the cumulative scoped-home verifier passed. Canonical binding remains pending.
+
+Next resume semantic screening of the 512 topics without lexical leads, using source tasks and keeping candidate mappings pending.
+
+---
+
+## Standalone topic binding worklist
+
+Checked 2026-11-09T02:59:19.358Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at e344976c82bd4f893065e247e4a6530b82cce68a. Implementation commit 81bef299a1e10f0316f6fe9c43a6ad2bec926e91.
+
+Consolidated 570 standalone topics, preserving 25 exact-label reviews and 38 variant reviews. Official NMC 2024 rows OG9.5 and PA29.5 confirm shared gestational trophoblastic scope with distinct obstetric and pathology objectives. The worklist records the proposed name and source links. All bindings remain pending. Both report verifiers and worklist accounting passed. Full repository checks remain unrun.
+
+Next audit the OG9.6 source-label conflict and adjacent OG9 rows before relying on the affected drafts for binding. Local OG9.6 says Ovarian tumours, while the official row concerns hyperemesis gravidarum. Continue semantic screening for 512 topics after source audit.
+
+---
+
+## Standalone topic variant scope review
+
+Checked 2026-11-09T02:56:14.773Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 8cc9b8b976b46ac0371d3e07bd5abcb3a2b87f68. Implementation commit 2dfc17f8f71eec080d4ff87ae4cd7f3655d0b7b5.
+
+Reviewed 38 leads against source tasks. Recorded 23 narrower scopes, eight related scopes, four shared topic candidates, two alias candidates and one ambiguity. Source lead accounting and the lexical report verifier passed. Full repository checks were outside the partial checkout.
+
+Next resolve the gestational trophoblastic scope ambiguity using the original source row and consolidate reuse findings into a canonical binding worklist. The 512 topics without lexical leads remain pending semantic screening. Canonical bindings remain pending.
+
+---
+
+## Standalone topic variant screening
+
+Checked 2026-11-09T02:54:32.695Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at bd137ad32b4b61b9369a5ad52d139db31cb9ab08. Implementation commit ee37596d530785307fe19effb81368689ad38376.
+
+Screened all 545 remaining standalone topics against the pinned label inventories. Spelling and punctuation normalization, possible initials and bounded shared phrases produced 38 leads across 33 topics. The other 512 had no lead under these rules. Both report verifiers passed. Full repository checks were outside the partial checkout.
+
+Next compare the source scope of the 38 leads and document ambiguous or distinct meanings. Semantic equivalence and canonical bindings remain pending.
+
+---
+
+## Standalone topic scope review
+
+Checked 2026-11-09T02:52:44.190Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 774bc80996b4b6e6ccb9e28ef64680e5dd9c3c64. Implementation commit 5a157170dd2c7a91fabbecbd7b0c8cd9a4e599a2.
+
+Compared all 25 exact-label leads against their source tasks. Retained shared topic name candidates with distinct source objectives. Source accounting checks and the triage verifier passed. Semantic equivalence and canonical bindings remain pending. Next, examine the remaining 545 topics for reuse beyond exact labels.
+
+---
+
+## Standalone topic reuse triage
+
+Checked 2026-11-09T02:49:27.996Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 073379d838d3986b98b293216fef05350ab068b8. Implementation commit b8b5004f9c75565dd0081a048e38af7a097f75a4.
+
+Verified source appearances and scanned 570 topics against the three name inventories and 21 scoped-home batches. The 585 source appearances are accounted for. There are 25 exact-label leads with additional source references and 545 matches limited to the topic's own sources. Labels and source overlap are triage evidence. Semantic equivalence and canonical binding remain pending.
+
+The reproducible triage verifier and cumulative scoped-home verifier passed. Next, compare task scope for the 25 leads, then examine the other 545 for semantic reuse beyond exact labels.
+
+---
+
+## Initial scoped-task home proposals complete
+
+Checked 2026-11-09T02:47:23.793Z on PR #415, branch feat/nmc-foundation-review-queue-20261104. Resumed at 265f02ed9da758c963a06993006d70f8f2a8b087. Implementation commit 6d0228220e242b2b372984701fcc140d92f7dc21.
+
+Batch 21 covers all 59 remaining facets from Stroke imaging through Young infant IMNCI assessment. The cumulative verifier passed for 659 facets, 670 source appearances and 346 distinct proposed homes. Nine focused tests passed. Verification was limited to the available checkout.
+
+Next, inspect the 570 standalone-topic cases and prioritize reconciliation with existing names. Canonical binding and learner integration remain pending.
+
+---
+
+## Scoped-task home proposals batch 20 — 9 November 2026 IST
+
+Checked at 2026-11-09T02:45:30.588Z. Resumed PR #415 at 41b96dcb418e761da9e07ae0a31fc545dd4a65c2 on feat/nmc-foundation-review-queue-20261104. Implementation commit 64c3795b3bf00dab7d821cae3ac830f7e1676d94.
+
+Added names-only proposals for 30 facets from Rheumatology history through Stroke history. Cumulative verifier passed for 600 facets and 609 source appearances. Nine focused tests passed. Full repository checks were outside this partial checkout. Canonical binding remains pending.
+
+Next batch starts at Stroke imaging. There are 59 facets awaiting initial proposals.
+
+---
+
+## Scoped-task home proposals batch 19 — 9 November 2026
+
+Added proposals for 30 facets / 31 source appearances (Provisional diagnosis through Rheumatology examination). Batch: 21 home labels, three existing-name and 27 proposed-name links. Cumulative: 570 facets / 579 appearances / 321 proposed home labels; 89 facets await initial homes. Implementation: 73d086da924eecbe37eebea0e6c7f47e6e3fc98e. All mappings/bindings pending.
+
+Nineteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Rheumatology history. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 18 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Poisoning examination through Prototype drug effects). Batch: 19 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 540 facets / 548 appearances / 303 proposed home labels; 119 facets await initial homes. Implementation: 5a72f2b8afe90fbee091a9ae69d41e819b6e77cd. All mappings/bindings pending.
+
+Eighteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Provisional diagnosis. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 17 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Paediatric lymphoma through Poisoning autopsy). Batch: 24 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 510 facets / 518 appearances / 291 proposed home labels; 149 facets await initial homes. Implementation: 9a1a301b11faf202824a97178caeb26da1b553cc. All mappings/bindings pending.
+
+Seventeen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Poisoning examination. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 16 — 9 November 2026
+
+Added proposals for 30 facets / 33 source appearances (Obesity examination through Paediatric lupus). Batch: 23 home labels, 21 existing-name and nine proposed-name links. Cumulative: 480 facets / 488 appearances / 273 proposed home labels; 179 facets await initial homes. Implementation: 8299446fa99bc2efff518802099dde5e7f1c8851. All mappings/bindings pending.
+
+Sixteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Paediatric lymphoma. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 15 — 9 November 2026
+
+Added proposals for 30 facets / 31 source appearances (Midbrain landmarks through Obesity differential). Batch: 21 home labels, twelve existing-name and eighteen proposed-name links. Cumulative: 450 facets / 455 appearances / 261 proposed home labels; 209 facets await initial homes. Implementation: 0d72d4012199041c8a2daad882b9afd9ee3cb2bc. All mappings/bindings pending.
+
+Fifteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Obesity examination. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 14 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Lower-limb radiographic anatomy through Microvascular flow regulation). Batch: 22 home labels, eight existing-name and 22 proposed-name links. Cumulative: 420 facets / 424 appearances / 250 proposed home labels; 239 facets await initial homes. Implementation: 445b163a8cdd4ad4b6cfd5e1ad831164f05925fc. All mappings/bindings pending.
+
+Fourteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Midbrain landmarks. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 13 — 9 November 2026
+
+Added proposals for 30 facets / 31 source appearances (Ischaemic stroke treatment through Lower-limb ossification). Batch: 16 home labels, ten existing-name and twenty proposed-name links. Cumulative: 390 facets / 394 appearances / 236 proposed home labels; 269 facets await initial homes. Implementation: c678304e1a4a4b07cae4982b25c0e385153a9be7. All mappings/bindings pending.
+
+Thirteen-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Lower-limb radiographic anatomy. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 12 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (ICU device position through Ischaemic disease progression). Batch: 28 home labels, six existing-name and 24 proposed-name links. Cumulative: 360 facets / 363 appearances / 223 proposed homes; 299 facets await initial homes. Implementation: 92593d7845399ac9792bd7dc46508c820cdef386. All mappings/bindings pending.
+
+Twelve-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Ischaemic stroke treatment. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 11 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (HIV care communication through IBD surgery). Batch: 12 home labels, nineteen existing-name and eleven proposed-name links. Cumulative: 330 facets / 333 appearances / 201 proposed homes; 329 facets await initial homes. Implementation: 0ba709647f2a19a6640f5723c8f97dd4f92136f3. All mappings/bindings pending.
+
+Eleven-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: ICU device position. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 10 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (GI bleeding examination through Hernia examination). Batch: 17 home labels, eighteen existing-name and twelve proposed-name links. Cumulative: 300 facets / 303 appearances / 190 proposed homes; 359 facets await initial homes. Implementation: 8da178dcf1682b822fb5147d0b445e289798548f. All mappings/bindings pending.
+
+Ten-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: HIV care communication. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 09 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Ethics of kidney replacement through GI bleeding escalation). Batch: 21 home labels, seven existing-name and 23 proposed-name links. Cumulative: 270 facets / 273 appearances / 177 proposed homes; 389 facets await initial homes. Implementation: 748379b0f2a776576ba849c0f3eccad052661a2c. All mappings/bindings pending.
+
+Nine-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: GI bleeding examination. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 08 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (ECG practical through Ethical research practice). Batch: 25 home labels, fourteen existing-name and sixteen proposed-name links. Cumulative: 240 facets / 243 appearances / 157 proposed homes; 419 facets await initial homes. Implementation: 3a1c91e41508943adb33e43c7bf3dc6db6c648c1. All mappings/bindings pending.
+
+Eight-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Ethics of kidney replacement. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 07 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Diabetes classification through ECG in suspected coronary disease). Batch: 18 home labels, 21 existing-name and nine proposed-name links. Cumulative: 210 facets / 213 appearances / 135 proposed homes; 449 facets await initial homes. Implementation: 82f2580ffc8b662bf2172bcf7c8497ed087daa6f. All mappings/bindings pending.
+
+Seven-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: ECG practical. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 06 — 9 November 2026
+
+Added proposals for 30 facets / 30 source appearances (Context-sensitive complementary feeding through Depression red flags). Batch: 24 home labels, fourteen existing-name and sixteen proposed-name links. Cumulative: 180 facets / 183 appearances / 119 proposed homes; 479 facets await initial homes. Implementation: 0a1532276762af77c45771989249acffd17943b1. All mappings/bindings pending.
+
+Six-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Diabetes classification. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 05 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Cervical rib compression through Constipation pharmacotherapy). Batch: 25 home labels, eleven existing-name and nineteen proposed-name links. Cumulative: 150 facets / 153 appearances / 97 proposed homes; 509 facets await initial homes. Implementation: 623415be4a2c8ace3732b4c09d29d08eec7898b7. All mappings/bindings remain pending.
+
+Five-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Context-sensitive complementary feeding. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 04 — 9 November 2026
+
+Added proposals for 30 scoped facets / 30 source appearances (Cancer examination through Cervical cancer treatment). Batch: 18 home labels, ten existing-name links and twenty proposed-name links. Cumulative: 120 facets / 122 appearances / 76 proposed homes; 539 facets await initial homes. Implementation: b79dd9106dd3331b1a4a8b0079398850d2a98fb9. All mappings/bindings remain pending.
+
+Four-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Cervical rib compression. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 03 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Asthma planning through Cancer epidemiology in India). Batch: 20 home labels, 20 existing-name links, ten proposed-name links. Cumulative: 90 facets / 92 appearances / 60 proposed homes; 569 facets await initial homes. Implementation: cc3e50f407cb3e83cd39159b88ddc50aaa7eb19e. All mappings/bindings remain pending.
+
+Three-batch verifier and nine focused scoped-home tests PASS. Full suite and npm run check not run in partial checkout. Next: Cancer examination. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 02 — 9 November 2026
+
+Added proposals for 30 scoped facets / 31 source appearances (Amniotomy practical through Articulations of lower-limb bones). Batch proposes 19 home labels, with 18 existing-name links and 12 proposed-name links. Cumulative: 60 facets / 61 appearances / 40 proposed homes; 599 facets await initial homes. Implementation: 0ddc997a3556708d920785f859477df5e354a6aa. All mappings and bindings remain pending.
+
+Two-batch verifier and 36 focused tests PASS. Full suite and npm run check not run in partial checkout. Next: Asthma planning. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Scoped-task home proposals batch 01 — 9 November 2026
+
+Added initial home proposals for 30 scoped facets / 30 source appearances (Abdominal muscle attachments through Amniotomy observation). Proposed 22 distinct homes: 15 existing-name candidate links and 15 proposed-new-name links. 629 original scoped facets remain without initial home proposals. Canonical identities, mapping acceptance, full scope, objective binding and independent competence remain unaccepted. Implementation: 170174710a60d8e4b3289338415b80715d79edba.
+
+Scoped-home verifier, 36 focused tests and syntax checks PASS. Full suite and npm run check not run in partial checkout. Next: batch 02, Amniotomy practical. No teaching content or publication; Foundation incomplete.
+
+---
+
+## Family reuse source-scope comparisons — 9 November 2026
+
+Compared all 78 family leads: 62 shared-topic name candidates, ten scoped facets, five self-parent references and one context-specific separation (forensic versus paediatric anthropometry). Preserved 97 component occurrences, 61 source references and 66 target-support references. No semantic/objective equivalence, independent competence or identity acceptance. Implementation: e6de7ba6a1527c491fe06ad566439a686a9c2d6e.
+
+Verifier and 27 focused tests PASS; syntax check PASS. Full suite and npm run check not run in partial checkout. Next: first source-bound home proposal cohort from 659 original scoped-task facets, beginning Abdominal muscle attachments. No teaching content or publication. Foundation incomplete.
+
+---
+
+## Family proposal audit and reuse report — 9 November 2026
+
+Added a repeatable audit reusing the family verifier. Covers all 652 groups / 663 source appearances / 3,002 proposals; 2,983 distinct normalized labels. Identifies 78 exact-label reuse leads: 61 existing inventory matches, 14 cross-parent repeats, five within-parent repeats (overlapping categories). No semantic or objective equivalence accepted. All 88 input files digest-pinned and each component retains its exact supporting tasks.
+
+Implementation: 08b07f9a38149430084a057cbb22cb0ca5f4d8bd. Report --verify, 18 focused tests and syntax checks PASS. Full suite and npm run check not run in partial checkout. Next: source-scope comparison of 78 leads. No teaching content, production changes or accepted canonical bindings. Foundation incomplete.
+
+---
+
+## Initial family decomposition proposal coverage complete — 9 November 2026
+
+Final batch adds 91 source-bound names-only proposals across 22 groups / 22 source appearances (Vaccines through Zoonoses). All 652 family/context groups now have initial proposals: 3,002 proposal occurrences, preserving 663 source appearances. Zero groups remain without initial proposals. Implementation: ab9a4902e7b7d1b83194965bbc3dadcf8c614aea.
+
+This completes initial proposal coverage only. Unnamed members, reuse/scope resolution and canonical/objective binding remain unfinished; no identities accepted, no teaching content or production changes. Foundation incomplete.
+
+Validation: twenty-two-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: repeatable family audit and exact-label reuse report, preserving distinct task contexts.
+
+---
+
+## Family decomposition batch 21 — 8 November 2026
+
+Added 133 source-bound names-only proposals across 30 groups / 30 source appearances (Transfusion physiology through Vaccine-preventable disease epidemiology). Cumulative: 630 groups, 2,911 proposals, 641 source appearances; 22 groups await initial proposals. Implementation: 95b98d68b804141bb7a1c618133bb7a33ce68ef0. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twenty-one-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: final family batch 22, Vaccines; selectionLimit=22. Foundation incomplete.
+
+---
+
+## Family decomposition batch 20 — 8 November 2026
+
+Added 141 source-bound names-only proposals across 30 groups / 32 source appearances (Substance dependence through Tracheal anatomy). Cumulative: 600 groups, 2,778 proposals, 611 source appearances; 52 groups await initial proposals. Implementation: 8fffe4d0c9ea37b746085f195a47c75ab289d4a5. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twenty-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 21, Transfusion physiology.
+
+---
+
+## Family decomposition batch 19 — 8 November 2026
+
+Added 134 source-bound names-only proposals across 30 groups / 31 source appearances (Renal syndromes through Study designs). Cumulative: 570 groups, 2,637 proposals, 579 source appearances; 82 groups await initial proposals. Implementation: 26113da5737ce92e9b344de320681826f2f63b95. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: nineteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 20, Substance dependence.
+
+---
+
+## Family decomposition batch 18 — 8 November 2026
+
+Added 124 source-bound names-only proposals across 30 groups / 30 source appearances (Postpartum IUCD programme through Renal specimens). Cumulative: 540 groups, 2,503 proposals, 548 source appearances; 112 groups await initial proposals. Implementation: c2bad432126b22a27add249f6d88401e3aa45ae4. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: eighteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 19, Renal syndromes.
+
+---
+
+## Family decomposition batch 17 — 8 November 2026
+
+Added 132 source-bound names-only proposals across 30 groups / 31 source appearances (Perioperative care through Posterior triangle muscles). Cumulative: 510 groups, 2,379 proposals, 518 source appearances; 142 groups await initial proposals. Implementation: f859f115babe1becf5e737b9e452b083fab20770. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: seventeen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 18, Postpartum IUCD programme.
+
+---
+
+## Family decomposition batch 16 — 8 November 2026
+
+Added 144 source-bound names-only proposals across 30 groups / 30 source appearances (Opportunistic infection tests through Perineal pouches). Cumulative: 480 groups, 2,247 proposals, 487 source appearances; 172 groups await initial proposals. Implementation: 74b76970546bedaaa5f7df5af93af8da53753e54. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: sixteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 17, Perioperative care.
+
+---
+
+## Family decomposition batch 15 — 8 November 2026
+
+Added 136 source-bound names-only proposals across 30 groups / 31 source appearances (Neonatal seizures through Opportunistic infection prophylaxis). Cumulative: 450 groups, 2,103 proposals, 457 source appearances; 202 groups await initial proposals. Implementation: 2f8bb4087a5a55b89dffdc54ada5b45460c0deb8. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: fifteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 16, Opportunistic infection tests.
+
+---
+
+## Family decomposition batch 14 — 8 November 2026
+
+Added 124 source-bound names-only proposals across 30 groups / 31 source appearances (Mental health concepts through Neonatal respiratory distress). Cumulative: 420 groups, 1,967 proposals, 426 source appearances; 232 groups await initial proposals. Implementation: 7ad20c769e69b36fbe96159663947f219596aa92. All acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: fourteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 15, Neonatal seizures.
+
+---
+
+## Family decomposition batch 13 — 8 November 2026
+
+Added 158 source-bound names-only proposals across 30 groups / 30 source appearances (Lower respiratory infections through Meningeal layers). Cumulative: 390 groups, 1,843 proposals, 395 source appearances; 262 groups await initial proposals. Implementation: 8d021d6ff85a42b47cd39f9aa694082bf4d2d87a. Acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: thirteen-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 14, Mental health concepts.
+
+---
+
+## Family decomposition batch 12 — 8 November 2026
+
+Added 135 source-bound names-only proposals across 30 groups / 30 source appearances (Intra-abdominal lesions through Lower respiratory infection). Cumulative: 360 groups, 1,685 proposals, 365 source appearances; 292 groups await initial proposals. Implementation: 00baefc17e8f24e8b8e88513f917848d488a9977. All acceptance/scope/binding remains pending. No teaching content or production changes.
+
+Validation: twelve-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial checkout. Next: batch 13, Lower respiratory infections (plural).
+
+---
+
+## Family decomposition batch 11 — 8 November 2026
+
+Added 119 source-linked names-only proposals across 30 groups / 30 source appearances (Indian medico-legal framework through Intestinal secretions). Cumulative: 330 groups / 1,550 proposals / 335 source appearances; 322 groups await initial proposals. All identities, scopes and bindings remain pending. Implementation: 552518e4ab501231b6f68596333b724ce1aab990.
+
+Validation: eleven-batch verifier PASS; nine focused tests PASS. Full suite and npm run check not run in partial reconstructed checkout. No teaching content or production changes. Next: Intra-abdominal lesions, batch 12.
+
+---
+
+## Family/context decomposition proposals batch 10 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:42:38.756962+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 3489eacb5a263f23577665bc8eeefe0bab24c2d3; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 649f24a63c06768f7026dc235353c1b101ed6e67. Names-only instruction active.
+
+Reviewed next 30 family parents, Hearing loss through Indian healthcare delivery. Added 152 proposals: 57 reusable-topic candidates, 95 contextual-task facets across 31 source appearances. Immunity retains two distinct response/regulation versus recognition/effector tasks. ICU and milk-bank observation not independent competence. Identification methods retain evidentiary limits. Imaging principles/indications/patient adaptations remain separate; generic History resolved only to its anaesthesia source context. Unnamed members unspecified. Eleven component occurrences have unverified exact-label hints; canonical IDs null and scopes/bindings false. No teaching content, current official-source verification or automatic merge.
+
+Cumulative ten family batches: 300 parents, 1,431 proposal occurrences, 305 source appearances; 352 families without initial proposals. Queue, three inventories and nine predecessor packets digest-pinned, queue/predecessor bytes unchanged.
+
+Verification: family verifier --batch=10 passed across all ordered cohorts, exact task/body hashes/coordinates/modes, full reference support, unique IDs, recomputed hints and pending flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 11 beginning Indian medico-legal framework. Inspect actual source tasks and preserve unnamed members/source role limits; set selectionLimit, pin queue/three inventories/all ten predecessors, run verifier --batch=11. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease, verify all four changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 09 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:33:57.183236+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 379b54ae3ad73e3a959e6a1aead91a87bbb2d7d1; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: f1496c0891a384f3346357cd5d561784340b66ed. Names-only instruction active.
+
+Reviewed next 30 family parents, Genital fistula through Healthcare-associated infection. Added 137 proposals: 26 reusable-topic candidates, 111 contextual-task facets across 30 source appearances. Gestational trophoblastic clinical and pathology tasks remain separate; haemorrhage-control simulation is not independent competence. Geriatric services/needs, health planning/information/management tasks keep their own sources. Unnamed conditions/hormones/muscle members remain unspecified; current policy/guideline validity not rechecked. Three exact-label hints unverified; canonical IDs null, scopes/bindings false. No teaching content or automatic merging.
+
+Cumulative nine family batches: 270 parents, 1,279 proposal occurrences, 274 source appearances; 382 families without initial proposals. Queue, three inventories and eight predecessors digest-pinned, queue/predecessors byte-unchanged.
+
+Verification: family verifier --batch=09 passed across all ordered cohorts, exact source support/hashes/coordinates/modes, unique IDs, recomputed hints and pending flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 10 beginning Hearing loss. Inspect source tasks, preserve unspecified members and roles; set selectionLimit, pin queue/three inventories/all nine predecessors and run verifier --batch=10. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease, verify all four changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 08 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:27:40.342391+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 0370d6999506df489bf2c56a170d0fab00da6713; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 84e03b9e6a180d7d6837218597696b092137d11b. Names-only instruction active.
+
+Reviewed next 30 family parents, Exercise physiology through Genetic syndromes. Added 155 proposals: 58 reusable-topic candidates, 97 contextual-task facets across 31 source appearances. Fever-of-unknown-origin setting/clinical and microbiology tasks retain separate support. Eye-bank coordination/documentation simulated; forensic technology indications and evidentiary limits do not imply current legal validity or reliable performance. Unnamed muscles/lesions/category members remain unspecified. Eight exact-label hints unverified, canonical IDs null, scopes/bindings false. No teaching content or automatic merge.
+
+Cumulative eight family batches: 240 parents, 1,142 proposal occurrences, 244 source appearances; 412 families without initial proposals. Queue, three inventories and seven predecessor packets digest-pinned, queue/predecessors byte-unchanged.
+
+Verification: family verifier --batch=08 passed across all ordered cohorts, task/body hashes/coordinates/modes, complete support, unique IDs, recomputed hints, predecessor pins and pending flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 09 beginning Genital fistula. Inspect actual source tasks; preserve unspecified members/roles; set selectionLimit, pin queue/three inventories/all eight predecessors, run verifier --batch=09. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify all four changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 07 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:24:36.069491+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 9e2bfcbdfb88b55c59f683eaa86740f8c41c76df; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: bb75bd145a2968665ee061fdf2a1b6f43d4a7bbe. Names-only instruction active.
+
+Reviewed next 30 family parents, Disciplinary process through Eustachian tube disorders. Added 144 proposals: 49 reusable-topic candidates, 95 contextual-task facets across 30 source appearances. Disciplinary, dying statements, end-of-life, regulation and dated programme document tasks retain source-version limits; no current legal/guideline verification. Emergency autonomic drug simulation is not independent performance; environmental exposure, tissue injury and contamination surveillance remain separate contexts. Unnamed family members unspecified. One exact-label hint unverified; canonical IDs null and all scopes/bindings incomplete. No teaching content or automatic merge.
+
+Cumulative seven family batches: 210 parents, 987 proposal occurrences and 213 source appearances; 442 family parents without initial proposals. Queue, three comparison inventories and six predecessors digest-pinned, queue/predecessor bytes unchanged.
+
+Verification: family verifier --batch=07 passed across all ordered cohorts, exact task support/hashes/coordinates/modes, unique IDs, recomputed label hints, predecessor pins and flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 08 beginning Exercise physiology. Inspect source tasks and preserve unspecified members/roles; set selectionLimit, pin queue/three inventories/all seven predecessors, run verifier --batch=08. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease; verify all four changed files at final remote commit; release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 06 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:21:30.003072+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 90408a017bea993cc41727ecc9e4f1fc2e1beb69; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8a7061fa8c3f3f65a24f67ee842321a2ddb1be4c. Names-only instruction active.
+
+Reviewed next 30 family parents, Cough medicines through Disaster management. Added 149 proposals: 36 reusable-topic candidates, 113 contextual-task facets across 30 source appearances. Diabetes pregnancy/general medicine/testing/emergency contexts preserve their own references. Crash-cart observation and teaching-material practicals remain source-limited, bite-mark evidential limits and medical witness concepts explicit without current forensic/legal verification. Unnamed family members not supplied. One exact-label hint unverified, canonical IDs null, scopes/bindings false. No teaching content or automatic merge.
+
+Cumulative six family batches: 180 parents, 843 proposal occurrences, 183 source appearances; 472 families without initial proposals. Queue, three inventories and five predecessors digest-pinned, queue/predecessors byte-unchanged.
+
+Verification: family verifier --batch=06 passed across all ordered cohorts, full source support and hashes/coordinates/modes, unique proposal IDs, recomputed hints and flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 07 beginning Disciplinary process. Inspect actual source tasks, preserve unnamed members and role limits; set selectionLimit, pin queue/three inventories/all six predecessors and run verifier --batch=07. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease, verify all four changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 05 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:18:31.374080+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c35414dd60a9c815f9ebcc86799f8641c0065593; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 35b186179bd2305cb9ec42517ea6dbbdbfcfdf18. Names-only instruction active.
+
+Reviewed next 30 family parents, Cervical lymph nodes through Costal cartilage joints. Added 135 source-linked names: 32 reusable-topic candidates, 103 contextual-task facets across 30 source appearances. Contraceptive physiology and practical methods keep separate task references. Clinic/community workflows, anaesthesiology roles, observed child-development and surgical-block roles remain contextual. Official legal-source/healthcare claim tasks are not current-law verification. Unnamed family members unspecified. Two exact-label hints unverified; all identities null, scope/binding flags false. No teaching content or automatic merge.
+
+Cumulative five family batches: 150 parents, 694 proposal occurrences, 153 source appearances; 502 families without initial proposals. Queue, three comparison inventories and all four predecessors digest-pinned; queue/predecessor bytes unchanged.
+
+Verification: family verifier --batch=05 passed across all five ordered cohorts, complete source support, exact task/body hashes/coordinates/modes, unique IDs, recomputed hints and pending flags; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only; full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 06 beginning Cough medicines. Inspect source tasks; preserve unnamed members and role distinctions; set selectionLimit, pin queue/three inventories/all five predecessors and run verifier --batch=06. Home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease; verify all four changed files at final remote commit; release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 04 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:15:35.361911+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 95eb12ef95f37eb0f74f40652673a9dc96c19878; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: de30f061d21a7e80ded61b3f00aee87852f93a98. Names-only instruction active.
+
+Reviewed next 30 family parents, Bleeding disorders through Cervical fascial spaces. Added 140 name proposals: 55 reusable-topic candidates, 85 contextual-task facets across 30 source appearances. Breast imaging, specimen discrimination and clinical tumour care remain separate. Blood practical approved-sample/simulation roles retained; named cardiac patterns, cellular processes and fibre classes distinguished. Unnamed family members and specialty-bound career roles remain unspecified/contextual. Nine exact-label hints unverified, no semantic acceptance or identity allocation.
+
+Cumulative four family batches: 120 parents, 559 component occurrences, 123 source appearances; 532 families without initial proposals. Queue/three comparison inventories/three predecessor packets digest-pinned; queue/predecessor bytes unchanged. All enumerations partial/unspecified, scopes/bindings false and canonical IDs null. No teaching content or current official-source verification.
+
+Verification: family verifier --batch=04 passed across all four source-order cohorts, source hashes/coordinates/modes, complete reference support, unique proposal IDs, exact-label hints and predecessor pins; nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 05 beginning Cervical lymph nodes. Inspect source tasks and preserve unspecified members/roles; set selectionLimit, pin queue, three inventories and all four predecessors, run verifier --batch=05. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease; verify all four changed files at final remote commit; release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 03 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:12:36.395196+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at deda7c8c425fdb88fd46fb90bc1c334ee8aebf74; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: e5ae2aaacfd4a66d0254c1b430d836cd8767db61. Names-only instruction active.
+
+Reviewed next 30 family parents, Antiseizure medicines through Birth injuries. Added 129 source-linked proposals: 36 reusable-topic candidates and 93 contextual-task facets across 31 source appearances. Benign breast disease retains separate pathology and clinical source support. Assisted birth observation/assigned assistance, genital-development model work, ventilation simulation and toxicological test limitations stay source-specific. Unnamed drugs/conditions/muscle groups remain unspecified. Two exact-label hints unverified; no semantic acceptance or identity allocation.
+
+Cumulative three family batches: 90 parents, 419 proposals, 93 source appearances; 562 family parents without initial proposals. Queue, three inventories and both predecessor packets pinned, queue/predecessor bytes unchanged. All enumerations partial/unspecified and scope/binding flags false, canonical IDs null. No teaching content or current official-source verification.
+
+Verification: family verifier --batch=03 passed (all three exact source-order cohorts, source hashes/coordinates/modes, full reference accounting, unique proposal IDs, hints, predecessor pins and flags); nine focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, no code/test changes; full suite not repeated (last full 1,638/1,638).
+
+Next: family batch 04 beginning Bleeding disorders. Inspect actual task evidence, preserve unnamed members and role/mode distinctions; set selectionLimit explicitly, pin queue/three inventories/all three predecessors and run verifier --batch=04. Home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease, verify all four changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 02 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:09:31.986199+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 6ebb38c1b86d7369386dfb7c20eb766ef6bdeb49; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 098b7fa1b7ffe28a85172dfb8dab931fbc1df554. Names-only instruction active.
+
+Inspected next 30 family groups, AI in laboratory biochemistry through Antiretroviral therapy. Added 152 source-linked proposals: 38 reusable-topic candidates, 114 contextual-task facets across 31 source appearances. Clinical and pathological alcohol-related liver tasks retain separate links. AI validation/oversight, airway model/simulation, age-specific and drug-context facets remain explicit. Unnamed members in representative drug/parasite/muscle/condition families remain unspecified. One exact-label hint is unverified. No teaching content, identity acceptance or automatic merging.
+
+Cumulative two family batches: 60 parents, 290 proposals and 62 source appearances; 592 families without initial proposals. Queue, three comparison inventories and batch-01 packet pinned by exact digests, source queue and predecessor byte-unchanged. All family enumerations partial/unspecified, scope/binding flags false, canonical IDs null.
+
+Verification: repeatable verifier --batch=02 passed (both cohorts, exact source evidence and label hints, complete task accounting and predecessor pins); nine focused family tests passed; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, no code/test changes; full suite not repeated (last full 1,638/1,638).
+
+Next: inspect family batch 03 beginning Antiseizure medicines. Preserve source-sized proposals, unspecified members and source modes; pin queue, three inventories and both predecessor packets, set selectionLimit explicitly, run verifier --batch=03. Actual home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify all four changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
+## Repeatable family decomposition verification — 8 November 2026 IST
+
+Checked at 2026-11-08T22:06:21.631032+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 0624a84f47a5f220fa9d4573c2298fc06b1a25e5; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 540e51dc42b766eeb98948b354e98ddd382fa6ff. Names-only instruction active.
+
+Added ops/nmc/verify-family-decomposition.js and nine behavior tests. CLI revalidates parent follow-up queue/eleven assessments, then checks source-order family cohorts, queue/three comparison-inventory digests, full source-task hashes/coordinates/modes, nonempty source bindings and complete representation, unique proposal IDs, recomputed exact-label hints, totals, null identities and pending acceptance/scope/binding flags. Supports --batch=NN with explicit predecessor digests and optional selectionLimit for future batches; batch 01 retains original 30-row default. Current packet verifies 30 parents, 31 appearances, 138 proposals and 622 families without proposals.
+
+Verification: nine tests observed failing before implementation then passing; omissions with adjusted totals, foreign links, accepted identities/full scopes, fake exact-label hints, queue drift, duplicate IDs and forged modes rejected. CLI passed; full npm test passed 1,638/1,638; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. Existing family proposal and other source evidence unchanged. Verifier establishes structural/source accounting only, not clinical completeness or semantic equivalence. No teaching content, identity allocation or publication.
+
+Next: inspect next family cohort from AI in laboratory biochemistry, Airway adjuncts and Airway opening; create family-scope-decomposition-batch-02 with selectionLimit appropriate to actual cohort, pin queue, all three inventories and batch-01 digest. Run verifier --batch=02. Keep broad unnamed family members unspecified and all roles/identities pending. Remaining 622 family decompositions, home/objective/canonical binding, shared scope, 21 source exceptions and learner integration unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify all five changed files at final remote commit then release ownership. No external writer jobs remain.
+
+---
+
+## Family/context decomposition proposals batch 01 — 8 November 2026 IST
+
+Checked at 2026-11-08T22:02:58.088151+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ff894b9ca7c9c5cde5ca70821727a63b6313879f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 5838f7e701c86ae9abc554a7590ea8975dd08130. Names-only instruction active.
+
+Inspected first 30 family/context groups, Abdominal incisions through Age-specific nutrition. Added 138 source-linked name proposals: 47 reusable-topic candidates, 91 contextual-task facets, across all 31 source appearances. Adrenal tumours retains separate pathology and clinical task support. Broad representative conditions not enumerated by source tasks remain unspecified rather than filled with invented members. Simulation, age and clinical/technical contexts remain explicit. All member enumerations and scopes/bindings remain partial/unresolved; canonical IDs null and acceptance flags false. No teaching content.
+
+Queue and original index, role and home inventories are digest-pinned and byte-unchanged. Component labels compared against these three offline inventories; one exact-label hint retained without semantic/identity acceptance. Lack of exact equality does not prove a new concept. Of 652 family/context parents, 30 now have initial proposals and 622 do not.
+
+Verification: exact first-30 cohort, 138 unique proposal IDs, all 31 reference contexts represented, valid single-task links, original task/body hashes, subject/code/page/coordinates/modes and exact-label hints checked; prior inventory byte-equality confirmed. Mixed reuse verifier passed, 27 focused tests passed, npm run check passed, whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only, no code/test changes; full suite not repeated (last full 1,629/1,629).
+
+Next: add repeatable family-decomposition verification before substantial expansion, then inspect the next family cohort starting AI in laboratory biochemistry, Airway adjuncts and Airway opening. Preserve unspecified members and avoid generating teaching content. Then remaining family decompositions, home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save using expected-head lease; verify four changed files at final remote commit, then release ownership. No external writer jobs.
+
+---
+
+## Repeatable mixed reuse verification — 8 November 2026 IST
+
+Checked at 2026-11-08T21:59:26.742880+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at baae60af438b6e5c7ae302ed346aa7cb69f97847; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8a49c10676f8384b947b8284175aae2469a46ecd. Names-only instruction active.
+
+Added ops/nmc/verify-mixed-reuse.js and eight behavioral tests. CLI revalidates decomposition audit and underlying parent queue/batches, then verifies all 60 lead comparisons, 66 component occurrences, 45 distinct occurrence references and 65 distinct target references; exact cohort/target entries, source hashes/coordinates/modes, full reference support, overlap accounting, totals, digests and pending identity/acceptance flags. Protects explicitly inspected editorial constraints: contraceptive versus microbial sterilization kept separate, two self-parent contexts, four scoped facets. Does not independently establish medical semantics or accept 53 shared-topic candidates.
+
+Verification: eight tests observed failing before implementation and passing after; mutations cover omitted leads, lost target support, forged modes/acceptance/audit digest, conflated sterilization meanings and self-reference falsely treated as independent reuse. CLI verifier passed; full npm test passed 1,629/1,629; npm run check passed; staged whitespace check passed. Local staged tree matched GitHub implementation tree. Existing proposal packets and source evidence unchanged; no teaching content, production registry writes, identity allocation, objective/semantic equivalence or competence claims.
+
+Next: begin source-bound names-only decomposition of the 652 family/context groups from parent-follow-up-queue.json, inspecting source tasks and existing inventories before proposing reusable names or task facets. Preserve original queue as triage snapshot and keep proposed decompositions separate. Consider a meaningful source-sized first cohort rather than arbitrary bulk splitting. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or learner publication. Save via expected-head lease, verify all five changed files at final remote commit, release ownership after verification. No external writer jobs.
+
+---
+
+## Source-context proposals for all 60 mixed reuse leads — 8 November 2026 IST
+
+Checked at 2026-11-08T21:56:08.520793+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f00c871f51d4dfbfc83a7ccc7707be39f07ddb0f; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: e0e365d0450bfc79147ff2703d47794cfbd46f07. Names-only instruction active.
+
+Inspected both source-task contexts for all 60 lead labels and recorded mixed-reuse-scope-proposals.json. Preserves 66 component occurrences, 45 distinct occurrence-source references and 65 distinct target-support references, with exact inventory links, task hashes/modes/coordinates and source overlap accounting. Dispositions: 53 shared-topic-name candidates, four retain-facet-with-home candidates, two self-parent contexts and one keep-separate different-meaning collision.
+
+Sterilization in reproductive interventions means contraceptive sterilization; existing role sources mean microbial sterilization. Explicitly keep separate and propose contextual display name Contraceptive sterilization without renaming existing identities. Laboratory technique observation and Pathology terminology point back to their own parent tasks; not independent evidence. Haemostasis, lipid/renal test interpretation and respiratory distress assessment remain scoped facets. Oxygen delivery/physiology/home-hospital tasks, muscle, malaria and stroke contexts stay separate. No automatic merging, objective equivalence, clinical competence or current legal verification claimed. Canonical IDs null and acceptance/scope flags false. No educational content, production registry check or publication.
+
+Verification: exact all-60 cohort and target-entry sets, complete occurrence and target reference accounting, every source task/body hash and identity/coordinate/mode matches source packets, self-reference subsets checked, sterilization separation asserted. Existing mixed audit and four decomposition batches byte-unchanged. Mixed decomposition --verify passed, 19 focused tests passed, npm run check passed, staged whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only changes; full suite not repeated (last full 1,621/1,621).
+
+Next: add a repeatable verifier for reuse scope proposals, preserving different-meaning and self-parent decisions; then resolve scoped facet/home relationships and begin source-specific decomposition of 652 family/context groups. Do not treat 53 name candidates as accepted semantic or objective equivalence. Actual home/objective/canonical binding, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or learner publication. Save with expected-head lease; verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
+## Repeatable mixed decomposition verification and reuse leads — 8 November 2026 IST
+
+Checked at 2026-11-08T21:52:39.111099+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at ea8ddcb051682e994803407dc82a83a2dac795b5; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 847c5c43e7905f371b6ff140e8ad2018761e1276. Names-only instruction active.
+
+Added ops/nmc/report-mixed-decomposition.js, eight behavior tests and saved mixed-decomposition-audit.json. Revalidates parent follow-up queue and all underlying batches, then checks the exact four-batch 69-parent partition, 176 source appearances and 660 component occurrences, source-task identity/coordinates/mode/body/task hashes, valid component source subsets and complete representation, unique proposal IDs, predecessor/queue digests and pending identity/acceptance flags.
+
+Audit reports 654 distinct proposed labels and 60 exact-label lead groups against the original index, selected name-role inventory and proposed homes. Unicode NFC, case and whitespace only; no synonyms, semantic equivalence, objectives or competence inferred. Leads retain proposal IDs, roles, parent/source references and target inventory path/key; all inputs digest-pinned. Offline evidence only, no production registry check, automatic merge, canonical allocation or teaching content.
+
+Verification: eight new tests observed failing before implementation, then all passed; rejects omissions, duplicate parents, foreign source links, acceptance forgery, queue/predecessor digest changes and underlying task drift. Audit --verify passed; full npm test passed 1,621/1,621; npm run check passed; staged whitespace check passed. Local staged tree equals GitHub implementation tree. All previous four proposal batches and queue unchanged.
+
+Next: inspect 60 exact-label lead groups against both source task contexts; create source-bound reuse/keep-separate proposals, retaining uncertainty and role differences. Exact labels are not accepted concept identities. Then 652 family/context groups, actual home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. All 69 mixed groups have initial proposals but unresolved actual scopes/bindings. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save via expected-head lease; verify all six changed files at final remote commit, then release ownership. No external writer jobs remain.
+
+---
+
+## Mixed-scope decomposition proposals batch 04: all 69 represented — 8 November 2026 IST
+
+Checked at 2026-11-08T21:47:57.623088+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 942a6b05d9846b92846aca3f9720ae18bf5a5193; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: f186ae767c17c5c2d0c9a41e9a912d6a1b6bdd6f. Names-only instruction active.
+
+Reviewed final nine mixed groups, Social context through Water safety. Added 114 component name proposals: 24 reusable-topic candidates and 90 contextual-task facets across 34 source appearances. The physician-in-community heading preserves its 26 separate tasks with task-specific consent, privacy, research, supervision, teamwork and development names. Professional/legal contexts and simulations remain source-limited; no current guidance verification or independent competence claimed.
+
+All four batches exactly partition all 69 mixed parents: 660 component occurrences (308 reusable-topic candidates, 352 contextual-task facets), retaining all 176 source appearances. Zero mixed parents lack initial decomposition proposals. This is proposal inventory completion only; all original mixed scopes remain unresolved for semantic scope and binding. Counts are occurrences, not unique or accepted concepts. Queue and all three predecessor packets byte-unchanged, exact SHA256 pins recorded. Canonical/objective IDs null and mapping/scope/binding flags false. No teaching content or production changes.
+
+Verification: audited all four batches jointly for exact ordered 69-parent partition, 660 globally unique proposal IDs, valid nonempty source subsets and complete reference representation; all 176 task/body hashes and modes matched source packets. Follow-up queue --verify passed; 11 focused tests passed; npm run check passed; whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata only, full suite not repeated (last full 1,613/1,613).
+
+Next: add a repeatable decomposition verifier and exact-label reuse inventory across all four mixed batches and existing names, with behavior tests for omitted/duplicated parents, forged source associations/digests and acceptance. Preserve repeated labels and distinct contexts until semantic equivalence established; do not allocate duplicate identities from name equality. Then resolve 652 families/contexts, homes/objective/canonical bindings, shared scope, 21 source exceptions and learner integration. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease, verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
+## Mixed-scope decomposition proposals batch 03 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:42:06.584710+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e3563c21a5e18c029708a3136130ee9d5c351b49; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 7f461ec3ebf29266611662f047bcc334ab39be15. Names-only instruction active.
+
+Reviewed next 20 mixed parents, Neonatal surgical conditions through Simulated amphibian experiments (the actual 20-row cohort includes this final group). Added 170 name proposals: 66 reusable-topic candidates and 104 contextual-task facets across 45 source appearances. Obstructive Airway Diseases retains all 26 tasks and component-specific source links for examinations, tests, physiology, exposures, counselling and treatment plans. Procedure observation, assistance, model work and assigned team roles remain distinct from independent competence. Forensic viability, flotation-test limits and prenatal screening/diagnosis retain context; no current legal/guideline verification claimed.
+
+Cumulative three batches: 60 mixed parents, 546 proposals, 142 source appearances. Nine mixed parents have no decomposition proposals; all 69 mixed scopes still unresolved for actual scope and binding. Queue and both predecessor packets byte-unchanged, exact SHA256 digests pinned. Canonical/objective IDs null, semantic equivalence unverified, mapping/scope/binding flags false. No educational content or registry changes.
+
+Verification: exact next-20 cohort, disjoint predecessor parents, 170 unique proposal IDs, valid nonempty single-source links, every parent reference represented, all 45 task/body hashes and modes matched underlying source packets. Follow-up queue --verify passed; 11 focused tests passed; npm run check passed; staged whitespace check passed. Local staged tree matched GitHub implementation tree. Metadata-only, full suite not repeated (last full 1,613/1,613 passed).
+
+Next: inspect final nine mixed parents, Social context through Water safety; create mixed-scope-decomposition-batch-04 pinning the queue and all three predecessor digests. Preserve uncertainty and source-specific roles, then consolidate decomposition verification/reuse leads without accepting canonical identities. Remaining 652 families/contexts, semantic reuse, home/objective/canonical bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment, clinical acceptance or learner publication. Save with expected-head lease; verify all four changed files at final remote commit; ownership released after verification. No external writer jobs.
+
+---
+
+## Mixed-scope decomposition proposals batch 02 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:31:32.749169+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f140347e019258e1c14fbd63fdaaab48b61f1fc8; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: d06943195be9cedc467cf6f1d132d99a4283893a. Names-only instruction active.
+
+Inspected next 20 mixed parents, Deformities through Muscle classification. Added 243 source-specific name proposals: 140 reusable-topic candidates and 103 contextual-task facets across 76 source appearances. Geriatrics retains 22 task contexts and Infectious Diseases 35, each component linked only to the task supporting it. Muscle tissue classification and skeletal descriptive classification remain separate. Broad drug classes, procedure contexts, developmental timing and prenatal screening labels remain editorial candidates, not allocated identities or coverage claims. No educational content.
+
+Cumulative: 40 mixed parents, 376 component proposals, 97 source appearances. 29 mixed parents have no decomposition proposals; all 69 original mixed scopes remain unresolved until actual scope/binding work. Queue snapshot and batch 01 unchanged; batch 02 pins both digests. All canonical/objective IDs null, semantic equivalence unverified, mapping and scope/binding completion false.
+
+Verification: exact next-20 cohort, unique proposal IDs, disjoint parent cohorts; every source reference covered and every component linked to a valid single source; all 76 task/body hashes and modes match underlying packets; previous queue and proposal byte-unchanged. Follow-up queue --verify passed, 11 focused tests passed, npm run check passed, whitespace check passed. Local staged tree equals GitHub implementation tree. Metadata-only: no code/tests changed; full suite not repeated (last full: 1,613/1,613).
+
+Next: inspect remaining 29 mixed groups; batch 03 can cover next 20, Neonatal surgical conditions through Reproductive tract anatomy. Preserve source-specific modes and evidence, pin queue and both predecessor proposal digests, check role/name reuse before allocating identities. Then final nine mixed groups, 652 families/contexts, semantic reuse, home/objective/canonical bindings, shared target scope, 21 source exceptions and learner integration remain. Foundation incomplete. No merge, deployment, production publication or clinical acceptance. Save via expected-head lease, verify all four changed files at remote final commit; ownership released after verification. No external writer jobs.
+
+---
+
+## Mixed-scope decomposition proposals batch 01 — 8 November 2026 IST
+
+Checked at 2026-11-08T21:27:56.993085+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d448e403aeef9261c94bed0770f3081840c67f7e; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 3e3f1b7c4192d8606c389edf40643505194401f6. Names-only user instruction active.
+
+Inspected the first 20 of 69 mixed groups and underlying tasks (Abdominal diagnostic modalities through Creatinine estimation). Added 133 source-linked name proposals: 78 reusable-topic candidates and 55 contextual-task facets. All 21 source appearances retained with exact hashes, modes and parent references. Blood components has separate physiology versus transfusion-selection evidence; proposals link only the appropriate reference. Parent scopes/bindings remain incomplete; canonical/objective IDs null, semantic equivalence unverified, mappings false. No educational content, production registry change or clinical acceptance.
+
+Verification: exact first-20 cohort and 133 unique proposal IDs; every proposal has nonempty source-reference subset, every parent source is represented; task/body hashes and modes match underlying task packets. Original queue and all eleven predecessor projections byte-unchanged. Parent follow-up --verify passed, 11 focused tests passed, npm run check passed, staged whitespace check passed. Local staged tree matches remote implementation tree exactly. Metadata-only changes; full suite not repeated (last full run 1,613/1,613 passed).
+
+Remaining: all 69 mixed groups remain unresolved; 20 now have decomposition proposals, 49 do not. Next inspect the next 20 starting Deformities, through Muscle classification, using underlying task evidence and explicit source-role links; create mixed-scope-decomposition-batch-02, pin queue and predecessor proposal digests, preserve uncertainty and check reuse before allocating identities. Existing 652 family/context groups, semantic reuse, homes, canonical/objective bindings, shared scope, 21 source exceptions and learner integration remain unfinished. Foundation incomplete. No merge, deployment or publication. Save via expected-head lease; verify all four changed files remotely and release ownership. No external writer jobs remain.
+
+---
+
+## Source-bound parent follow-up queue — 8 November 2026 IST
+
+Checked at 2026-11-08T21:23:34.337324+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 31dd66951058bce6bd17dc9d976586ae21777c5b; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 8c1a1cbe3fbfb2b2eeed03a7ace52e9bafb51dd2. Names-only user instruction remains active.
+
+Added ops/nmc/report-parent-follow-up.js, its five behavioral tests, source-bound evidence queue and documentation. Queue preserves all 1,950 scope-triaged parent names and 2,094 source appearances. Routes: 69 decompose-mixed-scope, 652 decompose-family-context, 570 check-semantic-reuse-and-bind-topic and 659 resolve-home-and-bind-task. These are authoring dependencies, not learner priorities or medical urgency. Every original task record, source mode and assessment batch remains attached. All eleven source projection digests are pinned; CLI revalidates each underlying batch against task evidence before generating/verifying. Duplicate names/references, unknown dispositions and forged accepted/allocated states are rejected. All acceptance/completion flags remain false, canonical IDs null. No educational content or learner publication.
+
+Verification: five new tests observed failing against missing behavior, then passing; queue --verify passed; full npm test rerun passed 1,613/1,613; npm run check passed; staged whitespace check passed; local staged tree matches GitHub implementation tree. First full-suite invocation lost its execution session before completion; retry completed with exit 0 and all 1,613 tests passing. No unresolved test failures. Original assessments and decisions unchanged.
+
+Next: inspect the 69 mixed groups and underlying source tasks; create first names-only decomposition decisions/projection with explicit parent/source links and reusable-topic versus contextual-facet distinctions. Preserve unresolved/uncertain cases rather than fabricate one canonical identity. Then address 652 families/contexts, semantic reuse, home and objective/canonical bindings, shared target scope, 21 source exceptions and learner integration. Initial parent-name inventory is accounted for (420 compound + 57 reuse + 1,950 triaged = 2,427); Foundation remains incomplete. No merge, deploy or clinical acceptance. Save with expected-head lease, verify all six changed files at final remote commit, release ownership after verification. No external writer jobs remain.
+
+---
+
+## Parent scope batch 11: initial parent-name triage complete — 8 November 2026 IST
+
+Checked at 2026-11-08T20:12:11.993306+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c4b8aab9adeac289a6cbf35c6df062a873fc49f1; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and open draft PR head verified unchanged. Implementation checkpoint: 0eac83fa4d334c3d0b7339c676e38e25af0ce5eb. User requested Next; names-only instruction active.
+
+Reviewed final 150 names from Thyrotoxicosis through Zoonoses, preserving 153 source appearances. Dispositions: 57 standalone candidates, 32 scoped facets, 58 families/contexts, three mixed groups: Tongue anatomy, Trauma systems and Water safety. Transfusion observation, urinalysis and varicocele each preserve both source appearances and source-specific contexts. Observation/assistance and performed tasks remain distinct. Vaccine, TB, waste-rule and IMNCI references preserve source-version limits; current official guidance not rechecked.
+
+Cumulative eleven batches: 1,950 names / 2,094 disjoint source references; 570 standalone candidates, 659 scoped facets, 652 families/contexts and 69 mixed groups. Zero untouched names remain. Explicit partition proof: these 1,950 names plus 420 compound parents plus 57 reuse leads are disjoint and equal all 2,427 original index parent names. This completes initial inventory triage, not canonical or curriculum acceptance. All predecessor decisions/projections byte-unchanged and exact SHA256 pins verified. Existing selected inventory and reuse proposals unchanged. Canonical IDs remain null and mapping/scope completion false. No educational content added.
+
+Verification this run: all eleven batch reporters and parent reuse --verify passed; six focused parent-scope tests passed; npm run check passed; staged diff whitespace check passed. Local staged tree exactly matches GitHub implementation tree. Metadata only, no code/test changes. Full suite not repeated (last full checkpoint: 1,608 tests).
+
+Next: build a deterministic source-bound follow-up queue over all eleven scope batches, routing 69 mixed groups and 652 families/contexts to decomposition, and retaining separate binding/reuse work for 570 standalone candidates and 659 scoped facets. Verify complete reference accounting, predecessor digests and fail-closed acceptance flags; do not create batch 12 for an empty cohort. Actual semantic reuse, canonical/objective binding, shared/family scope, 21 source exceptions and learner integration remain unfinished. Foundation remains incomplete. No merge, deployment or clinical acceptance. Save using expected-head lease and verify all seven changed files at final remote commit. No external writer jobs; ownership released after verified checkpoint.
+
+---
+
+## Parent scope batch 10: 1,800 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T20:07:47.944537+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 879f80db1db51d3b2cfe7e470ea4c4960341fad9; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and PR head verified unchanged. Implementation checkpoint: 00f92bbd258055cb06428ce570e92c2929b35c38. User requested Next; names-only instruction active.
+
+Reviewed 200 names from Respiratory acidosis through Thyroid tumours, preserving 230 source appearances. Dispositions: 81 standalone candidates, 64 scoped facets, 48 families/contexts and seven mixed groups: Simulated amphibian experiments, Social context, Special populations, Statistical workflow, Surgical imaging integration, Surgical investigations and The role of the physician in the community. The latter retains all 26 distinct tasks rather than becoming one canonical concept. Preserve separate thyroid, soft tissue, respiratory examination, status epilepticus and testicular tumour task contexts; no automatic synonym merging. Simulation, observation and performed tasks retain their source modes. No current legal, ethical or immunization guidance verification claimed.
+
+Cumulative ten batches: 1,800 names / 1,941 disjoint source references; 513 standalone candidates, 627 scoped facets, 594 families/contexts and 66 mixed groups. 150 untouched names remain. All predecessor decisions/projections byte-unchanged; exact predecessor SHA256 pins and name/reference disjointness verified. Existing selected component inventory and reuse proposals unchanged. All canonical IDs remain null and mapping/scope completion false. No educational content added.
+
+Verification this run: all ten batch reporters and parent reuse --verify passed; six focused parent-scope tests passed; npm run check passed; staged diff whitespace check passed. Local staged tree exactly matches GitHub implementation tree. Metadata only: no code/test changes; full suite not repeated (last full checkpoint: 1,608 tests).
+
+Next: inspect the final 150 untouched names and create batch 11 with selectionLimit 150 using --batch=11; preserve all predecessor projections and source contexts. Then address indicated decomposition, 66 mixed groups, semantic reuse, canonical/objective binding, shared/family target scope, 21 source exceptions and learner integration. Foundation remains incomplete. No merge, deployment or clinical acceptance. Save with expected-head lease and verify all seven changed files at final remote commit. No external writer jobs; ownership released after verified checkpoint.
+
+---
+
+## Parent scope batch 09: 1,600 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T20:01:22.503098+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 13588dfe2e010a3ff1ec73f4af3f230550a50450; main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and PR head verified unchanged. Implementation checkpoint: 3b50e4a88c078b921138d3e2187c8d06d848d77e. User requested Next; names-only instruction active.
+
+Reviewed 200 names from Peripheral nerve injuries through Respectful specimen handling, preserving all 202 source appearances. Dispositions: 66 standalone candidates, 64 scoped facets, 62 families/contexts and eight mixed cases: Polytrauma resuscitation teamwork, Post-mortem reports, Pubertal timing, Regional circulation, Renal test interpretation, Reproductive interventions, Reproductive markers and Reproductive tract anatomy. Preserve renal tumour surgical/pathology contexts, overlapping puberty and preoperative labels, source-version legal/programme limits and supervised/simulated task modes without automatic merging or competence claims.
+
+Cumulative nine batches: 1,600 names / 1,711 disjoint source references; 432 standalone candidates, 563 scoped facets, 546 families/contexts, 59 mixed cases. 350 untouched names remain. Predecessor projections and decisions are byte-unchanged; all predecessor SHA256 pins and cohort/source-reference disjointness verified. Existing selected component inventory and reuse proposals unchanged. All canonical IDs remain null, mapping/scope completion false. No educational content added.
+
+Verification this run: all nine batch projections and parent reuse reporter --verify passed; six focused parent-scope tests passed; npm run check passed; git diff --check passed. Metadata-only changes; no code/test changes. Full suite not rerun (last full checkpoint: 1,608 tests). Local staged tree matched GitHub implementation tree exactly.
+
+Next: inspect the next untouched cohort and create batch 10 using --batch=10, retaining predecessor digests and source contexts. Resolve indicated decomposition, 59 mixed cases, semantic reuse, canonical/objective bindings, shared/family target scope, 21 source exceptions and learner integration. Foundation remains incomplete. No merge, deployment or clinical acceptance. No external writer jobs; ownership released after verified checkpoint. Save with expected-head lease and verify all seven changed files against the final remote commit.
+
+---
+
+## Parent scope batch 08: 1,400 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:55:33+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 1ceaf5c73dc4394b097b617a97e774c78fa1f6fd; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation checkpoint: f14b820360d602d8fc59b50ab3e6d521f1fea7fc. User requested Next; names-only instruction active.
+
+Inspected the next 200 untouched labels (National programme for older adults through Peripheral IV catheter) and all 231 linked source appearances. Batch-08 dispositions: 58 standalone topic candidates, 64 scoped facets, 67 broad families/contexts and 11 mixed cases retained unsplit: Neonatal surgical conditions, Normal radiographs, Obstetric haemorrhage simulation, Obstetric procedures, Obstructive airway diseases, Operative obstetrics practice, Organ function panels, Orthopaedic infection procedures, Paediatric imaging integration, Pathology terminology and Perinatal forensic assessment. Obstructive airway diseases retains all 26 task records. Both GM14.2 obesity-aetiology appearances remain distinct source references even with identical task text; no assertion of two independent competencies. Preserve neonatal/paediatric resuscitation, observed/assisted versus performed tasks, imaging-specific patient preparation and overlapping IV labels without automatic alias/objective merging.
+
+Across batches 01–08: 1,400 parent names and 1,509 distinct source appearances editorially triaged; cumulative dispositions 366 standalone candidates, 499 facets, 484 families/contexts and 51 mixed cases. Untouched no-exact-label cohort decreases from 750 to 550. These are revisable authoring dispositions, not accepted source/canonical/clinical scope or completed competencies. Canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or canonical identities added.
+
+Batch 08 pins all seven predecessor projection digests. Independent checks confirm disjoint name/source-reference sets across all eight actual cohorts, exact predecessor hashes, all 26 airway appearances, both GM14.2 references and matching task digests, and byte-unchanged previous decisions/projections, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals. Updated current counts and next actions in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Verification this metadata-only run: actual batch-01/02/03/04/05/06/07/08 and parent-name reuse --verify PASS. Six focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test not repeated; prior code checkpoint passed 1,608 tests. Exact cohort/hash/baseline checks and staged whitespace PASS; local staged tree equals GitHub-created tree. Ruling: preserve the 11 mixed scopes, all multi-task airway evidence and repeated physical source appearances instead of collapsing labels or inferring competence from observation — retains provenance while leaving decomposition/objective binding open. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication.
+
+Next exact action: inspect the next untouched cohort, create batch-09 decisions and generate/verify with --batch=09. Use larger bounded batches only if every source scope can be inspected safely. Do not rewrite predecessors or silently clear the 51 mixed cases and other family/facet binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 07: 1,200 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:47:02+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 3ccefd1614524fa91abc93d7cf533e5d023dee8b; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation checkpoint: 49f1c5c6bcc4bbb35d1c238758439eb980f6a5ed. User requested Next; names-only instruction active.
+
+Inspected the next 200 untouched labels (Klinefelter syndrome through National population policy) and all 204 source-task contexts. Batch-07 dispositions: 50 standalone topic candidates, 66 scoped facets, 79 broad families/contexts and five mixed cases retained unsplit: Laboratory technique observation, Major gynaecological procedures, Medical imaging integration, Minor gynaecological procedures and Muscle classification. Preserve the two distinct muscle-classification tasks (individual skeletal-muscle descriptions versus muscle tissue types). Menopause/transition and overlapping procedure names keep source contexts without automatic alias/objective merging. Observation, simulated roles and assigned assistance are not independent competence; legal/programme tasks preserve source versions without current-law or schedule claims.
+
+Across batches 01–07: 1,200 parent names and 1,278 distinct source appearances editorially triaged; cumulative dispositions 308 standalone candidates, 435 facets, 417 families/contexts and 40 mixed cases. Untouched no-exact-label cohort decreases from 950 to 750. These are revisable authoring judgments, not accepted source/canonical/clinical scope or completed competencies. All canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or canonical identities added.
+
+Batch 07 pins all six predecessor projection digests. Independent checks confirm disjoint name/source-reference sets for all seven actual cohorts, exact predecessor hashes, both muscle-classification source records and byte-unchanged previous decisions/projections, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals. Updated current counts and next actions in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Verification this metadata-only run: actual batch-01/02/03/04/05/06/07 and parent-name reuse --verify PASS. Six focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test not repeated; prior code checkpoint passed 1,608 tests. Exact cohort/hash/baseline checks and staged whitespace PASS; local staged tree equals GitHub-created tree. Ruling: keep the five mixed cases and procedure/taxonomy distinctions explicit rather than equating broad task lists with one precise concept or one completion claim — preserves evidence but leaves decomposition/objective binding unfinished. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication.
+
+Next exact action: inspect the next untouched cohort, create batch-08 decisions and generate/verify with --batch=08. Use larger bounded batches only if every source scope can be inspected safely. Do not rewrite predecessors or silently clear the 40 mixed cases and other family/facet binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 06: 1,000 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:39:02+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at a53556588a205242e278ab3715e158b62ef47911; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation checkpoint: 07d53e3ea3e00e7b5637bc328f7652c823075b68. User requested Next; names-only instruction active.
+
+Inspected the next 200 untouched labels (Healthcare-associated infection through Killian dehiscence) and all 238 linked source-task contexts. Batch-06 dispositions: 48 standalone topic candidates, 81 scoped task facets, 69 broad family/context labels and two mixed cases retained unsplit: Imaging correlation and Infectious diseases. Infectious diseases retains all 35 distinct source appearances, rather than becoming one precise clinical concept or completed objective. Preserve context-sensitive meanings: History is anaesthesia history, Interactions is medicine-regimen interactions, and Investigation selection is microbiological testing. Informed-consent source records keep legal/clinical knowledge and paediatric/procedural performance contexts separately; matching names do not establish equivalent competence.
+
+Across batches 01–06: 1,000 parent names and 1,074 distinct source appearances editorially triaged. Cumulative dispositions: 258 standalone candidates, 369 facets, 338 families/contexts and 35 mixed cases. Untouched no-exact-label cohort decreases from 1,150 to 950. These are revisable authoring judgments, not accepted source/canonical/clinical scope or completed competencies. All canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or canonical identities added.
+
+Batch 06 pins all five predecessor projection digests. Independent checks confirm disjoint name/source-reference sets across all six actual cohorts, exact predecessor hashes, all 35 infectious-disease appearances and byte-unchanged previous decisions/projections, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals. Updated current counts and next steps in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Verification this metadata-only run: actual batch-01/02/03/04/05/06 and parent-name reuse --verify PASS. Six focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test not repeated; prior code checkpoint passed 1,608 tests. Exact cohort/hash/baseline checks and staged whitespace PASS; local staged tree equals GitHub-created tree. Ruling: retain the two mixed cases and all discipline/population/task qualifiers rather than flattening broad labels into precise concepts or general competencies — preserves source evidence while leaving decomposition/objective binding open. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication.
+
+Next exact action: inspect the next untouched cohort, create batch-07 decisions and generate/verify with --batch=07. Use larger bounded batches only if every source context can be inspected safely. Do not rewrite predecessors or silently clear the 35 mixed cases and other family/facet binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 05: 800 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:31:18+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e87a0b91f7fbe4f7b3a2dda1bb08825a9da7b31f; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation checkpoint: 0cd815042e8c67478bd8ee213e266b2255e94c52. User requested Next; names-only instruction active.
+
+Inspected the next 200 untouched labels (ENT cancer recognition through Healthcare worker health) and all 223 source-task contexts. Batch-05 dispositions: 57 standalone topic candidates, 65 scoped facets, 71 broad families/contexts and seven mixed cases retained unsplit: ENT emergencies, Essential medicines, First-trimester assessment, General anaesthetic drugs, Geriatrics, GI pathology slides and Haematopoiesis. Geriatrics retains 22 distinct source appearances spanning separate medical, mental, functional and service tasks; it is not one precise competency. Preserve forensic/developmental fetal-age task contexts, anaesthetic versus adjunct-class scope, and blood-formation versus specimen-handling scope without inferring equivalent objectives.
+
+Across batches 01–05: 800 parent names and 836 distinct source appearances editorially triaged; cumulative dispositions 210 standalone candidates, 288 facets, 269 families/contexts and 33 mixed cases. Untouched no-exact-label cohort decreases from 1,350 to 1,150. These are revisable authoring dispositions, not accepted medical/canonical scope or completed competencies. Canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or canonical identities added.
+
+Batch 05 pins all four predecessor projection digests. Independent checks confirm disjoint actual name/source-reference sets for all five batches, exact hashes, all 22 geriatric appearances and byte-unchanged earlier decisions/projections, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals. Updated current counts and next actions in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Verification this metadata-only run: actual batch-01/02/03/04/05 and parent-name reuse --verify PASS. Six focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test not repeated; prior code checkpoint passed 1,608 tests. Exact cohort/hash/baseline checks and staged whitespace PASS; local staged tree equals GitHub-created tree. Ruling: retain the seven mixed cases, especially the multi-task Geriatrics label, instead of flattening the source into precise concepts or a single completion claim — preserves evidence but leaves decomposition/objective binding unfinished. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication.
+
+Next exact action: inspect the next untouched cohort, create batch-06 decisions and generate/verify with --batch=06. Use larger bounded batches only when every source scope can be inspected safely. Do not rewrite predecessors or silently clear the 33 mixed cases and remaining family/facet binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 04: 600 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:21:53+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at f9527d02dceede363219db0947f7d8c65ed6136d; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation checkpoint: c9bbc90e5226698144268b5d371b24d4efaa38e3. User requested Next; names-only instruction active.
+
+Inspected another 200 untouched labels (Concepts of death through Energy in Indian foods) and all 202 linked source-task contexts. Batch-04 dispositions: 55 standalone topic candidates, 77 scoped task facets, 59 broad family/context labels and nine mixed cases retained unsplit: Concepts of death, Conventional examination, Creatinine estimation, Deformities, Developmental terminology, Drug toxicology I, Drug toxicology II, Early pregnancy concepts and Emergency radiographs. Preserve context-specific limits such as laboratory confidentiality and diabetic emergency recognition; do not treat broad labels as evidence for general competence. Legal/end-of-life and toxicology task records remain separate exact versions, with no new legal or clinical guidance authored.
+
+Across batches 01–04: 600 parent names and 613 distinct source appearances editorially triaged; cumulative dispositions 153 standalone candidates, 223 facets, 198 families/contexts and 26 mixed cases. Untouched no-exact-label cohort decreases from 1,550 to 1,350. All dispositions are revisable authoring proposals, not accepted canonical/source/clinical scope or completed competencies. Canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or canonical identities added.
+
+Batch 04 pins the exact projection digests of all three predecessors. Independent checks show all four actual name/source-reference sets disjoint; predecessor hashes exact; previous decisions/projections, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals byte-unchanged. Updated current counts/next actions in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Verification this metadata-only run: actual batch-01/02/03/04 and parent-name reuse --verify PASS. Six focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test not repeated; prior code checkpoint passed 1,608 tests. Exact cohort/digest/baseline checks and staged whitespace PASS; local staged tree equals GitHub-created tree. Ruling: retain nine mixed task scopes and broad/context-limited labels instead of inferring precise general concepts or equivalent legal/clinical duties — preserves evidence but leaves later decomposition and exact objective binding open. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication.
+
+Next exact action: inspect the next untouched index cohort, create batch-05 decisions and generate/verify with --batch=05; use a larger bounded batch only if every source scope can be inspected safely. Do not rewrite predecessors or silently clear the 26 mixed cases and other family/facet binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API using expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 03: 200 additional names, 400 cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:13:39+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 49a0884ec8a68dcac4269fb5b42ecd2b20e28a3a; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation checkpoint: 1f200994ebd262f98a378201b3dc409012298384. User requested Next; names-only instruction active. Expanded this safe metadata-only run to 200 labels rather than the previous 100-label batch size.
+
+Inspected the next 200 untouched parent labels (Axillary vessels through Computers in epidemiology) and all 206 linked draft-task contexts. Batch-03 dispositions: 51 standalone topic candidates, 81 scoped task facets, 60 broad family/context labels and eight mixed cases retained unsplit: Blood components, Calot triangle, Cancer examination skills, Case-based test interpretation, Chest trauma simulation, Cholinergic drugs, Common ENT mechanisms and Complication-directed treatment. Preserve separate physiology/transfusion uses of blood components and classical/modern triangle terminology without automatic semantic equivalence. Observation, assigned participation, assistance, simulation and performance modes retain exact task references; no independent competence inferred.
+
+Across batches 01–03: 400 parent labels and 411 distinct source appearances editorially triaged; cumulative dispositions 98 standalone candidates, 146 facets, 139 families/contexts and 17 mixed cases. Untouched no-exact-label cohort decreases from 1,750 to 1,550. These are authoring triage counts, not completed competencies or accepted source/canonical scope. All canonical IDs null, semantic equivalence unverified, mapping/scope completion false. No new topic names, teaching content or clinical facts authored.
+
+Batch 03 pins exact projection digests of both predecessors. All three actual name/source-reference sets are disjoint. Independent baseline comparison confirms batch-01/batch-02 bytes, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals unchanged. Updated current counts/continuation in docs/NMC_PARENT_SCOPE_ASSESSMENTS.md, docs/NMC_PARENT_NAME_REUSE.md and docs/NMC_HOME_SCOPE_ROUTING.md, including correction of the stale 1,950 untouched count.
+
+Verification this metadata-only run: actual batch-01, batch-02, batch-03 and parent-name reuse --verify PASS. Six existing focused parent-scope CLI tests PASS; npm run check PASS (13 services/253 coupling locations). No reporter/application/test implementation changed, so full npm test was not repeated; prior code checkpoint passed 1,608 tests. Exact baseline/cohort/digest checks and staged whitespace PASS. Local staged tree equals GitHub-created tree. No official-source/medical validation, accepted canonical/objective binding, live registry write, domain/UI change, main merge or production publication. Ruling: keep the eight mixed cases explicit rather than infer a precise single concept from each broad label — preserves source scope but leaves later decomposition unfinished.
+
+Next exact action: inspect the next untouched index cohort, prepare batch-04 decisions and generate/verify using --batch=04; use a larger bounded batch only when all source scopes can be inspected safely. Do not rewrite predecessors or silently clear the 17 mixed cases and other facet/family binding work. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Parent scope batch 02: 200 names cumulatively triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:06:44+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at af7b8a2ce06e68b32bbe11dbc29bf216455d3595; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation commit: bc5d21833d22e18a7292ef8b8045a3a68c69c5e8. User requested Next; names-only instruction active.
+
+Inspected the next 100 untouched parent labels (Amniotomy practical through Axillary nerve injury) and all 102 source-task contexts. Added batch-02 decisions and source-bound assessment projection. Dispositions: 17 standalone topic candidates, 35 source-scoped facets, 42 broad family/context labels and six mixed-scope cases retained unsplit: Applied abdominal anatomy, Applied digestive physiology, Applied pelvic anatomy, Applied respiratory physiology, Applied third-week embryology, Assessment to diet plan. These are revisable editorial dispositions, not accepted medical/canonical scope. Preserve anaemia-specific tasks, drug-family breadth and supervised/observed/simulated procedure boundaries; no independent competence inferred.
+
+Batch 02 pins the exact batch-01 projection digest. Actual parent-name and source-reference sets are disjoint. Both batches now contain 200 triaged parent names/205 source appearances; cumulative dispositions are 47 standalone candidates, 65 facets, 79 families/contexts and nine mixed cases. Untouched names decrease from 1,850 to 1,750; all triaged names still need any indicated decomposition, semantic reuse and objective/canonical binding. Existing batch-01 bytes, selected 1,195-name/1,218-occurrence inventory, 396 single-home links/two shared groups and 57 reuse proposals unchanged.
+
+Added two regression tests for later-batch exclusion and forged predecessor-digest rejection; all six parent-scope CLI tests PASS. No reporter implementation change this run. npm test PASS 1,608/1,608, zero failed/cancelled; npm run check PASS (13 services/253 coupling locations). Actual batch-02 and batch-01 --verify PASS; parent-name reuse and selected graph --verify PASS. Independent exact-baseline checks confirm predecessor digest, disjoint names/references and byte-unchanged existing inventories. Staged whitespace PASS; local staged tree equals GitHub-created tree. Updated docs/NMC_PARENT_SCOPE_ASSESSMENTS.md with per-batch/current totals and docs/NMC_PARENT_NAME_REUSE.md with current continuation.
+
+Ruling: maintain mixed applied-anatomy/physiology and assessment-to-plan scope explicitly rather than inventing a precise single concept from each broad label — retains source coverage but leaves later decomposition open. No new teaching content, canonical allocation/acceptance, official-source/medical validation, live registry write, application/domain/UI change, main merge or production publication. Canonical IDs null, semantic equivalence unverified, mapping/scope-completion false throughout new rows.
+
+Next exact action: inspect the next untouched index cohort, create batch-03 decisions and generate/verify with --batch=03 without rewriting either predecessor. Keep all nine mixed cases and family/facet scope work explicit. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives, accepted source/canonical scope, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. Persist through connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## First 100 unmatched parent names editorially triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T19:00:43+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 2ebfb340e4fe1aab037d183f89909000264f358b; current main base 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation commit: 837a8c896529d70f665a3789a2b9c17bd4887109. User requested Next; names-only instruction active.
+
+Inspected the first 100 remaining index labels and all 103 linked draft-task scopes after excluding 420 selected compound parents and 57 exact-label reuse leads. Added batch-01 decisions and deterministic source-bound projection. Editorial dispositions: 30 standalone topic candidates, 30 source-scoped task facets, 37 broad family/context labels and three mixed-scope cases retained for decomposition (Abdominal diagnostic modalities, Abuse recognition, Alcohol toxicology). These are revisable authoring triage judgments, not canonical roles, medical truth or approved curriculum scope. Existing names retained verbatim; no new teaching content, diagnoses, therapeutic facts or canonical identities generated. Source codes, paths, coordinates, body/task digests and assessment modes preserved; supervised observation/participation/assistance and simulation do not establish independent competence.
+
+New reporter ops/nmc/report-parent-scope-assessments.js verifies exact index-order cohort membership, excludes prior selected/reuse parents, validates index/source-task evidence and regenerates every row/count. Numbered later batches exclude prior triaged names and pin predecessor projection digests; no batch-02 evidence has been generated or accepted. Input docs/evidence/2026-11-08-nmc-parent-scope-decisions-batch-01.json; output docs/evidence/2026-11-08-nmc-parent-scope-assessments-batch-01.json. All canonical IDs null, mapping/scope completion false, semantic equivalence unverified. Ruling: retain broad families and mixed scope as explicit source-parent dispositions instead of generating many unsupported precise concepts — preserves optionality and source scope but leaves decomposition/objective binding unfinished.
+
+The no-exact-label cohort now has 1,850 untouched parents. The 100 triaged parents still need any indicated decomposition, reuse and exact objective/canonical scope; these are not 100 completed competencies. Selected inventory (1,195 names/1,218 component occurrences, 396 single-home links/two shared groups) and all 57 reuse proposals remain unchanged. Added docs/NMC_PARENT_SCOPE_ASSESSMENTS.md and updated parent-reuse continuation text.
+
+Verification this run: four new real CLI regression tests RED→GREEN (source mode/mixed scope retention, changed source hash, forged completion, omitted rows with adjusted totals). Actual batch reporter --verify PASS for 100 names/103 appearances and 1,850 untouched names. npm test PASS 1,606/1,606, zero failed/cancelled; npm run check PASS (13 services/253 coupling locations). Existing parent-reuse reporter, selected graph --verify and full role checker PASS. Staged diff whitespace PASS; local staged tree equals GitHub-created tree. No official-source/medical validation, live registry write, accepted canonical/objective bindings, application/domain/UI change, main merge or production publication. Persist through connected GitHub API using expected-head lease and verify remote final head/all changed-file readbacks before saved report.
+
+Next exact action: inspect the next untouched parent-name cohort, create batch-02 decisions from exact draft-task scopes and generate/verify using --batch=02. Keep batch-01 and its unresolved mixed/family/facet work explicit. Refresh live registry metadata before canonical identity reuse/allocation. Broader source/canonical scope, shared/family target objectives, 21 source exceptions and learner integration remain unfinished; Foundation incomplete. No external writer jobs started; ownership released after verified checkpoint.
+
+## Fifty-seven source-bound parent-name reuse proposals — 8 November 2026 IST
+
+Checked at 2026-11-08T18:39:11+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at e345f5c5b596eb0f5741b1ae9c18ab9c0d63a503; current main base763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged. User requested Next, then Continue this chat while the new reporter was still a local stub with four failing tests. Resumed that exact unfinished work; no published work redone. Implementation commit: 741f0392d353001ff3ca5368ec7cad3686d530c2. Names-only instruction active.
+
+Inspected existing editorial draft-task scopes for all57reuse leads and their existing component-name/home support. Finished report-parent-name-reuse.js and generated docs/evidence/2026-11-08-nmc-parent-name-reuse-proposals.json. Packet has57parent-name associations,88distinct source appearances and51distinct existing target-support references, retaining both sides separately with exact packet paths, codes, row coordinates, source-body hashes, editorial-task hashes and assessment modes. Eleven source/target mode sets and41subject sets differ; all57editorial-task digest sets differ. Text/hash differences do not establish medical inequivalence, and matching modes/subjects do not establish equivalence. Preserve age/population/simulation/performance boundaries; e.g. marrow aspiration technique is not certified by an indications task, and adult BLS is not automatically paediatric/neonatal competence. These are name-level reuse proposals, not merged objectives, accepted identities or teaching content.
+
+Reporter pins triage/index digests, validates exact parent appearance arrays and current target identifiers, derives source/target task records from actual metadata, and regenerates every row/count. All mappings, task equivalence and scope completion false; semantic equivalence unverified; canonical IDs null. No new topic labels or source task prose copied. Ruling: existing names can gain proposed source-name associations while retaining distinct exact task evidence — avoids duplicated authoring names without conflating objectives; specific semantic/canonical scope still needs separate establishment.
+
+Four CLI regression tests watched fail before implementation and now PASS: separate task/mode preservation, changed source hashes, forged task equivalence and omitted row with adjusted totals. npm test PASS1602/1602, zero failed/cancelled; npm run check PASS (13services/253coupling locations). Actual57-row reporter --verify PASS; selected graph --verify/full role checker PASS. Existing selected source/role/home/shared inventories unchanged. Staged whitespace PASS; local staged tree equals GitHub-created tree. Added docs/NMC_PARENT_NAME_REUSE.md and current follow-up pointer in docs/NMC_HOME_SCOPE_ROUTING.md. No official-source/medical validation, live registry write, canonical acceptance, application/domain/UI change, main merge or production publication.
+
+Next exact action: assess the1950parent names without exact-label reuse leads in evidence-preserving batches, prioritizing existing canonical/authoring-name reuse and source-specific scope. The broader2007parent set still lacks accepted source-specific/canonical scope;57now have checked name-level proposals only. Refresh live registry metadata before canonical reuse/allocation. Shared/family target objectives,21source exceptions and learner integration remain open; Foundation incomplete. Persist through connected GitHub API with expected-head lease, verify final head/all changed-file readbacks before saved report. No external writer jobs started; ownership released after verified checkpoint.
+
+## Selected facet authoring representation complete; broader parent reuse triaged — 8 November 2026 IST
+
+Checked at 2026-11-08T17:28:23+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c8b0410203de4e9c51be97625db4105742083541; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation commit: e38e0d60bbffbf9638bc5753559c7f451d03393b. User requested Next; names-only instruction active.
+
+Examined four residual facets against existing source-task metadata and their already-declared home labels. Added three explicit family/topic-context proposals: Female reproductive function, Neurodegenerative disease and Torture. Four bound facets retain their own scope; no invented narrower diseases/medicines, drug-induced parkinsonism equivalence, full contraception coverage or physical/psychological sequela equivalence. Family homes use distinct basis explicit-family-context-with-bound-facets, scopeType family-context-only, targetCoverage unverified, null identities and false identity/mapping/scope-completion flags. Reporter validates exact source-task metadata and projects the broad qualifier onto each new link. Ruling: an explicit broad family/topic context is a valid authoring representation without asserting specific canonical/objective scope — closes selected representation gaps while leaving semantic/clinical/target coverage unverified; later source/objective review may revise the family link.
+
+Current selected398scope facets are represented as396single-home links +2shared groups (four shared target relationships). Zero selected authoring-home gaps; this is not source/canonical/clinical acceptance or Foundation completion. All392earlier single-home links and both shared groups unchanged. Role inventory unchanged at1195names,797reusable candidates and1218component occurrences. Source metadata for all four moved facets preserved in family homes and checked against actual draft-task records. Added source-linked docs/evidence/2026-11-08-nmc-family-context-refinement.json; gap queue/routing now explicitly empty. No teaching/new objective prose or live registry write.
+
+Continued beyond selected-set closure: scanned wider2427parent-name index against420selected compound parents, leaving2007parents/2182source appearances still unassessed. Found57exact-label reuse leads:34existing component-name candidates and23existing authoring-home proposals;1950other names have no such exact-label lead. No semantic match, source coverage or canonical reuse accepted. Snapshot docs/evidence/2026-11-08-nmc-unassessed-parent-reuse-triage.json pins index SHA256 and retains all57parent source-appearance arrays and target identifiers. All2007remain scope-unassessed;57are prioritized leads, not completed mappings. Updated current next actions in docs/NMC_HOME_SCOPE_ROUTING.md and labelled earlier snapshots historical.
+
+Verification this run: three new family-context CLI regressions RED→GREEN; all13targeted tests PASS. npm test PASS1598/1598, zero failed/cancelled; npm run check PASS (13services/253coupling locations). Full graph --verify, role, gap queue, scope disposition and consolidation checks PASS. Exact baseline comparison proves all392prior links/two shared groups and entire role inventory unchanged; four family bindings preserve exact source-task evidence; complete57match set verified against all2007remaining parents, exact source appearances/target IDs and index hash. Staged whitespace PASS; local staged tree equals GitHub-created tree. No official-source/medical validation, canonical acceptance, database/domain/UI change, main merge or production publication. Persist via connected GitHub API with expected-head lease and verify final head/all changed-file readbacks before saved report.
+
+Next exact action: inspect57exact-label reuse leads against exact source-task scopes before adding source occurrences or declaring distinct concepts; then assess1950other parent names. Refresh live registry metadata before canonical identity reuse/allocation. Shared/family target-specific objectives,21source exceptions and learner integration remain open. Foundation incomplete; selected names-only authoring representation alone is complete. No external writer jobs started; ownership released after verified checkpoint.
+
+## Two shared-source scope groups without forced single homes — 8 November 2026 IST
+
+Checked at 2026-11-08T17:20:27+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at dee04cf265cf9135b847ffc290ad815cbc5635f4; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation commit: 763ee9a9e53e9bae25d7b3734e2d79623c5ef721. User requested Next; names-only instruction active.
+
+Examined all six residual facets against exact existing draft-task metadata and candidate names. GM9.8 explicitly has aspiration/biopsy and interpretation scope; OP5.2 has episcleritis/scleritis and referral scope. Added two shared source-task proposal groups: Bone marrow interpretation -> existing Bone marrow aspiration and Bone marrow biopsy candidates; Scleral disease referral -> existing Episcleritis and Scleritis candidates. Retain both GM9.8 source appearances. Shared context does not establish identical target-specific objectives, referral/interpretation thresholds, equivalent competence or full scope. All group/target canonical IDs null, mapping/scope completion false, targetCoverage unverified. No new concept labels or medical teaching/objective content authored. Ruling: represent explicit multi-target source context as one shared facet with separate targets, not an arbitrary single home or duplicate source facets — costs unresolved target-specific clinical/semantic scope until later source/objective binding.
+
+Added names-only shared proposal packet docs/evidence/2026-11-08-nmc-shared-facet-scope-proposals.json. Reporter validates exact facet component/source arrays, unique existing reusable target names, unchanged source-task paths/codes/pages/coordinates/body hashes/modes, no forged acceptance and no overriding a usable single home. Full role verifier still independently checks all12component batches. Upgraded offline graph to schemaVersion2; inspected repository consumers (gap queue plus tests) for the new accounting. Source packet remains schemaVersion1. Graph retains392single-home link objects byte-equivalent as JSON; two shared facets expose four target relationships, separately counted. Total scope facets =392single +2shared +4unrepresented =398. Distinct candidate/home labels222 including shared targets. Role inventory unchanged:1195names,797reusable candidates,1218component occurrences. Current gap queue/routing contains four unrepresented facets across three groups: female reproductive pharmacotherapy, neurodegeneration pharmacotherapy, physical torture sequelae and psychological torture sequelae. The two represented shared groups remain scopeComplete=false and are not canonically/clinically resolved.
+
+Validation this run: eight new regression cases watched fail before their implementation, including schemaVersion2 and exact source-evidence guards; all10targeted CLI tests PASS. Current full npm test PASS1595/1595, zero failed/cancelled; npm run check PASS (13services/253coupling locations). Graph --verify, full role, gap queue, scope disposition and consolidation checks PASS. Exact baseline comparison proves unchanged role inventory, all392earlier link objects and four residual gap objects, with all moved source-task evidence retained in shared packet. Early suite/check runs passed but were superseded after the source-evidence guard changes; final full runs recorded above. Staged whitespace PASS; local staged tree exactly matches GitHub-created tree. No live registry query/write, medical/official-source validation, canonical acceptance, domain/UI change, main merge or production publication. Persist through connected GitHub API using expected-head lease and verify remote head/all changed-file readbacks before saved report.
+
+Next exact action: inspect the four broad outcome/pharmacotherapy facets without inventing diagnoses or reducing a family to one condition; use explicit existing family/topic labels where justified. Before objective binding, separately establish target-specific interpretation/referral scope for the two shared groups. Refresh registry metadata before canonical reuse/allocation. Continue other2007parent labels,21source exceptions and learner integration separately; Foundation incomplete. No external writer jobs started; ownership released after verified checkpoint.
+
+## Nine standalone-name role corrections and denominator regression repair — 8 November 2026 IST
+
+Checked at 2026-11-08T17:12:17+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at c7a94c6a0b4fab1d571290948df7d52efdb769c2; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, prior ownership released. Implementation commit: 11c6646ba31d99bd08cad698b70f470fbe890b7e. User requested Next; names-only instruction active.
+
+Inspected the15remaining scope facets and existing candidate/parent inventory. Identified nine independently addressable existing names that need not be forced beneath near-synonymous new parents: Medical practitioner rights and duties (separate), Privileged communication, Controlled-drug prescribing, Off-label prescribing, Prescribing for close contacts, Self-prescribing, Survivor-centred care and Torture injury documentation. Changed their editorial role/kind/home to reusable-name candidates, preserving original names and all source occurrences. Source-linked before/after audit retains prior roles/kinds/contexts, exact component/reference bindings, source-task metadata and assessment modes. No current prescribing law, permissibility, clinical recommendation or documentation competence inferred. Privileged communication is not equated with confidentiality/therapeutic privilege; survivor-centred care is not a new inferred therapy or physical/psychological sequela. Ruling: existing independently addressable names may be reusable candidates rather than forcing every original facet into a parent container — preserves distinct topics but changes the editorial partition; the roles remain revisable proposals pending semantic/source validation and canonical binding.
+
+Root engineering limitation: graph reporter hard-coded407facets, preventing legitimate role refinements. Replaced fixed partition with equality against current role totals. Existing full role verifier still independently checks exact name/component membership across all12batches. Added two real CLI regression tests: a valid changed partition and inconsistent declared role totals. Watched both fail before the one-line repair; both PASS after. This is an offline projection utility change, with no app/domain/UI behavior change.
+
+Current inventory:1195names,797reusable-name candidates,398scope facets,1218component occurrences. All392existing facet-home link objects unchanged. Remaining six facet gaps in five groups: marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy, physical torture sequelae, psychological torture sequelae and scleral referral. Nine fewer gaps are role corrections, not newly linked/accepted identities or deleted source material. Current graph/queue/routing updated; prior snapshots labelled historical. New audit docs/evidence/2026-11-08-nmc-standalone-role-refinement.json preserves all nine corrections. All canonical IDs null and acceptance/clinical/publication flags false.
+
+Verification this run: both new CLI regressions RED→GREEN; npm test PASS1587/1587, zero failed/cancelled; npm run check PASS (13services/253coupling locations). Full role, graph --verify, gap queue, scope disposition and consolidation checks PASS. Independent exact-baseline comparison proves only the nine declared role/kind/home fields changed, all1195names/1218occurrences and task/source/mode bindings retained, all392prior link objects equal and all six residual gap objects unchanged. Staged whitespace PASS and local staged tree equals GitHub-created tree. No live registry query/write, teaching/new objective content, canonical allocation/acceptance, main merge or production publication. Persist via connected GitHub API with expected-head lease; verify final head and every changed-file readback before saved claim.
+
+Next exact action: examine six residual scopes at source-component level; preserve shared/multiple-target marrow aspiration/biopsy and episcleritis/scleritis distinctions. Keep female reproductive/neurodegeneration pharmacotherapy family scope and physical/psychological sequelae distinct without invented diagnoses or a forced single home. Refresh registry metadata before canonical reuse/allocation. Continue other2007parent labels,21source exceptions and learner integration separately; Foundation incomplete. No external writer jobs started; ownership released after verified checkpoint.
+
+## Twenty context-facet home proposals with exact source preservation — 8 November 2026 IST
+
+Checked at 2026-11-08T17:06:12+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 7a90d053572bca205179c63a2923c93a7a18219d; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation commit: 779761e502a79fca3666fd9cda7e18d025d843b4. User requested Next; names-only instruction remains active.
+
+Inspected all31remaining context facets and their exact draft-task metadata. Added20specific authoring-home links: four population health-indicator facets, confidentiality, four local-custom facets, package information/promotion appraisal, three medicine-selection/benefit–harm/preference facets, two termination/evacuation assistance facets, obstetric/gynaecological history and three surgical communication/empathy/privacy facets. Reused existing Patient confidentiality, Medical termination and Abortion name candidates; extended existing Pregnancy, Lactation and Clinical communication home proposals; added11topic-home labels. Original context labels remain in a source-linked before/after audit. Source-specific facets and modes preserve population, relationship and supervised-assistance boundaries; observation/assistance is not inferred independent competence. Privacy is not equated with confidentiality, and generic feeding customs are not narrowed to breastfeeding/complementary feeding. Ruling: propose topic homes only where existing task/facet metadata supports organization — all names remain editorial and null-bound, and a later semantic review may revise a proposal before any canonical binding.
+
+Graph now392proposed links,15unresolved facet homes in7groups:11context facets plus four family/multiple-target cases. All372earlier graph link objects, all407facets and1218component occurrences preserved. Exactly20role home labels changed; no other role fields or source bindings changed. Context gaps retain practitioner rights/duties, privileged communication, four prescribing circumstances and four torture/documentation/care facets. The four family cases (marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy and scleral referral) are unchanged. Before/after audit: docs/evidence/2026-11-08-nmc-context-facet-home-refinement.json. Updated current graph/queue/routing and labelled earlier snapshots historical in docs/NMC_HOME_SCOPE_ROUTING.md.
+
+Validation this run: graph --verify, full role checker, gap queue and scope-disposition checker PASS; consolidation reporter PASS. Exact baseline comparison audited all31records, source-task metadata/modes, only20declared label changes, all372prior graph links and all four unchanged family gaps. npm run check PASS (13services/253coupling locations); staged diff whitespace PASS. Local staged tree matches GitHub-created tree exactly. No code/validator changes, so full npm test and mutation tests were not repeated; earlier code checkpoint passed1585tests. No teaching content/new objective prose, live registry query/write, canonical allocation/acceptance, domain/UI, main merge or production publication. Draft-task metadata are not official-source/clinical revalidation. Persist via connected GitHub API using expected-head lease; remote final head and exact changed-file readbacks required before saved report.
+
+Next exact action: resolve11retained context facets without equating professional rights with duties, privileged communication with confidentiality or survivor-centred care with physical injury. Then resolve four recorded family/multiple-target cases using narrower source scope. Refresh registry metadata before canonical reuse/allocation. Other2007parent labels,21source exceptions and learner integration remain open; Foundation incomplete. No external writer jobs started; ownership released after verified checkpoint.
+
+## Fifteen source-bound facet-home refinements — 8 November 2026 IST
+
+Checked at 2026-11-08T17:01:00+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at 55fd2cb63f8b0a0e726bafd32b4a74964803d691; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged, previous ownership released. Implementation commit: b2903492429939811dacb0f0735ac09cf3d8e55b. Current user requested Next; names-only instruction remains active.
+
+Examined all19non-context facets against existing candidate names and source-task metadata. Added15specific authoring-home links: four poisoning/bite/sting scopes, three GI/liver/growth/deficiency scopes, five wound-specific scopes and three cross-cutting injury/death scopes. Twelve home labels changed; three wound facets retain their label and now have a proposed Wounds home. Added11home labels and reused existing Growth candidate. Source-linked before/after audit retains all19facets, exact original/current home labels, components, references and task metadata. Four family/multiple-target gaps remain explicit: marrow interpretation, female reproductive pharmacotherapy, neurodegeneration pharmacotherapy and scleral referral. Marrow aspiration/biopsy and episcleritis/scleritis remain separate alternatives; no guessed single-target assignment or drug-induced parkinsonism equivalence. Ruling: generic authoring homes may organize source facets without being accepted canonical identities — improves editorial organization while preserving null identities and false scope/acceptance flags; if scope later changes, these proposals must be revised before canonical binding.
+
+Current graph:372proposed links,35unresolved facet homes in14groups (31context-only plus four family-scope cases). All357earlier link objects unchanged; all407facets/1218component occurrences preserved. Refreshed graph, gap queue and routing projection together. Historical17group snapshot is labelled historical in docs/NMC_HOME_SCOPE_ROUTING.md. New audit: docs/evidence/2026-11-08-nmc-facet-home-refinement.json. No educational content/objective prose, live registry query/write, canonical allocation/acceptance, domain/UI change, merge or production publication. Existing draft task metadata are not official-source or clinical revalidation.
+
+Verification this run: graph --verify, full name-role checker, gap-queue checker and scope-disposition checker PASS; consolidation reporter PASS. Exact baseline comparison audited all19records and proved every role field except the12declared home-label changes, all component/source bindings and all357earlier graph links unchanged. npm run check PASS (13services/253coupling locations); staged whitespace check PASS. Full npm test was not repeated for metadata-only changes; prior checkpoint passed1585tests. No new validator/code changes or repeated mutation tests. Local staged tree exactly matches GitHub-created tree. Persist via connected GitHub API with expected-head lease; verify final head and all changed files before saved claim.
+
+Next exact action: inspect/map31context facets individually using existing names, retaining care/professional organizers; then resolve the four family/multiple-target gaps against narrower source scope. Refresh live registry evidence before canonical reuse/allocation. Other2007parent labels,21source exceptions and learner integration remain open; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Source-bound organizer routing for all 17 remaining groups — 8 November 2026 IST
+
+Checked at 2026-11-08T16:43:12+05:30. Owner /root resumed PR #415 / feat/nmc-foundation-review-queue-20261104 at d56c513c8edd5d31740cf68389d88dd407440de3; remote main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5 and task head verified unchanged. Previous ownership released. Implementation checkpoint: 1d585b6581ff63dc14dedad1d1ecac0c671115e4. Current user confirmed the screenshot checkpoint and requested continuation; names-only instruction remains active.
+
+Inspected existing draft-task metadata for every source appearance behind the 17 groups/50 facets. Added a separate editorial-scope disposition packet and docs/NMC_HOME_SCOPE_ROUTING.md: 31 context-only facets, 10 specific-home-scope-pending, four family-scope-pending and five cross-cutting-scope-pending. Care/professional contexts remain organizers rather than inferred canonical concepts. Wound causes of death and injury determinants remain cross-cutting; poor growth and vitamin-deficiency signs are not forced under a liver-disease identity. Procedure/disease/function families retain narrower-scope uncertainty. Source task paths, codes, pages, coordinates, body hashes and modes are preserved, with no copied task prose or newly authored teaching/objectives. These are routing proposals, not semantic acceptance or official-source revalidation. Ruling: use a separate disposition layer instead of changing the existing graph/queue — organizer routing does not settle canonical homes; the cost is that all50 canonical-home gaps remain explicit.
+
+New offline verifier PASS; original gap queue, graph and full name-role verifiers PASS. Five actual mutations rejected: false mapping acceptance, omitted group with adjusted total, changed source hash, context treated as canonical concept and lost component source. Original bytes restored and PASS again. npm test PASS:1585/1585, zero failed/cancelled. npm run check PASS (13services/253coupling locations). Diff whitespace check PASS. Focused author review checked all17group types and the19non-context facet routes against the existing task scopes; no independent semantic/clinical review claimed. No domain/UI, database write, live registry query, clinical content, identity allocation, main merge or production publication.
+
+Graph unchanged:357proposed links,50unresolved facet homes; all407facets and1218component occurrences retained. Foundation incomplete. Next exact action: inspect the19non-context facets against existing candidate names and exact source scope before proposing individual home targets; then map31context facets individually without converting navigation contexts into one assessed concept. Refresh registry evidence before canonical allocation/reuse. Other2007parent labels,21exceptions and learner integration remain open. No external writer jobs started; ownership released after checkpoint. CLI push lacked terminal credentials; using connected GitHub API checkpoint with expected-head lease. Remote readback required before saved report.
+
+## Larger clear-home batch and exact unresolved scope queue — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 1ee866260f5271d0012726ee616844e10d7518fc; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current role/home/graph/label-resolution packets; previous ownership released and head unchanged. Added 52 already-proposed clear home LABELS and 63 source-preserving facet links, retaining names-only editorial-home identifiers, null canonical/objective bindings and false acceptance/scope flags. Home inventory now174proposals organizing310facets. Graph totals357authoring links across196distinct homes;50facets remain unresolved in17groups. No identity acceptance, canonical merge or claim of semantic/clinical validation.
+
+Added an exact source-linked unresolved home-scope queue for all17groups/50facets, with reason categories for mixed scope, care/professional context, procedure families, broad disease/function families and cross-cutting outcomes under a specific home. Wounds/cause-of-death and other broad groups are not forced into new disease homes. These queue reasons are editorial triage proposals, not medical content or completed source-scope adjudication.
+
+Actual graph verifier and full selected-role verifier PASS; new gap-queue verifier PASS. False acceptance, omitted gap with adjusted totals and altered source-reference mutations rejected; original bytes restored and queue PASS again. All407facets and1,218component occurrences retained. No live registry query/write, teaching/questions/cases/assessment content, domain/UI or learner change; full npm test/check not run for offline metadata utility. Six focused files checkpointed with expected-head lease; final head/exact remote readbacks checked before saved report. No merge/publication.
+
+Next: resolve the17typed scope decisions rather than blanket-creating homes; separate context organizers and cross-cutting outcomes from candidate canonical concept identities. Prioritize actual registry reuse and source-specific objective links. Other2,007parent labels outside punctuation heuristic need scope assessment;21source exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Larger names-only home-resolution batch — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at d73fc92ef80fd172b789fdb2939e17934fdd5848; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. User requested more safe work in one run. Current instructions/handoff/status and role/home/graph/reporter read; prior ownership released, head unchanged. Added 92 source-bound authoring-home proposals in one batch (80 existing clear home-label groups plus 12 normalized anatomical targets) and 14 explicit label resolutions. Examples: colonic -> Colon, corneal -> Cornea, thyroid -> existing Thyroid gland candidate, parathyroid -> existing Parathyroid glands candidate. Salivary gland/plural contexts share one proposed Salivary glands home. Raw labels and source references retained; resolutions are editorial proposals, not accepted synonyms or canonical merges. Mixed/broad groups remain unresolved rather than being silently forced into disease identities.
+
+Existing name-role set unchanged at 1,195 names/1,218 source occurrences. Home inventory now 122 proposals with 247 source-bound facets. Graph: 45 exact links to existing name candidates, two label-resolved links to existing name candidates and 247 links to home proposals, total294 across144distinct homes;113facets unresolved. That is115additional links from the previous179. All canonical/objective IDs remain null, acceptance/clinical/publication flags false and coverage unknown. Names-only: no new teaching, questions, cases, assessment content or registry writes.
+
+Reporter now validates explicit label-resolution sources, unique targets/IDs, no alias chaining/cycles, existing-name reuse and exact source-role projection. Actual graph --verify PASS; wrong target, chained resolution, wrong source and forged acceptance mutations rejected; original bytes restored and PASS again. Full selected-role verifier and source consolidation reporter PASS. No domain/UI/learner change; full npm test/check not run for offline metadata utility. Six focused files checkpointed with expected-head lease and final remote head/exact readback verification. No merge/publication.
+
+Next: inspect the113remaining facet-home gaps, especially mixed category homes and source scope; do not blanket-resolve them to reach zero. Actual registry identity/objective reuse remains separate from authoring names. Other2,007parent labels outside punctuation heuristic need scope assessment;21exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Ten additional names-only authoring homes — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at fee7d436a3ccba29ba188bb659194b8f9cfc36ef; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and role/home/graph packets read; prior ownership released and head unchanged. Added ten existing proposed home LABELS: Blood vessels, Tuberculosis, Cerebellum, Childhood obesity, Cerebral cortex, Clinical communication, Lower limb, Neuron, Pharynx and Skin. All matching facet component/source-reference arrays retained. Names remain editorial-home proposals with null canonical identities/objectives, false acceptance/scope flags and unknown coverage; no inferred plural/synonym merges or new canonical allocation.
+
+Thirty more facet links added. Thirty home proposals now organize 134 facets; graph retains 45 earlier candidate-name links, totaling 179 authoring links to 51 distinct homes, with 228 facets unresolved. Actual graph --verify PASS and full selected-role verifier PASS; 407-facet denominator and 1,218 source-bound occurrences preserved. No validator changes or repeated mutation tests for metadata-only extension. No live registry query/write, teaching content, clinical validation, domain/UI or learner change; full npm test/check not run. Four focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved claim.
+
+Next: continue bounded source-preserving home resolution while prioritizing actual registry reuse and exact source/objective scope over counts. Authoring links are not accepted canonical assignments. Other 2,007 parent labels outside punctuation heuristic need scope assessment; canonical/objective mapping, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Further ten source-bound authoring-home proposals — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at e79aaf71cc1614ad7107d1257920d859b691460c; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status, roles, home proposals and graph read; prior ownership released, head unchanged. Added ten already-proposed home LABELS: Blood transfusion, Nervous system, Chronic kidney disease, Nutrition, Newborn, Hand, Hernia, Hypertension, Upper limb and General anaesthesia. Each retains all matching source-bound facet contexts and uses only editorial-home proposal IDs, null canonical bindings and false scope/acceptance flags. No role reclassification, alias inference, new identity allocation or claim of semantic/clinical validation.
+
+Added 41 facet-home proposal links. Twenty home proposals now organize 104 facets; combined with the 45 links to existing component-name candidates, graph totals are 149 proposed links to 41 distinct homes and 258 unresolved facet homes. Actual graph --verify PASS and full selected-role verifier PASS. Original 407-facet denominator and all 1,218 component source bindings retained. No validator change or repeated mutation tests for metadata-only extension. No registry query/write, medical teaching content, domain/UI or learner change; full npm test/check not run. Four focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved claim.
+
+Next: continue missing home resolution with bounded source-bound groups while preserving uncertainty; prioritize actual registry reuse and source-specific objective relationships, not label counts. Other 2,007 parent labels outside punctuation heuristic need scope assessment; canonical/objective mapping, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Ten missing authoring-home proposals with source-bound facet links — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 78163143fefecbda2487e77decb675169d543000; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status, roles and facet graph read; prior writer released ownership, head unchanged. Added ten existing proposed home LABELS as names-only authoring-home proposals: Cancer, HIV infection, Lung, Larynx, Breast, Bone, Placenta, Skeletal muscle, Anaemia and Axilla. Each is grounded in all matching existing facet component/source-reference bindings; no new canonical ID allocated. Proposal IDs use editorial-home namespace. Scope/acceptance/clinical flags remain false and coverage null. These authoring homes are not verified registry identities, validated medical ontology or approved mappings.
+
+Reporter preserves 45 links to existing component-name candidates and adds 63 explicit links to the ten home proposals: 108 total authoring links to 31 distinct homes, 299 facet homes still unresolved. Full 407-facet denominator preserved. Actual --verify PASS; invented canonical identity, wrong source binding and duplicate home mutations rejected; original bytes restored and PASS again. Full selected role checker PASS. No live registry query this batch, no identity acceptance, medical content, database/domain/UI or learner changes. Full npm test/check not run for offline metadata utility. Five focused files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: resolve further missing home-name groups and source-specific objective scope in bounded evidence-preserving batches. Registry lookup remains required before canonical identity allocation/reuse; no additional accepted relationships have been established by these authoring links. Other 2,007 parent labels outside punctuation heuristic need scope assessment, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Names-only facet-home candidate graph — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 0507bcc2a5d025c9adcc1e86f1807f31cdca7388; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and role packet read; prior ownership released and branch head unchanged. Added deterministic source-preserving authoring-name graph: 45 of 407 facet home labels exactly match 21 already authored reusable-name candidates. All 362 other facet homes are explicit unresolved records. Links carry original component/source-reference IDs and point to existing candidate occurrences, never a newly invented canonical ID. Existing role classifications and registry-reuse proposals unchanged. Same editorial label is a candidate relationship, not semantic equivalence or accepted curriculum coverage.
+
+New report-facet-home-links.js regenerates the full projection and --verify compares all exact links/unresolved records. Actual valid execution PASS; wrong home target, forged mapping acceptance and omitted unresolved facet with adjusted totals mutations rejected, original bytes restored and PASS again. Full selected name-role checker PASS. One initial orchestration attempt to parse verbose report output exceeded its return budget; recovered by writing the report locally and reading compact JSON with sufficient budget, then full projection verification passed. No source data loss or remote write occurred from that failed read. No database query/write this batch; previous registry snapshot remains dated evidence. No teaching content, identity merge/acceptance, domain/UI or learner change. Full npm test/check not run for offline metadata utility. Four focused files checkpointed with expected-head lease and final head/exact readback verification.
+
+Next: resolve missing home-name candidates and source-specific scope in bounded groups; prioritize checked registry reuse and concrete exact objective links over further label proliferation. The 45 authoring-name links are not canonical assignments. Other 2,007 parent labels outside punctuation heuristic need scope assessment; eight prior mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Current registry evidence and bounded objective-reuse proposals — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at a90bc8dbad01ec798aa75a00b8220c924fd04e6a; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior ownership released and head unchanged. Read-only production metadata access is available through the connected database tool. Inspected schema first and queried only concept labels/aliases/IDs, draft revisions/digests and catalogue version; no Auth, patient, learner or medical content prose read. Catalogue version448 has one concept; 12 separate acceptance records were observed. Three relevant Respiratory identities remain revision-2 draft proposals. Registry snapshot includes those 16 identity metadata records, excludes engineering test drafts and preserves catalogue/acceptance/draft distinctions. No database writes.
+
+Compared all 1,195 classified names and proposed home labels with snapshot labels/aliases: zero exact matches; this does not prove semantic absence or authorize new identities. Added two PH5.1 partial-scope reuse proposals: Asthma pharmacology -> existing Asthma maintenance draft objective and COPD pharmacology -> existing COPD exacerbation draft objective, reusing exact existing IDs/versions and source references. These narrower objectives do not cover the broader pharmacology facets; missing scope names remain explicit. Rhinitis pharmacology remains unbound. All canonical bindings null; acceptance/publication/clinical flags false. No new objective wording, teaching, questions, cases or assessment content authored.
+
+New offline structural verifier PASS; false identity acceptance, cross-objective concept mismatch and false scope completion mutations each rejected; originals restored and PASS again. Full selected name-role verifier PASS. Structural checks are not live registry freshness or clinical validation; dated registry evidence must be reread before later writes. No domain/UI change; full npm test/check not run for metadata-only utility. Four focused files checkpointed with expected-head lease; final remote head/exact readbacks verified before saved claim.
+
+Next: examine remaining candidate home/identity relationships using actual metadata and source-specific scope; preserve broad disease homes versus narrow existing draft decisions. Existing accepted spinal identities already have proposed objective/source bindings in foundation pack: resume them instead of recreating those completed drafts. Check unresolved source/topic scope beyond the selected 420 parents and reconcile 21 exceptions. Actual canonical/objective acceptance and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Selected-set names-only role classification complete — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at f15c650bb15bd5a12be9de0c445ac49e6620cdbb; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and role/component packets; prior ownership released, head unchanged. Added final 140 unclassified normalized names from batch 12 and reused four existing roles with exact occurrence membership checks. All 1,195 normalized names in these 12 component batches now have editorial roles: 788 reusable-name candidates and 407 scope facets, covering all 1,218 source-linked occurrences. Proposed homes/kinds remain editorial organization, not accepted canonical identities, validated ontology or clinical guidance. No new medical teaching content or canonical merge.
+
+Extended verify-name-role-proposals.js to compare exact component-ID and normalized-name sets against all 12 batch files. Actual local role checker PASS; omission with deliberately adjusted summary totals still rejected by the new completeness assertion; original bytes restored and PASS again. Consolidation reporter PASS with 1,218 explicit source bindings preserved. Completion applies only to this selected role-classification set, not canonical mapping, all parent scope or NMC Foundation. No domain/UI/learner change; full npm test/check not run for this offline metadata utility. Four focused files checkpointed with expected-head lease; final head/exact remote readbacks checked before saved report.
+
+Next: move beyond role-count expansion. Check proposed home reuse against actual canonical registry evidence and produce bounded source-specific concept/objective mapping proposals. Other 2,007 parent labels outside the punctuation heuristic still need scope assessment, and the selected 420 parents are not certified scope-complete. Eight earlier mapping proposals, 21 source exceptions and learner integration remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 11 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 81fa08ab7a3bb72ff70d37d539ff7f15fddbfd17; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current role/component packets; prior ownership released, head unchanged. Added 143 unclassified names; reused three existing classifications with exact occurrence checks. All 146 batch-11 components now have roles. Totals: 1,055 names, 717 reusable-name candidates, 338 scope facets, 1,078 exact component occurrences. Indications, interpretation, disease-specific risk/prevention, clinical communication and professional/ethical scope remain proposed home-label facets. Shared GM24 parent labels retain exact component-specific references rather than assigning all nutrition names to every source row. Roles/home labels remain editorial, not validated ontology, current guidance or accepted registry identities.
+
+Actual local role verifier PASS for exact names/IDs/component-reference arrays; source consolidation reporter PASS preserving all 1,218 explicit bindings. No validator change or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, identity merge, clinical validation, teaching content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: classify component batch 12, preserving existing roles and every exact occurrence. 140 normalized component names remain outside the 1,055-name role packet. Other 2,007 parent labels outside punctuation heuristic still need scope assessment. Canonical/objective reuse requires actual registry evidence; eight earlier mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 10 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 0191e55f9e5aa385fbdeb1a37ad48ead3a71f110; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and role/component packets read; prior ownership released and head unchanged. Added 117 previously unclassified names; reused 19 existing classifications with exact occurrence checks. All 136 batch-10 components now have roles. Totals: 912 names, 657 reusable-name candidates, 255 scope facets, 935 exact component occurrences. Disease-specific assessment/prevention/management, anatomy surface projections, nutrition and clinical-context biochemical changes remain proposed home-label facets. Processes, measurements, developmental names and public-health/legal concepts retain proposed kinds. Roles/home labels are editorial organization, not validated ontology, current medical/legal guidance or registry acceptance.
+
+Actual local role verifier PASS for exact names/IDs/reference arrays; source consolidation reporter PASS preserving all 1,218 explicit bindings. No validator changes or repeated mutation tests for data-only extension. No canonical/objective acceptance, identity merging, clinical validation, teaching content, domain/UI or learner changes. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final head/exact remote readbacks checked before saved report.
+
+Next: continue role classification from component batch 11, preserving existing roles and exact occurrences. 283 normalized component names remain outside this 912-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 09 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at d4a22814b42b99f8ee1b9b1346db0cc2346705de; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current role/component packets; prior ownership released, head unchanged. Added 136 previously unclassified names; reused three existing classifications with exact occurrence membership checks. All 139 batch-09 components now have roles. Totals: 795 names, 591 reusable-name candidates, 204 scope facets, 818 exact occurrences. Regional/organ anatomy, HIV pathogenesis/findings, newborn classification/care, anaesthetic phases and infection diagnostics/management retain proposed home-label facet roles. Conditions, molecular classes, developmental anomalies, procedures and physiological processes remain proposed candidate kinds. Home labels/roles are editorial, not validated ontology, registry acceptance or clinical guidance.
+
+Actual local role verifier PASS for names/IDs/reference arrays; source consolidation reporter PASS preserving all 1,218 explicit bindings. No validator changes or repeated mutation tests for data-only extension. No canonical/objective acceptance, identity merge, clinical validation, content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: continue role classification from component batch 10, preserving existing name roles and exact occurrences. 400 normalized component names remain outside this 795-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 08 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at f2d2bad367ec22585422357ebef650c9f0fd23d1; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and current role/component packets read; prior writer released ownership and head unchanged. Added 100 unclassified normalized names; reused two existing classifications with exact occurrence checks. All 102 batch-08 components now have roles. Totals: 659 names, 509 reusable-name candidates, 150 scope facets, 682 exact component occurrences. Rehabilitation, disease-specific treatment/diagnostics, composition, donation ethics/law and regional neurovascular anatomy remain proposed home-label facets. Processes, clinical conditions, structures, devices, laboratory measurements and procedures retain proposed kinds. Editorial kinds/home labels are not validated ontology, accepted registry identity or current medical/legal guidance.
+
+Actual local role verifier PASS for exact names/IDs/source-reference arrays; consolidation reporter PASS preserving all 1,218 explicit bindings. No validator changes or repeated mutation tests for data-only extension. No canonical/objective acceptance, identity merging, clinical validation, content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: continue role classification from component batch 09, retaining existing name roles and all occurrences. 536 normalized component names remain outside the 659-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 07 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at d628b8bf6fc227c67367a625034a722e1cdbdcae; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and role/component packets read; prior ownership released, head unchanged. Added 94 previously unclassified normalized names and reused two existing classifications with exact occurrence membership checks. All 96 batch-07 components now have roles. Totals: 559 name entries, 429 reusable-name candidates, 130 scope facets, 582 exact component occurrences. Organ histology, HIV testing/staging, pharmacotherapy, intensive-care admission/discharge criteria and disease-specific imaging remain proposed home-label facets. Structures, procedures, processes and legal/ethical categories retain proposed kinds. Editorial kinds/homes are not validated ontology, current legal/medical guidance, registry acceptance or clinical validation.
+
+Actual local role verifier PASS for exact names/IDs/source-reference arrays; source consolidation reporter PASS preserving all 1,218 explicit bindings. No validator change or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, identity merge, teaching content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: continue role classification from component batch 08, preserving existing name roles and all source occurrences. 636 normalized component names remain outside the 559-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 06 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 8648ef6108398e088f483aa19f92126c4a1a6bc7; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current role/component packets; prior ownership released, head unchanged. Added 91 previously unclassified names and reused seven existing classifications with exact occurrence checks. All 98 batch-06 components now have roles. Totals: 465 names, 363 reusable-name candidates, 102 scope facets, 488 exact component occurrences. Regional nerves/vessels, digestive/adrenal histology, pharmacotherapy and regulatory scope remain proposed home-label facets. Conditions, structures, hormones/drug classes, processes and investigations retain distinct proposed kinds. Editorial roles/home labels do not establish canonical registry acceptance or clinical ontology validity.
+
+Actual local role verifier PASS with exact names/IDs/source-reference arrays; consolidation reporter PASS with all 1,218 explicit bindings preserved. No validator change or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, merging, clinical validation, teaching content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final head/exact remote readbacks checked before saved report.
+
+Next: continue role classification from component batch 07, preserving exact occurrences and existing classifications. 730 normalized component names remain outside the 465-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 05 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 4beaa627e8fa8f4e8e67878e397a8da628f3c922; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and current role/component packets read; prior ownership released and head unchanged. Added 73 previously unclassified names; reused four classifications with exact occurrence membership checks. All 77 batch-05 components now have roles. Totals: 374 name entries, 299 reusable-name candidates, 75 scope facets, 397 exact component occurrences. Histology names remain organ home LABEL facets rather than duplicate organ identities. Management, pharmacotherapy, innervation and diagnostic names are facets; structures, processes, clinical presentations and legal frameworks retain proposed kinds. All roles/homes are editorial proposals, not registry acceptance or clinically validated ontology.
+
+Actual local role verifier PASS for exact names/IDs/reference arrays; consolidation reporter PASS, all 1,218 explicit bindings preserved. No validator change or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, identity merging, clinical validation, teaching content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final head/exact remote readbacks checked before saved report.
+
+Next: continue role classification from component batch 06, preserving all exact occurrences and skipping existing name entries. 821 normalized component names remain outside this 374-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 04 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 41c6c13d74c8dc89d5d4e27f35513600ea3f8df0; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current role/component packets; prior writer released ownership, head unchanged. Added 63 previously unclassified names and reused six existing classifications with exact source occurrence checks. All 69 batch-04 components now have roles. Packet totals: 301 name entries, 256 reusable-name candidates, 45 scope facets, 324 exact component occurrences. Thymus and pineal physiology are proposed facets of home LABELS; conditions, drug classes, laboratory procedures, developmental structures and anatomical structures retain distinct proposed kinds. Kinds/home labels remain editorial proposals, not accepted registry identities or a clinically validated ontology.
+
+Actual local role verifier PASS for exact IDs/names/reference arrays; source consolidation reporter PASS with all 1,218 explicit bindings preserved. No validator changes or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, identity merge, clinical validation, teaching content, domain/UI or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: continue role classification from component batch 05, preserving existing classifications and exact occurrence membership. 894 normalized component names remain outside the 301-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 03 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 62c0a1a59dff7924f3f81eb8c9e3b800ec4d93e9; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and current role/component packets read; prior writer released ownership, head unchanged. Added 69 unclassified normalized names and reused three existing component classifications with exact occurrence membership checks. All 72 batch-03 components now have roles. Totals: 238 name entries, 195 reusable-name candidates, 43 scope facets, 261 exact component occurrences. Liver/gallbladder physiology, obesity pharmacotherapy, obstetric/gynaecological imaging and orbital neurovascular anatomy are proposed facets under home LABELS. Conditions, injuries, procedures, neural structures, cell classes and measurements retain distinct proposed kinds. Editorial kinds/homes do not establish registry acceptance or clinical ontology validity.
+
+Actual local role verifier PASS for exact names/IDs/reference arrays; source consolidation reporter PASS with all 1,218 explicit bindings preserved. No validator change or repeated mutation tests for metadata-only extension. No canonical/objective acceptance, identity merge, clinical validation, content, UI/domain or learner change. Full npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: continue role classification from component batch 04, preserving all existing occurrences and skipping already classified names. 957 normalized component names remain outside this 238-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse requires registry evidence; eight earlier mappings, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 02 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at c5c7db189c95c628461d1bbf152b5255ed4a6fcf; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status, role packet and current component batch 02; prior ownership released and head unchanged. Added 68 previously unclassified names and reused eight already classified component occurrences, asserting their exact source occurrences remain present. All 76 batch-02 components now have role entries. Packet totals: 169 names, 133 reusable-name candidates and 36 scope facets, covering 192 exact occurrences. Hand neurovascular anatomy, hypothalamic/limbic circuits and human/animal research ethics are proposed facets under home LABELS; biochemical processes, structures, clinical states and procedures remain typed candidates. Proposed kinds/homes are editorial organization, not validated ontology or accepted registry identities.
+
+Actual local role verifier PASS for exact IDs/names/source-reference arrays; consolidation reporter PASS with all 1,218 explicit source bindings unchanged. No validator change or repeated mutation tests for this data-only extension. No canonical IDs/objectives accepted or merged, clinical validation, teaching content, UI/domain or learner changes. Full npm test/check not run for metadata-only extension. Three focused metadata/docs files checkpointed with expected-head lease; final remote head and exact readbacks checked before saved claim.
+
+Next: continue role classification from component batch 03, skipping already classified names while checking occurrence membership. 1,026 normalized component names remain outside the 169-name role packet; other 2,007 parent labels outside punctuation heuristic need scope assessment. Actual canonical/objective reuse needs registry evidence; eight earlier mappings, 21 source exceptions and learner integration unfinished. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Names-only role classification extended through component batch 01 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at ec15a11bd04c8a6590c37197aa2059d456b02ac6; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status and role packet/verifier/component batch 01 read; prior writer released ownership and head unchanged. Added 61 previously unclassified normalized names; two batch-01 names already had complete repeated-group entries and were reused without duplicate classification. Packet now has 101 names: 71 reusable-name candidates, 30 scope facets, covering 124 exact component occurrences. All 63 batch-01 component names are classified. Asthma/COPD/rhinitis pharmacology, infection microbiology, disease anatomy and mineral nutrition are proposed facets of home LABELS, not new accepted identities. Disease/structure/process/procedure candidates retain their names and source-specific context. Proposed homes and kinds are editorial organization only, not validated medical ontology or registry alignment.
+
+Actual local role verifier PASS with exact names/component IDs/source-reference arrays; consolidation reporter PASS, all 1,218 explicit bindings preserved. No validator change; prior mutation checks not repeated for this metadata-only extension. No canonical IDs/objectives accepted or merged, clinical validation, teaching content, UI/domain or learner changes. Full application npm test/check not run. Three focused metadata/docs files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved claim.
+
+Next: continue role classification through later component batches, skipping names already classified and retaining exact repeated-name occurrences; verify actual canonical reuse against registry evidence when available. 1,094 normalized component names remain outside this 101-name packet; 2,007 parent labels outside punctuation heuristic need scope assessment. Eight earlier mappings, 21 exceptions, actual canonical/objective bindings and learner integration remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## First names-only concept-versus-facet role proposals — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 1e1818d37aec9a0f13c2efdc3cc43a808e46dcd4; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status and current repeated-name snapshot/batch 10; prior writer released ownership, branch head unchanged. Added a bounded classification packet: 40 name entries covering 63 exact component occurrences, split into 22 reusable-name candidates and 18 scope facets. All 23 repeated-name groups included; breast lymphatic drainage is proposed as a Breast scope facet. CKD/hypertension life impact, hernia dimensions, cancer distress and anaemia dimensions remain facets under proposed home LABELS rather than creating disease identities. Proposed home labels are not verified registry identities; no canonical IDs/objectives accepted or merged. Clinical signs, syndromes, processes and measurements retain distinct proposed kinds.
+
+New offline verifier checks exact component IDs, names, parent/batch locations, sourceReferenceIds and draft-only authority fields. Actual local valid execution PASS; forged canonical identity, wrong source reference and invented accepted-role mutations rejected; originals restored and PASS again. This validates structural binding, not semantic/clinical correctness of editorial role proposals. Existing semanticEquivalence unverified remains explicit. No medical teaching prose, questions/cases, domain/UI or learner changes; full application npm test/check not run for this metadata utility. Four focused files checkpointed with expected-head lease; final remote head and exact readbacks checked before saved claim.
+
+Next: expand role classification in bounded source-inspected groups, check candidate home reuse against actual registry evidence and avoid turning every facet into a separate canonical concept. There are 1,155 normalized component names outside this 40-name role packet; 2,007 parent labels outside punctuation heuristic still require scope assessment. Eight prior mapping proposals, 21 exceptions, actual canonical/objective bindings and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-10 bindings; no inferred bindings in selected set — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 38c51b0db2f7ff648b9f2b069c677033b6a8af3a; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior writer released ownership and head unchanged. Checked 40 parent labels and 136 component names against 40 source-task rows from 25 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial task hash, source-body hash, source packet/reference and checked head. Scope facets remain proposals, not automatically canonical concepts. Editorial association only: not official-source revalidation, complete scope, canonical acceptance or clinical validation.
+
+Actual local reporter PASS and explicit zero-inference assertion PASS: all 1,218 component occurrences now have explicit sourceReferenceIds, zero inferred parent bindings in this selected 12-batch set. 420 parent names, 425 distinct references and 1,195 normalized component names unchanged. This does not prove Foundation coverage or official/clinical alignment. Batches 01–10 now carry editorial hash evidence; 11–12 have explicit source bindings from earlier authoring, with their actual evidence status preserved. Source subject/code/page checked during inspection; existing reporter validates attached metadata/task hashes. No validator changes or repeated mutation tests. Four focused metadata/docs files and refreshed repeated-name snapshot. No new names, teaching content, domain/UI change or learner publication; full application suite not run for metadata-only changes. Expected-head lease used; final head/exact readbacks checked before saved report.
+
+Next: classify scope facets versus canonical candidates and resolve reuse rather than generating more arbitrary names. Inspect other 2,007 parent labels outside punctuation heuristic for hidden compound scope. Actual canonical/objective mapping, eight earlier mapping proposals, 21 exceptions and learner integration remain unfinished. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-09 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 4b02e3649029072daacaa3839151cecba94c762a; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read, previous writer released ownership, head unchanged. Checked 40 parent labels and 139 component names against 40 source-task rows from 27 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial-task hash, source-body hash, source packet/reference and checked head. Distinct Anatomy/Surgery breast lymphatic drainage appearances remain separate source-scoped proposals, without canonical merging. Editorial association only, not new official-source verification, complete scope, canonical acceptance or clinical validation.
+
+Actual local reporter PASS: 1,082 explicit bindings, 136 inferred; 1,218 component occurrences/1,195 normalized names unchanged. Source subject/code/page checked on inspection; reporter validates metadata/task hashes. No validator changes or repeated mutation tests. Four focused metadata/docs files; repeated-name snapshot refreshed from actual output. No new names, teaching content, domain/UI change or learner publication; full application suite not run for metadata-only changes. Expected-head lease used; final head/exact remote readbacks checked before saved claim.
+
+Next: inspect batch 10 before replacing the final 136 inferred bindings in this 12-batch set. Then classify scope facets versus canonical candidates and inspect the other 2,007 parent names outside punctuation heuristic. Canonical/objective reuse, eight earlier mappings and 21 exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-08 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 8b94b38f720a959ea31f2859b09becf1d0f044f7; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior writer released ownership and branch head unchanged. Checked 40 parent labels and 102 component names against 40 source-task rows from 25 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial task hash, source-body hash, source packet/reference and checked head. Existing labels/tasks support these editorial associations; no fresh official-source verification, complete scope, canonical acceptance or clinical validation claimed.
+
+Actual local reporter PASS: 943 explicit bindings, 275 inferred; 1,218 component occurrences/1,195 normalized names unchanged. Source subject/code/page checked on inspection, reporter validates metadata/task hashes. No validator changes or repeated mutation tests. Four focused metadata/docs files; repeated-name snapshot refreshed from actual output. No new names, teaching content, domain/UI change or learner publication; full application suite not run for metadata-only changes. Expected-head lease used; final head/exact remote readbacks checked before saved report.
+
+Next: inspect batches 09–10 before replacing remaining inferred bindings; classify scope facets versus canonical candidates. Other 2,007 parent names outside punctuation heuristic need scope assessment. Actual canonical/objective reuse, eight earlier mappings and 21 source exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-07 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 0eb76d612ea841ab34d790f0c176e62bcce84764; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior ownership released and head unchanged. Checked 35 parent labels and 96 component names against 35 source-task rows from 25 current-head packets. Added explicit sourceReferenceIds and sourceScopeEvidence pinning editorial task hash, source-body hash, packet/reference and checked head. Includes the 16 named head/neck histology specimens and distinct task scopes for medicine, anatomy, public health and legal/ethical topics. Editorial association only: no fresh official-source verification, complete scope, canonical acceptance or clinical validation.
+
+Actual local reporter PASS: 841 explicit bindings, 377 inferred; 1,218 component occurrences/1,195 normalized names unchanged. Source subject/code/page checked during inspection; reporter validates metadata/task hashes. No validator changes or repeated mutation tests. Four focused metadata/docs files and refreshed repeated-name snapshot from actual output. No new names, teaching content, domain/UI change or learner publication; full application suite not run for metadata-only change. Expected-head lease used; final head/exact remote readbacks checked before saved claim.
+
+Next: inspect batches 08–10 before replacing inferred bindings; distinguish scope facets from canonical name candidates. Other 2,007 parent names outside punctuation heuristic need scope assessment. Actual canonical/objective reuse, eight earlier mappings and 21 exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-06 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at a9959cb0ab9d2e3da34f2645a9f7b2f799bd4e91; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior writer released ownership and branch head unchanged. Checked 36 parent labels, 98 component names and 36 source-task rows from 27 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial task hash, source-body hash, source packet/reference and checked head. Preserved distinct Medicine/Microbiology diarrhoea/dysentery appearances and existing disinfection/sterilization reuse candidates. These are editorial source associations only, not official-source revalidation, complete component scope, canonical acceptance or clinical validation.
+
+Actual local reporter PASS: 745 explicit bindings, 473 inferred; 1,218 occurrences/1,195 normalized names unchanged. Source subject/code/page checked during inspection; reporter validates source/task hashes. No validator change or repeated mutation tests. Repeated-name snapshot refreshed from actual output. Four focused metadata/docs files; no new names, teaching content, domain/UI change or learner publication. Full application suite not run for metadata-only change. Expected-head lease used; final head and exact remote readbacks checked before saved report.
+
+Next: inspect batches 07–10 before replacing inferred bindings; distinguish scope facets from canonical candidates. Other 2,007 parent names outside punctuation heuristic need scope assessment. Actual canonical/objective reuse, eight earlier mappings and 21 source exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-05 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at f17444fedfdac7d7b75f59a6313d25829a35b05a; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior writer released ownership and branch head unchanged. Inspected 30 parent labels and 77 component names against 30 source-task rows from 19 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial-task hash, source-body hash, packet/reference and checked head. Preserved existing Erb/Klumpke exact-name reuse candidates without merging identities. Editorial association only: not fresh official-source verification, complete scope, canonical acceptance or clinical validation.
+
+Actual local reporter PASS: 647 explicit bindings, 571 inferred; 1,218 component occurrences/1,195 normalized names unchanged. Source subject/code/page checked during inspection and source/hash evidence validated by existing reporter. No validator change or repeated mutation tests. Four focused data/docs files, repeated-name snapshot refreshed from actual output. No new names, teaching content, domain/UI changes or learner publication; full application suite not run for metadata-only changes. Expected-head lease used; final remote head and exact readbacks checked before saved claim.
+
+Next: inspect batches 06–10 before replacing remaining inferred bindings; distinguish scope facets from canonical candidates. Other 2,007 parent names outside punctuation heuristic need scope assessment. Actual canonical/objective reuse, eight earlier mappings and 21 source exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-04 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at cc76ddd1075e8ae189e05175116281b2bd3c60d1; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior ownership released and branch head unchanged. Checked 30 parent labels and 69 component names against 30 source-task rows from 26 current-head packets. Added explicit sourceReferenceIds and evidence pinning editorial task hash, source-body hash, packet/reference and checked head. Post-dated pregnancy remains linked to the existing OG13.4 task that explicitly names it, despite omission from the shorter parent label. Editorial scope association only: not fresh official-source verification, clinical validation, complete scope or accepted canonical/objective binding.
+
+Actual local reporter PASS: 570 explicit bindings and 648 inferred; 1,218 component occurrences/1,195 normalized names unchanged. Source subject/code/page checked on inspection; existing reporter validates evidence metadata and task hashes. No validator change or repeated mutation tests. Four focused data/docs files, repeated-name snapshot refreshed from actual output. No new names, teaching content, domain/UI changes or learner publication; full application suite not run for metadata-only change. Expected-head lease used, final remote head/exact readbacks checked before saved claim.
+
+Next: inspect batches 05–10 source scope before replacing inferred bindings; distinguish facets from canonical candidate names. Other 2,007 parent names outside punctuation heuristic still need scope assessment. Canonical/objective reuse, eight earlier mappings and 21 source exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-03 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at aebb7fc207d0cc408bab88878fa34e4795104715; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior writer released ownership and current head unchanged. Checked all 30 batch-03 parent labels, 72 component names and 30 source-task rows from 22 current-head packets. Added explicit sourceReferenceIds and sourceScopeEvidence with exact editorial-task hash, source-body hash, packet/reference and checked head. This records editorial task/label association, not complete component scope, official-source revalidation, canonical acceptance or clinical validation. No new names or content added.
+
+Actual local report-name-consolidation execution PASS against source files: 501 explicit bindings, 717 inferred; 1,218 component occurrences and 1,195 normalized names unchanged. Source subject/code/page checked during inspection and existing reporter validates source metadata and task hashes. No validator change; mutation tests were not repeated for this data-only batch. No domain/UI/learner change; full application suite not run. Refreshed repeated-name evidence snapshot from actual output. Four focused files checkpointed with expected-head lease, then final remote head/exact readbacks verified before saved report.
+
+Next: inspect batches 04–10 in bounded scope before replacing inferred bindings; maintain hash evidence and distinguish scope facets from canonical candidate names. Other 2,007 parent names outside punctuation heuristic still need scope assessment. Actual canonical/objective reuse, eight prior mappings and 21 exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Batch-02 checked editorial source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 0466f3389b50eeca423db0a4cfe5a2774c84a159; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current AGENTS/handoff/status read, prior writer released ownership and branch head unchanged. Inspected 30 parent labels and 76 component names against 31 current source-task rows from 23 packets. Added explicit sourceReferenceIds and evidence hashes for every component. Gallstones/cholecystitis retains separate PA24.8 Pathology and GM5.7 Medicine row evidence; both existing tasks include stone/inflammation scope. This is editorial task/label association, not official-source or clinical revalidation, identity acceptance or objective approval.
+
+Reporter now checks per-reference evidence for a multi-source parent and rejects inferred multi-reference scope entirely. Actual local execution PASS: 429 explicit component bindings, 789 inferred; 1,218 component occurrences and 1,195 names unchanged. Dropped cross-subject binding, duplicate source evidence and forged task hash mutations each rejected; original bytes restored and PASS again. Repeated-name snapshot refreshed from actual reporter output. No content added, domain/UI change, canonical merge or learner publication. Full npm test/check not run for offline metadata utility. Five focused files checkpointed with expected-head lease; final remote head/exact readbacks checked before saved report.
+
+Next: inspect batches 03–10 source scope before promoting remaining inferred bindings. Preserve per-reference boundaries and hash evidence; classify facets versus canonical candidates separately. Other 2,007 parent names remain outside punctuation heuristic. Actual canonical/objective reuse, eight prior mapping proposals and 21 exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writing jobs started; ownership released after verified checkpoint.
+
+## First checked editorial component-source bindings — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 31f515a64a102e21e2ea5a2cec60c561b0f3e883; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; prior ownership released and head unchanged. Inspected all 25 batch-01 parent labels, 63 component names and their single source tasks. Added explicit sourceReferenceIds and row-level evidence pinning the existing editorial task hash, source-body hash, packet path and checked head. This is checked editorial association only, not official-source revalidation, clinical validation or canonical acceptance. No new names/content added.
+
+Enhanced report-name-consolidation.js to validate evidence against actual source task bytes and source row subject/code/page. Actual local report PASS: 353 explicit component bindings, 865 still inferred; total 1,218 occurrences/1,195 names unchanged. Mutated source task rejected for hash drift; wrong component source rejected; original bytes restored and reporter PASS again. Names-only repeated-group snapshot refreshed from actual reporter output. No UI/domain or learner changes; full npm test/check not run for offline metadata utility. No publication or clinical approval. Five focused files use expected-head lease and final remote head/exact readback verification.
+
+Next: check older batches 02–10 in bounded scope before replacing inferred bindings; inspect multi-reference Gallstones/cholecystitis separately. Classify scope facets versus canonical name candidates rather than declaring every component a concept. Other 2,007 parent names remain outside the completed punctuation heuristic; actual canonical/objective reuse, eight prior mapping proposals and 21 exceptions remain unresolved. Names-only instruction active; Foundation incomplete. No external writers started; ownership released after verified checkpoint.
+
+## Names-only consolidation and reproducible reporter — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 7dd8cf7436d88736b84e4843488d8c561a78d850; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Reread current instructions/handoff/status and all 12 saved batches at exact head; prior ownership released, head unchanged. Added ops/nmc/report-name-consolidation.js and a bounded repeated-name evidence snapshot. Actual local Node execution accounts for 420 parents, 425 distinct source references and 1,218 component occurrences under 1,195 distinct normalized names. Found 23 repeated-name groups, 19 cross-subject and 19 cross-batch groups. No canonical merging: all identities/objectives remain null, scopeKind explicitly unclassified concept-or-facet. This reports name reuse candidates, not accepted semantic equivalence.
+
+Reporter preserves every source occurrence and distinguishes 290 explicit component bindings from 928 inferred parent-scope bindings. Legacy multi-reference inference is restricted to the inspected Gallstones/cholecystitis parent; other multi-reference rows retain their explicit bindings. Earlier gallstones tasks from Medicine and Pathology both cover stone/inflammation scope, but no fresh official/clinical validation is claimed. Actual valid execution PASS; false canonical ID, unknown component source and duplicate component mutations each rejected, original bytes restored and reporter PASS again. No domain/UI change; full npm test/check not run for this offline metadata utility. No teaching content, publication or clinical approval. Four focused files checkpointed using expected-head lease; verify remote head/readback before final saved claim.
+
+Next: classify scope facets versus concept candidates and replace inferred source scope in older batches only with checked component-reference bindings. Inspect the 2,007 parent names outside the punctuation heuristic for hidden compound scope. Resolve actual canonical/objective reuse using current registry evidence; eight earlier mappings and 21 exceptions remain separate. Do not create more arbitrary name splits just to increase counts. Names-only instruction remains active; Foundation not complete. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 12; label heuristic exhausted — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 80c1a51620ef93de11fc8c727d5b928ea875dea8; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read, prior writer released ownership and head unchanged. Added 144 component-name proposals for the remaining 42 conjunction/comma/slash-selected parent labels across 12 subjects and 42 references. Each new component has explicit sourceReferenceIds; four prior exact component-name reuse candidates remain unresolved. Twelve batches total 1,218 component proposals for 420 parent names. No remaining unprocessed names under this specific label-selection heuristic, which is NOT evidence that all 2,427 names have complete scope or that Foundation is complete.
+
+Verified exact current-head bytes of 28 relevant packets, exact parent/source associations, parent/component-ID uniqueness across all 12 batches, null canonical concept/objective IDs, source membership and earlier exact-name candidate targets. Checked selected-label queue is empty after accounting for all 420 parents. Editorial task-derived organization only; no new official-source/clinical validation. No teaching content, questions, cases, assessments, domain/UI change or learner publication. Application tests not run for metadata-only changes. Expected-head lease protects checkpoint; final head and exact file readbacks verified separately before saved claim.
+
+Exact next action: stop blindly adding conjunction splits. Consolidate all 12 batches into reusable name candidates versus scope facets; add explicit per-component sourceReferenceIds to older batches only after checking multi-reference boundaries, and verify exact-name reuse across same/cross batches. Inspect the other 2,007 parent names for hidden compound scope rather than claiming their atomicity. Canonical identities/objective bindings require actual registry evidence; eight earlier mappings and 21 exceptions remain separately unresolved. Names-only instruction remains active; learner integration unfinished. No external writers started; ownership released after verified checkpoint.
+
+## Names-only component batch 11 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at fb9dc988e80bf5c059d57dc22e118c3656557094; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior writer released ownership and current head unchanged. Added 146 component-name proposals for 42 new parent labels across nine subjects and 46 distinct source appearances. Every new component has explicit sourceReferenceIds; GM24.3 vitamin comparison, GM24.4 nutrition support and GM24.5 diet counselling remain separately bound within their shared editorial parent. Repeated GM9.8/GM14.1 appearances retain distinct reference locators. Three prior exact component-name candidate links retained. Eleven batches total 1,074 proposals for 378 parent names; full curriculum coverage remains unverified.
+
+Verified exact current-head bytes of 28 relevant task packets, exact parent/reference consistency, no repeated parents or component IDs across batches 01–11, nonempty component names, sourceReferenceIds membership and null canonical concept/objective fields. Prior-name candidate links resolve to earlier proposals. Editorial task-derived names only, not new official-source or clinical validation. No teaching content, questions, cases, assessments, UI/domain changes or learner publication. Application tests not run for metadata-only changes. Expected-head lease protects save; final head and exact remote readbacks checked before saved claim.
+
+Next: finish remaining conjunction/comma/slash-selected parent labels, then consolidate facets versus canonical candidate names and exact per-component source scope across older batches. Name-pattern selection is only a heuristic and cannot establish complete curriculum coverage. Resolve actual canonical reuse/objectives against registry evidence when available; eight prior mapping proposals and 21 exceptions remain separate. Names-only instruction active. No external writers started; ownership released after verified checkpoint.
+
+## Names-only component batch 10 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 66bbbcd649b950786e9e17cddca749c101fad33e; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior writer released ownership and branch head remained unchanged. Added 136 proposed component names for 40 new parents across 12 subjects and 40 references. Includes named development/surface anatomy components, distinct assessment dimensions and public-health/clinical scope names already present in task descriptions. Scope components are not automatically separate canonical medical concepts. Two exact prior component-name candidate links retained. Ten batches total 928 component proposals for 336 parent names; full coverage unverified.
+
+Actual checks: exact current-head bytes for 25 relevant packets, parent/reference associations against index, unique parents/component IDs across all ten batches, nonempty names, null canonical concept/objective fields and valid prior-name candidate targets. Editorial task-derived organization only; no fresh official-source or clinical validation. No teaching prose, questions, cases, assessment content, UI/domain changes or learner publication. Application tests not run for metadata-only changes. Checkpoint protected by expected-head lease; verify exact remote three-file readbacks and branch head before final saved claim.
+
+Next: continue remaining compound NAME/scope proposals, distinguish facets from candidate canonical concepts during consolidation, and resolve actual canonical reuse/objective scope using registry evidence when accessible. Eight earlier mapping proposals and 21 source exceptions remain separate unresolved work. Names-only instruction remains active. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 09 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 62e8761e1f02bbf1186b0122433780b12911c6b8; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior writer released ownership and head remained unchanged. Added 139 component-name proposals for 40 new parents across 14 subjects and 40 references. Explicit task-listed anatomy, biochemical derivatives, specimen/imaging categories and neonatal/obstetric measurements now have separate proposed names. One prior exact component-name reuse candidate retained; same-batch repeated names remain separate source-scoped proposals, not new canonical identities. Nine batches total 792 proposals for 296 parent names; full coverage remains unverified.
+
+Verified exact bytes of 27 relevant current-head task packets, parent/source-index associations, parent and component-ID uniqueness across batches 01–09, nonempty names, null canonical concept/objective fields and resolvable prior exact-name candidate links. Existing editorial task scope is the basis; no fresh official-source or clinical validation. No teaching prose, questions, cases, assessments, domain/UI changes or learner publication. Application tests not run for metadata-only change. Save uses expected-head lease; verify final head and exact file readbacks before reporting saved.
+
+Next: continue remaining compound NAME proposals; consolidate cross-batch/same-batch exact-name reuse without automatic merging and resolve actual canonical/objective scope using registry evidence when accessible. Eight earlier mapping proposals and 21 exceptions remain separate unresolved work. Names-only instruction active. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 08 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at dea8c782ed6e439f34935b6ba735309bf16b45c2; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read; previous ownership released and current head unchanged. Added 102 component-name proposals for 40 previously undecomposed parents across 13 subjects, preserving 40 references. Named existing task components include vascular structures, developmental stages, toxic agents, cervical procedures, renal contexts and diagnostic measurements. Eight batches total 653 proposals for 256 parents; no full-scope or canonical completion claim.
+
+Verified exact bytes of 25 relevant current-head task packets, exact parent/source-index associations, parent/component uniqueness across batches 01–08, nonempty names and null canonical concept/objective bindings. Exact-name prior-component lookup found no matches for this batch; no identities invented or merged. Editorial task-derived organization only; no new official-source or clinical validation. No teaching prose, questions, cases, assessment content, UI/domain change or learner publication. Application tests not run for metadata-only change. Checkpoint uses expected-head lease with final remote head and exact readback verification.
+
+Next: continue remaining compound topic NAME proposals; consolidate reuse candidates and reconcile canonical/objective scope against actual registry evidence when available. Eight earlier mappings and 21 source exceptions remain separately unresolved. Names-only instruction remains active; learner integration/full mapping unfinished. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 07 — 8 November 2026 IST
+
+Owner /root resumes PR #415, feat/nmc-foundation-review-queue-20261104 at 4e1127b55e618d30cfd3d34f754ad8e6564acb77; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Read current instructions/handoff/status; prior writer released ownership, head unchanged during authoring. Added 96 component-name proposals for 35 new parents across 12 subjects and 35 reference appearances. Head/neck histology split into the 16 specimen names already listed in tasks; other splits cover named joints, immune systems, procedures and legal/ethical scope. Two exact prior component-name candidate links retained without canonical merging. Seven batches now total 551 component-name proposals for 216 parents, not full curriculum coverage.
+
+Verified all 25 relevant task packets at current head by exact-byte comparison; parent/source associations match the names index, and no parent or component-ID duplication exists across batches 01–07. Nonempty names, null canonical concept/objective bindings and valid prior exact-name candidate targets checked. Task-derived editorial organization only; no fresh official-source or clinical validation. No teaching content, questions, cases, assessments, domain/UI changes or learner publication. Application tests not run for metadata-only batch. Expected-head lease used; exact remote readbacks/head checked before reporting saved.
+
+Next: continue remaining compound NAME proposals, consolidate cross-batch reuse candidates and resolve actual canonical/objective scope using registry evidence when accessible. Eight earlier mapping proposals and 21 exceptions remain separately unresolved. Names-only instruction active; learner integration and full mapping unfinished. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 06 — 8 November 2026 IST
+
+Owner /root resumes PR #415, branch feat/nmc-foundation-review-queue-20261104 at 1297734057de723a15e4755622363eb439639929; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read, prior writer released ownership, PR head unchanged. Added 98 component-name proposals for 36 new parents across 12 subjects and 36 source appearances. Expanded digestive/adrenal histology and upper-limb articulations into names explicitly present in existing task scopes. Reused exact-name candidate links for disinfection/sterilization without canonical merges. Six batches total 455 proposals for 181 parent names; full curriculum scope remains unverified.
+
+Verified exact current-head bytes for 27 relevant task packets; every parent/reference association matches the names index. No parent overlap or component-ID duplication across all six batches. Nonempty names, null concept/objective bindings and valid earlier exact-name candidate targets checked. Names derive from editorial tasks, not fresh official-source verification or clinical validation. No teaching content, questions, cases, assessment content, domain/UI changes or learner publication. Application tests not run for metadata-only changes. Expected-head lease protects checkpoint; verify exact three-file readback and remote head before final saved claim.
+
+Next: continue remaining compound NAME proposals, consolidate cross-batch exact-name candidates and resolve true canonical/objective reuse against registry evidence when accessible. Eight previous mapping proposals and 21 exceptions remain separately unresolved. Names-only direction remains active. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 05 — 8 November 2026 IST
+
+Owner /root resumes PR #415 on feat/nmc-foundation-review-queue-20261104 at 17ee606a6baff470779cf02a06c031d722fbc31e; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current instructions/handoff/status read, prior writer released ownership and PR head remained unchanged. Added 77 component-name proposals for 30 new parents across 11 subjects and 30 source appearances. Expanded urinary/reproductive histology into explicitly named specimens already in the task. Added exact-name links to earlier Erb and Klumpke component proposals as reuse candidates, preserving separate source appearances and unresolved identity. Five batches total 357 proposals for 145 parents; no full curriculum coverage claim.
+
+Actual checks: all 19 relevant task packets fetched at current head and exact bytes compared; parent/reference associations verified against index; parent and component-ID uniqueness across all five batches; prior component candidate links resolve to earlier exact-name proposals; canonical concept/objective IDs remain null. Editorial task-derived organization only, not new official-source verification, clinical validation or accepted identity. No teaching content, questions, cases, assessments, UI/domain changes or learner publication. Application tests not run for metadata-only changes. Expected-head lease used for checkpoint; final remote head/exact file readbacks required before saved claim.
+
+Next: continue remaining compound NAME proposals and carry exact-name reuse candidates across batches without automatic merging; reconcile true canonical identity and objective scope against registry evidence when accessible. Eight earlier mapping proposals and 21 exceptions remain separate unresolved work. Names-only instruction remains active; learner integration and full mappings unfinished. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 04 — 8 November 2026 IST
+
+Owner /root resumes PR #415 / feat/nmc-foundation-review-queue-20261104 at 64e052cb93ff97eb5d6dd07d11d0be58d0ee9cd8; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Current AGENTS, handoff and status read; prior writer released ownership and PR head stayed unchanged. Added 69 component-name proposals for 30 new parent names across 12 subjects and 30 reference appearances. Included post-dated pregnancy because it is explicitly in the existing OG13.4 task despite being omitted from its short parent label. Split compound anatomy, pharmacology, cell injury, obstetric and electrolyte labels while preserving source-specific references. Four batches now total 280 component-name proposals for 115 parents; this is not full coverage.
+
+Actual verification: exact-byte reread of all 26 relevant task packets at current head, parent/reference consistency against index, no repeated parent or component IDs across batches 01–04, nonempty names and null canonical identity/objective IDs. Names are editorial proposals based on existing task scopes; no new official-source or clinical validation claimed. No teaching content, questions, cases, assessments, domain/UI change or publication. Application tests not run for metadata-only changes. Save via expected-head lease and verify remote head/exact file readbacks before final claim.
+
+Next: continue remaining compound topic NAME proposals, then reconcile canonical reuse and source-specific objective scope using registry evidence. Eight earlier mapping proposals and 21 exceptions remain separate unresolved work. Names-only direction remains active; full canonical mapping and learner integration unfinished. No external writing jobs started. Ownership released after verified checkpoint.
+
+## Names-only component batch 03 — 8 November 2026 IST
+
+Owner /root, PR #415, branch feat/nmc-foundation-review-queue-20261104; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Resumed 8abfb6d1efb2409d237beb877264c91320d86267; current instructions and handoff checked, prior writer released ownership, head unchanged. Added 72 component-name proposals for 30 previously undecomposed parents across 13 subjects, retaining 30 source appearances. Examples: separate ear conditions, oral/oropharyngeal malignancy names, fracture sites, lipid processing stages and research-independent legal liability categories. Batches 01–03 now contain 211 component-name proposals for 85 parents. These are editorial organization, not a completed curriculum or accepted canonical identities.
+
+Verified the 22 relevant task packets by exact-byte current-head readback; all parent/reference associations match the names index. Checked no repeated parent or component ID across all three batches, nonempty component names and null canonical concept/objective fields. Existing source task scope informs names; no new official-source or clinical validation claimed. No teaching content, questions, cases, assessments, UI/domain changes or learner publication. Application tests not run for this metadata-only batch. Save uses expected-head lease; remote head and three exact file readbacks checked before final report.
+
+Next: continue remaining compound NAME proposals and consolidate verified canonical reuse/objective links when registry evidence is available. Keep eight earlier mapping proposals and 21 source exceptions separate. Names-only direction remains active; full canonical mapping and learner integration remain unfinished. No external writing jobs started; ownership released after verified checkpoint.
+
+## Names-only component batch 02 — 8 November 2026 IST
+
+Owner /root; PR #415, branch feat/nmc-foundation-review-queue-20261104, base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Resumed verified head f1caf920b3b59128f4117616dc52dafd837c2ed0; prior handoff released ownership and head remained unchanged during authoring. Added 76 component-name proposals for 30 previously undecomposed parent names across 12 subjects and 31 reference appearances. Gallstones/cholecystitis keeps separate Medicine and Pathology references. Shared normalized component names are lookup candidates only; no automatic canonical merge or new accepted identity. Together batches 01/02 contain 139 component-name proposals for 55 parents; this is not full curriculum coverage.
+
+Verified all parent/reference links against names index and fetched exact current-head bytes for 23 relevant task packets. Checked no parent overlap with batch 01, unique component proposal IDs across both batches and null canonical concept/objective fields. No clinical teaching prose, questions, cases, assessment content, UI/domain changes or learner publication. Existing task scopes are the basis, not fresh official-source or clinical validation. Application tests not run for metadata-only batch. Expected-head lease required for save; exact file readback and remote head checked separately before final claim.
+
+Next: continue remaining compound-label NAME proposals, then reconcile canonical reuse and objective-scope links using actual registry evidence; preserve eight earlier mapping proposals and 21 source exceptions as separate unresolved work. Names-only direction remains active. No full Foundation completion claim. This session starts no external writing jobs; ownership released after verified checkpoint.
+
+## Compound topic names decomposed — 8 November 2026 IST
+
+Owner /root resumes PR #415 on feat/nmc-foundation-review-queue-20261104 at 179372e9fd4b980c3bb446d079f955b00745ab87 (base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5). Checked current instructions, handoff/status and unchanged PR head; prior writer released ownership. Names-only instruction continues. Added 63 explicit component-name proposals for 25 compound parent labels across 11 subjects, preserving 25 exact curriculum reference appearances. Examples include acute/chronic distinctions, stable/unstable angina and infarction, and separate casting/splinting names already present in task scope. No clinical prose, questions, cases or new assessment content. Existing source tasks, canonical identities and learner data unchanged.
+
+Verified all parent/source associations against the saved names index; reread the 20 relevant task packets at current head and confirmed unchanged exact bytes. Checked 63 unique proposal IDs, nonempty names and null canonical concept/objective IDs. This is editorial scope organization based on existing tasks, not fresh official-source verification, accepted canonical identity, complete component scope or clinical approval. No domain/UI change; application tests not run. Remote checkpoint uses expected-head lease and must be read back before claiming saved. No merge or publication.
+
+Next: continue compound-label component NAMES in further bounded batches, preserving source-specific scope and reusing actual canonical identities only where verified; reconcile eight prior proposed mappings and 21 exceptions separately. Do not add learning content. Full mapping and learner integration remain unfinished. Ownership released after verified checkpoint; this session starts no external writer.
+
+## Names-only Foundation authoring — 8 November 2026 IST
+
+Owner /root; PR #415, branch feat/nmc-foundation-review-queue-20261104; base main 763e9db006cd167dde2a88c1f4b9eed5d630cfb5. Resumed source head 338c8a3d3e09458059af96c10e0f8bd24efc969b. Current owner instruction supersedes older next actions: add topic/concept names and organizational mappings only; do not add teaching prose, questions, cases or assessment content. Existing drafts retained. Foundation authoring needs no Admin approval prompt; access, privacy and publication gates remain unchanged.
+
+Built a names-only editorial index from all 65 existing task packets: 2,607 distinct references, 2,427 normalized name groups, 42 cross-subject name candidates. Each appearance retains exact source reference, subject, code, PDF page, packet and previously proposed objective version IDs. Same-label grouping is navigation metadata, NOT semantic equivalence or canonical identity acceptance. No canonical IDs invented; unresolved IDs remain null. No learning content copied into the index, no UI/domain change or learner publication. Verified every output appearance against fetched exact-head packets, unique reference denominator and null identity flags in the orchestration runtime. Application tests not run for this metadata/documentation-only batch; no hosted CI result claimed. Checkpoint uses expected-head lease; remote head/readback must be checked before reporting saved.
+
+Exact next action: continue names-only work by decomposing compound labels into explicit component NAME proposals, keeping source-specific objective boundaries; resolve reuse against actual canonical registry evidence when accessible, and reconcile the eight existing proposed mappings plus 21 exceptions separately. Do not resume content expansion. Full canonical mapping, source exception resolution and learner integration remain unfinished. Ownership released after verified checkpoint; no external writing jobs started by this session. Existing hourly automation may resume independently and must reread this instruction/head.
+
+## All linked endocarditis bundles validated — 8 November 2026 IST
+
+Resumed PR #415 at 3fc3ce7b5febfd6be44d7a9a4c93c79a247e295c. Extended verify-endocarditis-bundle.js from a single hard-coded bundle to every bundle explicitly linked from component scope. Validates safe repository paths, unique bundle links and globally unique artifact IDs, while retaining exact component/reference/path and ordered artifact binding checks. Both existing bundles now run through the existing CI command automatically: two teaching summaries, four cases and two rubrics, eight distinct artifact versions. Actual validation passed. Wrong presentation-component, false learner activation and empty case-key mutations were rejected, then restored validation passed. No medical content/domain/UI changes; full application suite not rerun, hosted CI pending. Next, expand the remaining nine components with concrete materials and resolve canonical objective/identity mappings. Foundation completion remains unverified.
+
+## Endocarditis presentation-comparison bundle — 8 November 2026 IST
+
+Resumed PR #415 at d43fd2fce876618942b254f3dc6217b565891cfa. Added original teaching, two fictional comparison/changed-context cases with draft reasoning keys and a four-dimension rubric for GM1.19 presentation comparison. Bounded symptom/time-course facts checked against primary American Heart Association endocarditis information. Cases explicitly separate descriptive patterns from diagnosis/organism inference and avoid treating gradual onset as proof of present stability. Four unique version IDs linked to the existing component; no new canonical concept or clinical approval. Checked exact component/reference membership, unique IDs and draft flags in the authored packet. No domain/UI changes or application test rerun. Next, extend executable validation to this second bundle and expand the remaining nine components. Identity/objective bindings remain unresolved.
+
+## Executable endocarditis bundle validation — 8 November 2026 IST
+
+Resumed PR #415 at 3d7f318884deaba5f56936862c5f58b23b664501. Added verify-endocarditis-bundle.js and wired both endocarditis blueprint and bundle verifiers into Foundation CI. Validator checks exact component/reference membership, bundle path, ordered four-artifact links, unique artifact IDs, fictional case inputs and reasoning keys, and explicit null identity/coverage/pass-standard fields with false approval/publication flags. Actual valid-bundle execution passed. Unknown component, duplicate artifact and false clinical approval mutations were rejected, followed by restored success. No domain/UI or medical-content changes; full application suite not rerun. Hosted verification of the new CI step remains pending. Next, expand concrete teaching/cases to the remaining ten endocarditis components and resolve canonical objective scope without fabricating registry acceptance.
+
+## Concrete endocarditis evidence-integration bundle — 8 November 2026 IST
+
+Resumed PR #415 at 4220e27e6792fc79e93ad40e009028881f67d8a6. Authored an original teaching summary, two fictional adult cases with draft reasoning keys and one four-dimension rubric for GM1.19 evidence integration. Cases contrast concordant culture/imaging evidence with negative post-antibiotic cultures and inconclusive TTE in a prosthetic-valve context. Bounded claims checked against primary ESC 2023 endocarditis guideline sections 5.3/5.4. No prescribing regimen, validated pass standard, PYQ provenance or clinical approval claimed. Four exact artifact version IDs are referenced from the existing component via the bundle path; canonical identity/objective fields remain null. Validated component/reference membership, unique artifact IDs and case count, then remote readback. Evidence-only authoring; no application tests or publication. Next, author remaining component materials and add executable bundle validation before learner integration.
+
+## Endocarditis assessment blueprints — 8 November 2026 IST
+
+Resumed PR #415 at 85e65f328e0f4e23b37f2e4d2529931016d37467. Authored eleven versioned assessment blueprints, one for each existing component, containing baseline and changed-context prompts (22 prompts total), required inputs, four separately recorded scoring dimensions and explicit missing clinical answer keys and pass standards. Subject-specific input requirements preserve adult clinical integration, microbiology, morphology and pediatric context. These are assessment designs, not completed cases or clinically validated assessment artifacts. Canonical objective and teaching bindings remain unresolved. Added verify-endocarditis-blueprints.js; actual execution passed exact component/source associations, unique IDs and draft-only evidence flags. No domain/UI changes or publication. Next, author concrete source-supported teaching and case inputs/keys, then bind their exact versions without claiming full scope.
+
+## Endocarditis official-source scope check — 8 November 2026 IST
+
+Resumed PR #415 at ecedd94d381a4e857af946ece3629dbfbed61cc0. Downloaded official 33/file and confirmed pinned SHA-256 aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c. Read the four competency rows on PDF pages 197, 208, 283 and 340. Added three previously missing editorial components: gross/microscopic pathology, explicit pathophysiology and pediatric etiopathogenesis. Packet now contains eleven unique component IDs across four references. Recorded source boundaries for GM1.20, MI3.3 and MI3.4 so culture technique and investigation-based diagnosis are not silently absorbed into the four-row scope. Coverage remains unknown; no clinical approval, canonical identity acceptance or artifact binding claimed. Verified unique component count and evidence flags; evidence-only change, application tests not rerun. Next, attach teaching and assessment artifact versions for the explicit components and resolve the canonical disease identity against registry evidence.
+
+## Cross-subject endocarditis scope decomposition — 8 November 2026 IST
+
+Resumed PR #415 at 8040929e6757250449bee143b11cce467ac9ca8d. Added an authoring packet for GM1.19, MI3.2, PA26.7 and PE22.5. Preserved four distinct reference locators and original task scopes; decomposed them into eight task components with explicit unbound teaching, assessment and canonical objective fields. This is decomposition of existing task drafts, not fresh official-source or clinical validation. Adult clinical integration, microbiology, pathology and pediatric context remain distinct objectives under a possible shared disease home. No canonical concept was created or merged. Verified four unique references and eight component IDs against fetched branch packets. No domain/UI changes; application tests not rerun for this evidence-only batch. Next, verify source breadth and canonical registry identity, then attach actual artifact versions. Foundation completion remains false.
+
+## Hourly continuation, cross-subject queue and exact-byte repair — 8 November 2026 IST
+
+Owner /root, draft PR #415. User accepted hourly continuation until stopped. Created enabled automation Continue NMC Foundation with HOURLY interval 1, Asia/Kolkata, first scheduled start returned as 2026-11-07T23:24:06Z (8 November 04:54:06 IST). Runs must reread current handoff/head, avoid active-writer overlap, perform substantive bounded implementation, preserve real evidence status and checkpoint with expected-head leases. No completion-relative timer is supported.
+
+Added report-cross-subject-candidates.js and a regression test. Actual report finds 42 exact editorial-label groups across subjects, covering 90 distinct source appearances. IDs identify candidate groups only, never canonical concepts. Original subject-specific tasks, modes, source locators and existing objective proposals remain separate; semantic equivalence and current production registry state are unverified. Infective endocarditis spans Medicine, Microbiology, Pathology and Pediatrics. Useful next batch: inspect these high-overlap groups against source and canonical registry evidence without automatic merging.
+
+Hosted CI run 42420353322 exposed pilot content-hash mismatch in npm test. Root cause confirmed: local copies used for initial hashes had one extra newline compared with the committed originals. Fetched all three exact files at branch head, reproduced failure locally and confirmed adding one newline reproduces every stale digest. Corrected the binding manifest hashes and all content-addressed artifact IDs to the actual committed bytes; original teaching files are unchanged. Strict verifier retained. Final full npm test passes 1,585/1,585, including three completion/candidate regressions; reporter and syntax checks pass. Hosted verification of the repair is pending.
+
+Current cloud browser is signed out at medretica.com, so broader PFT identity cannot presently be checked against the private registry in that session. No authentication bypass, new identity, Admin approval claim or learner publication occurred. Continue independent scope/mapping work; do not wait on Admin approval for Foundation authoring. Priority remains canonical mappings/components and actual artifact connections before more Basics UI.
+
+## Automatic NMC completion regression checks — 8 November 2026 IST
+
+Owner /root, draft PR #415. Added two executable regression tests covering full source inventory uniqueness, unknown coverage, no false learner publication, existing COPD canonical reuse and exact draft artifact resolution. Both passed locally. Foundation CI now explicitly runs the Respiratory binding verifier and full completion-gap reporter, writing the report into the runner temporary directory. No deployment or external service change. Hosted run for this new commit is pending. Next, resolve broader PFT identity using current registry evidence and expand canonical mappings beyond the pilot.
+
+Owner requested recurring continuation 20 minutes after each task until stopped. The available automation scheduler permits at most hourly recurrence and does not support completion-relative chaining. No schedule was created or substituted. Explained the limit; hourly cadence still needs the owner's choice. This does not block current authorized Foundation work.
+
+## Scoped COPD extension objectives resolved — 8 November 2026 IST
+
+Owner /root, draft PR #415. The systemic-steroid and antimicrobial extension components now have two versioned management objectives using the existing COPD-exacerbation concept proposal C-f2c27acd-d39a-4558-9f04-83aa591d72fd. Reused the exact two teaching sections and six case artifact versions, with draft-only preparation-curriculum bindings and explicit partial adult COPD simulation context. No duplicate disease identities were created. Broader PFT principles remains material-only pending a correctly scoped canonical identity; it is not forced into suspected-COPD spirometry.
+
+The full inventory report now exposes three COPD objectives sharing one concept, with three teaching and nine case draft bindings. Actual verifier and report execution passed. Wrong concept, forged accepted identity and cross-objective artifact mutations were rejected. Existing schema validator accepted two extension objectives and eight artifact bindings. CLI syntax passed. Component scope remains incomplete, coverage null, identity state existing-proposal and learner activation false. Next, resolve the broader PFT concept against current canonical registry evidence and expand mapping beyond this pilot. Admin approval is not a Foundation authoring dependency.
+
+## Respiratory unbound-gap material drafted — 8 November 2026 IST
+
+Owner /root, draft PR #415. Added original teaching extensions for PFT test principles, systemic-steroid decision reasoning and antimicrobial decision reasoning, plus three fictional exercises and draft rubric criteria per component (nine new exercises). Verified bounded factual claims against NIH NHLBI PFT test descriptions and GOLD 2026 Chapter 4, Glucocorticoids/Antibiotics, printed pages 102–104. No doses or prescription-level competence claims. Exact component material bindings use content SHA-256, section/case/rubric locators and shared scenario-family IDs. They do not invent missing canonical objective IDs. The three components now have draft material attached; identity/objective resolution, broader disease scope and exact validated answer keys remain open.
+
+Extended verifier and full completion report to expose these bindings. Both executed successfully. Unknown component, changed hash and duplicate artifact mutations were rejected, then restored verification passed. Syntax passed. Combined Respiratory authoring inventory is now six teaching sections and eighteen simulated exercises across the pilot and extension, all draft-only. No clinical approval, publication, complete scope or learner mastery claimed. Next, resolve exact canonical objective scopes for the extensions and expand mapping beyond the Respiratory pilot. Admin approval is not a Foundation authoring dependency.
+
+## Respiratory source components and gap prompts — 8 November 2026 IST
+
+Owner /root, draft PR #415. Re-downloaded official NMC source 33/file and verified pinned SHA-256 aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c. Read GM28.11/17/18 on PDF pages 324–325. Authored ten editorial component records and ten original assessment prompts with expected-evidence criteria. Three pulmonary-function components, three therapeutic-plan components, four acute-exacerbation components. Seven candidate partial links point to existing simulation objectives; broader PFT principles and explicit systemic-steroid/antimicrobial assessments remain unbound. No new canonical concepts, clinical validation, pass standards or coverage fractions were invented. Complete scope remains unknown.
+
+Extended the existing verifier and full-inventory report to expose these component requirements. Actual execution passed; all source locators match the reconstructed pinned queue. Duplicate components, forged complete scope and unknown objective mutations were rejected, followed by successful restored verification. CLI syntax passed. These are authoring records, not published learner content. Next, author explicit missing teaching and assessment components, expand disease breadth and resolve canonical scope, then continue beyond the pilot. Admin approval is not an authoring dependency.
+
+## Foundation completion work queue and Respiratory artifact bindings — 8 November 2026 IST
+
+Owner /root, draft PR #415. Prioritize canonical mappings, component definitions and artifact binding before further Basics UI. Added a repeatable full-inventory gap report and a draft Respiratory binding packet: three versioned simulation objectives reuse the existing proposal concept IDs, three exact teaching-file bindings and nine separately addressed simulated cases with rubric locators. Existing canonical identities remain proposals, with no fabricated acceptance, clinical approval or learner activation. Exact SHA-256 file versions prevent silent drift; cases from the same scenario family share a family ID. Component scopes are partial and complete requirement sets are unknown.
+
+Executed both reporters and the binding verifier successfully. Report contains 2,634 unique source appearances across 19 subjects, eleven with proposed objective mappings (eight prior plus three Respiratory), three with draft teaching/assessment bindings and one historical deletion. Coverage remains null and production state is explicitly unverified. Changed teaching-file mutation was rejected, restored source passed again. No domain/UI changes or production writes in this milestone. Report and verifier syntax passed. Next, define explicit missing components for these three competencies and expand canonical mapping subject by subject. No Admin approval dependency for authoring.
+
+## NMC Basics projection engine — 8 November 2026 IST
+
+Owner /root, draft PR #415, branch feat/nmc-foundation-review-queue-20261104. Added projectFoundationBasics on the existing versioned preparation curriculum. Dependency-first objective order, canonical-concept deduplication, per-target dependency traceability and explicit edges are derived without copying content or learning records. Existing validation rejects cycles and missing prerequisites; projection rejects invalid, duplicate and unknown target IDs. No approval or coverage claim is inferred.
+
+Verification: five focused tests failed before implementation and passed afterward; full npm test 1,582 passed, zero failed; npm run check passed (13 services, 253 coupling locations). Actual draft pack projected 16 objectives across 13 concepts with zero prerequisite edges, accurately exposing the remaining mapping gap. Self-reviewed output aliasing, mixed target/prerequisite roles and cross-target shared dependency traversal. This engine is not yet wired into learner UI, and the Respiratory Basics sequence still needs exact objective bindings. Next, populate versioned prerequisite objectives using existing canonical identities where available and explicitly track unresolved identities without creating duplicate concepts. No Admin approval dependency for Foundation authoring.
+
+## NMC Foundation Integrated view pilot — 7 November 2026 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, implementation `199eb53dd6998c060aeabf6f54e1ca9d49f8c8bf`. NMC Subjects remains the default. Integrated adds system and optional organ filtering plus label/alias search over authenticated published concepts. Both discovery paths use the same canonical library URL and existing question/note/attempt records. The integrated view exposes no draft content and implies no approved NMC mapping. No data migration or learner activation was performed.
+
+Local verification on the matching source files: 1,573 Node tests, npm check and 131-file Pages build passed. Browser regression was extended for shared links, facets and logout. Local Chromium launch was blocked by the runtime socket policy, so hosted browser verification remains pending. Next, obtain reviewed prerequisite sequences and explicit objective-to-competency coverage mappings for the Respiratory pilot before exposing Basics and partial coverage. The five private concept proposals still require Admin submission and review.
+
+## NMC Medicine source-row verification — 2026-11-05 22:53 IST
+
+Owner /root. Draft PR #415, branch `feat/nmc-foundation-review-queue-20261104`, base `763e9db006cd167dde2a88c1f4b9eed5d630cfb5`, draft commit `fb4253f529c723e63f1441158f3f7a86acd24777`. Rebuilt the pinned NMC review queue with PyMuPDF 1.26.6, the byte-matched September 2024 PDF, and the frozen row inventory. The builder reproduced the checked-in catalogue and returned 2,634 appearances across 19 subjects. Verified 130 distinct Medicine references by code, page, eligibility, bounding box and reconstructed row SHA-256. Replaced the three staging files with regular draft review packets, preserving task wording. Forty-seven tasks carry a performance component. Exact remote packet readback passed.
+
+Next, review canonical identities, compound competency coverage and clinical/source alignment before intake or learner activation. The 21 source exceptions remain tracked separately. Application tests were not run for this evidence-only change.
+
 ## Objective draft batch 2 — 4 November 2026
 
 Owner /root. Branch feat/nmc-objective-expansion-20261104, base main d463fead8ae0c9798e4cadc661f966e114ea59da, code 7305a7ec68326348378ec209acc1e8a7eeeb94c7. Draft pack @2 adds 10 applied objectives, one per existing canonical concept, for 20 goals on 10 IDs. Pack @1 remains readable and prior objective version IDs are preserved. The API and browser fixtures now model multiple objectives per canonical identity.

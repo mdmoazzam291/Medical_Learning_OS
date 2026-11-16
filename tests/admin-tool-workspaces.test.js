@@ -50,7 +50,7 @@ test('Overview urgent counts retain unknown telemetry and contain no tool forms'
   assert.match(measured, /Learner reports/); assert.match(measured, /Critical alerts/); assert.match(measured, /Action Inbox/);
   assert.doesNotMatch(measured, /data-owner-v3-feature-form|owner-learner-search-form/);
 });
-test('existing Content Snapshot and AI Usage remain reachable in their owning groups', () => {
+test('existing Content Overview and AI Usage remain reachable in their owning groups', () => {
   const rows = navigationFor('admin', { isAdmin: true });
   assert.equal(rows.find(row => row.id === 'content').children.filter(row => row.href === '/web/admin.html#owner-content').length, 1);
   assert.equal(rows.find(row => row.id === 'operations').children.filter(row => row.href === '/web/admin.html#owner-ai').length, 1);

@@ -58,10 +58,11 @@ const SECTIONS = {
     item('content', 'Content & Quality', 'book', '/web/content-import.html', [
       item('intake', 'Content Intake', 'book', '/web/content-import.html'),
       item('relationships', 'Medical Relationships', 'graph', '/web/content-import.html#medical-relationships'),
-      item('snapshot', 'Content Snapshot', 'graph', '/web/admin.html#owner-content'),
-      item('coverage', 'Coverage Index', 'graph', '/web/admin.html#owner-coverage'),
-      item('integrity', 'Catalog Integrity', 'graph', '/web/admin.html#owner-integrity'),
-      item('source-watch', 'Source Change Watch', 'reference', '/web/admin.html#owner-source-watch'),
+      item('snapshot', 'Content Overview', 'graph', '/web/admin.html#owner-content'),
+      item('foundation', 'NMC Foundation', 'graph', '/web/admin.html#owner-foundation'),
+      item('coverage', 'Content Inventory', 'graph', '/web/admin.html#owner-coverage'),
+      item('concept-drafts', 'Concept Drafts', 'graph', '/web/admin.html#owner-concept-drafts'),
+      item('exam-syllabus', 'Exam Syllabus', 'graph', '/web/admin.html#owner-exam-syllabus'),
       item('review', 'Review Workspace', 'edit', '/web/review.html'),
       item('references', 'Reference Review', 'reference', '/web/review.html?workspace=references'),
       item('rights', 'Source Rights', 'reference', '/web/review.html?workspace=rights')
@@ -149,7 +150,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
   if (pathname.endsWith('/admin.html')) {
-    const ownerAnchors = { '#owner-coverage': 'content', '#owner-users': 'learners', '#owner-review-authority': 'learners', '#owner-learning': 'research', '#research-gate': 'research', '#owner-ai': 'operations', '#owner-content': 'content', '#owner-infrastructure': 'operations', '#owner-infrastructure-alerts': 'operations', '#owner-features': 'operations', '#owner-integrity': 'content', '#owner-source-watch': 'content' };
+    const ownerAnchors = { '#owner-concept-drafts': 'content', '#owner-exam-syllabus': 'content', '#owner-foundation': 'content', '#owner-coverage': 'content', '#owner-users': 'learners', '#owner-review-authority': 'learners', '#owner-learning': 'research', '#research-gate': 'research', '#owner-ai': 'operations', '#owner-content': 'content', '#owner-infrastructure': 'operations', '#owner-infrastructure-alerts': 'operations', '#owner-features': 'operations', '#owner-integrity': 'content', '#owner-source-watch': 'content' };
     return { master: 'admin', section: ownerAnchors[hash] || 'overview' };
   }
   if (pathname.endsWith('/content-import.html') || pathname.endsWith('/review.html')) return { master: 'admin', section: 'content' };

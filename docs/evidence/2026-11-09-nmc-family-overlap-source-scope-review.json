@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "1e7bfea00c87879c4de72a0f9cffa0432908a866",
+  "status": "proposed",
+  "rows": [
+    {
+      "name": "Acute suppurative otitis media",
+      "target": "Acute otitis media",
+      "route": "reuse-existing-context",
+      "scope": "Keep RD7.2 as acute suppurative imaging evidence only.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
+          "code": "RD7.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "478fd1a17c7ecf93cd51f7cd89c94231a8bbe8d26e7d9c2c17bf0dbe91ef6c05"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+          "code": "EN4.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "943b5ffac46e7eda736e2d77f0be714727f09e2010121e20204269601ad58fff"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Appendicitis",
+      "target": "Appendicitis",
+      "route": "reuse-earlier-proposed-name",
+      "scope": "Preserve surgical recognition and care separately from pathology.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:bb25f5f31ed070c5e74a0e8d1a446280066c4fac276de2326e9abfeb6efca160",
+          "code": "SU28.15",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "1aba115e7b5ec3f25efde1d95b39e2f677747707ab5375825e0eb2e48fe48523"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39",
+          "code": "PA23.5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "e7872ea1cfcbf55f077d885a58296360bc226bcd2e54ccdcf264c9619245966f"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Autoimmunity",
+      "target": "Autoimmunity",
+      "route": "reuse-existing-proposed-name",
+      "scope": "Preserve the laboratory comparison separately from mechanisms of lost tolerance.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+          "code": "MI2.7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "65677ea3bac682484087268d749f0ad9b26a5cb2ead4bea8e20aff58da2e7b01"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+          "code": "PA8.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "27e85fb88637cd90b50643ce5e99dba6bf51c53bc38cfa3978ac8d9be7340429"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Haemostasis",
+      "target": "Haemostasis",
+      "route": "reuse-earlier-proposed-name",
+      "scope": "Retain the normal haemostasis component and preserve disorder-specific scope separately.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+          "code": "PA20.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "82e93263de50fbd731d6c9fb479c710b8ddcae6b6fc12668564cf21d1a49ec4a"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:2b9b54317fd989e3416c30dc15b1ca6dbf891d47689e3173e185a8dc2a10ec62",
+          "code": "PY2.9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "ec665647cce85a638454a80f7be59441501457d9e5f2254d6e29683e364c9478"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+          "code": "PA5.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "bc265f23be8a958db1603dd84cbba52d18f32f8efca7c4ae26f2e3f279aa0141"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Newborn resuscitation principles",
+      "target": "Neonatal resuscitation",
+      "route": "scoped-facet",
+      "scope": "Retain principles separately from readiness and ventilation tasks.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:4e3012e46374338c6f3a43e994da3d671776d8f2cea1ed8231aa51c63dcf6961",
+          "code": "OG18.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "48d2020163422002e5104caf5111537d2ceb1c6cdefc52820d91581867394364"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:053fd3eecc770eabab37db057eb4db97486051fd266882d1716e713baf508bcd",
+          "code": "OG18.4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og13-og27-2-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "0324c5ad09eca40868a0cd41b4f3d6cbe1c72881b16955663d8666c1c188320c"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Peptic ulcer disease",
+      "target": "Peptic ulcer",
+      "route": "reuse-proposed-name",
+      "scope": "Preserve pharmacology separately from pathology and limit the linkage to ulcer disease.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3",
+          "code": "PH6.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "86fdea6978272b6c1c7924ca1a7e0af27f464bf67dcd0dac527fdd9726ba5d44"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f",
+          "code": "PA23.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "1ba8e0b7bdca4be48a4b666b0e62ea298d7eda50fc2205b92fa8b409fc697dd2"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Rheumatic heart disease",
+      "target": "Rheumatic heart disease",
+      "route": "reuse-existing-proposed-name",
+      "scope": "Keep the rheumatic component of GM1.1 separate from the dedicated GM1.2 scope.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708",
+          "code": "GM1.1",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "54ffe3489ac37e79034bd477ed49e683c19997b4eac661eb99b226edf841959f"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87",
+          "code": "GM1.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "b46c7fdcc10fca02cea6cfff8aa9c5901d7a63fc3b400bb29df59a0a09290b54"
+        }
+      ],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Sensorineural hearing loss",
+      "target": "Sensorineural hearing loss",
+      "route": "retain-narrower-name-lead",
+      "scope": "Keep the sensorineural component of hearing loss distinct from conductive loss and from the otitis components of RD7.2.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:9a48ffacc0bc5f1c083311a0fbb1830f5ea892fd83d8ee27e7d6438adb9e0f0d",
+          "code": "EN4.14",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "50a7101d511e59e9b731207588d62d041a5d77a0b914c3ca2f1ba81321c1099d"
+        },
+        {
+          "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
+          "code": "RD7.2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "478fd1a17c7ecf93cd51f7cd89c94231a8bbe8d26e7d9c2c17bf0dbe91ef6c05"
+        }
+      ],
+      "support": [],
+      "mappingAccepted": false
+    },
+    {
+      "name": "Varicella",
+      "target": "Varicella",
+      "route": "reuse-earlier-proposed-name",
+      "scope": "Keep primary varicella separate from zoster and other exanthems.",
+      "incoming": [
+        {
+          "referenceId": "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac",
+          "code": "PE31.10",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+          "mode": "knowledge",
+          "sourceBodySha256": "1589f0bdf7cbffbf88fed79b53789cef948d5057e68b75f074ddd0c03ff7f7a0"
+        }
+      ],
+      "support": [
+        {
+          "referenceId": "nmc-2024-ref:8755497f2985be309344d2e7246cfc509cb1129269a50b262ca35552735912bc",
+          "code": "DR8.3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "mode": "performance-and-knowledge",
+          "sourceBodySha256": "c3cf006c4a295efb8510e920a31bfd83af460278926f0566cb7844678300f4d4"
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "next": "Reconcile the nine routes with the evidence ledger and screen the remaining 69 family leads."
+}

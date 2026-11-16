@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:2225e2349df2331d7f306de3bccd7d8142a3b22a008e3e2fd4c966cb3cbdc7b8",
+      "subjectId": "pathology",
+      "code": "PA1.1",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        188.94,
+        105.6,
+        223.86
+      ],
+      "sourceBodySha256": "361253b9f823377629e23d77aa9670a3d684e4e28f4a63ff96bddb42e9d194b4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Role of pathology",
+      "draftLearningTask": "Trace a specimen from clinical question through diagnosis and explain how pathology informs management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092",
+      "subjectId": "pathology",
+      "code": "PA1.2",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        223.86,
+        105.6,
+        261.66
+      ],
+      "sourceBodySha256": "db79701de36d06f7989ada6aed77674da94dc285bc3363eae307385d06b5b2d0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pathology terminology",
+      "draftLearningTask": "Define common pathology terms and identify milestones in the discipline's development.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+      "subjectId": "pathology",
+      "code": "PA1.3",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        261.66,
+        105.6,
+        298.38
+      ],
+      "sourceBodySha256": "917da6d32ba1e785d160d8482aad900d9d5399a1d6054bce1ddec537b799f7e3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell cycle and regeneration",
+      "draftLearningTask": "Map cell-cycle checkpoints and explain how stem cells support repair and regenerative medicine.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9bf18c5e9efb532b6901a97eceb9ad49478cf00422a8c882bdbd4f98c2c5fa57",
+      "subjectId": "pathology",
+      "code": "PA2.1",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        320.28,
+        105.6,
+        351.66
+      ],
+      "sourceBodySha256": "c48649b8158abf22a73d54285d2bf291f39931b6adb223cacacd535fead50c50",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell injury mechanisms",
+      "draftLearningTask": "Classify major insults and link mechanisms of injury to cellular and clinical consequences.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+      "subjectId": "pathology",
+      "code": "PA2.2",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        351.66,
+        105.6,
+        387.66
+      ],
+      "sourceBodySha256": "5e00d117f67544717b5ebf651f3fb9da0de04905a0da67003ba90789ba52bb55",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Reversible and irreversible injury",
+      "draftLearningTask": "Compare mechanisms and morphological changes that distinguish reversible injury from irreversible injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130",
+      "subjectId": "pathology",
+      "code": "PA2.3",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        387.66,
+        105.6,
+        418.62
+      ],
+      "sourceBodySha256": "1f06218e3f6c492e10d58a22b6ac5a7f22a8bd7e917989f9fc8a496b0f259ca8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Intracellular accumulations",
+      "draftLearningTask": "Distinguish lipid, protein, carbohydrate and pigment accumulation on representative images.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+      "subjectId": "pathology",
+      "code": "PA2.4",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        418.62,
+        105.6,
+        452.4
+      ],
+      "sourceBodySha256": "1ffe5918c9efb5e08194799e2011cf2e345991cbc821e12854adeef497caadd0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell death",
+      "draftLearningTask": "Compare mechanisms and morphology of necrosis, apoptosis and autolysis.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b36a42b0113bd0e5d591372df3a799bb72edaae87e2d2ece4f981c4190b57f61",
+      "subjectId": "pathology",
+      "code": "PA2.5",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        452.4,
+        105.6,
+        473.28
+      ],
+      "sourceBodySha256": "34a8f937caf622cdbc62262f4c79fca2aa50cf7de3835c7f0f709c8995f4dfb1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Calcification and gangrene",
+      "draftLearningTask": "Compare dystrophic and metastatic calcification and distinguish representative patterns of gangrene.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+      "subjectId": "pathology",
+      "code": "PA2.6",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        473.28,
+        105.6,
+        508.2
+      ],
+      "sourceBodySha256": "c2ccfb77d385cfbc46457f055d6fe79b0e5d327cda8426d938347ccef5a2ffd4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cellular adaptation",
+      "draftLearningTask": "Compare atrophy, hypertrophy, hyperplasia and metaplasia, then distinguish dysplasia from carcinoma in situ.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767",
+      "subjectId": "pathology",
+      "code": "PA2.7",
+      "page": 187,
+      "rowBBox": [
+        51.5,
+        508.2,
+        105.6,
+        523.68
+      ],
+      "sourceBodySha256": "7f46671614df578fc84d2c1ce694a3137c9ad97ebc3c5501360c35c815cca0dc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cellular ageing",
+      "draftLearningTask": "Explain how cumulative damage, senescence and apoptotic pathways affect cellular ageing.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:41e340599f55497be1f41811c320d077a8166595db415bf80fbe52872c9d6e34",
+      "subjectId": "pathology",
+      "code": "PA2.8",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        124.5,
+        105.5,
+        159.42
+      ],
+      "sourceBodySha256": "07adddfd6c3c45165841e604feaed9f0912bed1a71f6c086e903222e58225a11",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cell injury specimens",
+      "draftLearningTask": "Identify patterns of injury on gross and microscopic specimens and explain their likely consequences.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0",
+      "subjectId": "pathology",
+      "code": "PA3.1",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        176.46,
+        105.5,
+        205.62
+      ],
+      "sourceBodySha256": "db2b93f303fe81fb4bb04be495755927c4586b835e6aacd242f032e2fc7a8537",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute and chronic inflammation",
+      "draftLearningTask": "Compare triggers, vascular changes and cellular responses across acute and chronic inflammation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6282fdefb2cea9a22a83c241409938c820dc2cebbf58893352fa4d671d81fae0",
+      "subjectId": "pathology",
+      "code": "PA3.2",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        205.62,
+        105.5,
+        233.34
+      ],
+      "sourceBodySha256": "2d25a8ae27f9c8980cb1604a58a06a31df0089a69eb4599ef7ff10d95020ea81",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute inflammatory mediators",
+      "draftLearningTask": "Group major mediators by source and relate them to vascular and cellular effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+      "subjectId": "pathology",
+      "code": "PA3.3",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        233.34,
+        105.5,
+        267.54
+      ],
+      "sourceBodySha256": "3cf1948cef2bee9a1953b78b84e7c93c4c80e43eeebd0aff8c1cb6da5eeeb227",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chronic inflammation",
+      "draftLearningTask": "Compare causes and features of nonspecific and granulomatous inflammation and give representative examples.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f0961898e9b22e894c04a0e183de899b3ea217db1700d86bc3336b4b66d5e7c2",
+      "subjectId": "pathology",
+      "code": "PA3.4",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        267.54,
+        105.5,
+        302.1
+      ],
+      "sourceBodySha256": "4bfaf588b283e0cee41a1dc84acd25426b25761c8ce755432ce5ce55aac03780",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Inflammation specimens",
+      "draftLearningTask": "Identify acute and chronic inflammation in gross and microscopic examples and justify each classification.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346",
+      "subjectId": "pathology",
+      "code": "PA4.1",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        320.76,
+        105.5,
+        355.68
+      ],
+      "sourceBodySha256": "e1155673a49b661e64b9daa4b227fd54c4b8eaa1cd1c4b90e4713fc3ed132b15",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Repair and wound healing",
+      "draftLearningTask": "Compare regeneration and scarring and sequence healing by primary and secondary intention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:20e1bdcdfe1457fd9c57ec95e8da4d780d77cd18972c458c243247a26a501312",
+      "subjectId": "pathology",
+      "code": "PA5.1",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        378.72,
+        105.5,
+        413.28
+      ],
+      "sourceBodySha256": "e3f0e352a4048420e5ef9041babd834efb74e51e9e9c9af1be0bc25d8a13ce6f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Oedema",
+      "draftLearningTask": "Classify oedema by mechanism and relate hydrostatic, oncotic, permeability and lymphatic changes to representative presentations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269",
+      "subjectId": "pathology",
+      "code": "PA5.2",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        413.28,
+        105.5,
+        433.44
+      ],
+      "sourceBodySha256": "5fff0e11117dfe60174cbb2eda0e6216d5910e0a58f0a06bcaa8a4917e8a6a12",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyperemia, congestion and haemorrhage",
+      "draftLearningTask": "Distinguish active hyperaemia from passive congestion and classify representative haemorrhage patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ec1e54288562c3cef6fe15d294c3f1a77e85daf08a8aa3a5c2449854d08c8896",
+      "subjectId": "pathology",
+      "code": "PA5.3",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        433.44,
+        105.5,
+        456.84
+      ],
+      "sourceBodySha256": "2f5442d4ec1a9048925931cce9bfefd79a1677e943fa2d86c8bfe7831d15ca4e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Shock",
+      "draftLearningTask": "Compare major causes of circulatory failure and explain the progression from compensation to irreversible injury.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+      "subjectId": "pathology",
+      "code": "PA5.4",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        456.84,
+        105.5,
+        492.06
+      ],
+      "sourceBodySha256": "bc265f23be8a958db1603dd84cbba52d18f32f8efca7c4ae26f2e3f279aa0141",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemostasis and thrombosis",
+      "draftLearningTask": "Trace normal haemostasis and use Virchow's triad to explain thrombus formation and outcomes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+      "subjectId": "pathology",
+      "code": "PA5.5",
+      "page": 188,
+      "rowBBox": [
+        51.4,
+        492.06,
+        105.5,
+        525.18
+      ],
+      "sourceBodySha256": "d8a3cd0cf2fb2bb704f356e3036cdb86332e7982b4e498feae4ec679e5e4be42",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ischaemia, infarction and embolism",
+      "draftLearningTask": "Distinguish the three processes and relate causes and embolus type to distribution, morphology and clinical effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24",
+      "subjectId": "pathology",
+      "code": "PA5.6",
+      "page": 189,
+      "rowBBox": [
+        51.5,
+        124.5,
+        105.6,
+        157.26
+      ],
+      "sourceBodySha256": "7a6c1cef3fd73de17fed8b5f833169a9ba2e5766bed9ecd094aba48dedb6dd73",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infarct specimens",
+      "draftLearningTask": "Identify gross and microscopic features of representative infarcts and explain how tissue and timing affect appearance.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

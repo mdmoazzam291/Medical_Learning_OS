@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "status": "coverage-and-mapping-candidates",
+  "indexNames": 2427,
+  "previewNames": 121,
+  "exactPreviewMatches": 81,
+  "remainingNames": 2346,
+  "subjects": {
+    "medicine": {
+      "indexNames": 404,
+      "exactPreviewMatches": 8,
+      "remainingNames": 396
+    },
+    "anatomy": {
+      "indexNames": 407,
+      "exactPreviewMatches": 6,
+      "remainingNames": 401
+    },
+    "pediatrics": {
+      "indexNames": 249,
+      "exactPreviewMatches": 14,
+      "remainingNames": 235
+    },
+    "physiology": {
+      "indexNames": 134,
+      "exactPreviewMatches": 6,
+      "remainingNames": 128
+    },
+    "surgery": {
+      "indexNames": 121,
+      "exactPreviewMatches": 2,
+      "remainingNames": 119
+    },
+    "pathology": {
+      "indexNames": 181,
+      "exactPreviewMatches": 10,
+      "remainingNames": 171
+    },
+    "obstetrics-gynaecology": {
+      "indexNames": 142,
+      "exactPreviewMatches": 13,
+      "remainingNames": 129
+    },
+    "forensic-medicine": {
+      "indexNames": 157,
+      "exactPreviewMatches": 4,
+      "remainingNames": 153
+    },
+    "pharmacology": {
+      "indexNames": 92,
+      "exactPreviewMatches": 4,
+      "remainingNames": 88
+    },
+    "biochemistry": {
+      "indexNames": 83,
+      "exactPreviewMatches": 2,
+      "remainingNames": 81
+    },
+    "dermatology": {
+      "indexNames": 48,
+      "exactPreviewMatches": 1,
+      "remainingNames": 47
+    },
+    "ent": {
+      "indexNames": 63,
+      "exactPreviewMatches": 8,
+      "remainingNames": 55
+    },
+    "ophthalmology": {
+      "indexNames": 59,
+      "exactPreviewMatches": 2,
+      "remainingNames": 57
+    },
+    "community-medicine": {
+      "indexNames": 136,
+      "exactPreviewMatches": 3,
+      "remainingNames": 133
+    },
+    "anaesthesia": {
+      "indexNames": 51,
+      "exactPreviewMatches": 3,
+      "remainingNames": 48
+    },
+    "orthopaedics": {
+      "indexNames": 39,
+      "exactPreviewMatches": 0,
+      "remainingNames": 39
+    },
+    "microbiology": {
+      "indexNames": 73,
+      "exactPreviewMatches": 3,
+      "remainingNames": 70
+    },
+    "psychiatry": {
+      "indexNames": 15,
+      "exactPreviewMatches": 0,
+      "remainingNames": 15
+    },
+    "radiology": {
+      "indexNames": 21,
+      "exactPreviewMatches": 0,
+      "remainingNames": 21
+    }
+  },
+  "acceptedRegistryRecords": 12,
+  "canonicalCandidates": [],
+  "scope": "Accepted identity registry only. Exact labels require source-scope validation before binding.",
+  "mappingAccepted": false,
+  "previewCanonicalCandidates": [
+    {
+      "name": "Spinal cord extent and termination",
+      "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+      "priorIdentity": {
+        "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:bff943f8f8d6a41099b670567d240e019e706516521cf0c460d77fd7e31e1a3b",
+          "subject": "anatomy",
+          "code": "AN57.2"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord external anatomy",
+      "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+      "priorIdentity": {
+        "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:74d020a4a08c0746dfa925fe1cf755f4393e82556c4b1e5fb764b9cb006feb4c",
+          "subject": "anatomy",
+          "code": "AN57.1"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Motor neuron disease",
+      "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+      "priorIdentity": {
+        "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Poliomyelitis",
+      "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+      "priorIdentity": {
+        "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord sectional anatomy",
+      "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+      "priorIdentity": {
+        "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:f6e884076849a56fc0b10a496782c2e59b8c9b232c3912a1165b51c02f4b7fb7",
+          "subject": "anatomy",
+          "code": "AN57.3"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Paraplegia",
+      "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+      "priorIdentity": {
+        "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord pathways",
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "priorIdentity": {
+        "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884",
+          "subject": "anatomy",
+          "code": "AN57.4"
+        },
+        {
+          "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+          "subject": "physiology",
+          "code": "PY10.7"
+        },
+        {
+          "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+          "subject": "physiology",
+          "code": "PY10.9"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Hereditary sensory neuropathy",
+      "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+      "priorIdentity": {
+        "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Transverse myelitis",
+      "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+      "priorIdentity": {
+        "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Syringomyelia",
+      "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+      "priorIdentity": {
+        "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Spinal cord transection patterns",
+      "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+      "priorIdentity": {
+        "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+          "subject": "physiology",
+          "code": "PY10.10"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    },
+    {
+      "name": "Subacute combined degeneration",
+      "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+      "priorIdentity": {
+        "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+        "state": "accepted-private"
+      },
+      "references": [
+        {
+          "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+          "subject": "anatomy",
+          "code": "AN57.5"
+        }
+      ],
+      "status": "existing-accepted-identity-source-mapping-pending",
+      "mappingAccepted": false
+    }
+  ]
+}

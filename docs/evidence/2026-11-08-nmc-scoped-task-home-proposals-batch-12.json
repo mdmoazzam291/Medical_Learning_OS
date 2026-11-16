@@ -1,0 +1,1167 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-10.json",
+      "sha256": "8b42358aa9fe8aea57654b5ca3465604285d1edcaa555b5622147c744210f467"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-11.json",
+      "sha256": "92422976e793d8bed80b24fc30fa4a30f75e7a62566d1d1522cfb8bd3c6eda60"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-12:01",
+      "facetNameKey": "icu device position",
+      "facetName": "ICU device position",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3752d926786b482344060f1512bdbda91002a9b656f555f1359adb6667f0fd33",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD5.4",
+          "page": 459,
+          "rowBBox": [
+            40.1,
+            66.9,
+            103.9,
+            94.74
+          ],
+          "sourceBodySha256": "67e30c1af21b62c881bf6443110f9b35350ef11a8d59cce11cbb40f873eb7e76",
+          "editorialTaskSha256": "d95503c2783d8386548a5530cb7183f8c1b47ca33bad497c9e0b372853bb7c8d",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "ICU devices",
+      "proposedHomeNameKey": "icu devices",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Supplied adult/paediatric ICU radiograph position assessment and suspected-malposition communication; not insertion competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:02",
+      "facetNameKey": "icu monitoring",
+      "facetName": "ICU monitoring",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bb269f5d845c571894dfc1c250439e52fba8f19f70762e8ebd8bcea0ecf966a7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS7.5",
+          "page": 454,
+          "rowBBox": [
+            46.7,
+            457.74,
+            98.1,
+            475.32
+          ],
+          "sourceBodySha256": "1a7996e4e3bd794247ab9ee4792e8ba04fd7645895ae8e82bca6288d92c03707",
+          "editorialTaskSha256": "55f603dca1a0c90e49d94278e853402b27c11d19d2d20ce09fb0c3fd28d66b45",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Critical care",
+      "proposedHomeNameKey": "critical care",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Observed monitor choices/trends related to organ function, not independent critical care competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:03",
+      "facetNameKey": "imaging safety history",
+      "facetName": "Imaging safety history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d26836743de6d5018cdf48c4cfbd8856d01630dd5efd6968321824a0a8b22d5e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-radiology-rd1-rd7-draft-tasks.json",
+          "subjectId": "radiology",
+          "code": "RD2.1",
+          "page": 457,
+          "rowBBox": [
+            40.1,
+            403.8,
+            103.9,
+            458.52
+          ],
+          "sourceBodySha256": "30f69807dc544339d0c48c3124e2f093b308f7aa74d5e3d4952b785c6a92d5ea",
+          "editorialTaskSha256": "b52650b33c667f4f108774432c1c6314bc7585704c7c3a831b22932864ca4555",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diagnostic imaging",
+      "proposedHomeNameKey": "diagnostic imaging",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Allergy/renal/pregnancy/device history linked to imaging choice.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:04",
+      "facetNameKey": "immunization assessment",
+      "facetName": "Immunization assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:759f4f7711a32518934dcbfc5a0e97c7a53a1e198950d6a9ed808f1558aa76dd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE18.6",
+          "page": 336,
+          "rowBBox": [
+            51.3,
+            517.5,
+            103.1,
+            550.08
+          ],
+          "sourceBodySha256": "f71c39dabea9adae670541ee6d2c86d6ceaaa7e8a24383921fc9358e787e935d",
+          "editorialTaskSha256": "0f8e49376a96c051ae841b61e91542a8d1a7b009d1a8fca30f7cc47f724525b9",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Immunization",
+      "proposedHomeNameKey": "immunization",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated child fitness/schedule planning under source guidance; current schedule not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:05",
+      "facetNameKey": "immunization records",
+      "facetName": "Immunization records",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b1471f2dfd4391e4a36e7b867c73113e6a88f13dc75b83667d50de45870f1125",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE18.10",
+          "page": 337,
+          "rowBBox": [
+            51.3,
+            146.22,
+            103.1,
+            161.28
+          ],
+          "sourceBodySha256": "da00de78d850bbc74e89900a36fefd9b2cd0688d23908dbb0044bd3e94cd9369",
+          "editorialTaskSha256": "086dca04b25503d627f3bc204968f6ee649f4f28f35c2946a0ae73173bb3050e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Immunization",
+      "proposedHomeNameKey": "immunization",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated vaccine/dose/date/appointment record only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:06",
+      "facetNameKey": "imnci risk classification",
+      "facetName": "IMNCI risk classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8a952afba06c9846fbfe7a1b8edac36a0abcdefcaed58b3dcc0bce33efcf0bd4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE16.1",
+          "page": 335,
+          "rowBBox": [
+            51.3,
+            445.86,
+            103.1,
+            478.44
+          ],
+          "sourceBodySha256": "383c0ad0ba3bb74e589a446935574c8c3ec6ff99d3ee7deeea911fb476382d13",
+          "editorialTaskSha256": "128a13b37fbdc75fbe36ae19be8e99e980cde7c2790ce4e7f4fb1fb8fd764892",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Integrated management of childhood illness",
+      "proposedHomeNameKey": "integrated management of childhood illness",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Source guideline assessment-risk-next-step logic, not refreshed current criteria.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:07",
+      "facetNameKey": "imnci undernutrition referral",
+      "facetName": "IMNCI undernutrition referral",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4a13a0b360443a80d45c7929f798b5679eeac9a49d937d58ad8493d142834a5e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE16.4",
+          "page": 336,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            84.9
+          ],
+          "sourceBodySha256": "0f638e82a78d323051db08c23c05e7649ae94a740bd3faad479fabb0b4dd3670",
+          "editorialTaskSha256": "c421df4ea134419a1678b8439d45417101edba045a3217e3e6eb51dc40e797a7",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Integrated management of childhood illness",
+      "proposedHomeNameKey": "integrated management of childhood illness",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Applicable undernutrition criteria and referral planning within IMNCI source context.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:08",
+      "facetNameKey": "indian demography",
+      "facetName": "Indian demography",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3e70e3b7f0f41130b773531dc2df2fc9d7c8fab9f5c6ae9c6774af18d782f137",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm1-cm4-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM1.8",
+          "page": 269,
+          "rowBBox": [
+            40.1,
+            347.46,
+            98.6,
+            376.8
+          ],
+          "sourceBodySha256": "1eeea965b42e2cc2797b64cc285fb2f4fa04c8cbbf3aea0022b967c772142a4f",
+          "editorialTaskSha256": "dc07a816747d5213dc2b150796683c95e387dfe6990bd538c038883b66d63393",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Demography",
+      "proposedHomeNameKey": "demography",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "demography"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Dated Indian population profile and service needs; estimates not refreshed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:09",
+      "facetNameKey": "individualized dosing",
+      "facetName": "Individualized dosing",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a216b95a3262aaf32f53ad901609ef6d7998a1525a97cc3b266e77c7e00ac543",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH10.9",
+          "page": 184,
+          "rowBBox": [
+            51.7,
+            323.7,
+            105.7,
+            366.72
+          ],
+          "sourceBodySha256": "810c920a86d535a1f8cae1e82a427334ea1ab203d961ababdb523c17ed275068",
+          "editorialTaskSha256": "e22957a35144576bca3e478b1c1a83275bd705617ea9dcd7b6cf4504f88e4b14",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Drug dosing",
+      "proposedHomeNameKey": "drug dosing",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated dose calculation/justification with age/pregnancy/lactation/organ-function limits.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:10",
+      "facetNameKey": "infarct specimens",
+      "facetName": "Infarct specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA5.6",
+          "page": 189,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            157.26
+          ],
+          "sourceBodySha256": "7a6c1cef3fd73de17fed8b5f833169a9ba2e5766bed9ecd094aba48dedb6dd73",
+          "editorialTaskSha256": "899c128deb92033bccbe89b3f313e08f19ff04881a8af869404e7e0b172ce9dc",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Infarction",
+      "proposedHomeNameKey": "infarction",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "infarction"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Gross/microscopic infarct patterns and tissue/time-dependent appearance.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:11",
+      "facetNameKey": "infection epidemiology",
+      "facetName": "Infection epidemiology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:49438fa2b758d33967bf4f65308369ccca9ca5c5e256a7969f0508160b9f8070",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI1.11",
+          "page": 207,
+          "rowBBox": [
+            51.9,
+            196.92,
+            108.8,
+            227.88
+          ],
+          "sourceBodySha256": "75badc01aa70bcb4a2ad5b6fcdb69292a98772f237a0d3dee8c01937b0da1453",
+          "editorialTaskSha256": "4d662ad1987e2b4cdc6e89a61fc5d6eaaa2b63f99e5cd56e7c70b35ef9b7afad",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Communicable disease epidemiology",
+      "proposedHomeNameKey": "communicable disease epidemiology",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative transmission/population-based outbreak explanation/control.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:12",
+      "facetNameKey": "infectious peptic disease",
+      "facetName": "Infectious peptic disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f11785109a9660cc566818f568529a4332eebc857dc7fdae5049e2ba3b3a6a44",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI4.6",
+          "page": 210,
+          "rowBBox": [
+            51.9,
+            239.76,
+            108.8,
+            280.8
+          ],
+          "sourceBodySha256": "6c9a5070c4687a21464648983cd81ab7afbf748375e3fb4907750ed925a8347d",
+          "editorialTaskSha256": "ab24fcbc78b936cd99de3a049f4197a328953ef8301d0a3238976fc0d6c4b68a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Helicobacter pylori infection",
+      "proposedHomeNameKey": "helicobacter pylori infection",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "H. pylori association, diagnostic/eradication principles in acid-peptic disease; no current regimen certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:13",
+      "facetNameKey": "infertility assessment",
+      "facetName": "Infertility assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e445c0a9c904f6648f77abc535bad2b7fdb06caac532b14f92623aa8e3987967",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og27-3-og38-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG28.1",
+          "page": 437,
+          "rowBBox": [
+            49.1,
+            421.62,
+            103.1,
+            479.64
+          ],
+          "sourceBodySha256": "7166dc29c556ec359f5e5eeafe9b2dd0391eebd598a448601a9c22aa6b52d104",
+          "editorialTaskSha256": "fbbcef5d15362ae6163b74b9b9ac346f99b4e91f6ea3d4f810f04ec0f7a8184a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Infertility",
+      "proposedHomeNameKey": "infertility",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "infertility"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Both-partner assessment and context-dependent tubal/ovulation/assisted-reproduction choices.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:14",
+      "facetNameKey": "inflammation specimens",
+      "facetName": "Inflammation specimens",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f0961898e9b22e894c04a0e183de899b3ea217db1700d86bc3336b4b66d5e7c2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA3.4",
+          "page": 188,
+          "rowBBox": [
+            51.4,
+            267.54,
+            105.5,
+            302.1
+          ],
+          "sourceBodySha256": "4bfaf588b283e0cee41a1dc84acd25426b25761c8ce755432ce5ce55aac03780",
+          "editorialTaskSha256": "4bcf093c4c7e113c0a8104cb034b6539baac63f63dd49556a739a366694420b1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Inflammation",
+      "proposedHomeNameKey": "inflammation",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Acute/chronic gross/microscopic recognition and classification justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:15",
+      "facetNameKey": "inflammatory fever",
+      "facetName": "Inflammatory fever",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ef278ff6c74a0baa130bb14338a6a67bcef299c96e2a506a1150992c2474b4ca",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM4.4",
+          "page": 288,
+          "rowBBox": [
+            44.2,
+            235.2,
+            102.7,
+            275.94
+          ],
+          "sourceBodySha256": "667fda1d78aa2c1d36c05e3709b3c9b47787307b94630911653f7d61dc40c68e",
+          "editorialTaskSha256": "7bf89ad43aeff05b47ef9300697675596057803f73efa8662615baef664fbc7d",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Fever",
+      "proposedHomeNameKey": "fever",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "fever"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Inflammatory mechanisms linked to clinical fever patterns.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:16",
+      "facetNameKey": "inguinal lymph node enlargement",
+      "facetName": "Inguinal lymph node enlargement",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:95fc7a97e4132b8b1e2dedf0c325c62d2585711405044f40b535ec910eb5a706",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN20.4",
+          "page": 119,
+          "rowBBox": [
+            51.2,
+            445.74,
+            122.2,
+            478.44
+          ],
+          "sourceBodySha256": "91c2a0e9504a36011e04a7d754b61c8f33b91c5e270370c1bc0f648692eeafe7",
+          "editorialTaskSha256": "26bb2adcdd7c2afde16be9c9515404a507771d2f7abf010c1a9b8378513108fd",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Inguinal lymph nodes",
+      "proposedHomeNameKey": "inguinal lymph nodes",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Superficial/deep drainage territory explanation of local node enlargement.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:17",
+      "facetNameKey": "initial blistering disorder care",
+      "facetName": "Initial blistering disorder care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:423037ad6ce211c6a54dc88c9270373315fbd07cbd31fd0cc72fed5c453eb9a3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR13.2",
+          "page": 361,
+          "rowBBox": [
+            39.9,
+            209.46,
+            101.6,
+            263.58
+          ],
+          "sourceBodySha256": "46aba5e15c1746787e76dc7f6d81abf41406a1cb9338e81afc53817dcde5520f",
+          "editorialTaskSha256": "7c70bc52b6f1cbf2566cef4db27c428af1b1dee1f7e48dbad8c33614b67be445",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Blistering skin disorders",
+      "proposedHomeNameKey": "blistering skin disorders",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated blistering assessment/support/referral, diagnoses remain unspecified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:18",
+      "facetNameKey": "initial care for drug reactions",
+      "facetName": "Initial care for drug reactions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4dfc208b00c7d5a96c67fb78d4911d5bae413a89c83e1d3558ada5f2561d1e1d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR12.5",
+          "page": 360,
+          "rowBBox": [
+            39.9,
+            499.2,
+            101.6,
+            539.94
+          ],
+          "sourceBodySha256": "5d4d446ba568437d99da96577c6ae3e915e2a7441b39c517d82466e0f97b83ec",
+          "editorialTaskSha256": "a6c180c29f33f89626554d3af52ec10b826a1e915bb2f6cf540db0848946b549",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Adverse drug reactions",
+      "proposedHomeNameKey": "adverse drug reactions",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated reaction assessment/safety/documentation/escalation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:19",
+      "facetNameKey": "initial gi bleed care",
+      "facetName": "Initial GI bleed care",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ed2750629037c50b24f391664632b457eb2a857b8f5f4458e61b018dfd9e5f25",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.2",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            361.32,
+            102.7,
+            402.06
+          ],
+          "sourceBodySha256": "da222c9a11b099f5d8733c9c9a2650e74bfe251443edc10599288df0c3657922",
+          "editorialTaskSha256": "222aecb509338576760804e2dc159a90ccfd8fb49aec40fcd3878e1dda237db1",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Gastrointestinal bleeding",
+      "proposedHomeNameKey": "gastrointestinal bleeding",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated acute blood-loss assessment/stabilization, not independent resuscitation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:20",
+      "facetNameKey": "initial stroke support",
+      "facetName": "Initial stroke support",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8757c33fbb3f47999686fc737ad2563facd8fed2108b822d7a2ef8dd6566a711",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm17-gm20-1-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM18.10",
+          "page": 311,
+          "rowBBox": [
+            44.2,
+            147.24,
+            102.7,
+            174.48
+          ],
+          "sourceBodySha256": "1aeb5c5d983ec8c170050514c18fe5730963c22ede2ade0075d31dbed9928b9a",
+          "editorialTaskSha256": "03ec50e89c462aae312e6b50f8fb22224553118e7b1a370cffa20397e61da3e0",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Stroke",
+      "proposedHomeNameKey": "stroke",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated immediate stroke assessment/support/escalation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:21",
+      "facetNameKey": "injury classification",
+      "facetName": "Injury classification",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:57a3fe60f8ac9511f6d18164a090a34ab6e55b0c318a79726464621d6f8b590e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm5-fm9-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM5.3",
+          "page": 221,
+          "rowBBox": [
+            45.5,
+            52.38,
+            94,
+            95.94
+          ],
+          "sourceBodySha256": "e2471f98580178019e42a173bd195bdd9d59ae313a031a3b7da8ae4bd9efee84",
+          "editorialTaskSha256": "469b1663a59277418cc08a7c306ad05f1ff840a9f2bf28d66ad1d768cf1ec533",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Injury",
+      "proposedHomeNameKey": "injury",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Manner/severity and timing-support findings; current legal severity categories not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:22",
+      "facetNameKey": "injury response",
+      "facetName": "Injury response",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:967b4ebd645dad0282f83fe1466019d6559f4a4074236580e6f8b9feac839421",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU1.1",
+          "page": 403,
+          "rowBBox": [
+            45,
+            188.76,
+            101.7,
+            224.46
+          ],
+          "sourceBodySha256": "c9c93328cad21979c6cb5cf08a976e1ef223148e66527c6f9b302af0edbab83a",
+          "editorialTaskSha256": "8db814362a33b150c2c0cf035ee879e3d8187d833af3dcb293f3aa97930c4485",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Trauma physiology",
+      "proposedHomeNameKey": "trauma physiology",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Homeostatic/metabolic response to injury and major mediators, not entire trauma management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:23",
+      "facetNameKey": "integrated anaemia workup",
+      "facetName": "Integrated anaemia workup",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1f04078db79571d3cb84287e5672e60d21c577e05de7a2db8c07cf1dce34737e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM9.9",
+          "page": 297,
+          "rowBBox": [
+            44.2,
+            207.06,
+            102.7,
+            234.24
+          ],
+          "sourceBodySha256": "15cddb84ab9505f4351cfa2ac5a4c87c328868cce72ae9442827e0cdea46a975",
+          "editorialTaskSha256": "130ae0f98c5a47d395acb49b8cd453d294bd37567ff2a518751f75068d6054e5",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Staged diagnosis from clinical/laboratory data.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:24",
+      "facetNameKey": "integrated cardiac assessment",
+      "facetName": "Integrated cardiac assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9e93da534384feca281be1fe5f926abd2fd3a7ca4014cec640c41111122f7dfb",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM1.26",
+          "page": 283,
+          "rowBBox": [
+            44.2,
+            513.06,
+            102.7,
+            540.6
+          ],
+          "sourceBodySha256": "659d110aa198bd923208a25ec5ebe75021d07e340436e1e5702fac75eacc24c7",
+          "editorialTaskSha256": "5899a0717ea8dde69c993fd88b442dbfeaa46fa4014d9c6a29e877bdfc66f89c",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Cardiovascular clinical assessment",
+      "proposedHomeNameKey": "cardiovascular clinical assessment",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated focused history and general/cardiovascular examination.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:25",
+      "facetNameKey": "interactions",
+      "facetName": "Interactions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8e30581d749632fde1f73400b4c2de640548e55a52c6b765ff9522b0ab5ea915",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH1.13",
+          "page": 175,
+          "rowBBox": [
+            51.7,
+            304.08,
+            105.7,
+            346.56
+          ],
+          "sourceBodySha256": "e9a909d682d2f793718afce9160ce9904c00515c2602b50311e9110f811776e0",
+          "editorialTaskSha256": "4d2bd5c704062001d71628acd58c986d798d163f659aa054d648132b46d67d4b",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Drug interactions",
+      "proposedHomeNameKey": "drug interactions",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sample-regimen interaction identification and monitoring/separation/substitution proposal.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:26",
+      "facetNameKey": "intestinal anatomy",
+      "facetName": "Intestinal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:331652f9e57ac3a4337b7f7ba5b22889d1c49f89040d58822540639a7b910a46",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.13",
+          "page": 411,
+          "rowBBox": [
+            45,
+            118.32,
+            101.7,
+            145.38
+          ],
+          "sourceBodySha256": "5baf711986e03cf2058cbfffd0ce39a15c0c670875e0c7751852330be42d6b85",
+          "editorialTaskSha256": "448b24f5a3691d530fa4e67b8a334d4a74503898bedc627ac2c25fc86d7c84c2",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Intestine",
+      "proposedHomeNameKey": "intestine",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Bowel segments, vascular territories and mesenteric relations in surgical presentations.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:27",
+      "facetNameKey": "intraoperative monitoring",
+      "facetName": "Intraoperative monitoring",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8b5a47fac86c81d15610712607a105ebffdd98f9df65ceb75d5ce1a21e46db6e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-anaesthesia-as1-as11-draft-tasks.json",
+          "subjectId": "anaesthesia",
+          "code": "AS4.5",
+          "page": 453,
+          "rowBBox": [
+            46.7,
+            396.24,
+            98.1,
+            420.66
+          ],
+          "sourceBodySha256": "f8d420cfb659eaf581a42a5d05f54b0e8a3d7bab19210606abd25b7d2b8d7207",
+          "editorialTaskSha256": "582057ec6ac31e112c2fb9303bf6abc97d5eba9ac05c01122de634b20fa835bb",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaesthesia monitoring",
+      "proposedHomeNameKey": "anaesthesia monitoring",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Observed setup and readings, not independent anaesthetic monitoring competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:28",
+      "facetNameKey": "investigation selection",
+      "facetName": "Investigation selection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7cee991a8fa8510b14989679fe7c1475da6bdb04929219dc05091558d2823e4d",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI9.3",
+          "page": 212,
+          "rowBBox": [
+            51.9,
+            457.26,
+            108.8,
+            498.3
+          ],
+          "sourceBodySha256": "889b58e0dd67e2ca9d3aa7727bf38f7b70251d11a837965718bdd5698cb0f781",
+          "editorialTaskSha256": "0255d10741b62297bd61506cbbc82cc60002c87ed4cb16b6d57781a70b0ac572",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Diagnostic microbiology",
+      "proposedHomeNameKey": "diagnostic microbiology",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated microbiological test selection/report interpretation, not generic all-investigation competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:29",
+      "facetNameKey": "iridocyclitis workup",
+      "facetName": "Iridocyclitis workup",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:048b59f3dde89fcb9765701f3fd3b1db2b59affdfe0b405515be0622c22069fc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP6.2",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            459.96,
+            103.5,
+            482.34
+          ],
+          "sourceBodySha256": "30274ead7e9ac6d3a6a06bdac24cd807534869feb15d7987806d5aaa004211ce",
+          "editorialTaskSha256": "5ad34e31ebad50b63bae5662b24aba0499897f91c35371ed42d9640b9fd0437c",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Iridocyclitis",
+      "proposedHomeNameKey": "iridocyclitis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Cause/complication-guided investigation and treatment principles.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-12:30",
+      "facetNameKey": "ischaemic disease progression",
+      "facetName": "Ischaemic disease progression",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d62971969f8162f77e61915d39c3b13048193eda4e5956fc5fae09b05fcc224f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM2.4",
+          "page": 284,
+          "rowBBox": [
+            44.2,
+            283.08,
+            102.7,
+            310.62
+          ],
+          "sourceBodySha256": "0f37f6cabd7d118cc46a0d5443f7e6ce3bfe6e9951b9a7e023ec18d92d4b91b4",
+          "editorialTaskSha256": "2650eba36d66e6d85b6d05fbb5e2d668d82722cd4bb6a84ee5da8169cb104d41",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Ischaemic heart disease",
+      "proposedHomeNameKey": "ischaemic heart disease",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "ischaemic heart disease"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "ischaemic heart disease"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Plaque evolution and chronic/acute clinical outcome mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 30,
+    "distinctProposedHomes": 28,
+    "existingNameHomeLinks": 6,
+    "newNameHomeLinks": 24,
+    "facetsWithoutInitialHomeProposal": 299
+  }
+}

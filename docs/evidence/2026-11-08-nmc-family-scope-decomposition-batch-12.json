@@ -1,0 +1,2692 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-family-scope-decomposition-proposals",
+  "selectionLimit": 30,
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-01.json",
+      "sha256": "5b9261c7fc4894d90db917721dac0993864f6965bbd6b533c6e49edc0bcdac96"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-02.json",
+      "sha256": "b8ed6f63374f76de58a7ead10fd87ae7940aa2dfbcbf342aeed49cfecdcd91b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-03.json",
+      "sha256": "6d1e587d3e7ceab0959844dc8b26695e82b273dfdd77f5c8f987666ca41d1c28"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-04.json",
+      "sha256": "b93e2e836f87147173a2ce0936dfff33c9e33149a59228a98edd2afdb953a17b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-05.json",
+      "sha256": "a0dd5a6b37bd76b2e0578d64790301e0718f542c1b844c6f768e834adef6b4e7"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-06.json",
+      "sha256": "f411e88ef1e4367eb3619c7faa280c2f129b3f34a8a991e7be0082ba4e6d8e80"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-07.json",
+      "sha256": "f59293cdd87b528101588f9739d11dbb05a233e93dbf22272a7b5dcfd8f3839e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-08.json",
+      "sha256": "6487fb2cc8dc38bb3d7728c32f2481eb6732a6a9378492b1abf3d50a93c1daa4"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-09.json",
+      "sha256": "f2c606aeeb7a307dfdef7426e7fa303b2917804e0f05cb13478d843bafb3d3b0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-10.json",
+      "sha256": "d195a4152f9306dfa228fc1e8eca7420ac591ff4f63fcb1c997113ce7ee4194b"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-family-scope-decomposition-batch-11.json",
+      "sha256": "f302b866b95ad0c898caf95208b548d6a7ea78787261c0a57a8a3c95febe012e"
+    }
+  ],
+  "sourceHead": "ccda08c20fe4e50d190546700e3a70655b8265e2",
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "totals": {
+    "parentNames": 30,
+    "sourceTaskAppearances": 30,
+    "componentProposals": 135,
+    "familyParentsWithoutDecompositionProposal": 292
+  },
+  "rows": [
+    {
+      "parentNameKey": "intra-abdominal lesions",
+      "parentName": "Intra-abdominal lesions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.4",
+          "page": 410,
+          "rowBBox": [
+            45,
+            288.9,
+            101.7,
+            335.46
+          ],
+          "sourceBodySha256": "edadf6172f35a543537f3d143fd899fff427e08e646e954cf8f0930e603cfada",
+          "editorialTaskSha256": "10e1b1a3353534c70273a7b136c0934f3d3fe40c79e9aa91ac285f7791ad39b4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:01:01",
+          "name": "Intra-abdominal abscess",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:01:02",
+          "name": "Mesenteric cyst",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:01:03",
+          "name": "Retroperitoneal tumour",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:01:04",
+          "name": "Intra-abdominal lesion findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:01:05",
+          "name": "Intra-abdominal lesion investigations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:01:06",
+          "name": "Intra-abdominal lesion treatment principles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:de425fec1adad98e5efd880d66f06811456ecfc2cc4899a78a6288a5a3fc6baf"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intracellular accumulations",
+      "parentName": "Intracellular accumulations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa1-pa5-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA2.3",
+          "page": 187,
+          "rowBBox": [
+            51.5,
+            387.66,
+            105.6,
+            418.62
+          ],
+          "sourceBodySha256": "1f06218e3f6c492e10d58a22b6ac5a7f22a8bd7e917989f9fc8a496b0f259ca8",
+          "editorialTaskSha256": "f2904094e0f070ebe01d97fd72ed9afe200873cffc970c1fb0142ed1bc277ee4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:02:01",
+          "name": "Intracellular lipid accumulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:02:02",
+          "name": "Intracellular protein accumulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:02:03",
+          "name": "Intracellular carbohydrate accumulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:02:04",
+          "name": "Intracellular pigment accumulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:02:05",
+          "name": "Intracellular accumulation image interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "intraocular muscles",
+      "parentName": "Intraocular muscles",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-oral-pharyngeal-sensory-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN41.3",
+          "page": 131,
+          "rowBBox": [
+            51.2,
+            499.32,
+            121.7,
+            530.64
+          ],
+          "sourceBodySha256": "4fe31176f1a96076420265637324b454473d85f56382b9dc2c6a1d1ca3b11b8b",
+          "editorialTaskSha256": "89997629962e8774a4d174204cf63b74f35b6b5a08dd23749373dde7376c378d",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:03:01",
+          "name": "Sphincter pupillae",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:03:02",
+          "name": "Dilator pupillae",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:03:03",
+          "name": "Ciliary muscle",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:03:04",
+          "name": "Intraocular muscle autonomic supply",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:03:05",
+          "name": "Pupil size control",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:03:06",
+          "name": "Accommodation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "accommodation"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "iodine programmes",
+      "parentName": "Iodine programmes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:360829c6c63239e20f4c20167e33d46a0218e2089b28df6dc621245719b8f5f9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM12.11",
+          "page": 302,
+          "rowBBox": [
+            44.2,
+            311.28,
+            102.7,
+            338.64
+          ],
+          "sourceBodySha256": "2cb480bb6fcf3088e0540be7374ae309d00a855f04305b9f01e8449fe92a3ffd",
+          "editorialTaskSha256": "e8523516c66209aa9a9c03203db6d4ce055091a3c24357d7a021e674bd2ede0b",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:04:01",
+          "name": "Indian iodisation programme documents",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:360829c6c63239e20f4c20167e33d46a0218e2089b28df6dc621245719b8f5f9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:04:02",
+          "name": "Iodine programme surveillance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:360829c6c63239e20f4c20167e33d46a0218e2089b28df6dc621245719b8f5f9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "joint dislocations",
+      "parentName": "Joint dislocations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR1.4",
+          "page": 444,
+          "rowBBox": [
+            49.1,
+            413.7,
+            103.1,
+            457.38
+          ],
+          "sourceBodySha256": "ea659017cdd3f07a4f70e59a694af34188778f326fa99691d3e06f39df09f929",
+          "editorialTaskSha256": "215c081640189d77a5d03e393e0409d57f1d0015a625287b6403b6e10d9023c5",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:05:01",
+          "name": "Shoulder dislocation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:02",
+          "name": "Knee dislocation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:03",
+          "name": "Hip dislocation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+              "nameKey": "hip dislocation"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:04",
+          "name": "Finger dislocation",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:05",
+          "name": "Joint dislocation mechanisms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:06",
+          "name": "Joint dislocation examination",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:07",
+          "name": "Joint dislocation imaging",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:05:08",
+          "name": "Joint dislocation management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b5935f407369a5d9ae679ce3dc60a75fa6c42262f4451a2aa33f8e2469db80f3"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "joint radiographs",
+      "parentName": "Joint radiographs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2103c94d1dd3f40d90370b1882e889812f43200f93fc94da814d0efcd272fc23",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM7.13",
+          "page": 294,
+          "rowBBox": [
+            44.2,
+            317.22,
+            102.7,
+            344.58
+          ],
+          "sourceBodySha256": "2088ff52cddba2600335c8c369aaa195e99c7cfbfa96c5297e4e4c57589d2214",
+          "editorialTaskSha256": "0294ed98f3bd18c4a5a4cdea248a9de3f28cccbc8b4ccfadf589dec2da9712ab",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:06:01",
+          "name": "Joint radiograph view selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2103c94d1dd3f40d90370b1882e889812f43200f93fc94da814d0efcd272fc23"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:06:02",
+          "name": "Sample joint radiograph interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:2103c94d1dd3f40d90370b1882e889812f43200f93fc94da814d0efcd272fc23"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "keratoplasty",
+      "parentName": "Keratoplasty",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7fa2d8512b1cf246c86e49cfd8f8edf740073ce61e524a22ebc5bb242d42f991",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP4.7",
+          "page": 416,
+          "rowBBox": [
+            49.5,
+            176.76,
+            103.5,
+            194.58
+          ],
+          "sourceBodySha256": "99dadadf654b78ca67d4175b621c0ce1e4bfe7025bf10838cf1a7dc1d1c9e504",
+          "editorialTaskSha256": "7def4966ab585e07b3e47ff24495df1862c42f3a630e36a87d6ae6ca34cd1bb4",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:07:01",
+          "name": "Keratoplasty tissue-layer classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fa2d8512b1cf246c86e49cfd8f8edf740073ce61e524a22ebc5bb242d42f991"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:07:02",
+          "name": "Keratoplasty indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7fa2d8512b1cf246c86e49cfd8f8edf740073ce61e524a22ebc5bb242d42f991"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "kidney replacement therapy",
+      "parentName": "Kidney replacement therapy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm10-19-gm12-7-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM10.22",
+          "page": 299,
+          "rowBBox": [
+            44.2,
+            323.16,
+            102.7,
+            350.52
+          ],
+          "sourceBodySha256": "c6bf97aedefa0ab1c7ffe39eb735a7a34ea5fb88c725018e96caadb3cc1b8c45",
+          "editorialTaskSha256": "023717c04df0097889f5de0995a6fdcffd3119e99790b73ea495a6f90e77d773",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:08:01",
+          "name": "Dialysis indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a"
+          ],
+          "existingExactLabelCandidates": [
+            {
+              "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+              "nameKey": "dialysis indications"
+            }
+          ],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:08:02",
+          "name": "Kidney transplant assessment indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:c91083298f2785ea24bdb153a29222da4d06cdcc09b909ab80291c6d4eac9c4a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "knee injuries",
+      "parentName": "Knee injuries",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN18.6",
+          "page": 118,
+          "rowBBox": [
+            51.2,
+            409.38,
+            121.9,
+            440.28
+          ],
+          "sourceBodySha256": "cce64c0d826eff3656a40ee76b4ce9d6b14adabed32dd8386c00f20091258920",
+          "editorialTaskSha256": "ce25dbf0bdf8a1c32e0368b9b14c502ecac2240f4c2b462d32b58d425dc9400a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:09:01",
+          "name": "Knee injury force direction",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:09:02",
+          "name": "Knee ligament injury localisation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:09:03",
+          "name": "Knee meniscal injury localisation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:09:04",
+          "name": "Knee injury instability",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:09:05",
+          "name": "Knee injury mechanical symptoms",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:9feda16e6aaab5928a5c2199447958137e9d9d4e5448bddf1f6f5e344f20f1a6"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "laboratory errors",
+      "parentName": "Laboratory errors",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.20",
+          "page": 171,
+          "rowBBox": [
+            58.5,
+            459.36,
+            108.2,
+            513.36
+          ],
+          "sourceBodySha256": "43af83f9e60c842d5b111140a57498d7fa486ed68410a59aaa7a68c9690d6a49",
+          "editorialTaskSha256": "fa78d690e4c1f5b7173c04e22bfc1955a226bc3e171fc5b661c0176764cc2f65",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:10:01",
+          "name": "Pre-analytical laboratory errors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:10:02",
+          "name": "Analytical laboratory errors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:10:03",
+          "name": "Post-analytical laboratory errors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:10:04",
+          "name": "Order of draw errors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:10:05",
+          "name": "Tourniquet technique errors",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:10:06",
+          "name": "Simulated laboratory error recognition",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "laboratory tests for gi bleeding",
+      "parentName": "Laboratory tests for GI bleeding",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM15.9",
+          "page": 306,
+          "rowBBox": [
+            44.2,
+            248.76,
+            102.7,
+            289.32
+          ],
+          "sourceBodySha256": "dfcac8820c7437c7a455a5aeda36043efbd65db3fb204dbe184bbe46e15dd16a",
+          "editorialTaskSha256": "3530f92dff3dceaf6b6bccb46ac705a08e0c2d2c7948fc4cc3b51ea878535e2e",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:11:01",
+          "name": "Blood count interpretation in gastrointestinal bleeding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:11:02",
+          "name": "Coagulation testing in gastrointestinal bleeding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:11:03",
+          "name": "Stool testing in gastrointestinal bleeding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:11:04",
+          "name": "Liver testing in gastrointestinal bleeding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:11:05",
+          "name": "H. pylori testing in gastrointestinal bleeding",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:a531b5bdd96c9b060523d8aa7161e96ba9f4e005bc5039d3745c8efabea0b267"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "laryngoscopy",
+      "parentName": "Laryngoscopy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:8343544bccfaf90da82864f68f6c14028753f29e17b6bf1d60731c7e0d0a7bb4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ent-en1-en4-draft-tasks.json",
+          "subjectId": "ent",
+          "code": "EN3.3",
+          "page": 421,
+          "rowBBox": [
+            40,
+            425.46,
+            94.3,
+            457.14
+          ],
+          "sourceBodySha256": "15044d0cc173df752dde28d9d6db8f868967f7d41fe100c16fc80890dc18a033",
+          "editorialTaskSha256": "8862506f8ace21e56ed8e14df1625ae4a49e56d2810e0521a801a2ef8bf5396a",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:12:01",
+          "name": "Observed rigid laryngoscopy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8343544bccfaf90da82864f68f6c14028753f29e17b6bf1d60731c7e0d0a7bb4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:12:02",
+          "name": "Observed flexible laryngoscopy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8343544bccfaf90da82864f68f6c14028753f29e17b6bf1d60731c7e0d0a7bb4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:12:03",
+          "name": "Laryngoscopy indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8343544bccfaf90da82864f68f6c14028753f29e17b6bf1d60731c7e0d0a7bb4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:12:04",
+          "name": "Laryngoscopy steps",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:8343544bccfaf90da82864f68f6c14028753f29e17b6bf1d60731c7e0d0a7bb4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "late post-mortem changes",
+      "parentName": "Late post-mortem changes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-forensic-medicine-fm1-fm2-draft-tasks.json",
+          "subjectId": "forensic-medicine",
+          "code": "FM2.10",
+          "page": 217,
+          "rowBBox": [
+            45.5,
+            368.46,
+            95.2,
+            401.94
+          ],
+          "sourceBodySha256": "4a9d5df7fa261c882fd3dbf287a5f3cb86d7c6fb71b681f1b9928179cd290f30",
+          "editorialTaskSha256": "fed2628bdc72c16bfe473b3d573ce67be71672619e555c41c9d8f0160ad2ceb2",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:13:01",
+          "name": "Decomposition",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:13:02",
+          "name": "Mummification",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:13:03",
+          "name": "Adipocere",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:13:04",
+          "name": "Maceration",
+          "proposedRole": "reusable-topic-candidate",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:13:05",
+          "name": "Late post-mortem change circumstances",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:13:06",
+          "name": "Late post-mortem change appearance",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:e3922ef3ffc39932e7e7fcdb027890ada6772e8e06f73a0cee8116dd90cb25e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lepra reactions",
+      "parentName": "Lepra reactions",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:735d32d6c50f817a74da52dc29585583b0750cf59e55b784fa6ed4d5d2202538",
+          "packetPath": "docs/evidence/2026-11-05-nmc-dermatology-dr1-dr15-draft-tasks.json",
+          "subjectId": "dermatology",
+          "code": "DR9.4",
+          "page": 358,
+          "rowBBox": [
+            39.9,
+            229.74,
+            101.6,
+            297.36
+          ],
+          "sourceBodySha256": "d49a2f5a6d40e4f216d50d09a669717426c4b0dbcc5073798f393779fd5211b7",
+          "editorialTaskSha256": "40a328b46f2c4ef3e977e8965554ba998a9372f48b049794ab5d51cd4dbb6cf1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:14:01",
+          "name": "Lepra reaction classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:735d32d6c50f817a74da52dc29585583b0750cf59e55b784fa6ed4d5d2202538"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:14:02",
+          "name": "Lepra reaction nerve injury risk",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:735d32d6c50f817a74da52dc29585583b0750cf59e55b784fa6ed4d5d2202538"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:14:03",
+          "name": "Simulated lepra reaction management planning",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:735d32d6c50f817a74da52dc29585583b0750cf59e55b784fa6ed4d5d2202538"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "leucocytes",
+      "parentName": "Leucocytes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82",
+          "packetPath": "docs/evidence/2026-11-05-nmc-physiology-general-blood-nerve-muscle-draft-tasks.json",
+          "subjectId": "physiology",
+          "code": "PY2.6",
+          "page": 150,
+          "rowBBox": [
+            58.5,
+            512.7,
+            107.8,
+            545.82
+          ],
+          "sourceBodySha256": "9b5d1e16bffb27a39f66cccc4ceaf1626ee016cc299192302aa674b1cc808f64",
+          "editorialTaskSha256": "5e2da909e938999bc20eb9048b60bd32803964de3949c01146b9768c647746c9",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:15:01",
+          "name": "Leucocyte production",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:15:02",
+          "name": "Leucocyte production regulation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:15:03",
+          "name": "Leucocyte structure",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:15:04",
+          "name": "Leucocyte functions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4872185e0cad0b2c475649917e9ef8325f51616d89975f15d562bb4c20383b82"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "leukaemia",
+      "parentName": "Leukaemia",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA18.2",
+          "page": 192,
+          "rowBBox": [
+            51.5,
+            425.28,
+            105.6,
+            459.48
+          ],
+          "sourceBodySha256": "dc07c11fbcf6ec40b97403000e5c5432f349c5e0f0e44f633ddfd3fe96d7bc17",
+          "editorialTaskSha256": "3a1c0760ad17dd1b9171f5281b9088cc9577156cbf11bed86016fd264de1bdc3",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:16:01",
+          "name": "Acute leukaemia classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:16:02",
+          "name": "Chronic leukaemia classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:16:03",
+          "name": "Leukaemia genetic changes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:16:04",
+          "name": "Leukaemia presentation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:16:05",
+          "name": "Leukaemia haematological findings",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lipid classes",
+      "parentName": "Lipid classes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC4.1",
+          "page": 163,
+          "rowBBox": [
+            58.7,
+            443.88,
+            108.5,
+            472.32
+          ],
+          "sourceBodySha256": "248e247d7f5eada18228313e8d1e85589357de3748f6621dd36477f6e5943aed",
+          "editorialTaskSha256": "f066763b96fdb1a8d29bd674dbfa5b6f69414e3139f3bd5161d80a8c26ff3826",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:17:01",
+          "name": "Lipid classification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:17:02",
+          "name": "Lipid properties",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:17:03",
+          "name": "Lipid storage roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:17:04",
+          "name": "Lipid membrane roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:17:05",
+          "name": "Lipid signalling roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lipid-lowering drugs",
+      "parentName": "Lipid-lowering drugs",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH4.11",
+          "page": 179,
+          "rowBBox": [
+            51.7,
+            257.46,
+            105.7,
+            311.46
+          ],
+          "sourceBodySha256": "36d7556c439339f6cf367cd49e7ee8b5d87fd639888a925b39e8f76e9c716cb9",
+          "editorialTaskSha256": "7107ec20f4457d4ec3d35d6806c5b4cd0aa8b156824bdde1f97d15e74227c384",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:18:01",
+          "name": "Lipid-lowering drug kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:18:02",
+          "name": "Lipid-lowering drug actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:18:03",
+          "name": "Lipid-lowering drug indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:18:04",
+          "name": "Lipid-lowering drug adverse effects",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:18:05",
+          "name": "Medicines worsening lipid profiles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lipoproteins",
+      "parentName": "Lipoproteins",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-cell-enzymes-carbohydrates-lipids-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC4.5",
+          "page": 164,
+          "rowBBox": [
+            58.7,
+            168.06,
+            108.5,
+            211.98
+          ],
+          "sourceBodySha256": "985400e3be8e67f6fbf9debdedb68632b556b33f25c0ecd52752731d9dafaed9",
+          "editorialTaskSha256": "cca95ad51816f13b628b1cf90dd4c7919f59f84cfa186959be63da88b5862d85",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:19:01",
+          "name": "Lipoprotein pathways",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:19:02",
+          "name": "Apolipoprotein roles",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:19:03",
+          "name": "Lipoprotein links to atherosclerosis",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver disease in pregnancy",
+      "parentName": "Liver disease in pregnancy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG12.6",
+          "page": 431,
+          "rowBBox": [
+            49.1,
+            346.86,
+            103.1,
+            396.54
+          ],
+          "sourceBodySha256": "d73f45d368b874c1ce0cda1b6167843381fe6c4408c8e4675b5107e54c04a089",
+          "editorialTaskSha256": "ec498106ff3dd4a0f386835ee04cf9d8586e3c7edbe35a24e061d65e639e1df5",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:20:01",
+          "name": "Pregnancy-specific liver disease",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:20:02",
+          "name": "Coincidental liver disease in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:20:03",
+          "name": "Liver disease presentation in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:20:04",
+          "name": "Liver disease investigations in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:20:05",
+          "name": "Liver disease risks in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:20:06",
+          "name": "Liver disease care in pregnancy",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:84d4a8d0301dfd206ea66dce0d28fa1ece102ed896b45c2c05172b7fd61bee62"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver disease management",
+      "parentName": "Liver disease management",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.15",
+          "page": 291,
+          "rowBBox": [
+            44.2,
+            350.94,
+            102.7,
+            391.68
+          ],
+          "sourceBodySha256": "ccad6dc8759f0d6a80b74f5fca87f31d62e48461dd2ce59363a2a174e91f656c",
+          "editorialTaskSha256": "f7f5d72b1c118d61485333b3d9cc780f01e2a7ecbdeea0bced2c4d783314a245",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:21:01",
+          "name": "Hepatitis management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:21:02",
+          "name": "Cirrhosis management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:21:03",
+          "name": "Cirrhosis complication management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:21:04",
+          "name": "Portal hypertensive bleeding management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:21:05",
+          "name": "Liver cancer management priorities",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver enzyme assays",
+      "parentName": "Liver enzyme assays",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
+          "packetPath": "docs/evidence/2026-11-05-nmc-biochemistry-bc5-bc14-draft-tasks.json",
+          "subjectId": "biochemistry",
+          "code": "BC14.16",
+          "page": 170,
+          "rowBBox": [
+            58.5,
+            379.62,
+            108.2,
+            423.18
+          ],
+          "sourceBodySha256": "691fc5a3e1179c0e8c3836baf337a7c8ccef11d70f273772a832b0f12712ae8e",
+          "editorialTaskSha256": "0340d6b017d33ff8670fed2be23c3bb12ee3fced0ef63680c09080f614d5a0d3",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:22:01",
+          "name": "AST measurement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:22:02",
+          "name": "ALT measurement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:22:03",
+          "name": "Alkaline phosphatase measurement",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:22:04",
+          "name": "Liver enzyme result pattern comparison",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver investigations",
+      "parentName": "Liver investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm4-16-gm6-18-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM5.11",
+          "page": 291,
+          "rowBBox": [
+            44.2,
+            187.92,
+            102.7,
+            228.66
+          ],
+          "sourceBodySha256": "9aca9d94c9e21a0809c26970af42f76d1f2b0b5e58706c4bcf312acf512f9992",
+          "editorialTaskSha256": "73a7646f85d6e6735090e12161f13bfd8c79053cde646f2f22f4f970491bef19",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:23:01",
+          "name": "Blood counts in liver assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:23:02",
+          "name": "Bilirubin result interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:23:03",
+          "name": "Liver test selection and interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:23:04",
+          "name": "Hepatitis serology interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:23:05",
+          "name": "Ascitic fluid result interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver panels",
+      "parentName": "Liver panels",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:681bb476c771a6ac44cbf5d14b95b39fbfa2dcf9aa6c191e698b7684480bbe06",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA22.4",
+          "page": 194,
+          "rowBBox": [
+            51.5,
+            219.54,
+            105.6,
+            247.62
+          ],
+          "sourceBodySha256": "ffa2566ab0c0a3fce7e30a15017d923944e5db511b79a19d30e2dacbe66746c4",
+          "editorialTaskSha256": "cd2ceb6752125f0132bf71d47fecd34336d5bc38c23daa12b93b210bd0ab3419",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:24:01",
+          "name": "Hepatocellular dysfunction report patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:681bb476c771a6ac44cbf5d14b95b39fbfa2dcf9aa6c191e698b7684480bbe06"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:24:02",
+          "name": "Cholestatic dysfunction report patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:681bb476c771a6ac44cbf5d14b95b39fbfa2dcf9aa6c191e698b7684480bbe06"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:24:03",
+          "name": "Hepatic synthetic dysfunction report patterns",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:681bb476c771a6ac44cbf5d14b95b39fbfa2dcf9aa6c191e698b7684480bbe06"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver pathology slides",
+      "parentName": "Liver pathology slides",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA24.9",
+          "page": 196,
+          "rowBBox": [
+            51.5,
+            124.5,
+            105.6,
+            152.28
+          ],
+          "sourceBodySha256": "c5509a64f309712014f657bbb95b22a96895c37cc0b950b93ad6da8db6a57dcf",
+          "editorialTaskSha256": "83460db597295df90f199ad0d541ae1a9273bcdd0821764e5243300964036c73",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:25:01",
+          "name": "Inflammatory liver slide changes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:25:02",
+          "name": "Fibrotic liver slide changes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:25:03",
+          "name": "Neoplastic liver slide changes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:25:04",
+          "name": "Liver pathology slide interpretation",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "liver surgery",
+      "parentName": "Liver surgery",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.10",
+          "page": 410,
+          "rowBBox": [
+            45,
+            493.26,
+            101.7,
+            539.16
+          ],
+          "sourceBodySha256": "7683359c64aa9dafee54457a04ee1ed599b3031903746d6f80139019c6a9e39d",
+          "editorialTaskSha256": "e3ea836e3ad6bb552cf047de0bd23222f385f6990de95d7c8daa29118a0723e7",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:26:01",
+          "name": "Applied liver anatomy in surgery",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:26:02",
+          "name": "Liver abscess surgical assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:26:03",
+          "name": "Hepatic hydatid disease surgical assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:26:04",
+          "name": "Liver trauma surgical assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:26:05",
+          "name": "Liver tumour surgical assessment",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:4c902184d7edc5089729731ce6d8a6d958ecb4fc063c4fb705e4750a4775fc28"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "local anaesthetics",
+      "parentName": "Local anaesthetics",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph1-ph4-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH2.5",
+          "page": 176,
+          "rowBBox": [
+            51.7,
+            154.32,
+            105.7,
+            199.32
+          ],
+          "sourceBodySha256": "127fa5a8143fefb40188eb7bea52be7c3f6e1f40f5c64dfb352c0c36152f2dc4",
+          "editorialTaskSha256": "4f1c6e71f1068e51232d18a08ceb2d1d5561b8f8f6200d6c947cb456faa01a13",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:27:01",
+          "name": "Local anaesthetic kinetics",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:27:02",
+          "name": "Local anaesthetic actions",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:27:03",
+          "name": "Local anaesthetic indications",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:27:04",
+          "name": "Local anaesthetic toxicity",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:27:05",
+          "name": "Simulated local anaesthetic administration",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "local venomous snakes",
+      "parentName": "Local venomous snakes",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:36c8e98a8417d17ef54265da962a0309a14501163fd5eb480bc8ffe21e9c0f29",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM21.1",
+          "page": 313,
+          "rowBBox": [
+            44.2,
+            181.02,
+            102.7,
+            208.32
+          ],
+          "sourceBodySha256": "aacef56b69b2752b92d48037508fdf66011353fd8b88191b2d3186c78d1ed945",
+          "editorialTaskSha256": "7590c1d9d202400d6a1fc65dab18432a631b120c010d2c01348c09f69d37f2f8",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:28:01",
+          "name": "Regional venomous snake image identification",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:36c8e98a8417d17ef54265da962a0309a14501163fd5eb480bc8ffe21e9c0f29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:28:02",
+          "name": "Snake identification limitations",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:36c8e98a8417d17ef54265da962a0309a14501163fd5eb480bc8ffe21e9c0f29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lower cranial nerves in the neck",
+      "parentName": "Lower cranial nerves in the neck",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-scalp-face-neck-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN35.7",
+          "page": 129,
+          "rowBBox": [
+            51.2,
+            335.94,
+            122.2,
+            360.42
+          ],
+          "sourceBodySha256": "89c879a832152d80ae14a495419027e69a1b2275752d61420353204f7588c24c",
+          "editorialTaskSha256": "085067d4b00354858e5413a75328fb992003cf8529a4cb6de826e964b7654e67",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:29:01",
+          "name": "Glossopharyngeal nerve cervical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:29:02",
+          "name": "Vagus nerve cervical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:29:03",
+          "name": "Accessory nerve cervical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:29:04",
+          "name": "Hypoglossal nerve cervical course",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:29:05",
+          "name": "Lower cranial nerve cervical branches",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    },
+    {
+      "parentNameKey": "lower respiratory infection",
+      "parentName": "Lower respiratory infection",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29",
+          "packetPath": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+          "subjectId": "microbiology",
+          "code": "MI7.2",
+          "page": 211,
+          "rowBBox": [
+            51.9,
+            416.94,
+            108.8,
+            457.98
+          ],
+          "sourceBodySha256": "2d91be1368db703939ca944b106914f4b3f5ea78377fc2742b0ea3b9cfb6da9d",
+          "editorialTaskSha256": "be6919bbe9627503c93c8efd7b2aa479bd42eeb3cab0a48f1fbec772715d245f",
+          "mode": "knowledge"
+        }
+      ],
+      "components": [
+        {
+          "proposalId": "nmc-family-12:30:01",
+          "name": "Bacterial lower respiratory infection causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:02",
+          "name": "Mycobacterial lower respiratory infection causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:03",
+          "name": "Viral lower respiratory infection causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:04",
+          "name": "Fungal lower respiratory infection causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:05",
+          "name": "Parasitic lower respiratory infection causes",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:06",
+          "name": "Lower respiratory infection test selection",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        },
+        {
+          "proposalId": "nmc-family-12:30:07",
+          "name": "Lower respiratory infection prevention",
+          "proposedRole": "contextual-task-facet",
+          "sourceReferenceIds": [
+            "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29"
+          ],
+          "existingExactLabelCandidates": [],
+          "canonicalConceptId": null,
+          "canonicalObjectiveVersionId": null,
+          "semanticEquivalence": "unverified",
+          "mappingAccepted": false
+        }
+      ],
+      "decompositionStatus": "editorial-proposal",
+      "memberEnumeration": "partial-or-unspecified-in-source-task",
+      "scopeComplete": false,
+      "bindingComplete": false
+    }
+  ]
+}

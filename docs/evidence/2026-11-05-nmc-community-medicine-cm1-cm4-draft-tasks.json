@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:c9310f012dc71061e1269f9bff7263a375f9c9e173e7a79aa9137a7da51df56e",
+      "subjectId": "community-medicine",
+      "code": "CM1.1",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        160.5,
+        98.6,
+        178.38
+      ],
+      "sourceBodySha256": "0a5af450454c880a15ad1ec5a58de586423373245a90b74355642293bd15a60e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Public health",
+      "draftLearningTask": "Define public health and use a community example to distinguish population prevention and service delivery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6c5f3fdd42d0eb47c247d4c6a4123461c47fa8a38bec9742fb560569b31fc045",
+      "subjectId": "community-medicine",
+      "code": "CM1.2",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        178.38,
+        98.6,
+        209.64
+      ],
+      "sourceBodySha256": "08d9234894f01834ee939b6809f3a1b5e752cea9bf4fcaa25c3c63a65fabcd8e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Holistic health",
+      "draftLearningTask": "Explain physical, mental, social and spiritual dimensions and compare determinants across settings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:29fbd2daacee66815e9362aaf7703f593f2cf316b7f8b2294c7009dead965b40",
+      "subjectId": "community-medicine",
+      "code": "CM1.3",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        209.64,
+        98.6,
+        254.52
+      ],
+      "sourceBodySha256": "e93005f02a753728c4d6634935011c491bec63a5ff97178bbcbb0be7eccf03e3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Disease causation",
+      "draftLearningTask": "Use an agent–host–environment model and a causal web to explain a multifactorial disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fdd88c1aa6a7c446aa05a92a2503b28286ac34c88b03c984b941164284d0d31b",
+      "subjectId": "community-medicine",
+      "code": "CM1.4",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        254.52,
+        98.6,
+        274.14
+      ],
+      "sourceBodySha256": "1c71118d8ff9363c4d035647cbf9d2a9d1152b7926d0268656a7edb6c4807bc8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Natural history",
+      "draftLearningTask": "Map susceptibility, subclinical disease, clinical onset and outcomes for a representative condition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:44f23bd51e2163cd0ad02227986c5d84250c6e74843e8d7f5fc1ebb8765afd86",
+      "subjectId": "community-medicine",
+      "code": "CM1.5",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        274.14,
+        98.6,
+        295.14
+      ],
+      "sourceBodySha256": "a30a487f7e6fe7d7e2f3bc0c6f44307e9c8f6884e0d139e1d9497fd571d281f3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Levels of prevention",
+      "draftLearningTask": "Assign interventions to prevention levels and justify their timing.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:73680863647b60a14fb03990ef436218df0a0f8d1611db142cbfaf4d6b0b6e87",
+      "subjectId": "community-medicine",
+      "code": "CM1.6",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        295.14,
+        98.6,
+        326.46
+      ],
+      "sourceBodySha256": "2e39aa0d67dc60d9743acf8482302f1be04d883fdc9bd8ea7f10faaecdbcc60a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health promotion and communication",
+      "draftLearningTask": "Compare health promotion, education, IEC and behaviour change communication in a community scenario.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5932a91566bb5a0284c285f771541ea703dd7db3a464b86a703f4f323eff3dca",
+      "subjectId": "community-medicine",
+      "code": "CM1.7",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        326.46,
+        98.6,
+        347.46
+      ],
+      "sourceBodySha256": "fe42da53ec3489c18a86907d9e1402428427ba63809581f8c6a919a3d8048acd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health indicators",
+      "draftLearningTask": "Choose and interpret representative mortality, morbidity, service and wellbeing indicators.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3e70e3b7f0f41130b773531dc2df2fc9d7c8fab9f5c6ae9c6774af18d782f137",
+      "subjectId": "community-medicine",
+      "code": "CM1.8",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        347.46,
+        98.6,
+        376.8
+      ],
+      "sourceBodySha256": "1eeea965b42e2cc2797b64cc285fb2f4fa04c8cbbf3aea0022b967c772142a4f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Indian demography",
+      "draftLearningTask": "Interpret a dated Indian demographic profile and explain implications for service needs.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e8318fb0be83529e7f956a1001f331564a23dc082f38f9be30e01aee6ea99fed",
+      "subjectId": "community-medicine",
+      "code": "CM1.9",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        376.8,
+        98.6,
+        410.52
+      ],
+      "sourceBodySha256": "939854b2820f5b182d82aa52a760ce291dc2a0e57016faa0ba4b9c3eec58b1cb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health communication",
+      "draftLearningTask": "Demonstrate clear messaging, active listening and teach-back in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4459d2027697c678f003d8572611fdb2472cca3bd6a8b55fe6517d9eb7db8891",
+      "subjectId": "community-medicine",
+      "code": "CM1.10",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        410.52,
+        98.6,
+        444.18
+      ],
+      "sourceBodySha256": "6f5efbd2966c2f299e05b0a93bea8f6eeecabdda1650aa0844e16d90766cbc20",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Doctor–patient relationship",
+      "draftLearningTask": "Demonstrate rapport, respect and shared decisions in a simulated encounter.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b5c4de4601c8ae2945a423a5e07219ebb8954c73eed9b2ccdc8b7bcc3792fa54",
+      "subjectId": "community-medicine",
+      "code": "CM2.1",
+      "page": 269,
+      "rowBBox": [
+        40.1,
+        462.24,
+        98.6,
+        511.68
+      ],
+      "sourceBodySha256": "1503213e68945c8932e401163d956d0edb508355c2d89b7acb828c714b1d6183",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community assessment",
+      "draftLearningTask": "Perform a structured clinical, sociocultural and demographic assessment at individual, family and community levels.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e70cafe2d7d9c54677bf28008a0e1a461daf0a5f93d7037ba62c22575e8cb278",
+      "subjectId": "community-medicine",
+      "code": "CM2.2",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        107.04,
+        98.6,
+        157.02
+      ],
+      "sourceBodySha256": "7c835b393fb9ec28ca74c1c4c00ab74e929a996d121ab623b421802d51d4c4fc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Family and socioeconomic assessment",
+      "draftLearningTask": "Compare family structures and sociocultural influences and demonstrate use of a context-appropriate socioeconomic tool.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1939668e854c40035eb61202324a7b9414388763d061dfc0230aba6a25e9983e",
+      "subjectId": "community-medicine",
+      "code": "CM2.3",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        157.02,
+        98.6,
+        187.68
+      ],
+      "sourceBodySha256": "b847726997588e9c16d11abe91dd6ff7e2188755cbe79e735ebb9b4bd8dd2d35",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Barriers and care seeking",
+      "draftLearningTask": "Use a simulated interview to identify barriers and map their effects on health-seeking decisions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:764c3e7e45a41b7a920f812733bc777c35b7543880863de7a5c00f139fea9950",
+      "subjectId": "community-medicine",
+      "code": "CM2.4",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        187.68,
+        98.6,
+        218.64
+      ],
+      "sourceBodySha256": "bea1a42e3f8ea1b98dd42d5d8122b61d2523f837390ce1de75a75812120cc7e0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Social psychology",
+      "draftLearningTask": "Explain how norms, group behaviour and relationships influence health behaviours and outcomes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:25f3c33a62e909514d5cc5a80cbf597e3f58bca838cf7fba82b71de469aa56d6",
+      "subjectId": "community-medicine",
+      "code": "CM2.5",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        218.64,
+        98.6,
+        253.62
+      ],
+      "sourceBodySha256": "cdd87365c3435c8315dcfda2d19e11cd8dd29211ea0a63ffc84c465f74e5616b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Poverty and social protection",
+      "draftLearningTask": "Connect poverty to health and explain how representative social security measures can reduce barriers.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:89dd4a08ff81258e7913535bfe987e223224968e7680148384f2e915f24cc04a",
+      "subjectId": "community-medicine",
+      "code": "CM3.1",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        277.98,
+        98.6,
+        309.36
+      ],
+      "sourceBodySha256": "b70a5146176290f7c3ec38816b7982863e8a02faf8fe9e53a34115be247c772d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Environmental exposures",
+      "draftLearningTask": "Compare sources and health effects of air, water, noise and radiation hazards and identify preventive measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:22155ba03017252a0963415c6e4cf083a0ad8805c306ee7bf5c754f2a4c94237",
+      "subjectId": "community-medicine",
+      "code": "CM3.2",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        309.36,
+        98.6,
+        353.04
+      ],
+      "sourceBodySha256": "5116e73aa7791c612a9569185b77144f27df4b9a3dce4c61adb4111e2bde7447",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Water safety",
+      "draftLearningTask": "Compare sources, purification steps and quality checks and explain conservation and rainwater harvesting.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6bcf00d438f4d4f419e844fec61b6cb373455850881c2d1982bd30e0ed1a65bd",
+      "subjectId": "community-medicine",
+      "code": "CM3.3",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        353.04,
+        98.6,
+        382.38
+      ],
+      "sourceBodySha256": "fce61879611d5c94d93eb357447689ab6ae2381a62782a1eebc11a17245f0f11",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Waterborne disease",
+      "draftLearningTask": "Trace transmission of representative diarrhoeal and hepatitis infections and identify points for prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9e375821fb507a16a6b1984983a9882e29eeec771a7f084af9e1c5484c82120c",
+      "subjectId": "community-medicine",
+      "code": "CM3.4",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        382.38,
+        98.6,
+        404.34
+      ],
+      "sourceBodySha256": "4c17fb19234260124de576f9f029858266f2b90d86b770115270a111ffab6645",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Waste and sanitation",
+      "draftLearningTask": "Compare safe handling and disposal approaches for solid waste, excreta and sewage.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:848ea370a4838c58e4cc6b87369e66365e08da86f56de56d9b92c382c026344d",
+      "subjectId": "community-medicine",
+      "code": "CM3.5",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        404.34,
+        98.6,
+        436.92
+      ],
+      "sourceBodySha256": "89cd02634fb3eb54ea627de05f1e16be4555ff7afceb78d3a1f34a1a27715338",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Housing and health",
+      "draftLearningTask": "Assess a representative dwelling against applicable standards and link ventilation, crowding and sanitation to health.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:17fb4170ba63a8c05d830a2fc9d2abca6e0f4df90633cf51d4aa9a7ca03b2815",
+      "subjectId": "community-medicine",
+      "code": "CM3.6",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        436.92,
+        98.6,
+        474.12
+      ],
+      "sourceBodySha256": "4b7b3c9df2570aed873442de68a383df6be777f9eb7c2f48c3fc04c584a9b8b9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vector-borne disease programmes",
+      "draftLearningTask": "Connect vectors to transmission and explain surveillance and control using current Indian programme documents.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c9fb5a541b6a34bd22c4b00b27796f54495fb57a9c1bea39c38a7ad133ac8d3d",
+      "subjectId": "community-medicine",
+      "code": "CM3.7",
+      "page": 270,
+      "rowBBox": [
+        40.1,
+        474.12,
+        98.6,
+        519.48
+      ],
+      "sourceBodySha256": "bfc7ec99daf70d14153233675d49726f2062741471646c0fcb2fa4b7ccf563c5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Vector identification",
+      "draftLearningTask": "Identify representative public health vectors from specimens or images and match life stages to control measures.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:338b443af44e2ea79a1fccda10478d5e89e9b3a8a5eae50d99bf5d3dee09d04e",
+      "subjectId": "community-medicine",
+      "code": "CM3.8",
+      "page": 271,
+      "rowBBox": [
+        40.1,
+        107.04,
+        98.6,
+        143.16
+      ],
+      "sourceBodySha256": "991ead1c057fddd753cc05201aa4ba32a0df57226ac73b2f2752a2c8477a116e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Insecticides and rodenticides",
+      "draftLearningTask": "Compare modes of action, application cycles and safe selection for representative settings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:03afb810c40181d03176114223637078646366f179972a9837f9d75101782c3c",
+      "subjectId": "community-medicine",
+      "code": "CM4.1",
+      "page": 271,
+      "rowBBox": [
+        40.1,
+        165.48,
+        98.6,
+        202.14
+      ],
+      "sourceBodySha256": "2d4a586cecf80ce616e916750591b76f9dc225e0f66085da40cc0cfc156eae14",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health education methods",
+      "draftLearningTask": "Compare individual, group and mass methods by reach, participation and limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d1f3bbe401cc589bb12d7ae6191210932dcd5a3874aeab65799beba1fca08f58",
+      "subjectId": "community-medicine",
+      "code": "CM4.2",
+      "page": 271,
+      "rowBBox": [
+        40.1,
+        202.14,
+        98.6,
+        233.04
+      ],
+      "sourceBodySha256": "fba12139aab9c9e1d5b8f2b3ae592757c908fba3857d0740ed7519406aaa468a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health promotion planning",
+      "draftLearningTask": "Plan education or counselling at individual, family and community levels using suitable objectives and delivery methods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7cb8d8f8915e2235f28b04040daed0b98a7b37aa960fb6dbb1360e7dacbcd1c5",
+      "subjectId": "community-medicine",
+      "code": "CM4.3",
+      "page": 271,
+      "rowBBox": [
+        40.1,
+        233.04,
+        98.6,
+        263.94
+      ],
+      "sourceBodySha256": "e3b9744c9ba982ab294bf8edb00eccc10a2da7ace1a2cdde253636718519345e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Programme evaluation",
+      "draftLearningTask": "Demonstrate how to select indicators, collect data and interpret results for a simulated programme.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:984330e47c4cfc6d3f1792a17e05f28892c8f4d95deff11faba8f05d4a074278",
+      "subjectId": "community-medicine",
+      "code": "CM4.4",
+      "page": 271,
+      "rowBBox": [
+        40.1,
+        263.94,
+        98.6,
+        307.5
+      ],
+      "sourceBodySha256": "14034d78812d30e74b0f63d56c350e6d5e1571faef6c8963f87fb8c8b77b7437",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community education session",
+      "draftLearningTask": "Conduct a brief audience-appropriate health education session during simulation or a supervised posting and check understanding.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

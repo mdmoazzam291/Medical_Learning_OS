@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "environment": "medical_learning_os_staging",
+  "observed": {
+    "authUsers": 0,
+    "publicTables": [
+      "learner_reference_codes"
+    ],
+    "migrationHistory": [
+      "20261102033205",
+      "20261102063520"
+    ]
+  },
+  "assessment": "Staging is an isolated learner-identity setup with environment-specific migration history. Reconcile its runtime-access function with the repository baseline before applying migrations.",
+  "next": [
+    "Rehearse repository baseline and staging parity reconciliation on a disposable database.",
+    "Verify resulting runtime access, catalogue and admin authorization dependencies.",
+    "Provision isolated test identities and deploy matching staging frontend and Owner API."
+  ],
+  "changesApplied": false
+}

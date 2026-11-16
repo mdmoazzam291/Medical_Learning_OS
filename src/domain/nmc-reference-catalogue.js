@@ -38,21 +38,45 @@ export function topicKey(label,subject){
  // Generic headings are discipline-specific; no fuzzy or clinical equivalence.
  return /^(general|introduction|basics|miscellaneous|overview|principles)( |$)/.test(key)?subject+':'+key:key;
 }
-export function selectCatalogue(c,{subject='',search='',page:requested=1}={}){
+export function validateReferenceOverlay(overlay,c){
+ if(overlay.sourceEdition!==c.edition||overlay.sourceSha256!==c.sourceSha256||!Array.isArray(overlay.rows))fail();
+ const refs=new Map(c.references.map(r=>[r.referenceId,r])),seen=new Set();
+ for(const row of overlay.rows){
+  const ref=refs.get(row.referenceId);
+  if(!ref||seen.has(row.referenceId)||typeof row.value!=='string'||!row.value.trim()||
+   typeof row.evidence!=='string'||!row.evidence.trim())fail();
+  seen.add(row.referenceId);
+  if(row.kind==='search-alias'){
+   if(ref.identifierState!=='unresolved'||!/^[A-Z]{2,4}[0-9]{1,3}[.][0-9]{1,3}$/.test(row.value)||
+    c.references.some(r=>r.searchCode===row.value))fail();
+  }else if(row.kind==='topic-group'){
+   if(ref.topicId!==null)fail();
+  }else if(row.kind==='official-replacement'){
+   if(!['PY9.1','PE6.4'].includes(ref.searchCode)||row.value!==ref.searchCode)fail();
+  }else if(row.kind==='official-deletion'){
+   if(ref.searchCode!=='PS9.2'||row.value!==ref.searchCode)fail();
+  }else fail();
+ }
+ return overlay;
+}
+export function selectCatalogue(c,{subject='',search='',page:requested=1,overlay=null}={}){
+ const dispositions=new Map(overlay?validateReferenceOverlay(overlay,c).rows.map(r=>[r.referenceId,r]):[]);
  const topicMap=new Map(c.topics.map(t=>[t.topicId,t]));
  const groups=new Map();
  for(const r of c.references){
-  const t=topicMap.get(r.topicId);
+  const disposition=dispositions.get(r.referenceId);
+  const inferredTopic=disposition?.kind==='topic-group'?disposition.value:null;
+  const t=topicMap.get(r.topicId)||(inferredTopic?{label:inferredTopic,subjectId:r.subjectId}:null);
   const key=t?topicKey(t.label,t.subjectId):r.subjectId+':unassigned';
   if(!groups.has(key))groups.set(key,{key,label:t?.label||'Topic heading unresolved',subjects:new Set(),references:[],labels:new Set()});
-  const g=groups.get(key);g.subjects.add(r.subjectId);g.references.push(r);if(t)g.labels.add(t.label);
+  const g=groups.get(key);g.subjects.add(r.subjectId);g.references.push(disposition?{...r,disposition}:r);if(t)g.labels.add(t.label);
  }
  const query=String(search).toLowerCase().trim().slice(0,200),compact=query.replace(/\s+/g,'');
  const selected=[];
  for(const g of groups.values()){
   // Topic-name matches select all references; code matches select exact appearances.
   const topicMatch=[...g.labels].some(label=>normalise(label).includes(normalise(query))||normalise(label).replace(/ /g,'').includes(normalise(query).replace(/ /g,'')));
-  const references=g.references.filter(r=>(!subject||r.subjectId===subject)&&(!query||topicMatch||r.searchCode.toLowerCase().includes(compact)));
+  const references=g.references.filter(r=>(!subject||r.subjectId===subject)&&(!query||topicMatch||r.searchCode.toLowerCase().includes(compact)||(r.disposition?.kind==='search-alias'&&r.disposition.value.toLowerCase().includes(compact))));
   if(references.length)selected.push({...g,subjects:[...new Set(references.map(r=>r.subjectId))].sort(),allSubjects:[...g.subjects].sort(),references,labels:[...g.labels]});
  }
  selected.sort((a,b)=>a.label.localeCompare(b.label)||a.key.localeCompare(b.key));

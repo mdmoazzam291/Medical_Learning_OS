@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-authoring-bindings",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "adminApprovalRequiredForAuthoring": false,
+  "curriculum": {
+    "schemaVersion": 1,
+    "registryVersion": "nmc:respiratory-authoring@1",
+    "pathways": [],
+    "objectives": [
+      {
+        "objectiveId": "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation",
+        "objectiveVersionId": "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1",
+        "conceptId": "C-89191b5c-5d54-41e3-bd76-dfb6d34edc99",
+        "task": "interpretation",
+        "depth": "applied",
+        "context": {
+          "jurisdiction": "not-specified",
+          "population": "exercise-specific",
+          "setting": "simulation"
+        },
+        "prerequisites": []
+      },
+      {
+        "objectiveId": "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation",
+        "objectiveVersionId": "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1",
+        "conceptId": "C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473",
+        "task": "management",
+        "depth": "applied",
+        "context": {
+          "jurisdiction": "not-specified",
+          "population": "exercise-specific",
+          "setting": "simulation"
+        },
+        "prerequisites": []
+      },
+      {
+        "objectiveId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation",
+        "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1",
+        "conceptId": "C-f2c27acd-d39a-4558-9f04-83aa591d72fd",
+        "task": "management",
+        "depth": "applied",
+        "context": {
+          "jurisdiction": "not-specified",
+          "population": "exercise-specific",
+          "setting": "simulation"
+        },
+        "prerequisites": []
+      }
+    ],
+    "mappings": [],
+    "artifacts": [
+      {
+        "artifactKind": "note",
+        "artifactVersionId": "nmc:spirometry:teaching@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+        "objectiveVersionIds": [
+          "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+        ],
+        "role": "teaching",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": null
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:spirometry:case-1@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+        "objectiveVersionIds": [
+          "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:spirometry:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:spirometry:case-2@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+        "objectiveVersionIds": [
+          "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:spirometry:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:spirometry:case-3@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+        "objectiveVersionIds": [
+          "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:spirometry:simulation"
+      },
+      {
+        "artifactKind": "note",
+        "artifactVersionId": "nmc:asthma-maintenance:teaching@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+        "objectiveVersionIds": [
+          "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+        ],
+        "role": "teaching",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": null
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:asthma-maintenance:case-1@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+        "objectiveVersionIds": [
+          "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:asthma-maintenance:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:asthma-maintenance:case-2@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+        "objectiveVersionIds": [
+          "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:asthma-maintenance:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:asthma-maintenance:case-3@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+        "objectiveVersionIds": [
+          "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:asthma-maintenance:simulation"
+      },
+      {
+        "artifactKind": "note",
+        "artifactVersionId": "nmc:copd-exacerbation:teaching@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+        ],
+        "role": "teaching",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": null
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:copd-exacerbation:case-1@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:copd-exacerbation:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:copd-exacerbation:case-2@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:copd-exacerbation:simulation"
+      },
+      {
+        "artifactKind": "case",
+        "artifactVersionId": "nmc:copd-exacerbation:case-3@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+        "objectiveVersionIds": [
+          "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1"
+        ],
+        "role": "assessment",
+        "status": "draft",
+        "reviewedBy": null,
+        "familyId": "nmc:copd-exacerbation:simulation"
+      }
+    ]
+  },
+  "components": [
+    {
+      "referenceId": "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc",
+      "code": "GM28.11",
+      "objectiveVersionId": "lo:C-89191b5c-5d54-41e3-bd76-dfb6d34edc99:simulation@1",
+      "wording": "Interpret a spirometry report in a simulated case of suspected COPD and explain how test quality affects the conclusion.",
+      "identityState": "existing-proposal",
+      "scope": "partial-simulated-component",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null
+    },
+    {
+      "referenceId": "nmc-2024-ref:a54d769a2db7aa80f396b6137515a35907de9eae3ade9256f63fb3edd876fa4c",
+      "code": "GM28.17",
+      "objectiveVersionId": "lo:C-305ac1fc-9f18-4bf2-a5ab-43142c0c6473:simulation@1",
+      "wording": "Present and defend a maintenance plan in a simulated asthma case using the patient context and the reference supplied in the exercise.",
+      "identityState": "existing-proposal",
+      "scope": "partial-simulated-component",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "code": "GM28.18",
+      "objectiveVersionId": "lo:C-f2c27acd-d39a-4558-9f04-83aa591d72fd:simulation@1",
+      "wording": "Present and defend an initial plan in a simulated COPD exacerbation and explain how findings affect treatment choices.",
+      "identityState": "existing-proposal",
+      "scope": "partial-simulated-component",
+      "completeRequirementSetKnown": false,
+      "coverageFraction": null
+    }
+  ],
+  "artifactLocators": [
+    {
+      "artifactVersionId": "nmc:spirometry:teaching@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "path": "docs/evidence/2026-11-07-nmc-spirometry-teaching-assessment-draft.md",
+      "fileSha256": "7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "section": "Short teaching note",
+      "rubricSection": null
+    },
+    {
+      "artifactVersionId": "nmc:spirometry:case-1@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "path": "docs/evidence/2026-11-07-nmc-spirometry-teaching-assessment-draft.md",
+      "fileSha256": "7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "section": "Baseline interpretation",
+      "rubricSection": "Proposed scoring rubric"
+    },
+    {
+      "artifactVersionId": "nmc:spirometry:case-2@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "path": "docs/evidence/2026-11-07-nmc-spirometry-teaching-assessment-draft.md",
+      "fileSha256": "7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "section": "Quality-sensitive comparison",
+      "rubricSection": "Proposed scoring rubric"
+    },
+    {
+      "artifactVersionId": "nmc:spirometry:case-3@sha256:7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "path": "docs/evidence/2026-11-07-nmc-spirometry-teaching-assessment-draft.md",
+      "fileSha256": "7ed9137537aad109070c9d4744e42e41660a299df20d37112d2be16971e12c64",
+      "section": "Delayed unfamiliar case",
+      "rubricSection": "Proposed scoring rubric"
+    },
+    {
+      "artifactVersionId": "nmc:asthma-maintenance:teaching@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "path": "docs/evidence/2026-11-07-nmc-asthma-maintenance-teaching-assessment-draft.md",
+      "fileSha256": "f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "section": "Teaching note",
+      "rubricSection": null
+    },
+    {
+      "artifactVersionId": "nmc:asthma-maintenance:case-1@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "path": "docs/evidence/2026-11-07-nmc-asthma-maintenance-teaching-assessment-draft.md",
+      "fileSha256": "f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "section": "Baseline",
+      "rubricSection": "Proposed rubric"
+    },
+    {
+      "artifactVersionId": "nmc:asthma-maintenance:case-2@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "path": "docs/evidence/2026-11-07-nmc-asthma-maintenance-teaching-assessment-draft.md",
+      "fileSha256": "f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "section": "Changed constraint",
+      "rubricSection": "Proposed rubric"
+    },
+    {
+      "artifactVersionId": "nmc:asthma-maintenance:case-3@sha256:f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "path": "docs/evidence/2026-11-07-nmc-asthma-maintenance-teaching-assessment-draft.md",
+      "fileSha256": "f8e32e6ade0dd0e46a8f6293008223e68371e4262e79502484072c5c8eca4d58",
+      "section": "Delayed case",
+      "rubricSection": "Proposed rubric"
+    },
+    {
+      "artifactVersionId": "nmc:copd-exacerbation:teaching@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "path": "docs/evidence/2026-11-07-nmc-copd-exacerbation-teaching-assessment-draft.md",
+      "fileSha256": "fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "section": "Teaching note",
+      "rubricSection": null
+    },
+    {
+      "artifactVersionId": "nmc:copd-exacerbation:case-1@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "path": "docs/evidence/2026-11-07-nmc-copd-exacerbation-teaching-assessment-draft.md",
+      "fileSha256": "fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "section": "Baseline",
+      "rubricSection": "Proposed rubric"
+    },
+    {
+      "artifactVersionId": "nmc:copd-exacerbation:case-2@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "path": "docs/evidence/2026-11-07-nmc-copd-exacerbation-teaching-assessment-draft.md",
+      "fileSha256": "fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "section": "Changed constraint",
+      "rubricSection": "Proposed rubric"
+    },
+    {
+      "artifactVersionId": "nmc:copd-exacerbation:case-3@sha256:fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "path": "docs/evidence/2026-11-07-nmc-copd-exacerbation-teaching-assessment-draft.md",
+      "fileSha256": "fbfccc5b5923d7b8bf9aeb2c1e96d85bf1b8479604fa89e9ee149351b14faf07",
+      "section": "Delayed case",
+      "rubricSection": "Proposed rubric"
+    }
+  ]
+}

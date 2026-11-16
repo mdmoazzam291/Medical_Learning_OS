@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-09T05:33:58.720Z",
+  "checkedHead": "404d383eab518f55212288c9aa9a33d696ee8f83",
+  "status": "preflight-only",
+  "registryReadback": {
+    "fields": [
+      "ID",
+      "label",
+      "title",
+      "aliases"
+    ],
+    "termFamilies": [
+      "rheumatic",
+      "ADHD and expanded label",
+      "cause of death and death certification",
+      "peptic, gastric and duodenal ulcer",
+      "sex and gender ratio"
+    ],
+    "results": [
+      {
+        "scope": "accepted",
+        "records": 12,
+        "matches": 0,
+        "catalog_version": 448
+      },
+      {
+        "scope": "draft revision",
+        "records": 20,
+        "matches": 0,
+        "catalog_version": 448
+      },
+      {
+        "scope": "published",
+        "records": 1,
+        "matches": 0,
+        "catalog_version": 448
+      }
+    ]
+  },
+  "rows": [
+    {
+      "reviewIndex": 2,
+      "sourceNameKey": "acute rheumatic fever",
+      "candidateName": "Rheumatic fever",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Preserve acute assessment alongside pathology and laboratory evidence.",
+      "mappingAccepted": false,
+      "inventoryNameMatches": [],
+      "otherScopeReviews": []
+    },
+    {
+      "reviewIndex": 4,
+      "sourceNameKey": "adhd",
+      "candidateName": "Attention-deficit/hyperactivity disorder",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75"
+      ],
+      "disposition": "alias-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "ADHD expands to the listed disorder. Preserve cross-setting assessment and developmental comparison.",
+      "mappingAccepted": false,
+      "inventoryNameMatches": [],
+      "otherScopeReviews": []
+    },
+    {
+      "reviewIndex": 8,
+      "sourceNameKey": "cause of death certification",
+      "candidateName": "Medical cause-of-death certification",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:c94e2a700cf2e66a86481a460f2470819725dd714a680708ff16bdfa88bdd937"
+      ],
+      "disposition": "alias-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both cover simulated medical certification. Preserve causal sequence and interval requirements.",
+      "mappingAccepted": false,
+      "inventoryNameMatches": [],
+      "otherScopeReviews": [
+        {
+          "reviewIndex": 7,
+          "sourceNameKey": "cause of death certification",
+          "candidateName": "Cause of death",
+          "disposition": "related-distinct-scope"
+        }
+      ]
+    },
+    {
+      "reviewIndex": 23,
+      "sourceNameKey": "peptic ulcer disease",
+      "candidateName": "Peptic ulcer",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both concern ulcer disease. Preserve pathology and clinical workup separately.",
+      "mappingAccepted": false,
+      "inventoryNameMatches": [],
+      "otherScopeReviews": []
+    },
+    {
+      "reviewIndex": 30,
+      "sourceNameKey": "sex ratio",
+      "candidateName": "Population sex ratio",
+      "sourceReferenceIds": [
+        "nmc-2024-ref:93a1c0c3578535d0b9aa76012821cfebdac35477cde3b3f2c38446461fd56166"
+      ],
+      "disposition": "shared-name-candidate",
+      "resolvedName": null,
+      "scopeEvidence": "Both concern population sex ratio. Preserve the differing source contexts.",
+      "mappingAccepted": false,
+      "inventoryNameMatches": [],
+      "otherScopeReviews": []
+    }
+  ],
+  "scopeDecision": "Keep shared names and alias leads provisional. Related or narrower neighboring reviews preserve their own scope and do not authorize merging objectives."
+}

@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:a8aad58d590340efdca756dbb75607a40d171f50fba763060af729bcc99c2aa8",
+      "subjectId": "medicine",
+      "code": "GM8.16",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        253.56,
+        102.7,
+        280.92
+      ],
+      "sourceBodySha256": "86622644e5dbe34c0bcff7098337c9b483d7060c9f87db769db48d50eb05c367",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ECG practical",
+      "draftLearningTask": "Record a 12-lead ECG and interpret findings in a simulated hypertension case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bc3af2fe6f220c374419ac5f3dfe87578329c939426bb519a9e16306986f5f5d",
+      "subjectId": "medicine",
+      "code": "GM8.17",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        280.92,
+        102.7,
+        308.28
+      ],
+      "sourceBodySha256": "5e4ae4aaf9c92a84fc602862cf2dff5b4ff204f0af7407c3e052341c701d11a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension shared decisions",
+      "draftLearningTask": "Elicit preferences and agree on an individualized management plan.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708",
+      "subjectId": "medicine",
+      "code": "GM8.18",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        308.28,
+        102.7,
+        335.64
+      ],
+      "sourceBodySha256": "4cdc9e9d8d81705028cd21c5d1181f0c4c5fdada811c813a9711d39e20bebfce",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension and daily life",
+      "draftLearningTask": "Explore effects on wellbeing, work and family in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:550966e6ed5b47facda1dbf149fee5e49fc464110669a446fa4b292d71ad9ded",
+      "subjectId": "medicine",
+      "code": "GM8.19",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        335.64,
+        102.7,
+        355.5
+      ],
+      "sourceBodySha256": "a2c96ec2b72ab386144e68c8ce813a2033b791b96c97bcef78c2f4dcf57d26fe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hypertension referral",
+      "draftLearningTask": "Identify indications for specialist consultation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:79f91d13b50e569d816d52ae0ca9a7456d1b7aa5fc1c78dc1f2d4c1103e0f957",
+      "subjectId": "medicine",
+      "code": "GM9.1",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        375.36,
+        102.7,
+        402.72
+      ],
+      "sourceBodySha256": "f66f066413df3e0a7aefb8e1ed40f988e093c3b1f88312019ce2bb13a3f03ddb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia classification",
+      "draftLearningTask": "Classify anaemia using cell size and reticulocyte response.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206",
+      "subjectId": "medicine",
+      "code": "GM9.2",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        402.72,
+        102.7,
+        430.08
+      ],
+      "sourceBodySha256": "74b77d7293417bdb8f1670b9e4931cb49671e68cfd93970e2d7cc012a58b39fd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia morphology and causes",
+      "draftLearningTask": "Compare common causes by morphology, aetiology and prevalence.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:703ab2632daa0f6638d153698797df8dcbc63de8f47ad43b90ee652432a175eb",
+      "subjectId": "medicine",
+      "code": "GM9.3",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        430.08,
+        102.7,
+        470.76
+      ],
+      "sourceBodySha256": "4f5b790384b2e318f748dbf110bc4b4d3e219b4d6ee5d039f3a42f65d4b04258",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia history",
+      "draftLearningTask": "Elicit bleeding, diet, medicines, menstrual and family history and present relevant symptoms.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:74f99f6ff3cb3e49df9ee876b3826d5c1b1d0e9593814c2d93782e29d9a1bc2b",
+      "subjectId": "medicine",
+      "code": "GM9.4",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        470.76,
+        102.7,
+        511.56
+      ],
+      "sourceBodySha256": "2e281f3f617e88db03a17ae8a50b70b72147825690b794bda5feb195df70b594",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia examination",
+      "draftLearningTask": "Demonstrate assessment of pallor, oral findings, hyperdynamic circulation, lymph nodes and spleen.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:57e695d805248048d8b425396d3b64c32c37eea3e8307bc4283ff424512f29b2",
+      "subjectId": "medicine",
+      "code": "GM9.5",
+      "page": 296,
+      "rowBBox": [
+        44.2,
+        511.56,
+        102.7,
+        538.98
+      ],
+      "sourceBodySha256": "2fbc67efddb84c277e183b2f5774d571377ad441ab9e0ffe506a6b6fc38bb3cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia differential",
+      "draftLearningTask": "Prioritize representative causes from history and examination.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c96f2e97eb5c4c6053684272304067e609377fcd384bf7b26f40e8438c85c868",
+      "subjectId": "medicine",
+      "code": "GM9.6",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        52.26,
+        102.7,
+        79.62
+      ],
+      "sourceBodySha256": "587a6a199f54a14c306566ad1b518b783bbb87dcf6fc66bc00764065ec8912cc",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia workup",
+      "draftLearningTask": "Select investigations based on the presumed mechanism in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2",
+      "subjectId": "medicine",
+      "code": "GM9.7",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        79.62,
+        102.7,
+        99.54
+      ],
+      "sourceBodySha256": "96d3ec82dc5ba4b4fe0764fe412b52ca7f04f813444775f1ae74c22628fc5ca8",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haemogram and related tests",
+      "draftLearningTask": "Explain the utility of indices, reticulocytes, smear, iron studies, B12 and folate.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+      "subjectId": "medicine",
+      "code": "GM9.8",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        152.28,
+        102.7,
+        179.52
+      ],
+      "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Marrow indications and interpretation",
+      "draftLearningTask": "Explain indications for aspiration and biopsy and interpret representative results.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
+      "subjectId": "medicine",
+      "code": "GM9.8",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        179.52,
+        102.7,
+        207.06
+      ],
+      "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Marrow indications and interpretation",
+      "draftLearningTask": "Explain indications for aspiration and biopsy and interpret representative results.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1f04078db79571d3cb84287e5672e60d21c577e05de7a2db8c07cf1dce34737e",
+      "subjectId": "medicine",
+      "code": "GM9.9",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        207.06,
+        102.7,
+        234.24
+      ],
+      "sourceBodySha256": "15cddb84ab9505f4351cfa2ac5a4c87c328868cce72ae9442827e0cdea46a975",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Integrated anaemia workup",
+      "draftLearningTask": "Develop a staged diagnostic plan from representative clinical and laboratory findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d644de25dfeaeb75ce44dd7a98034e50ea6a45691f5b47da367e783dc6c894f4",
+      "subjectId": "medicine",
+      "code": "GM9.10",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        234.24,
+        102.7,
+        261.6
+      ],
+      "sourceBodySha256": "b811fdad30a5a434cf19dc14ecb504a5b7be8e30548617e220841de7f8bc63d6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Haematinic replacement",
+      "draftLearningTask": "Write a simulated iron, B12 or folate prescription matched to the confirmed deficiency.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:867de5ae587443b9bc2b4b4a9b2f285656b5d0f8d8b777716bef208b15b73404",
+      "subjectId": "medicine",
+      "code": "GM9.11",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        261.6,
+        102.7,
+        281.46
+      ],
+      "sourceBodySha256": "fae5bac07231cca01cda4bbe6a0ed0e9405060d487bf3303cd2bfe61a5b0dd3e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia prevention programmes",
+      "draftLearningTask": "Use official programme guidance to describe prevention strategies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:61894540e63ec9266d9aef2ab2d8bd316f4ceda61507007f134b7ebd42eea048",
+      "subjectId": "medicine",
+      "code": "GM9.12",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        281.46,
+        102.7,
+        308.82
+      ],
+      "sourceBodySha256": "6ff1e9c18f373136cf51ed53664db1c4bb84640f4ee23f5c96fbabf40f1666e1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia counselling",
+      "draftLearningTask": "Explain diagnosis, treatment and follow-up to a simulated patient.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fe06b6ec6d1040887a8773ee1c33016a379fb1cb78a44cca9bd58bb4ce0b0ebb",
+      "subjectId": "medicine",
+      "code": "GM9.13",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        308.82,
+        102.7,
+        336.18
+      ],
+      "sourceBodySha256": "caa7fec77377d9e068ade1df55a76ef7497cc0586295341efbba8aad28545d6d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia shared decisions",
+      "draftLearningTask": "Elicit preferences and incorporate them into a feasible plan.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ea88fafbdc8da07321f5847304fa012b6ad1e0777b4b1a59a0f2b86271b88438",
+      "subjectId": "medicine",
+      "code": "GM9.14",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        336.18,
+        102.7,
+        363.54
+      ],
+      "sourceBodySha256": "0357a899f3339d5e482eb73dc8f53e479121f5593b4956b2c8f789243b9d4375",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion indications",
+      "draftLearningTask": "Match representative indications to appropriate blood components.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:afa51daef0dc7a461601dd3be76bf41492ce866e738f7583a00c7ef28d6b1f87",
+      "subjectId": "medicine",
+      "code": "GM9.15",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        363.54,
+        102.7,
+        390.9
+      ],
+      "sourceBodySha256": "6291171fb9a806914812f9358fdae2acfb16fc406bc68184d05af2361596a6d9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Transfusion precautions",
+      "draftLearningTask": "Explain identity, compatibility and monitoring checks and response to suspected reactions.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6a4c4291c720d9193f2c21029182021b710fc258803e0541e8c82a52d3c2483f",
+      "subjectId": "medicine",
+      "code": "GM9.16",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        390.9,
+        102.7,
+        418.26
+      ],
+      "sourceBodySha256": "d89e68ed101b9afbafbe47c630c92eea917f6c72fd15b3b4daf0901266329058",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Nutritional anaemia prevention",
+      "draftLearningTask": "Counsel a simulated patient on dietary and preventive measures.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a48631f583eacceba6f68b69cac5e41264e8421ac250cda28a269753539dbdd8",
+      "subjectId": "medicine",
+      "code": "GM9.17",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        418.26,
+        102.7,
+        472.38
+      ],
+      "sourceBodySha256": "32d13b319cb7b626acf37c98afecf46b42a8f0239eb160174f54535369b16fd4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anaemia referral",
+      "draftLearningTask": "Identify presentations warranting specialist consultation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:18712fae8a70131474313dc72eff318cdfbcd9b5db209fe7d837e1324221ad07",
+      "subjectId": "medicine",
+      "code": "GM10.1",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        492.3,
+        102.7,
+        519.66
+      ],
+      "sourceBodySha256": "2ac8aea0c3fc7aa5df68979d0592593da2e1a8491fd6851556377a77a8c437b5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute and chronic kidney dysfunction",
+      "draftLearningTask": "Compare definitions, classification and mechanisms of acute and chronic renal dysfunction.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:944f778a706fc89dd9ac16493192afd214d05c365c5707a71b538fd7f701322b",
+      "subjectId": "medicine",
+      "code": "GM10.2",
+      "page": 297,
+      "rowBBox": [
+        44.2,
+        519.66,
+        102.7,
+        547.02
+      ],
+      "sourceBodySha256": "f4c38f53e827360ee60c91cb5009363f1a2dbc32b41b64da3143abd4f9eb4c58",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute kidney injury mechanisms",
+      "draftLearningTask": "Distinguish prerenal, intrinsic and postrenal causes by mechanism and clinical clues.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:854a6b62499725eafb9e57bb1ec03da8edc592f7829d1e3faaf6e75ce86f8744",
+      "subjectId": "medicine",
+      "code": "GM10.3",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        126.36
+      ],
+      "sourceBodySha256": "48ef9726cbee77c554f78efed99aba7988e5d5c22cdf0a75dbf8d1059e402f5b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute kidney injury course",
+      "draftLearningTask": "Explain evolution, complications and treatment priorities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a56332213f52d34ab56ad4d04f277f167d39819f36194ea8a3afd839d5669987",
+      "subjectId": "medicine",
+      "code": "GM10.4",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        146.16
+      ],
+      "sourceBodySha256": "a3761fb15f07ee521d8ed492f091c8f53ac9cf49203e9f1accaf5f2e574525b9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Chronic kidney disease staging",
+      "draftLearningTask": "Classify causes and stage representative cases using kidney function and albuminuria.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:951cdecbc1d19a5d5ae055bdce1f46c8bd0f115039282ade3c6425f566fe9089",
+      "subjectId": "medicine",
+      "code": "GM10.5",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        146.16,
+        102.7,
+        173.52
+      ],
+      "sourceBodySha256": "9b6d300967c8e9445fa114ab13a1a5e7ed0a7374201c97b161b105901538c127",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Uraemia",
+      "draftLearningTask": "Connect retained solutes and impaired renal function to clinical manifestations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5411b6095880ee0262f2e560736d01d1aba1bed66d412f34be3e9571d6e393f5",
+      "subjectId": "medicine",
+      "code": "GM10.6",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        173.52,
+        102.7,
+        188.04
+      ],
+      "sourceBodySha256": "9afc14801125a9770f5a1f70bcc1e056939b878823879e0f5df71330e417a293",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Proteinuria",
+      "draftLearningTask": "Classify patterns and explain their diagnostic and prognostic significance in CKD.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ffb0923a56b6ab821fac2e62d971dc23ea5b6cec0e7fa217a27aff902141d830",
+      "subjectId": "medicine",
+      "code": "GM10.7",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        188.04,
+        102.7,
+        215.4
+      ],
+      "sourceBodySha256": "0806bbe0de1de207e4ddba92ad638fb32222908577ef6829b9b03790b64a5fed",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CKD anaemia and mineral disease",
+      "draftLearningTask": "Explain mechanisms of anaemia and secondary hyperparathyroidism.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4edd3d0519e95c9e6a93cf41543f65d03c2982cb17ff18a7d8b206d77ba29b7d",
+      "subjectId": "medicine",
+      "code": "GM10.8",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        215.4,
+        102.7,
+        242.76
+      ],
+      "sourceBodySha256": "769ca277255fb782760b84172ee20ab8ebc5eab5b8074da2cdfda87d7c43052a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CKD, glucose and blood pressure",
+      "draftLearningTask": "Explain how diabetes and hypertension contribute to CKD and how CKD changes their management context.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:90a329d68e4cf3d3c0f9b6feb853302c801d84608788119b10d61e5f9b9b6aa6",
+      "subjectId": "medicine",
+      "code": "GM10.9",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        242.76,
+        102.7,
+        296.88
+      ],
+      "sourceBodySha256": "4b4a3e2e225a6894ccad19d22c09ba64c6e55274f9e081fb9d220411355c3b74",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal history",
+      "draftLearningTask": "Elicit chronology, predisposing conditions, nephrotoxins and systemic clues and present the findings.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:efae48481b28450c91d08cfc67e1ee34a63a16be8e85a51055ea0b2e23eb3dd8",
+      "subjectId": "medicine",
+      "code": "GM10.10",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        296.88,
+        102.7,
+        351.12
+      ],
+      "sourceBodySha256": "c4164c062c6a233fb2ca9e5847689c110a5f2bf420c95e4fe7fb9b574a234838",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal examination",
+      "draftLearningTask": "Demonstrate assessment of volume status, oedema, heart failure, uraemia and systemic signs.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7c1d62ecd22551f2750a53b4867e38f7d84caef4ef9f22743ef05a040de2248e",
+      "subjectId": "medicine",
+      "code": "GM10.11",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        351.12,
+        102.7,
+        391.8
+      ],
+      "sourceBodySha256": "6e905117ba67cef9809d8fe9f844a6fdfbf893f915e8cb7992e8855191eb7cec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal differential",
+      "draftLearningTask": "Prioritize causes using representative clinical findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e654484c62544af2144e5d076abde4591aa33c1811f2deb077058b91d0c3a96a",
+      "subjectId": "medicine",
+      "code": "GM10.12",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        391.8,
+        102.7,
+        432.6
+      ],
+      "sourceBodySha256": "e1d79bb6e321f58539ebd111b7205db56793a0019db0175f54a5e2ff85268bab",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal workup",
+      "draftLearningTask": "Justify a targeted diagnostic workup in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:29f6a6504e613df1729a219d1cf599a9240c9378173b4dd5af5d4e9b0f64ab93",
+      "subjectId": "medicine",
+      "code": "GM10.13",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        432.6,
+        102.7,
+        486.96
+      ],
+      "sourceBodySha256": "d6987a6435b53a37066e267359ef1322940579686327571143eccea18ed529c2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal test interpretation",
+      "draftLearningTask": "Explain indications and interpret renal chemistry, mineral markers, urine electrolytes, osmolality, anion gap, FENa, creatinine clearance and ultrasound.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c30928e70884097fea75bfbcaac8537b90651e7bf2d959a9d1cfb34333f15a00",
+      "subjectId": "medicine",
+      "code": "GM10.14",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        486.96,
+        102.7,
+        527.52
+      ],
+      "sourceBodySha256": "820705f82112cf3d66451a01f1dabbc80805f58d4d724666d6472455b61dab34",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hyperkalaemia ECG",
+      "draftLearningTask": "Identify representative ECG changes and explain the limits of ECG for excluding hyperkalaemia.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:38e976f324c6c821ce3689d9aa810e55500e75dd03f943abbfe38cd76420a988",
+      "subjectId": "medicine",
+      "code": "GM10.15",
+      "page": 298,
+      "rowBBox": [
+        44.2,
+        527.52,
+        102.7,
+        547.44
+      ],
+      "sourceBodySha256": "725aa8c12ec1d12803190fa05357b246fb4a2acf43b474d7de7b728347e0ff41",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Arterial blood gas sampling",
+      "draftLearningTask": "Explain indications and demonstrate arterial sampling and safety checks on a mannequin.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3b891646ece3ca72e9720c24234f927d146d28b3dfb49610b824ab711c0a271f",
+      "subjectId": "medicine",
+      "code": "GM10.16",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        153.66
+      ],
+      "sourceBodySha256": "11b535cc0bb2a1184f841fed6cc40c4b7080f807be18c743f38d1caf467f269a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Peripheral IV catheter",
+      "draftLearningTask": "Explain indications and demonstrate insertion and documentation in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:df7f302da7ce873a7cd1083ff2209446dcf64385554f9f90d471d6d15c51b9de",
+      "subjectId": "medicine",
+      "code": "GM10.17",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "sourceBodySha256": "df4220b347452efe57b9b6a900c47e181fc2ed09382c53a3d3158d37d789870f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal care communication",
+      "draftLearningTask": "Explain diagnosis, treatment and follow-up and confirm understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0a2b84901c47f54cc81851bedf9d2801a87e04ca7b121762a40c62e058d5cc90",
+      "subjectId": "medicine",
+      "code": "GM10.18",
+      "page": 299,
+      "rowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        208.32
+      ],
+      "sourceBodySha256": "a228f4a746b8f355a1c95d2286528f248486b732b216dc8baadcd06c303a7f8d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Renal diet counselling",
+      "draftLearningTask": "Tailor a simulated dietary discussion to laboratory findings, disease stage and patient preferences.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

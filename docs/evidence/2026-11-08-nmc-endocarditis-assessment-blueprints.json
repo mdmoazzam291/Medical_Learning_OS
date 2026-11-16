@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-assessment-blueprints",
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "coverageFraction": null,
+  "scope": "Assessment design only. Full case inputs, clinical answer keys, canonical objectives and validated standards are not supplied.",
+  "rows": [
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:gm1.19:endocarditis-1@1",
+      "componentId": "nmc-component:gm1.19:endocarditis-1@1",
+      "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+      "subjectId": "medicine",
+      "objectiveWording": "Distinguish acute and subacute presentations in supplied cases.",
+      "inputsRequired": "Supply two fictional adult case records, an interpretation reference, and relevant echo/culture/susceptibility findings.",
+      "baselinePrompt": "Using the supplied evidence and reference: Distinguish acute and subacute presentations in supplied cases. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:gm1.19:endocarditis-2@1",
+      "componentId": "nmc-component:gm1.19:endocarditis-2@1",
+      "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+      "subjectId": "medicine",
+      "objectiveWording": "Integrate echo, culture and susceptibility information into a simulated plan.",
+      "inputsRequired": "Supply two fictional adult case records, an interpretation reference, and relevant echo/culture/susceptibility findings.",
+      "baselinePrompt": "Using the supplied evidence and reference: Integrate echo, culture and susceptibility information into a simulated plan. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:mi3.2:endocarditis-1@1",
+      "componentId": "nmc-component:mi3.2:endocarditis-1@1",
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "objectiveWording": "Classify representative cases using supplied organism and host information.",
+      "inputsRequired": "Supply fictional organism/host-factor profiles and the classification reference used in the exercise.",
+      "baselinePrompt": "Using the supplied evidence and reference: Classify representative cases using supplied organism and host information. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:mi3.2:endocarditis-2@1",
+      "componentId": "nmc-component:mi3.2:endocarditis-2@1",
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "objectiveWording": "Explain relationships between host factors, organisms and presentation.",
+      "inputsRequired": "Supply fictional organism/host-factor profiles and the classification reference used in the exercise.",
+      "baselinePrompt": "Using the supplied evidence and reference: Explain relationships between host factors, organisms and presentation. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pa26.7:endocarditis-1@1",
+      "componentId": "nmc-component:pa26.7:endocarditis-1@1",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "objectiveWording": "Compare causes and valve-lesion findings in supplied examples.",
+      "inputsRequired": "Supply labelled teaching images or descriptions with known provenance and a pathology reference.",
+      "baselinePrompt": "Using the supplied evidence and reference: Compare causes and valve-lesion findings in supplied examples. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pa26.7:endocarditis-2@1",
+      "componentId": "nmc-component:pa26.7:endocarditis-2@1",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "objectiveWording": "Explain embolic and immune complications using supplied case evidence.",
+      "inputsRequired": "Supply labelled teaching images or descriptions with known provenance and a pathology reference.",
+      "baselinePrompt": "Using the supplied evidence and reference: Explain embolic and immune complications using supplied case evidence. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pa26.7:endocarditis-morphology@1",
+      "componentId": "nmc-component:pa26.7:endocarditis-morphology@1",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "objectiveWording": "Describe gross and microscopic features of infective endocarditis using supplied specimens or images.",
+      "inputsRequired": "Supply labelled teaching images or descriptions with known provenance and a pathology reference.",
+      "baselinePrompt": "Using the supplied evidence and reference: Describe gross and microscopic features of infective endocarditis using supplied specimens or images. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pa26.7:endocarditis-pathophysiology@1",
+      "componentId": "nmc-component:pa26.7:endocarditis-pathophysiology@1",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "objectiveWording": "Explain the pathophysiological sequence linking cause, valve pathology and complications.",
+      "inputsRequired": "Supply labelled teaching images or descriptions with known provenance and a pathology reference.",
+      "baselinePrompt": "Using the supplied evidence and reference: Explain the pathophysiological sequence linking cause, valve pathology and complications. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pe22.5:endocarditis-1@1",
+      "componentId": "nmc-component:pe22.5:endocarditis-1@1",
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "objectiveWording": "Recognize pediatric risk factors and presentation in supplied cases.",
+      "inputsRequired": "Supply a fictional pediatric case with age, risk context and a pediatric reference; do not extrapolate an adult regimen.",
+      "baselinePrompt": "Using the supplied evidence and reference: Recognize pediatric risk factors and presentation in supplied cases. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pe22.5:endocarditis-2@1",
+      "componentId": "nmc-component:pe22.5:endocarditis-2@1",
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "objectiveWording": "Explain a pediatric diagnostic and management pathway with a supplied reference.",
+      "inputsRequired": "Supply a fictional pediatric case with age, risk context and a pediatric reference; do not extrapolate an adult regimen.",
+      "baselinePrompt": "Using the supplied evidence and reference: Explain a pediatric diagnostic and management pathway with a supplied reference. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    },
+    {
+      "blueprintVersionId": "nmc-assessment-blueprint:pe22.5:endocarditis-etiopathogenesis@1",
+      "componentId": "nmc-component:pe22.5:endocarditis-etiopathogenesis@1",
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "objectiveWording": "Explain etiopathogenesis of infective endocarditis in a pediatric context.",
+      "inputsRequired": "Supply a fictional pediatric case with age, risk context and a pediatric reference; do not extrapolate an adult regimen.",
+      "baselinePrompt": "Using the supplied evidence and reference: Explain etiopathogenesis of infective endocarditis in a pediatric context. State the evidence supporting each conclusion and identify missing information.",
+      "transferPrompt": "Repeat the task after one relevant supplied finding or patient-context constraint changes. Explain which conclusion changes, which remains supported, and why.",
+      "scoringDimensions": [
+        "Addresses the exact component task",
+        "Uses supplied findings accurately",
+        "Justifies conclusions using the supplied reference",
+        "Identifies uncertainty and missing information"
+      ],
+      "scoreRecording": "Record each dimension separately as absent/incorrect or explicit/correct; record prompting separately.",
+      "clinicalAnswerKey": null,
+      "passThreshold": null,
+      "canonicalObjectiveVersionId": null,
+      "status": "draft-blueprint",
+      "learnerActivation": false
+    }
+  ]
+}

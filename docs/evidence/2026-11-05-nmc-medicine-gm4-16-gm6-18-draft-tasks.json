@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:c115783ea8580185d896b9d103ee017ac144fd8b2088df99efc422c070071c10",
+      "subjectId": "medicine",
+      "code": "GM4.16",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        410.76,
+        102.7,
+        438.06
+      ],
+      "sourceBodySha256": "d3176d1864e71e67e6056d80a2443466d96c7718cfc3c37f110b08a1ec268e46",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Fever imaging",
+      "draftLearningTask": "Match imaging modalities to suspected sites and causes of fever.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4434b282cda23804e96c3dd3b2d27944c3b5fba56c752048ea5136f934215e00",
+      "subjectId": "medicine",
+      "code": "GM4.17",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        438.06,
+        102.7,
+        478.86
+      ],
+      "sourceBodySha256": "d2bf66483f09314dacce5f7d19e03e71dc39e7f20363e8b9007f4d13a4504c2d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Mantoux interpretation",
+      "draftLearningTask": "Interpret measured induration using the exposure history and immune status and explain test limitations.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9fda4ec2b9dc4ea0aae3b4c5bde5e7054d65b27f944721ac8b0976d7325e44b3",
+      "subjectId": "medicine",
+      "code": "GM4.18",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        478.86,
+        102.7,
+        519.6
+      ],
+      "sourceBodySha256": "02d9c112afede1c09e1356be0e6eea20777bb151b499f559aa8235ab077066c7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prolonged fever workup",
+      "draftLearningTask": "Present a prioritized, cost-conscious diagnostic plan based on clinical clues.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5b2d654577147c9bc2ca4326cb727a39d0203286abacc92887799a19807e635d",
+      "subjectId": "medicine",
+      "code": "GM4.19",
+      "page": 289,
+      "rowBBox": [
+        44.2,
+        519.6,
+        102.7,
+        547.02
+      ],
+      "sourceBodySha256": "d74cb0066d3e05e999ef23f6bb69535daad90c37ae517c8f6bc6de5fab99f717",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Empiric fever treatment",
+      "draftLearningTask": "Justify a provisional plan based on acuity and immune status and specify when to revise it.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:17d464ec3248df6983789c511c79937f541ea2e170ca65fb71ca3c28c478215c",
+      "subjectId": "medicine",
+      "code": "GM4.20",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        133.8
+      ],
+      "sourceBodySha256": "f95de3e2b938674b4e7fffe1ffae973ecd94cbf30bd9774f0a960c0dc268d900",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prolonged fever counselling",
+      "draftLearningTask": "Explain the working diagnosis, uncertainties and treatment to a simulated patient and family.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:67b36bc3316de835f3de33221f5f7ddc92ba80e8abc5edb8315915e35a5850c8",
+      "subjectId": "medicine",
+      "code": "GM5.1",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        159.96,
+        102.7,
+        200.7
+      ],
+      "sourceBodySha256": "89f0f7d3833b2ce0ed5246ca06dd86030e66a0f197ac5eb6dcda4ab4f6ad5851",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Bilirubin physiology",
+      "draftLearningTask": "Trace bilirubin production, conjugation and excretion and explain abnormal patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9bf9dc7cae9d19fa269406c62e3823665597a5d9cf263610ed677271d7df79bf",
+      "subjectId": "medicine",
+      "code": "GM5.2",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        200.7,
+        102.7,
+        241.44
+      ],
+      "sourceBodySha256": "581d41869f021a491936f4dd51f85ba83448da728f77404ca5a026d1c3db0430",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver disease mechanisms",
+      "draftLearningTask": "Compare major causes of liver injury and explain their mechanisms.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6668ed94ea96f8503e06cd94958a7d9f0c14255c2ac1d23a7a20843645d565a2",
+      "subjectId": "medicine",
+      "code": "GM5.3",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        241.44,
+        102.7,
+        282.24
+      ],
+      "sourceBodySha256": "1ce49f3bd6ae4f1d08de79b6779b585e35138dcdc3b80eac3c9ede6a9d06fc2a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Viral hepatitis",
+      "draftLearningTask": "Compare transmission, virology, immune injury and clinical course across hepatitis viruses.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0d99c82cf874340addd5a4cb592569d0342d7f3c546ad088eb5002adee21d719",
+      "subjectId": "medicine",
+      "code": "GM5.4",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        282.24,
+        102.7,
+        322.92
+      ],
+      "sourceBodySha256": "90722ae28bb2708d010ee00d8455d88697634a7bd6c89ad1a69ae6714fbc20bf",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Alcohol-related liver disease",
+      "draftLearningTask": "Trace progression from steatosis to hepatitis and cirrhosis and explain clinical evolution.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:27c72b481b5e53267ef8140c9d90f8dbe350dcd4845c42764b8c9c9cdd0495c4",
+      "subjectId": "medicine",
+      "code": "GM5.5",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        322.92,
+        102.7,
+        390.6
+      ],
+      "sourceBodySha256": "d57c5aec15b94ee1091141aba1f524826d8e77e031a7c62abdff4c102991a2ae",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Cirrhosis and portal hypertension",
+      "draftLearningTask": "Relate disease progression to ascites, SBP, hepatorenal syndrome, encephalopathy, bleeding and hepatocellular carcinoma.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1bc37565adae323b1cef1f490b369b23ec4ec1671ea5baead4e007d90c2e10f8",
+      "subjectId": "medicine",
+      "code": "GM5.6",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        390.6,
+        102.7,
+        431.28
+      ],
+      "sourceBodySha256": "1fe758abdf91d821a041e4bff7c8e627ffddacc7ba6d7b053d28dcba97787b1a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Drug-induced liver injury",
+      "draftLearningTask": "Classify representative agents and explain mechanisms and injury patterns.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f6c4e708f8a59c259a19ce39f50d3381691fc0f280aafd6f24a73f3aa8a4b9a0",
+      "subjectId": "medicine",
+      "code": "GM5.7",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        431.28,
+        102.7,
+        472.08
+      ],
+      "sourceBodySha256": "39039c0131683f95f6512943851c5cfcc11f1c0fb4d70fbdfc2e4b914e642b95",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Gallstones and cholecystitis",
+      "draftLearningTask": "Explain stone formation, inflammation, clinical course and complications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:94fc08fa74a7a78a28c16ead822e666bac5c034bb24e1c5738890f4f18a6aec6",
+      "subjectId": "medicine",
+      "code": "GM5.8",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        472.08,
+        102.7,
+        526.26
+      ],
+      "sourceBodySha256": "f1d098957fee3b6e18b9ae0e0f7589b7ef6ae59cb859ce1e8af9dffd24568fa9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver history",
+      "draftLearningTask": "Elicit and present symptoms, exposures, medicines, sexual and vaccination history and family history.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:842b3039be46aa34afac72cb7332fbbfe8a9c6830c1b3d981311b6c163cf6ab9",
+      "subjectId": "medicine",
+      "code": "GM5.9",
+      "page": 290,
+      "rowBBox": [
+        44.2,
+        526.26,
+        102.7,
+        546.18
+      ],
+      "sourceBodySha256": "7b460bcd7c7dfdd2b485d64d19c4154663ce3339f020470f17bdaae02f5c34be",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver examination",
+      "draftLearningTask": "Demonstrate and document a focused examination for jaundice, chronic liver disease and decompensation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f66c48ed85b56446c9ed29e92ba53207a9a7896f5b71d4c48aaa0fd65bef660f",
+      "subjectId": "medicine",
+      "code": "GM5.10",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        147.36,
+        102.7,
+        187.92
+      ],
+      "sourceBodySha256": "a3e38421d5d41470859d9c7ce6be5224d5b51603582a7a05eb93a08168117930",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver differential",
+      "draftLearningTask": "Prioritize likely causes of a simulated presentation using clinical clues.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6db2071b13e288d2e94f8e14e315c049b83ecb0b2f5c288cd06171a56b5b32e4",
+      "subjectId": "medicine",
+      "code": "GM5.11",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        187.92,
+        102.7,
+        228.66
+      ],
+      "sourceBodySha256": "9aca9d94c9e21a0809c26970af42f76d1f2b0b5e58706c4bcf312acf512f9992",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver investigations",
+      "draftLearningTask": "Select and interpret blood counts, bilirubin, liver tests, hepatitis serology and ascitic fluid results.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cd9f1c6d2687418c509eb8609d06a0c5bda6504e01a49958087e7b0301e84ad2",
+      "subjectId": "medicine",
+      "code": "GM5.12",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        228.66,
+        102.7,
+        269.46
+      ],
+      "sourceBodySha256": "2e003e287bbe0fc009be62d41c5da6b3a14aa933f29e9f3bb5f381306d4eb931",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hepatobiliary imaging and procedures",
+      "draftLearningTask": "Compare indications and representative findings for ultrasound, MRCP and ERCP.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f579510472b9a291408a90106c15837a335f890cfec742dcd981acef9aa816a4",
+      "subjectId": "medicine",
+      "code": "GM5.13",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        269.46,
+        102.7,
+        310.14
+      ],
+      "sourceBodySha256": "d4fa792918208ac11071323cb268acdf803a40b71b6ee0f7d46306e8490ffdc9",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diagnostic approach to jaundice",
+      "draftLearningTask": "Use bilirubin fractions, liver test patterns and hepatitis serology to narrow the differential.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4901ce83fb21bf58612626e1f0a17cfd2f6086ea13a8bbd333f854ae2a61ecfe",
+      "subjectId": "medicine",
+      "code": "GM5.14",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        310.14,
+        102.7,
+        350.94
+      ],
+      "sourceBodySha256": "0313f69dd55a7d3aa152255d817d26ca43a1230d0e549a5a867561841d930a6b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Ascitic fluid analysis",
+      "draftLearningTask": "Demonstrate a supervised or simulated assistance role and interpret a supplied fluid panel.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d754ca73a89423e86e40ff8446cca5a0fe5b11155deca4c8a83427220b1ceab9",
+      "subjectId": "medicine",
+      "code": "GM5.15",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        350.94,
+        102.7,
+        391.68
+      ],
+      "sourceBodySha256": "ccad6dc8759f0d6a80b74f5fca87f31d62e48461dd2ce59363a2a174e91f656c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver disease management",
+      "draftLearningTask": "Compare management priorities for hepatitis, cirrhosis and its major complications, including portal hypertensive bleeding and liver cancer.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6474d116c0f05208ad52ed891472ff7f5189ec8647800a84f74335db7a574ed8",
+      "subjectId": "medicine",
+      "code": "GM5.16",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        391.68,
+        102.7,
+        432.6
+      ],
+      "sourceBodySha256": "79e46586592119ceba714a432bdcabcd10fe0eebb13769d0668ce7d9b1185696",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hepatitis vaccination counselling",
+      "draftLearningTask": "Identify indications and precautions and explain expected benefits to a simulated patient.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ac0242fc18f80145e18788b78ad8e24bcbc2b4dbd85993e6c10b327e12a6a17b",
+      "subjectId": "medicine",
+      "code": "GM5.17",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        432.6,
+        102.7,
+        473.16
+      ],
+      "sourceBodySha256": "81846d8d3afdb27cebfe2369135b5a31bc40547b3911b91c46d5dd23e621a5ba",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Liver transplantation",
+      "draftLearningTask": "Identify representative indications for transplant evaluation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:74aea76cdf7f082d77748d71162c8e013c4dc8b759bafd7ed94311d9b2661593",
+      "subjectId": "medicine",
+      "code": "GM6.1",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        493.08,
+        102.7,
+        520.44
+      ],
+      "sourceBodySha256": "3677f33c75e458e8ee74b1bb7a4549a79081b1d7914e0f4b67a30938b0fed91a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Acute HIV",
+      "draftLearningTask": "Recognize representative seroconversion findings and distinguish common mimics.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0bd9086a09248e47cbbee1903fe0441a5f1c25109dc20adf24315c1642fc4881",
+      "subjectId": "medicine",
+      "code": "GM6.2",
+      "page": 291,
+      "rowBBox": [
+        44.2,
+        520.44,
+        102.7,
+        541.5
+      ],
+      "sourceBodySha256": "56fa576fedeb2bcb26f60e57a9e53a106f3567b752237b9167d54f0956168397",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV classification",
+      "draftLearningTask": "Apply the applicable CDC classification to supplied clinical and laboratory data.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ae279af6294060afd769494f7cf9dc089df919ac7608ed5c49c0b4004d63b3ba",
+      "subjectId": "medicine",
+      "code": "GM6.3",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        127.5,
+        102.7,
+        154.86
+      ],
+      "sourceBodySha256": "1f953d3d6c45506ad8f9fe78afd1e48851d1f925ea882ea4387a920a1dd49047",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "CD4 count and opportunistic infection",
+      "draftLearningTask": "Relate CD4 count to representative infection risks and explain how it informs assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1fe71f3a4bcca48e83e3bd7de7f453e971f06d1dd81d37bcf4bc043a7f19b864",
+      "subjectId": "medicine",
+      "code": "GM6.4",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        154.86,
+        102.7,
+        182.22
+      ],
+      "sourceBodySha256": "65ee1f64dd6463421f00929e749895493aa7101802e0129abcfea990996aca03",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV-associated infections",
+      "draftLearningTask": "Compare mechanisms, course and findings of common opportunistic infections.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:56bd337106db2c75911f4e6cde62d9002baa4469be1220fbe5eceb923c6cba19",
+      "subjectId": "medicine",
+      "code": "GM6.5",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        182.22,
+        102.7,
+        209.46
+      ],
+      "sourceBodySha256": "146da9638e7a3dc93f254ef187c3409835f75ec971345ff90593fe0c9980e690",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV-associated malignancies",
+      "draftLearningTask": "Compare representative cancers by pathogenesis, course and presentation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bba0f6429d812993131ba8d316682e0d24769ea6ba1290518fbd7c2d85441db7",
+      "subjectId": "medicine",
+      "code": "GM6.6",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        209.46,
+        102.7,
+        236.94
+      ],
+      "sourceBodySha256": "a3a975612c083e26202fa0f9a6c93c9e226bd4b92aab1218b9162e1237ece09c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Skin and oral findings in HIV",
+      "draftLearningTask": "Recognize common lesions and explain their mechanisms and evolution.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5beb8ffc57f8769d9c639a84f2107c414e5bd2b8626bbef10fc8fe15c0e553b5",
+      "subjectId": "medicine",
+      "code": "GM6.7",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        236.94,
+        102.7,
+        291.0
+      ],
+      "sourceBodySha256": "b5b2c17a4cf9bf248fe27f9b856b650e683b2e5dd88ce79d47bf1e3bb18be179",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV history",
+      "draftLearningTask": "Elicit and document exposures, STI history, opportunistic infection risks and nutritional status respectfully.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ef3aafbbb3de6118f68542e182876f57d8fdbe1d4e1dd383529ddd060d8bcaf3",
+      "subjectId": "medicine",
+      "code": "GM6.8",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        291.0,
+        102.7,
+        331.74
+      ],
+      "sourceBodySha256": "1a7dd466e73b6e74f4500e7ba6a709dfdb4fcacf83e74e57426417af14dc2fe1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV differential diagnosis",
+      "draftLearningTask": "Prioritize likely causes of a presenting symptom using the clinical setting and immune status.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4383c3e5b747d6f845815ac22cd8c8771649c638e20177359e9943b2be7f0975",
+      "subjectId": "medicine",
+      "code": "GM6.9",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        331.74,
+        102.7,
+        359.1
+      ],
+      "sourceBodySha256": "3261a6f50277469ca701781c81908f67903d6188e6226d7bcdee005fd0353cf4",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV testing and staging",
+      "draftLearningTask": "Select and interpret appropriate diagnostic tests and classify severity from a simulated case.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0977b86aff3dcae454f5fda3b419ae06abdf291cccf6b7e605b0079db9e58179",
+      "subjectId": "medicine",
+      "code": "GM6.10",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        359.1,
+        102.7,
+        413.22
+      ],
+      "sourceBodySha256": "c67d6030f2c691d79fa2ee631c15d4ac4e42850cbfb4bcbcaa9ce878c4ce1f98",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Opportunistic infection tests",
+      "draftLearningTask": "Select and interpret relevant blood, respiratory, stool, CSF and imaging studies.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:aae20bd9ea892b164346dbadfbdff3a8cd73ba2560c16781d4c60b52485270a9",
+      "subjectId": "medicine",
+      "code": "GM6.11",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        413.22,
+        102.7,
+        440.58
+      ],
+      "sourceBodySha256": "b478e2f1b453987a68fb1f703736f69d8a0a6d098b4a0487df74d831ee00d168",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging in opportunistic infection",
+      "draftLearningTask": "Compare indications and representative findings for chest CT, brain CT and brain MRI.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:08bb594f275e47a57348644d72ffd1c09b515ca098312c0a5a71226023d0f734",
+      "subjectId": "medicine",
+      "code": "GM6.12",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        440.58,
+        102.7,
+        481.38
+      ],
+      "sourceBodySha256": "2bc4f6ed714b042ce9e666d099ec316db9ab7b5f840dec07a77b0ba4ea002372",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Respiratory tests in HIV",
+      "draftLearningTask": "Explain when to use pulse oximetry, arterial blood gases and chest radiography and interpret sample findings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:104c1dd7d4aa0974b2ade4cfdac42a582b3246aaacd3b6636aa8f4603261e4fd",
+      "subjectId": "medicine",
+      "code": "GM6.13",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        481.38,
+        102.7,
+        522.12
+      ],
+      "sourceBodySha256": "e0075b0897f7fbb1d86d6bbab98f93b89fbdfea27fc7902582cee5b8d8493ab7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Diarrhoea treatments in HIV",
+      "draftLearningTask": "Compare indications and adverse effects of representative therapies by likely cause.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c3f190bf3261bffd7329001ebc0f0bf1f9a09a14c6ece97d72c52544d9f0e20f",
+      "subjectId": "medicine",
+      "code": "GM6.14",
+      "page": 292,
+      "rowBBox": [
+        44.2,
+        522.12,
+        102.7,
+        542.04
+      ],
+      "sourceBodySha256": "fe9b21b39739cb5efdc313c939975bfa0645b9b10fc69c0ead5ac2107989378c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Antiretroviral therapy",
+      "draftLearningTask": "Explain combination therapy and compare the targets of major antiretroviral drug classes.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c3690432d983dba2387c00f17424435e5e856bbf9cdd0f11107a0ab7ad9f237e",
+      "subjectId": "medicine",
+      "code": "GM6.15",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        161.16
+      ],
+      "sourceBodySha256": "35267afd277c0a034f5b02529272d2bda20ad568f15a247b77869d7304c15d56",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Immune reconstitution inflammatory syndrome",
+      "draftLearningTask": "Explain its mechanism and use a simulated case to distinguish it from progression or treatment failure.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:bd4053bd6f93158e3ed9e7affb2cc27499c583e7fa2c147a39a3b6238313b0e2",
+      "subjectId": "medicine",
+      "code": "GM6.16",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        161.16,
+        102.7,
+        188.52
+      ],
+      "sourceBodySha256": "1f8407d49e8925f19d97bf66b334d036c765113683dca8b4a1a1c7b47669e50d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV post-exposure prophylaxis",
+      "draftLearningTask": "Use current guidance to explain indications, regimen selection and follow-up in a simulated exposure.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:9ecf4f50b7c16f96a6e882e949ac5b45b462bd98827424a653018ebe58b58138",
+      "subjectId": "medicine",
+      "code": "GM6.17",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        188.52,
+        102.7,
+        215.82
+      ],
+      "sourceBodySha256": "34c3b44a20d8a294df656451e3f0ea25b76970d311839b6cce61e892545e6703",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Opportunistic infection prophylaxis",
+      "draftLearningTask": "Match preventive medicines to representative infection risks and applicable indications.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:92cc59175383cf435c84056b82de21bf1e2e0c470285870ceb63bbcb32aacc8d",
+      "subjectId": "medicine",
+      "code": "GM6.18",
+      "page": 293,
+      "rowBBox": [
+        44.2,
+        215.82,
+        102.7,
+        243.12
+      ],
+      "sourceBodySha256": "72d038bb0d66d50c5315fa288e555569752158b4c988f62c4ba6abb0f4cdb016",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "HIV prevention counselling",
+      "draftLearningTask": "Demonstrate nonjudgmental counselling on transmission prevention and verify understanding.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

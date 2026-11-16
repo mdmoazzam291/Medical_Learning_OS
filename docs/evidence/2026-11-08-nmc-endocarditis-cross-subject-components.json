@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-cross-subject-scope",
+  "label": "Infective endocarditis",
+  "basis": "decomposition-of-existing-original-task-drafts",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "canonicalConceptId": null,
+  "productionRegistryChecked": false,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "completeRequirementSetKnown": false,
+  "coverageFraction": null,
+  "identityDecision": "Consider a shared disease home while retaining population and task-specific objective scopes. Confirm registry and source scope before binding; equal labels alone do not establish identity equivalence.",
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+      "subjectId": "medicine",
+      "code": "GM1.19",
+      "page": 283,
+      "rowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        228.48
+      ],
+      "sourceBodySha256": "633eca62d8120796fe86e7225b1ad35584b4f898f4b66dc95b23b06b9f1a87e3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective endocarditis",
+      "draftLearningTask": "Distinguish acute and subacute presentations and integrate echocardiography, cultures and susceptibility findings into a simulated plan.",
+      "mode": "performance-and-knowledge",
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "components": [
+        {
+          "componentId": "nmc-component:gm1.19:endocarditis-1@1",
+          "wording": "Distinguish acute and subacute presentations in supplied cases.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null,
+          "draftLearningBundlePath": "docs/evidence/2026-11-08-nmc-endocarditis-presentation-bundle.json",
+          "draftMaterialVersionIds": [
+            "nmc:endocarditis:presentation-comparison:teaching@1",
+            "nmc:endocarditis:presentation-comparison:case-a@1",
+            "nmc:endocarditis:presentation-comparison:case-b@1",
+            "nmc:endocarditis:presentation-comparison:rubric@1"
+          ]
+        },
+        {
+          "componentId": "nmc-component:gm1.19:endocarditis-2@1",
+          "wording": "Integrate echo, culture and susceptibility information into a simulated plan.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null,
+          "draftLearningBundlePath": "docs/evidence/2026-11-08-nmc-endocarditis-evidence-integration-bundle.json",
+          "draftMaterialVersionIds": [
+            "nmc:endocarditis:evidence-integration:teaching@1",
+            "nmc:endocarditis:evidence-integration:case-a@1",
+            "nmc:endocarditis:evidence-integration:case-b@1",
+            "nmc:endocarditis:evidence-integration:rubric@1"
+          ]
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "code": "MI3.2",
+      "page": 208,
+      "rowBBox": [
+        51.9,
+        295.44,
+        108.8,
+        327.12
+      ],
+      "sourceBodySha256": "fb43508d71d1b009e1833705f319a2205531dbb23eb7176695a7c710c43d519a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective endocarditis",
+      "draftLearningTask": "Classify representative cases and relate organisms and host factors to pathogenesis and presentation.",
+      "mode": "knowledge",
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "components": [
+        {
+          "componentId": "nmc-component:mi3.2:endocarditis-1@1",
+          "wording": "Classify representative cases using supplied organism and host information.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:mi3.2:endocarditis-2@1",
+          "wording": "Explain relationships between host factors, organisms and presentation.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "code": "PA26.7",
+      "page": 197,
+      "rowBBox": [
+        51.5,
+        308.1,
+        105.6,
+        342.66
+      ],
+      "sourceBodySha256": "17e8412749ab21a02b9114c8e7f82d656a3a1812912eddfdf0f65cc3196289a2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective endocarditis",
+      "draftLearningTask": "Compare representative causes, valve lesions, diagnostic findings and embolic or immune complications.",
+      "mode": "knowledge",
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "components": [
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-1@1",
+          "wording": "Compare causes and valve-lesion findings in supplied examples.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-2@1",
+          "wording": "Explain embolic and immune complications using supplied case evidence.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-morphology@1",
+          "wording": "Describe gross and microscopic features of infective endocarditis using supplied specimens or images.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pa26.7:endocarditis-pathophysiology@1",
+          "wording": "Explain the pathophysiological sequence linking cause, valve pathology and complications.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        }
+      ]
+    },
+    {
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "code": "PE22.5",
+      "page": 340,
+      "rowBBox": [
+        51.3,
+        265.2,
+        103.1,
+        297.78
+      ],
+      "sourceBodySha256": "9c177822795c01b40fa78ea41983b2729eb582bf3789e1102c543e8271e46f04",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infective endocarditis",
+      "draftLearningTask": "Recognize risk factors and presentation and explain diagnostic and management pathways.",
+      "mode": "knowledge",
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+      "components": [
+        {
+          "componentId": "nmc-component:pe22.5:endocarditis-1@1",
+          "wording": "Recognize pediatric risk factors and presentation in supplied cases.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pe22.5:endocarditis-2@1",
+          "wording": "Explain a pediatric diagnostic and management pathway with a supplied reference.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        },
+        {
+          "componentId": "nmc-component:pe22.5:endocarditis-etiopathogenesis@1",
+          "wording": "Explain etiopathogenesis of infective endocarditis in a pediatric context.",
+          "canonicalObjectiveVersionId": null,
+          "teachingArtifactVersionId": null,
+          "assessmentArtifactVersionId": null
+        }
+      ]
+    }
+  ],
+  "sourceEvidenceCheck": {
+    "sourceUrl": "https://nmc.org.in/rules-regulation-nmc/33/file",
+    "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+    "checkedDate": "2026-11-08",
+    "method": "Downloaded PDF SHA-256 matched pinned edition; read competency wording on PDF pages 197, 208, 283 and 340.",
+    "clinicalValidation": false
+  },
+  "relatedSourceBoundaries": [
+    {
+      "code": "GM1.20",
+      "pdfPage": 283,
+      "scope": "Blood-culture specimen collection technique is a separate competency."
+    },
+    {
+      "code": "MI3.3",
+      "pdfPage": 208,
+      "scope": "Diagnostic modalities and blood culture collection/processing have separate source scope."
+    },
+    {
+      "code": "MI3.4",
+      "pdfPage": 208,
+      "scope": "Investigation-based diagnosis has a separate source competency."
+    }
+  ]
+}

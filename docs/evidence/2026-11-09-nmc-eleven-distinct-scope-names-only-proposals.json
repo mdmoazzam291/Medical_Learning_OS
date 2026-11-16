@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-09-nmc-distinct-scope-routing.json",
+      "blobSha": "d4325f588502029b01c337bf4018c3a59d875939"
+    },
+    {
+      "path": "docs/evidence/2026-11-09-nmc-otitis-scope-registry-readback.json",
+      "blobSha": "789e4d5d1f0b2bf6e1564ac09d43bbb2aed3e99a"
+    },
+    {
+      "path": "data/nmc-reference-catalogue.json",
+      "blobSha": "4e042cc674fb29ad610d3d82aecb65f9c3e0286c"
+    }
+  ],
+  "identities": [
+    {
+      "name": "Acute otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+          "competencyCode": "PE25.1",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Cause of death coding",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:62ae1c5c8867df7500be94236140c486934f417f953ce13314adfaadba3c4043",
+          "competencyCode": "FM2.1",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Essential medicines list",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7",
+          "competencyCode": "CM19.1",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "External ear",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6",
+          "competencyCode": "AN40.1",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Facial nerve palsy",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:36988f661104d0c74c301f72c5bf09ae9f93399938021e95e8980d0a02b21187",
+          "competencyCode": "EN 4.16",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Mucosal chronic otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:d96e2fdbdb18c06e6fa28f5a7ccbbba075a2b49bc94bddb4d02bf0e61b8ebc71",
+          "competencyCode": "EN 4.6",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Otitis media with effusion",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:7e780a7d847205fddcc4cdd6efb0ccecd1a4891bb94d3ed74d9274a5ec38bcc6",
+          "competencyCode": "EN 4.4",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Recurrent pregnancy loss",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:906b5d416b1d80703f7f3121f3863c7f1d5b50b5713b049793bd3e19dd32b28e",
+          "competencyCode": "OG 9.2",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Rheumatic heart disease",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:1ed19f76495aeff14c87bfcb2257aa7967b6e2ea170e29b7c74916d62ad95b87",
+          "competencyCode": "GM 1.2",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Squamosal chronic otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:24e92fdc49feb8f96b438d1c225b9d465808e45ec599d4bf461589f044b5ddb4",
+          "competencyCode": "EN 4.7",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    },
+    {
+      "name": "Vitamin K deficiency bleeding",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950",
+          "competencyCode": "PE19.7",
+          "objectiveVersionId": null
+        }
+      ],
+      "canonicalConceptId": null,
+      "mappingAccepted": false
+    }
+  ],
+  "contexts": [
+    {
+      "name": "Acute suppurative otitis media",
+      "parentName": "Acute otitis media",
+      "sourceReferences": [
+        {
+          "referenceId": "nmc-2024-ref:edbccd6d21315a2310ac829659e3d6b910c76f9dd2d87405e5f8050ec6e54ecd",
+          "competencyCode": "EN 4.3",
+          "objectiveVersionId": null
+        }
+      ],
+      "mappingAccepted": false
+    }
+  ],
+  "distinctSourceReferences": 12
+}

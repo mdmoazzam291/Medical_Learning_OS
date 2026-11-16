@@ -1,0 +1,1318 @@
+{
+  "schemaVersion": 1,
+  "status": "names-only-scoped-task-home-proposals",
+  "selectionLimit": 30,
+  "sourceQueuePath": "docs/evidence/2026-11-08-nmc-parent-follow-up-queue.json",
+  "sourceQueueSha256": "bf10daee4a63d9a83873f057ba1c50fb6d60bd42ac2a485c75db1585103c0694",
+  "comparisonInventoryDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+      "sha256": "58c8edebe3ad5d6842f65d7b5ca77b176cf6065b4a28e7fd089d792efb04c070"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+      "sha256": "2a7e60832e360706b47ad1838b748803a68611b0212ba5c04f83e047b61d72d5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+      "sha256": "bf99dc80ad330633f7823bf6a4ec6cf13b20f3f6758e5679b0cf7abea551537f"
+    }
+  ],
+  "previousBatchDigests": [
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-01.json",
+      "sha256": "a5c631c551001dd0f8a001b28b56268a6c31a31ce171518f49ec02dcac1aa7f5"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-02.json",
+      "sha256": "32d814b53f96525d8a46a43665824d2ecc78c8b7a234451ff16b5cfbfc38618e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-03.json",
+      "sha256": "e7df2d3f588479a3465153379b84386f67a173e4ca9d511f2b9d774ee8839982"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-04.json",
+      "sha256": "03acc0d68c9b53de4ee85fb0319eaf9afba5486ec6efccf5651d07211f3c7b33"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-05.json",
+      "sha256": "0835b256ca8bf0c675c509f179c708a155ef6c34b54a968511597d62ca3be841"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-06.json",
+      "sha256": "9d99f6b600b79d369044faa438bb55552e8fda524d106c87a0211611565c8130"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-07.json",
+      "sha256": "9486951678acfc98eded971e6880a33303e6928cccdafa2b61dacc7d842cfce0"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-08.json",
+      "sha256": "be0bd9f20a43160d3eca1518ab043e8378e2c04bc5016e256abe2229828cbb01"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-09.json",
+      "sha256": "899f0fd32637c4d8aefd007f8674dd9c6981141b38a7f6480340f88b1f99578e"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-10.json",
+      "sha256": "8b42358aa9fe8aea57654b5ca3465604285d1edcaa555b5622147c744210f467"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-11.json",
+      "sha256": "92422976e793d8bed80b24fc30fa4a30f75e7a62566d1d1522cfb8bd3c6eda60"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-12.json",
+      "sha256": "0f7800bddee98ede8dd3e320717e82a539314538be0b1c5c8feb49663d3b74e1"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-13.json",
+      "sha256": "7901c12dfa052dd80e0714f33c4cc99ad898256def2c63c4edef29b4aee3ff27"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-14.json",
+      "sha256": "5bad74049d84e3de5ae5e9aa40f54ef9c38f31ed275b58a61f31653039442651"
+    },
+    {
+      "path": "docs/evidence/2026-11-08-nmc-scoped-task-home-proposals-batch-15.json",
+      "sha256": "6c39788e0f05c07c88ff011933f68ba0aeef3d507e1b204a59e2e03fe51281a2"
+    }
+  ],
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "automaticMerging": false,
+  "canonicalIdentityAllocation": false,
+  "officialSourceRechecked": false,
+  "productionRegistryChecked": false,
+  "rows": [
+    {
+      "proposalId": "nmc-scoped-home-16:01",
+      "facetNameKey": "obesity examination",
+      "facetName": "Obesity examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE11.4",
+          "page": 334,
+          "rowBBox": [
+            51.3,
+            52.38,
+            103.1,
+            96
+          ],
+          "sourceBodySha256": "940a56c7b7576b471cf88a1dbef70b8cfb6a3a5ded172a4fc5558bb955bf596d",
+          "editorialTaskSha256": "b259cb6b772c489487d0609f200c90c5d83e1f12124f89b54e66a5ccb7beb7e7",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.7",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            445.02,
+            102.7,
+            485.82
+          ],
+          "sourceBodySha256": "c7ababbee045fb65aa361a5ea530e8843fcfc7f81bd38b891dd970c503028df2",
+          "editorialTaskSha256": "bd78159a0fefd44d5b2d20ed0ab344f5e734793f98efd8103581c4b10c9e65f6",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve age-adjusted BMI/waist-hip and separate central-adiposity/secondary-cause examinations; age contexts not collapsed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:02",
+      "facetNameKey": "obesity history",
+      "facetName": "Obesity history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:7420ca22950910ff212852e418b217352a784777a866ba65f70908c44cff1e0f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.6",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            390.84,
+            102.7,
+            445.02
+          ],
+          "sourceBodySha256": "e5acd484bd4958ed7df41548513c50584c93ecea2a66e72d7be51dedfd27375f",
+          "editorialTaskSha256": "ff253ab95f5b4397f3e401971b692cf2d52dae89392a41e12696c39de3031f07",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE11.3",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            512.4,
+            103.1,
+            544.98
+          ],
+          "sourceBodySha256": "7b939c00dd1f78ea653a918381cf9de1f67c88bcc836e735b901a2c862008545",
+          "editorialTaskSha256": "a73d491f15ab162da41564980d9ff5a6ba0cca26e203227afdcf1d13758f7c7a",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve weight/readiness history and separate simulated paediatric recall/growth source.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:03",
+      "facetNameKey": "obesity investigations",
+      "facetName": "Obesity investigations",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:61338434d632dd4b63967f09be29c67e66fe79b5a4045e3c191ec1db580c3f02",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.9",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            526.56,
+            102.7,
+            546.48
+          ],
+          "sourceBodySha256": "c2a721204bd519e71fc04bd4924c8a84ff3ac70e2ba5b56b30247d3389764805",
+          "editorialTaskSha256": "7dc400b14261616d9bd3d7dd609c5f30cadc602736a27bf1ff0d9248e621c2f1",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Comorbidity and secondary-cause test selection/interpretation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:04",
+      "facetNameKey": "obesity lifestyle counselling",
+      "facetName": "Obesity lifestyle counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:df9d81d45ab1555f3f073494c22620b37c377e80aa4472ce981ffd016d61e68a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.11",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            153.66,
+            102.7,
+            181.14
+          ],
+          "sourceBodySha256": "8acf4f17a103cabbacc4d51b01ea7b71b2a5728f1c213b980e902d5aa5cea077",
+          "editorialTaskSha256": "0872c897a257fac0fee6611a839bc4e6dca51fd44d5510865759fe09644e6ba0",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated feasible behaviour/diet/activity shared changes.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:05",
+      "facetNameKey": "obesity pathology",
+      "facetName": "Obesity pathology",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:bdbc139d546ab0671125a563dd82ed5cf500e7560bc5dbe0eb742496632c849a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pathology-pa6-pa12-draft-tasks.json",
+          "subjectId": "pathology",
+          "code": "PA12.3",
+          "page": 191,
+          "rowBBox": [
+            51.5,
+            239.7,
+            105.6,
+            267.48
+          ],
+          "sourceBodySha256": "e3e234e49a17aceae9b1a0adf76949d07ca0b970d30e235867872c1a40a83af5",
+          "editorialTaskSha256": "d1f94301e3249aaab357c7cfd99faaf4f2a1e767fc84d5979fcaefc9609c4f63",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Adipose dysfunction/insulin resistance/metabolic syndrome/organ injury mechanisms.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:06",
+      "facetNameKey": "obesity prevention",
+      "facetName": "Obesity prevention",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:42a7cb636d0a50f25ab2693c69e603aac07cc2fa0d63bff5ca5c78e59aa76b35",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm14-10-gm16-17-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM14.14",
+          "page": 305,
+          "rowBBox": [
+            44.2,
+            249.12,
+            102.7,
+            289.86
+          ],
+          "sourceBodySha256": "e7093785b7f33f31b2fdba1df4a783ef14521e501f444fe5ab54222f17ae4c91",
+          "editorialTaskSha256": "f190481c770098e445fe0a80ff845e2c88e50db16df8f41468fa3d930e658cb4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Obesity",
+      "proposedHomeNameKey": "obesity",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "obesity"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Patient/worker/public prevention-message adaptation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:07",
+      "facetNameKey": "obstetric history",
+      "facetName": "Obstetric history",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d2d507b5cfc7da6695b1784597f6c6244be6a697860f2b18820fbb03fa507ed2",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG8.2",
+          "page": 428,
+          "rowBBox": [
+            49.1,
+            492.48,
+            103.1,
+            536.16
+          ],
+          "sourceBodySha256": "d7023d7466993c59f0cda6c11b93eb2db58325c20eab9c0d0ec2ef399ccd3092",
+          "editorialTaskSha256": "f0897086cc2d6e4bfe3e329f6d10f755b464d75ee454a2b15c186f66319c8862",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Obstetric clinical assessment",
+      "proposedHomeNameKey": "obstetric clinical assessment",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated menstrual/obstetric/medical/surgical history.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:08",
+      "facetNameKey": "obstetric transfusion",
+      "facetName": "Obstetric transfusion",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b8f0859fefb620bd600eb5644cd5d1367450bde0cdd138a4cf9d348bde56260a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-obgyn-og1-og12-11-draft-tasks.json",
+          "subjectId": "obstetrics-gynaecology",
+          "code": "OG10.2",
+          "page": 430,
+          "rowBBox": [
+            49.1,
+            324.42,
+            103.1,
+            356.58
+          ],
+          "sourceBodySha256": "1d1b1be862bfce4a06af81c42e2927156b0e162f637a3daf4bb9f9819033c9eb",
+          "editorialTaskSha256": "55c7dc846736b213250279e84cc6be6ea6cefa1342098bfcf879c43cee9bb7d7",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Blood transfusion",
+      "proposedHomeNameKey": "blood transfusion",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "blood transfusion"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Obstetric component indications/monitoring/complications, not universal transfusion competence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:09",
+      "facetNameKey": "oesophageal anatomy",
+      "facetName": "Oesophageal anatomy",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2a59cd14b8c2f5176788e13d235d3353f1054bfb64e7d5951959ad0a504f9f73",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN23.1",
+          "page": 122,
+          "rowBBox": [
+            51.2,
+            356.04,
+            122.2,
+            399.96
+          ],
+          "sourceBodySha256": "e245aea31dc240fa395df54924e52c6e1748ce06725dbdb0dbc0d8b1838c0fcd",
+          "editorialTaskSha256": "998a4d1f7c4005380255a926931b259e2896ad5317b1d78612bc338dd93d7928",
+          "mode": "performance-and-knowledge"
+        },
+        {
+          "referenceId": "nmc-2024-ref:c2fcd95c7c88b246a9b60b89f545e79b41bd87ac10fa5da6c888fbf7a1bd464c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU28.5",
+          "page": 410,
+          "rowBBox": [
+            45,
+            335.46,
+            101.7,
+            359.28
+          ],
+          "sourceBodySha256": "b775bb1bb8834b1550607af628a7db14818bdfa817d76bfa274b60d903f21a7a",
+          "editorialTaskSha256": "66a2e46e84c892e43554840652a79cd679c6d50c32639b55618c7c23e9d5c472",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Oesophagus",
+      "proposedHomeNameKey": "oesophagus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "oesophagus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Preserve specimen constrictions/neurovascular/lymphatic and separate surgical-landmark/motility contexts.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:10",
+      "facetNameKey": "opioids in cancer pain",
+      "facetName": "Opioids in cancer pain",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:f0a66e24cb8bd8c3200049369c3b4ac75732cce6d18171c04c0034d10a6b3f4a",
+          "packetPath": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+          "subjectId": "medicine",
+          "code": "GM13.17",
+          "page": 304,
+          "rowBBox": [
+            44.2,
+            106.44,
+            102.7,
+            133.8
+          ],
+          "sourceBodySha256": "edce19d7ac2246f4d20d01fe977ce44e6b96719604eeb64528bc369e7e248069",
+          "editorialTaskSha256": "168b1aae228a58bd59f66dc10d082ea5e7a3934e33c268b46f62afbe125d745e",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Cancer pain",
+      "proposedHomeNameKey": "cancer pain",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated cancer-pain opioid indication/use/harms/monitoring, not independent prescribing.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:11",
+      "facetNameKey": "oral cancer workup",
+      "facetName": "Oral cancer workup",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:494bc419bf332aeedaa20b6fce5b7ab41fb980e7032f84a937e52c96fda97192",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU20.2",
+          "page": 408,
+          "rowBBox": [
+            45,
+            68.34,
+            101.7,
+            103.26
+          ],
+          "sourceBodySha256": "3f80948107a8b9c2bbe9ad228e84a2ceb1a4ab4ecf998cc9f9a77eda9b263b9e",
+          "editorialTaskSha256": "9fe1fd1e9239eaebc6b82405747268b8e8c73c9a55c97fb24d7c1b4cd106f5b6",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Oral cancer",
+      "proposedHomeNameKey": "oral cancer",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "oral cancer"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "oral cancer"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Investigation selection and source stage-based principles, not current treatment certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:12",
+      "facetNameKey": "orbital tumour presentation",
+      "facetName": "Orbital tumour presentation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9d5d4117d40032b99b6e0d869bc23beb1635c2c9f9f7b3721a0151879a7f21b0",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP2.7",
+          "page": 415,
+          "rowBBox": [
+            49.5,
+            112.02,
+            103.5,
+            143.64
+          ],
+          "sourceBodySha256": "2678fa5da3a04dbab0b1143e8464dc78575e49379cbd04f99e76833741188a59",
+          "editorialTaskSha256": "d9088839799ca9194b4c5866411c137039f57d55d801f20b268395654fbe9696",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Orbital tumours",
+      "proposedHomeNameKey": "orbital tumours",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Representative tumour classification/presentation; members unnamed.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:13",
+      "facetNameKey": "orbital tumour workup",
+      "facetName": "Orbital tumour workup",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:315cd698df096343a444351a87dcbf1482f7a5ceea5265613f9266355cf75721",
+          "packetPath": "docs/evidence/2026-11-05-nmc-ophthalmology-op1-op10-draft-tasks.json",
+          "subjectId": "ophthalmology",
+          "code": "OP2.8",
+          "page": 415,
+          "rowBBox": [
+            49.5,
+            143.64,
+            103.5,
+            174.78
+          ],
+          "sourceBodySha256": "6846a1bb0dbfa1c1515653ca568a25261bc407ad104417836c680e402db37dba",
+          "editorialTaskSha256": "f222615c9c93718935401d47747c102dd71e5ad495d3fdba3756718af2c87374",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Orbital tumours",
+      "proposedHomeNameKey": "orbital tumours",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Investigation/management/referral priorities, not complete orbital oncology.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:14",
+      "facetNameKey": "organ donation counselling",
+      "facetName": "Organ donation counselling",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:86b7d6d76b7dd1f676dd1baf2d358d93005b5cdf56dd4a5be80f8adf583c5db7",
+          "packetPath": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+          "subjectId": "surgery",
+          "code": "SU13.4",
+          "page": 406,
+          "rowBBox": [
+            45,
+            169.38,
+            101.7,
+            204.24
+          ],
+          "sourceBodySha256": "8669b08ce5d7a03e1281b11c36748498655e0ecfe414518926671e79a29723b5",
+          "editorialTaskSha256": "280d51806556021494a0e4b6b1e3002931e5361f270fe253ebe42e0b09046d23",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Organ donation",
+      "proposedHomeNameKey": "organ donation",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "organ donation"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "organ donation"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sensitive noncoercive role-play discussion, not actual donation consent.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:15",
+      "facetNameKey": "organomegaly examination",
+      "facetName": "Organomegaly examination",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:196f3610d0e9e80fcdbf03e1805b918efa1d8bc723b2e6aa226c4fc4a5a7c1df",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.10",
+          "page": 346,
+          "rowBBox": [
+            51.3,
+            197.34,
+            103.1,
+            216.3
+          ],
+          "sourceBodySha256": "42a40f12624a6641ae59af4ea3bc4dbb9935c66c3d630e717f3f2ac8c66c25c2",
+          "editorialTaskSha256": "733132dd5a1555fc3e87e9a684df7d6e693343f0ae0b8efe4120b002e9ed4efa",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Hepatosplenomegaly",
+      "proposedHomeNameKey": "hepatosplenomegaly",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Abdominal examination and liver/spleen documentation; no assumed aetiology.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:16",
+      "facetNameKey": "orthopaedic consent",
+      "facetName": "Orthopaedic consent",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:95477fec922bcffcb32ac9e030ab1a8a9b6d03f3ecc2cc3a804fe55284918377",
+          "packetPath": "docs/evidence/2026-11-05-nmc-orthopaedics-or1-or14-draft-tasks.json",
+          "subjectId": "orthopaedics",
+          "code": "OR14.2",
+          "page": 450,
+          "rowBBox": [
+            49.1,
+            307.98,
+            103.1,
+            396.54
+          ],
+          "sourceBodySha256": "394b65025f8e6b4fe019d33c598cb0a3b733fddb52fc0168edb249cfa58b9d84",
+          "editorialTaskSha256": "5a6ac51a238d3ad41644bc7e6b8c84f7b96c88708a7e7365c8b9117dc636e5a2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Informed consent",
+      "proposedHomeNameKey": "informed consent",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "informed consent"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated orthopaedic benefit/risk/alternative/consequence consent discussion.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:17",
+      "facetNameKey": "osteoporosis medicines",
+      "facetName": "Osteoporosis medicines",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:97f32aa37bb49490ccb66bafdfa21a6ed9b8c6ac240c1248cb5118ff8339621e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-pharmacology-ph5-ph10-draft-tasks.json",
+          "subjectId": "pharmacology",
+          "code": "PH7.2",
+          "page": 180,
+          "rowBBox": [
+            51.7,
+            415.86,
+            105.7,
+            456.96
+          ],
+          "sourceBodySha256": "88fbbcff2e2df6e586bf7296b85b011292099764d91f897af900d631950a3a82",
+          "editorialTaskSha256": "00c853f8fe27f6ae7379d7611d571c5ff54afc5c551730cd83692188c6f18310",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Osteoporosis",
+      "proposedHomeNameKey": "osteoporosis",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Male/female antiresorptive/anabolic medicine comparison and choice justification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:18",
+      "facetNameKey": "outbreak challenges",
+      "facetName": "Outbreak challenges",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:b397b760687b3d21abde92afad604528cde28961589638e2d00bc0f25d813222",
+          "packetPath": "docs/evidence/2026-11-05-nmc-community-medicine-cm14-cm20-draft-tasks.json",
+          "subjectId": "community-medicine",
+          "code": "CM20.2",
+          "page": 279,
+          "rowBBox": [
+            40.1,
+            481.5,
+            98.6,
+            496.56
+          ],
+          "sourceBodySha256": "eae0a0a76e6b7ea467f38e665553eaf1824a4d7ba31c907cf3f3fac8d1183cc2",
+          "editorialTaskSha256": "37f6e47f7b3f0eda6e76b347c4f4cc945d7a1dffc43b46cd77214f8a9cf97cad",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Outbreak response",
+      "proposedHomeNameKey": "outbreak response",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Operational/communication challenges and prevention proposal.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:19",
+      "facetNameKey": "oxygen administration",
+      "facetName": "Oxygen administration",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:96c9b7190765b8fb4b375c380a867147574dc35173c4c11684386a1cc906f1e5",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.10",
+          "page": 343,
+          "rowBBox": [
+            51.3,
+            322.14,
+            103.1,
+            354.72
+          ],
+          "sourceBodySha256": "469d13d46f8be55eb2b1c0184e8c77d346656c84635be724c56a81154f69039d",
+          "editorialTaskSha256": "cae2b2294b41eb9bd07b1abe7a75635b82afcf82647d608d62c0fbc35e1b5dfe",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Oxygen therapy",
+      "proposedHomeNameKey": "oxygen therapy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "oxygen therapy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Simulated child device setup/flow under source protocol; not current protocol certification.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:20",
+      "facetNameKey": "oxygen delivery observation",
+      "facetName": "Oxygen delivery observation",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:066e1ad8ced64f75faf8d2ba19fe6c93cea589dd88b857e7401440f1f57c10cc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE24.7",
+          "page": 343,
+          "rowBBox": [
+            51.3,
+            215.16,
+            103.1,
+            240.12
+          ],
+          "sourceBodySha256": "4f849bd6c84b91635c860a42c9d89d5164a2d84b81947ea93b8ab71efb338e4b",
+          "editorialTaskSha256": "588a2ca252ff870f8ece77e9adc7c3a202c7cd437d5033689aae5f19079da018",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Oxygen therapy",
+      "proposedHomeNameKey": "oxygen therapy",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "oxygen therapy"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Observed delivery setup/safety distinct from simulated administration.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:21",
+      "facetNameKey": "pa chest radiograph",
+      "facetName": "PA chest radiograph",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:d6b2c435a14376fe61bf446258ae3e05016a1ce9c139e73ef6b130224b22644a",
+          "packetPath": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+          "subjectId": "anatomy",
+          "code": "AN25.7",
+          "page": 124,
+          "rowBBox": [
+            51.2,
+            226.5,
+            122.2,
+            261.48
+          ],
+          "sourceBodySha256": "49f499d6a41780733cfd13cac821538bbc6184651532c7b9c8e32948ea05ba9c",
+          "editorialTaskSha256": "8e509dcce237ec0b0627bd9acafacaad8a0f6d58d0bc206cf669e76f06f249d2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Chest radiography",
+      "proposedHomeNameKey": "chest radiography",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "chest radiography"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Normal PA orientation and visible structure identification only.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:22",
+      "facetNameKey": "paediatric acute kidney injury",
+      "facetName": "Paediatric acute kidney injury",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.5",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            218.58,
+            103.1,
+            251.16
+          ],
+          "sourceBodySha256": "523ec716f0bbb9e736090b1f41a9d75c252a65e0d61bae9e2fc178f2b2c7e1b1",
+          "editorialTaskSha256": "fc3153f658e0b1b0a38496381d82d15b66295686f3403aa1b130bccc2519b0fd",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Acute kidney injury",
+      "proposedHomeNameKey": "acute kidney injury",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "acute kidney injury"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric cause/complication/management-priority scope retained.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:23",
+      "facetNameKey": "paediatric anaemia assessment",
+      "facetName": "Paediatric anaemia assessment",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:e7e95d879f25c4c87a049462c7580aeaada7686db6885ea509546a72ccda3edc",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE26.1",
+          "page": 345,
+          "rowBBox": [
+            51.3,
+            249.48,
+            103.1,
+            282
+          ],
+          "sourceBodySha256": "872b2226b7f09138e94d72350ea1c27d456b49d63ac29dece09eea13fa928ef7",
+          "editorialTaskSha256": "b1cdb570404b12c3683e1e2c287a136a360ce08a7be5ed0fb4d703e5c50e0919",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Anaemia",
+      "proposedHomeNameKey": "anaemia",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "anaemia"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric mechanism/index/clinical assessment planning.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:24",
+      "facetNameKey": "paediatric chronic kidney disease",
+      "facetName": "Paediatric chronic kidney disease",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:709e03f64571c1c2f519f36ae98b98b1051b04b87de7d63c762c2d676483e874",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.6",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            251.16,
+            103.1,
+            283.74
+          ],
+          "sourceBodySha256": "cef789f8bd479af4cc3a540a47060cea3d64468891f2b6148d29b1255b164432",
+          "editorialTaskSha256": "9c7f45b26af16ff09847af7b740110446dc7d98a2df8f71623d5a81e5ca817e4",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Chronic kidney disease",
+      "proposedHomeNameKey": "chronic kidney disease",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "chronic kidney disease"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "chronic kidney disease"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric causes/manifestations/complications and longitudinal management.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:25",
+      "facetNameKey": "paediatric diet planning",
+      "facetName": "Paediatric diet planning",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:93ace10dc3141df70bb03d1da3713ad371109f7db53678c17b3509f29d624890",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE9.7",
+          "page": 333,
+          "rowBBox": [
+            51.3,
+            117.48,
+            103.1,
+            133.74
+          ],
+          "sourceBodySha256": "2a40127ffe110da115924206e9df3ad285f31a2c006e4ee952cefaf5672b76d6",
+          "editorialTaskSha256": "9bade3b846fb386b6dab91014b4985bbd2596b679dc5989ad28431f6ad416cd3",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Dietary planning",
+      "proposedHomeNameKey": "dietary planning",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-appropriate healthy/ill child diet planning, not adult diet equivalence.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:26",
+      "facetNameKey": "paediatric ecg",
+      "facetName": "Paediatric ECG",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:a693e412e4c7881503f1dd30c17c207170e07a53cae2ab4a46b78a69e432604c",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.10",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            513.48,
+            103.1,
+            533.4
+          ],
+          "sourceBodySha256": "0fc90d9105d35a3f55b85d11fe2c08bed7a4dc40a963dbc5bce7242073317c65",
+          "editorialTaskSha256": "610417a164497949fd135a9fea3e4d9b37a9b5086365cb3d1ccf574dca8849f2",
+          "mode": "performance-and-knowledge"
+        }
+      ],
+      "proposedHomeName": "Electrocardiography",
+      "proposedHomeNameKey": "electrocardiography",
+      "existingExactLabelCandidates": [],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Sample paediatric rate/rhythm/interval/age-pattern interpretation.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:27",
+      "facetNameKey": "paediatric haematuria",
+      "facetName": "Paediatric haematuria",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe18-3-pe21-2-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE20.4",
+          "page": 339,
+          "rowBBox": [
+            51.3,
+            196.92,
+            103.1,
+            218.58
+          ],
+          "sourceBodySha256": "a2e5f058902eb1485f9f1da9005ecbc08857604488d1c8b3cffdc73256e8ef34",
+          "editorialTaskSha256": "3a8c3f6201897ce9ca3391f79ba34a537f2ad2cab47428e5fd0475b904077846",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Haematuria",
+      "proposedHomeNameKey": "haematuria",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "haematuria"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric glomerular/nonglomerular patterns and referral.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:28",
+      "facetNameKey": "paediatric heart failure",
+      "facetName": "Paediatric heart failure",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:31bb1804895c02c744c0f739e29ace7042a70c0de47784509d9428bc6aea135e",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.3",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            200.04,
+            103.1,
+            232.62
+          ],
+          "sourceBodySha256": "818f6918f4d82783ec13bed2d658cd18048108ce2802c4fa2586823e2e9d987b",
+          "editorialTaskSha256": "640e7045afd3b048069daf4db5762cf2c1055659fef97550521df4ac7ee7e5f3",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Heart failure",
+      "proposedHomeNameKey": "heart failure",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "heart failure"
+        },
+        {
+          "path": "docs/evidence/2026-11-08-nmc-name-role-proposals.json",
+          "nameKey": "heart failure"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-specific heart-failure presentation/evaluation/treatment priorities.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:29",
+      "facetNameKey": "paediatric hypertension",
+      "facetName": "Paediatric hypertension",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:9e6e17e0a8ee25accc2a6ec72e566e942b5755df54213d46b17c308a24a1ae72",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE22.6",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            297.78,
+            103.1,
+            330.3
+          ],
+          "sourceBodySha256": "e9690d631fd6bf2a5b794661d13d544e9b535f534300fac143bf389f263e0901",
+          "editorialTaskSha256": "87962abc06f35528b2c3790327ab68bc6f92cf4fecd3b48af50d27eea2b1465a",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Hypertension",
+      "proposedHomeNameKey": "hypertension",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-missing-home-proposals.json",
+          "nameKey": "hypertension"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Age-reference paediatric BP classification/evaluation/care; current thresholds not reverified.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    },
+    {
+      "proposalId": "nmc-scoped-home-16:30",
+      "facetNameKey": "paediatric lupus",
+      "facetName": "Paediatric lupus",
+      "sourceTasks": [
+        {
+          "referenceId": "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f",
+          "packetPath": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+          "subjectId": "pediatrics",
+          "code": "PE21.4",
+          "page": 340,
+          "rowBBox": [
+            51.3,
+            84.9,
+            103.1,
+            100.02
+          ],
+          "sourceBodySha256": "67767672a47842689d7bd326b01cdb43975917663522748dc4e122e1d6b2a4ef",
+          "editorialTaskSha256": "9afe7729c689b6c5d1329f39eb68169a697f614e27156716e57896e0aaa5312b",
+          "mode": "knowledge"
+        }
+      ],
+      "proposedHomeName": "Systemic lupus erythematosus",
+      "proposedHomeNameKey": "systemic lupus erythematosus",
+      "existingExactLabelCandidates": [
+        {
+          "path": "docs/evidence/2026-11-08-nmc-foundation-names-only-index.json",
+          "nameKey": "systemic lupus erythematosus"
+        }
+      ],
+      "relation": "proposed-scope-facet-of-name-candidate",
+      "basis": "Paediatric multisystem lupus patterns/investigations/management principles.",
+      "semanticEquivalence": "unverified",
+      "canonicalConceptId": null,
+      "canonicalObjectiveVersionId": null,
+      "mappingAccepted": false,
+      "scopeComplete": false,
+      "bindingComplete": false,
+      "independentCompetenceEstablished": false
+    }
+  ],
+  "totals": {
+    "facets": 30,
+    "sourceAppearances": 33,
+    "distinctProposedHomes": 23,
+    "existingNameHomeLinks": 21,
+    "newNameHomeLinks": 9,
+    "facetsWithoutInitialHomeProposal": 179
+  }
+}

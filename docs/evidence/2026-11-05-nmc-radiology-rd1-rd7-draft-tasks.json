@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:f05a946c0a87bb01d168e962dd7a6743ca59bd2e02530354315bc24e56431dcd",
+      "subjectId": "radiology",
+      "code": "RD1.1",
+      "page": 457,
+      "rowBBox": [
+        40.1,
+        267.6,
+        103.9,
+        389.4
+      ],
+      "sourceBodySha256": "05412e37f092a51387ccb50cd10e932476500c197317476dc29d304b32cb84c2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging modalities",
+      "draftLearningTask": "Compare radiography, fluoroscopy, CT, ultrasound, nuclear imaging and MRI by operating principle, hazards and suitability for sample indications.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d26836743de6d5018cdf48c4cfbd8856d01630dd5efd6968321824a0a8b22d5e",
+      "subjectId": "radiology",
+      "code": "RD2.1",
+      "page": 457,
+      "rowBBox": [
+        40.1,
+        403.8,
+        103.9,
+        458.52
+      ],
+      "sourceBodySha256": "30f69807dc544339d0c48c3124e2f093b308f7aa74d5e3d4952b785c6a92d5ea",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging safety history",
+      "draftLearningTask": "Elicit relevant allergies, renal status, pregnancy and implanted devices and explain how findings affect imaging selection.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c24020901d3c1ed9af239bda9d598dc2b924da53d5d24957429abb47df00acdf",
+      "subjectId": "radiology",
+      "code": "RD2.2",
+      "page": 457,
+      "rowBBox": [
+        40.1,
+        458.52,
+        103.9,
+        526.68
+      ],
+      "sourceBodySha256": "1f12c62f24f6abc0d23a32081bcdd4175d0211be645718fb9b10b6f70c987538",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging selection",
+      "draftLearningTask": "Choose imaging for representative infections, tumours, injuries and congenital conditions across body systems and justify adaptations for children and pregnancy.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:a5b6e0e2cd9798029d4170aa613248922ae9d5ece142cc458acd262816fbed09",
+      "subjectId": "radiology",
+      "code": "RD3.1",
+      "page": 457,
+      "rowBBox": [
+        40.1,
+        541.02,
+        103.9,
+        555.54
+      ],
+      "sourceBodySha256": "0ce0556ea3bc857b0175e989a6bf2416667507f57a3ea22aa3dfffcea2b29d02",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Radiation effects",
+      "draftLearningTask": "Distinguish radiation types and compare stochastic effects with tissue reactions, including acute and long-term effects.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:08679f70d0d341b05ea1888b9d8e037adf9b4910076708d413d3428f4083a0ec",
+      "subjectId": "radiology",
+      "code": "RD3.2",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        80.46,
+        103.9,
+        135.06
+      ],
+      "sourceBodySha256": "e5c86bb1591e33d008011811581defafdc35835ca17ed8ef3b4772f05c8bc13c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Radiation protection",
+      "draftLearningTask": "Apply time, distance and shielding to a scenario and explain ALARA with reference to applicable AERB guidance.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2c746fab91db25c10d2315b29df749218dca7cce9729a57733fc9a083c160789",
+      "subjectId": "radiology",
+      "code": "RD3.3",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        135.06,
+        103.9,
+        189.72
+      ],
+      "sourceBodySha256": "1fe56837545fae15753a0ad19e4c02d59525450782ba3a62bcdbd6777136c45c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Occupational dosimetry",
+      "draftLearningTask": "Explain personal dosimeter use and distinguish commonly reported radiation quantities and units.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:f8c24c66df6fa24926877b2e0f0e3d5a6a5f5d5ca976d5a070e71661953dde28",
+      "subjectId": "radiology",
+      "code": "RD3.4",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        189.72,
+        103.9,
+        217.74
+      ],
+      "sourceBodySha256": "05c7740def30a519540ae4656f953aed1645d0e2af9a0ce315dcca803445d1cd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Prenatal imaging regulation",
+      "draftLearningTask": "Use the official PC-PNDT text to identify its purpose and relevance to simulated primary care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5e11709eafc75210b83f44bfe291fcc3bcc320b436f24ff4a3b1b734d923303f",
+      "subjectId": "radiology",
+      "code": "RD4.1",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        231.96,
+        103.9,
+        300.12
+      ],
+      "sourceBodySha256": "8c0eaab59a909d625cc981af0799973155e723e7acaba53045e8a664fd0c75c5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging requisitions",
+      "draftLearningTask": "Write a simulated requisition with the clinical question and urgency and clarify appropriateness with an imaging specialist.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c392f2fc8c239c46fa3a8c68203b29c75e25581fa46af494836e87d21b613cc4",
+      "subjectId": "radiology",
+      "code": "RD4.2",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        300.12,
+        103.9,
+        341.4
+      ],
+      "sourceBodySha256": "aef4f296fdbb880267b35cbb975d5c5f631f030bae9905607e034ab854aac997",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Critical care transport",
+      "draftLearningTask": "Use a simulated transfer checklist to verify oxygen, monitoring and MRI compatibility before transport.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2db6881d868655d2a537549ab8703cb861a207f5b2031b04aacc4855a212368f",
+      "subjectId": "radiology",
+      "code": "RD4.3",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        341.4,
+        103.9,
+        396.06
+      ],
+      "sourceBodySha256": "05d4546bd9cb691f2eb58a0ab3f2b03a30ef9269e6dc67f22da6edb1265ac5c2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Imaging correlation",
+      "draftLearningTask": "Connect anatomy, imaging and pathophysiology in sample osteoarthritis, venous thrombosis and cholecystitis cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3eb79228539ca3577655ae00d0dd294de3a416a1495c8aa1fb6b5760e809347e",
+      "subjectId": "radiology",
+      "code": "RD5.1",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        410.4,
+        103.9,
+        491.94
+      ],
+      "sourceBodySha256": "d96a86f2dbe472b1834fcc46a71788f325b6879e6badaec207ec50d5b9b5f4b3",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Normal radiographs",
+      "draftLearningTask": "Identify normal landmarks on chest, abdominal, musculoskeletal and Waters-view films, including the neonatal thymus and paediatric growth plates.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:795af0d7728f46bb7c4c19a31a073b149726d9ffd7ba49739fe2d0899e39b735",
+      "subjectId": "radiology",
+      "code": "RD5.2",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        491.94,
+        103.9,
+        519.9
+      ],
+      "sourceBodySha256": "23d2de621fec777281ca0b7d62fba2bf05c4d1eb11d8bc212e023edd1eb2d77f",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Radiographic age estimation",
+      "draftLearningTask": "Select a suitable reference standard and report a reasoned age range from supplied films.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c55f44167ab249b3441646411089dc5015e52430923c3c884e52fe2c51080b1a",
+      "subjectId": "radiology",
+      "code": "RD5.3",
+      "page": 458,
+      "rowBBox": [
+        40.1,
+        519.9,
+        103.9,
+        547.74
+      ],
+      "sourceBodySha256": "a5d30acc04c1ed2c625edaf228ad49a85da6598893473ebd0344bbfc968b7eca",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Emergency radiographs",
+      "draftLearningTask": "Identify urgent chest, abdominal and skeletal findings including free intraperitoneal air and acute fracture, and distinguish acute from chronic skeletal changes.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3752d926786b482344060f1512bdbda91002a9b656f555f1359adb6667f0fd33",
+      "subjectId": "radiology",
+      "code": "RD5.4",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        66.9,
+        103.9,
+        94.74
+      ],
+      "sourceBodySha256": "67e30c1af21b62c881bf6443110f9b35350ef11a8d59cce11cbb40f873eb7e76",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ICU device position",
+      "draftLearningTask": "Assess device position on supplied adult and paediatric ICU chest radiographs and communicate suspected malposition.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8afe35e20578a4fc0aaef4ae2f917fcc167a9064dd855e4a0380b172a9ba239b",
+      "subjectId": "radiology",
+      "code": "RD6.1",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        109.2,
+        103.9,
+        150.42
+      ],
+      "sourceBodySha256": "3ee535ba227dc88c227b3ee98a05abc608da114649be1fd313ac5059d024a336",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Patient preparation",
+      "draftLearningTask": "Give tailored written and verbal preparation instructions for sample imaging procedures and confirm understanding.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:38853026c090239a0f61037b3c63c665f9fc9df5d5b901f95f3bdee6376ed06c",
+      "subjectId": "radiology",
+      "code": "RD7.1",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        164.76,
+        103.9,
+        206.04
+      ],
+      "sourceBodySha256": "eaa87da47cce49d068e24a5ef5fec4cf312a0b6b0c5864512248a8eed3788cd1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Obstetric and gynaecological imaging",
+      "draftLearningTask": "Integrate supplied findings into simulated cases of polycystic ovarian morphology, ectopic pregnancy and infertility.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ee54e5f60e409de81955a9257fc17350a129af9ecb94cc977eef527412e8200c",
+      "subjectId": "radiology",
+      "code": "RD7.2",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        206.04,
+        103.9,
+        247.26
+      ],
+      "sourceBodySha256": "478fd1a17c7ecf93cd51f7cd89c94231a8bbe8d26e7d9c2c17bf0dbe91ef6c05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ENT imaging",
+      "draftLearningTask": "Explain how supplied findings inform cases of acute or chronic suppurative otitis media and sensorineural hearing loss.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:afd5d99a2bb4fb58705a935d1d058b80c41f493ed00c7fce60ed87462d6346a2",
+      "subjectId": "radiology",
+      "code": "RD7.3",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        247.26,
+        103.9,
+        301.98
+      ],
+      "sourceBodySha256": "9961a3a9b3ed6bd3bb67c8adc97121ca6df25e26550d7a2e0a19ffbbf95afcfd",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Medical imaging integration",
+      "draftLearningTask": "Use supplied imaging to inform simulated decisions in stroke, pulmonary embolism, heart failure and liver parenchymal disease.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2ae01e197eeaa6b5bbd565a4718dd687191f7630a7d8ab67c9cbeaf4bce47f58",
+      "subjectId": "radiology",
+      "code": "RD7.4",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        301.98,
+        103.9,
+        343.26
+      ],
+      "sourceBodySha256": "76d131fe5b234f6745022be9745dd5482a55cd775c37d242c0fc35bc9a35b328",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Surgical imaging integration",
+      "draftLearningTask": "Use supplied findings to inform simulated cases of head injury, strangulated hernia, appendicitis and intestinal obstruction.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6fc47e47029d91a053d658755a3c90ccc4aff46a2b19032c8002159cde0bcddd",
+      "subjectId": "radiology",
+      "code": "RD7.5",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        343.26,
+        103.9,
+        389.88
+      ],
+      "sourceBodySha256": "dce59df201c79df1693a51b12564c78bd143c137e4fa2134802140c5d5003d43",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Paediatric imaging integration",
+      "draftLearningTask": "Explain how supplied findings affect simulated decisions in chest infection, foreign body aspiration and urinary tract infection.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c76ad0f63b98b24d36d47b4c16c2499992239fd1e6f03af87f1e423592791f90",
+      "subjectId": "radiology",
+      "code": "RD7.6",
+      "page": 459,
+      "rowBBox": [
+        40.1,
+        389.88,
+        103.9,
+        431.28
+      ],
+      "sourceBodySha256": "07fe8b444116fe462190e964f8bd8edf726cc55f761a1bff31c9c15596762c42",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Breast imaging",
+      "draftLearningTask": "Interpret supplied imaging descriptions in screening and known cancer scenarios and identify the appropriate next diagnostic discussion.",
+      "mode": "knowledge"
+    }
+  ]
+}

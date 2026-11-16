@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08",
+      "subjectId": "pediatrics",
+      "code": "PE1.1",
+      "page": 329,
+      "rowBBox": [
+        51.3,
+        210.6,
+        103.1,
+        240.42
+      ],
+      "sourceBodySha256": "194cbdee93ce89e85b359281fa381d43fc8cf7943274adc475ec7f4e80ee3a2a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Growth and development",
+      "draftLearningTask": "Distinguish growth from development and explain major determinants of normal growth.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4dc8d32133617cf191fa1eb62fca5b788941e95037754821712b4fec5302a100",
+      "subjectId": "pediatrics",
+      "code": "PE1.2",
+      "page": 329,
+      "rowBBox": [
+        51.3,
+        318.06,
+        103.1,
+        404.7
+      ],
+      "sourceBodySha256": "c5aae21476a648d7a94d6864c3cc31f0bae427b17d5f7bbee2baa500b6b20c05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Anthropometry and growth charts",
+      "draftLearningTask": "Measure and plot age-appropriate parameters using relevant WHO or Indian standards and interpret serial trends.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7caab494104a49aa4e33f6f56b8e50cd65311e9a15785dc4e65aa6d4a024f20d",
+      "subjectId": "pediatrics",
+      "code": "PE1.3",
+      "page": 329,
+      "rowBBox": [
+        51.3,
+        404.7,
+        103.1,
+        475.92
+      ],
+      "sourceBodySha256": "f67c00e34c1eb3d5e22786d58ffb2ff74358a30ea88a5ae065ccc9d987abbf09",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Developmental milestones",
+      "draftLearningTask": "Map motor, behavioural, social, adaptive and language milestones and select appropriate assessment methods.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:516222d5a455a69ed8ace3a1205f8b26ec7e0a06950e0242b53b6c026bb4ea13",
+      "subjectId": "pediatrics",
+      "code": "PE2.1",
+      "page": 329,
+      "rowBBox": [
+        51.3,
+        494.04,
+        103.1,
+        526.56
+      ],
+      "sourceBodySha256": "c63109e0eaf35d3298981988b8dff89f9491916fd3e11bdb722766c1928d1bef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Growth faltering",
+      "draftLearningTask": "Use a simulated history and growth trajectory to prioritize causes, assessment and care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:4d7794f1c6ae7a86feaafd172fe3d26c935d790216c7c71ead8492d68fdc788d",
+      "subjectId": "pediatrics",
+      "code": "PE2.2",
+      "page": 329,
+      "rowBBox": [
+        51.3,
+        526.56,
+        103.1,
+        550.98
+      ],
+      "sourceBodySha256": "7edc04da5bf477b1d7de168ff234ef6ba6b6bb57ae890e515f6f6a99baff295d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Growth counselling",
+      "draftLearningTask": "Discuss growth concerns, a feasible feeding plan and follow-up with a simulated caregiver.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:57214add5ca08e6417f9485d56b0f66fcae16c998978cc23b3b7a26fa48886ca",
+      "subjectId": "pediatrics",
+      "code": "PE2.3",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "c384802a868544eee8dd96f94c1b0474f73dc911f32ebabde51e87202bd25c4e",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Short stature",
+      "draftLearningTask": "Interpret height, growth velocity and family context and justify evaluation and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8",
+      "subjectId": "pediatrics",
+      "code": "PE3.1",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        112.56,
+        103.1,
+        145.14
+      ],
+      "sourceBodySha256": "f208a0f89a9a41c1fc7603d335bdad42759345af22eabd7515090ce01403d32a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Developmental delay and disability",
+      "draftLearningTask": "Define developmental delay and classify causes of delay and disability, including intellectual disability.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d47e3f22e8049eaa8c37888f6d85b71cbdee24ea76374f5568967693c490fad8",
+      "subjectId": "pediatrics",
+      "code": "PE3.2",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        145.14,
+        103.1,
+        162.78
+      ],
+      "sourceBodySha256": "c0f1176a5fef7a519efa72419271ef3d0d97b1bce7f9957fd404acdcadc046a6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Developmental assessment",
+      "draftLearningTask": "Demonstrate a structured approach to a simulated child with developmental delay.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:789f4bc3c95c57d3501b95b28c62e0831da497351c7a9385dc8f251cc8668ebb",
+      "subjectId": "pediatrics",
+      "code": "PE3.3",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        162.78,
+        103.1,
+        189.84
+      ],
+      "sourceBodySha256": "9325eb9d46b808e479a1ed6437d50deefc61ca3bf811ced45c10e618e4f6fe4d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Caregiver counselling",
+      "draftLearningTask": "Explain findings and uncertainty and agree on referral and early support in simulation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:03907db0578999468dfab387170e1039422a1930a9e657ad467b6642dc1a2264",
+      "subjectId": "pediatrics",
+      "code": "PE3.4",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        189.84,
+        103.1,
+        206.58
+      ],
+      "sourceBodySha256": "216067a54036e9e43da95d81d87542f14902bfa66cb4f9a0c15375efa3800107",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Child development unit",
+      "draftLearningTask": "Observe a visit and document the team's roles and assessment and follow-up workflow.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75",
+      "subjectId": "pediatrics",
+      "code": "PE4.1",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        230.04,
+        103.1,
+        262.68
+      ],
+      "sourceBodySha256": "0ecdb1a7c046c2ef12a11d39b6b62f2d1f6385520c3049ab096825283d873c41",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "ADHD",
+      "draftLearningTask": "Explain contributing factors and distinguish ADHD from mimics using symptoms, impairment and reports across settings.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:54ac0ade90f468c362407a96f77cb66ee4837405c7616a99ee8d039a4e53e8f7",
+      "subjectId": "pediatrics",
+      "code": "PE4.2",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        339.18,
+        103.1,
+        371.7
+      ],
+      "sourceBodySha256": "d010fb4cf18e6bf0ae201e1e787b8d1abc9251e3cf525fe37b242af6f1b0fb20",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Autism",
+      "draftLearningTask": "Explain contributing factors, recognize developmental features and outline diagnostic assessment and individualized support.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce9d83edc967ad9504171aa38e0fd016fc2862bc0d0d2b7e3b851d27fd51bb48",
+      "subjectId": "pediatrics",
+      "code": "PE5.1",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        391.62,
+        103.1,
+        424.14
+      ],
+      "sourceBodySha256": "bc214634032ccadbc2b05aa9776592fc70312833d4114697e894f1cf438f1ffe",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Feeding problems",
+      "draftLearningTask": "Distinguish representative feeding difficulties and explain assessment and management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:13e349d33ea10b418aa45c04f7cfbeb4b9d6d430d4c119dfc9d3673117302572",
+      "subjectId": "pediatrics",
+      "code": "PE5.2",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        424.14,
+        103.1,
+        456.78
+      ],
+      "sourceBodySha256": "e67cbcc18a73ec7b607e89e0f0fbb38a5a7e359d2ad6428c66d8214f16f4fe74",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Breath-holding spells",
+      "draftLearningTask": "Recognize typical episodes, distinguish mimics and explain management and counselling.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494",
+      "subjectId": "pediatrics",
+      "code": "PE5.3",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        456.78,
+        103.1,
+        489.3
+      ],
+      "sourceBodySha256": "7bd5bc296e4ebc1a135e609ab4f1d2d62747eb7dbbfc6b801543c78326bdfb05",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Tantrums and pica",
+      "draftLearningTask": "Distinguish developmental behaviour from concerns requiring evaluation and explain management of both presentations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:04b22d770b69dc4ba102aeac4458f59c1764231ce56fee622312202e93ed7fc2",
+      "subjectId": "pediatrics",
+      "code": "PE5.4",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        489.3,
+        103.1,
+        504.36
+      ],
+      "sourceBodySha256": "314341d0aa06daee7750f1277d5a76f44b8771499dd20e2f6377aa17159d3598",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Enuresis",
+      "draftLearningTask": "Classify enuresis and relate causes and associated findings to management.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:37bf6a1677a26d2aba8a6365e398a2a4fde7d6dbf22fe57efceeaf10471949ff",
+      "subjectId": "pediatrics",
+      "code": "PE6.1",
+      "page": 330,
+      "rowBBox": [
+        51.3,
+        522.84,
+        103.1,
+        537.96
+      ],
+      "sourceBodySha256": "5d0b8f57d45d2e3a4c7ddb28c558527a43fbf7d2954cca42dd483ffee7f1678d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent stages",
+      "draftLearningTask": "Define adolescence and compare the characteristics of its stages.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:26a6de476add5064cda27e63d92f6b297b49e02a24bc6c332a2d34c468abeac9",
+      "subjectId": "pediatrics",
+      "code": "PE6.2",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "dbf061c93720b6ca330df0744f3cf13cdc6d9860642ef545528e75dede619645",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pubertal changes",
+      "draftLearningTask": "Compare physical, physiological and psychological changes across puberty.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fb2ffadbbdfb73e69e5d3c68d535ed2e1c1902338b434f45386a2f4cbb04ec14",
+      "subjectId": "pediatrics",
+      "code": "PE6.3",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        84.9,
+        103.1,
+        102.54
+      ],
+      "sourceBodySha256": "16ebfa1cae724582fb61513587ee736ef4ec252cc6d9e17f74afb20d77ad67c5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent health problems",
+      "draftLearningTask": "Identify common physical and psychosocial concerns and explain preventive assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c9d794c8081a1a31da455483d9468c549f06436935d408d51f5dd59c0e3c6183",
+      "subjectId": "pediatrics",
+      "code": "PE6.5",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        120.12,
+        103.1,
+        152.7
+      ],
+      "sourceBodySha256": "cf5a2f79c20da90c69e4f8276c46d1236240ef54719fbf9053cc45380608cbac",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent eating disorders",
+      "draftLearningTask": "Compare anorexia nervosa and bulimia by presentation and identify complications and referral needs.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:87e7ec1811ef1a1d227cafb3199c4b2315b06021e50f6d428f81d05fa27a518d",
+      "subjectId": "pediatrics",
+      "code": "PE6.6",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        152.7,
+        103.1,
+        169.44
+      ],
+      "sourceBodySha256": "e07cb5014729fbfa159554bb2034f08b703c93a31e4ad32c1dccac9599d6d11c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent mental health",
+      "draftLearningTask": "Recognize common presentations and identify situations requiring further assessment.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:3107f8ddadbfeceff8e1927992c37002d8752d77ff67d0022cbcc6b778c65aab",
+      "subjectId": "pediatrics",
+      "code": "PE6.7",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        169.44,
+        103.1,
+        201.96
+      ],
+      "sourceBodySha256": "faee0c29ff187878e624757d46c9c53d79335307a25221293a94e7410bbbf57c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent confidentiality",
+      "draftLearningTask": "Demonstrate a private consultation and explain confidentiality and its limits.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ae99f1df4b5aa2821f02cb273456c4ad13bf66ea208957dada5300ec74c4b0b1",
+      "subjectId": "pediatrics",
+      "code": "PE6.8",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        201.96,
+        103.1,
+        260.04
+      ],
+      "sourceBodySha256": "627d8f58007f411fd5c471f14806a05e65e4848528cfcff2e27710dfe7be7df1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent health check",
+      "draftLearningTask": "Demonstrate a simulated check with focused history, growth charts, sexual maturity rating, thyroid and breast assessment where appropriate, and HEADSS screening.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:424264333b92ab14baa5ffff97a730a300163cf058bf4f83a60b0a11fb318315",
+      "subjectId": "pediatrics",
+      "code": "PE6.9",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        335.34,
+        103.1,
+        367.92
+      ],
+      "sourceBodySha256": "d7143c618c7a50b85ea85b08ab59a82c5becf729df401e36e588f7281558b67b",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent-friendly services",
+      "draftLearningTask": "Explain service objectives and match representative presentations to referral criteria.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ea117179c70b46b92ef7b7ef848371c3b45ee1f959d30e0f616e43406a0ec887",
+      "subjectId": "pediatrics",
+      "code": "PE6.10",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        367.92,
+        103.1,
+        393.18
+      ],
+      "sourceBodySha256": "7163570f94e104265bf356b6447be7f237b6838495143435519ea6314b414eec",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent clinic observation",
+      "draftLearningTask": "Observe a clinic and describe its access, counselling and referral workflow.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d",
+      "subjectId": "pediatrics",
+      "code": "PE6.11",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        393.18,
+        103.1,
+        411.3
+      ],
+      "sourceBodySha256": "d8900e3b5a930707375d84ff081634e8c7d73a3f3e1c8de29126c740688d3aaa",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Adolescent obesity and NCDs",
+      "draftLearningTask": "Explain the importance of recognizing risk factors and outline representative prevention opportunities.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e",
+      "subjectId": "pediatrics",
+      "code": "PE6.12",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        411.3,
+        103.1,
+        443.88
+      ],
+      "sourceBodySha256": "a73cc4b215250f501180f4b5fbe30784204f70a9fdfe062f72ccc1667de39fea",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Abuse recognition",
+      "draftLearningTask": "Use dated data to discuss prevalence and explain recognition and safeguarding pathways for suspected sexual abuse or substance use.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd",
+      "subjectId": "pediatrics",
+      "code": "PE7.1",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        465.96,
+        103.1,
+        498.54
+      ],
+      "sourceBodySha256": "2805addf7e39c92643f625ac41af44bbd341a5a29f4d47cb057648fe496999ef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Lactation and cultural practices",
+      "draftLearningTask": "Explain lactation physiology and explore how cultural beliefs affect breastfeeding.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:123cf2da586401754dc9ce7f7b3d9cd28e8fb597b23486c5a1c5a790acdf64e6",
+      "subjectId": "pediatrics",
+      "code": "PE7.2",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        498.54,
+        103.1,
+        531.12
+      ],
+      "sourceBodySha256": "f0682641bc9dee70d3b485b7fcf9751649d07663d3f9d748e00ce3f7e8ab644d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Human milk composition",
+      "draftLearningTask": "Compare stages of human milk and contrast human and cow milk composition.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b78bc4c5ec5397677af14041e4e684a9ef35cdce419bad67129fdc0ea022e70d",
+      "subjectId": "pediatrics",
+      "code": "PE7.3",
+      "page": 331,
+      "rowBBox": [
+        51.3,
+        531.12,
+        103.1,
+        546.18
+      ],
+      "sourceBodySha256": "6535eff92e109f903616a3b6faca513ec6182d5c58bb0ac3ed85a06b5ba38955",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Breastfeeding benefits",
+      "draftLearningTask": "Explain nutritional and other benefits for infants and mothers.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1a30d4460ad8f654e3f3c7fd9dd8605fcb80614c1501e2b7ebcb5ebedfcbf6ba",
+      "subjectId": "pediatrics",
+      "code": "PE7.4",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        84.9
+      ],
+      "sourceBodySha256": "c83a105e29b4ccdf61159c97ce18d9d61dee2223d4b59a37926309757a2796f1",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Breastfeeding observation",
+      "draftLearningTask": "Distinguish effective and ineffective positioning and attachment in supervised observation.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cb68a53e70f46ac4aa50882184aed469a93b9c2b317bae00f6dd8000339b282f",
+      "subjectId": "pediatrics",
+      "code": "PE7.5",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        84.9,
+        103.1,
+        102.54
+      ],
+      "sourceBodySha256": "9060e8b8cbdb76e410adf3864bff0335b6439d6c89a6aa0faf1d884616861528",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Baby-Friendly practices",
+      "draftLearningTask": "Describe the practices that support breastfeeding in maternity and newborn services.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:79efb0722a75143250c86725986c1a3fe844f0ff531182163c9a9e791854cb47",
+      "subjectId": "pediatrics",
+      "code": "PE7.6",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        102.54,
+        103.1,
+        135.12
+      ],
+      "sourceBodySha256": "ee5d2043c740064b9de8c679e4738c62f3a53b7930c3bde86db18554ede0a979",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Infant and young child feeding",
+      "draftLearningTask": "Explain age-appropriate breastfeeding and complementary feeding principles.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:581156a68d4d1f286932eca446404fa689581c1dd93ca6ca6910bd5307308015",
+      "subjectId": "pediatrics",
+      "code": "PE7.7",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        135.12,
+        103.1,
+        167.64
+      ],
+      "sourceBodySha256": "72cd7901d0e6f6ce9307cb9f7cccfa74cf3977223ab4e74a2bdce786344617c6",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "World Breastfeeding Week",
+      "draftLearningTask": "Participate in an approved awareness activity and document the role and message delivered.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a",
+      "subjectId": "pediatrics",
+      "code": "PE7.8",
+      "page": 332,
+      "rowBBox": [
+        51.3,
+        167.64,
+        103.1,
+        200.28
+      ],
+      "sourceBodySha256": "5630035b564497a8fed5289fae7a87117ddee9a1c33adda09c4aac83a7cba2f5",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Human milk banking",
+      "draftLearningTask": "Observe a milk bank and explain donor screening, processing, storage and distribution.",
+      "mode": "performance-and-knowledge"
+    }
+  ]
+}

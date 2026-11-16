@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-tasks-awaiting-identity-and-source-review",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "clinicalApproval": false,
+  "sourceAlignmentApproved": false,
+  "learnerActivation": false,
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:fb904cd41524e20fd58e0f070d2e06729b40df2f01341256f02650b414bb3c3b",
+      "subjectId": "community-medicine",
+      "code": "CM14.1",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        129.42,
+        98.6,
+        147.24
+      ],
+      "sourceBodySha256": "819064b9cf9eed11bf22641bc77ed01951a383044466efcdffb29a591ea7ca09",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Hospital waste categories",
+      "draftLearningTask": "Classify representative hospital waste streams by source and hazard.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ce4ce71475d303a3e5fe964f521f5b606936f4297699970b390f871ed7803eab",
+      "subjectId": "community-medicine",
+      "code": "CM14.2",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        147.24,
+        98.6,
+        165.06
+      ],
+      "sourceBodySha256": "d7d92075fc66ee96cb73953931fc4a9d728c0cefd90ef97797f3650677720f45",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Waste treatment methods",
+      "draftLearningTask": "Match waste categories to treatment options and explain their limitations.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:52d6039ad6afa16087a75ab841bdfe29f4ab67643f8d02ec1a592c7af51bbd1c",
+      "subjectId": "community-medicine",
+      "code": "CM14.3",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        165.06,
+        98.6,
+        182.88
+      ],
+      "sourceBodySha256": "94930a0da5c67ec44894b66bbe8907eba7ff109b14fac3e25d05b1f7e755253d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Waste management rules",
+      "draftLearningTask": "Use official Indian biomedical waste rules to map institutional duties.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1c9f75f23d91e77ecc962e23a65820fa4d6a6c7da94b885a6b9910765ceece65",
+      "subjectId": "community-medicine",
+      "code": "CM14.4",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        182.88,
+        98.6,
+        206.34
+      ],
+      "sourceBodySha256": "942dea9d08e5cc5a99079b0bc26952e026b29fe3485206a1d370bde3fb3d3fde",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Waste segregation",
+      "draftLearningTask": "Sort simulated waste at the point of generation using the applicable colour coding and sharps precautions.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:020195e61a545b62aa1e49fa1056521d3cfc1a9a838ebf0a60c06f3e2c178b7e",
+      "subjectId": "community-medicine",
+      "code": "CM15.1",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        223.2,
+        98.6,
+        254.64
+      ],
+      "sourceBodySha256": "792789324f056ac59e906adb6f44f45a256edbd4ae17e121b4dfa1630ebb3001",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Mental health concepts",
+      "draftLearningTask": "Explain mental health, wellbeing and the influence of social and environmental factors.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:6f6e2f77977178039386c1a7f1e007ba423f1e2b0792a01f7073f201592826cd",
+      "subjectId": "community-medicine",
+      "code": "CM15.2",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        254.64,
+        98.6,
+        285.36
+      ],
+      "sourceBodySha256": "2fa721c8c73e2a7bf385d7fdba4b1dd67da0f34bf0f346e49f4973233cbd0171",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Mental health warning signs",
+      "draftLearningTask": "Recognize early warning signs and identify presentations that require urgent assessment in simulated cases.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c98e401875099593682f96fe7901f3633ac74abb0037129db4ae89e7baac05ce",
+      "subjectId": "community-medicine",
+      "code": "CM15.3",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        285.36,
+        98.6,
+        313.32
+      ],
+      "sourceBodySha256": "57e666de9c37d67c274bd9ae9b813ead3bd9de9d246daf478419574a39a2c04a",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National mental health programme",
+      "draftLearningTask": "Use official programme documents to map community, district and referral services.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8c0656715d17e8b70e1bf774dfd0a78a5a31b966f2646748ac3da63f8768ce20",
+      "subjectId": "community-medicine",
+      "code": "CM15.4",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        313.32,
+        98.6,
+        342.66
+      ],
+      "sourceBodySha256": "2e7e3189b6a7df969588aed24517c18075247a483bf8d53a652ceaae02f6a1a7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Early mental health recognition",
+      "draftLearningTask": "Assess simulated individual, family and community situations and identify initial support and referral needs.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:cb239b82e6d7deb6b57dd7946f331ac2eeafbcb9d0eb637ce91bf246fd6aa4cb",
+      "subjectId": "community-medicine",
+      "code": "CM16.1",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        366.06,
+        98.6,
+        384.06
+      ],
+      "sourceBodySha256": "4dbe845221562a31124790b60b5447c5b2ecffa43377069f75ae7702246661cb",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health planning concepts",
+      "draftLearningTask": "Define health planning and distinguish needs, priorities, objectives and resources.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:5d1137081db42dd573422feec08312ba5d4156d7bd55152ac5e4dcbd9b468467",
+      "subjectId": "community-medicine",
+      "code": "CM16.2",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        384.06,
+        98.6,
+        402.06
+      ],
+      "sourceBodySha256": "999619538738b80937c88bb3de03e1851c48c03d0b3465fe570ff73c259814ef",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Planning cycle",
+      "draftLearningTask": "Apply the planning cycle to a sample community health problem.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:e10519f57e59644a399f12abae6924f13aeec66f6b33df7a02fee70202137ef2",
+      "subjectId": "community-medicine",
+      "code": "CM16.3",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        402.06,
+        98.6,
+        420.06
+      ],
+      "sourceBodySha256": "5369cc260f19146ec6c458539d3e80dcb5ff127845dfd170fbcff792ecb40985",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health management techniques",
+      "draftLearningTask": "Compare representative scheduling, resource allocation and monitoring techniques and select one for a service problem.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d9fa6d309e476217ad6cb54adff95b36ce324ce599f70a9f64a9631d191fddfc",
+      "subjectId": "community-medicine",
+      "code": "CM16.4",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        420.06,
+        98.6,
+        451.98
+      ],
+      "sourceBodySha256": "434637d902facf2edb5567f2412064a285ad1422dcb534dcf38655a2d883840d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health planning in India",
+      "draftLearningTask": "Use official policy documents to compare national priorities and how they translate into planning.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:ac22f4d9772d65160a7cb8cca08359c694fd5363533dbf822b33dd9c0deafa8f",
+      "subjectId": "community-medicine",
+      "code": "CM16.5",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        451.98,
+        98.6,
+        483.96
+      ],
+      "sourceBodySha256": "ec334c529a32f5beff00bd1cef62377b42eadb5d6aadbad0b431f373f9a2d7d7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health economics and planning",
+      "draftLearningTask": "Compare cost-effectiveness, cost-utility and cost–benefit approaches and interpret a simplified planning decision.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:48253e00449f8776d345982fcee3fa833bb60932557ceb02c32f1ec91251dd84",
+      "subjectId": "community-medicine",
+      "code": "CM17.1",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        505.68,
+        98.6,
+        528.6
+      ],
+      "sourceBodySha256": "069602e21c2c9b95d76bd6894db3e7644aa6856688dad0fd6116088475decede",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community health care",
+      "draftLearningTask": "Describe how population needs shape preventive, promotive, curative and rehabilitative care.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d3ff81a449db158afcf36e78861205df6909299c83e49a8d6ad2719ab5d1236e",
+      "subjectId": "community-medicine",
+      "code": "CM17.2",
+      "page": 278,
+      "rowBBox": [
+        40.1,
+        528.6,
+        98.6,
+        543.66
+      ],
+      "sourceBodySha256": "45fc01f4e3296bd204352f7f5a53856ec7307b135f1e81a11f374cf33d7a6add",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community diagnosis",
+      "draftLearningTask": "Combine sample demographic, health and service data to identify and rank community problems.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:dc0a61a996ec4eb6f42f826f67a603474ecf813c148085ec6ad74636be81db30",
+      "subjectId": "community-medicine",
+      "code": "CM17.3",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        107.04,
+        98.6,
+        129.48
+      ],
+      "sourceBodySha256": "206d2dc8e1365988a8851772390fbb5bab7cad935709f9898526bec0088f7ae2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Primary health care",
+      "draftLearningTask": "Explain core principles and components and apply them to a local service scenario.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:7739d2a4d22d3cf5ee0da02e8312e458d8f37ae316205ae1e26906936814d7d4",
+      "subjectId": "community-medicine",
+      "code": "CM17.4",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        129.48,
+        98.6,
+        159.72
+      ],
+      "sourceBodySha256": "01a624c6317c17028641dfb8f948efdbf49bf9472289cf38aeefb876a2b27bf0",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "National policy and development goals",
+      "draftLearningTask": "Relate Indian health policy to historical Millennium Development Goals and corresponding health indicators.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:772c72433bcf46680ad73b9fca4dbe90d0df899b17e9c6937886a4f8982bdbc5",
+      "subjectId": "community-medicine",
+      "code": "CM17.5",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        159.72,
+        98.6,
+        175.44
+      ],
+      "sourceBodySha256": "f83c3298b1233a995a8faec536fe5ec66be9027a6b46bcb76411aaae393e6e14",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Indian healthcare delivery",
+      "draftLearningTask": "Map public and private delivery across community, primary, secondary and tertiary levels.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:808f757c6b2b8bb02355accd90f824839c54461b12242bb654d3a3d26ce26987",
+      "subjectId": "community-medicine",
+      "code": "CM17.6",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        175.44,
+        98.6,
+        205.62
+      ],
+      "sourceBodySha256": "5f262fcd2d99a8cca852fb66e20957a1a278b8f1274a25f57ca3673ba48ad691",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Health system functioning",
+      "draftLearningTask": "Trace a simulated patient pathway and identify referral, follow-up and coordination responsibilities.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:fccf65666e9629ecc3519d8a6e0acb3a4d8f289cb883f7efe9e11f5eb1ac96bb",
+      "subjectId": "community-medicine",
+      "code": "CM18.1",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        234.36,
+        98.6,
+        249.78
+      ],
+      "sourceBodySha256": "2739d79734880e201c8dde3cc5913e7263aa1d607067cc6740e2d03d7874dd0c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "International health",
+      "draftLearningTask": "Explain how cross-border health risks and shared resources create a role for international cooperation.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:28b07c8880964c2ee00e88dbc66ae64f24afed27b8fb4e9ba28300b0280741f4",
+      "subjectId": "community-medicine",
+      "code": "CM18.2",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        249.78,
+        98.6,
+        267.36
+      ],
+      "sourceBodySha256": "325d3a86510246a8f5e60350a4caf89b28198ef6c8608a0b4347080a602980be",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "International health agencies",
+      "draftLearningTask": "Compare representative agencies by mandate, functions and modes of support.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:1011e77e9aabbd277978cafb86e45ddedff169713176e32c24a612c509c03d92",
+      "subjectId": "community-medicine",
+      "code": "CM18.3",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        267.36,
+        98.6,
+        313.44
+      ],
+      "sourceBodySha256": "428ee3da3cabd7116a9bd42df201ea475c38968ad0620ac2cecd2d6a6b7f0e0c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Pandemic coordination",
+      "draftLearningTask": "Use a tabletop scenario to allocate national and international roles for surveillance, prevention and response.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:d8e80331f0de58759f9285bf5564529a54f80f25e23be30389cca51aae85afe7",
+      "subjectId": "community-medicine",
+      "code": "CM19.1",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        339.66,
+        98.6,
+        361.74
+      ],
+      "sourceBodySha256": "4f555092a7d82deb608e9d08ce52d4c268b161d3fc3ecf184cc0ccbda14f3652",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Essential medicines list",
+      "draftLearningTask": "Explain the purpose and selection criteria of an essential medicines list.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:2526952f9918457f2c4778cbe3c832f14667ab00b551959783939d1c6a3b7701",
+      "subjectId": "community-medicine",
+      "code": "CM19.2",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        361.74,
+        98.6,
+        379.86
+      ],
+      "sourceBodySha256": "672d78685e483c8ea8a06577a918be4e388351ab284344cd4313a257338e6a7d",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Essential medicines in primary care",
+      "draftLearningTask": "Relate an essential medicines list to availability, rational prescribing and service delivery.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8f6c716d20231df47a163fde3a370c3b07baa8a1e4df888ee65f72aceabefe7e",
+      "subjectId": "community-medicine",
+      "code": "CM19.3",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        379.86,
+        98.6,
+        397.02
+      ],
+      "sourceBodySha256": "08001822fb9cae6635d2c915e3637b0fa203690e6580acfcda5768908acda957",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Counterfeit medicines",
+      "draftLearningTask": "Recognize warning signs of suspect products and explain prevention and reporting pathways.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:8636c1bfdb8edf69f9407dd05242ae4c5180ca6e794f3a5709fdff40299a9516",
+      "subjectId": "community-medicine",
+      "code": "CM19.4",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        397.02,
+        98.6,
+        431.76
+      ],
+      "sourceBodySha256": "2787f9a9aa477eb29b8d1370d860d6d04329cd0a94dc07b5b8d3b56a7cd27920",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Medicine requirement calculation",
+      "draftLearningTask": "Estimate essential medicine requirements from consumption or morbidity data, allowing for stock and lead time.",
+      "mode": "performance-and-knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:faa3cee1b51c7dddc312e4418be85693693eba5bdf70f89fb4a347ca820055b4",
+      "subjectId": "community-medicine",
+      "code": "CM20.1",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        464.34,
+        98.6,
+        481.5
+      ],
+      "sourceBodySha256": "c289fe70ba3cda7a5bf7e8544d6d8b3bdf1f3ea044df8381bcc8ce68a3d6bf9c",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Recent public health events",
+      "draftLearningTask": "Build a dated five-year timeline of major public health events using authoritative reports.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:b397b760687b3d21abde92afad604528cde28961589638e2d00bc0f25d813222",
+      "subjectId": "community-medicine",
+      "code": "CM20.2",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        481.5,
+        98.6,
+        496.56
+      ],
+      "sourceBodySha256": "eae0a0a76e6b7ea467f38e665553eaf1824a4d7ba31c907cf3f3fac8d1183cc2",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Outbreak challenges",
+      "draftLearningTask": "Compare operational and communication problems in outbreaks and propose preventive measures.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:c676cebb45e9ae7b88e5353df9befea547c30df3460fd7b714d07c58d9fd3ca0",
+      "subjectId": "community-medicine",
+      "code": "CM20.3",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        496.56,
+        98.6,
+        512.88
+      ],
+      "sourceBodySha256": "a26bb996685e626f15f332573e768bb1a177e27165fed900798d280638f9c8a7",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community health event",
+      "draftLearningTask": "Analyze a documented local event by population affected, response and lessons for prevention.",
+      "mode": "knowledge"
+    },
+    {
+      "referenceId": "nmc-2024-ref:0c298f47db0b4129bf40b7b42633eaf3a22d811e24a3c30eb975391131984097",
+      "subjectId": "community-medicine",
+      "code": "CM20.4",
+      "page": 279,
+      "rowBBox": [
+        40.1,
+        512.88,
+        98.6,
+        544.5
+      ],
+      "sourceBodySha256": "241cb73b13d4a05d46e7e296c88327cf981c9df96d69e68f3fc38754c23d4843",
+      "state": "needs-objectives",
+      "sourceResolutionReasons": [],
+      "proposedObjectiveVersionIds": [],
+      "reviewLabel": "Community medicine law",
+      "draftLearningTask": "Identify applicable official legal sources and explain their relevance to a simulated public health decision.",
+      "mode": "knowledge"
+    }
+  ]
+}

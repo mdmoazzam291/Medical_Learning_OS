@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "draft-component-learning-bundle",
+  "componentId": "nmc-component:gm1.19:endocarditis-2@1",
+  "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+  "canonicalConceptId": null,
+  "canonicalObjectiveVersionId": null,
+  "clinicalApproval": false,
+  "learnerActivation": false,
+  "coverageFraction": null,
+  "source": {
+    "url": "https://academic.oup.com/eurheartj/article/44/39/3948/7243107",
+    "version": "ESC 2023 endocarditis guideline",
+    "checkedDate": "2026-11-08",
+    "locators": [
+      "5.3 microbiological diagnosis",
+      "5.4 imaging"
+    ],
+    "use": "Original summary and fictional scenarios; no reproduced tables."
+  },
+  "teaching": {
+    "artifactVersionId": "nmc:endocarditis:evidence-integration:teaching@1",
+    "body": "Interpret microbiology and imaging together. Cultures identify organisms and support susceptibility-guided treatment decisions; echo evaluates lesions and structural damage. An inconclusive study or negative cultures do not independently exclude disease. Explain what is established, what remains uncertain, and what further assessment is needed. Treatment selection requires organism, susceptibility, valve/device context, patient factors and the applicable reference."
+  },
+  "cases": [
+    {
+      "artifactVersionId": "nmc:endocarditis:evidence-integration:case-a@1",
+      "fictional": true,
+      "familyId": "nmc:endocarditis:evidence-integration",
+      "inputs": "A fictional 52-year-old has persistent fever. Two separately collected peripheral blood-culture sets identify the same organism, with a susceptibility report supplied. TTE reports a new mobile valvular lesion; no complication assessment is provided.",
+      "prompt": "Integrate the evidence, explain remaining information needs, and outline how the supplied susceptibility report informs a treatment discussion. Do not invent a regimen.",
+      "draftKey": [
+        "Recognize concordant microbiological and imaging evidence.",
+        "Identify missing valve/device, complication and patient-factor information.",
+        "Use the supplied susceptibility report and guideline to justify discussion; do not infer a drug from organism name alone."
+      ]
+    },
+    {
+      "artifactVersionId": "nmc:endocarditis:evidence-integration:case-b@1",
+      "fictional": true,
+      "familyId": "nmc:endocarditis:evidence-integration",
+      "inputs": "A fictional 68-year-old with a prosthetic valve has persistent clinical concern for endocarditis. Antibiotics preceded culture collection. Initial cultures are negative and TTE is technically inconclusive.",
+      "prompt": "Explain whether these results exclude disease and justify the next diagnostic discussion using the supplied reference.",
+      "draftKey": [
+        "Explain limits of negative cultures after antibiotics and an inconclusive TTE.",
+        "Discuss further imaging, including TOE when indicated, and microbiology input.",
+        "Avoid claiming exclusion or independently stopping treatment from these findings."
+      ]
+    }
+  ],
+  "rubric": {
+    "artifactVersionId": "nmc:endocarditis:evidence-integration:rubric@1",
+    "dimensions": [
+      "Integrates supplied microbiology",
+      "Interprets imaging limitations",
+      "Identifies missing patient/context information",
+      "Justifies further assessment and treatment discussion"
+    ],
+    "recording": "Record dimensions separately; record prompting and critical omissions.",
+    "validated": false,
+    "passThreshold": null
+  },
+  "remainingScope": [
+    "Acute versus subacute presentation comparison",
+    "Prescription-level drug/dose/duration keys",
+    "Pediatric disease",
+    "Morphology and mechanisms",
+    "Canonical identity and objective binding"
+  ]
+}

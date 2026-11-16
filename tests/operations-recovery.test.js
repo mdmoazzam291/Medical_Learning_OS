@@ -24,7 +24,7 @@ test('recovery drill rejects stale or mismatched backup metadata', () => {
 });
 
 test('recovery drill restores only into disposable local Supabase and verifies all dumped data', () => {
-  assert.match(workflow, /supabase db start/);
+  assert.match(workflow, /supabase start/);
   assert.match(workflow, /127\.0\.0\.1:54322/);
   assert.match(workflow, /ops\/r2-backups\/verify_restore\.py/);
   assert.match(workflow, /supabase\/verification\/data-api-grants\.sql/);
