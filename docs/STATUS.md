@@ -1,7 +1,7 @@
 ## NMC Surgery concept batch v1 — 2026-11-16T21:50Z
 
 - `docs/evidence/2026-11-17-nmc-surgery-concept-batch-v1.json` (spec `ops/nmc/specs/surgery_concepts_v1.py`): 102 concepts (52 new; 50 reused, e.g. Shock, Burns, Blood transfusion, Informed consent, Breast cancer, Appendicitis), 125 objectives, all 121 recognised rows. SU24.1–24.3 and SU27.1–27.8 (no Topic 24/27 headings) stay on the source-exception track. No clash with 1,724 production names.
-- Endpoint pin: commit `41743d6`, SHA-256 `a0b23bab…08f3`.
+- Endpoint pin: commit `9015375`, SHA-256 `9e44e027…0e70` (batch lists the held codes in `heldCodes`).
 - Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
 
 ---
