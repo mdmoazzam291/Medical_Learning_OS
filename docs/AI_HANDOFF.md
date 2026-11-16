@@ -1,3 +1,13 @@
+## NMC Forensic Medicine accepted, bound and registered — 2026-11-16T18:35Z
+
+- Owner accepted batch v1. Receipt: `nmc-forensic-medicine-concepts-v1-20261116`, SHA-256 `8d08d6db…5f3f`, accepted 2026-11-16T18:23:11Z, 99 items.
+- Bindings: 175 objectives on 117 concepts (99 from receipts, 18 reused); pairs digest `81273b99…d4aa` reproduced and tested.
+- Registry draft `@10`: totals 911 objectives, 912 bindings, 698 concepts, 726 source-linked references.
+- No clinical review, learner activation or question import. `owner-api` redeploy still pending.
+- Subjects done: Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine. Remaining: 13.
+
+---
+
 ## NMC Forensic Medicine concept batch v1 — 2026-11-16T18:40Z
 
 - `docs/evidence/2026-11-16-nmc-forensic-medicine-concept-batch-v1.json` (spec `ops/nmc/specs/forensic_medicine_concepts_v1.py`): 117 concepts (99 new; 18 reused), 175 objectives, all 157 recognised rows. FM2:12 (unresolved printed code) stays on the source-exception track. Law, ethics and procedure rows modelled as field or clinical-skill concepts. Non-synonym aliases removed. No clash with 1,072 production names.
