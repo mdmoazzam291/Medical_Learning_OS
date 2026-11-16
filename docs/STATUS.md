@@ -1,3 +1,15 @@
+## NMC Biochemistry accepted, bound and registered — 2026-11-16T14:50Z
+
+- Writer: Claude, branch `feat/nmc-biochemistry-registry-20261116` from main `70be10d`.
+- Owner accepted batch v1 in Admin. Receipt (read-only query): `nmc-biochemistry-concepts-v1-20261116`, SHA-256 `4e9f74bc…486c`, accepted 2026-11-16T14:39:13Z, 93 items.
+- `docs/evidence/2026-11-16-nmc-biochemistry-objective-bindings-v1.json`: 120 objectives on 101 concepts (93 from receipts, 8 reused Physiology IDs); receipt pairs digest `e503dd7e…cd2f` reproduced locally and tested.
+- Registry draft `@6`: all 120 added, none skipped. Totals 321 objectives, 322 bindings, 285 concepts, 223 source-linked references.
+- Tests 1,698/1,698; check passed. No clinical review, learner activation or question import. `owner-api` redeploy still pending (Admin foundation page shows the older pack).
+- Follow-up: classification revision adding `biochemistry` to the 8 reused Physiology concepts (ADR-135).
+- Next subject: Anatomy (413 rows) or Pathology.
+
+---
+
 ## NMC Biochemistry concept batch v1 — 2026-11-16T15:10Z
 
 - Writer: Claude, branch `feat/nmc-biochemistry-concept-batch-20261116` from main `6ee3406`.

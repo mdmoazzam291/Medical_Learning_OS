@@ -24,3 +24,18 @@ test('Physiology objective bindings cover every batch objective with receipt-ver
  assert.deepEqual(bind.objectives.map(o=>o.objectiveVersionId),batch.objectives.map(o=>o.objectiveVersionId));
  for(const o of bind.objectives)assert.equal(o.conceptId,byKey.get(o.conceptKey).conceptId);
 });
+
+test('Biochemistry objective bindings use receipt-verified IDs and reuse Physiology identities',()=>{
+ const raw=read('../docs/evidence/2026-11-16-nmc-biochemistry-concept-batch-v1.json'),bc=JSON.parse(raw);
+ const b=JSON.parse(read('../docs/evidence/2026-11-16-nmc-biochemistry-objective-bindings-v1.json'));
+ assert.equal(b.batchSha256,createHash('sha256').update(raw).digest('hex'));
+ const byKey=new Map(b.concepts.map(c=>[c.conceptKey,c]));
+ const fresh=bc.concepts.filter(c=>!c.existingConceptId);
+ assert.equal(createHash('sha256').update(fresh.map(c=>c.conceptKey+'|'+byKey.get(c.conceptKey).conceptId).join('\n')).digest('hex'),b.acceptance.receiptPairsSha256);
+ const physIds=new Set(bind.concepts.map(c=>c.conceptId));
+ for(const c of bc.concepts.filter(c=>c.existingConceptId))assert.ok(physIds.has(byKey.get(c.conceptKey).conceptId),c.document.label);
+ assert.equal(b.objectives.length,120);
+ const pack=JSON.parse(read('../data/nmc-learning-foundation-drafts.json'));
+ const reg=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r.objective.conceptId]));
+ for(const o of b.objectives)assert.equal(reg.get(o.objectiveVersionId),o.conceptId);
+});

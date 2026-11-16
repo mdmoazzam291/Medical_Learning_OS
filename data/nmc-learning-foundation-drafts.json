@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "draftVersion": "mbbs-foundation:original-objectives@5",
+ "draftVersion": "mbbs-foundation:original-objectives@6",
  "authoredCatalogVersion": 448,
  "sourceEdition": "nmc-cbme-2024-09-12",
  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
@@ -3826,6 +3826,2286 @@
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "5868a3a5577e1dc3d19b4069471e3358305780712f283bc3f6a10f8b3572495d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:860a494646d3cc71:mechanism:916254d6",
+    "objectiveVersionId": "lo:860a494646d3cc71:mechanism:916254d6@1",
+    "conceptId": "C-df2f89c7-f2bc-4732-94f5-ee6ed0b36e17",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map molecular components to organelle functions and explain how membrane composition supports compartmentalization, transport and signalling.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "d14e0477a2da199c71fd49b481055881c7c766dcee343e0320b985339bdf2ddc"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:d0c328c28dd64659:mechanism:61a5dcbd",
+    "objectiveVersionId": "lo:d0c328c28dd64659:mechanism:61a5dcbd@1",
+    "conceptId": "C-e42c7e4c-8efd-4ad3-866e-02fe04cf783e",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Distinguish enzymes, isoenzymes and coenzymes and classify representative reactions using IUBMB classes.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "1ca75903e4ec504c65d67261027797128c29cc9d07be67820c42ea445e52ad02"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:96d61920394de9fa:mechanism:1f355a80",
+    "objectiveVersionId": "lo:96d61920394de9fa:mechanism:1f355a80@1",
+    "conceptId": "C-20ea021e-eb76-4588-9628-b67afc8af74c",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret substrate–velocity curves and predict effects of concentration, temperature and pH on activity.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "b478488f9536e7540f234d8a525215c879ef4f7b514d5d2f32e563214a3a76be"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:c383b9207f3db49e:mechanism:45fa82a6",
+    "objectiveVersionId": "lo:c383b9207f3db49e:mechanism:45fa82a6@1",
+    "conceptId": "C-4f87cd46-0406-40c1-ba46-c1df32d829d9",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare inhibition patterns and explain representative uses of enzyme inhibitors and therapeutic enzymes.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "281965bb5d195903bb0704c1c4751044012e1221bad37d64c060c96924a64fd5"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f9b1a0bd84f2985b:interpretation:e3114348",
+    "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:e3114348@1",
+    "conceptId": "C-81007249-b31f-4026-ab54-16aa51bbfb75",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate representative serum enzymes and isoenzymes to their tissue sources and mechanisms of elevation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0f34214ef8d74c0d6a0eb3459adc76af4353917aea77f16469d1ddd05e70b18d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f9b1a0bd84f2985b:interpretation:403d59bf",
+    "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:403d59bf@1",
+    "conceptId": "C-81007249-b31f-4026-ab54-16aa51bbfb75",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret representative enzyme panels and trends in clinical context.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0f34214ef8d74c0d6a0eb3459adc76af4353917aea77f16469d1ddd05e70b18d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:339f799ccc77ff6f:mechanism:1efbe4a4",
+    "objectiveVersionId": "lo:339f799ccc77ff6f:mechanism:1efbe4a4@1",
+    "conceptId": "C-f4c282dc-0610-42ab-85de-5c587d3cef91",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Classify representative carbohydrates and relate their structures to fuel, storage and structural roles.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "b42c6a3abc19c2d1b2d5628ded417027e3f57ba9768a8622e20860b12657305a"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ebc644e355fb1131:mechanism:37f75736",
+    "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:37f75736@1",
+    "conceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace hydrolysis, intestinal uptake and portal transport and explain representative malabsorption mechanisms.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "86f72ee1fde5ff79d16f1214eb27064af0c8ce7c6677b838437fcb288692cccf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ebc644e355fb1131:mechanism:1d07776c",
+    "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:1d07776c@1",
+    "conceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace emulsification, hydrolysis, micellar uptake and chylomicron assembly and explain representative malabsorption mechanisms.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "86f72ee1fde5ff79d16f1214eb27064af0c8ce7c6677b838437fcb288692cccf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ebc644e355fb1131:mechanism:84584464",
+    "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:84584464@1",
+    "conceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace proteolysis and uptake of amino acids and small peptides.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "86f72ee1fde5ff79d16f1214eb27064af0c8ce7c6677b838437fcb288692cccf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:6720af80d90576d8:mechanism:29c5ea06",
+    "objectiveVersionId": "lo:6720af80d90576d8:mechanism:29c5ea06@1",
+    "conceptId": "C-d21ea49e-9254-42dd-9913-9a18e1960b4e",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace glycolysis, its energy yield and regulation, and explain consequences of representative enzyme defects such as pyruvate kinase deficiency.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "42332bcc0e3ab8d6dfa27c4d375528bc0b6617d0c4ec02f155a95236b92c4106"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:684920ffb1db6107:mechanism:cf1b6ada",
+    "objectiveVersionId": "lo:684920ffb1db6107:mechanism:cf1b6ada@1",
+    "conceptId": "C-3b9f08e3-68f7-4b43-a44d-ad6556fcd5f7",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace gluconeogenesis from its main substrates, explain its regulation and relate it to fasting physiology.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "8235e8560ae19c26ea884fda93911a6fb2a875020a36b1cba0c9b3799fbc5a3a"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:765e9d0a7c1eee7e:mechanism:eb856e93",
+    "objectiveVersionId": "lo:765e9d0a7c1eee7e:mechanism:eb856e93@1",
+    "conceptId": "C-43c1f45d-afc4-41df-bd01-f6bf7240109a",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace the tricarboxylic acid cycle, its energy yield, regulation and amphibolic role.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "39f917ea47f1b9c8d5f69717c1d46f01c8cdc080e50049486ec34d24fab76720"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a1e65d1dbb2cc5ba:mechanism:6b29bd98",
+    "objectiveVersionId": "lo:a1e65d1dbb2cc5ba:mechanism:6b29bd98@1",
+    "conceptId": "C-24259d33-e9ba-467b-a81d-60a744b384f5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace glycogen synthesis and breakdown, explain hormonal regulation and relate representative glycogen storage disorders to enzyme defects.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "1f54e38dd0683e02e1de684a799b526f40967b8945b3baee4a2b146950cb005d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e84eb0ffad544bfe:mechanism:ad605606",
+    "objectiveVersionId": "lo:e84eb0ffad544bfe:mechanism:ad605606@1",
+    "conceptId": "C-a526509e-f447-478a-932c-d9aaad0f52a8",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the oxidative and non-oxidative phases of the pentose phosphate pathway and relate NADPH generation to G6PD deficiency.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "627653d5d8b0ae4e0612cf30e682b2b6028001c1eb1bb805ae3d2059a77121bd"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:667f69f5d89ef470:mechanism:08dd23c9",
+    "objectiveVersionId": "lo:667f69f5d89ef470:mechanism:08dd23c9@1",
+    "conceptId": "C-2d6d91e1-191d-43a9-895a-1f1ca4bd9882",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace fructose metabolism and explain hereditary fructose intolerance and essential fructosuria.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "be983cdcc3094293a345b8f8175af4ee3c47344a490dd8f83e8bf697c597837c"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:5c58ef55c89f9234:mechanism:cba77d3d",
+    "objectiveVersionId": "lo:5c58ef55c89f9234:mechanism:cba77d3d@1",
+    "conceptId": "C-e7d6c4e6-f407-423b-b96b-16b3112936e5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace galactose metabolism and explain the biochemical basis and consequences of galactosaemia.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "228342b59c84792e57165e02225929c235da489dfe324408d92d840c39771b69"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:faedf18ee5289200:mechanism:cfef1829",
+    "objectiveVersionId": "lo:faedf18ee5289200:mechanism:cfef1829@1",
+    "conceptId": "C-e00874ff-b14a-44a0-88ee-a995e1ffdde3",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the polyol pathway and relate sorbitol accumulation to diabetic complications.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "79df47044458cd36905d209a9a2d45592602706f1d729e61fba225f686a14609"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:7e7506f045adecec:mechanism:d79638ab",
+    "objectiveVersionId": "lo:7e7506f045adecec:mechanism:d79638ab@1",
+    "conceptId": "C-30466541-f69c-461c-a570-6a63ca7df334",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the uronic acid pathway, its products and the biochemical basis of essential pentosuria.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "19302e7635902d3e65ff8d38b228ba4f18bb396d9a605e1a863ed0e61e8c6b5a"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a0da5abe820462b2:mechanism:2374420e",
+    "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:2374420e@1",
+    "conceptId": "C-9735c557-c0e8-4578-875c-f76570728927",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Predict hormonal and metabolic responses that maintain blood glucose in the fed and fasting states.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "37e554e9dc90289d54514ea1a7e370a1db2e8bdde91b8665525f37dcea2c24e1"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a0da5abe820462b2:mechanism:a985dfb7",
+    "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:a985dfb7@1",
+    "conceptId": "C-9735c557-c0e8-4578-875c-f76570728927",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map carbohydrate, lipid and protein flux across tissues in fed, fasting and prolonged fasting states.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "37e554e9dc90289d54514ea1a7e370a1db2e8bdde91b8665525f37dcea2c24e1"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:951cc4748691eef6:mechanism:2071b3c4",
+    "objectiveVersionId": "lo:951cc4748691eef6:mechanism:2071b3c4@1",
+    "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare major types of diabetes mellitus and explain their biochemical changes, acute and chronic complications and laboratory assessment.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "2971606919537139b019eba1ecf180b9920e92087fcc8e114753478cc232f08d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f39704d9ca43dda4:interpretation:c714c3ac",
+    "objectiveVersionId": "lo:f39704d9ca43dda4:interpretation:c714c3ac@1",
+    "conceptId": "C-7ce2f2c2-f895-4182-bf0b-e8ddd9ac1e6e",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret representative glucose, HbA1c and related biochemical results and explain the limitations of each test.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "04923b3a1cdfdc49706544ec7d313a15da576534231a355bacf72f45c4991afe"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f39704d9ca43dda4:procedural-skill:24537632",
+    "objectiveVersionId": "lo:f39704d9ca43dda4:procedural-skill:24537632@1",
+    "conceptId": "C-7ce2f2c2-f895-4182-bf0b-e8ddd9ac1e6e",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure glucose using a manual or semi-automated method, demonstrate glucometer use and interpret representative results.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "04923b3a1cdfdc49706544ec7d313a15da576534231a355bacf72f45c4991afe"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f37258ac3a7dce07:interpretation:0815d1ff",
+    "objectiveVersionId": "lo:f37258ac3a7dce07:interpretation:0815d1ff@1",
+    "conceptId": "C-35d283d6-d522-4d58-8f3e-62c93676c42d",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how an oral glucose tolerance test and a glucose challenge test are performed and interpret representative results.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "436782693c30d286913fe1ff957c1e8112e6226ccb1bde8f23fe869b12c7f4cf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:770e8da31530c5b6:interpretation:b40184db",
+    "objectiveVersionId": "lo:770e8da31530c5b6:interpretation:b40184db@1",
+    "conceptId": "C-3eab92b2-84cd-4d25-bfab-9f23a344b58f",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the basis of HbA1c measurement, interpret representative values and recognise conditions that make it unreliable.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "4e756e9f277e1e2e24d1fb04a5a83c1f867106bf2df8fa04bb0c03ec52002062"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e0fab6092f968006:mechanism:7f6647cb",
+    "objectiveVersionId": "lo:e0fab6092f968006:mechanism:7f6647cb@1",
+    "conceptId": "C-35a73690-53b0-4d3d-86f9-41e586070eb8",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Classify representative lipids and relate their properties to storage, membranes and signalling.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "6dc800440c0e4d893834c14787b6f773fc26ba61ed11bf4da1ff72e955de2bf5"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:294265c445851c25:mechanism:76e81227",
+    "objectiveVersionId": "lo:294265c445851c25:mechanism:76e81227@1",
+    "conceptId": "C-16aaa6e4-6403-4061-98f0-79122599af60",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace beta-oxidation of fatty acids, its regulation and energy yield, and explain representative defects such as carnitine deficiency.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "afbc4f08825f1a8a9292843459b5dc5c5a8882d6b982bf18a74de21cb8472a85"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:8ed03e4f25465f7d:mechanism:445e7bb5",
+    "objectiveVersionId": "lo:8ed03e4f25465f7d:mechanism:445e7bb5@1",
+    "conceptId": "C-0b6ee5d6-f59f-48f8-a360-6136be98bcb4",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace ketone body synthesis and use and explain the biochemical basis of ketosis and ketoacidosis.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "16aafde004786f2c94beecbc1c04b990082d3aaaf40bd5ed140f36dd8de1ddae"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:67ea8bdbb4d46bbe:mechanism:96e215f2",
+    "objectiveVersionId": "lo:67ea8bdbb4d46bbe:mechanism:96e215f2@1",
+    "conceptId": "C-36dcbf56-6a0b-4022-9323-2328ccda466f",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace fatty acid and triglyceride synthesis and breakdown and explain their hormonal regulation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "eb6b92956f0899abcc684406470391bacc0f623b6d645960b45fbbc024814afa"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9851da8c934f53e4:mechanism:a3e8242d",
+    "objectiveVersionId": "lo:9851da8c934f53e4:mechanism:a3e8242d@1",
+    "conceptId": "C-64846678-af73-4840-9803-98f42c607844",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace cholesterol synthesis, its regulation at HMG-CoA reductase and its conversion to bile acids and steroids, and relate altered flux to clinical patterns.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "2f17bd3de6999c43da1e45393908388a2f3611ec7abe5987eae8eedbe0b3503b"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:1e44c2fa83dc885b:mechanism:5906e429",
+    "objectiveVersionId": "lo:1e44c2fa83dc885b:mechanism:5906e429@1",
+    "conceptId": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace major lipoprotein pathways, apolipoprotein roles and links to atherosclerosis.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "a216d1419f4a1ec2116512149d86c45785f3c43c33c5a57c552c826559fc47d9"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:d19874a847bef1b1:mechanism:40ac5660",
+    "objectiveVersionId": "lo:d19874a847bef1b1:mechanism:40ac5660@1",
+    "conceptId": "C-2a574cd4-cdc1-43bb-ae6d-481f62b21850",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map major pathways from arachidonic acid and relate mediators, inhibitors and therapeutic uses.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "84846abdcd32eb298c1b2ff888e9118d3b2f0addac0d7ecb29fadddb04eb6489"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e62ffd16e69d40d2:mechanism:5a751af2",
+    "objectiveVersionId": "lo:e62ffd16e69d40d2:mechanism:5a751af2@1",
+    "conceptId": "C-abdf5f51-b915-45f2-ab6c-78ca92a9a397",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the biochemical mechanisms that lead to hepatic lipid accumulation and the role of lipotropic factors.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "3da379ad1a37cc7bf7f2ea170345cecf258e1bc79542717f5f31f62744cd0746"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9a924bdc1a757c21:mechanism:5bdec1fa",
+    "objectiveVersionId": "lo:9a924bdc1a757c21:mechanism:5bdec1fa@1",
+    "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the biochemical basis of cholesterol gallstone formation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "106bf69bf14513f78c5a3e460a451c848cb806c270989cf047db8b10200d37be"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:4be2758b3071d8a2:mechanism:619c4b32",
+    "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:619c4b32@1",
+    "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the biochemical mechanisms of excess adiposity.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "38fd9599fcf79cd2ffad83c0f8f88f275d4f1804b12b21e7ef0c5e53357beeb9"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:4be2758b3071d8a2:mechanism:dcdee02c",
+    "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:dcdee02c@1",
+    "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Connect dietary and other determinants to adiposity and its metabolic consequences.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "38fd9599fcf79cd2ffad83c0f8f88f275d4f1804b12b21e7ef0c5e53357beeb9"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:81bdfbf2fa19b878:mechanism:6a0ee3b1",
+    "objectiveVersionId": "lo:81bdfbf2fa19b878:mechanism:6a0ee3b1@1",
+    "conceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the metabolic changes that define metabolic syndrome and the health risks they carry.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "79a7c07948f1c2f0163e881233e0f2bab21db77af8d5519cd1807e022c6d3058"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:14f5fbd92b79eda0:interpretation:03d7a1f7",
+    "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:03d7a1f7@1",
+    "conceptId": "C-0f013d30-7f5c-4f51-ba17-d600a6e8bdd7",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret a representative lipid panel and explain how sampling and calculation limitations affect the result.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "9dde19be24ee48135aec3c4eac3868cd3535a6140ca3e242de9c635daf12fb68"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:14f5fbd92b79eda0:procedural-skill:21d0f4a3",
+    "objectiveVersionId": "lo:14f5fbd92b79eda0:procedural-skill:21d0f4a3@1",
+    "conceptId": "C-0f013d30-7f5c-4f51-ba17-d600a6e8bdd7",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure serum total cholesterol using a supervised assay and document quality control and the result.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "9dde19be24ee48135aec3c4eac3868cd3535a6140ca3e242de9c635daf12fb68"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:14f5fbd92b79eda0:interpretation:f95276a9",
+    "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:f95276a9@1",
+    "conceptId": "C-0f013d30-7f5c-4f51-ba17-d600a6e8bdd7",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain triglyceride and HDL measurement, calculate LDL from suitable data and recognize calculation limits.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "9dde19be24ee48135aec3c4eac3868cd3535a6140ca3e242de9c635daf12fb68"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9c3a43a4e5b5fa61:mechanism:b94087e0",
+    "objectiveVersionId": "lo:9c3a43a4e5b5fa61:mechanism:b94087e0@1",
+    "conceptId": "C-22ec0a50-8b39-4735-8a05-ad9c5cc7adbf",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Classify amino acids by side-chain properties, nutritional requirement and metabolic fate.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "efaa91938628c01c7bfdc99af432b0ce6bfc4384b4ca1e1014cdb67addc74d65"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:40f570825110ed3e:mechanism:42f1b02a",
+    "objectiveVersionId": "lo:40f570825110ed3e:mechanism:42f1b02a@1",
+    "conceptId": "C-164ce1db-de7e-4248-b2bb-40e1f97d1829",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare protein classes and structural levels and relate folding or structural disruption to function and disease.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "fed44d677dd94ecc8a45da62eb21e1489e358336498424138051ea9274b22ab1"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:bf715c6a2565ed50:mechanism:f619a025",
+    "objectiveVersionId": "lo:bf715c6a2565ed50:mechanism:f619a025@1",
+    "conceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate major proteins to function and compare normal, inflammatory and representative abnormal electrophoretic patterns.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "522d28ffcbda79419eb3f3223f220c3c9ea13d9c868df61841d379beb3444a5c"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:bf715c6a2565ed50:procedural-skill:c1910cd7",
+    "objectiveVersionId": "lo:bf715c6a2565ed50:procedural-skill:c1910cd7@1",
+    "conceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure total protein and albumin, derive globulin and calculate the albumin-to-globulin ratio.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "522d28ffcbda79419eb3f3223f220c3c9ea13d9c868df61841d379beb3444a5c"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:1aa2e9246d0c237e:mechanism:c6ded06f",
+    "objectiveVersionId": "lo:1aa2e9246d0c237e:mechanism:c6ded06f@1",
+    "conceptId": "C-2608186d-e7fa-45e9-9687-394d32a9d741",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map antibody domains to function, compare classes and disorders, and contrast humoral and cellular immunity.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0821531a4141bbfb12b9dc12a202d1d0e77f5f1f8c4469fac889d3840d5cfa50"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e760fb6251553585:mechanism:b8a87f81",
+    "objectiveVersionId": "lo:e760fb6251553585:mechanism:b8a87f81@1",
+    "conceptId": "C-7d10a5b6-1192-4564-b922-44a367b5001f",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace production, transport and detoxification of ammonia and explain the consequences of accumulation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "c9c98559741c38765fbe23082c04f159e0210ddaa33c89b6ae79f61f0f6640ba"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:fea49ffde59009ab:procedural-skill:b3d8bb53",
+    "objectiveVersionId": "lo:fea49ffde59009ab:procedural-skill:b3d8bb53@1",
+    "conceptId": "C-7f683ea7-7fa1-4840-b09e-5af76b1206d1",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map the specialised products formed from glycine, phenylalanine, tyrosine, tryptophan, methionine and arginine to their functions.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "b3e2889dcd4cecaeead0843dabcb31341682b9b9499973f1c5ff6a825f6cc249"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:bd9fb3c187b07a44:procedural-skill:2607f5d2",
+    "objectiveVersionId": "lo:bd9fb3c187b07a44:procedural-skill:2607f5d2@1",
+    "conceptId": "C-4d04bcf9-456a-4ca7-9834-c8b3765677bf",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate representative inborn errors of amino acid metabolism to the enzyme defect, accumulating metabolites and clinical features.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0c5433c7b552404810b06c28eccaa32652a900aebbe9fcba5a8e3d56f7e48c00"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:bd9fb3c187b07a44:mechanism:a328f055",
+    "objectiveVersionId": "lo:bd9fb3c187b07a44:mechanism:a328f055@1",
+    "conceptId": "C-4d04bcf9-456a-4ca7-9834-c8b3765677bf",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the rationale and limits of urine screening for inborn errors of metabolism.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0c5433c7b552404810b06c28eccaa32652a900aebbe9fcba5a8e3d56f7e48c00"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:64608e017d4bde23:mechanism:b0e20f49",
+    "objectiveVersionId": "lo:64608e017d4bde23:mechanism:b0e20f49@1",
+    "conceptId": "C-0af2d9fe-5f54-41dc-85fa-b118855a034f",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace haem synthesis and degradation to bilirubin and explain their regulation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "6205aa9226fadc5919187f75857763004a34efbb71db7cd30568d1df94563311"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:d2f4b7c6a30cb914:mechanism:59180216",
+    "objectiveVersionId": "lo:d2f4b7c6a30cb914:mechanism:59180216@1",
+    "conceptId": "C-e69fda87-9758-41eb-8b06-ecd5767fef9e",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate representative porphyrias to the defective enzyme, accumulating precursors and clinical presentation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "1444e8fc49e4cc45f71e0e53a5a1df65f13b6810efe77f27415e04f58506ab16"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:7150fa73dfc2bb9f:mechanism:e93de413",
+    "objectiveVersionId": "lo:7150fa73dfc2bb9f:mechanism:e93de413@1",
+    "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Distinguish the biochemical mechanisms of pre-hepatic, hepatic and post-hepatic jaundice and their laboratory patterns.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "de43118e8f39bf1ede95efd344313217d12a1fe964b8ff2ceacc6d08bf8b503f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a43f6bc59303f0e0:mechanism:5cd0c4e7",
+    "objectiveVersionId": "lo:a43f6bc59303f0e0:mechanism:5cd0c4e7@1",
+    "conceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Distinguish physiological forms of haemoglobin and its chemical derivatives by structure and function.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "53896635510244d228badaef1bf32f7675bf283a640942a5be51b7faf76413ac"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:c74c0997d83b2470:mechanism:2c955803",
+    "objectiveVersionId": "lo:c74c0997d83b2470:mechanism:2c955803@1",
+    "conceptId": "C-5ff4ca9e-3b48-4561-82ea-03190a410ab8",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate representative inherited haemoglobin variants such as sickle haemoglobin and thalassaemias to their structural defect and functional consequences.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "a17254cd81c62a20b38b5cdca37a171a153f4ad2bf8c8482814f57eaca26020e"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f20401fbda0af9ff:mechanism:9bdd2057",
+    "objectiveVersionId": "lo:f20401fbda0af9ff:mechanism:9bdd2057@1",
+    "conceptId": "C-f964e45f-426d-4b20-bd9d-6d595136addd",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Group the major matrix components and explain their mechanical and signalling functions.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "1ff842fed7df6f769c2dfdb2426c12918003c7a7134c40f5a5b09fac77417032"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:3d7f2f013e02f9d8:mechanism:9d1808bd",
+    "objectiveVersionId": "lo:3d7f2f013e02f9d8:mechanism:9d1808bd@1",
+    "conceptId": "C-87193dfe-37b8-44fb-bc8f-ade92e95074d",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate defects in representative matrix proteins or their turnover to disease mechanisms.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "498d5150cc4f79eb8aaade20eab8508f285f28f5439cbfb78cab47106fb25983"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:09a2f3fc6d6a3ad1:mechanism:320b89d4",
+    "objectiveVersionId": "lo:09a2f3fc6d6a3ad1:mechanism:320b89d4@1",
+    "conceptId": "C-091b8a4d-d8bb-4154-b4b3-14510c9d2c22",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace representative targeting and sorting signals and explain how disruption changes protein localization or function.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "039db27ea511b50a805734788df00cb9dba37f82b5647c1241efb76b6505ddd2"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:51b5e44077cd0d7c:mechanism:ed9804e2",
+    "objectiveVersionId": "lo:51b5e44077cd0d7c:mechanism:ed9804e2@1",
+    "conceptId": "C-f7e90c8b-3cbc-41dd-aa3c-fcb4bf2ecbe7",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare substrate-level and oxidative phosphorylation and predict effects of disrupted electron transport or coupling.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "08fdb40c36f1307bfc8b52ab2ec8108f8b3dc8dcdb70c2f494ce7cbe9146aaec"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:35ce136ec2e104aa:mechanism:4db665a6",
+    "objectiveVersionId": "lo:35ce136ec2e104aa:mechanism:4db665a6@1",
+    "conceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Link each major vitamin to its biochemical role and predict representative deficiency findings.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "e85842000498b81473222d075f8c2f635931cd20b611a14ed0b4ac87e1acd59c"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:f4e9f9af1e1dd9f3:mechanism:0c4fa041",
+    "objectiveVersionId": "lo:f4e9f9af1e1dd9f3:mechanism:0c4fa041@1",
+    "conceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare the roles of macronutrients and micronutrients in metabolism and health.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "a0a81a354d26ded495d9c2fd6f2190ead3b32de93d42f602e213e35c1fd3200b"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:b6de35af577f3a95:mechanism:13268479",
+    "objectiveVersionId": "lo:b6de35af577f3a95:mechanism:13268479@1",
+    "conceptId": "C-3f06359c-d6a0-46bd-8dec-48782c0ac567",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how dietary fibre affects digestive and metabolic physiology.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "3a3c9b7b000ccac0d21fb0fcab6106f54d6077e0abb5b2ef9f8570d5f7a5db93"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:6fe6d63cb9dbb508:mechanism:6a993dc7",
+    "objectiveVersionId": "lo:6fe6d63cb9dbb508:mechanism:6a993dc7@1",
+    "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare causes, biochemical consequences and representative clinical patterns of protein–energy malnutrition.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "20e58f6d626d27cd0a7cb5df0a3e723ffd181e18ef28746ec413f46e148e54fa"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:d4073d507275f46a:mechanism:bd7d3053",
+    "objectiveVersionId": "lo:d4073d507275f46a:mechanism:bd7d3053@1",
+    "conceptId": "C-8a5e96a6-b364-4e88-8266-a0516d3f3d16",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Use simulated cases to communicate dietary priorities in childhood, adulthood, diabetes, coronary disease and pregnancy.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "ce2fb126bc68a1a198990b7232712a9359ad24e2c81ce5b78ffc20f044f7b7c1"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:3d388b2da2ef0b9d:mechanism:66cac2ca",
+    "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:66cac2ca@1",
+    "conceptId": "C-355640fb-3d02-4096-8cb8-ab22cd1a17ad",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare common foods including fruit and vegetables by nutrient composition and explain their dietary contributions.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "44c66dec68ec2617178aaff867b3fed4b19ea06c72a05385fc7c94c459e9af8f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:3d388b2da2ef0b9d:mechanism:92bf68f4",
+    "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:92bf68f4@1",
+    "conceptId": "C-355640fb-3d02-4096-8cb8-ab22cd1a17ad",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Calculate the energy content of food from its macronutrient composition.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "44c66dec68ec2617178aaff867b3fed4b19ea06c72a05385fc7c94c459e9af8f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a837d4d532a26b38:mechanism:27a993db",
+    "objectiveVersionId": "lo:a837d4d532a26b38:mechanism:27a993db@1",
+    "conceptId": "C-5c467b05-253b-42cb-893f-0b4008b5bed9",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare the dietary implications of foods with high and low glycaemic index.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "8ae75fc6ced07198d476b0eaba55bd776d14eafedca60574915f3759a95812d9"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9fb07153a2022c13:mechanism:632e94b9",
+    "objectiveVersionId": "lo:9fb07153a2022c13:mechanism:632e94b9@1",
+    "conceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain dietary sources, absorption, transport, storage and functions of iron and relate disordered iron balance to iron deficiency and overload.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "616b5ffed38ef65e9ae291e866edbb98bb715c1e5fb880a1eb6ee2db54b3cfbb"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:8018aa4d53bad50c:mechanism:61f7d545",
+    "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:61f7d545@1",
+    "conceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain dietary sources, absorption, transport, regulation and functions of calcium and representative disorders of calcium balance.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "c98b96fc57766ef714b84eafaad5773a422df7206546c863a6f9f66982d4421d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:8018aa4d53bad50c:mechanism:ddcb2509",
+    "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:ddcb2509@1",
+    "conceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how serum calcium and phosphate are measured and interpret representative results.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "c98b96fc57766ef714b84eafaad5773a422df7206546c863a6f9f66982d4421d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e660e86ec85736d2:mechanism:2e223d2a",
+    "objectiveVersionId": "lo:e660e86ec85736d2:mechanism:2e223d2a@1",
+    "conceptId": "C-9604b6f8-671c-4ad3-9929-a3b52db14705",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain absorption, transport and functions of copper and the biochemical basis of Wilson disease and Menkes disease.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "21177263e1e86d2ebc6894993bdf90da96e5c071d704fd82369148bac864455a"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:2febb7e8405e9045:mechanism:1dd21855",
+    "objectiveVersionId": "lo:2febb7e8405e9045:mechanism:1dd21855@1",
+    "conceptId": "C-a3e51d73-dcb4-4020-bd8e-e4d6c422d068",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate magnesium, zinc, phosphate and representative trace elements to biochemical functions and consequences of imbalance.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "dd31fb2d21bf101da7c61b04bfa97072ccfe7f4afdc01bed023ca58598e0a508"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ab7604b074217fd4:mechanism:0515e0e4",
+    "objectiveVersionId": "lo:ab7604b074217fd4:mechanism:0515e0e4@1",
+    "conceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Use sample data to explain normal regulation of body water, sodium and potassium and distinguish representative disturbances.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "6da6561fb522de75c4cd537f639884b9f708c82035aa330088bda0163cf171f5"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:8a6a3574ea0cfd14:mechanism:564f8053",
+    "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:564f8053@1",
+    "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Use sample data to distinguish metabolic and respiratory acid-base disorders and their compensation.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "6e059954e5de5b71b798cfd709b40662dd321586b1affe60127c55b10882079f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:8a6a3574ea0cfd14:mechanism:1a342a86",
+    "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:1a342a86@1",
+    "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret acid-base findings in sample cases.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "6e059954e5de5b71b798cfd709b40662dd321586b1affe60127c55b10882079f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:3e42a2361ebcdb43:interpretation:b3ec965c",
+    "objectiveVersionId": "lo:3e42a2361ebcdb43:interpretation:b3ec965c@1",
+    "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how a pH meter and a blood gas analyser measure pH and blood gases.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "fc460c7e7b0de41e4f776f9ecc0b886607a193a5252a9debcb02ec34b8b28734"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:5990acf0b746d51b:mechanism:df3e3dde",
+    "objectiveVersionId": "lo:5990acf0b746d51b:mechanism:df3e3dde@1",
+    "conceptId": "C-12f308cf-ae32-4904-a9cf-2c3dd8e53178",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare structures and functions of nucleotides, DNA and RNA and relate selected abnormalities to disease.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "dffc7ed62f135bdf7ddfd8c2fcede12b5a3f5e81c7640092beac7a5f09bf0705"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:97c6ea19d746bf35:mechanism:212a7695",
+    "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:212a7695@1",
+    "conceptId": "C-22457423-7498-4bf8-a6de-3bb29f5bcc2d",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Contrast de novo production and salvage and identify key substrates, enzymes and regulatory points.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "08b94f639b15f8473b1228baf5b318e102ccd93e09173119b47a365b6cae617f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:97c6ea19d746bf35:mechanism:ccd033cd",
+    "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:ccd033cd@1",
+    "conceptId": "C-22457423-7498-4bf8-a6de-3bb29f5bcc2d",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace purine degradation to uric acid.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "08b94f639b15f8473b1228baf5b318e102ccd93e09173119b47a365b6cae617f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:b461794e2676e0a1:mechanism:78ccbf3b",
+    "objectiveVersionId": "lo:b461794e2676e0a1:mechanism:78ccbf3b@1",
+    "conceptId": "C-0febcd78-05d3-4bab-aa1d-cc34b4102e1a",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how purine overproduction or reduced excretion causes hyperuricaemia and relate it to gout and Lesch-Nyhan syndrome.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "1df1da60ddf33283e9dbe6627f459f51d362fee4a689259173e985cb655a2775"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:0bc7bcdbc7f89fe9:mechanism:afc1f414",
+    "objectiveVersionId": "lo:0bc7bcdbc7f89fe9:mechanism:afc1f414@1",
+    "conceptId": "C-04af74ac-029f-4e02-8001-3d9a5b2b4a6b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Diagram the major steps of DNA replication.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "26c1e655935257ae109240194408287b4c2e0a1c38e66f91027f3648d568713d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a8c9f778b25ad885:mechanism:5151dd1d",
+    "objectiveVersionId": "lo:a8c9f778b25ad885:mechanism:5151dd1d@1",
+    "conceptId": "C-68e89d78-e1f9-47ef-9694-8d80f533dbc2",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Diagram the major steps of transcription and RNA processing.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "c468eaa77f7f5b3f0002569392a6824a764c86295e537792546c23332ed3586d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:c361415543d4ab9e:mechanism:133f7eef",
+    "objectiveVersionId": "lo:c361415543d4ab9e:mechanism:133f7eef@1",
+    "conceptId": "C-f8cb4da8-45cf-467d-b7b8-e93ceefeb8af",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Diagram the major steps of translation and protein synthesis.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "17ea0dbcafe3745ad83e4e095a9de8bf41f1ef954647d99772bcd8ff7abf32cf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:800f50fe754de81a:mechanism:5fb0276e",
+    "objectiveVersionId": "lo:800f50fe754de81a:mechanism:5fb0276e@1",
+    "conceptId": "C-3909704f-0309-4e36-b49c-b2d91710c7e5",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare DNA repair pathways and link repair defects to representative disorders.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "750ce337313a4f647de99f5757255bc82d8f57508da6abb37dc10e2d7308228a"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:4726a212d0f122cb:mechanism:7c7e44f7",
+    "objectiveVersionId": "lo:4726a212d0f122cb:mechanism:7c7e44f7@1",
+    "conceptId": "C-53be03df-148b-4626-accb-9fd60b65027b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare classes of mutation and predict their effects on gene products.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "3775c2727ee6261ff8ba4971e62a44ad29ebebb0e611ca678896d71a01261b48"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:6092de3669b3991c:mechanism:bad55d7f",
+    "objectiveVersionId": "lo:6092de3669b3991c:mechanism:bad55d7f@1",
+    "conceptId": "C-16ecb194-b62f-4b96-b8f5-7a539325dcc1",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how regulatory elements, transcription factors and post-transcriptional processes alter expression.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "e8f1d2b6bf37e485b6e150c1406b0136e852e12952859d35e2cdc0ef87786885"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:4d0a12064206548a:mechanism:60e597ae",
+    "objectiveVersionId": "lo:4d0a12064206548a:mechanism:60e597ae@1",
+    "conceptId": "C-eab517b9-115f-493c-9187-d40e871c8c88",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain recombinant DNA technology, its applications and limitations.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "37778a4c036fe3d239b28baeb760d374e1ff3c49e13e952bb4a4fc18d16f2212"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:301ee6f8827561ee:mechanism:101a0b3d",
+    "objectiveVersionId": "lo:301ee6f8827561ee:mechanism:101a0b3d@1",
+    "conceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the principle, applications and limitations of PCR.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "25ff6fb2dfdc193b0b19ce2d7450c2d17ac2ebba255d1575d014d2a713dd6117"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ecef4006e302228e:mechanism:efd303ed",
+    "objectiveVersionId": "lo:ecef4006e302228e:mechanism:efd303ed@1",
+    "conceptId": "C-e9386bfb-424c-4119-b4cc-a1bc40e4d830",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the principle, applications and limitations of DNA microarrays.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "3ea5d8bf7ada9f460b5cfdd9eb84873f8c4ff88e773074f3fd0bf66380660d6b"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:073e250e3646778f:mechanism:0540fe43",
+    "objectiveVersionId": "lo:073e250e3646778f:mechanism:0540fe43@1",
+    "conceptId": "C-c9784d64-6fbf-4727-9ad3-540cc21bce0b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the principle, applications and limitations of FISH.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "e2eac2bf9cb5aca5276d58e4deb57317fc50f48ec7117cd525a578e4fcb1b71d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:275631a18f32a1d3:mechanism:477d080a",
+    "objectiveVersionId": "lo:275631a18f32a1d3:mechanism:477d080a@1",
+    "conceptId": "C-594764e0-fcfb-4dda-b604-8809b6d96833",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the principle, applications and limitations of CRISPR-based gene editing.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "9f865d08af31cecbf255cf91bf494e47d250952b2b38fc55baa203dee37775f9"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e2349f0be136ab90:procedural-skill:154162e1",
+    "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:154162e1@1",
+    "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the purpose of liver function tests and interpret representative reports in context.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "2e976be632f81f32c6a03849204cae06578a18377f21f88dffd23e2c81ee9e5f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e2349f0be136ab90:procedural-skill:b448f3ad",
+    "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:b448f3ad@1",
+    "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure serum bilirubin using a manual or semi-automated method and document the result.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "2e976be632f81f32c6a03849204cae06578a18377f21f88dffd23e2c81ee9e5f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e2349f0be136ab90:interpretation:c993ecb6",
+    "objectiveVersionId": "lo:e2349f0be136ab90:interpretation:c993ecb6@1",
+    "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain AST, ALT and alkaline phosphatase measurement and compare representative result patterns.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "2e976be632f81f32c6a03849204cae06578a18377f21f88dffd23e2c81ee9e5f"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:d6425fe7a4e0887d:procedural-skill:505e8f1c",
+    "objectiveVersionId": "lo:d6425fe7a4e0887d:procedural-skill:505e8f1c@1",
+    "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the purpose of renal function tests and interpret representative reports in context.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "8cc7c1c1792a338a49d2292dbb07214d03c2b4c3f6f562cb884a8339c58d93d8"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9354e0675c7a47f4:procedural-skill:6f6e329d",
+    "objectiveVersionId": "lo:9354e0675c7a47f4:procedural-skill:6f6e329d@1",
+    "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the purpose of thyroid function tests and interpret representative reports in context.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "03060bd6143c2a013033ebaa584d8a22a0fd28576bdf985526aff89a501a8cea"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:89bbac3e1acff73e:procedural-skill:801ac0f0",
+    "objectiveVersionId": "lo:89bbac3e1acff73e:procedural-skill:801ac0f0@1",
+    "conceptId": "C-6695a666-7a3f-444a-9136-d35c0e45339e",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain the purpose of adrenal function tests and interpret representative reports in context.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "44fa97db40563be9595e7be6a28d57fb989af9d823d98f2e318c708e41175b48"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e9e4c672f5ae9d32:interpretation:db8e457b",
+    "objectiveVersionId": "lo:e9e4c672f5ae9d32:interpretation:db8e457b@1",
+    "conceptId": "C-b543f92a-6e6b-4ec8-b337-7bd8212c10e6",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Interpret LH, FSH, prolactin, beta-hCG, oestrogen, progesterone, testosterone and AMH in representative contexts.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "875e484f858bcb5600b76043aaef4b782e3477d4ee2fe961ea150815f0d163c6"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:43bb7cc9d83cdcda:mechanism:7c417aaf",
+    "objectiveVersionId": "lo:43bb7cc9d83cdcda:mechanism:7c417aaf@1",
+    "conceptId": "C-7882e2fc-242b-4e96-84a2-3c604018bb23",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain biochemical prenatal screening and distinguish screening from diagnostic testing.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "43ae56423fd3bde8b63b3b6ac9609abaa8d347c3c58c87696b9d6300f786b313"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:ccc90822e3b7f778:mechanism:b37a6ba1",
+    "objectiveVersionId": "lo:ccc90822e3b7f778:mechanism:b37a6ba1@1",
+    "conceptId": "C-9840d126-a15d-4ade-87e2-32a4b24eea0f",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace representative xenobiotics through biotransformation and explain how detoxification or bioactivation affects health.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "f1cdcc9453db0474b5fb9bd1e08299c3ea82f0bdde5b9523945e548dfba75932"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:eff1c8e59663569a:mechanism:0be25bca",
+    "objectiveVersionId": "lo:eff1c8e59663569a:mechanism:0be25bca@1",
+    "conceptId": "C-71efef05-0253-4e18-8253-74caf4e8da1b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Map enzymatic and non-enzymatic defences to the reactive species they help control.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "f761424b62417ed6a967caa5e0a2c595ef2a15f7e7beab7dfcfbf70a578b97cf"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:97aedc2fc8d8a54f:mechanism:9df8a7d6",
+    "objectiveVersionId": "lo:97aedc2fc8d8a54f:mechanism:9df8a7d6@1",
+    "conceptId": "C-2b6bee1e-212a-41f1-920e-ecf99016ec5e",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate oxidative injury to representative mechanisms in cancer, diabetes complications and atherosclerosis.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "b7f19a5a2d15eb6adf6caaa16b2c57a8ef60a832ce9e32b33b697e5f86892653"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:c0326fbd7b67d4ab:mechanism:4cf6d329",
+    "objectiveVersionId": "lo:c0326fbd7b67d4ab:mechanism:4cf6d329@1",
+    "conceptId": "C-ff7469b8-0b81-40a1-b46b-2b2b07a2c433",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Distinguish oncogene activation from loss of tumour suppression and explain how p53 and apoptosis influence cell survival.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "9c6e40a1a3735b10b6567894887fc79e2ca283aa7a0189dc7e8d4e52761ec5dc"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9862173f55b25f82:interpretation:367aadc3",
+    "objectiveVersionId": "lo:9862173f55b25f82:interpretation:367aadc3@1",
+    "conceptId": "C-c647ee65-6415-4edb-bb57-d4e9073007e5",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare representative biochemical markers by clinical purpose and explain the biochemical targets of selected therapies.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "a2b92f8786cf1c83a9de916e3dcfc0f549a89df301f88bf539ba3707bbdec85d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:fe9b8948fc117a36:mechanism:4e7aa915",
+    "objectiveVersionId": "lo:fe9b8948fc117a36:mechanism:4e7aa915@1",
+    "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Relate HIV disease to representative metabolic or laboratory changes and distinguish effects of infection and treatment.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "b3cca5d0c0e651c56aa015a858756362356ffaecce716da59c148bb550086e72"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:859d9650d8041e06:mechanism:a6cc6473",
+    "objectiveVersionId": "lo:859d9650d8041e06:mechanism:a6cc6473@1",
+    "conceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Trace ethanol metabolism and relate altered redox state and chronic exposure to biochemical consequences.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "28909fb7ec00617430405f5c4a49a932319702a5a862c43769a415ba8c55d03d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:4c52bc25cea945c1:mechanism:6957e1fd",
+    "objectiveVersionId": "lo:4c52bc25cea945c1:mechanism:6957e1fd@1",
+    "conceptId": "C-b723b7da-4dd5-45c6-ba5c-7adb6ff5b9fd",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare representative uses in quality control, workflow or result review and explain why local validation and human oversight matter.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "0e7a50270adf9bd42b28d5e77adca7143666e36b8bff39f255a5e66cd1cac12d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:0a2fc9f4ff748797:procedural-skill:c896f8c7",
+    "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:c896f8c7@1",
+    "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Using control and sample materials, assess physical properties and normal and abnormal constituents, demonstrate dipstick use and interpret findings.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "67f3626701d819112954d0ba0ed7409988fcfe3fbb6669fe007eacd7f7ae8ffc"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:0a2fc9f4ff748797:procedural-skill:30384218",
+    "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:30384218@1",
+    "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Identify abnormal constituents in supplied specimens, correlate findings with possible mechanisms and prepare a laboratory report.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "67f3626701d819112954d0ba0ed7409988fcfe3fbb6669fe007eacd7f7ae8ffc"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:a4a9a99c2cedf83a:mechanism:85fe0f3a",
+    "objectiveVersionId": "lo:a4a9a99c2cedf83a:mechanism:85fe0f3a@1",
+    "conceptId": "C-7dcad40d-6be8-4702-a9eb-632ab93e725b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain absorbance, wavelength selection, calibration and the distinction between colorimetry and spectrophotometry.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "d48d075d310e689b7162f033a955c015dd207ec59acd9b2d15da675b80d78722"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:62acddeec1ea15a6:procedural-skill:68d9e925",
+    "objectiveVersionId": "lo:62acddeec1ea15a6:procedural-skill:68d9e925@1",
+    "conceptId": "C-910dad41-a204-4bf3-a8a3-7b9d7a6db693",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure urea, convert to BUN using consistent units and interpret representative results.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "99f5c0f7f8d68b0b76ef873ddc5c88936c92103daabd9e11a66deb4ac447cb5c"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:b0840fd701bb7508:procedural-skill:056e07ae",
+    "objectiveVersionId": "lo:b0840fd701bb7508:procedural-skill:056e07ae@1",
+    "conceptId": "C-58920ee2-35c2-4e13-aa9c-fbc7fe401270",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure serum creatinine and calculate timed creatinine clearance from supplied urine and serum data.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "f353b8e05648f7fd3c851c32f63b938052169e5508f187f47ca2c4667dcb7ddd"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:69ebb0982311d1f3:procedural-skill:ce7647da",
+    "objectiveVersionId": "lo:69ebb0982311d1f3:procedural-skill:ce7647da@1",
+    "conceptId": "C-4329e03e-c226-4124-9925-aea992b90ac2",
+    "task": "procedural-skill",
+    "depth": "performs",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Measure serum urate and interpret the result in a representative clinical scenario.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "534f53de99ecc9d666618671f3730ff99b35761228a69f180789868724fadeea"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:e832554d1fa5e64b:mechanism:074a7c88",
+    "objectiveVersionId": "lo:e832554d1fa5e64b:mechanism:074a7c88@1",
+    "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Compare representative body fluids and describe normal CSF composition.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "d1d076ce0b9dfb6e881a6440f004e27d9d3350d7e0ddc9a5081eac011b8ac74d"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:419bdfbdff3c2f7c:mechanism:46b5234a",
+    "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:46b5234a@1",
+    "conceptId": "C-cc38e5c1-e648-4d79-8648-786dd8a08404",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Explain how paper chromatography separates analytes.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "d1d10e10505ea0da61d5b2bd47c51490cc29f66539c334e4e2c7717b1265f4e7"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:419bdfbdff3c2f7c:mechanism:cb1cb122",
+    "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:cb1cb122@1",
+    "conceptId": "C-cc38e5c1-e648-4d79-8648-786dd8a08404",
+    "task": "mechanism",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Observe and explain what is measured by the pH meter, paper chromatography of amino acids, protein electrophoresis, TLC, PAGE, ISE electrolyte analysis, ABG analyser, ELISA, immunodiffusion, autoanalyser and DNA isolation from blood or tissue.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "d1d10e10505ea0da61d5b2bd47c51490cc29f66539c334e4e2c7717b1265f4e7"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9828b76e004af731:interpretation:aa19eb0c",
+    "objectiveVersionId": "lo:9828b76e004af731:interpretation:aa19eb0c@1",
+    "conceptId": "C-7f2bca1e-aca7-43f7-ab96-383c6d37d20b",
+    "task": "interpretation",
+    "depth": "knows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Select and interpret tests in representative glycaemic, lipid, cardiac, renal, hepatic, pancreatic, thyroid, genetic, nutritional, acid–base, mineral and electrolyte cases. Include gout, nephrotic syndrome, jaundice and vitamin deficiency.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "7c88f80f30bcdd0482ec01f49bac0530230579b2bb2f6e0ff5b82bf6bb5d9bf0"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:9828b76e004af731:interpretation:5bb300b3",
+    "objectiveVersionId": "lo:9828b76e004af731:interpretation:5bb300b3@1",
+    "conceptId": "C-7f2bca1e-aca7-43f7-ab96-383c6d37d20b",
+    "task": "interpretation",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Review simulated baseline, diagnostic, prognostic and discharge results and explain how each informs the next decision.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "7c88f80f30bcdd0482ec01f49bac0530230579b2bb2f6e0ff5b82bf6bb5d9bf0"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:3c3328b6d6f8a981:procedural-skill:0427d74d",
+    "objectiveVersionId": "lo:3c3328b6d6f8a981:procedural-skill:0427d74d@1",
+    "conceptId": "C-eabcff1a-3294-45c7-98c2-7740c634e8b5",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Identify pre-analytical, analytical and post-analytical errors in a simulated workflow, including order of draw and tourniquet technique.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "80f02d0ce3a8650af8b0af1de78317b379784d60e5efbe867cc9b33e98df9349"
+  },
+  {
+   "objective": {
+    "objectiveId": "lo:b57394136cda79be:procedural-skill:5dc7f960",
+    "objectiveVersionId": "lo:b57394136cda79be:procedural-skill:5dc7f960@1",
+    "conceptId": "C-9b8e01ee-24a0-4a6a-88fb-10f89f8b776b",
+    "task": "procedural-skill",
+    "depth": "shows-how",
+    "context": {
+     "jurisdiction": "not-specified",
+     "population": "not-specified",
+     "setting": "medical-education"
+    },
+    "prerequisites": []
+   },
+   "wording": "Identify Levey–Jennings chart patterns and explain how controls help detect shifts, trends or random error.",
+   "authorship": "ai_generated_original",
+   "status": "draft",
+   "canonicalIdentitySha256": "a680dbf3bd28c25758a9f6103b41a753e1b3df302acfc3731eec730ef1747725"
   }
  ],
  "sourceBindings": [
@@ -6858,6 +9138,1806 @@
    ],
    "sourceBodySha256": "e738363365d154d0357f8326b55fe7cb717fb9b089ef017a690ab7a47e1aece3",
    "namedConcept": "Basic life support"
+  },
+  {
+   "referenceId": "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
+   "objectiveVersionId": "lo:860a494646d3cc71:mechanism:916254d6@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    192.48,
+    108.5,
+    250.44
+   ],
+   "sourceBodySha256": "9ed4387823ac0f04a74987b85cd3dbd183855b4ca732b651d03604dda5e83eb5",
+   "namedConcept": "Cell membrane"
+  },
+  {
+   "referenceId": "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
+   "objectiveVersionId": "lo:d0c328c28dd64659:mechanism:61a5dcbd@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    278.88,
+    108.5,
+    328.2
+   ],
+   "sourceBodySha256": "c52370d7919e818af0ec97ba0b914a723e3f33fbf0475055a53f96217e8d67f0",
+   "namedConcept": "Enzymes"
+  },
+  {
+   "referenceId": "nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63",
+   "objectiveVersionId": "lo:96d61920394de9fa:mechanism:1f355a80@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    328.2,
+    108.5,
+    357.78
+   ],
+   "sourceBodySha256": "a405b28ca2c07fff045f1d110f766403825d3de598d97975870061eaa0e3850e",
+   "namedConcept": "Enzyme kinetics"
+  },
+  {
+   "referenceId": "nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183",
+   "objectiveVersionId": "lo:c383b9207f3db49e:mechanism:45fa82a6@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    357.78,
+    108.5,
+    395.22
+   ],
+   "sourceBodySha256": "e8cc6f15e10cdd04204eb7b8c900ef7f2cd1726f0520e411843d1c303a443db0",
+   "namedConcept": "Enzyme inhibition"
+  },
+  {
+   "referenceId": "nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8",
+   "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:e3114348@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    395.22,
+    108.5,
+    428.7
+   ],
+   "sourceBodySha256": "ece5779c4bd04b49627a8a73f2d4d9df9918e605ba87a814858c2c9e356c2205",
+   "namedConcept": "Diagnostic enzymes"
+  },
+  {
+   "referenceId": "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
+   "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:403d59bf@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "rowBBox": [
+    58.7,
+    428.7,
+    108.5,
+    468.3
+   ],
+   "sourceBodySha256": "7f0d0b0a5d877be3f9d3cbd17910fa12b7d1f3cb07f265d1cdea787795935b14",
+   "namedConcept": "Diagnostic enzymes"
+  },
+  {
+   "referenceId": "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
+   "objectiveVersionId": "lo:339f799ccc77ff6f:mechanism:1efbe4a4@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    179.64
+   ],
+   "sourceBodySha256": "3cfe43f1387d91b0b5ae091ad6c59349f8858a3efc62f461d71782c6218c7fd2",
+   "namedConcept": "Carbohydrates"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930",
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:37f75736@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    179.64,
+    108.5,
+    213.42
+   ],
+   "sourceBodySha256": "fd73301e8be945b3b744c705096ec06ed0668d4a51e5f9b282f8b4be4a836da4",
+   "namedConcept": "Digestion and absorption"
+  },
+  {
+   "referenceId": "nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e",
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:1d07776c@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    472.32,
+    108.5,
+    503.28
+   ],
+   "sourceBodySha256": "564b80c188d840611c7aa4e57d2257face2ef6166abc1030520f06f540f8790f",
+   "namedConcept": "Digestion and absorption"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64",
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:84584464@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    423.6,
+    108.5,
+    455.28
+   ],
+   "sourceBodySha256": "6c1beec28d50bbf7200a28cbc0119eb5abbf672fa87fcc72dac0a51a57234434",
+   "namedConcept": "Digestion and absorption"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "objectiveVersionId": "lo:6720af80d90576d8:mechanism:29c5ea06@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    213.42,
+    108.5,
+    271.44
+   ],
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "namedConcept": "Glycolysis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "objectiveVersionId": "lo:684920ffb1db6107:mechanism:cf1b6ada@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    213.42,
+    108.5,
+    271.44
+   ],
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "namedConcept": "Gluconeogenesis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "objectiveVersionId": "lo:765e9d0a7c1eee7e:mechanism:eb856e93@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    213.42,
+    108.5,
+    271.44
+   ],
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "namedConcept": "Tricarboxylic acid cycle"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "objectiveVersionId": "lo:a1e65d1dbb2cc5ba:mechanism:6b29bd98@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    213.42,
+    108.5,
+    271.44
+   ],
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "namedConcept": "Glycogen metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "objectiveVersionId": "lo:e84eb0ffad544bfe:mechanism:ad605606@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    213.42,
+    108.5,
+    271.44
+   ],
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "namedConcept": "Pentose phosphate pathway"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "objectiveVersionId": "lo:667f69f5d89ef470:mechanism:08dd23c9@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    271.44,
+    108.5,
+    315.3
+   ],
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "namedConcept": "Fructose metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "objectiveVersionId": "lo:5c58ef55c89f9234:mechanism:cba77d3d@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    271.44,
+    108.5,
+    315.3
+   ],
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "namedConcept": "Galactose metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "objectiveVersionId": "lo:faedf18ee5289200:mechanism:cfef1829@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    271.44,
+    108.5,
+    315.3
+   ],
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "namedConcept": "Polyol pathway"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "objectiveVersionId": "lo:7e7506f045adecec:mechanism:d79638ab@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    271.44,
+    108.5,
+    315.3
+   ],
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "namedConcept": "Uronic acid pathway"
+  },
+  {
+   "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+   "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:2374420e@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    315.3,
+    108.5,
+    373.26
+   ],
+   "sourceBodySha256": "a138a0ccaf90b6e5681cb97ab5b41f734b40f3f1e54f7adb2f2b7443a3a71bde",
+   "namedConcept": "Fed-fast cycle"
+  },
+  {
+   "referenceId": "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
+   "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:a985dfb7@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    448.74,
+    108.5,
+    475.08
+   ],
+   "sourceBodySha256": "f1bfdab5e470ada693c94b6ce6219bbb18ac22427f3374221f4086af18ebf0af",
+   "namedConcept": "Fed-fast cycle"
+  },
+  {
+   "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+   "objectiveVersionId": "lo:951cc4748691eef6:mechanism:2071b3c4@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    315.3,
+    108.5,
+    373.26
+   ],
+   "sourceBodySha256": "a138a0ccaf90b6e5681cb97ab5b41f734b40f3f1e54f7adb2f2b7443a3a71bde",
+   "namedConcept": "Diabetes mellitus"
+  },
+  {
+   "referenceId": "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d",
+   "objectiveVersionId": "lo:f39704d9ca43dda4:interpretation:c714c3ac@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    373.26,
+    108.5,
+    416.88
+   ],
+   "sourceBodySha256": "858dbc55430aecdf642938d0345e17c9a92c1caca165d22a6bd722ac29cd5671",
+   "namedConcept": "Glycaemic tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
+   "objectiveVersionId": "lo:f39704d9ca43dda4:procedural-skill:24537632@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    460.32,
+    108.2,
+    501.06
+   ],
+   "sourceBodySha256": "abaa4fdd0479040920eb610d7dddcb51b876c349fc8973a5134e299f9a0002f7",
+   "namedConcept": "Glycaemic tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+   "objectiveVersionId": "lo:f37258ac3a7dce07:interpretation:0815d1ff@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    185.28,
+    108.2,
+    266.28
+   ],
+   "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+   "namedConcept": "Oral glucose tolerance test"
+  },
+  {
+   "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+   "objectiveVersionId": "lo:770e8da31530c5b6:interpretation:b40184db@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    185.28,
+    108.2,
+    266.28
+   ],
+   "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+   "namedConcept": "Glycated haemoglobin"
+  },
+  {
+   "referenceId": "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
+   "objectiveVersionId": "lo:e0fab6092f968006:mechanism:7f6647cb@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    443.88,
+    108.5,
+    472.32
+   ],
+   "sourceBodySha256": "248e247d7f5eada18228313e8d1e85589357de3748f6621dd36477f6e5943aed",
+   "namedConcept": "Lipids"
+  },
+  {
+   "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+   "objectiveVersionId": "lo:294265c445851c25:mechanism:76e81227@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    503.28,
+    108.5,
+    542.88
+   ],
+   "sourceBodySha256": "53cb7e7540d7313848578e86ebcabb25e005f21c9b4c5904fed7ce3730c1c110",
+   "namedConcept": "Fatty acid oxidation"
+  },
+  {
+   "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+   "objectiveVersionId": "lo:8ed03e4f25465f7d:mechanism:445e7bb5@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "rowBBox": [
+    58.7,
+    503.28,
+    108.5,
+    542.88
+   ],
+   "sourceBodySha256": "53cb7e7540d7313848578e86ebcabb25e005f21c9b4c5904fed7ce3730c1c110",
+   "namedConcept": "Ketone bodies"
+  },
+  {
+   "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+   "objectiveVersionId": "lo:67ea8bdbb4d46bbe:mechanism:96e215f2@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    168.06
+   ],
+   "sourceBodySha256": "6360ee07db2f6f90da15545410e815ace4230585cdb7dc19fa66d522bed857eb",
+   "namedConcept": "Triglyceride metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+   "objectiveVersionId": "lo:9851da8c934f53e4:mechanism:a3e8242d@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    168.06
+   ],
+   "sourceBodySha256": "6360ee07db2f6f90da15545410e815ace4230585cdb7dc19fa66d522bed857eb",
+   "namedConcept": "Cholesterol metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
+   "objectiveVersionId": "lo:1e44c2fa83dc885b:mechanism:5906e429@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    168.06,
+    108.5,
+    211.98
+   ],
+   "sourceBodySha256": "985400e3be8e67f6fbf9debdedb68632b556b33f25c0ecd52752731d9dafaed9",
+   "namedConcept": "Lipoproteins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6",
+   "objectiveVersionId": "lo:d19874a847bef1b1:mechanism:40ac5660@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    211.98,
+    108.5,
+    250.08
+   ],
+   "sourceBodySha256": "5479887d021235c13cbb824f2dceadb262047394cf700d27f6812ce679625c8e",
+   "namedConcept": "Eicosanoids"
+  },
+  {
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "objectiveVersionId": "lo:e62ffd16e69d40d2:mechanism:5a751af2@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    250.08,
+    108.5,
+    287.58
+   ],
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "namedConcept": "Fatty liver"
+  },
+  {
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "objectiveVersionId": "lo:9a924bdc1a757c21:mechanism:5bdec1fa@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    250.08,
+    108.5,
+    287.58
+   ],
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "namedConcept": "Gallstones"
+  },
+  {
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:619c4b32@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    250.08,
+    108.5,
+    287.58
+   ],
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "namedConcept": "Obesity"
+  },
+  {
+   "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+   "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:dcdee02c@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    273.24,
+    108.5,
+    318.96
+   ],
+   "sourceBodySha256": "a548ba469c6c1143331763b59a9b96b151683f4902f0d9822337a36d6b09e85d",
+   "namedConcept": "Obesity"
+  },
+  {
+   "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+   "objectiveVersionId": "lo:81bdfbf2fa19b878:mechanism:6a0ee3b1@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    273.24,
+    108.5,
+    318.96
+   ],
+   "sourceBodySha256": "a548ba469c6c1143331763b59a9b96b151683f4902f0d9822337a36d6b09e85d",
+   "namedConcept": "Metabolic syndrome"
+  },
+  {
+   "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:03d7a1f7@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    287.58,
+    108.5,
+    327.84
+   ],
+   "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+   "namedConcept": "Lipid profile"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b",
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:procedural-skill:21d0f4a3@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    210.06,
+    108.2,
+    248.58
+   ],
+   "sourceBodySha256": "1178b4b1237a6728879daba347386f739f75e29b3fdcf357a304484a8a3aa2d6",
+   "namedConcept": "Lipid profile"
+  },
+  {
+   "referenceId": "nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d",
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:f95276a9@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    335.7,
+    108.2,
+    379.62
+   ],
+   "sourceBodySha256": "16567a7c85a7000c8c7e527f17cc4065d7d3e733cdd7bbd366e71b6a88a7570f",
+   "namedConcept": "Lipid profile"
+  },
+  {
+   "referenceId": "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
+   "objectiveVersionId": "lo:9c3a43a4e5b5fa61:mechanism:b94087e0@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    361.02,
+    108.5,
+    392.28
+   ],
+   "sourceBodySha256": "545630bbc32a3494a4cea199407adef2a5c9de76f6f6c7439971ae668be78fc2",
+   "namedConcept": "Amino acids"
+  },
+  {
+   "referenceId": "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810",
+   "objectiveVersionId": "lo:40f570825110ed3e:mechanism:42f1b02a@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    392.28,
+    108.5,
+    423.6
+   ],
+   "sourceBodySha256": "ae695d85bb4451c5dc0ad517ff75cf53d06f75096954c8f1b1dabab0e7769f5b",
+   "namedConcept": "Proteins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
+   "objectiveVersionId": "lo:bf715c6a2565ed50:mechanism:f619a025@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    455.28,
+    108.5,
+    499.2
+   ],
+   "sourceBodySha256": "9040c20facfa82f74f68d6b3c268bc779a4bf6c04896afa21d6e651b7c231c25",
+   "namedConcept": "Plasma proteins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415",
+   "objectiveVersionId": "lo:bf715c6a2565ed50:procedural-skill:c1910cd7@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    180.96,
+    108.2,
+    210.06
+   ],
+   "sourceBodySha256": "eba8475815c149cf2974affe08c07efadb31b9773a4411ac65e81106c32fd67e",
+   "namedConcept": "Plasma proteins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
+   "objectiveVersionId": "lo:1aa2e9246d0c237e:mechanism:c6ded06f@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "rowBBox": [
+    58.7,
+    499.2,
+    108.5,
+    537.06
+   ],
+   "sourceBodySha256": "e74377023d6f665b9b60e31245e6e4598e5612d3c683acb8b1ee3dee882ccf67",
+   "namedConcept": "Immunoglobulins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138",
+   "objectiveVersionId": "lo:e760fb6251553585:mechanism:b8a87f81@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    153.66
+   ],
+   "sourceBodySha256": "84de6464ce951ccc68b62213794dd317789ed47e8d2391e8be4d9af167334d40",
+   "namedConcept": "Ammonia metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+   "objectiveVersionId": "lo:fea49ffde59009ab:procedural-skill:b3d8bb53@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    153.66,
+    108.5,
+    200.46
+   ],
+   "sourceBodySha256": "a5f2b925be58f9759488e26ac7218c3386b2b86f46cd35f8289ff2d1c61aa631",
+   "namedConcept": "Amino acid derivatives"
+  },
+  {
+   "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+   "objectiveVersionId": "lo:bd9fb3c187b07a44:procedural-skill:2607f5d2@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    153.66,
+    108.5,
+    200.46
+   ],
+   "sourceBodySha256": "a5f2b925be58f9759488e26ac7218c3386b2b86f46cd35f8289ff2d1c61aa631",
+   "namedConcept": "Inborn errors of amino acid metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+   "objectiveVersionId": "lo:bd9fb3c187b07a44:mechanism:a328f055@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    368.52,
+    108.2,
+    419.28
+   ],
+   "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+   "namedConcept": "Inborn errors of amino acid metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "objectiveVersionId": "lo:64608e017d4bde23:mechanism:b0e20f49@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    200.46,
+    108.5,
+    244.02
+   ],
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "namedConcept": "Haem metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "objectiveVersionId": "lo:d2f4b7c6a30cb914:mechanism:59180216@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    200.46,
+    108.5,
+    244.02
+   ],
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "namedConcept": "Porphyrias"
+  },
+  {
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "objectiveVersionId": "lo:7150fa73dfc2bb9f:mechanism:e93de413@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    200.46,
+    108.5,
+    244.02
+   ],
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "namedConcept": "Jaundice"
+  },
+  {
+   "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+   "objectiveVersionId": "lo:a43f6bc59303f0e0:mechanism:5cd0c4e7@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    244.02,
+    108.5,
+    287.88
+   ],
+   "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+   "namedConcept": "Haemoglobin"
+  },
+  {
+   "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+   "objectiveVersionId": "lo:c74c0997d83b2470:mechanism:2c955803@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    244.02,
+    108.5,
+    287.88
+   ],
+   "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+   "namedConcept": "Haemoglobinopathies"
+  },
+  {
+   "referenceId": "nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf",
+   "objectiveVersionId": "lo:f20401fbda0af9ff:mechanism:9bdd2057@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    309.48,
+    108.5,
+    351.24
+   ],
+   "sourceBodySha256": "28b60e8d0ded4eb88d454ff87bcacb38ae7da99e61401e236d938df9c8fcd76b",
+   "namedConcept": "Extracellular matrix"
+  },
+  {
+   "referenceId": "nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378",
+   "objectiveVersionId": "lo:3d7f2f013e02f9d8:mechanism:9d1808bd@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    351.24,
+    108.5,
+    384.36
+   ],
+   "sourceBodySha256": "b3be91e69b787ea3ab7a707785acb21ade2b9f5b563454aae50c1ac3d192414e",
+   "namedConcept": "Connective tissue disorders"
+  },
+  {
+   "referenceId": "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe",
+   "objectiveVersionId": "lo:09a2f3fc6d6a3ad1:mechanism:320b89d4@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    384.36,
+    108.5,
+    417.48
+   ],
+   "sourceBodySha256": "c91504608edaa20512964bebee5a8994afb4b95a056ce6e4a876be0646e449e5",
+   "namedConcept": "Protein targeting"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
+   "objectiveVersionId": "lo:51b5e44077cd0d7c:mechanism:ed9804e2@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "rowBBox": [
+    58.7,
+    475.08,
+    108.5,
+    508.56
+   ],
+   "sourceBodySha256": "43c0d2230ae255e491b0feb18477ea92735b2cbaf16da13e37d1253ab23620c1",
+   "namedConcept": "Oxidative phosphorylation"
+  },
+  {
+   "referenceId": "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
+   "objectiveVersionId": "lo:35ce136ec2e104aa:mechanism:4db665a6@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    160.14
+   ],
+   "sourceBodySha256": "13969f767dc55675adcace7e8ecac6bd87aafa9f08096cf5a8478114ed310283",
+   "namedConcept": "Vitamins"
+  },
+  {
+   "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+   "objectiveVersionId": "lo:f4e9f9af1e1dd9f3:mechanism:0c4fa041@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    160.14,
+    108.5,
+    195.78
+   ],
+   "sourceBodySha256": "eeac77f3c9ccea3f675b73b3c317ad5cf2c5ed34ec344de1ba4495ebf55530b6",
+   "namedConcept": "Nutrients"
+  },
+  {
+   "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+   "objectiveVersionId": "lo:b6de35af577f3a95:mechanism:13268479@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    160.14,
+    108.5,
+    195.78
+   ],
+   "sourceBodySha256": "eeac77f3c9ccea3f675b73b3c317ad5cf2c5ed34ec344de1ba4495ebf55530b6",
+   "namedConcept": "Dietary fibre"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5",
+   "objectiveVersionId": "lo:6fe6d63cb9dbb508:mechanism:6a993dc7@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    195.78,
+    108.5,
+    227.52
+   ],
+   "sourceBodySha256": "2b5ba0a123834ac30c4179f796893b2c23fea3af993f79c70d57492d7c66169d",
+   "namedConcept": "Protein-energy malnutrition"
+  },
+  {
+   "referenceId": "nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d",
+   "objectiveVersionId": "lo:d4073d507275f46a:mechanism:bd7d3053@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    227.52,
+    108.5,
+    273.24
+   ],
+   "sourceBodySha256": "1212d76c40adcf116267b317a7344de4f21e14c053963c6d39a2ed5e2cd36912",
+   "namedConcept": "Dietary counselling"
+  },
+  {
+   "referenceId": "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899",
+   "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:66cac2ca@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    318.96,
+    108.5,
+    364.68
+   ],
+   "sourceBodySha256": "37c5262d12491c8b12f56d5fb812fc145f21d3ce75dc71194b5a9fe3fd884178",
+   "namedConcept": "Food composition"
+  },
+  {
+   "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+   "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:92bf68f4@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    266.28,
+    108.2,
+    307.32
+   ],
+   "sourceBodySha256": "4fcd0dd2f1698118e2455bc4ef168fd0ca718d04c08b87df7c5cb51fa18acdee",
+   "namedConcept": "Food composition"
+  },
+  {
+   "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+   "objectiveVersionId": "lo:a837d4d532a26b38:mechanism:27a993db@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    266.28,
+    108.2,
+    307.32
+   ],
+   "sourceBodySha256": "4fcd0dd2f1698118e2455bc4ef168fd0ca718d04c08b87df7c5cb51fa18acdee",
+   "namedConcept": "Glycaemic index"
+  },
+  {
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "objectiveVersionId": "lo:9fb07153a2022c13:mechanism:632e94b9@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    393.84,
+    108.5,
+    442.44
+   ],
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "namedConcept": "Iron metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:61f7d545@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    393.84,
+    108.5,
+    442.44
+   ],
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "namedConcept": "Calcium metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f",
+   "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:ddcb2509@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    292.14,
+    108.2,
+    335.7
+   ],
+   "sourceBodySha256": "e7ad01d355c39c8be8c48981520c1c68188eda545d45e16e4dcb65d89475d804",
+   "namedConcept": "Calcium metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "objectiveVersionId": "lo:e660e86ec85736d2:mechanism:2e223d2a@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    393.84,
+    108.5,
+    442.44
+   ],
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "namedConcept": "Copper metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220",
+   "objectiveVersionId": "lo:2febb7e8405e9045:mechanism:1dd21855@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    442.44,
+    108.5,
+    479.22
+   ],
+   "sourceBodySha256": "19e39fd06aab913b28076f8a9477dfeee8b49b4f62168481751afac2a77d1b11",
+   "namedConcept": "Trace elements"
+  },
+  {
+   "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+   "objectiveVersionId": "lo:ab7604b074217fd4:mechanism:0515e0e4@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    479.22,
+    108.5,
+    523.14
+   ],
+   "sourceBodySha256": "b55c48ff3ecc010e4cbc234ddc8c1ad5faa8c5448772ef892df40cf8746b4588",
+   "namedConcept": "Water and electrolyte balance"
+  },
+  {
+   "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+   "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:564f8053@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "rowBBox": [
+    58.7,
+    479.22,
+    108.5,
+    523.14
+   ],
+   "sourceBodySha256": "b55c48ff3ecc010e4cbc234ddc8c1ad5faa8c5448772ef892df40cf8746b4588",
+   "namedConcept": "Acid-base disorders"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+   "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:1a342a86@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    203.94,
+    108.2,
+    254.7
+   ],
+   "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+   "namedConcept": "Acid-base disorders"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+   "objectiveVersionId": "lo:3e42a2361ebcdb43:interpretation:b3ec965c@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    203.94,
+    108.2,
+    254.7
+   ],
+   "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+   "namedConcept": "Blood gas analysis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5",
+   "objectiveVersionId": "lo:5990acf0b746d51b:mechanism:df3e3dde@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    156.18,
+    108.5,
+    184.98
+   ],
+   "sourceBodySha256": "bd4e89bac75db81d10770b91bb2f879fdfff2998c45fa685f9d6b12796756bdd",
+   "namedConcept": "Nucleic acids"
+  },
+  {
+   "referenceId": "nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227",
+   "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:212a7695@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    184.98,
+    108.5,
+    224.28
+   ],
+   "sourceBodySha256": "fbf4f100a01603304b4a5702b7616df595404355beeb709cab4a84f4531c7f3e",
+   "namedConcept": "Purine metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+   "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:ccd033cd@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    224.28,
+    108.5,
+    266.34
+   ],
+   "sourceBodySha256": "87c32d6d87d0b3949d8531e1a1f6ad39bbcf2fd2eb360632c4c7a0ffad9d6835",
+   "namedConcept": "Purine metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+   "objectiveVersionId": "lo:b461794e2676e0a1:mechanism:78ccbf3b@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    224.28,
+    108.5,
+    266.34
+   ],
+   "sourceBodySha256": "87c32d6d87d0b3949d8531e1a1f6ad39bbcf2fd2eb360632c4c7a0ffad9d6835",
+   "namedConcept": "Hyperuricaemia"
+  },
+  {
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "objectiveVersionId": "lo:0bc7bcdbc7f89fe9:mechanism:afc1f414@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    266.34,
+    108.5,
+    308.46
+   ],
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "namedConcept": "DNA replication"
+  },
+  {
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "objectiveVersionId": "lo:a8c9f778b25ad885:mechanism:5151dd1d@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    266.34,
+    108.5,
+    308.46
+   ],
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "namedConcept": "Gene transcription"
+  },
+  {
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "objectiveVersionId": "lo:c361415543d4ab9e:mechanism:133f7eef@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    266.34,
+    108.5,
+    308.46
+   ],
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "namedConcept": "Protein synthesis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+   "objectiveVersionId": "lo:800f50fe754de81a:mechanism:5fb0276e@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    308.46,
+    108.5,
+    340.86
+   ],
+   "sourceBodySha256": "a38d58efb79aaf90ceb46c6c65d585ffade3f089704ce9bdac7eaed7406870ef",
+   "namedConcept": "DNA repair"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+   "objectiveVersionId": "lo:4726a212d0f122cb:mechanism:7c7e44f7@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    308.46,
+    108.5,
+    340.86
+   ],
+   "sourceBodySha256": "a38d58efb79aaf90ceb46c6c65d585ffade3f089704ce9bdac7eaed7406870ef",
+   "namedConcept": "Gene mutations"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1",
+   "objectiveVersionId": "lo:6092de3669b3991c:mechanism:bad55d7f@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    340.86,
+    108.5,
+    371.82
+   ],
+   "sourceBodySha256": "892c67a33744517e296a293c814adb804ac6d2bb7bf088316ab7b602a75ad4e7",
+   "namedConcept": "Regulation of gene expression"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "objectiveVersionId": "lo:4d0a12064206548a:mechanism:60e597ae@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    371.82,
+    108.5,
+    429.06
+   ],
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "namedConcept": "Recombinant DNA technology"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "objectiveVersionId": "lo:301ee6f8827561ee:mechanism:101a0b3d@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    371.82,
+    108.5,
+    429.06
+   ],
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "namedConcept": "Polymerase chain reaction"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "objectiveVersionId": "lo:ecef4006e302228e:mechanism:efd303ed@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    371.82,
+    108.5,
+    429.06
+   ],
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "namedConcept": "DNA microarray"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "objectiveVersionId": "lo:073e250e3646778f:mechanism:0540fe43@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    371.82,
+    108.5,
+    429.06
+   ],
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "namedConcept": "Fluorescence in situ hybridisation"
+  },
+  {
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "objectiveVersionId": "lo:275631a18f32a1d3:mechanism:477d080a@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    371.82,
+    108.5,
+    429.06
+   ],
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "namedConcept": "CRISPR gene editing"
+  },
+  {
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:154162e1@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    456.78,
+    108.5,
+    493.56
+   ],
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "namedConcept": "Liver function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521",
+   "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:b448f3ad@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    248.58,
+    108.2,
+    292.14
+   ],
+   "sourceBodySha256": "262469271ea0c3490afb5525e1f81b692e909ba4317d2b6879f2f55bef8fd6ab",
+   "namedConcept": "Liver function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
+   "objectiveVersionId": "lo:e2349f0be136ab90:interpretation:c993ecb6@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    379.62,
+    108.2,
+    423.18
+   ],
+   "sourceBodySha256": "691fc5a3e1179c0e8c3836baf337a7c8ccef11d70f273772a832b0f12712ae8e",
+   "namedConcept": "Liver function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "objectiveVersionId": "lo:d6425fe7a4e0887d:procedural-skill:505e8f1c@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    456.78,
+    108.5,
+    493.56
+   ],
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "namedConcept": "Renal function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "objectiveVersionId": "lo:9354e0675c7a47f4:procedural-skill:6f6e329d@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    456.78,
+    108.5,
+    493.56
+   ],
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "namedConcept": "Thyroid function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "objectiveVersionId": "lo:89bbac3e1acff73e:procedural-skill:801ac0f0@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "rowBBox": [
+    58.7,
+    456.78,
+    108.5,
+    493.56
+   ],
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "namedConcept": "Adrenal function tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+   "objectiveVersionId": "lo:e9e4c672f5ae9d32:interpretation:db8e457b@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    188.94
+   ],
+   "sourceBodySha256": "15627baabcbfbe4fb5255bd54b990508ff26d4a6382eb4382c82576ab66f3a06",
+   "namedConcept": "Reproductive hormone tests"
+  },
+  {
+   "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+   "objectiveVersionId": "lo:43bb7cc9d83cdcda:mechanism:7c417aaf@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    124.5,
+    108.5,
+    188.94
+   ],
+   "sourceBodySha256": "15627baabcbfbe4fb5255bd54b990508ff26d4a6382eb4382c82576ab66f3a06",
+   "namedConcept": "Prenatal screening"
+  },
+  {
+   "referenceId": "nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786",
+   "objectiveVersionId": "lo:ccc90822e3b7f778:mechanism:b37a6ba1@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    222.78,
+    108.5,
+    251.94
+   ],
+   "sourceBodySha256": "592b08263409417bcc4bae6fc3b62e1aa8dff589a284100d98e54a18846add6d",
+   "namedConcept": "Xenobiotic metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
+   "objectiveVersionId": "lo:eff1c8e59663569a:mechanism:0be25bca@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    251.94,
+    108.5,
+    283.32
+   ],
+   "sourceBodySha256": "5d3b2a46aecf8e88c1fd6e0caeca60bedc3fabcab2a13119aa79f69574cddaf8",
+   "namedConcept": "Antioxidants"
+  },
+  {
+   "referenceId": "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78",
+   "objectiveVersionId": "lo:97aedc2fc8d8a54f:mechanism:9df8a7d6@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    283.32,
+    108.5,
+    323.64
+   ],
+   "sourceBodySha256": "7060afd7c59f25d2899695599e2fb3a9878508ed71da58ae774b16f40bf8242d",
+   "namedConcept": "Oxidative stress"
+  },
+  {
+   "referenceId": "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2",
+   "objectiveVersionId": "lo:c0326fbd7b67d4ab:mechanism:4cf6d329@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    347.34,
+    108.5,
+    388.02
+   ],
+   "sourceBodySha256": "cba88cb115c861f1270812b58711de7d9ab371290ddd1de71a5c409daefcd75b",
+   "namedConcept": "Oncogenes and tumour suppressor genes"
+  },
+  {
+   "referenceId": "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9",
+   "objectiveVersionId": "lo:9862173f55b25f82:interpretation:367aadc3@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    388.02,
+    108.5,
+    421.86
+   ],
+   "sourceBodySha256": "a791cef0380f7ff516bf4f1c9d81c1623c859bcd4218025923dc30eb75619292",
+   "namedConcept": "Tumour markers"
+  },
+  {
+   "referenceId": "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2",
+   "objectiveVersionId": "lo:fe9b8948fc117a36:mechanism:4e7aa915@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    421.86,
+    108.5,
+    449.58
+   ],
+   "sourceBodySha256": "44510d3e7a8d84d1d9ebcea5ef1d76c3b032c03b0117521cbe341951e51bd8b5",
+   "namedConcept": "HIV infection"
+  },
+  {
+   "referenceId": "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3",
+   "objectiveVersionId": "lo:859d9650d8041e06:mechanism:a6cc6473@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    449.58,
+    108.5,
+    485.04
+   ],
+   "sourceBodySha256": "c540ae040f9f66604fcc0eb032bee1680de5397e7e9dcab0076021835e9cf5c2",
+   "namedConcept": "Alcohol metabolism"
+  },
+  {
+   "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+   "objectiveVersionId": "lo:4c52bc25cea945c1:mechanism:6957e1fd@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "rowBBox": [
+    58.7,
+    485.04,
+    108.5,
+    525.36
+   ],
+   "sourceBodySha256": "ea71e8a869926ba2bfc6a1e6e070ca5aae0cf159adea18b5c0d3b0ffecf4a6a5",
+   "namedConcept": "Artificial intelligence in laboratory medicine"
+  },
+  {
+   "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+   "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:c896f8c7@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    254.7,
+    108.2,
+    324.18
+   ],
+   "sourceBodySha256": "5f2e2948e4167f7a37554df27977f53d3b9946300e84d58f133690da71b31e3d",
+   "namedConcept": "Urinalysis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+   "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:30384218@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    324.18,
+    108.2,
+    368.52
+   ],
+   "sourceBodySha256": "9d835c2377e6158fb350f41eada18e0e1427a406effe3436a39dc33961f80477",
+   "namedConcept": "Urinalysis"
+  },
+  {
+   "referenceId": "nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618",
+   "objectiveVersionId": "lo:a4a9a99c2cedf83a:mechanism:85fe0f3a@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    419.28,
+    108.2,
+    460.32
+   ],
+   "sourceBodySha256": "ac3ee876f2a82f20b1b6116f39165254ec9c7667fea58ec5719e725f50109bcf",
+   "namedConcept": "Colorimetry and spectrophotometry"
+  },
+  {
+   "referenceId": "nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4",
+   "objectiveVersionId": "lo:62acddeec1ea15a6:procedural-skill:68d9e925@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    501.06,
+    108.2,
+    530.58
+   ],
+   "sourceBodySha256": "8ad77edff13c8e019501b15d5c2efd18a8db0207e4bf7c74f6a23cf3d0a8b891",
+   "namedConcept": "Blood urea"
+  },
+  {
+   "referenceId": "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
+   "objectiveVersionId": "lo:b0840fd701bb7508:procedural-skill:056e07ae@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    122.22,
+    108.2,
+    151.8
+   ],
+   "sourceBodySha256": "121c75d21f79f8c2161ce30a45682dffe9d864b34132afe1d1595d3e27014f7d",
+   "namedConcept": "Serum creatinine"
+  },
+  {
+   "referenceId": "nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc",
+   "objectiveVersionId": "lo:69ebb0982311d1f3:procedural-skill:ce7647da@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    151.8,
+    108.2,
+    180.96
+   ],
+   "sourceBodySha256": "9507c4f6b501291eef4313cdf702bc3e8c33d67c63e3795211c020af70b22eb3",
+   "namedConcept": "Serum uric acid"
+  },
+  {
+   "referenceId": "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
+   "objectiveVersionId": "lo:e832554d1fa5e64b:mechanism:074a7c88@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    423.18,
+    108.2,
+    467.1
+   ],
+   "sourceBodySha256": "471446bda0a5a03447d5a6349fcfaebf4dfe49df9cbf2c639c0c8efe99abbdf2",
+   "namedConcept": "Cerebrospinal fluid"
+  },
+  {
+   "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+   "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:46b5234a@1",
+   "status": "proposed",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "rowBBox": [
+    58.5,
+    368.52,
+    108.2,
+    419.28
+   ],
+   "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+   "namedConcept": "Laboratory analytical techniques"
+  },
+  {
+   "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+   "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:cb1cb122@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "rowBBox": [
+    58.5,
+    467.1,
+    108.2,
+    534.78
+   ],
+   "sourceBodySha256": "d17f084646fc55ef7c271200692c3cbc30dcd81b5f0a0fcc40801e4f6889d614",
+   "namedConcept": "Laboratory analytical techniques"
+  },
+  {
+   "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
+   "objectiveVersionId": "lo:9828b76e004af731:interpretation:aa19eb0c@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 171,
+   "rowBBox": [
+    58.5,
+    216.96,
+    108.2,
+    459.36
+   ],
+   "sourceBodySha256": "533a057de60caa4097d7a0552eb77523007a602c1ca4b67e55ef7556a4a8d096",
+   "namedConcept": "Laboratory test interpretation"
+  },
+  {
+   "referenceId": "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+   "objectiveVersionId": "lo:9828b76e004af731:interpretation:5bb300b3@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    307.32,
+    108.2,
+    348.06
+   ],
+   "sourceBodySha256": "239565fdd20fba949914bf9b802cfb97f5fff483c1bf45c03d9b602064d26bb4",
+   "namedConcept": "Laboratory test interpretation"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
+   "objectiveVersionId": "lo:3c3328b6d6f8a981:procedural-skill:0427d74d@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 171,
+   "rowBBox": [
+    58.5,
+    459.36,
+    108.2,
+    513.36
+   ],
+   "sourceBodySha256": "43af83f9e60c842d5b111140a57498d7fa486ed68410a59aaa7a68c9690d6a49",
+   "namedConcept": "Laboratory errors"
+  },
+  {
+   "referenceId": "nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e",
+   "objectiveVersionId": "lo:b57394136cda79be:procedural-skill:5dc7f960@1",
+   "status": "proposed",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 172,
+   "rowBBox": [
+    58.5,
+    122.22,
+    108.2,
+    185.28
+   ],
+   "sourceBodySha256": "1dca0654a57488255d71eff29fe04593eac6d12932073faecb5545ca5fc14213",
+   "namedConcept": "Laboratory quality control"
   }
  ]
 }
