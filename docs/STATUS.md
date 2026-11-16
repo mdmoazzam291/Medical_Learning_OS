@@ -1,3 +1,11 @@
+## NMC small clinical subjects objectives bound and in registry (draft @13) — 2026-11-16T21:15Z
+
+- Owner accepted `nmc-small-clinical-concepts-v1-20261116` at 2026-11-16T21:09:43Z (105 receipts; pairs digest `bfcf024d…ae2d` recomputed and matched). Receipt IDs in `ops/nmc/receipts/small-clinical-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-small-clinical-objective-bindings-v1.json` (128 concepts, 177 objectives).
+- Registry `data/nmc-learning-foundation-drafts.json` @13: +177 objectives → 1,358 objectives, 1,359 bindings, 998 concepts, 1,158 of 2,634 NMC rows source-linked (44%). All draft; no clinical approval or learner release.
+- Remaining subjects: Surgery, Obstetrics & Gynaecology, Paediatrics, Anatomy, Medicine. `owner-api` redeploy still deferred.
+
+---
+
 ## NMC Dermatology, Orthopaedics, Psychiatry, Anaesthesia and Radiology combined batch v1 — 2026-11-16T21:05Z
 
 - One acceptance for the five remaining small subjects (178 rows). `docs/evidence/2026-11-17-nmc-small-clinical-concept-batch-v1.json` (spec `ops/nmc/specs/small_clinical_concepts_v1.py`): 128 concepts (105 new; 23 reused), 177 objectives, all 174 recognised rows. OR2. 2.9, PS 2.1*, PS9.2 (amendment) and ASS.4 stay on the source-exception track. Subtype and ambiguous aliases removed (e.g. "ALS"). No clash with 1,551 production names.
