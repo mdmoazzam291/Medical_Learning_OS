@@ -72,6 +72,10 @@ for c in spec.C:
               'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
             links.append(code)
     subjects=['physiology']+[s for s in c['extraSubjects'] if s!='physiology']
+    expected=None
+    if getattr(spec,'EVIDENCED_SUBJECTS_ONLY',False):
+        evidenced=list(dict.fromkeys(byCode[k][0]['subjectId'] for k,_ in c['links']))
+        expected=[x for x in subjects if x not in evidenced]; subjects=evidenced
     legacy_domain='clinical-skill' if all(level_code(byCode[k][0]['level']) in('SH','P') for k,_ in c['links']) and not TESTS.search(c['label']) else ('pathophysiology' if c['label'] in DISEASE else ('laboratory-method' if TESTS.search(c['label']) else 'normal-function'))
     domains=[c['conceptType']]+(['umbrella'] if c.get('umbrella') else []) if 'conceptType' in c else [legacy_domain]
     tasks=sorted({o['task'] for o in objectives if o['conceptKey']==key})
@@ -81,6 +85,7 @@ for c in spec.C:
          'changeReason':'Physiology pilot batch '+VERSION+': canonical concept for NMC Physiology source rows; objectives bind after acceptance.'}
     item={'conceptKey':key,'existingConceptId':existing,'document':doc,'linkedCodes':list(dict.fromkeys(links))}
     if 'conceptType' in c: item.update({'conceptType':c['conceptType'],'umbrella':bool(c.get('umbrella')),'scoringUnit':not c.get('umbrella'),'reviewFlags':review_flags(c,links,existing)})
+    if expected is not None: item['expectedSubjects']=expected
     concepts.append(item)
 new=[c for c in concepts if not c['existingConceptId']]
 batch={'schemaVersion':1,'batchId':'nmc-physiology-concepts-'+VERSION+'-20261116','subjectId':'physiology','sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
