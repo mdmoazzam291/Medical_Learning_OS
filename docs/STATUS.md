@@ -1,3 +1,13 @@
+## NMC Pathology concept batch v1 — 2026-11-16T15:45Z
+
+- Writer: Claude, branch `feat/nmc-pathology-concept-batch-20261116` from main `d9e847e`.
+- `docs/evidence/2026-11-16-nmc-pathology-concept-batch-v1.json` (spec `ops/nmc/specs/pathology_concepts_v1.py`): 194 concepts (167 new; 27 reused accepted Physiology/Biochemistry identities), 221 objectives, all 181 recognised rows. PA.29.1 (unresolved printed code) stays on the source-exception track. Specimen-identification rows attach to the topic's representative concept.
+- Production name check: one clash found and fixed (PA21.2 renamed "Blood products"; "Blood components" is an alias of Physiology "Blood composition"). No other clash with 461 existing names.
+- Earlier batches rebuild byte-identically. Endpoint pin changed in source to commit `568695e`, SHA-256 `7d0d54a6…6e4f`. Tests 1,699/1,699.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Biochemistry accepted, bound and registered — 2026-11-16T14:50Z
 
 - Writer: Claude, branch `feat/nmc-biochemistry-registry-20261116` from main `70be10d`.
