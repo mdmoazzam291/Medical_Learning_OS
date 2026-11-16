@@ -60,6 +60,7 @@ VERSION = 'v1'
 CONCEPT_TYPES = ('structure', 'function', 'disorder', 'clinical-finding', 'investigation',
                  'clinical-skill', 'intervention', 'field')
 EVIDENCED_SUBJECTS_ONLY = True
+HELD_CODES = ('SU24.1', 'SU24.2', 'SU24.3', 'SU27.1', 'SU27.2', 'SU27.3', 'SU27.4', 'SU27.5', 'SU27.6', 'SU27.7', 'SU27.8')
 EXTRA_TEST_LABELS = r'|examination|Glasgow Coma Scale|investigations'
 C = []
 def c(label, kind, system, links, aliases=(), expected=(), organs=(), task=None):
