@@ -1,3 +1,13 @@
+## NMC ENT and Ophthalmology accepted, bound and registered — 2026-11-16T20:15Z
+
+- Owner accepted the combined batch. Receipt: `nmc-ent-ophthalmology-concepts-v1-20261116`, SHA-256 `767232d0…6c1b`, accepted 2026-11-16T20:02:30Z, 108 items.
+- Bindings: 129 objectives on 115 concepts (108 from receipts, 7 reused); pairs digest `178056d7…9f73` reproduced and tested.
+- Registry draft `@12`: totals 1181 objectives, 1182 bindings, 893 concepts, 984 source-linked references.
+- CI note: `tests/hosted-syllabus-baseline-negative.mjs --hosted` failed because its old branch preview URL now returns 404; the check now targets the production site (PR #440).
+- Subjects done (9): Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine, ENT, Ophthalmology. Remaining: 10.
+
+---
+
 ## NMC ENT and Ophthalmology combined concept batch v1 — 2026-11-16T19:50Z
 
 - Owner approved pairing small clinical subjects into one acceptance (00:57 IST).
