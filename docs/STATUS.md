@@ -1,3 +1,11 @@
+## NMC Pharmacology concept batch v1 — 2026-11-16T17:15Z
+
+- `docs/evidence/2026-11-16-nmc-pharmacology-concept-batch-v1.json` (spec `ops/nmc/specs/pharmacology_concepts_v1.py`): 99 concepts (93 new; 6 reused), 105 objectives, all 92 rows. Drug-therapy rows are named by drug class; accepted diseases reused only where the row is about treating them (UTI, STI). Non-synonym aliases removed. No clash with 894 production names.
+- Earlier batches rebuild byte-identically. Endpoint pin: commit `01d8eee`, SHA-256 `8ec0f140…deaa`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Microbiology accepted, bound and registered — 2026-11-16T16:35Z
 
 - Owner accepted batch v1. Receipt: `nmc-microbiology-concepts-v1-20261116`, SHA-256 `145141e3…5c20`, accepted 2026-11-16T16:28:12Z, 54 items.
