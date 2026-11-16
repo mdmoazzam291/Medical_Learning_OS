@@ -1,8 +1,9 @@
 ## NMC Physiology concept batch v2 — 2026-11-16T10:50Z
 
 - Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` from main `3f9d9f9`; data commit `91a46e2` (v2 batch, SHA-256 `dbc19399…22a5`). See STATUS.md and ADR-134.
-- Production state: migration applied (0 batch rows, 12 accepted identities); `nmc-admin-preview` v2 still serves the v1 batch until redeployed. Owner was asked not to accept v1.
-- Next exact action: run full `npm test` and `npm run check`, open PR, redeploy `nmc-admin-preview` with the v2 pin (owner approval in hand, 15:51 IST), merge after CI, then the owner accepts the batch in Admin; afterwards bind the 191 objectives to receipt concept IDs.
+- Production state: migration applied (0 batch rows, 12 accepted identities); `nmc-admin-preview` redeployed as version 3 serving the v2 batch (deployed files read back and match the repo).
+- PR #425 open; `npm test` 1,693/1,693 and `npm run check` pass; CI check, browser and Cloudflare build passed, WebKit was still running. Merge was blocked by a session permission check and needs the owner's go-ahead.
+- Next exact action: merge #425; the owner accepts the v2 batch in Admin (Owner console → Canonical concept batch); then bind the 191 objectives to receipt concept IDs.
 
 ---
 
