@@ -1,3 +1,16 @@
+## NMC Biochemistry concept batch v1 — 2026-11-16T15:10Z
+
+- Writer: Claude, branch `feat/nmc-biochemistry-concept-batch-20261116` from main `6ee3406`.
+- Owner instruction ("Next", 19:43 IST): continue NMC foundation completion with Biochemistry; no private-bank questions.
+- `docs/evidence/2026-11-16-nmc-biochemistry-concept-batch-v1.json` (spec `ops/nmc/specs/biochemistry_concepts_v1.py`): 101 concepts (93 new; 8 reused accepted Physiology identities: Digestion and absorption, Plasma proteins, Haemoglobin, Jaundice, Obesity, Metabolic syndrome, Liver function tests, Renal function tests), 120 objectives, 83 of 84 rows. Row "14.1" (unrecognised printed code) stays on the source-exception track. Entity names, true-synonym aliases and evidenced subjects only (ADR-134, ADR-135). Rows split where they name separable entities (e.g. BC3.3 into five pathways, BC10.7 into five techniques, BC11.1 into four test panels).
+- Builder generalised by subject (`SUBJECT`, `EXTRA_TEST_LABELS`, per-concept `task`); Physiology v1, v2 and v3 rebuild byte-identically.
+- Read-only production check: no label or alias collides with the 303 accepted or catalogue names.
+- `nmc-admin-preview` pin changed in source to the Biochemistry batch (commit `b5828d6`, SHA-256 `4e9f74bc…486c`); the pin test now hashes whichever file the endpoint pins.
+- Reused Physiology concepts keep their accepted subject list (`physiology`) until a classification revision adds Biochemistry; that revision is a later step.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance in Admin, bindings from receipts, registry.
+
+---
+
 ## NMC Physiology objectives in the foundation registry — 2026-11-16T14:10Z
 
 - Writer: Claude, branch `feat/nmc-physiology-registry-20261116` from main `87feea4`.

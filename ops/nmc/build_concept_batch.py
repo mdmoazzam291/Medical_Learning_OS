@@ -36,6 +36,8 @@ def level_code(lv):
     order=['K','KH','SH','P']
     return max(toks,key=order.index) if toks else 'KH'
 VERSION=getattr(spec,'VERSION','v1')
+SUBJECT=getattr(spec,'SUBJECT','physiology'); SUBJECT_NAME=getattr(spec,'SUBJECT_NAME','Physiology'); BATCH_KIND=getattr(spec,'BATCH_KIND','pilot batch')
+TESTS=re.compile(TESTS.pattern[:-1]+getattr(spec,'EXTRA_TEST_LABELS','')+')',re.I)
 code_count={}
 for c0 in spec.C:
     for k,_ in c0['links']: code_count[k]=code_count.get(k,0)+1
@@ -50,7 +52,7 @@ def review_flags(c,links,existing):
     return f
 concepts=[];objectives=[]
 for c in spec.C:
-    key='nmc-concept:'+hashlib.sha256(('physiology|'+c['label']).encode()).hexdigest()[:16]
+    key='nmc-concept:'+hashlib.sha256((SUBJECT+'|'+c['label']).encode()).hexdigest()[:16]
     existing=spec.EXISTING.get(c['label'])
     links=[]
     for code,scope in c['links']:
@@ -65,13 +67,13 @@ for c in spec.C:
         mode=('performance-and-knowledge' if procedural else 'knowledge')
         if rid in review: mode=review[rid]['finalValue']['mode']
         elif rid in draft and scope is None: mode=draft[rid][1]
-        task='procedural-skill' if mode!='knowledge' and procedural else ('interpretation' if TESTS.search(c['label']) else 'mechanism')
+        task=c.get('task') or ('procedural-skill' if mode!='knowledge' and procedural else ('interpretation' if TESTS.search(c['label']) else 'mechanism'))
         for i,(w,basis) in enumerate(wordings):
             ov='lo:'+key.split(':')[1]+':'+task+':'+hashlib.sha256((rid+w).encode()).hexdigest()[:8]+'@1'
             objectives.append({'objectiveVersionId':ov,'conceptKey':key,'existingConceptId':existing,'referenceId':rid,'code':code,'task':task,'depth':DEPTH[lv],'mode':mode,'wording':w,'basis':basis,
               'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
             links.append(code)
-    subjects=['physiology']+[s for s in c['extraSubjects'] if s!='physiology']
+    subjects=[SUBJECT]+[s for s in c['extraSubjects'] if s!=SUBJECT]
     expected=None
     if getattr(spec,'EVIDENCED_SUBJECTS_ONLY',False):
         evidenced=list(dict.fromkeys(byCode[k][0]['subjectId'] for k,_ in c['links']))
@@ -82,15 +84,15 @@ for c in spec.C:
     ev='; '.join(f"{code} p.{byCode[code][0]['pdfPages'][0]} {byCode[code][0]['referenceId']}" for code in dict.fromkeys(links))
     doc={'label':c['label'],'aliases':c['aliases'],'classification':{'subjects':subjects,'systems':[c['system']],'organs':list(c.get('organs',[])),'domains':domains,'tasks':tasks},
          'sourceEvidence':('NMC CBME 2024-09-12 (sha256 '+cat['sourceSha256'][:12]+'): '+ev)[:4000],
-         'changeReason':'Physiology pilot batch '+VERSION+': canonical concept for NMC Physiology source rows; objectives bind after acceptance.'}
+         'changeReason':SUBJECT_NAME+' '+BATCH_KIND+' '+VERSION+': canonical concept for NMC '+SUBJECT_NAME+' source rows; objectives bind after acceptance.'}
     item={'conceptKey':key,'existingConceptId':existing,'document':doc,'linkedCodes':list(dict.fromkeys(links))}
     if 'conceptType' in c: item.update({'conceptType':c['conceptType'],'umbrella':bool(c.get('umbrella')),'scoringUnit':not c.get('umbrella'),'reviewFlags':review_flags(c,links,existing)})
     if expected is not None: item['expectedSubjects']=expected
     concepts.append(item)
 new=[c for c in concepts if not c['existingConceptId']]
-batch={'schemaVersion':1,'batchId':'nmc-physiology-concepts-'+VERSION+'-20261116','subjectId':'physiology','sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
+batch={'schemaVersion':1,'batchId':'nmc-'+SUBJECT+'-concepts-'+VERSION+'-20261116','subjectId':SUBJECT,'sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
  'status':'draft-batch-awaiting-admin-acceptance','attestation':'identity-and-classification-reviewed-not-medical-or-learner-release',
  'counts':{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},
- 'learnerActivation':False,'clinicalApproval':False,**({'supersedes':spec.SUPERSEDES,'conceptTypes':list(spec.CONCEPT_TYPES),'counts':{**{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},'umbrellas':sum(1 for c in concepts if c.get('umbrella')),'flagged':sum(1 for c in concepts if c.get('reviewFlags'))}} if hasattr(spec,'SUPERSEDES') else {}),'concepts':concepts,'objectives':objectives}
+ 'learnerActivation':False,'clinicalApproval':False,**({**({'supersedes':spec.SUPERSEDES} if hasattr(spec,'SUPERSEDES') else {}),'conceptTypes':list(spec.CONCEPT_TYPES),'counts':{**{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},'umbrellas':sum(1 for c in concepts if c.get('umbrella')),'flagged':sum(1 for c in concepts if c.get('reviewFlags'))}} if hasattr(spec,'CONCEPT_TYPES') else {}),'concepts':concepts,'objectives':objectives}
 OUT.write_text(json.dumps(batch,ensure_ascii=False,indent=1)+'\n')
 print(batch['counts'])

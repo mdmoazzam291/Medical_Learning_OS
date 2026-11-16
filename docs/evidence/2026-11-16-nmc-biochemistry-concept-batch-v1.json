@@ -1,0 +1,5837 @@
+{
+ "schemaVersion": 1,
+ "batchId": "nmc-biochemistry-concepts-v1-20261116",
+ "subjectId": "biochemistry",
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "status": "draft-batch-awaiting-admin-acceptance",
+ "attestation": "identity-and-classification-reviewed-not-medical-or-learner-release",
+ "counts": {
+  "concepts": 101,
+  "newConcepts": 93,
+  "reusedAcceptedIdentities": 8,
+  "objectives": 120,
+  "sourceRows": 83,
+  "umbrellas": 0,
+  "flagged": 64
+ },
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "conceptTypes": [
+  "structure",
+  "function",
+  "disorder",
+  "clinical-finding",
+  "investigation",
+  "clinical-skill",
+  "intervention",
+  "field"
+ ],
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:860a494646d3cc71",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cell membrane",
+    "aliases": [
+     "Plasma membrane"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC1.1 p.162 nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC1.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d0c328c28dd64659",
+   "existingConceptId": null,
+   "document": {
+    "label": "Enzymes",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC2.1 p.162 nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC2.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:96d61920394de9fa",
+   "existingConceptId": null,
+   "document": {
+    "label": "Enzyme kinetics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC2.2 p.162 nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC2.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c383b9207f3db49e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Enzyme inhibition",
+    "aliases": [
+     "Enzyme inhibitors"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC2.3 p.162 nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC2.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f9b1a0bd84f2985b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Diagnostic enzymes",
+    "aliases": [
+     "Clinical enzymology",
+     "Serum enzymes"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC2.4 p.162 nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8; BC2.5 p.162 nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC2.4",
+    "BC2.5"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "pathology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:339f799ccc77ff6f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Carbohydrates",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.1 p.163 nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ebc644e355fb1131",
+   "existingConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "document": {
+    "label": "Digestion and absorption",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.2 p.163 nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930; BC4.2 p.163 nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e; BC 5.3 p.164 nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.2",
+    "BC4.2",
+    "BC 5.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6720af80d90576d8",
+   "existingConceptId": null,
+   "document": {
+    "label": "Glycolysis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.3 p.163 nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:684920ffb1db6107",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gluconeogenesis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.3 p.163 nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:765e9d0a7c1eee7e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Tricarboxylic acid cycle",
+    "aliases": [
+     "TCA cycle",
+     "Krebs cycle",
+     "Citric acid cycle"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.3 p.163 nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a1e65d1dbb2cc5ba",
+   "existingConceptId": null,
+   "document": {
+    "label": "Glycogen metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.3 p.163 nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e84eb0ffad544bfe",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pentose phosphate pathway",
+    "aliases": [
+     "Hexose monophosphate shunt",
+     "HMP shunt"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.3 p.163 nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:667f69f5d89ef470",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fructose metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.4 p.163 nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:5c58ef55c89f9234",
+   "existingConceptId": null,
+   "document": {
+    "label": "Galactose metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.4 p.163 nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:faedf18ee5289200",
+   "existingConceptId": null,
+   "document": {
+    "label": "Polyol pathway",
+    "aliases": [
+     "Sorbitol pathway"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.4 p.163 nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:7e7506f045adecec",
+   "existingConceptId": null,
+   "document": {
+    "label": "Uronic acid pathway",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.4 p.163 nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a0da5abe820462b2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fed-fast cycle",
+    "aliases": [
+     "Fed and fasting states"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.5 p.163 nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71; BC7.1 p.165 nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.5",
+    "BC7.1"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "physiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:951cc4748691eef6",
+   "existingConceptId": null,
+   "document": {
+    "label": "Diabetes mellitus",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [
+      "pancreas"
+     ],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.5 p.163 nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "pathology",
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f39704d9ca43dda4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Glycaemic tests",
+    "aliases": [
+     "Blood glucose tests"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC3.6 p.163 nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d; BC14.7 p.169 nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC3.6",
+    "BC14.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f37258ac3a7dce07",
+   "existingConceptId": null,
+   "document": {
+    "label": "Oral glucose tolerance test",
+    "aliases": [
+     "OGTT",
+     "Glucose tolerance test"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.22 p.172 nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.22"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:770e8da31530c5b6",
+   "existingConceptId": null,
+   "document": {
+    "label": "Glycated haemoglobin",
+    "aliases": [
+     "HbA1c",
+     "Glycosylated haemoglobin",
+     "Glycated hemoglobin"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.22 p.172 nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.22"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e0fab6092f968006",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lipids",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.1 p.163 nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:294265c445851c25",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fatty acid oxidation",
+    "aliases": [
+     "Beta-oxidation"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.3 p.163 nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8ed03e4f25465f7d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Ketone bodies",
+    "aliases": [
+     "Ketogenesis"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.3 p.163 nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:67ea8bdbb4d46bbe",
+   "existingConceptId": null,
+   "document": {
+    "label": "Triglyceride metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.4 p.164 nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9851da8c934f53e4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cholesterol metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.4 p.164 nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:1e44c2fa83dc885b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lipoproteins",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.5 p.164 nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d19874a847bef1b1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Eicosanoids",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.6 p.164 nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e62ffd16e69d40d2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fatty liver",
+    "aliases": [
+     "Hepatic steatosis"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [
+      "liver"
+     ],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.7 p.164 nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9a924bdc1a757c21",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gallstones",
+    "aliases": [
+     "Cholelithiasis"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [
+      "gallbladder"
+     ],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.7 p.164 nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "surgery",
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:4be2758b3071d8a2",
+   "existingConceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "document": {
+    "label": "Obesity",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.7 p.164 nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134; BC8.5 p.166 nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.7",
+    "BC8.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:81bdfbf2fa19b878",
+   "existingConceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+   "document": {
+    "label": "Metabolic syndrome",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.5 p.166 nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:14f5fbd92b79eda0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lipid profile",
+    "aliases": [
+     "Lipid panel"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC4.8 p.164 nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918; BC14.12 p.170 nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b; BC14.15 p.170 nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC4.8",
+    "BC14.12",
+    "BC14.15"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9c3a43a4e5b5fa61",
+   "existingConceptId": null,
+   "document": {
+    "label": "Amino acids",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.1 p.164 nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:40f570825110ed3e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Proteins",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.2 p.164 nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:bf715c6a2565ed50",
+   "existingConceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+   "document": {
+    "label": "Plasma proteins",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 5.4 p.164 nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8; BC14.11 p.170 nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 5.4",
+    "BC14.11"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1aa2e9246d0c237e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Immunoglobulins",
+    "aliases": [
+     "Antibodies"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 5.5 p.164 nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 5.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "microbiology",
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e760fb6251553585",
+   "existingConceptId": null,
+   "document": {
+    "label": "Ammonia metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 5.6 p.165 nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 5.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fea49ffde59009ab",
+   "existingConceptId": null,
+   "document": {
+    "label": "Amino acid derivatives",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 5.7 p.165 nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 5.7"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:bd9fb3c187b07a44",
+   "existingConceptId": null,
+   "document": {
+    "label": "Inborn errors of amino acid metabolism",
+    "aliases": [
+     "Aminoacidopathies"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 5.7 p.165 nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b; BC14.5 p.169 nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 5.7",
+    "BC14.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:64608e017d4bde23",
+   "existingConceptId": null,
+   "document": {
+    "label": "Haem metabolism",
+    "aliases": [
+     "Heme metabolism"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.8 p.165 nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.8"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d2f4b7c6a30cb914",
+   "existingConceptId": null,
+   "document": {
+    "label": "Porphyrias",
+    "aliases": [
+     "Porphyria"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.8 p.165 nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.8"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:7150fa73dfc2bb9f",
+   "existingConceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "document": {
+    "label": "Jaundice",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-finding"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.8 p.165 nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.8"
+   ],
+   "conceptType": "clinical-finding",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a43f6bc59303f0e0",
+   "existingConceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "document": {
+    "label": "Haemoglobin",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.9 p.165 nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.9"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c74c0997d83b2470",
+   "existingConceptId": null,
+   "document": {
+    "label": "Haemoglobinopathies",
+    "aliases": [
+     "Hemoglobinopathies"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC5.9 p.165 nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC5.9"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology",
+    "medicine",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f20401fbda0af9ff",
+   "existingConceptId": null,
+   "document": {
+    "label": "Extracellular matrix",
+    "aliases": [
+     "ECM"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC6.1 p.165 nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC6.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3d7f2f013e02f9d8",
+   "existingConceptId": null,
+   "document": {
+    "label": "Connective tissue disorders",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC6.2 p.165 nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC6.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:09a2f3fc6d6a3ad1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Protein targeting",
+    "aliases": [
+     "Protein sorting"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC6.3 p.165 nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC6.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:51b5e44077cd0d7c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Oxidative phosphorylation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC7.2 p.165 nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC7.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:35ce136ec2e104aa",
+   "existingConceptId": null,
+   "document": {
+    "label": "Vitamins",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.1 p.166 nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f4e9f9af1e1dd9f3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Nutrients",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.2 p.166 nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:b6de35af577f3a95",
+   "existingConceptId": null,
+   "document": {
+    "label": "Dietary fibre",
+    "aliases": [
+     "Dietary fiber"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.2 p.166 nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6fe6d63cb9dbb508",
+   "existingConceptId": null,
+   "document": {
+    "label": "Protein-energy malnutrition",
+    "aliases": [
+     "PEM"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.3 p.166 nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pediatrics",
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d4073d507275f46a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Dietary counselling",
+    "aliases": [
+     "Nutritional counselling"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.4 p.166 nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.4"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3d388b2da2ef0b9d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Food composition",
+    "aliases": [
+     "Nutritive value of foods"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC8.6 p.166 nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899; BC14.23 p.172 nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC8.6",
+    "BC14.23"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a837d4d532a26b38",
+   "existingConceptId": null,
+   "document": {
+    "label": "Glycaemic index",
+    "aliases": [
+     "Glycemic index"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.23 p.172 nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.23"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9fb07153a2022c13",
+   "existingConceptId": null,
+   "document": {
+    "label": "Iron metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.1 p.166 nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.1"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:8018aa4d53bad50c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Calcium metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.1 p.166 nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628; BC14.14 p.170 nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.1",
+    "BC14.14"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e660e86ec85736d2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Copper metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.1 p.166 nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.1"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2febb7e8405e9045",
+   "existingConceptId": null,
+   "document": {
+    "label": "Trace elements",
+    "aliases": [
+     "Micronutrient minerals"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.2 p.166 nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ab7604b074217fd4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Water and electrolyte balance",
+    "aliases": [
+     "Fluid and electrolyte balance"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.3 p.166 nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:8a6a3574ea0cfd14",
+   "existingConceptId": null,
+   "document": {
+    "label": "Acid-base disorders",
+    "aliases": [
+     "Acid-base disturbances"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC9.3 p.166 nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f; BC14.2 p.169 nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC9.3",
+    "BC14.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3e42a2361ebcdb43",
+   "existingConceptId": null,
+   "document": {
+    "label": "Blood gas analysis",
+    "aliases": [
+     "Arterial blood gas analysis",
+     "ABG"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.2 p.169 nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.2"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "anaesthesia"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:5990acf0b746d51b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Nucleic acids",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.1 p.167 nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:97c6ea19d746bf35",
+   "existingConceptId": null,
+   "document": {
+    "label": "Purine metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.2 p.167 nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227; BC10.3 p.167 nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.2",
+    "BC10.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b461794e2676e0a1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Hyperuricaemia",
+    "aliases": [
+     "Hyperuricemia"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.3 p.167 nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:0bc7bcdbc7f89fe9",
+   "existingConceptId": null,
+   "document": {
+    "label": "DNA replication",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.4 p.167 nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a8c9f778b25ad885",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gene transcription",
+    "aliases": [
+     "Transcription"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.4 p.167 nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c361415543d4ab9e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Protein synthesis",
+    "aliases": [
+     "mRNA translation"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.4 p.167 nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:800f50fe754de81a",
+   "existingConceptId": null,
+   "document": {
+    "label": "DNA repair",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 10.5 p.167 nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 10.5"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:4726a212d0f122cb",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gene mutations",
+    "aliases": [
+     "Mutations"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 10.5 p.167 nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 10.5"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:6092de3669b3991c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Regulation of gene expression",
+    "aliases": [
+     "Gene regulation"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.6 p.167 nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:4d0a12064206548a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Recombinant DNA technology",
+    "aliases": [
+     "Genetic engineering"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.7 p.167 nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:301ee6f8827561ee",
+   "existingConceptId": null,
+   "document": {
+    "label": "Polymerase chain reaction",
+    "aliases": [
+     "PCR"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.7 p.167 nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "microbiology",
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ecef4006e302228e",
+   "existingConceptId": null,
+   "document": {
+    "label": "DNA microarray",
+    "aliases": [
+     "Microarray"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.7 p.167 nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:073e250e3646778f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fluorescence in situ hybridisation",
+    "aliases": [
+     "FISH",
+     "Fluorescence in situ hybridization"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.7 p.167 nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:275631a18f32a1d3",
+   "existingConceptId": null,
+   "document": {
+    "label": "CRISPR gene editing",
+    "aliases": [
+     "CRISPR-Cas9"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC10.7 p.167 nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC10.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e2349f0be136ab90",
+   "existingConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "document": {
+    "label": "Liver function tests",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 11.1 p.167 nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53; BC14.13 p.170 nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521; BC14.16 p.170 nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 11.1",
+    "BC14.13",
+    "BC14.16"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d6425fe7a4e0887d",
+   "existingConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "document": {
+    "label": "Renal function tests",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 11.1 p.167 nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 11.1"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9354e0675c7a47f4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thyroid function tests",
+    "aliases": [
+     "TFT"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [
+      "thyroid"
+     ],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 11.1 p.167 nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 11.1"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:89bbac3e1acff73e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Adrenal function tests",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [
+      "adrenal"
+     ],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 11.1 p.167 nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 11.1"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e9e4c672f5ae9d32",
+   "existingConceptId": null,
+   "document": {
+    "label": "Reproductive hormone tests",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC11.2 p.168 nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC11.2"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:43bb7cc9d83cdcda",
+   "existingConceptId": null,
+   "document": {
+    "label": "Prenatal screening",
+    "aliases": [
+     "Antenatal screening"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC11.2 p.168 nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC11.2"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ccc90822e3b7f778",
+   "existingConceptId": null,
+   "document": {
+    "label": "Xenobiotic metabolism",
+    "aliases": [
+     "Biotransformation"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC12.1 p.168 nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC12.1"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:eff1c8e59663569a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antioxidants",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC12.2 p.168 nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC12.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:97aedc2fc8d8a54f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Oxidative stress",
+    "aliases": [
+     "Free radical injury"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC12.3 p.168 nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC12.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:c0326fbd7b67d4ab",
+   "existingConceptId": null,
+   "document": {
+    "label": "Oncogenes and tumour suppressor genes",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 13.1 p.168 nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 13.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9862173f55b25f82",
+   "existingConceptId": null,
+   "document": {
+    "label": "Tumour markers",
+    "aliases": [
+     "Tumor markers"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC 13.2 p.168 nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC 13.2"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fe9b8948fc117a36",
+   "existingConceptId": null,
+   "document": {
+    "label": "HIV infection",
+    "aliases": [
+     "HIV disease"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC13.3 p.168 nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC13.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "microbiology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:859d9650d8041e06",
+   "existingConceptId": null,
+   "document": {
+    "label": "Alcohol metabolism",
+    "aliases": [
+     "Ethanol metabolism"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC13.4 p.168 nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC13.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "forensic-medicine",
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:4c52bc25cea945c1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Artificial intelligence in laboratory medicine",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC13.5 p.168 nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC13.5"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:0a2fc9f4ff748797",
+   "existingConceptId": null,
+   "document": {
+    "label": "Urinalysis",
+    "aliases": [
+     "Urine examination"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.3 p.169 nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba; BC14.4 p.169 nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.3",
+    "BC14.4"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a4a9a99c2cedf83a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Colorimetry and spectrophotometry",
+    "aliases": [
+     "Photometry"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.6 p.169 nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.6"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:62acddeec1ea15a6",
+   "existingConceptId": null,
+   "document": {
+    "label": "Blood urea",
+    "aliases": [
+     "Serum urea"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.8 p.169 nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.8"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b0840fd701bb7508",
+   "existingConceptId": null,
+   "document": {
+    "label": "Serum creatinine",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.9 p.170 nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.9"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:69ebb0982311d1f3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Serum uric acid",
+    "aliases": [
+     "Serum urate"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.10 p.170 nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.10"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e832554d1fa5e64b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cerebrospinal fluid",
+    "aliases": [
+     "CSF"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.17 p.170 nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.17"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "microbiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:419bdfbdff3c2f7c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laboratory analytical techniques",
+    "aliases": [
+     "Biochemical laboratory techniques"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.5 p.169 nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3; BC14.18 p.170 nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.5",
+    "BC14.18"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9828b76e004af731",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laboratory test interpretation",
+    "aliases": [
+     "Interpretation of laboratory reports"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.19 p.171 nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc; BC\n14.24 p.172 nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.19",
+    "BC\n14.24"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3c3328b6d6f8a981",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laboratory errors",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.20 p.171 nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.20"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:b57394136cda79be",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laboratory quality control",
+    "aliases": [
+     "Internal quality control"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): BC14.21 p.172 nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e",
+    "changeReason": "Biochemistry concept batch v1: canonical concept for NMC Biochemistry source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "BC14.21"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:860a494646d3cc71:mechanism:916254d6@1",
+   "conceptKey": "nmc-concept:860a494646d3cc71",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8360a110ba08d5b287b0d452b0a9142857860d146d66419ce5d9bce0eda94f54",
+   "code": "BC1.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map molecular components to organelle functions and explain how membrane composition supports compartmentalization, transport and signalling.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "9ed4387823ac0f04a74987b85cd3dbd183855b4ca732b651d03604dda5e83eb5",
+   "descriptionSha256": "cfef76d5d06abbce67d5e25190f47c303e368d7d48681023d7b3f83e0a12da23",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d0c328c28dd64659:mechanism:61a5dcbd@1",
+   "conceptKey": "nmc-concept:d0c328c28dd64659",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b9f964d59b4aec0307017172191dae326e23d564df5edef036ea15aaa5b11045",
+   "code": "BC2.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish enzymes, isoenzymes and coenzymes and classify representative reactions using IUBMB classes.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "c52370d7919e818af0ec97ba0b914a723e3f33fbf0475055a53f96217e8d67f0",
+   "descriptionSha256": "9daa258abf7405c1dc4aebb237554aae4980ceadb3669d81f6e9121c46bc9405",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:96d61920394de9fa:mechanism:1f355a80@1",
+   "conceptKey": "nmc-concept:96d61920394de9fa",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6e42716458b0276d07a88f851bdb6b8192b643bba23be03c0b111a9f80b17f63",
+   "code": "BC2.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret substrate–velocity curves and predict effects of concentration, temperature and pH on activity.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "a405b28ca2c07fff045f1d110f766403825d3de598d97975870061eaa0e3850e",
+   "descriptionSha256": "e577fbdd84bb0e0d9a66581f2a84f224c534d767f3847e4bdbb321309f8d71dc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c383b9207f3db49e:mechanism:45fa82a6@1",
+   "conceptKey": "nmc-concept:c383b9207f3db49e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6c4da122905c0451d0fe5416831726c17061ef12bcf2a8b76498b376708e4183",
+   "code": "BC2.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare inhibition patterns and explain representative uses of enzyme inhibitors and therapeutic enzymes.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "e8cc6f15e10cdd04204eb7b8c900ef7f2cd1726f0520e411843d1c303a443db0",
+   "descriptionSha256": "be93b1466fd840838197bca74f38b9848de119e9f277cb0a0a0ccf02a723b9fa",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:e3114348@1",
+   "conceptKey": "nmc-concept:f9b1a0bd84f2985b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:88303eaa8f44cb5c98ef91f5e9863797559185003fb0958f7a17426d54d8b2c8",
+   "code": "BC2.4",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate representative serum enzymes and isoenzymes to their tissue sources and mechanisms of elevation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "ece5779c4bd04b49627a8a73f2d4d9df9918e605ba87a814858c2c9e356c2205",
+   "descriptionSha256": "db2870ea23934a1c1fa025846df14f4fb247d1eb9439c3114caf5f96ac909276",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f9b1a0bd84f2985b:interpretation:403d59bf@1",
+   "conceptKey": "nmc-concept:f9b1a0bd84f2985b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:fd77edae2d37f9e89c1fc3e3679e0b0569ba1931d18e87035e6c1c40de817731",
+   "code": "BC2.5",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret representative enzyme panels and trends in clinical context.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 162,
+   "sourceBodySha256": "7f0d0b0a5d877be3f9d3cbd17910fa12b7d1f3cb07f265d1cdea787795935b14",
+   "descriptionSha256": "ad87133d3e41a9fe5bfb28af924d3d0933887adac2afa393056a14834f374aed",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:339f799ccc77ff6f:mechanism:1efbe4a4@1",
+   "conceptKey": "nmc-concept:339f799ccc77ff6f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9ffad6fee7372a1b31cf5717ceb5055ac54bc24c6b8757462f35ff5db0f27b2f",
+   "code": "BC3.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Classify representative carbohydrates and relate their structures to fuel, storage and structural roles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "3cfe43f1387d91b0b5ae091ad6c59349f8858a3efc62f461d71782c6218c7fd2",
+   "descriptionSha256": "fc4926ca72379f0858f2b5e081161441993a670fc279f297ac554032aaa56930",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:37f75736@1",
+   "conceptKey": "nmc-concept:ebc644e355fb1131",
+   "existingConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "referenceId": "nmc-2024-ref:4ac47f6e02f3ce8bde5522de954e7f29f53399dc285208a9a06c7c73beffe930",
+   "code": "BC3.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace hydrolysis, intestinal uptake and portal transport and explain representative malabsorption mechanisms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "fd73301e8be945b3b744c705096ec06ed0668d4a51e5f9b282f8b4be4a836da4",
+   "descriptionSha256": "6d0bbe9028bc6d37277f996ab2692986a343ba34bb7d9ffe4f34089574f44b0b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:1d07776c@1",
+   "conceptKey": "nmc-concept:ebc644e355fb1131",
+   "existingConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "referenceId": "nmc-2024-ref:ee13a8d60d22fa8d243710885b353ec55a6f2e0a2e91c37a4625465f7fb4238e",
+   "code": "BC4.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace emulsification, hydrolysis, micellar uptake and chylomicron assembly and explain representative malabsorption mechanisms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "564b80c188d840611c7aa4e57d2257face2ef6166abc1030520f06f540f8790f",
+   "descriptionSha256": "860bd8d7f12f30c9711c7b0eee5e4d2487150f13c1c474b5be200b612d5f6f90",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ebc644e355fb1131:mechanism:84584464@1",
+   "conceptKey": "nmc-concept:ebc644e355fb1131",
+   "existingConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "referenceId": "nmc-2024-ref:f9fe891153866cc9348cd70b6500521212189523236f1b3c9b22c7ed8e0bae64",
+   "code": "BC 5.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace proteolysis and uptake of amino acids and small peptides.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "6c1beec28d50bbf7200a28cbc0119eb5abbf672fa87fcc72dac0a51a57234434",
+   "descriptionSha256": "edfaf2517c22360b991035415c82742e0c4f5c9bed027a532d2f6388bc4a86c6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6720af80d90576d8:mechanism:29c5ea06@1",
+   "conceptKey": "nmc-concept:6720af80d90576d8",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "code": "BC3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace glycolysis, its energy yield and regulation, and explain consequences of representative enzyme defects such as pyruvate kinase deficiency.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "descriptionSha256": "f0d31f4b2de2f40acb66f5edfe510ce1408872502327ed934ecdf691bed4408a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:684920ffb1db6107:mechanism:cf1b6ada@1",
+   "conceptKey": "nmc-concept:684920ffb1db6107",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "code": "BC3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace gluconeogenesis from its main substrates, explain its regulation and relate it to fasting physiology.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "descriptionSha256": "f0d31f4b2de2f40acb66f5edfe510ce1408872502327ed934ecdf691bed4408a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:765e9d0a7c1eee7e:mechanism:eb856e93@1",
+   "conceptKey": "nmc-concept:765e9d0a7c1eee7e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "code": "BC3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the tricarboxylic acid cycle, its energy yield, regulation and amphibolic role.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "descriptionSha256": "f0d31f4b2de2f40acb66f5edfe510ce1408872502327ed934ecdf691bed4408a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a1e65d1dbb2cc5ba:mechanism:6b29bd98@1",
+   "conceptKey": "nmc-concept:a1e65d1dbb2cc5ba",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "code": "BC3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace glycogen synthesis and breakdown, explain hormonal regulation and relate representative glycogen storage disorders to enzyme defects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "descriptionSha256": "f0d31f4b2de2f40acb66f5edfe510ce1408872502327ed934ecdf691bed4408a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e84eb0ffad544bfe:mechanism:ad605606@1",
+   "conceptKey": "nmc-concept:e84eb0ffad544bfe",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10cc696a91d9dd9be3735c6af5896c990cd7e58c856dd76e5d10c8605bdbb6e",
+   "code": "BC3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the oxidative and non-oxidative phases of the pentose phosphate pathway and relate NADPH generation to G6PD deficiency.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "5d76345d052b811e61d81cbd6330f61f74c3c44b235f870649f518bd81956727",
+   "descriptionSha256": "f0d31f4b2de2f40acb66f5edfe510ce1408872502327ed934ecdf691bed4408a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:667f69f5d89ef470:mechanism:08dd23c9@1",
+   "conceptKey": "nmc-concept:667f69f5d89ef470",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "code": "BC3.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace fructose metabolism and explain hereditary fructose intolerance and essential fructosuria.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "descriptionSha256": "cde7c01ab77f1615099cce72ed9ef1c299a5cab378ee222bc79507e5b9dc573e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5c58ef55c89f9234:mechanism:cba77d3d@1",
+   "conceptKey": "nmc-concept:5c58ef55c89f9234",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "code": "BC3.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace galactose metabolism and explain the biochemical basis and consequences of galactosaemia.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "descriptionSha256": "cde7c01ab77f1615099cce72ed9ef1c299a5cab378ee222bc79507e5b9dc573e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:faedf18ee5289200:mechanism:cfef1829@1",
+   "conceptKey": "nmc-concept:faedf18ee5289200",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "code": "BC3.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the polyol pathway and relate sorbitol accumulation to diabetic complications.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "descriptionSha256": "cde7c01ab77f1615099cce72ed9ef1c299a5cab378ee222bc79507e5b9dc573e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e7506f045adecec:mechanism:d79638ab@1",
+   "conceptKey": "nmc-concept:7e7506f045adecec",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d5cd2b3a36ee503731a2d238a98f94639dac8b0a83ac8c5464d7fa3f003b47c",
+   "code": "BC3.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the uronic acid pathway, its products and the biochemical basis of essential pentosuria.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "938555b938edf00d78389897acb76618ca9d2398c624e879d88b1c5f02fb7fcb",
+   "descriptionSha256": "cde7c01ab77f1615099cce72ed9ef1c299a5cab378ee222bc79507e5b9dc573e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:2374420e@1",
+   "conceptKey": "nmc-concept:a0da5abe820462b2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+   "code": "BC3.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Predict hormonal and metabolic responses that maintain blood glucose in the fed and fasting states.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "a138a0ccaf90b6e5681cb97ab5b41f734b40f3f1e54f7adb2f2b7443a3a71bde",
+   "descriptionSha256": "11d9f53a1247347596eebf9a7bda49f1ace4eb565e74803485f54510fded7453",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a0da5abe820462b2:mechanism:a985dfb7@1",
+   "conceptKey": "nmc-concept:a0da5abe820462b2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9eb3078f7cbb0b2b600bf4c44916e1fa2e3814d67fa61a75845aa7747dc54c7d",
+   "code": "BC7.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map carbohydrate, lipid and protein flux across tissues in fed, fasting and prolonged fasting states.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "f1bfdab5e470ada693c94b6ce6219bbb18ac22427f3374221f4086af18ebf0af",
+   "descriptionSha256": "e786451b498cb855eff0418f2a5c598ff35bf6023c7e5add90f2ba737d841ab4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:951cc4748691eef6:mechanism:2071b3c4@1",
+   "conceptKey": "nmc-concept:951cc4748691eef6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:74d6dd94bb12a586951858e9e74da9c2152679b598f4655a3fae4d54d8fecf71",
+   "code": "BC3.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare major types of diabetes mellitus and explain their biochemical changes, acute and chronic complications and laboratory assessment.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "a138a0ccaf90b6e5681cb97ab5b41f734b40f3f1e54f7adb2f2b7443a3a71bde",
+   "descriptionSha256": "11d9f53a1247347596eebf9a7bda49f1ace4eb565e74803485f54510fded7453",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f39704d9ca43dda4:interpretation:c714c3ac@1",
+   "conceptKey": "nmc-concept:f39704d9ca43dda4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cbe17a348770cf4644d5620b743e6a20ee2e42233cab1679a508e4a3fe7fe37d",
+   "code": "BC3.6",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret representative glucose, HbA1c and related biochemical results and explain the limitations of each test.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "858dbc55430aecdf642938d0345e17c9a92c1caca165d22a6bd722ac29cd5671",
+   "descriptionSha256": "770ba6a566e00edb71127a59092fbad9a2b92103a076555294ac4bfcd8214dae",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f39704d9ca43dda4:procedural-skill:24537632@1",
+   "conceptKey": "nmc-concept:f39704d9ca43dda4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3dcdf582e3772d2af6d7e7053028ebc34d02b7651118eac5c22436342d015a27",
+   "code": "BC14.7",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure glucose using a manual or semi-automated method, demonstrate glucometer use and interpret representative results.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "abaa4fdd0479040920eb610d7dddcb51b876c349fc8973a5134e299f9a0002f7",
+   "descriptionSha256": "a1d80b86cf1e6fed5bb3a8c5e66d39e1fc01cd037d21828e01214efc53ded292",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f37258ac3a7dce07:interpretation:0815d1ff@1",
+   "conceptKey": "nmc-concept:f37258ac3a7dce07",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+   "code": "BC14.22",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how an oral glucose tolerance test and a glucose challenge test are performed and interpret representative results.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+   "descriptionSha256": "dcb664cdc1f400589f1b10c43a26d76d49c3c35412c03497288ad3bc9073284c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:770e8da31530c5b6:interpretation:b40184db@1",
+   "conceptKey": "nmc-concept:770e8da31530c5b6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e24dd83d814bfccb4160ae61aa01053f6f60e35f74f4a684a82014403f7bee7b",
+   "code": "BC14.22",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the basis of HbA1c measurement, interpret representative values and recognise conditions that make it unreliable.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "254fb4c1dc7c4194c9d8d9cc72b2f1a07ebdde5d33b180f33c144a0a2be28250",
+   "descriptionSha256": "dcb664cdc1f400589f1b10c43a26d76d49c3c35412c03497288ad3bc9073284c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e0fab6092f968006:mechanism:7f6647cb@1",
+   "conceptKey": "nmc-concept:e0fab6092f968006",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:90657d825427f64ad80107aa069bd41c15862166e28015c1a338efaff15d27bd",
+   "code": "BC4.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Classify representative lipids and relate their properties to storage, membranes and signalling.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "248e247d7f5eada18228313e8d1e85589357de3748f6621dd36477f6e5943aed",
+   "descriptionSha256": "0d485389307c3a9e943e79c996a1f0b3e0947aab95d356a94342b89088466d9b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:294265c445851c25:mechanism:76e81227@1",
+   "conceptKey": "nmc-concept:294265c445851c25",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+   "code": "BC4.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace beta-oxidation of fatty acids, its regulation and energy yield, and explain representative defects such as carnitine deficiency.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "53cb7e7540d7313848578e86ebcabb25e005f21c9b4c5904fed7ce3730c1c110",
+   "descriptionSha256": "61f639162041ebe33275dca161a21cbdb2fe22d30c5d050b5c2e229f4a2104e7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8ed03e4f25465f7d:mechanism:445e7bb5@1",
+   "conceptKey": "nmc-concept:8ed03e4f25465f7d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:72dfbf6213e16851d89f83155bf0973de3ad307ddf72d12453277042556f982f",
+   "code": "BC4.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace ketone body synthesis and use and explain the biochemical basis of ketosis and ketoacidosis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 163,
+   "sourceBodySha256": "53cb7e7540d7313848578e86ebcabb25e005f21c9b4c5904fed7ce3730c1c110",
+   "descriptionSha256": "61f639162041ebe33275dca161a21cbdb2fe22d30c5d050b5c2e229f4a2104e7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:67ea8bdbb4d46bbe:mechanism:96e215f2@1",
+   "conceptKey": "nmc-concept:67ea8bdbb4d46bbe",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+   "code": "BC4.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace fatty acid and triglyceride synthesis and breakdown and explain their hormonal regulation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "6360ee07db2f6f90da15545410e815ace4230585cdb7dc19fa66d522bed857eb",
+   "descriptionSha256": "c336dac9560465e30cd96eb6b38376a9b78d645cb0485958b755a120dfa13e1a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9851da8c934f53e4:mechanism:a3e8242d@1",
+   "conceptKey": "nmc-concept:9851da8c934f53e4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3e2ae6462267d2f3dfb63c95ba3c21224974aa5ffe1ae9e1fd844856ac402b78",
+   "code": "BC4.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace cholesterol synthesis, its regulation at HMG-CoA reductase and its conversion to bile acids and steroids, and relate altered flux to clinical patterns.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "6360ee07db2f6f90da15545410e815ace4230585cdb7dc19fa66d522bed857eb",
+   "descriptionSha256": "c336dac9560465e30cd96eb6b38376a9b78d645cb0485958b755a120dfa13e1a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1e44c2fa83dc885b:mechanism:5906e429@1",
+   "conceptKey": "nmc-concept:1e44c2fa83dc885b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:946305e127b5a2c7af3ebb98457b98a71cf093d4a9c29e8aef5f00eb51d474a2",
+   "code": "BC4.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace major lipoprotein pathways, apolipoprotein roles and links to atherosclerosis.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "985400e3be8e67f6fbf9debdedb68632b556b33f25c0ecd52752731d9dafaed9",
+   "descriptionSha256": "1fda77fb3376484b7d9cf99026aad151657cd284d0cbea31d3ec64d14d42431b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d19874a847bef1b1:mechanism:40ac5660@1",
+   "conceptKey": "nmc-concept:d19874a847bef1b1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:381b92c8e7c9dd06cf2f2d01e00585d39cb756f5ad140e090db9d9618ae203d6",
+   "code": "BC4.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map major pathways from arachidonic acid and relate mediators, inhibitors and therapeutic uses.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "5479887d021235c13cbb824f2dceadb262047394cf700d27f6812ce679625c8e",
+   "descriptionSha256": "889d3ccf9d96ce0d0375185373311020f3174b5914451a2c9c75bdcd9e8670cc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e62ffd16e69d40d2:mechanism:5a751af2@1",
+   "conceptKey": "nmc-concept:e62ffd16e69d40d2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "code": "BC4.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the biochemical mechanisms that lead to hepatic lipid accumulation and the role of lipotropic factors.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "descriptionSha256": "c717e0576b795ba502040c0a3cc0aa40935af617ffc2d668ef983e48549ba02f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9a924bdc1a757c21:mechanism:5bdec1fa@1",
+   "conceptKey": "nmc-concept:9a924bdc1a757c21",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "code": "BC4.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the biochemical basis of cholesterol gallstone formation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "descriptionSha256": "c717e0576b795ba502040c0a3cc0aa40935af617ffc2d668ef983e48549ba02f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:619c4b32@1",
+   "conceptKey": "nmc-concept:4be2758b3071d8a2",
+   "existingConceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "referenceId": "nmc-2024-ref:57c1addfa14609725cca9ae19597ff47897528dfe85d314db71e312594538134",
+   "code": "BC4.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the biochemical mechanisms of excess adiposity.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "78313bebcfcb5f88b0e15133747de75a7e0c1d69ff606a0d5975ab94ad3ad2e5",
+   "descriptionSha256": "c717e0576b795ba502040c0a3cc0aa40935af617ffc2d668ef983e48549ba02f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4be2758b3071d8a2:mechanism:dcdee02c@1",
+   "conceptKey": "nmc-concept:4be2758b3071d8a2",
+   "existingConceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+   "code": "BC8.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Connect dietary and other determinants to adiposity and its metabolic consequences.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "a548ba469c6c1143331763b59a9b96b151683f4902f0d9822337a36d6b09e85d",
+   "descriptionSha256": "10e4e9af018a075e1f133f235449dad2317a7963dda5a4d8532613f8fad1206b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:81bdfbf2fa19b878:mechanism:6a0ee3b1@1",
+   "conceptKey": "nmc-concept:81bdfbf2fa19b878",
+   "existingConceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+   "referenceId": "nmc-2024-ref:6c2a4fd1e98be4291f8ecb5b6b795ed75616e7384f6c264a00dfbed50becbdd4",
+   "code": "BC8.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the metabolic changes that define metabolic syndrome and the health risks they carry.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "a548ba469c6c1143331763b59a9b96b151683f4902f0d9822337a36d6b09e85d",
+   "descriptionSha256": "10e4e9af018a075e1f133f235449dad2317a7963dda5a4d8532613f8fad1206b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:03d7a1f7@1",
+   "conceptKey": "nmc-concept:14f5fbd92b79eda0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:63decf0394b0e5a47b62c0aeb2f6dd499ea0ba14a406f3a0272de9dd45bf2918",
+   "code": "BC4.8",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret a representative lipid panel and explain how sampling and calculation limitations affect the result.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "525f48109a4fdb89dc2802519880b5a7b076ba06f7bf9cd4974faf26feb0658e",
+   "descriptionSha256": "57cc09f6fb5cff0529082ff836dbf554663a830a3671330db3d24753fa34d77e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:procedural-skill:21d0f4a3@1",
+   "conceptKey": "nmc-concept:14f5fbd92b79eda0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4bf2f8e7d945b55201aa6d647a3d4841c9234628ae8b10b6bdc443faea70115b",
+   "code": "BC14.12",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure serum total cholesterol using a supervised assay and document quality control and the result.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "1178b4b1237a6728879daba347386f739f75e29b3fdcf357a304484a8a3aa2d6",
+   "descriptionSha256": "1a58f70b2153e7ad97333084acd37e6dbd2d19eaba068c2fe8b0c47d08bef078",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:14f5fbd92b79eda0:interpretation:f95276a9@1",
+   "conceptKey": "nmc-concept:14f5fbd92b79eda0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a822662ffc0d02479df21ffd30a7a1aea49ca322048886a7ed45da819e23509d",
+   "code": "BC14.15",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain triglyceride and HDL measurement, calculate LDL from suitable data and recognize calculation limits.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "16567a7c85a7000c8c7e527f17cc4065d7d3e733cdd7bbd366e71b6a88a7570f",
+   "descriptionSha256": "168caa6e44c7f7755ff883fb318d24dd947a0a65132490845b88d933224cd5bf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9c3a43a4e5b5fa61:mechanism:b94087e0@1",
+   "conceptKey": "nmc-concept:9c3a43a4e5b5fa61",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:76451a974d74b4ff649e02d63fbd0447e089adfea397b95e39e7d18c0de9e4f1",
+   "code": "BC5.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Classify amino acids by side-chain properties, nutritional requirement and metabolic fate.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "545630bbc32a3494a4cea199407adef2a5c9de76f6f6c7439971ae668be78fc2",
+   "descriptionSha256": "69e2e8e9b0472b5dc41432b3cea7fb6236caf2dc702c9f8cff0d1ec98ff33255",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:40f570825110ed3e:mechanism:42f1b02a@1",
+   "conceptKey": "nmc-concept:40f570825110ed3e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:26bff259ade8fec4af5cf710380423aa56da6bcf2b5822bccb3ed6ab925de810",
+   "code": "BC5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare protein classes and structural levels and relate folding or structural disruption to function and disease.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "ae695d85bb4451c5dc0ad517ff75cf53d06f75096954c8f1b1dabab0e7769f5b",
+   "descriptionSha256": "ca83f6396e2ad441490335c1641c1362956b14d8fcdcc7ffae9f4a7ddc944835",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:bf715c6a2565ed50:mechanism:f619a025@1",
+   "conceptKey": "nmc-concept:bf715c6a2565ed50",
+   "existingConceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+   "referenceId": "nmc-2024-ref:2af9c42f0486763ef65ea8f9be787c6299cee13aade34ab8d3f782e36a9fa2e8",
+   "code": "BC 5.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate major proteins to function and compare normal, inflammatory and representative abnormal electrophoretic patterns.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "9040c20facfa82f74f68d6b3c268bc779a4bf6c04896afa21d6e651b7c231c25",
+   "descriptionSha256": "d9b5b4c51054628739fa9bd329ba5a3e63928b315c65eb679dd4dca7f63c24e8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:bf715c6a2565ed50:procedural-skill:c1910cd7@1",
+   "conceptKey": "nmc-concept:bf715c6a2565ed50",
+   "existingConceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+   "referenceId": "nmc-2024-ref:59fb5dffbcf9ad9327c22fd7398ef04ce403ade5e4827ac3b93c830ad394d415",
+   "code": "BC14.11",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure total protein and albumin, derive globulin and calculate the albumin-to-globulin ratio.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "eba8475815c149cf2974affe08c07efadb31b9773a4411ac65e81106c32fd67e",
+   "descriptionSha256": "565db0fe44b779190818965317286e474983e31b246b46343a98a4a05a30c575",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1aa2e9246d0c237e:mechanism:c6ded06f@1",
+   "conceptKey": "nmc-concept:1aa2e9246d0c237e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:945c8c07d95d4074ef460548d99c18e7eee0a3567e5e4cb6c91d396c1c634145",
+   "code": "BC 5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map antibody domains to function, compare classes and disorders, and contrast humoral and cellular immunity.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 164,
+   "sourceBodySha256": "e74377023d6f665b9b60e31245e6e4598e5612d3c683acb8b1ee3dee882ccf67",
+   "descriptionSha256": "275c6db7858ef1b219224e96040361c84eaaaaf20d1361ef91b8ace02d0bbaf8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e760fb6251553585:mechanism:b8a87f81@1",
+   "conceptKey": "nmc-concept:e760fb6251553585",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b0a12bca4a6c5d301c14def259e7466c1cdd7a985c668af17db3bb0fc5e9c138",
+   "code": "BC 5.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace production, transport and detoxification of ammonia and explain the consequences of accumulation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "84de6464ce951ccc68b62213794dd317789ed47e8d2391e8be4d9af167334d40",
+   "descriptionSha256": "d4884d897690c7e3b8bd7ac374f97d24f912b0ed271408dd18718979cbc197e9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fea49ffde59009ab:procedural-skill:b3d8bb53@1",
+   "conceptKey": "nmc-concept:fea49ffde59009ab",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+   "code": "BC 5.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Map the specialised products formed from glycine, phenylalanine, tyrosine, tryptophan, methionine and arginine to their functions.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "a5f2b925be58f9759488e26ac7218c3386b2b86f46cd35f8289ff2d1c61aa631",
+   "descriptionSha256": "63ead9347fc76e73e86f600a96f9314ba4b465f41ce26096bc966fa8a8239c0a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:bd9fb3c187b07a44:procedural-skill:2607f5d2@1",
+   "conceptKey": "nmc-concept:bd9fb3c187b07a44",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c2a7a02318d9f47f55bc26f958790e6e782ef1a977c0010400dfb1e156885e6b",
+   "code": "BC 5.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Relate representative inborn errors of amino acid metabolism to the enzyme defect, accumulating metabolites and clinical features.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "a5f2b925be58f9759488e26ac7218c3386b2b86f46cd35f8289ff2d1c61aa631",
+   "descriptionSha256": "63ead9347fc76e73e86f600a96f9314ba4b465f41ce26096bc966fa8a8239c0a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:bd9fb3c187b07a44:mechanism:a328f055@1",
+   "conceptKey": "nmc-concept:bd9fb3c187b07a44",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+   "code": "BC14.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the rationale and limits of urine screening for inborn errors of metabolism.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+   "descriptionSha256": "e2ca20aca03e10379c4b3b3b589b1ee107c1011d33642fa5c3cc4ec040a9e6ad",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:64608e017d4bde23:mechanism:b0e20f49@1",
+   "conceptKey": "nmc-concept:64608e017d4bde23",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "code": "BC5.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace haem synthesis and degradation to bilirubin and explain their regulation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "descriptionSha256": "47de595e4b21e8f910b638f47f0288fdedfa4466017a0a7f000ee2f8e1eac9d1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d2f4b7c6a30cb914:mechanism:59180216@1",
+   "conceptKey": "nmc-concept:d2f4b7c6a30cb914",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "code": "BC5.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate representative porphyrias to the defective enzyme, accumulating precursors and clinical presentation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "descriptionSha256": "47de595e4b21e8f910b638f47f0288fdedfa4466017a0a7f000ee2f8e1eac9d1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7150fa73dfc2bb9f:mechanism:e93de413@1",
+   "conceptKey": "nmc-concept:7150fa73dfc2bb9f",
+   "existingConceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "referenceId": "nmc-2024-ref:fd78a19e4de0daf52a03ed66cc11df16cd85044b3d7a98dc1661536f40f013ac",
+   "code": "BC5.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish the biochemical mechanisms of pre-hepatic, hepatic and post-hepatic jaundice and their laboratory patterns.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "09e8cbd3a75e74f9224b306602d0635ccca7193e04968c3a5b8cd33d21b44686",
+   "descriptionSha256": "47de595e4b21e8f910b638f47f0288fdedfa4466017a0a7f000ee2f8e1eac9d1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a43f6bc59303f0e0:mechanism:5cd0c4e7@1",
+   "conceptKey": "nmc-concept:a43f6bc59303f0e0",
+   "existingConceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+   "code": "BC5.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish physiological forms of haemoglobin and its chemical derivatives by structure and function.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+   "descriptionSha256": "75f57a75806e70622b28aceb582023887a9474a10248dfef197d33b688377e5b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c74c0997d83b2470:mechanism:2c955803@1",
+   "conceptKey": "nmc-concept:c74c0997d83b2470",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:750d8aa5c4427211de9826446756794218f6fa9e488a516ee5f8f9192122c9c7",
+   "code": "BC5.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate representative inherited haemoglobin variants such as sickle haemoglobin and thalassaemias to their structural defect and functional consequences.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "cf6110ee42e94aa169baafa4e793c99f0c6c1cbb0348dce9e3e84f25aa599db0",
+   "descriptionSha256": "75f57a75806e70622b28aceb582023887a9474a10248dfef197d33b688377e5b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f20401fbda0af9ff:mechanism:9bdd2057@1",
+   "conceptKey": "nmc-concept:f20401fbda0af9ff",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5c5113bcd4719bd2fc5bc41bb69d700c4ca9a4b2c57a0af8444f6adc68a6eacf",
+   "code": "BC6.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Group the major matrix components and explain their mechanical and signalling functions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "28b60e8d0ded4eb88d454ff87bcacb38ae7da99e61401e236d938df9c8fcd76b",
+   "descriptionSha256": "23c1ab2d2bf5091479f1324f32a3831f1f70a64c5410a2aec72a87e429e6e771",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3d7f2f013e02f9d8:mechanism:9d1808bd@1",
+   "conceptKey": "nmc-concept:3d7f2f013e02f9d8",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:70653470b78346105b1d80c10fc5b4dbf176087eafe328426ffc208c1acbf378",
+   "code": "BC6.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate defects in representative matrix proteins or their turnover to disease mechanisms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "b3be91e69b787ea3ab7a707785acb21ade2b9f5b563454aae50c1ac3d192414e",
+   "descriptionSha256": "854ab45e8c4b66687c2e9ffd1d381c5e222abf7024434b71774a47d4205d58ff",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:09a2f3fc6d6a3ad1:mechanism:320b89d4@1",
+   "conceptKey": "nmc-concept:09a2f3fc6d6a3ad1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:550661cbae373095564054c184ca3402f85734dc6284d8ea7a1221764bdad3fe",
+   "code": "BC6.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace representative targeting and sorting signals and explain how disruption changes protein localization or function.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "c91504608edaa20512964bebee5a8994afb4b95a056ce6e4a876be0646e449e5",
+   "descriptionSha256": "4b586ba4fe9ab4f08a42c4e717c584723aec73030eccb6cb3b7dd5798d8ea641",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:51b5e44077cd0d7c:mechanism:ed9804e2@1",
+   "conceptKey": "nmc-concept:51b5e44077cd0d7c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f26dbc1d1ea620e7fd53f230323786ed0a45924e6e8df462a81ec8d94acdf54b",
+   "code": "BC7.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare substrate-level and oxidative phosphorylation and predict effects of disrupted electron transport or coupling.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 165,
+   "sourceBodySha256": "43c0d2230ae255e491b0feb18477ea92735b2cbaf16da13e37d1253ab23620c1",
+   "descriptionSha256": "7916708ec0fcd2d6347bfd43e600f85df215b83ba923975b18205918949e1503",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:35ce136ec2e104aa:mechanism:4db665a6@1",
+   "conceptKey": "nmc-concept:35ce136ec2e104aa",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3ce0a5febace69342f48276e975f1cdfd09503a48a80db207578582dda9192ce",
+   "code": "BC8.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Link each major vitamin to its biochemical role and predict representative deficiency findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "13969f767dc55675adcace7e8ecac6bd87aafa9f08096cf5a8478114ed310283",
+   "descriptionSha256": "1a81b411c2ba2b6a81c6b9f5344f5c4a0948833b40f205100cb69d3dd8dca9c2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f4e9f9af1e1dd9f3:mechanism:0c4fa041@1",
+   "conceptKey": "nmc-concept:f4e9f9af1e1dd9f3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+   "code": "BC8.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare the roles of macronutrients and micronutrients in metabolism and health.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "eeac77f3c9ccea3f675b73b3c317ad5cf2c5ed34ec344de1ba4495ebf55530b6",
+   "descriptionSha256": "7abfaca6e24af085ebec4f586d9da6758ae4cc0f5394c6bd032ec95be0ca77e4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b6de35af577f3a95:mechanism:13268479@1",
+   "conceptKey": "nmc-concept:b6de35af577f3a95",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1cf3058b6a6f978fae35ec8629f7143dcabb7d76177ef1fb371491104aa530f0",
+   "code": "BC8.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how dietary fibre affects digestive and metabolic physiology.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "eeac77f3c9ccea3f675b73b3c317ad5cf2c5ed34ec344de1ba4495ebf55530b6",
+   "descriptionSha256": "7abfaca6e24af085ebec4f586d9da6758ae4cc0f5394c6bd032ec95be0ca77e4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6fe6d63cb9dbb508:mechanism:6a993dc7@1",
+   "conceptKey": "nmc-concept:6fe6d63cb9dbb508",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f80bd0d73ba5d7eba29f37fb5152b5e540fdbe4ff79513043565d14cc2778be5",
+   "code": "BC8.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare causes, biochemical consequences and representative clinical patterns of protein–energy malnutrition.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "2b5ba0a123834ac30c4179f796893b2c23fea3af993f79c70d57492d7c66169d",
+   "descriptionSha256": "d13ca501cf4b6a711287d545ca96fa083224bd15a9655b1280e6a8ca4d0e3bcf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d4073d507275f46a:mechanism:bd7d3053@1",
+   "conceptKey": "nmc-concept:d4073d507275f46a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:afc756da594005b52fd2ba9624ca0f937473be48cce24f568b926cf836b0d78d",
+   "code": "BC8.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use simulated cases to communicate dietary priorities in childhood, adulthood, diabetes, coronary disease and pregnancy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "1212d76c40adcf116267b317a7344de4f21e14c053963c6d39a2ed5e2cd36912",
+   "descriptionSha256": "6acb0dfb8c33efc75aea3185211c08806295000fc335d88c4b3063a3da4dd77a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:66cac2ca@1",
+   "conceptKey": "nmc-concept:3d388b2da2ef0b9d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0cc5c936f151299f2cdc3219c0baa90eae8bbd636b9af1521b2d718df4d40899",
+   "code": "BC8.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare common foods including fruit and vegetables by nutrient composition and explain their dietary contributions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "37c5262d12491c8b12f56d5fb812fc145f21d3ce75dc71194b5a9fe3fd884178",
+   "descriptionSha256": "537b17c46b41810d9928c0f7131c73487541ecf2952fbacbae0566604ee45dc2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3d388b2da2ef0b9d:mechanism:92bf68f4@1",
+   "conceptKey": "nmc-concept:3d388b2da2ef0b9d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+   "code": "BC14.23",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Calculate the energy content of food from its macronutrient composition.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "4fcd0dd2f1698118e2455bc4ef168fd0ca718d04c08b87df7c5cb51fa18acdee",
+   "descriptionSha256": "ac3392aab1f28bcf1e521684261dfb093a338a22dc1fa556bb6b56ce3c7423ce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a837d4d532a26b38:mechanism:27a993db@1",
+   "conceptKey": "nmc-concept:a837d4d532a26b38",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:313fbbfd84b4edd635d169260a513ae1f97dab81808da71dfe6b18da03b4d77b",
+   "code": "BC14.23",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare the dietary implications of foods with high and low glycaemic index.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "4fcd0dd2f1698118e2455bc4ef168fd0ca718d04c08b87df7c5cb51fa18acdee",
+   "descriptionSha256": "ac3392aab1f28bcf1e521684261dfb093a338a22dc1fa556bb6b56ce3c7423ce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9fb07153a2022c13:mechanism:632e94b9@1",
+   "conceptKey": "nmc-concept:9fb07153a2022c13",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "code": "BC9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain dietary sources, absorption, transport, storage and functions of iron and relate disordered iron balance to iron deficiency and overload.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "descriptionSha256": "bfc2eb76bc055e26b44e1171d7589b84d8956f2b8c4f2f64409203346ded2e73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:61f7d545@1",
+   "conceptKey": "nmc-concept:8018aa4d53bad50c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "code": "BC9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain dietary sources, absorption, transport, regulation and functions of calcium and representative disorders of calcium balance.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "descriptionSha256": "bfc2eb76bc055e26b44e1171d7589b84d8956f2b8c4f2f64409203346ded2e73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8018aa4d53bad50c:mechanism:ddcb2509@1",
+   "conceptKey": "nmc-concept:8018aa4d53bad50c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e4f0e8982c39a0d2cd6407b53ff215717e954ed7994cb0321a761172ef7b902f",
+   "code": "BC14.14",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how serum calcium and phosphate are measured and interpret representative results.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "e7ad01d355c39c8be8c48981520c1c68188eda545d45e16e4dcb65d89475d804",
+   "descriptionSha256": "3365d32cf632f5671f3936eb36a61594965927bde30395f772ac60722a99e0f8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e660e86ec85736d2:mechanism:2e223d2a@1",
+   "conceptKey": "nmc-concept:e660e86ec85736d2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bdaadf604f9668cbedcd76c4099c4a46dce5d94481c05f33077845d6db08b628",
+   "code": "BC9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain absorption, transport and functions of copper and the biochemical basis of Wilson disease and Menkes disease.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "1f430675fb528ab892b4d811e84883eeb3b1890fa3aba12c0811fbdecf70ac57",
+   "descriptionSha256": "bfc2eb76bc055e26b44e1171d7589b84d8956f2b8c4f2f64409203346ded2e73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2febb7e8405e9045:mechanism:1dd21855@1",
+   "conceptKey": "nmc-concept:2febb7e8405e9045",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cd654dbf81f52a78e199a08fb942e34a3f581f6e49eceaa9bd5a9d544789b220",
+   "code": "BC9.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate magnesium, zinc, phosphate and representative trace elements to biochemical functions and consequences of imbalance.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "19e39fd06aab913b28076f8a9477dfeee8b49b4f62168481751afac2a77d1b11",
+   "descriptionSha256": "5f09b0c63c91932e006ce852b315f139f0f8e326c2769c0ce8dc136472c1929b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ab7604b074217fd4:mechanism:0515e0e4@1",
+   "conceptKey": "nmc-concept:ab7604b074217fd4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+   "code": "BC9.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use sample data to explain normal regulation of body water, sodium and potassium and distinguish representative disturbances.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "b55c48ff3ecc010e4cbc234ddc8c1ad5faa8c5448772ef892df40cf8746b4588",
+   "descriptionSha256": "21045837c734df7f78ebda80e80c2e43bcca29cda2adc4a295b52e45453e99ca",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:564f8053@1",
+   "conceptKey": "nmc-concept:8a6a3574ea0cfd14",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1221ac2847b819c1a8e862f8faa0f4426075cf1aa8ff95dcb2cdb3a5fc3e7d2f",
+   "code": "BC9.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use sample data to distinguish metabolic and respiratory acid-base disorders and their compensation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 166,
+   "sourceBodySha256": "b55c48ff3ecc010e4cbc234ddc8c1ad5faa8c5448772ef892df40cf8746b4588",
+   "descriptionSha256": "21045837c734df7f78ebda80e80c2e43bcca29cda2adc4a295b52e45453e99ca",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8a6a3574ea0cfd14:mechanism:1a342a86@1",
+   "conceptKey": "nmc-concept:8a6a3574ea0cfd14",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+   "code": "BC14.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret acid-base findings in sample cases.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+   "descriptionSha256": "18426559f50eba21056e20764e600f8e773d666afdfb2f3a62844ce7974566ac",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3e42a2361ebcdb43:interpretation:b3ec965c@1",
+   "conceptKey": "nmc-concept:3e42a2361ebcdb43",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f1f0acb735b7a774fc162b57f330f2f3c3ba081eac1a33866fd0b3406c8c93f7",
+   "code": "BC14.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how a pH meter and a blood gas analyser measure pH and blood gases.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "96d2fad17cba57572196388e605b12876841daa612f6ccdf195a220bfa6383c1",
+   "descriptionSha256": "18426559f50eba21056e20764e600f8e773d666afdfb2f3a62844ce7974566ac",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5990acf0b746d51b:mechanism:df3e3dde@1",
+   "conceptKey": "nmc-concept:5990acf0b746d51b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:90c2016b487ac8dad689b05f1acf4574512fa0be64522cf12a35d1c7ba3298c5",
+   "code": "BC10.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare structures and functions of nucleotides, DNA and RNA and relate selected abnormalities to disease.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "bd4e89bac75db81d10770b91bb2f879fdfff2998c45fa685f9d6b12796756bdd",
+   "descriptionSha256": "0e1e665c8e53cc1fe48923a70d67fe38ded4e8b0ea1a0360f5964a1131e6121a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:212a7695@1",
+   "conceptKey": "nmc-concept:97c6ea19d746bf35",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cf57954c7ed30702664d81b29e435d21d1d0ab487f2f0f75eb1a5f705b4f0227",
+   "code": "BC10.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Contrast de novo production and salvage and identify key substrates, enzymes and regulatory points.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "fbf4f100a01603304b4a5702b7616df595404355beeb709cab4a84f4531c7f3e",
+   "descriptionSha256": "3da8068feac9c43b01c951ee70cf74e4dd0c891f577985955bb0d4e4b8557ef3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:97c6ea19d746bf35:mechanism:ccd033cd@1",
+   "conceptKey": "nmc-concept:97c6ea19d746bf35",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+   "code": "BC10.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace purine degradation to uric acid.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "87c32d6d87d0b3949d8531e1a1f6ad39bbcf2fd2eb360632c4c7a0ffad9d6835",
+   "descriptionSha256": "a7600bf6e10312cfab6b9e69291649f9de5e61ffe74f8863570a5a20129bfd51",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b461794e2676e0a1:mechanism:78ccbf3b@1",
+   "conceptKey": "nmc-concept:b461794e2676e0a1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8626b71fb3344d9c9e8db26339b0bd0d3f8d6a438c2a27dfde18f44b2973b01a",
+   "code": "BC10.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how purine overproduction or reduced excretion causes hyperuricaemia and relate it to gout and Lesch-Nyhan syndrome.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "87c32d6d87d0b3949d8531e1a1f6ad39bbcf2fd2eb360632c4c7a0ffad9d6835",
+   "descriptionSha256": "a7600bf6e10312cfab6b9e69291649f9de5e61ffe74f8863570a5a20129bfd51",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0bc7bcdbc7f89fe9:mechanism:afc1f414@1",
+   "conceptKey": "nmc-concept:0bc7bcdbc7f89fe9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "code": "BC10.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram the major steps of DNA replication.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "descriptionSha256": "eaf23574d38c155dcc8983d0da30a8305d6116c2eaa8acd8f7e4fa052cd4e8b8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a8c9f778b25ad885:mechanism:5151dd1d@1",
+   "conceptKey": "nmc-concept:a8c9f778b25ad885",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "code": "BC10.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram the major steps of transcription and RNA processing.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "descriptionSha256": "eaf23574d38c155dcc8983d0da30a8305d6116c2eaa8acd8f7e4fa052cd4e8b8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c361415543d4ab9e:mechanism:133f7eef@1",
+   "conceptKey": "nmc-concept:c361415543d4ab9e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c4da9cd69f5fc66de1c5ea1b71c45658d40ae5177aff533d59cd079d3c352514",
+   "code": "BC10.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram the major steps of translation and protein synthesis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "d3342f06261b67c6bebd2a56c1e0cafd6cdb19366f41a25f2918d4ac58f5c8ff",
+   "descriptionSha256": "eaf23574d38c155dcc8983d0da30a8305d6116c2eaa8acd8f7e4fa052cd4e8b8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:800f50fe754de81a:mechanism:5fb0276e@1",
+   "conceptKey": "nmc-concept:800f50fe754de81a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+   "code": "BC 10.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare DNA repair pathways and link repair defects to representative disorders.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "a38d58efb79aaf90ceb46c6c65d585ffade3f089704ce9bdac7eaed7406870ef",
+   "descriptionSha256": "0c81a5e6b057b11e4e240fdacb61f4665f666cf4fa6f9ca51a3992a507a2531e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4726a212d0f122cb:mechanism:7c7e44f7@1",
+   "conceptKey": "nmc-concept:4726a212d0f122cb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d5c4a19a4d0af6bb8cd8a5a340ab7872f930f66c2792972fc3768e62e4705350",
+   "code": "BC 10.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare classes of mutation and predict their effects on gene products.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "a38d58efb79aaf90ceb46c6c65d585ffade3f089704ce9bdac7eaed7406870ef",
+   "descriptionSha256": "0c81a5e6b057b11e4e240fdacb61f4665f666cf4fa6f9ca51a3992a507a2531e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6092de3669b3991c:mechanism:bad55d7f@1",
+   "conceptKey": "nmc-concept:6092de3669b3991c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f9127157fb7564074adfb32f5389c7d8a39b315f2d51e54dcfea5f8c6bb8aad1",
+   "code": "BC10.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how regulatory elements, transcription factors and post-transcriptional processes alter expression.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "892c67a33744517e296a293c814adb804ac6d2bb7bf088316ab7b602a75ad4e7",
+   "descriptionSha256": "92e3914e63c97a91490b057609a0ef74bf81f13562d4ea54a459473eed373cf0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4d0a12064206548a:mechanism:60e597ae@1",
+   "conceptKey": "nmc-concept:4d0a12064206548a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "code": "BC10.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain recombinant DNA technology, its applications and limitations.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "descriptionSha256": "717940608ec9946f6142f984a49e58798856053e65623d74c578707b6141d61b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:301ee6f8827561ee:mechanism:101a0b3d@1",
+   "conceptKey": "nmc-concept:301ee6f8827561ee",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "code": "BC10.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the principle, applications and limitations of PCR.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "descriptionSha256": "717940608ec9946f6142f984a49e58798856053e65623d74c578707b6141d61b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ecef4006e302228e:mechanism:efd303ed@1",
+   "conceptKey": "nmc-concept:ecef4006e302228e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "code": "BC10.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the principle, applications and limitations of DNA microarrays.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "descriptionSha256": "717940608ec9946f6142f984a49e58798856053e65623d74c578707b6141d61b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:073e250e3646778f:mechanism:0540fe43@1",
+   "conceptKey": "nmc-concept:073e250e3646778f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "code": "BC10.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the principle, applications and limitations of FISH.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "descriptionSha256": "717940608ec9946f6142f984a49e58798856053e65623d74c578707b6141d61b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:275631a18f32a1d3:mechanism:477d080a@1",
+   "conceptKey": "nmc-concept:275631a18f32a1d3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b80a3207f3669c9207c9f8e4dcabac5d0dc0a86d0dbaf002f7938ec10811f52",
+   "code": "BC10.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the principle, applications and limitations of CRISPR-based gene editing.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "61b1a105a06c8b7a6e87863e8f37c9dbb85b8d631284a912c0bd28b20a7aa557",
+   "descriptionSha256": "717940608ec9946f6142f984a49e58798856053e65623d74c578707b6141d61b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:154162e1@1",
+   "conceptKey": "nmc-concept:e2349f0be136ab90",
+   "existingConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "code": "BC 11.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain the purpose of liver function tests and interpret representative reports in context.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "descriptionSha256": "04ba12c875620fdea2706b37e7350e45e83652c6b6e432c41773ef42d1ffebdf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e2349f0be136ab90:procedural-skill:b448f3ad@1",
+   "conceptKey": "nmc-concept:e2349f0be136ab90",
+   "existingConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "referenceId": "nmc-2024-ref:fd29f6d565b269af6c215a389192ee699560dd1d927beef2935818b502794521",
+   "code": "BC14.13",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure serum bilirubin using a manual or semi-automated method and document the result.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "262469271ea0c3490afb5525e1f81b692e909ba4317d2b6879f2f55bef8fd6ab",
+   "descriptionSha256": "59b68f36c246fe5a592739239f9b16a7919c1bb943d02cf9271004789503d869",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e2349f0be136ab90:interpretation:c993ecb6@1",
+   "conceptKey": "nmc-concept:e2349f0be136ab90",
+   "existingConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "referenceId": "nmc-2024-ref:b8987384091705aaf1966d391fe9cf4ae367cb725a8865d87c8bd34f9bc9e2ce",
+   "code": "BC14.16",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain AST, ALT and alkaline phosphatase measurement and compare representative result patterns.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "691fc5a3e1179c0e8c3836baf337a7c8ccef11d70f273772a832b0f12712ae8e",
+   "descriptionSha256": "ea701062334fa4bb8ca68080d333018da6e29baab027f0cbfaf310c84c26484b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d6425fe7a4e0887d:procedural-skill:505e8f1c@1",
+   "conceptKey": "nmc-concept:d6425fe7a4e0887d",
+   "existingConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "code": "BC 11.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain the purpose of renal function tests and interpret representative reports in context.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "descriptionSha256": "04ba12c875620fdea2706b37e7350e45e83652c6b6e432c41773ef42d1ffebdf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9354e0675c7a47f4:procedural-skill:6f6e329d@1",
+   "conceptKey": "nmc-concept:9354e0675c7a47f4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "code": "BC 11.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain the purpose of thyroid function tests and interpret representative reports in context.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "descriptionSha256": "04ba12c875620fdea2706b37e7350e45e83652c6b6e432c41773ef42d1ffebdf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:89bbac3e1acff73e:procedural-skill:801ac0f0@1",
+   "conceptKey": "nmc-concept:89bbac3e1acff73e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a4b5e3b5ba0fe55f7bdace1192fbd69a4e586ea4ecd05c3f4b20fdf206b8ba53",
+   "code": "BC 11.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain the purpose of adrenal function tests and interpret representative reports in context.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 167,
+   "sourceBodySha256": "7c18240ba5e4729261e9eff3a8ae1c5e86c51db8fd3211d3b286e1cd6b1d9d7d",
+   "descriptionSha256": "04ba12c875620fdea2706b37e7350e45e83652c6b6e432c41773ef42d1ffebdf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e9e4c672f5ae9d32:interpretation:db8e457b@1",
+   "conceptKey": "nmc-concept:e9e4c672f5ae9d32",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+   "code": "BC11.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Interpret LH, FSH, prolactin, beta-hCG, oestrogen, progesterone, testosterone and AMH in representative contexts.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "15627baabcbfbe4fb5255bd54b990508ff26d4a6382eb4382c82576ab66f3a06",
+   "descriptionSha256": "0c54a0da038c2a1ec41e0f441a579f6c68892d8401037975f203bdb4c71fcbfa",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:43bb7cc9d83cdcda:mechanism:7c417aaf@1",
+   "conceptKey": "nmc-concept:43bb7cc9d83cdcda",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:87ba9b500b217350ea4cb30eb56a4ebb4579d6b1c4e30b472d82163198924e76",
+   "code": "BC11.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain biochemical prenatal screening and distinguish screening from diagnostic testing.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "15627baabcbfbe4fb5255bd54b990508ff26d4a6382eb4382c82576ab66f3a06",
+   "descriptionSha256": "0c54a0da038c2a1ec41e0f441a579f6c68892d8401037975f203bdb4c71fcbfa",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ccc90822e3b7f778:mechanism:b37a6ba1@1",
+   "conceptKey": "nmc-concept:ccc90822e3b7f778",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:25ba61aefe652403885bb2a0f21a26a780075a871bde50f71bcded3276255786",
+   "code": "BC12.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace representative xenobiotics through biotransformation and explain how detoxification or bioactivation affects health.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "592b08263409417bcc4bae6fc3b62e1aa8dff589a284100d98e54a18846add6d",
+   "descriptionSha256": "35caddf658854876405ca016973865e0e5fc278252a3fa90c48249b7b46bb538",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:eff1c8e59663569a:mechanism:0be25bca@1",
+   "conceptKey": "nmc-concept:eff1c8e59663569a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:132e0d03ebcee1f6f87eb5880c60bbc4a2f8a7d4419244255b9ea47509f54ada",
+   "code": "BC12.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map enzymatic and non-enzymatic defences to the reactive species they help control.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "5d3b2a46aecf8e88c1fd6e0caeca60bedc3fabcab2a13119aa79f69574cddaf8",
+   "descriptionSha256": "d072b38e5e8020a0fd9c4bda401cab99c9334241e060cac0dcac8e4127be253e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:97aedc2fc8d8a54f:mechanism:9df8a7d6@1",
+   "conceptKey": "nmc-concept:97aedc2fc8d8a54f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:26e83a7801f074caa9b4b4534753b60e15f2ad2476e5ed033a3f6d3e3d6bdb78",
+   "code": "BC12.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate oxidative injury to representative mechanisms in cancer, diabetes complications and atherosclerosis.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "7060afd7c59f25d2899695599e2fb3a9878508ed71da58ae774b16f40bf8242d",
+   "descriptionSha256": "877608453d4d01289471021e6f62e55885cb37ab9ea8da1152ac95a3a0675777",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c0326fbd7b67d4ab:mechanism:4cf6d329@1",
+   "conceptKey": "nmc-concept:c0326fbd7b67d4ab",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ba7a67c5bedb987b1db07075015e766ea46417f48226c01ee585f33f7af924e2",
+   "code": "BC 13.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish oncogene activation from loss of tumour suppression and explain how p53 and apoptosis influence cell survival.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "cba88cb115c861f1270812b58711de7d9ab371290ddd1de71a5c409daefcd75b",
+   "descriptionSha256": "1a8b1da7ec52c5c253d8051a28471ea9db85543e6af656c6f8185b1c7ccdf863",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9862173f55b25f82:interpretation:367aadc3@1",
+   "conceptKey": "nmc-concept:9862173f55b25f82",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8efb9d29caabca1a8127823fff8af7e7e4245f75335408a201e06d57623794c9",
+   "code": "BC 13.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative biochemical markers by clinical purpose and explain the biochemical targets of selected therapies.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "a791cef0380f7ff516bf4f1c9d81c1623c859bcd4218025923dc30eb75619292",
+   "descriptionSha256": "2ee27a6083de66e1112e2a329e0527d3f284f46addb862a5ad85120c5c3609a1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fe9b8948fc117a36:mechanism:4e7aa915@1",
+   "conceptKey": "nmc-concept:fe9b8948fc117a36",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d23f1482f60f7b5aa280a8bdc07e33fd5c86a1a5529064df05aff13fdf5a36b2",
+   "code": "BC13.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate HIV disease to representative metabolic or laboratory changes and distinguish effects of infection and treatment.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "44510d3e7a8d84d1d9ebcea5ef1d76c3b032c03b0117521cbe341951e51bd8b5",
+   "descriptionSha256": "2e3fcd6b83063caf50779e956a208ea2b5d75a9bc97c251f84980396860abe95",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:859d9650d8041e06:mechanism:a6cc6473@1",
+   "conceptKey": "nmc-concept:859d9650d8041e06",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:13737df18c90dabe752a033cb7aa7d363b31a878fea9396b41dc09a37cfcf5d3",
+   "code": "BC13.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace ethanol metabolism and relate altered redox state and chronic exposure to biochemical consequences.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "c540ae040f9f66604fcc0eb032bee1680de5397e7e9dcab0076021835e9cf5c2",
+   "descriptionSha256": "65401521c050665ec425e7d8e389c4e11eb4d5e5400881948dcc3694f7d44b46",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4c52bc25cea945c1:mechanism:6957e1fd@1",
+   "conceptKey": "nmc-concept:4c52bc25cea945c1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:202ebb5473567b90ee6ffb37febfd899f63a4339332487af9779843d7a16166a",
+   "code": "BC13.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative uses in quality control, workflow or result review and explain why local validation and human oversight matter.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 168,
+   "sourceBodySha256": "ea71e8a869926ba2bfc6a1e6e070ca5aae0cf159adea18b5c0d3b0ffecf4a6a5",
+   "descriptionSha256": "fc98d0d1a2ddc584f4d5b2b5068971d3ca7057bc0059b25fa8bbe47edf8890f1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:c896f8c7@1",
+   "conceptKey": "nmc-concept:0a2fc9f4ff748797",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+   "code": "BC14.3",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Using control and sample materials, assess physical properties and normal and abnormal constituents, demonstrate dipstick use and interpret findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "5f2e2948e4167f7a37554df27977f53d3b9946300e84d58f133690da71b31e3d",
+   "descriptionSha256": "071baed26087a984964929c0b199fcabc9e488c6857d37321acc28413e888ae1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0a2fc9f4ff748797:procedural-skill:30384218@1",
+   "conceptKey": "nmc-concept:0a2fc9f4ff748797",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9adaf2dfdb2fe5d8c19d875d15ac2c8e333a550bb31b7b3ac7fd8da1b6da27cf",
+   "code": "BC14.4",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify abnormal constituents in supplied specimens, correlate findings with possible mechanisms and prepare a laboratory report.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "9d835c2377e6158fb350f41eada18e0e1427a406effe3436a39dc33961f80477",
+   "descriptionSha256": "8f334f80548143cb917fa9f2dfc75ee859f61a733024af9895669573f46d5973",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a4a9a99c2cedf83a:mechanism:85fe0f3a@1",
+   "conceptKey": "nmc-concept:a4a9a99c2cedf83a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7f1ae498445e98bc105d8c3125ad0489c83d5e0e5ac68e3dc45dd4b539676618",
+   "code": "BC14.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain absorbance, wavelength selection, calibration and the distinction between colorimetry and spectrophotometry.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "ac3ee876f2a82f20b1b6116f39165254ec9c7667fea58ec5719e725f50109bcf",
+   "descriptionSha256": "875f6856ba5305a1968f4624026c8c3e8ee0d9caabd5adb9656c94f0a02b3a98",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:62acddeec1ea15a6:procedural-skill:68d9e925@1",
+   "conceptKey": "nmc-concept:62acddeec1ea15a6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:33b5d890e2d253026d394ac357526fa97f99fffabc4dc93f826523af1600f7c4",
+   "code": "BC14.8",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure urea, convert to BUN using consistent units and interpret representative results.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "8ad77edff13c8e019501b15d5c2efd18a8db0207e4bf7c74f6a23cf3d0a8b891",
+   "descriptionSha256": "439e5310ea6c5162e293065b4114aff6a75cc5966a38c9f9dddfa7ff39e485fc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b0840fd701bb7508:procedural-skill:056e07ae@1",
+   "conceptKey": "nmc-concept:b0840fd701bb7508",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:14d9d41cc39adb68ede10a3925190f1437aa07ff11d8cc95e7696b268143893b",
+   "code": "BC14.9",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure serum creatinine and calculate timed creatinine clearance from supplied urine and serum data.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "121c75d21f79f8c2161ce30a45682dffe9d864b34132afe1d1595d3e27014f7d",
+   "descriptionSha256": "fdba196e80c8fc2e9402094161bab9a9a076ef4c81254ca0ac23e776efaeadeb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:69ebb0982311d1f3:procedural-skill:ce7647da@1",
+   "conceptKey": "nmc-concept:69ebb0982311d1f3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:504c93d75cec8dfbd1c605722dddcfba1f29147c28d1f8002faf8226ef4707cc",
+   "code": "BC14.10",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "wording": "Measure serum urate and interpret the result in a representative clinical scenario.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "9507c4f6b501291eef4313cdf702bc3e8c33d67c63e3795211c020af70b22eb3",
+   "descriptionSha256": "0c3ec16b84b23cdff22c326263989bf488fee3b2925aa0bdac7ad053643feb2d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e832554d1fa5e64b:mechanism:074a7c88@1",
+   "conceptKey": "nmc-concept:e832554d1fa5e64b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:60ee518aa4b37bface79b087df4ddfc78c2c0f821e13f105da4a6c077c98dff5",
+   "code": "BC14.17",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative body fluids and describe normal CSF composition.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "471446bda0a5a03447d5a6349fcfaebf4dfe49df9cbf2c639c0c8efe99abbdf2",
+   "descriptionSha256": "5a985f583ac33a52a5867ae210474eed424511e6f210f2cc688a047d41e3cfe0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:46b5234a@1",
+   "conceptKey": "nmc-concept:419bdfbdff3c2f7c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:03c527d4740a7e807bdec40a34d23dc7e991075afc6cf9430667c91833a29fa3",
+   "code": "BC14.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how paper chromatography separates analytes.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "ec6912807d5202e31c5ad825f8dc9341c3d6745d88be726c991388bc1277d3cd",
+   "descriptionSha256": "e2ca20aca03e10379c4b3b3b589b1ee107c1011d33642fa5c3cc4ec040a9e6ad",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:419bdfbdff3c2f7c:mechanism:cb1cb122@1",
+   "conceptKey": "nmc-concept:419bdfbdff3c2f7c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:542b1e789f03fecaadfb1cbecc3c21793c244f6eb9eae1b485e3b45cea9f09ed",
+   "code": "BC14.18",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Observe and explain what is measured by the pH meter, paper chromatography of amino acids, protein electrophoresis, TLC, PAGE, ISE electrolyte analysis, ABG analyser, ELISA, immunodiffusion, autoanalyser and DNA isolation from blood or tissue.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 170,
+   "sourceBodySha256": "d17f084646fc55ef7c271200692c3cbc30dcd81b5f0a0fcc40801e4f6889d614",
+   "descriptionSha256": "afe155cbdc863118945030c77a565e44e2318a84e1a5779db38f92b917da9520",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9828b76e004af731:interpretation:aa19eb0c@1",
+   "conceptKey": "nmc-concept:9828b76e004af731",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:13f885773393f63e45be3e7860fb6eb4c2e3ba1f164a8d709a02a50d3c92eacc",
+   "code": "BC14.19",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Select and interpret tests in representative glycaemic, lipid, cardiac, renal, hepatic, pancreatic, thyroid, genetic, nutritional, acid–base, mineral and electrolyte cases. Include gout, nephrotic syndrome, jaundice and vitamin deficiency.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 171,
+   "sourceBodySha256": "533a057de60caa4097d7a0552eb77523007a602c1ca4b67e55ef7556a4a8d096",
+   "descriptionSha256": "2085d97a9c72d0f5382de32e2b34fda860dd813a6a94238e492b9fcc2427050c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9828b76e004af731:interpretation:5bb300b3@1",
+   "conceptKey": "nmc-concept:9828b76e004af731",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:dd155e72232d241179091da804b1df75b67eba19a6603fc1fe6d150cf98bdde9",
+   "code": "BC\n14.24",
+   "task": "interpretation",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Review simulated baseline, diagnostic, prognostic and discharge results and explain how each informs the next decision.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "239565fdd20fba949914bf9b802cfb97f5fff483c1bf45c03d9b602064d26bb4",
+   "descriptionSha256": "8ffee09ef49db64034d48aeba5e2b1bb538ebe1bdb566912ca39a94bb264ebb2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3c3328b6d6f8a981:procedural-skill:0427d74d@1",
+   "conceptKey": "nmc-concept:3c3328b6d6f8a981",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4a0e1ffd5e1234bbd00dc2fa575bf2255c81160dc2d12f0263619965ba7c3d3e",
+   "code": "BC14.20",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify pre-analytical, analytical and post-analytical errors in a simulated workflow, including order of draw and tourniquet technique.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 171,
+   "sourceBodySha256": "43af83f9e60c842d5b111140a57498d7fa486ed68410a59aaa7a68c9690d6a49",
+   "descriptionSha256": "bff4b6a418e8d3d4e5bababb18ed044ee70f7722e00ef07bdc975549e8cd939c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b57394136cda79be:procedural-skill:5dc7f960@1",
+   "conceptKey": "nmc-concept:b57394136cda79be",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4ece98e9d488025556469fb6e3bff42e13da118a2d4046623a98064a7df66c4e",
+   "code": "BC14.21",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify Levey–Jennings chart patterns and explain how controls help detect shifts, trends or random error.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 172,
+   "sourceBodySha256": "1dca0654a57488255d71eff29fe04593eac6d12932073faecb5545ca5fc14213",
+   "descriptionSha256": "53fab5ea20b64dba11c430557f3c219586686fe85d33f8346c9818e95546ab75",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  }
+ ]
+}

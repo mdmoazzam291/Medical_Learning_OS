@@ -30,7 +30,8 @@ test('acceptance input sends only new concepts and the fixed attestation',()=>{
 });
 test('endpoint pins the exact batch checksum and calls only the batch RPC',()=>{
  const sha=fn.match(/BATCH_SHA256 = "([0-9a-f]{64})"/)[1];
- assert.equal(createHash('sha256').update(raw).digest('hex'),sha);
+ const pinned=fn.match(/BATCH_URL = "[^"]+\/[0-9a-f]{40}\/(docs\/evidence\/[^"]+\.json)"/)[1];
+ assert.equal(createHash('sha256').update(readFileSync(new URL('../'+pinned,import.meta.url))).digest('hex'),sha);
  assert.match(fn,/concept_batch_accept_v1/);assert.doesNotMatch(fn,/\.insert\(|\.update\(|\.delete\(|\.upsert\(/);
 });
 test('review markup escapes content and shows the non-publication notice',()=>{
@@ -76,4 +77,22 @@ test('v3 lists only subjects evidenced by linked source rows and keeps expected 
  }
  assert.ok(batch.concepts.find(c=>c.document.label==='Anaemia').expectedSubjects.includes('pathology'));
  assert.ok(batchAcceptInput(batch,'x',{requestId:'r',reviewNotes:'n'}).items.every(i=>!('expectedSubjects' in i)&&!('expectedSubjects' in i.document)));
+});
+
+test('Biochemistry batch v1 covers every recognised Biochemistry row, reuses Physiology identities and lists evidenced subjects only',()=>{
+ const bc=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-biochemistry-concept-batch-v1.json',import.meta.url)));
+ const phys=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-physiology-objective-bindings-v1.json',import.meta.url)));
+ const cat=JSON.parse(readFileSync(new URL('../data/nmc-reference-catalogue.json',import.meta.url)));
+ validateBatch(bc);
+ assert.equal(bc.subjectId,'biochemistry');assert.equal(bc.learnerActivation,false);assert.equal(bc.clinicalApproval,false);
+ const rows=cat.references.filter(r=>r.subjectId==='biochemistry'&&r.identifierState==='standard').map(r=>r.referenceId);
+ assert.deepEqual([...new Set(bc.objectives.map(o=>o.referenceId))].sort(),rows.sort());
+ const physId=new Map(phys.concepts.map(c=>[c.label,c.conceptId]));
+ for(const c of bc.concepts){
+  assert.deepEqual(c.document.classification.subjects,['biochemistry']);
+  if(c.existingConceptId)assert.equal(c.existingConceptId,physId.get(c.document.label));
+ }
+ const names=bc.concepts.filter(c=>!c.existingConceptId).flatMap(c=>[c.document.label,...c.document.aliases].map(x=>x.toLowerCase()));
+ assert.equal(new Set(names).size,names.length);
+ for(const c of phys.concepts)assert.ok(!names.includes(c.label.toLowerCase())||bc.concepts.some(x=>x.existingConceptId===c.conceptId),c.label);
 });
