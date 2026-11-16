@@ -1,3 +1,11 @@
+## NMC Dermatology, Orthopaedics, Psychiatry, Anaesthesia and Radiology combined batch v1 — 2026-11-16T21:05Z
+
+- One acceptance for the five remaining small subjects (178 rows). `docs/evidence/2026-11-17-nmc-small-clinical-concept-batch-v1.json` (spec `ops/nmc/specs/small_clinical_concepts_v1.py`): 128 concepts (105 new; 23 reused), 177 objectives, all 174 recognised rows. OR2. 2.9, PS 2.1*, PS9.2 (amendment) and ASS.4 stay on the source-exception track. Subtype and ambiguous aliases removed (e.g. "ALS"). No clash with 1,551 production names.
+- Endpoint pin: commit `ae482d0`, SHA-256 `c74bc776…bae4`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC ENT and Ophthalmology accepted, bound and registered — 2026-11-16T20:15Z
 
 - Owner accepted the combined batch. Receipt: `nmc-ent-ophthalmology-concepts-v1-20261116`, SHA-256 `767232d0…6c1b`, accepted 2026-11-16T20:02:30Z, 108 items.
