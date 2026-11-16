@@ -39,3 +39,22 @@ test('Biochemistry objective bindings use receipt-verified IDs and reuse Physiol
  const reg=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r.objective.conceptId]));
  for(const o of b.objectives)assert.equal(reg.get(o.objectiveVersionId),o.conceptId);
 });
+
+test('every subject binding file is receipt-verified, matches its batch and agrees with the registry',async()=>{
+ const {readdirSync}=await import('node:fs');
+ const files=readdirSync(new URL('../docs/evidence/',import.meta.url)).filter(f=>/^2026-11-\d\d-nmc-[a-z-]+-objective-bindings-v\d+\.json$/.test(f));
+ assert.ok(files.length>=3);
+ const pack=JSON.parse(read('../data/nmc-learning-foundation-drafts.json'));
+ const reg=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r.objective.conceptId]));
+ for(const f of files){
+  const b=JSON.parse(read('../docs/evidence/'+f));
+  const batchFile=readdirSync(new URL('../docs/evidence/',import.meta.url)).find(x=>{try{return /concept-batch-v\d+\.json$/.test(x)&&JSON.parse(read('../docs/evidence/'+x)).batchId===b.batchId;}catch{return false;}});
+  const raw=read('../docs/evidence/'+batchFile),batch=JSON.parse(raw);
+  assert.equal(b.batchSha256,createHash('sha256').update(raw).digest('hex'),f);
+  const byKey=new Map(b.concepts.map(c=>[c.conceptKey,c.conceptId]));
+  const fresh=batch.concepts.filter(c=>!c.existingConceptId);
+  assert.equal(createHash('sha256').update(fresh.map(c=>c.conceptKey+'|'+byKey.get(c.conceptKey)).join('\n')).digest('hex'),b.acceptance.receiptPairsSha256,f);
+  for(const c of batch.concepts.filter(c=>c.existingConceptId))assert.equal(byKey.get(c.conceptKey),c.existingConceptId,f);
+  for(const o of b.objectives)if(reg.has(o.objectiveVersionId))assert.equal(reg.get(o.objectiveVersionId),o.conceptId,f);
+ }
+});

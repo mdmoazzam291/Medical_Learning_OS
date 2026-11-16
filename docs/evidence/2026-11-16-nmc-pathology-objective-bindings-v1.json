@@ -1,0 +1,3618 @@
+{
+ "schemaVersion": 1,
+ "bindingId": "nmc-pathology-concepts-v1-20261116:objective-bindings@1",
+ "batchId": "nmc-pathology-concepts-v1-20261116",
+ "batchSha256": "7d0d54a679544f225deb1a16d7d1abb1945a85783d487d9b6ba1163c53696e4f",
+ "acceptance": {
+  "table": "content_concept_batch_acceptances",
+  "acceptedAt": "2026-11-16T15:55:23Z",
+  "itemCount": 167,
+  "receiptPairsSha256": "dcfe7cdc8888e37ef9cb9db57366d682a43c916a0c33cc81df17ca8d83825b58"
+ },
+ "status": "bound-draft-not-in-objective-registry",
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "counts": {
+  "concepts": 194,
+  "objectives": 221
+ },
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:89ecd4b84db55913",
+   "conceptId": "C-4b72fc95-9e9b-43b0-941e-e4071d44aa68",
+   "label": "Pathology",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f22f1ca39ceea021",
+   "conceptId": "C-2526989b-350b-4122-949b-1ef52659a5c4",
+   "label": "Cell cycle",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f871e5b6c3c6ea47",
+   "conceptId": "C-5b56177b-a601-4e90-ab6b-488b116956cd",
+   "label": "Stem cells",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a7deea6b63bccd36",
+   "conceptId": "C-5a44595a-91dd-4f89-8c66-f793abd20d8c",
+   "label": "Cell injury",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:5db050cfaf8900c8",
+   "conceptId": "C-67f744dc-262e-468d-8f67-4b62e631ee3b",
+   "label": "Intracellular accumulations",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4da8073313f3ce8a",
+   "conceptId": "C-71864bae-cdf8-4db9-98c3-41d39f118fe4",
+   "label": "Necrosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:54fedbc143b68da8",
+   "conceptId": "C-d481b63b-7010-4f22-bbad-58b10f6b5611",
+   "label": "Apoptosis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:a0832b0344908ef1",
+   "conceptId": "C-d25eb043-2da2-446c-a64f-5939a21bfe02",
+   "label": "Pathological calcification",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:08c57b3cf3f95df5",
+   "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "label": "Gangrene",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:572d21468611ae0d",
+   "conceptId": "C-4883bd77-21ad-47be-a3db-55d5e7d8bcf9",
+   "label": "Cellular adaptations",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a3dec5a3e17e4893",
+   "conceptId": "C-e088e8a3-6399-4769-b46b-772c9f02164d",
+   "label": "Dysplasia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4dcc2a14498a138a",
+   "conceptId": "C-3e8a2486-7993-46f8-8454-a4659156f0d5",
+   "label": "Cellular ageing",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:51fdc0be05557187",
+   "conceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "label": "Inflammation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f09092d0ced4af1d",
+   "conceptId": "C-18bf633d-99ea-4980-a6e1-36cf445ccea8",
+   "label": "Inflammatory mediators",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:1689c04093a67519",
+   "conceptId": "C-3f041abe-d4b3-4932-89e0-7a03811f2c1e",
+   "label": "Chronic inflammation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:1f3aa4eb27657dfd",
+   "conceptId": "C-ab223fa1-6148-4880-99f4-c8f996e837e4",
+   "label": "Granulomatous inflammation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8b9327629872a659",
+   "conceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "label": "Wound healing",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:3c27a49c38cee341",
+   "conceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+   "label": "Oedema",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:5a75190c02b0f0b1",
+   "conceptId": "C-aaed5c72-7d80-4af4-9c98-7af1442f9cc2",
+   "label": "Congestion",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c7cca37c03d96762",
+   "conceptId": "C-82c5b134-be22-485b-ab5b-e8dc76c6f40d",
+   "label": "Haemorrhage",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:eb2fb144811fbe7f",
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "label": "Shock",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:69a6ef8c8adcc768",
+   "conceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "label": "Haemostasis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:d37560bf2e37086e",
+   "conceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "label": "Thrombosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:269fed5f30ea10d9",
+   "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+   "label": "Embolism",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:1888316df70b3e60",
+   "conceptId": "C-8d9c97af-800d-41dd-b03c-981376c7f843",
+   "label": "Ischaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b046719750c54617",
+   "conceptId": "C-797b3b93-443d-4175-acfe-765a45a748b3",
+   "label": "Infarction",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ba2b3e143e63c0cc",
+   "conceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "label": "Neoplasia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a4422c3012ee0ae9",
+   "conceptId": "C-ff7469b8-0b81-40a1-b46b-2b2b07a2c433",
+   "label": "Oncogenes and tumour suppressor genes",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:f36c509581a94197",
+   "conceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "label": "Carcinogenesis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7489dd8e83609d96",
+   "conceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+   "label": "Metastasis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e8f233c2a6de932c",
+   "conceptId": "C-3a785599-aaa4-4e59-bb4c-b4caa3ff14c2",
+   "label": "Paraneoplastic syndromes",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:68f0f389329043b3",
+   "conceptId": "C-46a9f6f3-395c-4ece-a328-0b4bb428f2be",
+   "label": "Laboratory diagnosis of cancer",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:399ad62c3d8615ba",
+   "conceptId": "C-08f0d5b2-db8f-4cfc-b64d-44e5aee18c2a",
+   "label": "Tumour immunity",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:35e805774cf4fc38",
+   "conceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+   "label": "Diagnostic cytology",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a23bbf56ba58e7f4",
+   "conceptId": "C-76801578-01e8-4b7d-a643-c07e25b2689e",
+   "label": "Immunity",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:fa5cd2616ab0a081",
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "label": "Hypersensitivity reactions",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:68ae95c9c01320bc",
+   "conceptId": "C-2e458ba2-3abc-4f69-9dd9-7fd18eadb7cc",
+   "label": "Human leucocyte antigens",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bc981766610fb71f",
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "label": "Transplant rejection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4caff5a10acf48df",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "label": "Autoimmunity",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:818014daa416d4db",
+   "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+   "label": "Systemic lupus erythematosus",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4eba387f41238c5b",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "label": "HIV infection",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:927bab34de2a0031",
+   "conceptId": "C-aa6f9f14-a19a-47d8-b9a5-5ee7b8045425",
+   "label": "Amyloidosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:684cbde9f1672490",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "label": "Malaria",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f9db1d39580eac57",
+   "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
+   "label": "Cysticercosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4b86d8e62da1e8a3",
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "label": "Leprosy",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4ddefbbf91b0db72",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "label": "Host response to infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7ce29417b556a8ba",
+   "conceptId": "C-f9020a47-80f0-47d0-807c-5c19f7b274c9",
+   "label": "COVID-19",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ccb501cf8aef7ca8",
+   "conceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "label": "Chromosomal disorders",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:127d813e0a7cb06b",
+   "conceptId": "C-142a72cf-9a20-4a65-a0fd-cecfc1cb3692",
+   "label": "Childhood tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a68b3155c979cd5b",
+   "conceptId": "C-39653d76-8630-4d6b-8abf-acb9412bf823",
+   "label": "Lysosomal storage disorders",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:aa7de36dd2622557",
+   "conceptId": "C-23645374-d7f3-4dcf-8d9c-f8f83a2719f1",
+   "label": "Environmental pathology",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:214da314916a48a6",
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "label": "Protein-energy malnutrition",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:c8f37e9ea131d694",
+   "conceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "label": "Vitamins",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:43e8c686154358a0",
+   "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "label": "Obesity",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:eac917b6fb9e2a99",
+   "conceptId": "C-20b45dcd-131d-4f98-8e8c-1c90b4737622",
+   "label": "Haematopoiesis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e79aae0b8cc492af",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "label": "Anaemia",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:ce3f7d281dc1c569",
+   "conceptId": "C-41671cd6-5248-4696-8302-f0962a2a216c",
+   "label": "Blood specimen collection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:18feb4216f50ffd6",
+   "conceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "label": "Haemoglobin",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:654521c28f78c889",
+   "conceptId": "C-9bff84ee-8e2f-49ca-959e-3588e2911758",
+   "label": "Red cell count",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:5b6d5a22d0d7c318",
+   "conceptId": "C-58bc42da-5335-48be-bb64-345e6706b7d5",
+   "label": "Leucocyte counts",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:bb6e0ee59320249a",
+   "conceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "label": "Iron metabolism",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:4207eb1dc6bc8479",
+   "conceptId": "C-87971129-9398-4d82-bc97-18782af8b182",
+   "label": "Microcytic anaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:361f68f1c13e56e7",
+   "conceptId": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+   "label": "Vitamin B12 deficiency",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c75c59d1a4a23805",
+   "conceptId": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+   "label": "Megaloblastic anaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:877825ee90d9087c",
+   "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+   "label": "Haemolytic anaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4e16cf09804bb636",
+   "conceptId": "C-4fd0e908-9570-47a2-ae69-42f7da6aeab6",
+   "label": "Sickle cell disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:65903841d5d2cf34",
+   "conceptId": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+   "label": "Thalassaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:d549f5505a798129",
+   "conceptId": "C-61803e8b-3ed1-4577-934d-a662481abb19",
+   "label": "Aplastic anaemia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:79f92060651bcd4c",
+   "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
+   "label": "Bone marrow examination",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:3b2881508a93d831",
+   "conceptId": "C-3818150e-5594-485a-ba0f-52791e04c5b1",
+   "label": "Leucocytosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7d9d4d0413431c74",
+   "conceptId": "C-dbf17f65-6684-4c17-a3fe-3a9000feff0b",
+   "label": "Leucopenia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bfb38b6302dae053",
+   "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+   "label": "Leukaemias",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8b44980f2cd23898",
+   "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "label": "Lymphadenopathy",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7090f7994b7bd004",
+   "conceptId": "C-4e7057d4-521b-42b3-abf8-a0afa84ab75f",
+   "label": "Tuberculous lymphadenitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2bf21ff696598873",
+   "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+   "label": "Hodgkin lymphoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bb0c3dd16ac26540",
+   "conceptId": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+   "label": "Non-Hodgkin lymphoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:697328f4a5b435c3",
+   "conceptId": "C-418b4d78-df71-4fa8-8728-67881a0af21d",
+   "label": "Splenomegaly",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a4806bf600a87124",
+   "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+   "label": "Bleeding disorders",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0e13a1bdb53e14c8",
+   "conceptId": "C-e2a2f2a9-3c19-416c-91fa-006652db36eb",
+   "label": "Disseminated intravascular coagulation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:91c189f5e4fecdee",
+   "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+   "label": "Vitamin K deficiency",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:28cca0411fa68d40",
+   "conceptId": "C-5858970e-8f4c-49c5-b2fb-11ff63101317",
+   "label": "Multiple myeloma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:49513e9b599c05c4",
+   "conceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "label": "Blood groups",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:243f091491a98bb0",
+   "conceptId": "C-82939e95-7c9f-4668-8f79-d55a253cd9cd",
+   "label": "Blood products",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ee6b4d8c88b62966",
+   "conceptId": "C-376e69ee-572c-4b54-bc2b-f73817be1b2b",
+   "label": "Transfusion-transmitted infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:15f66018afba31e9",
+   "conceptId": "C-c5d7778f-318c-435c-92e9-1de9f2db455d",
+   "label": "Transfusion reactions",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:55551f1e02199600",
+   "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+   "label": "Blood transfusion",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:afefa0b3b8bd7480",
+   "conceptId": "C-e9f1f4cd-63fe-4234-8d45-09edd066392e",
+   "label": "Compatibility testing",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:cf9a20176bbf4f00",
+   "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "label": "Urinalysis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:3a12f4d8bfceb40a",
+   "conceptId": "C-b4e7fdb8-a2b4-407a-87d6-85c7ca76eef4",
+   "label": "Body fluid analysis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4570f6fd662e6a64",
+   "conceptId": "C-c003ee8d-5293-4c91-8bb6-4f2785b07f36",
+   "label": "Semen analysis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bb252f1beaed2f0e",
+   "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "label": "Thyroid function tests",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:613f1dd472d131f9",
+   "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "label": "Liver function tests",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:e834c4e90ba3a21b",
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "label": "Renal function tests",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:9bc1a11a41962adf",
+   "conceptId": "C-69af2de3-db6d-4900-9bd5-74021cda66af",
+   "label": "Oral cancer",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:126a77d2ddc18655",
+   "conceptId": "C-8c315904-a03a-4698-98c8-8d45ce28727f",
+   "label": "Oesophageal cancer",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:aca3a0d2e049156d",
+   "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "label": "Peptic ulcer disease",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:485a3a03309b57b6",
+   "conceptId": "C-a2c5f67e-9ece-4727-8cb4-22290d987c79",
+   "label": "Gastric carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:295d769fbc299f96",
+   "conceptId": "C-3c0dc59a-c2de-4ce2-bde2-5550508bb952",
+   "label": "Intestinal tuberculosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2d1a0eeb419305bb",
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "label": "Appendicitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4b0de91b199d8c5a",
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "label": "Inflammatory bowel disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:560d3989e9c8538b",
+   "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+   "label": "Malabsorption syndrome",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:60be51898b834d85",
+   "conceptId": "C-8eb3ea18-003a-4759-a2b8-1ce487911f5c",
+   "label": "Colorectal carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:cbd19b1250b43bed",
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "label": "Jaundice",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:0dcf656f4c40d32d",
+   "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+   "label": "Hepatic failure",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bd7ad3da3cf34013",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "label": "Viral hepatitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a8d304618f3a5150",
+   "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+   "label": "Drug-induced liver injury",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fd32d861ee544494",
+   "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "label": "Alcohol-related liver disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2fcb444f2650759c",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "label": "Cirrhosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:4ef92a392e964cb8",
+   "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "label": "Portal hypertension",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a7342969dbb19cab",
+   "conceptId": "C-49bd0eb3-bf9f-44e7-bd07-b94772312c2d",
+   "label": "Hepatocellular carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:5d4a0de5d3764653",
+   "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "label": "Gallstones",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:bdefe81d914aae89",
+   "conceptId": "C-f8435738-4b3c-4563-b93b-f45a72a85ea3",
+   "label": "Cholecystitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f96aee4124063f20",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "label": "Pneumonia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e7b2e4ae31aaade8",
+   "conceptId": "C-4e4f9863-564d-410a-9753-f1e711549c79",
+   "label": "Lung abscess",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2936e88b05f87376",
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "label": "Chronic obstructive pulmonary disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f1019cc578424962",
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "label": "Asthma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8c377e443098d611",
+   "conceptId": "C-ef34e52c-78a6-4a52-b48e-91fe40779b62",
+   "label": "Bronchiectasis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e71def4f6f7d9e76",
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "label": "Pulmonary tuberculosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fd5c1e419300f1dc",
+   "conceptId": "C-941a4acb-68ed-4949-ade0-95fbce629ff3",
+   "label": "Pneumoconioses",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8459c42385bd3f2d",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "label": "Lung carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e70467ef1276bb0f",
+   "conceptId": "C-dbf40774-f453-465d-a2e3-5e13773fab55",
+   "label": "Mesothelioma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:020a4bd3dd26efca",
+   "conceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "label": "Atherosclerosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8a830a2f76abc74d",
+   "conceptId": "C-0f44af7e-c463-4ede-955b-848e906eeb15",
+   "label": "Aneurysms",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b3048a6745b111b1",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "label": "Heart failure",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:dd488f34e8925b4b",
+   "conceptId": "C-b74384a2-9237-49c2-ac61-3be155aacb1d",
+   "label": "Congenital heart disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:87f1f90a88cd3243",
+   "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "label": "Rheumatic fever",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c5cb52d179653df3",
+   "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "label": "Ischaemic heart disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7840bc5fc6183aa8",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "label": "Infective endocarditis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f803e31088ec4f7e",
+   "conceptId": "C-a3aa9ce0-b811-463a-98cc-9f5cfd298bc0",
+   "label": "Pericardial disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:873d811ff27df0a3",
+   "conceptId": "C-5a037517-9ddf-4743-ab08-21240077fec6",
+   "label": "Cardiomyopathies",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:3d956618cb838256",
+   "conceptId": "C-64fae1af-f399-406b-8e51-162c039d02eb",
+   "label": "Cardiovascular tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9400fa34f90b4892",
+   "conceptId": "C-d37242ef-2027-4d25-887e-86e2d875ab99",
+   "label": "Kidney",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:42cc0e21159d0450",
+   "conceptId": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+   "label": "Nephrotic syndrome",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:07de723425ac5aa3",
+   "conceptId": "C-8e0516ea-1827-4580-b0d2-ba4f3d0d10eb",
+   "label": "Nephritic syndrome",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:d66f184f88abe4a6",
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "label": "Acute kidney injury",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:24f1f419708ea9a7",
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "label": "Chronic kidney disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:846a3e27eea0fd1b",
+   "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+   "label": "Glomerulonephritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:dcd577a1562bc055",
+   "conceptId": "C-b8ec9c01-860e-41a0-afe5-f27e6069ddf3",
+   "label": "IgA nephropathy",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:350ab422d094004c",
+   "conceptId": "C-90371695-8d7d-4d76-8775-3c7b8257ea3f",
+   "label": "Diabetic nephropathy",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9b692624aaeb1ef5",
+   "conceptId": "C-b6bf6dd1-df3e-4d84-8756-89b21c5c96bc",
+   "label": "Lupus nephritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b2d4c47b5ba9b51d",
+   "conceptId": "C-d15e0b17-67ef-4d98-a5f7-cb7cb58e0df7",
+   "label": "Tubulointerstitial nephritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a5308816421a90a1",
+   "conceptId": "C-a81bd3f8-3423-479f-877b-71a2a85b4109",
+   "label": "Acute tubular necrosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:38a19fce255c092c",
+   "conceptId": "C-c1c9f47f-588a-4e63-8b7b-46d504d33dd1",
+   "label": "Pyelonephritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f608e04212bd34a1",
+   "conceptId": "C-6e3bac40-1e49-4238-afa5-2506643698d4",
+   "label": "Reflux nephropathy",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:5274c1305520406c",
+   "conceptId": "C-d5ffca62-6d06-44b2-bcaa-ce69d2824a02",
+   "label": "Renal vascular disorders",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:47463cb832e9d91f",
+   "conceptId": "C-feedee04-3d93-4ab6-85c4-a31c9687313f",
+   "label": "Cystic kidney disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b84259d4b8e06c0e",
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "label": "Urolithiasis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:36513532c081a50c",
+   "conceptId": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+   "label": "Hydronephrosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a54fbd8930a4a359",
+   "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "label": "Renal tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a39ac080231b8e2b",
+   "conceptId": "C-a9f5bd01-7d36-4841-9560-a25f24d88c38",
+   "label": "Thrombotic microangiopathies",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2de629c189cc9fa9",
+   "conceptId": "C-25fbab0b-e72e-4ea9-8797-4cda4a9a8dc9",
+   "label": "Urothelial carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2c40d7fd2d57c009",
+   "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+   "label": "Testicular tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:77c9dcb452884932",
+   "conceptId": "C-771f5c27-8a38-4412-9b4c-d6f2f927a966",
+   "label": "Penile carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:590bc84c88dfbf46",
+   "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "label": "Benign prostatic hyperplasia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:76a904ee930342e1",
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "label": "Prostate cancer",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0e0b8de0fd2101f9",
+   "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+   "label": "Prostatitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9cc26d1ac45b5ee6",
+   "conceptId": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+   "label": "Endometrial carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:1a9c9b5a26bb09a9",
+   "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "label": "Leiomyoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9f36b9d78bc8d0c7",
+   "conceptId": "C-c95c9340-f9c7-48cb-8792-31142b9b9c45",
+   "label": "Leiomyosarcoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:542d48f5d7cb9a81",
+   "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+   "label": "Ovarian tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c4fa8701a34e67d2",
+   "conceptId": "C-57699b57-3d51-4387-804f-8e67fd55d467",
+   "label": "Gestational trophoblastic disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9d8a05a3c10184a7",
+   "conceptId": "C-e1391fe0-5764-43d2-9024-8b38da8ac463",
+   "label": "Cervicitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:dc8ac300e0ea6959",
+   "conceptId": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+   "label": "Endometriosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fa29a05c7cdc7a14",
+   "conceptId": "C-e64a2d68-36ab-47bb-bb3f-23b09c67a423",
+   "label": "Adenomyosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fd50c57ec17c2104",
+   "conceptId": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+   "label": "Endometrial hyperplasia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:013274b40cddea64",
+   "conceptId": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+   "label": "Benign breast disease",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fca2384795105f4f",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "label": "Breast cancer",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8539057789f00ec8",
+   "conceptId": "C-f0d1a5bb-55b7-4018-bbb8-672127c9300d",
+   "label": "Phyllodes tumour",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:73d1a25879700202",
+   "conceptId": "C-1e3b1c83-ed17-45c5-8b2f-c8397f8badd0",
+   "label": "Gynaecomastia",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ebeec1ceb250c5b9",
+   "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "label": "Goitre",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ec537a01f3006b91",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "label": "Thyrotoxicosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f759e49949cdeb6d",
+   "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "label": "Hypothyroidism",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:94e4f2b89b7e66d7",
+   "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "label": "Thyroid neoplasms",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:cfa9c970f42d3be1",
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "label": "Diabetes mellitus",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:715b588e0c9e081d",
+   "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "label": "Hyperparathyroidism",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:eecd7261e435173f",
+   "conceptId": "C-920002b2-ec36-46f5-b8f1-de69afb7e4ff",
+   "label": "Pancreatic carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:5f41a5ce1a5f04ea",
+   "conceptId": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+   "label": "Adrenal insufficiency",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:595d221abb4f7cf0",
+   "conceptId": "C-720774b8-d18d-429a-891e-028c93fff261",
+   "label": "Cushing syndrome",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ee7c514b5426bc0a",
+   "conceptId": "C-e1cb7a8d-57b9-47eb-aa45-6edd74aa1c25",
+   "label": "Adrenal tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:da133f3a1ff0b453",
+   "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "label": "Osteomyelitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7479ce043eeb25c0",
+   "conceptId": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+   "label": "Bone tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a3ea7bfc293422ff",
+   "conceptId": "C-12e519a0-3460-467d-8dae-d09902adffd6",
+   "label": "Soft tissue tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:6f8c69bd0bd24972",
+   "conceptId": "C-47b9d310-9b50-41e1-ab41-be38c372826e",
+   "label": "Paget disease of bone",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f0408c7c54583906",
+   "conceptId": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+   "label": "Rheumatoid arthritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a9d648d2936ff4d7",
+   "conceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "label": "Osteoarthritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:077c0dc781376c12",
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "label": "Gout",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:6b431ff9654d9dd6",
+   "conceptId": "C-68eb5aa1-15c4-4572-8cb4-49d4e09176a8",
+   "label": "Cutaneous squamous cell carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:265821aaeea79dff",
+   "conceptId": "C-9815a56b-753b-4549-9dd6-9e647c7e2a83",
+   "label": "Basal cell carcinoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:116bf7fccca65915",
+   "conceptId": "C-964469fa-f469-4f00-ba7b-38073718a582",
+   "label": "Melanoma",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:99c31d4aff5ee95f",
+   "conceptId": "C-89287843-4842-49b8-8520-13bd18b82de6",
+   "label": "Melanocytic naevi",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:f8703fdcc70d857c",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "label": "Meningitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b7a1ea93fe99e262",
+   "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "label": "Cerebrospinal fluid",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:677f27d742bc97d8",
+   "conceptId": "C-bbb27833-d844-4aeb-bc2a-7a5d636b0a21",
+   "label": "Central nervous system tumours",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e5996a260d85021d",
+   "conceptId": "C-a43faeaf-e054-499a-b8b4-56bb2419d6de",
+   "label": "Retinoblastoma",
+   "identitySource": "batch-acceptance-receipt"
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:89ecd4b84db55913:mechanism:5b1a2e33@1",
+   "conceptId": "C-4b72fc95-9e9b-43b0-941e-e4071d44aa68",
+   "conceptKey": "nmc-concept:89ecd4b84db55913",
+   "referenceId": "nmc-2024-ref:2225e2349df2331d7f306de3bccd7d8142a3b22a008e3e2fd4c966cb3cbdc7b8",
+   "code": "PA1.1",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:89ecd4b84db55913:mechanism:be3465fb@1",
+   "conceptId": "C-4b72fc95-9e9b-43b0-941e-e4071d44aa68",
+   "conceptKey": "nmc-concept:89ecd4b84db55913",
+   "referenceId": "nmc-2024-ref:50999284763e584b87d914b813a4cc7ab2f6a35704b9a57c12b6268674c8e092",
+   "code": "PA1.2",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f22f1ca39ceea021:mechanism:684d73ad@1",
+   "conceptId": "C-2526989b-350b-4122-949b-1ef52659a5c4",
+   "conceptKey": "nmc-concept:f22f1ca39ceea021",
+   "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+   "code": "PA1.3",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f871e5b6c3c6ea47:mechanism:36eaf368@1",
+   "conceptId": "C-5b56177b-a601-4e90-ab6b-488b116956cd",
+   "conceptKey": "nmc-concept:f871e5b6c3c6ea47",
+   "referenceId": "nmc-2024-ref:f573b9e70fbe8f5007036f962aea5c79a661a4f59568150568148b38de80446c",
+   "code": "PA1.3",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a7deea6b63bccd36:mechanism:9ec4f2be@1",
+   "conceptId": "C-5a44595a-91dd-4f89-8c66-f793abd20d8c",
+   "conceptKey": "nmc-concept:a7deea6b63bccd36",
+   "referenceId": "nmc-2024-ref:9bf18c5e9efb532b6901a97eceb9ad49478cf00422a8c882bdbd4f98c2c5fa57",
+   "code": "PA2.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a7deea6b63bccd36:mechanism:54ea945e@1",
+   "conceptId": "C-5a44595a-91dd-4f89-8c66-f793abd20d8c",
+   "conceptKey": "nmc-concept:a7deea6b63bccd36",
+   "referenceId": "nmc-2024-ref:2454b49116cdf5dde46b3842bf3e148cfc77d93ee6f2d1c800025f9b0ec6965b",
+   "code": "PA2.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a7deea6b63bccd36:procedural-skill:4bbf118f@1",
+   "conceptId": "C-5a44595a-91dd-4f89-8c66-f793abd20d8c",
+   "conceptKey": "nmc-concept:a7deea6b63bccd36",
+   "referenceId": "nmc-2024-ref:41e340599f55497be1f41811c320d077a8166595db415bf80fbe52872c9d6e34",
+   "code": "PA2.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5db050cfaf8900c8:mechanism:2ba1102e@1",
+   "conceptId": "C-67f744dc-262e-468d-8f67-4b62e631ee3b",
+   "conceptKey": "nmc-concept:5db050cfaf8900c8",
+   "referenceId": "nmc-2024-ref:ba0c6db7209091f979e5c21c760c4a27833f7de88c5103e888ed4005c642e130",
+   "code": "PA2.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4da8073313f3ce8a:mechanism:f2e45c07@1",
+   "conceptId": "C-71864bae-cdf8-4db9-98c3-41d39f118fe4",
+   "conceptKey": "nmc-concept:4da8073313f3ce8a",
+   "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+   "code": "PA2.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:54fedbc143b68da8:mechanism:ffb9dc92@1",
+   "conceptId": "C-d481b63b-7010-4f22-bbad-58b10f6b5611",
+   "conceptKey": "nmc-concept:54fedbc143b68da8",
+   "referenceId": "nmc-2024-ref:6cb1b2964d2facc4634c84401c77176dedbb1711db3471fc37d8c5d0c307888e",
+   "code": "PA2.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a0832b0344908ef1:mechanism:25937993@1",
+   "conceptId": "C-d25eb043-2da2-446c-a64f-5939a21bfe02",
+   "conceptKey": "nmc-concept:a0832b0344908ef1",
+   "referenceId": "nmc-2024-ref:b36a42b0113bd0e5d591372df3a799bb72edaae87e2d2ece4f981c4190b57f61",
+   "code": "PA2.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:08c57b3cf3f95df5:mechanism:a5b1ef49@1",
+   "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "conceptKey": "nmc-concept:08c57b3cf3f95df5",
+   "referenceId": "nmc-2024-ref:b36a42b0113bd0e5d591372df3a799bb72edaae87e2d2ece4f981c4190b57f61",
+   "code": "PA2.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:572d21468611ae0d:mechanism:5cc9545c@1",
+   "conceptId": "C-4883bd77-21ad-47be-a3db-55d5e7d8bcf9",
+   "conceptKey": "nmc-concept:572d21468611ae0d",
+   "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+   "code": "PA2.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a3dec5a3e17e4893:mechanism:c87f4345@1",
+   "conceptId": "C-e088e8a3-6399-4769-b46b-772c9f02164d",
+   "conceptKey": "nmc-concept:a3dec5a3e17e4893",
+   "referenceId": "nmc-2024-ref:4877062857c5c201483858e7685d5f2d59d05382788bcccdda9abe934245d828",
+   "code": "PA2.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4dcc2a14498a138a:mechanism:308be31f@1",
+   "conceptId": "C-3e8a2486-7993-46f8-8454-a4659156f0d5",
+   "conceptKey": "nmc-concept:4dcc2a14498a138a",
+   "referenceId": "nmc-2024-ref:d35f5bdfb93a93060201cf688e912ed26af01e37e2842cbe5979ee28dc21c767",
+   "code": "PA2.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:51fdc0be05557187:mechanism:05992137@1",
+   "conceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptKey": "nmc-concept:51fdc0be05557187",
+   "referenceId": "nmc-2024-ref:99b748e6384d5217db729d12d9cb33216ec676849f2130cfb1cd4b647ae551f0",
+   "code": "PA3.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:51fdc0be05557187:procedural-skill:5ca0e217@1",
+   "conceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptKey": "nmc-concept:51fdc0be05557187",
+   "referenceId": "nmc-2024-ref:f0961898e9b22e894c04a0e183de899b3ea217db1700d86bc3336b4b66d5e7c2",
+   "code": "PA3.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f09092d0ced4af1d:mechanism:bcda0beb@1",
+   "conceptId": "C-18bf633d-99ea-4980-a6e1-36cf445ccea8",
+   "conceptKey": "nmc-concept:f09092d0ced4af1d",
+   "referenceId": "nmc-2024-ref:6282fdefb2cea9a22a83c241409938c820dc2cebbf58893352fa4d671d81fae0",
+   "code": "PA3.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:1689c04093a67519:mechanism:34686e88@1",
+   "conceptId": "C-3f041abe-d4b3-4932-89e0-7a03811f2c1e",
+   "conceptKey": "nmc-concept:1689c04093a67519",
+   "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+   "code": "PA3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:1f3aa4eb27657dfd:mechanism:76885457@1",
+   "conceptId": "C-ab223fa1-6148-4880-99f4-c8f996e837e4",
+   "conceptKey": "nmc-concept:1f3aa4eb27657dfd",
+   "referenceId": "nmc-2024-ref:573a228659b05e9c10499f66736f5ea7635a59f48c64fa56d0daef9f18326bdd",
+   "code": "PA3.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8b9327629872a659:mechanism:74cf361f@1",
+   "conceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "conceptKey": "nmc-concept:8b9327629872a659",
+   "referenceId": "nmc-2024-ref:cf1c45e8338be22dfbe50ee2ee9824a0b241481983e74e6c8319fe8a90d83346",
+   "code": "PA4.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:3c27a49c38cee341:mechanism:b37ea976@1",
+   "conceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+   "conceptKey": "nmc-concept:3c27a49c38cee341",
+   "referenceId": "nmc-2024-ref:20e1bdcdfe1457fd9c57ec95e8da4d780d77cd18972c458c243247a26a501312",
+   "code": "PA5.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5a75190c02b0f0b1:mechanism:4d19e6a7@1",
+   "conceptId": "C-aaed5c72-7d80-4af4-9c98-7af1442f9cc2",
+   "conceptKey": "nmc-concept:5a75190c02b0f0b1",
+   "referenceId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269",
+   "code": "PA5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c7cca37c03d96762:mechanism:ca47a6f6@1",
+   "conceptId": "C-82c5b134-be22-485b-ab5b-e8dc76c6f40d",
+   "conceptKey": "nmc-concept:c7cca37c03d96762",
+   "referenceId": "nmc-2024-ref:c51700783bd2143c90b01c9c9eb9cf9101b3f14640eb5154c6ac7127021f0269",
+   "code": "PA5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eb2fb144811fbe7f:mechanism:bfbf8e88@1",
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "conceptKey": "nmc-concept:eb2fb144811fbe7f",
+   "referenceId": "nmc-2024-ref:ec1e54288562c3cef6fe15d294c3f1a77e85daf08a8aa3a5c2449854d08c8896",
+   "code": "PA5.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:69a6ef8c8adcc768:mechanism:133fb473@1",
+   "conceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptKey": "nmc-concept:69a6ef8c8adcc768",
+   "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+   "code": "PA5.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d37560bf2e37086e:mechanism:1b60ee1d@1",
+   "conceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "conceptKey": "nmc-concept:d37560bf2e37086e",
+   "referenceId": "nmc-2024-ref:e0a495719b93efb6dd3784f60dba421c9f4db0a4fdb290bebb4308f79040210e",
+   "code": "PA5.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:269fed5f30ea10d9:mechanism:057b8c5b@1",
+   "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+   "conceptKey": "nmc-concept:269fed5f30ea10d9",
+   "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+   "code": "PA5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:1888316df70b3e60:mechanism:5f49d6d9@1",
+   "conceptId": "C-8d9c97af-800d-41dd-b03c-981376c7f843",
+   "conceptKey": "nmc-concept:1888316df70b3e60",
+   "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+   "code": "PA5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b046719750c54617:mechanism:1a383537@1",
+   "conceptId": "C-797b3b93-443d-4175-acfe-765a45a748b3",
+   "conceptKey": "nmc-concept:b046719750c54617",
+   "referenceId": "nmc-2024-ref:da5750cf84b047b9a9e633364744879c12dd47ae078585bfba2b509e7bf69b5b",
+   "code": "PA5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b046719750c54617:procedural-skill:a32b3110@1",
+   "conceptId": "C-797b3b93-443d-4175-acfe-765a45a748b3",
+   "conceptKey": "nmc-concept:b046719750c54617",
+   "referenceId": "nmc-2024-ref:4a00bc0787213ad7f38964a82c5b4f4299df279061e243352fbfe11520707f24",
+   "code": "PA5.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ba2b3e143e63c0cc:mechanism:599a05a0@1",
+   "conceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptKey": "nmc-concept:ba2b3e143e63c0cc",
+   "referenceId": "nmc-2024-ref:5114c10ab19aa2a5d57eb0b11ef38e97b89126d89450db41ec65208ea3ea436b",
+   "code": "PA6.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ba2b3e143e63c0cc:procedural-skill:be9eff44@1",
+   "conceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptKey": "nmc-concept:ba2b3e143e63c0cc",
+   "referenceId": "nmc-2024-ref:735c5b8c572fb3a550dadfff61cff20de047001b281d54f78388fadb7e053cf1",
+   "code": "PA6.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a4422c3012ee0ae9:mechanism:64099b19@1",
+   "conceptId": "C-ff7469b8-0b81-40a1-b46b-2b2b07a2c433",
+   "conceptKey": "nmc-concept:a4422c3012ee0ae9",
+   "referenceId": "nmc-2024-ref:7ef1323578926700dea01d814057dddaa0c0283e548e93ece55181aba578d8ef",
+   "code": "PA6.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f36c509581a94197:mechanism:703df128@1",
+   "conceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "conceptKey": "nmc-concept:f36c509581a94197",
+   "referenceId": "nmc-2024-ref:fef6cc1e740c4c224a180dcedd20a1ae6117227ec48263ad5c9e5439bce36249",
+   "code": "PA6.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7489dd8e83609d96:mechanism:5f675347@1",
+   "conceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+   "conceptKey": "nmc-concept:7489dd8e83609d96",
+   "referenceId": "nmc-2024-ref:c74a502cc8767213806731341aaf133ab941a6c28ba9457e0f4bd22ff2fbbda6",
+   "code": "PA6.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e8f233c2a6de932c:mechanism:e962b958@1",
+   "conceptId": "C-3a785599-aaa4-4e59-bb4c-b4caa3ff14c2",
+   "conceptKey": "nmc-concept:e8f233c2a6de932c",
+   "referenceId": "nmc-2024-ref:c74a502cc8767213806731341aaf133ab941a6c28ba9457e0f4bd22ff2fbbda6",
+   "code": "PA6.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:68f0f389329043b3:mechanism:d1760c07@1",
+   "conceptId": "C-46a9f6f3-395c-4ece-a328-0b4bb428f2be",
+   "conceptKey": "nmc-concept:68f0f389329043b3",
+   "referenceId": "nmc-2024-ref:5adf0836d1224568ed9a5289751f73609c605e565d5c74d6a66ca60702d24bd9",
+   "code": "PA6.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:399ad62c3d8615ba:mechanism:0d6f38b0@1",
+   "conceptId": "C-08f0d5b2-db8f-4cfc-b64d-44e5aee18c2a",
+   "conceptKey": "nmc-concept:399ad62c3d8615ba",
+   "referenceId": "nmc-2024-ref:0a872699c4d1d6fb11638fa4e356bb21614341f2cc6e2fc919445def7528fbea",
+   "code": "PA6.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:35e805774cf4fc38:interpretation:0256b9b8@1",
+   "conceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+   "conceptKey": "nmc-concept:35e805774cf4fc38",
+   "referenceId": "nmc-2024-ref:777ec4e39dc694be2ff1bf7f07212dc0904d3f72e4c2e71c2a56801c3021c548",
+   "code": "PA7.1",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a23bbf56ba58e7f4:mechanism:5948151c@1",
+   "conceptId": "C-76801578-01e8-4b7d-a643-c07e25b2689e",
+   "conceptKey": "nmc-concept:a23bbf56ba58e7f4",
+   "referenceId": "nmc-2024-ref:efe7a9390ff8fad30b4b60507daaee8d548c8eeeb22aa1cf9b6c0f321080831d",
+   "code": "PA8.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fa5cd2616ab0a081:mechanism:efdf2ec0@1",
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptKey": "nmc-concept:fa5cd2616ab0a081",
+   "referenceId": "nmc-2024-ref:0eb5551a6ef54e14bb008233898c0fe082b2db5a88cfdaa4cc24536b71c45e6a",
+   "code": "PA8.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:68ae95c9c01320bc:mechanism:d3dcece1@1",
+   "conceptId": "C-2e458ba2-3abc-4f69-9dd9-7fd18eadb7cc",
+   "conceptKey": "nmc-concept:68ae95c9c01320bc",
+   "referenceId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9",
+   "code": "PA8.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bc981766610fb71f:mechanism:ee8a7368@1",
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "conceptKey": "nmc-concept:bc981766610fb71f",
+   "referenceId": "nmc-2024-ref:0c579d698202b8581fb9bab4eda3d049d5183635ebe0eb8f42b5c0e74d6d76c9",
+   "code": "PA8.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4caff5a10acf48df:mechanism:7b112ed9@1",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptKey": "nmc-concept:4caff5a10acf48df",
+   "referenceId": "nmc-2024-ref:c1a5de2b39e728e0d08807ac66dfff9848a40c4bd2de513325a123a6d46724f0",
+   "code": "PA8.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:818014daa416d4db:mechanism:c716ce3a@1",
+   "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+   "conceptKey": "nmc-concept:818014daa416d4db",
+   "referenceId": "nmc-2024-ref:951695d4e64d7f41dd59ea519b7e8776aef9daaa06b3f342a2f9e9250c045683",
+   "code": "PA8.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4eba387f41238c5b:mechanism:a43d2aed@1",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "conceptKey": "nmc-concept:4eba387f41238c5b",
+   "referenceId": "nmc-2024-ref:0621e03171acd8d3283f1b26bce46574c66fddf10513896d531f2783389d5a41",
+   "code": "PA8.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:927bab34de2a0031:mechanism:2fc2a281@1",
+   "conceptId": "C-aa6f9f14-a19a-47d8-b9a5-5ee7b8045425",
+   "conceptKey": "nmc-concept:927bab34de2a0031",
+   "referenceId": "nmc-2024-ref:76018643ac39b8e54b768e4e7faa57795fcf2396689fd8caf76d77468af2be40",
+   "code": "PA9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:927bab34de2a0031:procedural-skill:86dfdac8@1",
+   "conceptId": "C-aa6f9f14-a19a-47d8-b9a5-5ee7b8045425",
+   "conceptKey": "nmc-concept:927bab34de2a0031",
+   "referenceId": "nmc-2024-ref:1339d157168fbb954bf931ece3e51c05338fd1195cf6aeb8d4577d3b58cacd1b",
+   "code": "PA9.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:684cbde9f1672490:mechanism:d3f4d4fc@1",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "conceptKey": "nmc-concept:684cbde9f1672490",
+   "referenceId": "nmc-2024-ref:60f9f412a14dbedaec106302705b5154d65220e73b432b36de50586907486aaa",
+   "code": "PA10.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f9db1d39580eac57:mechanism:854df05a@1",
+   "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
+   "conceptKey": "nmc-concept:f9db1d39580eac57",
+   "referenceId": "nmc-2024-ref:65b46a3354f75c2b3d4f2b03b3631754ff81f996509eff7946ddde027c3a4eb4",
+   "code": "PA10.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4b86d8e62da1e8a3:mechanism:9ae876a6@1",
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "conceptKey": "nmc-concept:4b86d8e62da1e8a3",
+   "referenceId": "nmc-2024-ref:09ec8deb3f35dc03a903356d4443c40d8728dbd1fe3066ff909438430d4c3003",
+   "code": "PA10.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4ddefbbf91b0db72:mechanism:2bc0e63e@1",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptKey": "nmc-concept:4ddefbbf91b0db72",
+   "referenceId": "nmc-2024-ref:b60429e79213a1fa53a05dbefea998e6f952afd1e27afe9379465a062531d43d",
+   "code": "PA10.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7ce29417b556a8ba:mechanism:34d864c8@1",
+   "conceptId": "C-f9020a47-80f0-47d0-807c-5c19f7b274c9",
+   "conceptKey": "nmc-concept:7ce29417b556a8ba",
+   "referenceId": "nmc-2024-ref:be245daaa8dd97f4563a29877feb57195ab4f85258e6cb46838679c1de3f13f9",
+   "code": "PA10.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ccb501cf8aef7ca8:mechanism:3d8164e6@1",
+   "conceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "conceptKey": "nmc-concept:ccb501cf8aef7ca8",
+   "referenceId": "nmc-2024-ref:219e030ef29a1a797e3a2e06941d3323c2563478e45601b557c4a9d0a2283e8d",
+   "code": "PA11.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:127d813e0a7cb06b:mechanism:cc315a16@1",
+   "conceptId": "C-142a72cf-9a20-4a65-a0fd-cecfc1cb3692",
+   "conceptKey": "nmc-concept:127d813e0a7cb06b",
+   "referenceId": "nmc-2024-ref:cd8e45caed1bf9afc5ac506b20c53698ad3540f5f14673630d4a1be1c1d4d656",
+   "code": "PA11.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a68b3155c979cd5b:mechanism:61031d26@1",
+   "conceptId": "C-39653d76-8630-4d6b-8abf-acb9412bf823",
+   "conceptKey": "nmc-concept:a68b3155c979cd5b",
+   "referenceId": "nmc-2024-ref:ede99371c6978a3e345504eb132ae5d99551fa60acf200247fde7f0cc7a958d8",
+   "code": "PA11.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:aa7de36dd2622557:mechanism:12fee2d5@1",
+   "conceptId": "C-23645374-d7f3-4dcf-8d9c-f8f83a2719f1",
+   "conceptKey": "nmc-concept:aa7de36dd2622557",
+   "referenceId": "nmc-2024-ref:aef81bfd830c4d75b65fd228ca3a7959df5776e65aef63912b96dce134fae436",
+   "code": "PA12.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:214da314916a48a6:mechanism:5b4c96a2@1",
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptKey": "nmc-concept:214da314916a48a6",
+   "referenceId": "nmc-2024-ref:bbc37750b8fa7317f9794f1199367ddb06b3dfb68dbd1a238a121b153fc4edd5",
+   "code": "PA12.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c8f37e9ea131d694:mechanism:9cb877b6@1",
+   "conceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptKey": "nmc-concept:c8f37e9ea131d694",
+   "referenceId": "nmc-2024-ref:bbc37750b8fa7317f9794f1199367ddb06b3dfb68dbd1a238a121b153fc4edd5",
+   "code": "PA12.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:43e8c686154358a0:mechanism:4d5b9db3@1",
+   "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "conceptKey": "nmc-concept:43e8c686154358a0",
+   "referenceId": "nmc-2024-ref:bdbc139d546ab0671125a563dd82ed5cf500e7560bc5dbe0eb742496632c849a",
+   "code": "PA12.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eac917b6fb9e2a99:mechanism:7ce5a9d1@1",
+   "conceptId": "C-20b45dcd-131d-4f98-8e8c-1c90b4737622",
+   "conceptKey": "nmc-concept:eac917b6fb9e2a99",
+   "referenceId": "nmc-2024-ref:c4966abfaecd7bb30367406c2ca153c3d821a2d0fe70e83fb130c406275e85dd",
+   "code": "PA13.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e79aae0b8cc492af:mechanism:44100483@1",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptKey": "nmc-concept:e79aae0b8cc492af",
+   "referenceId": "nmc-2024-ref:8c2000177df50440935a89f81147139002eac13848bf91c8191a219b40121b9e",
+   "code": "PA13.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ce3f7d281dc1c569:procedural-skill:cd4a7115@1",
+   "conceptId": "C-41671cd6-5248-4696-8302-f0962a2a216c",
+   "conceptKey": "nmc-concept:ce3f7d281dc1c569",
+   "referenceId": "nmc-2024-ref:95f0dd5e33f82fd00ec8d1e14c1acaaf19b3bc1a10119fa47d9de730b6f74677",
+   "code": "PA13.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:18feb4216f50ffd6:procedural-skill:3c6b83ec@1",
+   "conceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "conceptKey": "nmc-concept:18feb4216f50ffd6",
+   "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+   "code": "PA13.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:654521c28f78c889:procedural-skill:b75ba986@1",
+   "conceptId": "C-9bff84ee-8e2f-49ca-959e-3588e2911758",
+   "conceptKey": "nmc-concept:654521c28f78c889",
+   "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+   "code": "PA13.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5b6d5a22d0d7c318:procedural-skill:2af5a658@1",
+   "conceptId": "C-58bc42da-5335-48be-bb64-345e6706b7d5",
+   "conceptKey": "nmc-concept:5b6d5a22d0d7c318",
+   "referenceId": "nmc-2024-ref:43551f7a74ba968c3527dbd5c4bf9a02a2a499c172fddfb8864e2a6f507f8bec",
+   "code": "PA13.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bb6e0ee59320249a:mechanism:c4db66b2@1",
+   "conceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "conceptKey": "nmc-concept:bb6e0ee59320249a",
+   "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+   "code": "PA14.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4207eb1dc6bc8479:mechanism:00c6d80a@1",
+   "conceptId": "C-87971129-9398-4d82-bc97-18782af8b182",
+   "conceptKey": "nmc-concept:4207eb1dc6bc8479",
+   "referenceId": "nmc-2024-ref:4916d5be6b9b3dd4c9655d4c03cad7c51958947790636e5daa9de1736201a75d",
+   "code": "PA14.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4207eb1dc6bc8479:procedural-skill:e3803f12@1",
+   "conceptId": "C-87971129-9398-4d82-bc97-18782af8b182",
+   "conceptKey": "nmc-concept:4207eb1dc6bc8479",
+   "referenceId": "nmc-2024-ref:bd3e0147e2a354e6eeb9312f6281af6adcb2ec4628a07952e429296400a223b9",
+   "code": "PA14.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:361f68f1c13e56e7:mechanism:9ba2649d@1",
+   "conceptId": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+   "conceptKey": "nmc-concept:361f68f1c13e56e7",
+   "referenceId": "nmc-2024-ref:00d4fbd597ca59ae2ec2a975fd3cb146bcac217e99258f760ad38f2325956796",
+   "code": "PA15.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c75c59d1a4a23805:mechanism:81bf086a@1",
+   "conceptId": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+   "conceptKey": "nmc-concept:c75c59d1a4a23805",
+   "referenceId": "nmc-2024-ref:1410fca4088b10a3809fe86cfdb8ec87baf7f6a9c7e0dddce54b04afa715fa3b",
+   "code": "PA15.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c75c59d1a4a23805:procedural-skill:acb4fc20@1",
+   "conceptId": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+   "conceptKey": "nmc-concept:c75c59d1a4a23805",
+   "referenceId": "nmc-2024-ref:ef2fd78563d7d5c8e89253a2599905bd1d727ebc9dc5f983921d1cba7a2b353d",
+   "code": "PA15.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:877825ee90d9087c:mechanism:aa92418d@1",
+   "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+   "conceptKey": "nmc-concept:877825ee90d9087c",
+   "referenceId": "nmc-2024-ref:4c0cc3c838c87ae238f4c3a6c40b023b6dbb2f9c524921ce34024e4ad5aba9f7",
+   "code": "PA16.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:877825ee90d9087c:mechanism:d49071ff@1",
+   "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+   "conceptKey": "nmc-concept:877825ee90d9087c",
+   "referenceId": "nmc-2024-ref:79a12d411ef0a72c0b351aa360e71f4492eaef179caa0244b4eac740f59652c7",
+   "code": "PA16.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4e16cf09804bb636:mechanism:4ca46b1b@1",
+   "conceptId": "C-4fd0e908-9570-47a2-ae69-42f7da6aeab6",
+   "conceptKey": "nmc-concept:4e16cf09804bb636",
+   "referenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+   "code": "PA16.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:65903841d5d2cf34:mechanism:85a69ca9@1",
+   "conceptId": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+   "conceptKey": "nmc-concept:65903841d5d2cf34",
+   "referenceId": "nmc-2024-ref:4780b790ba3d7224b2df086a8e0fc4ae0baebf142e3f1733350e98855e6ae59a",
+   "code": "PA16.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d549f5505a798129:mechanism:1c2b1289@1",
+   "conceptId": "C-61803e8b-3ed1-4577-934d-a662481abb19",
+   "conceptKey": "nmc-concept:d549f5505a798129",
+   "referenceId": "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105",
+   "code": "PA 17.1",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:79f92060651bcd4c:interpretation:a6628f96@1",
+   "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
+   "conceptKey": "nmc-concept:79f92060651bcd4c",
+   "referenceId": "nmc-2024-ref:c6c42254bf8e81ec6c01252f12bdb0a1c29a7ca5d746ae4c854c938904eed105",
+   "code": "PA 17.1",
+   "task": "interpretation",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:3b2881508a93d831:mechanism:11d02f46@1",
+   "conceptId": "C-3818150e-5594-485a-ba0f-52791e04c5b1",
+   "conceptKey": "nmc-concept:3b2881508a93d831",
+   "referenceId": "nmc-2024-ref:db5e120c3befd304aef8ccc46dc10ae106bea0df2665e3669c5dc1a0af441d88",
+   "code": "PA18.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7d9d4d0413431c74:mechanism:4a5e9a41@1",
+   "conceptId": "C-dbf17f65-6684-4c17-a3fe-3a9000feff0b",
+   "conceptKey": "nmc-concept:7d9d4d0413431c74",
+   "referenceId": "nmc-2024-ref:db5e120c3befd304aef8ccc46dc10ae106bea0df2665e3669c5dc1a0af441d88",
+   "code": "PA18.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bfb38b6302dae053:mechanism:3533c8e3@1",
+   "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+   "conceptKey": "nmc-concept:bfb38b6302dae053",
+   "referenceId": "nmc-2024-ref:17119448ee435627d8b9ee056ef5b3860dc78bdae945256883856ec66bf5b473",
+   "code": "PA 18.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8b44980f2cd23898:mechanism:fb8947a3@1",
+   "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "conceptKey": "nmc-concept:8b44980f2cd23898",
+   "referenceId": "nmc-2024-ref:f22859e5664a9ee64b8a47d1229c53e9b15ba116091e20deb352c53574affa95",
+   "code": "PA19.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7090f7994b7bd004:mechanism:353dbc94@1",
+   "conceptId": "C-4e7057d4-521b-42b3-abf8-a0afa84ab75f",
+   "conceptKey": "nmc-concept:7090f7994b7bd004",
+   "referenceId": "nmc-2024-ref:f23dd83de36f086e227c23b765874849ebe88cf13ff45716dfa93a4281669ccf",
+   "code": "PA19.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7090f7994b7bd004:procedural-skill:d11d5c37@1",
+   "conceptId": "C-4e7057d4-521b-42b3-abf8-a0afa84ab75f",
+   "conceptKey": "nmc-concept:7090f7994b7bd004",
+   "referenceId": "nmc-2024-ref:3f323281dec0fbed4ca636c6a38c0e11ecbeb3ef7d7dd4ef6abca4fbdb98adc7",
+   "code": "PA19.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2bf21ff696598873:procedural-skill:24041375@1",
+   "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+   "conceptKey": "nmc-concept:2bf21ff696598873",
+   "referenceId": "nmc-2024-ref:3ecad40613baea4cd204cc412f6d757b395e9f8058d898d1fb0a31e0bc686867",
+   "code": "PA19.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2bf21ff696598873:procedural-skill:c7b19a8c@1",
+   "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+   "conceptKey": "nmc-concept:2bf21ff696598873",
+   "referenceId": "nmc-2024-ref:cd56af83064edf2af137c81b49d053529843b1d9d84d18b8c06149b9ee7b8251",
+   "code": "PA19.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bb0c3dd16ac26540:procedural-skill:35871415@1",
+   "conceptId": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+   "conceptKey": "nmc-concept:bb0c3dd16ac26540",
+   "referenceId": "nmc-2024-ref:3ecad40613baea4cd204cc412f6d757b395e9f8058d898d1fb0a31e0bc686867",
+   "code": "PA19.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:697328f4a5b435c3:mechanism:035d6646@1",
+   "conceptId": "C-418b4d78-df71-4fa8-8728-67881a0af21d",
+   "conceptKey": "nmc-concept:697328f4a5b435c3",
+   "referenceId": "nmc-2024-ref:9514c085c0833440a07ab7edcd7e9dd19ce7396093b4d51528e843638ccb188b",
+   "code": "PA19.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a4806bf600a87124:mechanism:c22de9fc@1",
+   "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+   "conceptKey": "nmc-concept:a4806bf600a87124",
+   "referenceId": "nmc-2024-ref:a35d795bca9b1805b6cae7120975805666b02a5001e89391c38fb1fd974f0977",
+   "code": "PA20.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0e13a1bdb53e14c8:procedural-skill:787d601d@1",
+   "conceptId": "C-e2a2f2a9-3c19-416c-91fa-006652db36eb",
+   "conceptKey": "nmc-concept:0e13a1bdb53e14c8",
+   "referenceId": "nmc-2024-ref:b63bc55dd54eb36a46ab701789842e342e8fe7eded6b5497878f18368f91ae6b",
+   "code": "PA20.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:91c189f5e4fecdee:procedural-skill:92da866f@1",
+   "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+   "conceptKey": "nmc-concept:91c189f5e4fecdee",
+   "referenceId": "nmc-2024-ref:b63bc55dd54eb36a46ab701789842e342e8fe7eded6b5497878f18368f91ae6b",
+   "code": "PA20.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:28cca0411fa68d40:mechanism:12c39a0b@1",
+   "conceptId": "C-5858970e-8f4c-49c5-b2fb-11ff63101317",
+   "conceptKey": "nmc-concept:28cca0411fa68d40",
+   "referenceId": "nmc-2024-ref:1468344dca839d962864abacf4a086213a28a13f30b5a647f2aae204154f51b6",
+   "code": "PA20.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:49513e9b599c05c4:mechanism:e162b239@1",
+   "conceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "conceptKey": "nmc-concept:49513e9b599c05c4",
+   "referenceId": "nmc-2024-ref:1020c8d0faab96aba97087842343e5659ca924e34ee2c5906cb51442b4a61b9f",
+   "code": "PA21.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:49513e9b599c05c4:procedural-skill:c2e8c861@1",
+   "conceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "conceptKey": "nmc-concept:49513e9b599c05c4",
+   "referenceId": "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f",
+   "code": "PA21.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:243f091491a98bb0:procedural-skill:0b31f8fb@1",
+   "conceptId": "C-82939e95-7c9f-4668-8f79-d55a253cd9cd",
+   "conceptKey": "nmc-concept:243f091491a98bb0",
+   "referenceId": "nmc-2024-ref:8962607dd9e8191c2df40ea46f7b02551a189f00d9466e56dfe111a3fb1f670b",
+   "code": "PA21.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ee6b4d8c88b62966:mechanism:56049287@1",
+   "conceptId": "C-376e69ee-572c-4b54-bc2b-f73817be1b2b",
+   "conceptKey": "nmc-concept:ee6b4d8c88b62966",
+   "referenceId": "nmc-2024-ref:6b30edce5c6549af16688c1359f9c4bae45d6afab25e8ef3424ca348e1e730e6",
+   "code": "PA21.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:15f66018afba31e9:mechanism:e39128cd@1",
+   "conceptId": "C-c5d7778f-318c-435c-92e9-1de9f2db455d",
+   "conceptKey": "nmc-concept:15f66018afba31e9",
+   "referenceId": "nmc-2024-ref:528837c89a64f0dc40e110aa9ad6dcd00809db7b98abd91d1076840ca00ceb93",
+   "code": "PA21.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:55551f1e02199600:mechanism:6a00cf25@1",
+   "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+   "conceptKey": "nmc-concept:55551f1e02199600",
+   "referenceId": "nmc-2024-ref:b726e5f6a73f87c44984d43486148511e54a3573830584e49e83c4dfe07b0c46",
+   "code": "PA21.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:afefa0b3b8bd7480:procedural-skill:7ac6aacb@1",
+   "conceptId": "C-e9f1f4cd-63fe-4234-8d45-09edd066392e",
+   "conceptKey": "nmc-concept:afefa0b3b8bd7480",
+   "referenceId": "nmc-2024-ref:137c800dd9fd17d4ba789995028623cc7fe8c844c348aeee97d6c0bcbfa0cf2f",
+   "code": "PA21.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cf9a20176bbf4f00:procedural-skill:90a3632b@1",
+   "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "conceptKey": "nmc-concept:cf9a20176bbf4f00",
+   "referenceId": "nmc-2024-ref:4858aea8970ff2227b7a8eb417e0441349a20c1072f4d0528006343bc383a256",
+   "code": "PA22.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:3a12f4d8bfceb40a:interpretation:d613002a@1",
+   "conceptId": "C-b4e7fdb8-a2b4-407a-87d6-85c7ca76eef4",
+   "conceptKey": "nmc-concept:3a12f4d8bfceb40a",
+   "referenceId": "nmc-2024-ref:2ca16159648117572c3f5a9b1c9fa749c85a36986b2a3e43db120d41b4eefa47",
+   "code": "PA22.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4570f6fd662e6a64:procedural-skill:b6393c29@1",
+   "conceptId": "C-c003ee8d-5293-4c91-8bb6-4f2785b07f36",
+   "conceptKey": "nmc-concept:4570f6fd662e6a64",
+   "referenceId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a",
+   "code": "PA22.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bb252f1beaed2f0e:procedural-skill:a6329d0b@1",
+   "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "conceptKey": "nmc-concept:bb252f1beaed2f0e",
+   "referenceId": "nmc-2024-ref:7b791914da0d6a83157faa3266226136c5c2e26b4d5257aab7a57d9b9ab0222a",
+   "code": "PA22.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:613f1dd472d131f9:interpretation:dd6f8062@1",
+   "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "conceptKey": "nmc-concept:613f1dd472d131f9",
+   "referenceId": "nmc-2024-ref:681bb476c771a6ac44cbf5d14b95b39fbfa2dcf9aa6c191e698b7684480bbe06",
+   "code": "PA22.4",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:613f1dd472d131f9:procedural-skill:461712e6@1",
+   "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "conceptKey": "nmc-concept:613f1dd472d131f9",
+   "referenceId": "nmc-2024-ref:3ef7e34599035e7da709dbed7c1c951b991e9c59d48788541ce0ced6de11dcf9",
+   "code": "PA24.6",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e834c4e90ba3a21b:interpretation:6d65356b@1",
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "conceptKey": "nmc-concept:e834c4e90ba3a21b",
+   "referenceId": "nmc-2024-ref:fb59a65a07b48cde8850000102af087a2435e585e9ae64defdd27eec2bc3eab8",
+   "code": "PA22.5",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9bc1a11a41962adf:mechanism:81ad8d1b@1",
+   "conceptId": "C-69af2de3-db6d-4900-9bd5-74021cda66af",
+   "conceptKey": "nmc-concept:9bc1a11a41962adf",
+   "referenceId": "nmc-2024-ref:bbccdea6a61dc5e4f9c9d4aae00238def8eabc7acafdc627e80b8d6c9eae307f",
+   "code": "PA23.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:126a77d2ddc18655:mechanism:4d35314a@1",
+   "conceptId": "C-8c315904-a03a-4698-98c8-8d45ce28727f",
+   "conceptKey": "nmc-concept:126a77d2ddc18655",
+   "referenceId": "nmc-2024-ref:48fa2150b6c312d523880c05a3ba1abaf5f4b34f2f6b5c962101699a6c83d812",
+   "code": "PA23.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:aca3a0d2e049156d:mechanism:012d921f@1",
+   "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "conceptKey": "nmc-concept:aca3a0d2e049156d",
+   "referenceId": "nmc-2024-ref:4968c06ae821f8c1657e61f0621827fbe29d6b9902e44fd71ec46563d7f9ee4f",
+   "code": "PA23.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:aca3a0d2e049156d:procedural-skill:c65d3624@1",
+   "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "conceptKey": "nmc-concept:aca3a0d2e049156d",
+   "referenceId": "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d",
+   "code": "PA23.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:485a3a03309b57b6:mechanism:5f89ae0a@1",
+   "conceptId": "C-a2c5f67e-9ece-4727-8cb4-22290d987c79",
+   "conceptKey": "nmc-concept:485a3a03309b57b6",
+   "referenceId": "nmc-2024-ref:17b0f2da6fb14ceef9158433f6832087f9f07288c83dbbbb082221e96083e721",
+   "code": "PA23.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:295d769fbc299f96:interpretation:2fc40fc7@1",
+   "conceptId": "C-3c0dc59a-c2de-4ce2-bde2-5550508bb952",
+   "conceptKey": "nmc-concept:295d769fbc299f96",
+   "referenceId": "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39",
+   "code": "PA23.5",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2d1a0eeb419305bb:mechanism:adb54f83@1",
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "conceptKey": "nmc-concept:2d1a0eeb419305bb",
+   "referenceId": "nmc-2024-ref:c276907546318e2b159990666c7f4e6253372529831e6ba6903bd36345b18a39",
+   "code": "PA23.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4b0de91b199d8c5a:mechanism:0897f0e1@1",
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "conceptKey": "nmc-concept:4b0de91b199d8c5a",
+   "referenceId": "nmc-2024-ref:49a98f5d8ea62217f9f234e7c30712db168a0ff9a3fcc5f62903eed4dc467965",
+   "code": "PA23.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:560d3989e9c8538b:mechanism:3217139a@1",
+   "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+   "conceptKey": "nmc-concept:560d3989e9c8538b",
+   "referenceId": "nmc-2024-ref:0d7a22e04abe70fcd38761f0f0f1bfb1bcd5432d354fd88ef11c4c577c05c2d0",
+   "code": "PA23.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:60be51898b834d85:mechanism:9859f729@1",
+   "conceptId": "C-8eb3ea18-003a-4759-a2b8-1ce487911f5c",
+   "conceptKey": "nmc-concept:60be51898b834d85",
+   "referenceId": "nmc-2024-ref:6d9310b16f7f87c10cd42f53949909de38c162759a2c1581dc4eff19340aec5c",
+   "code": "PA23.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:60be51898b834d85:procedural-skill:84552e9e@1",
+   "conceptId": "C-8eb3ea18-003a-4759-a2b8-1ce487911f5c",
+   "conceptKey": "nmc-concept:60be51898b834d85",
+   "referenceId": "nmc-2024-ref:01fc8ea7230c3ef34f8083aba2d0b2e2daf1ae178bc4e46621365f174c0ed08d",
+   "code": "PA23.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cbd19b1250b43bed:mechanism:480a1219@1",
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "conceptKey": "nmc-concept:cbd19b1250b43bed",
+   "referenceId": "nmc-2024-ref:2cd0cb335bd1cd41a021dcb9dee5f9d410e7984ad414d13a0a335cf572eca65f",
+   "code": "PA24.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0dcf656f4c40d32d:mechanism:791e2e05@1",
+   "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+   "conceptKey": "nmc-concept:0dcf656f4c40d32d",
+   "referenceId": "nmc-2024-ref:6e9b78d41f5b41263014dc89a2b2c35846b3db20e00c197af81d4bbb43d093f1",
+   "code": "PA24.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bd7ad3da3cf34013:mechanism:bb157c65@1",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptKey": "nmc-concept:bd7ad3da3cf34013",
+   "referenceId": "nmc-2024-ref:4e6d37c24e97f18268d21d1d46c5a291622ed61416b378034067a2bde3f320bb",
+   "code": "PA24.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bd7ad3da3cf34013:procedural-skill:93f2937e@1",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptKey": "nmc-concept:bd7ad3da3cf34013",
+   "referenceId": "nmc-2024-ref:3ef7e34599035e7da709dbed7c1c951b991e9c59d48788541ce0ced6de11dcf9",
+   "code": "PA24.6",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a8d304618f3a5150:mechanism:62bb16ef@1",
+   "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+   "conceptKey": "nmc-concept:a8d304618f3a5150",
+   "referenceId": "nmc-2024-ref:4e6d37c24e97f18268d21d1d46c5a291622ed61416b378034067a2bde3f320bb",
+   "code": "PA24.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fd32d861ee544494:mechanism:88abc824@1",
+   "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "conceptKey": "nmc-concept:fd32d861ee544494",
+   "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+   "code": "PA24.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2fcb444f2650759c:mechanism:6976a407@1",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "conceptKey": "nmc-concept:2fcb444f2650759c",
+   "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+   "code": "PA24.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2fcb444f2650759c:procedural-skill:eba57417@1",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "conceptKey": "nmc-concept:2fcb444f2650759c",
+   "referenceId": "nmc-2024-ref:7a8a5469381a664862b5f8bb1d67fc018ef586b4bfc6bdd5b59be715b1052660",
+   "code": "PA24.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:4ef92a392e964cb8:mechanism:79acacc5@1",
+   "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "conceptKey": "nmc-concept:4ef92a392e964cb8",
+   "referenceId": "nmc-2024-ref:55fb66ee35faa87961af9899f33c46dfd8e667979ee16bb995111236d28eeb19",
+   "code": "PA24.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a7342969dbb19cab:mechanism:56dc7f90@1",
+   "conceptId": "C-49bd0eb3-bf9f-44e7-bd07-b94772312c2d",
+   "conceptKey": "nmc-concept:a7342969dbb19cab",
+   "referenceId": "nmc-2024-ref:3f02fb3703fea23f73a1df5c40e9cb3a59068113f3cf4f682e99d9d0339603bc",
+   "code": "PA24.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5d4a0de5d3764653:mechanism:5da9ab57@1",
+   "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "conceptKey": "nmc-concept:5d4a0de5d3764653",
+   "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+   "code": "PA24.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bdefe81d914aae89:mechanism:2f727916@1",
+   "conceptId": "C-f8435738-4b3c-4563-b93b-f45a72a85ea3",
+   "conceptKey": "nmc-concept:bdefe81d914aae89",
+   "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+   "code": "PA24.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f96aee4124063f20:mechanism:b0505624@1",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "conceptKey": "nmc-concept:f96aee4124063f20",
+   "referenceId": "nmc-2024-ref:e5f82c894c712bbc31479c5d5bbb11153d27c58ab6277a230bbdf6b02cb5f953",
+   "code": "PA25.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e7b2e4ae31aaade8:mechanism:86ebfc16@1",
+   "conceptId": "C-4e4f9863-564d-410a-9753-f1e711549c79",
+   "conceptKey": "nmc-concept:e7b2e4ae31aaade8",
+   "referenceId": "nmc-2024-ref:d8f9a7200c79adf80f45223dc87b3666d86709c3613aa4b43dc380cc5e13e150",
+   "code": "PA25.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2936e88b05f87376:mechanism:d41b5c9d@1",
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "conceptKey": "nmc-concept:2936e88b05f87376",
+   "referenceId": "nmc-2024-ref:56fbcc3ed4b0bad6cc11197b252eb6b1509c4970603fa6e66ffae54953be4633",
+   "code": "PA25.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f1019cc578424962:mechanism:3b019c93@1",
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "conceptKey": "nmc-concept:f1019cc578424962",
+   "referenceId": "nmc-2024-ref:56fbcc3ed4b0bad6cc11197b252eb6b1509c4970603fa6e66ffae54953be4633",
+   "code": "PA25.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8c377e443098d611:mechanism:27b37329@1",
+   "conceptId": "C-ef34e52c-78a6-4a52-b48e-91fe40779b62",
+   "conceptKey": "nmc-concept:8c377e443098d611",
+   "referenceId": "nmc-2024-ref:56fbcc3ed4b0bad6cc11197b252eb6b1509c4970603fa6e66ffae54953be4633",
+   "code": "PA25.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e71def4f6f7d9e76:mechanism:6bbf1d86@1",
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "conceptKey": "nmc-concept:e71def4f6f7d9e76",
+   "referenceId": "nmc-2024-ref:3c10610b4ce62304a211331d1ad5414d729f661fe186903dd07fae965b3efbf7",
+   "code": "PA25.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fd5c1e419300f1dc:mechanism:021b49e2@1",
+   "conceptId": "C-941a4acb-68ed-4949-ade0-95fbce629ff3",
+   "conceptKey": "nmc-concept:fd5c1e419300f1dc",
+   "referenceId": "nmc-2024-ref:52d9da25840c5d7567a6b4885bbab74f936043f1ad5d5f04914ae92ed37b4075",
+   "code": "PA25.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8459c42385bd3f2d:mechanism:e501bc5c@1",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "conceptKey": "nmc-concept:8459c42385bd3f2d",
+   "referenceId": "nmc-2024-ref:94259bb09775d4fe9501364ca1fcb4c1538e2d9fe4a0633d119eeaf4f5ed3c54",
+   "code": "PA25.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8459c42385bd3f2d:procedural-skill:b09f1c72@1",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "conceptKey": "nmc-concept:8459c42385bd3f2d",
+   "referenceId": "nmc-2024-ref:d75026a03b518442124a92042d82659008f5276243a2487703899dcb68c974f3",
+   "code": "PA25.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e70467ef1276bb0f:mechanism:fb7fc2d8@1",
+   "conceptId": "C-dbf40774-f453-465d-a2e3-5e13773fab55",
+   "conceptKey": "nmc-concept:e70467ef1276bb0f",
+   "referenceId": "nmc-2024-ref:94259bb09775d4fe9501364ca1fcb4c1538e2d9fe4a0633d119eeaf4f5ed3c54",
+   "code": "PA25.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:020a4bd3dd26efca:mechanism:4fcedc6a@1",
+   "conceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "conceptKey": "nmc-concept:020a4bd3dd26efca",
+   "referenceId": "nmc-2024-ref:feaf1b63953cd8c40bae19e1a6f1e668de289dfc7845766f02bee47e3aa43934",
+   "code": "PA26.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8a830a2f76abc74d:mechanism:22ef4527@1",
+   "conceptId": "C-0f44af7e-c463-4ede-955b-848e906eeb15",
+   "conceptKey": "nmc-concept:8a830a2f76abc74d",
+   "referenceId": "nmc-2024-ref:0110fb9ef641a8628690ad25aa8a1d7aa6f8b4bda0dc695aafd1af1d445fcb88",
+   "code": "PA26.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b3048a6745b111b1:mechanism:14074d49@1",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "conceptKey": "nmc-concept:b3048a6745b111b1",
+   "referenceId": "nmc-2024-ref:3a6ba3beae7da051d23372b16d848127138c2106d135117e6ea5ed24a92fb4af",
+   "code": "PA26.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:dd488f34e8925b4b:mechanism:6d998b6f@1",
+   "conceptId": "C-b74384a2-9237-49c2-ac61-3be155aacb1d",
+   "conceptKey": "nmc-concept:dd488f34e8925b4b",
+   "referenceId": "nmc-2024-ref:061b52d750f42fad61e69c944f3d100c03368f802a11866337176c155c1c1e9b",
+   "code": "PA26.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:87f1f90a88cd3243:mechanism:610c9705@1",
+   "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "conceptKey": "nmc-concept:87f1f90a88cd3243",
+   "referenceId": "nmc-2024-ref:4f43a2bd7c8f5aa3c4a85e2ebb0c5ef14998536644a476df8d686b82ea38ba15",
+   "code": "PA26.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c5cb52d179653df3:mechanism:6d6afccb@1",
+   "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "conceptKey": "nmc-concept:c5cb52d179653df3",
+   "referenceId": "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724",
+   "code": "PA26.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7840bc5fc6183aa8:mechanism:6bf1f71e@1",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "conceptKey": "nmc-concept:7840bc5fc6183aa8",
+   "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+   "code": "PA26.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f803e31088ec4f7e:procedural-skill:09873ca7@1",
+   "conceptId": "C-a3aa9ce0-b811-463a-98cc-9f5cfd298bc0",
+   "conceptKey": "nmc-concept:f803e31088ec4f7e",
+   "referenceId": "nmc-2024-ref:c9348b4de53bdaf6af9ad630cc0d52c54680096706bbf6461b6cef860edd28d6",
+   "code": "PA26.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:873d811ff27df0a3:mechanism:a50fd246@1",
+   "conceptId": "C-5a037517-9ddf-4743-ab08-21240077fec6",
+   "conceptKey": "nmc-concept:873d811ff27df0a3",
+   "referenceId": "nmc-2024-ref:52bd77bb90ae5c6bbdda87454d462f8a5bafd58a539c6e836db634a9d4887012",
+   "code": "PA26.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:3d956618cb838256:mechanism:e4236a59@1",
+   "conceptId": "C-64fae1af-f399-406b-8e51-162c039d02eb",
+   "conceptKey": "nmc-concept:3d956618cb838256",
+   "referenceId": "nmc-2024-ref:7bb8709756cc3300bac8c98d710907e135e3de28b2c805275d6251b3cf2e775e",
+   "code": "PA26.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9400fa34f90b4892:mechanism:6f6e52e6@1",
+   "conceptId": "C-d37242ef-2027-4d25-887e-86e2d875ab99",
+   "conceptKey": "nmc-concept:9400fa34f90b4892",
+   "referenceId": "nmc-2024-ref:26a6f3bc1a52c47ab2250e17f6e6cfed5321f8cd93be8ac1612a37714142d1bf",
+   "code": "PA27.1",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:42cc0e21159d0450:mechanism:f280b46e@1",
+   "conceptId": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+   "conceptKey": "nmc-concept:42cc0e21159d0450",
+   "referenceId": "nmc-2024-ref:1b4e6b13183e8998873f782ad32dafbda2d1c8ef04ac6e93bd097368571fc7e1",
+   "code": "PA27.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:07de723425ac5aa3:mechanism:49f5f87e@1",
+   "conceptId": "C-8e0516ea-1827-4580-b0d2-ba4f3d0d10eb",
+   "conceptKey": "nmc-concept:07de723425ac5aa3",
+   "referenceId": "nmc-2024-ref:1b4e6b13183e8998873f782ad32dafbda2d1c8ef04ac6e93bd097368571fc7e1",
+   "code": "PA27.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d66f184f88abe4a6:mechanism:55b1c57e@1",
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "conceptKey": "nmc-concept:d66f184f88abe4a6",
+   "referenceId": "nmc-2024-ref:cfd9e37f4dad89a719d41c5a05c4c7e82e7bee52c9eca07ef5e73c17efdc39e0",
+   "code": "PA27.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:24f1f419708ea9a7:mechanism:aae5a8c5@1",
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "conceptKey": "nmc-concept:24f1f419708ea9a7",
+   "referenceId": "nmc-2024-ref:791c106c38e9a2497d5e6608ea7dc9f882a4cd4a4aa3381e1058b4e3888e2f3d",
+   "code": "PA27.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:846a3e27eea0fd1b:mechanism:49cfb08d@1",
+   "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+   "conceptKey": "nmc-concept:846a3e27eea0fd1b",
+   "referenceId": "nmc-2024-ref:a4511504c7f47e00bf442d88ae537e13fcf7d1b645f50b802e8bebeb9c9b22c0",
+   "code": "PA27.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:dcd577a1562bc055:mechanism:16e934c7@1",
+   "conceptId": "C-b8ec9c01-860e-41a0-afe5-f27e6069ddf3",
+   "conceptKey": "nmc-concept:dcd577a1562bc055",
+   "referenceId": "nmc-2024-ref:f7aadf5ea6d459b0470bfb823742bb2db3d03fadc662651c3f2dc913b9fd1755",
+   "code": "PA27.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:350ab422d094004c:mechanism:049f86c5@1",
+   "conceptId": "C-90371695-8d7d-4d76-8775-3c7b8257ea3f",
+   "conceptKey": "nmc-concept:350ab422d094004c",
+   "referenceId": "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233",
+   "code": "PA27.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9b692624aaeb1ef5:mechanism:64f6d1bf@1",
+   "conceptId": "C-b6bf6dd1-df3e-4d84-8756-89b21c5c96bc",
+   "conceptKey": "nmc-concept:9b692624aaeb1ef5",
+   "referenceId": "nmc-2024-ref:7c7ba935449fd577a6a9f6be8f794e9ae800a4e8a8c18583fab9bd0d4d791233",
+   "code": "PA27.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b2d4c47b5ba9b51d:mechanism:60bcd1a8@1",
+   "conceptId": "C-d15e0b17-67ef-4d98-a5f7-cb7cb58e0df7",
+   "conceptKey": "nmc-concept:b2d4c47b5ba9b51d",
+   "referenceId": "nmc-2024-ref:9d720aabc1ffe39f50b6088a4ad6af6398f898b81f6a23288502bb67db925e53",
+   "code": "PA27.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a5308816421a90a1:mechanism:6bcc43e4@1",
+   "conceptId": "C-a81bd3f8-3423-479f-877b-71a2a85b4109",
+   "conceptKey": "nmc-concept:a5308816421a90a1",
+   "referenceId": "nmc-2024-ref:7dcea39ab52a27d4676105172f5619d6479aad9be69f61cac85bbde3eb86797d",
+   "code": "PA27.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:38a19fce255c092c:mechanism:52dfac79@1",
+   "conceptId": "C-c1c9f47f-588a-4e63-8b7b-46d504d33dd1",
+   "conceptKey": "nmc-concept:38a19fce255c092c",
+   "referenceId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb",
+   "code": "PA27.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f608e04212bd34a1:mechanism:6ab6a914@1",
+   "conceptId": "C-6e3bac40-1e49-4238-afa5-2506643698d4",
+   "conceptKey": "nmc-concept:f608e04212bd34a1",
+   "referenceId": "nmc-2024-ref:69c6cfeb3a5e9c862cf14a5ab82856ab5e67d8d680936b0d21825f226b905deb",
+   "code": "PA27.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5274c1305520406c:mechanism:d0e1b700@1",
+   "conceptId": "C-d5ffca62-6d06-44b2-bcaa-ce69d2824a02",
+   "conceptKey": "nmc-concept:5274c1305520406c",
+   "referenceId": "nmc-2024-ref:9667cdb7040d3b4d6b1c9d1bf51a18666ed52a93c7c07d0bd3e87d48cfb044d6",
+   "code": "PA27.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:47463cb832e9d91f:mechanism:3e1d72c2@1",
+   "conceptId": "C-feedee04-3d93-4ab6-85c4-a31c9687313f",
+   "conceptKey": "nmc-concept:47463cb832e9d91f",
+   "referenceId": "nmc-2024-ref:89489b7a129927b264d637eaa5eaa9c24864e8ae1c7e1c4cddc70fe1186d3ca2",
+   "code": "PA27.12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b84259d4b8e06c0e:mechanism:98cfe838@1",
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "conceptKey": "nmc-concept:b84259d4b8e06c0e",
+   "referenceId": "nmc-2024-ref:ebb52f72abb501366d3b34b7a3723cc605656ed422e05da6a840e1bc230193b1",
+   "code": "PA27.13",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:36513532c081a50c:mechanism:9aaa8648@1",
+   "conceptId": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+   "conceptKey": "nmc-concept:36513532c081a50c",
+   "referenceId": "nmc-2024-ref:ebb52f72abb501366d3b34b7a3723cc605656ed422e05da6a840e1bc230193b1",
+   "code": "PA27.13",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a54fbd8930a4a359:mechanism:23bc97cc@1",
+   "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "conceptKey": "nmc-concept:a54fbd8930a4a359",
+   "referenceId": "nmc-2024-ref:c72aec6123b8b87660579d73f8dbb54ad9b1f0702eab9708b765700e46cf1b01",
+   "code": "PA27.14",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a54fbd8930a4a359:procedural-skill:2a29bf93@1",
+   "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "conceptKey": "nmc-concept:a54fbd8930a4a359",
+   "referenceId": "nmc-2024-ref:b6e96c2be5138929a0cf9df72faf45d153db910fb84ac7f40f89b2aa0c2c0f65",
+   "code": "PA27.17",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a39ac080231b8e2b:mechanism:3813aec1@1",
+   "conceptId": "C-a9f5bd01-7d36-4841-9560-a25f24d88c38",
+   "conceptKey": "nmc-concept:a39ac080231b8e2b",
+   "referenceId": "nmc-2024-ref:df4f07ba878f323fbb76a93d05eba8f11bf7646e533975932105bb60923f6803",
+   "code": "PA27.15",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2de629c189cc9fa9:mechanism:1869a492@1",
+   "conceptId": "C-25fbab0b-e72e-4ea9-8797-4cda4a9a8dc9",
+   "conceptKey": "nmc-concept:2de629c189cc9fa9",
+   "referenceId": "nmc-2024-ref:8797a0a508836b679941ba8a2dc3f5582a83a9ac356f05547afb297de81d4ff2",
+   "code": "PA27.16",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2c40d7fd2d57c009:interpretation:0c0f2bdf@1",
+   "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+   "conceptKey": "nmc-concept:2c40d7fd2d57c009",
+   "referenceId": "nmc-2024-ref:499c85ee9d457c13870b0b2d392c5bdf0507d6349a5b95f4d8fc8f998d8f3304",
+   "code": "PA28.1",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:77c9dcb452884932:mechanism:fd23b7b2@1",
+   "conceptId": "C-771f5c27-8a38-4412-9b4c-d6f2f927a966",
+   "conceptKey": "nmc-concept:77c9dcb452884932",
+   "referenceId": "nmc-2024-ref:688d1e0370d39ddf1674ebd43cc21378aca783f3cc860466782655f537917422",
+   "code": "PA28.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:590bc84c88dfbf46:mechanism:220fb90a@1",
+   "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "conceptKey": "nmc-concept:590bc84c88dfbf46",
+   "referenceId": "nmc-2024-ref:1c23ce7ea6ccc965c8f6cbc60af3326f668d195bdcfca15041d4b930f0a73df5",
+   "code": "PA28.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:76a904ee930342e1:mechanism:4b7f7c46@1",
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "conceptKey": "nmc-concept:76a904ee930342e1",
+   "referenceId": "nmc-2024-ref:c1dc67f6cc2739005b3d11e457ed82e1953a7d91075d060f4bb9f0e5f568cb71",
+   "code": "PA28.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:76a904ee930342e1:procedural-skill:fbcc7a64@1",
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "conceptKey": "nmc-concept:76a904ee930342e1",
+   "referenceId": "nmc-2024-ref:dfa024775176801cf706574754e41745f2af4f97a47e72ff98c79c5f86bf410f",
+   "code": "PA28.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0e0b8de0fd2101f9:mechanism:88302995@1",
+   "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+   "conceptKey": "nmc-concept:0e0b8de0fd2101f9",
+   "referenceId": "nmc-2024-ref:66732075966806fd63e14410d32640a914fecfbd1f1633384636bac2ed44fe0b",
+   "code": "PA28.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9cc26d1ac45b5ee6:mechanism:b51ce443@1",
+   "conceptId": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+   "conceptKey": "nmc-concept:9cc26d1ac45b5ee6",
+   "referenceId": "nmc-2024-ref:510d34fdfea093bd0f9207a242a3eb2cafa175b82c19c782f72212ebd12b5f60",
+   "code": "PA29.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:1a9c9b5a26bb09a9:mechanism:d6d1c982@1",
+   "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "conceptKey": "nmc-concept:1a9c9b5a26bb09a9",
+   "referenceId": "nmc-2024-ref:f872a74cf51d3e9a01564e19d47f19bc5443962c4e64bf6a2c944dedbf983702",
+   "code": "PA29.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9f36b9d78bc8d0c7:mechanism:91db6d9f@1",
+   "conceptId": "C-c95c9340-f9c7-48cb-8792-31142b9b9c45",
+   "conceptKey": "nmc-concept:9f36b9d78bc8d0c7",
+   "referenceId": "nmc-2024-ref:f872a74cf51d3e9a01564e19d47f19bc5443962c4e64bf6a2c944dedbf983702",
+   "code": "PA29.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:542d48f5d7cb9a81:mechanism:9aeeeec3@1",
+   "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+   "conceptKey": "nmc-concept:542d48f5d7cb9a81",
+   "referenceId": "nmc-2024-ref:2d0092e7d3a10c58dbd0c5401865da330bfa8d5bd97e59068e80f0a4d98e670b",
+   "code": "PA29.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:542d48f5d7cb9a81:procedural-skill:7e9acafb@1",
+   "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+   "conceptKey": "nmc-concept:542d48f5d7cb9a81",
+   "referenceId": "nmc-2024-ref:f9e60a48cb85afb9c79a9a6cd941fea257b91f51f9ab2c17ef5094852f727cf2",
+   "code": "PA29.10",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c4fa8701a34e67d2:mechanism:a45ece0b@1",
+   "conceptId": "C-57699b57-3d51-4387-804f-8e67fd55d467",
+   "conceptKey": "nmc-concept:c4fa8701a34e67d2",
+   "referenceId": "nmc-2024-ref:7c4deb358750a8bf4f216af7edc1a5682df9d6f9a2db53045ba9bb6661b8728e",
+   "code": "PA29.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9d8a05a3c10184a7:mechanism:604e989b@1",
+   "conceptId": "C-e1391fe0-5764-43d2-9024-8b38da8ac463",
+   "conceptKey": "nmc-concept:9d8a05a3c10184a7",
+   "referenceId": "nmc-2024-ref:3a28e01ea4d0805124b6121071d1b35d2fa388c50e57920d3f7703a48741ddb3",
+   "code": "PA29.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:dc8ac300e0ea6959:mechanism:eb414d05@1",
+   "conceptId": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+   "conceptKey": "nmc-concept:dc8ac300e0ea6959",
+   "referenceId": "nmc-2024-ref:efcb5e644249f21a79993dfbf4feec66917464fab0318eccc68f5c0e195f5dce",
+   "code": "PA29.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fa29a05c7cdc7a14:mechanism:5e8726be@1",
+   "conceptId": "C-e64a2d68-36ab-47bb-bb3f-23b09c67a423",
+   "conceptKey": "nmc-concept:fa29a05c7cdc7a14",
+   "referenceId": "nmc-2024-ref:33134360e72f9525507b9f4658ad17b1c3c6edd11ae7284dbf504d8479c2d59c",
+   "code": "PA29.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fd50c57ec17c2104:mechanism:c31cc333@1",
+   "conceptId": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+   "conceptKey": "nmc-concept:fd50c57ec17c2104",
+   "referenceId": "nmc-2024-ref:c11a30d07046cdc3422d860bbb5ed098ae3003a5ea5f7a667a837c45a15a06fd",
+   "code": "PA29.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:013274b40cddea64:mechanism:ee448fcc@1",
+   "conceptId": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+   "conceptKey": "nmc-concept:013274b40cddea64",
+   "referenceId": "nmc-2024-ref:2b8cd05a1a13ba7fca6b135edca3b0d0dc6b51d7d626dbf10caec037a1ad6b94",
+   "code": "PA30.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fca2384795105f4f:mechanism:8f88c7f3@1",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "conceptKey": "nmc-concept:fca2384795105f4f",
+   "referenceId": "nmc-2024-ref:5d3046380303038ab5b80810738c46c412ca8446b5e4c1ab6fa707ee1550ac03",
+   "code": "PA30.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fca2384795105f4f:procedural-skill:c706ee62@1",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "conceptKey": "nmc-concept:fca2384795105f4f",
+   "referenceId": "nmc-2024-ref:4ec46ceafea307ff72d96c007ff53b6e9c776080076a2c3a2fd18e5b40f3c4a2",
+   "code": "PA30.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8539057789f00ec8:procedural-skill:d0aded98@1",
+   "conceptId": "C-f0d1a5bb-55b7-4018-bbb8-672127c9300d",
+   "conceptKey": "nmc-concept:8539057789f00ec8",
+   "referenceId": "nmc-2024-ref:7e51c245d371c88815861571de2509562dc262b624549bf78c00b2ca758cc030",
+   "code": "PA30.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:73d1a25879700202:mechanism:1c0ae57b@1",
+   "conceptId": "C-1e3b1c83-ed17-45c5-8b2f-c8397f8badd0",
+   "conceptKey": "nmc-concept:73d1a25879700202",
+   "referenceId": "nmc-2024-ref:1b6c2c1aea190ec85feffb53250011d68ddbee3c4d69d2e31b051f20d8d24954",
+   "code": "PA30.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ebeec1ceb250c5b9:mechanism:a3377c6a@1",
+   "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "conceptKey": "nmc-concept:ebeec1ceb250c5b9",
+   "referenceId": "nmc-2024-ref:e30f8a7311f7ef9f053bcd01bef038fc6c2fec9c1180956ed3d67e9fc04b01cb",
+   "code": "PA31.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ec537a01f3006b91:mechanism:a77c46de@1",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "conceptKey": "nmc-concept:ec537a01f3006b91",
+   "referenceId": "nmc-2024-ref:0628b8a1effa10f7e0dc53f71ed505b295652141f544ac94ce0e7304b9138a93",
+   "code": "PA31.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ec537a01f3006b91:mechanism:7308d5de@1",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "conceptKey": "nmc-concept:ec537a01f3006b91",
+   "referenceId": "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622",
+   "code": "PA31.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f759e49949cdeb6d:mechanism:60c4fa41@1",
+   "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "conceptKey": "nmc-concept:f759e49949cdeb6d",
+   "referenceId": "nmc-2024-ref:45fc337982e81c31727a9ce76c25218c368a64bf118db4944018ddf4d22b2622",
+   "code": "PA31.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:94e4f2b89b7e66d7:mechanism:66785986@1",
+   "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "conceptKey": "nmc-concept:94e4f2b89b7e66d7",
+   "referenceId": "nmc-2024-ref:6f47b3966a146d8cd911c1b8c3dd55edee4cb4237e173725f93d0cb540cbac04",
+   "code": "PA31.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cfa9c970f42d3be1:mechanism:52faac4e@1",
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptKey": "nmc-concept:cfa9c970f42d3be1",
+   "referenceId": "nmc-2024-ref:456c55df9ed6e330258e5e49d3d4f8588ca03f74a9f1da649fd87ad27d371720",
+   "code": "PA31.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:715b588e0c9e081d:mechanism:c933c068@1",
+   "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "conceptKey": "nmc-concept:715b588e0c9e081d",
+   "referenceId": "nmc-2024-ref:cc44b6d426e3a07daf2f5cc8ad9c4323df856649c4ded8705d0c6a00939908b9",
+   "code": "PA31.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eecd7261e435173f:mechanism:b1d44701@1",
+   "conceptId": "C-920002b2-ec36-46f5-b8f1-de69afb7e4ff",
+   "conceptKey": "nmc-concept:eecd7261e435173f",
+   "referenceId": "nmc-2024-ref:3802a73366ae530d7703437fa3cec59120dc5c0a913978e8215cb143e0e13fb5",
+   "code": "PA31.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:5f41a5ce1a5f04ea:mechanism:03332da0@1",
+   "conceptId": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+   "conceptKey": "nmc-concept:5f41a5ce1a5f04ea",
+   "referenceId": "nmc-2024-ref:07fca23f980d2ee7eb72856d20dec143629a21029e389fa729e5132d690bc8e1",
+   "code": "PA31.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:595d221abb4f7cf0:mechanism:d696155c@1",
+   "conceptId": "C-720774b8-d18d-429a-891e-028c93fff261",
+   "conceptKey": "nmc-concept:595d221abb4f7cf0",
+   "referenceId": "nmc-2024-ref:308af4d05b8145edda53d37e711fef365a6393127ab61f719e3e257d335e758e",
+   "code": "PA31.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ee7c514b5426bc0a:procedural-skill:7ac67c29@1",
+   "conceptId": "C-e1cb7a8d-57b9-47eb-aa45-6edd74aa1c25",
+   "conceptKey": "nmc-concept:ee7c514b5426bc0a",
+   "referenceId": "nmc-2024-ref:71a68f0336c6a08dbce84b0b8b1df93aa59d29cff83a7a0c9d5b4038e21cf535",
+   "code": "PA31.10",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:da133f3a1ff0b453:mechanism:97b973f2@1",
+   "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "conceptKey": "nmc-concept:da133f3a1ff0b453",
+   "referenceId": "nmc-2024-ref:d3a61c9c7d897b48ff6dcadca4a456c78b1297eb6bdee28c01386a9f8921785e",
+   "code": "PA32.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7479ce043eeb25c0:mechanism:aaff9aa5@1",
+   "conceptId": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+   "conceptKey": "nmc-concept:7479ce043eeb25c0",
+   "referenceId": "nmc-2024-ref:2403a080fbcec03e586f8d8bbd0d2056acfa21e101867b3fd821aa11ecbc11da",
+   "code": "PA32.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7479ce043eeb25c0:procedural-skill:fa948510@1",
+   "conceptId": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+   "conceptKey": "nmc-concept:7479ce043eeb25c0",
+   "referenceId": "nmc-2024-ref:355b3a29ad7752635ab24b5458426d2aacbe1a8505e6f1c119fc7732b99fba54",
+   "code": "PA32.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a3ea7bfc293422ff:mechanism:d2629fd7@1",
+   "conceptId": "C-12e519a0-3460-467d-8dae-d09902adffd6",
+   "conceptKey": "nmc-concept:a3ea7bfc293422ff",
+   "referenceId": "nmc-2024-ref:20110cd0d5d93c2348e7397df35f09325e1cea4bec00b2a61723378446ad91bd",
+   "code": "PA32.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6f8c69bd0bd24972:mechanism:dec0bb76@1",
+   "conceptId": "C-47b9d310-9b50-41e1-ab41-be38c372826e",
+   "conceptKey": "nmc-concept:6f8c69bd0bd24972",
+   "referenceId": "nmc-2024-ref:f9913b6acaec3f579c2e026ca9ab572f6ce677ba69d3163cf5538a8113af14be",
+   "code": "PA32.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f0408c7c54583906:mechanism:7794fb14@1",
+   "conceptId": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+   "conceptKey": "nmc-concept:f0408c7c54583906",
+   "referenceId": "nmc-2024-ref:edbaf29e8cb219b444c0a06582792c9ef117737692c4a4f73b6c103b2d692dde",
+   "code": "PA32.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a9d648d2936ff4d7:mechanism:0c675cb9@1",
+   "conceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "conceptKey": "nmc-concept:a9d648d2936ff4d7",
+   "referenceId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6",
+   "code": "PA32.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:077c0dc781376c12:mechanism:d5602b06@1",
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "conceptKey": "nmc-concept:077c0dc781376c12",
+   "referenceId": "nmc-2024-ref:cd3e6a32ee188f49453370643a060a19d36f94a783451996f1f8a087667d50e6",
+   "code": "PA32.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6b431ff9654d9dd6:mechanism:9782bf9b@1",
+   "conceptId": "C-68eb5aa1-15c4-4572-8cb4-49d4e09176a8",
+   "conceptKey": "nmc-concept:6b431ff9654d9dd6",
+   "referenceId": "nmc-2024-ref:a5951df3f0d09236e0220fbf748f7c0268996d51b4d840ec0f75383f2793fe14",
+   "code": "PA33.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6b431ff9654d9dd6:procedural-skill:bc6765fd@1",
+   "conceptId": "C-68eb5aa1-15c4-4572-8cb4-49d4e09176a8",
+   "conceptKey": "nmc-concept:6b431ff9654d9dd6",
+   "referenceId": "nmc-2024-ref:d2b53a14ee29015978e1d76148537a35b2ce358c6cc7f50bbd000fa537f43ec6",
+   "code": "PA33.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:265821aaeea79dff:mechanism:6de2d6c2@1",
+   "conceptId": "C-9815a56b-753b-4549-9dd6-9e647c7e2a83",
+   "conceptKey": "nmc-concept:265821aaeea79dff",
+   "referenceId": "nmc-2024-ref:2485958b50575ab0b954600a4db51d38ad2682dafac6025ce3faae01c3f2f45f",
+   "code": "PA33.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:116bf7fccca65915:mechanism:65cd4cf8@1",
+   "conceptId": "C-964469fa-f469-4f00-ba7b-38073718a582",
+   "conceptKey": "nmc-concept:116bf7fccca65915",
+   "referenceId": "nmc-2024-ref:09b803fb2d9aa91ae47e6d415ca94a289be4af9ea25e4a1eddb286da5e04cd8f",
+   "code": "PA33.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:99c31d4aff5ee95f:mechanism:be64ab8e@1",
+   "conceptId": "C-89287843-4842-49b8-8520-13bd18b82de6",
+   "conceptKey": "nmc-concept:99c31d4aff5ee95f",
+   "referenceId": "nmc-2024-ref:09b803fb2d9aa91ae47e6d415ca94a289be4af9ea25e4a1eddb286da5e04cd8f",
+   "code": "PA33.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f8703fdcc70d857c:mechanism:55298e4b@1",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "conceptKey": "nmc-concept:f8703fdcc70d857c",
+   "referenceId": "nmc-2024-ref:f706cc663d2815115357335ffc27ea7fda45fe01f6d1250c7abf6135a1e7be56",
+   "code": "PA34.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f8703fdcc70d857c:procedural-skill:cf57d02c@1",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "conceptKey": "nmc-concept:f8703fdcc70d857c",
+   "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+   "code": "PA34.3",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b7a1ea93fe99e262:procedural-skill:6d0a9ed6@1",
+   "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "conceptKey": "nmc-concept:b7a1ea93fe99e262",
+   "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+   "code": "PA34.3",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:677f27d742bc97d8:mechanism:f23a4576@1",
+   "conceptId": "C-bbb27833-d844-4aeb-bc2a-7a5d636b0a21",
+   "conceptKey": "nmc-concept:677f27d742bc97d8",
+   "referenceId": "nmc-2024-ref:09b6d934e473924551da51a0ae654d23afe85a1ce1b50f1d5a4bfa62309b168a",
+   "code": "PA34.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e5996a260d85021d:mechanism:3cf1953a@1",
+   "conceptId": "C-a43faeaf-e054-499a-b8b4-56bb2419d6de",
+   "conceptKey": "nmc-concept:e5996a260d85021d",
+   "referenceId": "nmc-2024-ref:510a2515b44ebc36d019781219922d18c2c8d0e13f423e8274aee49144c60b50",
+   "code": "PA35.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  }
+ ]
+}
