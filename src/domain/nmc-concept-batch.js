@@ -2,6 +2,9 @@
 export const BATCH_CONTRACT='nmc-concept-batch-v1';
 export const ATTESTATION='identity-and-classification-reviewed-not-medical-or-learner-release';
 const KEY=/^nmc-concept:[a-f0-9]{16}$/;
+// Review order: identity-changing items first so batch review is not a skim of 180 rows.
+export const FLAG_ORDER=['reuses-accepted-identity','renamed-from-v1','new-split-in-v2','merges-source-rows','umbrella','split-source-row'];
+const risk=c=>{const f=c.reviewFlags||[];const i=FLAG_ORDER.findIndex(x=>f.includes(x));return i<0?FLAG_ORDER.length:i;};
 export function validateBatch(b){
  if(!b||b.schemaVersion!==1||typeof b.batchId!=='string'||!/^[a-z0-9][a-z0-9:._-]{0,119}$/.test(b.batchId)||b.learnerActivation!==false||b.clinicalApproval!==false)throw new Error('batch_invalid');
  if(!Array.isArray(b.concepts)||!Array.isArray(b.objectives)||!b.concepts.length)throw new Error('batch_invalid');
@@ -18,7 +21,8 @@ export function batchSummary(b,acceptance=null){
  const objs=new Map();for(const o of b.objectives){if(!objs.has(o.conceptKey))objs.set(o.conceptKey,[]);objs.get(o.conceptKey).push({code:o.code,task:o.task,depth:o.depth,mode:o.mode,wording:o.wording,basis:o.basis});}
  return {contractId:BATCH_CONTRACT,batchId:b.batchId,subjectId:b.subjectId,counts:b.counts,learnerActivation:false,
   acceptance:acceptance?{status:'batch_accepted',acceptedAt:acceptance.accepted_at||acceptance.acceptedAt,items:acceptance.item_count??acceptance.items}:null,
-  concepts:b.concepts.map(c=>({conceptKey:c.conceptKey,existingConceptId:c.existingConceptId||null,label:c.document.label,aliases:c.document.aliases,classification:c.document.classification,linkedCodes:c.linkedCodes,objectives:objs.get(c.conceptKey)||[]}))};
+  concepts:b.concepts.map((c,i)=>({c,i})).sort((x,y)=>risk(x.c)-risk(y.c)||x.i-y.i).map(({c})=>({conceptKey:c.conceptKey,existingConceptId:c.existingConceptId||null,label:c.document.label,aliases:c.document.aliases,classification:c.document.classification,
+  conceptType:c.conceptType||null,umbrella:c.umbrella===true,reviewFlags:c.reviewFlags||[],linkedCodes:c.linkedCodes,objectives:objs.get(c.conceptKey)||[]}))};
 }
 export function parseAcceptRequest(body,batchId){
  if(!body||typeof body!=='object'||Array.isArray(body))throw new Error('batch_accept_invalid');
