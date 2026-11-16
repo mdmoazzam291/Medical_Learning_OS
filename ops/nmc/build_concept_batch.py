@@ -35,6 +35,19 @@ def level_code(lv):
     toks=re.findall(r'KH|SH|P|K',lv or '')
     order=['K','KH','SH','P']
     return max(toks,key=order.index) if toks else 'KH'
+VERSION=getattr(spec,'VERSION','v1')
+code_count={}
+for c0 in spec.C:
+    for k,_ in c0['links']: code_count[k]=code_count.get(k,0)+1
+def review_flags(c,links,existing):
+    f=[]
+    if existing: f.append('reuses-accepted-identity')
+    if any(code_count[k]>1 for k in links): f.append('split-source-row')
+    if len(dict.fromkeys(links))>1: f.append('merges-source-rows')
+    if c.get('umbrella'): f.append('umbrella')
+    if c['label'] in getattr(spec,'RENAMED_TO',set()): f.append('renamed-from-v1')
+    if c['label'] in getattr(spec,'ADDED',set()): f.append('new-split-in-v2')
+    return f
 concepts=[];objectives=[]
 for c in spec.C:
     key='nmc-concept:'+hashlib.sha256(('physiology|'+c['label']).encode()).hexdigest()[:16]
@@ -59,17 +72,25 @@ for c in spec.C:
               'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
             links.append(code)
     subjects=['physiology']+[s for s in c['extraSubjects'] if s!='physiology']
-    domain='clinical-skill' if all(level_code(byCode[k][0]['level']) in('SH','P') for k,_ in c['links']) and not TESTS.search(c['label']) else ('pathophysiology' if c['label'] in DISEASE else ('laboratory-method' if TESTS.search(c['label']) else 'normal-function'))
+    expected=None
+    if getattr(spec,'EVIDENCED_SUBJECTS_ONLY',False):
+        evidenced=list(dict.fromkeys(byCode[k][0]['subjectId'] for k,_ in c['links']))
+        expected=[x for x in subjects if x not in evidenced]; subjects=evidenced
+    legacy_domain='clinical-skill' if all(level_code(byCode[k][0]['level']) in('SH','P') for k,_ in c['links']) and not TESTS.search(c['label']) else ('pathophysiology' if c['label'] in DISEASE else ('laboratory-method' if TESTS.search(c['label']) else 'normal-function'))
+    domains=[c['conceptType']]+(['umbrella'] if c.get('umbrella') else []) if 'conceptType' in c else [legacy_domain]
     tasks=sorted({o['task'] for o in objectives if o['conceptKey']==key})
     ev='; '.join(f"{code} p.{byCode[code][0]['pdfPages'][0]} {byCode[code][0]['referenceId']}" for code in dict.fromkeys(links))
-    doc={'label':c['label'],'aliases':c['aliases'],'classification':{'subjects':subjects,'systems':[c['system']],'organs':[],'domains':[domain],'tasks':tasks},
+    doc={'label':c['label'],'aliases':c['aliases'],'classification':{'subjects':subjects,'systems':[c['system']],'organs':list(c.get('organs',[])),'domains':domains,'tasks':tasks},
          'sourceEvidence':('NMC CBME 2024-09-12 (sha256 '+cat['sourceSha256'][:12]+'): '+ev)[:4000],
-         'changeReason':'Physiology pilot batch v1: canonical concept for NMC Physiology source rows; objectives bind after acceptance.'}
-    concepts.append({'conceptKey':key,'existingConceptId':existing,'document':doc,'linkedCodes':list(dict.fromkeys(links))})
+         'changeReason':'Physiology pilot batch '+VERSION+': canonical concept for NMC Physiology source rows; objectives bind after acceptance.'}
+    item={'conceptKey':key,'existingConceptId':existing,'document':doc,'linkedCodes':list(dict.fromkeys(links))}
+    if 'conceptType' in c: item.update({'conceptType':c['conceptType'],'umbrella':bool(c.get('umbrella')),'scoringUnit':not c.get('umbrella'),'reviewFlags':review_flags(c,links,existing)})
+    if expected is not None: item['expectedSubjects']=expected
+    concepts.append(item)
 new=[c for c in concepts if not c['existingConceptId']]
-batch={'schemaVersion':1,'batchId':'nmc-physiology-concepts-v1-20261116','subjectId':'physiology','sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
+batch={'schemaVersion':1,'batchId':'nmc-physiology-concepts-'+VERSION+'-20261116','subjectId':'physiology','sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
  'status':'draft-batch-awaiting-admin-acceptance','attestation':'identity-and-classification-reviewed-not-medical-or-learner-release',
  'counts':{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},
- 'learnerActivation':False,'clinicalApproval':False,'concepts':concepts,'objectives':objectives}
+ 'learnerActivation':False,'clinicalApproval':False,**({'supersedes':spec.SUPERSEDES,'conceptTypes':list(spec.CONCEPT_TYPES),'counts':{**{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},'umbrellas':sum(1 for c in concepts if c.get('umbrella')),'flagged':sum(1 for c in concepts if c.get('reviewFlags'))}} if hasattr(spec,'SUPERSEDES') else {}),'concepts':concepts,'objectives':objectives}
 OUT.write_text(json.dumps(batch,ensure_ascii=False,indent=1)+'\n')
 print(batch['counts'])

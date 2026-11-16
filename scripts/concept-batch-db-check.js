@@ -39,7 +39,7 @@ try{
  const alias=input('synthetic-batch-3',[{conceptKey:key(6),document:doc('Beta alias')}]);
  await assert.rejects(run(alias),/concept_accept_identity_conflict/);
  // Real Physiology pilot batch must accept cleanly against the fixture.
- const batch=JSON.parse(await readFile(new URL('../docs/evidence/2026-11-16-nmc-physiology-concept-batch-v1.json',import.meta.url),'utf8'));
+ const batch=JSON.parse(await readFile(new URL('../docs/evidence/2026-11-16-nmc-physiology-concept-batch-v3.json',import.meta.url),'utf8'));
  const fresh=batch.concepts.filter(c=>!c.existingConceptId).map(c=>({conceptKey:c.conceptKey,document:c.document}));
  const pr=await run(input(batch.batchId,fresh,'Owner reviewed identity and classification for the Physiology pilot batch.'));
  assert.equal(pr.items,fresh.length);assert.equal(new Set(pr.receipts.map(x=>x.conceptId)).size,fresh.length);

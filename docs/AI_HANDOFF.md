@@ -1,3 +1,24 @@
+## NMC Physiology concept batch v3 — evidenced subjects only — 2026-11-16T11:55Z
+
+- Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` (PR #425), on top of `4e374e8`.
+- Owner instruction (17:13 IST): fix the necessary item from the two-view audit with minimal work.
+- Reason: acceptance hashes `classification` into the identity digest, so subjects guessed in advance (91 of 183 concepts carried 2–4) would be accepted as identity claims and would show empty subject tabs in the concept view.
+- `docs/evidence/2026-11-16-nmc-physiology-concept-batch-v3.json` (spec `ops/nmc/specs/physiology_concepts_v3.py`, builder flag `EVIDENCED_SUBJECTS_ONLY`): `classification.subjects` is derived from the linked source rows (all 183 are `['physiology']`); the earlier guesses are kept as `expectedSubjects` on the batch item, outside the accepted document. Labels, aliases, types, organs and all 191 objectives are identical to v2 (verified by comparison). v2 rebuilds byte-identically (`dbc19399…22a5`).
+- Endpoint pin changed in source to commit `d2bc505`, SHA-256 `6a733f98…8f3f`. Batch tests 7/7.
+- Not done: redeploy of `nmc-admin-preview` with the v3 pin (production still serves v2), merge of #425, owner acceptance in Admin, objective binding from receipts. Do not accept v2.
+- Deferred, not needed before acceptance: question subject fallback in `content-library.js` (catalogue has no questions); objective ID on learning events; single subject tree.
+
+---
+
+## NMC Physiology concept batch v2 — 2026-11-16T10:50Z
+
+- Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` from main `3f9d9f9`; data commit `91a46e2` (v2 batch, SHA-256 `dbc19399…22a5`). See STATUS.md and ADR-134.
+- Production state: migration applied (0 batch rows, 12 accepted identities); `nmc-admin-preview` redeployed as version 3 serving the v2 batch (deployed files read back and match the repo).
+- PR #425 open; `npm test` 1,693/1,693 and `npm run check` pass; CI check, browser and Cloudflare build passed, WebKit was still running. Merge was blocked by a session permission check and needs the owner's go-ahead.
+- Next exact action: merge #425; the owner accepts the v2 batch in Admin (Owner console → Canonical concept batch); then bind the 191 objectives to receipt concept IDs.
+
+---
+
 ## NMC Physiology concept pilot and batch acceptance — 2026-11-16T10:00Z
 
 - Writer: Claude, branch `feat/nmc-physiology-concept-batch-20261116` from main `05857d1`.

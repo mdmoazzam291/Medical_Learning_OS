@@ -1,3 +1,26 @@
+## NMC Physiology concept batch v3 — evidenced subjects only — 2026-11-16T11:55Z
+
+- Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` (PR #425), on top of `4e374e8`.
+- Owner instruction (17:13 IST): fix the necessary item from the two-view audit with minimal work.
+- Reason: acceptance hashes `classification` into the identity digest, so subjects guessed in advance (91 of 183 concepts carried 2–4) would be accepted as identity claims and would show empty subject tabs in the concept view.
+- `docs/evidence/2026-11-16-nmc-physiology-concept-batch-v3.json` (spec `ops/nmc/specs/physiology_concepts_v3.py`, builder flag `EVIDENCED_SUBJECTS_ONLY`): `classification.subjects` is derived from the linked source rows (all 183 are `['physiology']`); the earlier guesses are kept as `expectedSubjects` on the batch item, outside the accepted document. Labels, aliases, types, organs and all 191 objectives are identical to v2 (verified by comparison). v2 rebuilds byte-identically (`dbc19399…22a5`).
+- Endpoint pin changed in source to commit `d2bc505`, SHA-256 `6a733f98…8f3f`. Batch tests 7/7.
+- Not done: redeploy of `nmc-admin-preview` with the v3 pin (production still serves v2), merge of #425, owner acceptance in Admin, objective binding from receipts. Do not accept v2.
+- Deferred, not needed before acceptance: question subject fallback in `content-library.js` (catalogue has no questions); objective ID on learning events; single subject tree.
+
+---
+
+## NMC Physiology concept batch v2 — 2026-11-16T10:50Z
+
+- Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` from main `3f9d9f9` (#424 merged; migration applied in production with 0 batch rows; v1 never accepted).
+- Owner approved the v2 changes (15:51 IST); ADR-134 records the rules.
+- `docs/evidence/2026-11-16-nmc-physiology-concept-batch-v2.json` (spec `ops/nmc/specs/physiology_concepts_v2.py`, which overrides v1 explicitly): 183 concepts (181 new, 2 reused), 191 objectives, all 136 rows. 23 entity renames (e.g. Liver, Heart, Pain, Pregnancy, Thyroid gland); about 60 wrong aliases removed (e.g. Myasthenia gravis, Insulin, Cerebral circulation, Spirometry); splits PY3.5 (Myasthenia gravis, Lambert-Eaton myasthenic syndrome), PY4.9 (+Bile), PY5.1 (+Coronary circulation); every concept typed; 16 umbrellas; 41 with organs; review flags drive risky-first ordering in the Admin screen.
+- Pinned at commit `91a46e2`, SHA-256 `dbc19399…22a5` (verified through the GitHub API). v1 rebuilds byte-identically (`bb6882e4…2b8c`).
+- No production label/alias collisions (catalog: Brown-Séquard; 12 accepted spinal identities). PostgreSQL batch check passes with 181 concepts; batch tests 6/6.
+- Not yet done: redeploy `nmc-admin-preview` with the v2 pin, merge, owner acceptance in Admin, then objective binding from receipts.
+
+---
+
 ## NMC Physiology concept pilot and batch acceptance — 2026-11-16T10:00Z
 
 - Writer: Claude, branch `feat/nmc-physiology-concept-batch-20261116` from main `05857d1`.
