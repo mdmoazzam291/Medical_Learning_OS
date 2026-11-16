@@ -1,3 +1,16 @@
+## NMC Physiology objectives in the foundation registry — 2026-11-16T14:10Z
+
+- Writer: Claude, branch `feat/nmc-physiology-registry-20261116` from main `87feea4`.
+- Owner instruction (19:22 IST): no private-bank questions yet; complete the NMC foundation and necessary tasks only.
+- `data/nmc-learning-foundation-drafts.json` → draft version `@5` (allowed in `src/domain/nmc-learning-foundation.js`): 185 Physiology objectives and source bindings added by `ops/nmc/add-batch-objectives-to-registry.js` (201 objectives, 202 bindings, 192 concepts, 140 source-linked references). Concept IDs come from the verified receipt bindings; identity digests from the accepted documents (evidenced subjects only). Every addition passes `validateFoundationDrafts`.
+- Skipped, by rule: PY9.1 ×2 (official amendment row; stays on the source-exception track) and 4 spinal-cord objectives whose rows are already bound to the same concept in the registry.
+- Depth keeps the printed NMC level (`knows`, `knows-how`, `shows-how`, `performs`); ADR-136.
+- Tests 1,696/1,696; check passed. Foundation tests updated from the old fixed counts (16 objectives) to the new totals and a Physiology registry test added.
+- Not done: the Admin foundation page reads this file bundled into `owner-api`, so it shows the new objectives only after `owner-api` is redeployed. No clinical review, no learner activation, no questions imported.
+- Next: redeploy `owner-api`; then the next subject's concept batch using the same pipeline (spec → batch → Admin acceptance → bindings → registry).
+
+---
+
 ## NMC Physiology batch v3 accepted; objectives bound to concept IDs — 2026-11-16T13:40Z
 
 - Writer: Claude, branch `docs/nmc-batch-v3-deployed-20261116` (PR #426).

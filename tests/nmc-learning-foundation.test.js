@@ -1,3 +1,4 @@
+import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import pack from '../data/nmc-learning-foundation-drafts.json' with {type:'json'};
@@ -13,14 +14,14 @@ async function fixture(){
  return {p,catalog:{version:p.authoredCatalogVersion,concepts}};
 }
 test('original objectives reuse the established objective shape, stable canonical identities and scoped source proposals',()=>{
- const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,16);assert.equal(p.sourceBindings.length,17);
- assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,16);
- assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,13);
+ const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,201);assert.equal(p.sourceBindings.length,202);
+ assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,201);
+ assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,192);
  assert.equal(registry.objectives.length,0);assert.equal(registry.mappings.length,0);
 });
 test('Admin projection tracks all source appearances, pending originals and explicit canonical identities',async()=>{
  const {p,catalog}=await fixture();const result=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,16);assert.equal(result.totals.sourceLinkedReferences,8);
+ assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,201);assert.equal(result.totals.sourceLinkedReferences,140);
  assert.equal(result.acceptedMappings,0);assert.equal(result.learnerActivation,false);assert.equal(result.coverageFraction,null);
  assert.equal(result.objectives.find(r=>r.sourceReferences.length===2).identityState,'current');
  assert.equal(result.totals.unboundObjectiveDrafts,0);
@@ -49,4 +50,12 @@ test('pagination and source filters reject malformed inputs',async()=>{
 
 test('control characters and nonprimitive offsets fail closed',async()=>{
  const {p,catalog}=await fixture();for(const f of [{search:'bad\nquery'},{offset:[]},{offset:{toString:()=> '0'}}])await assert.rejects(foundationDraftPage(p,catalogue,catalog,f));
+});
+test('Physiology batch v3 objectives sit in the registry on receipt-bound concept IDs with printed NMC depth',async()=>{
+ const bind=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-physiology-objective-bindings-v1.json',import.meta.url)));
+ const byOv=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
+ const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
+ assert.equal(inReg.length,185);
+ for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@5');
 });

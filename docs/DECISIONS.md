@@ -1689,3 +1689,8 @@ The owner approved Claude to take the necessary decisions on the NMC exception l
 ## ADR-135 — Concept subjects are evidenced, not predicted (owner instruction, 16 November 2026)
 
 A canonical concept's `classification.subjects` lists only subjects whose own source rows or content link to it. Subjects an editor expects later are recorded as non-binding `expectedSubjects` hints outside the accepted document. Another subject joins a concept through a versioned classification revision when its objectives are linked. This supports the two browsing views (subject-wise and concept-wise) without empty subject sections, and keeps predictions out of the accepted identity digest. Applied first in Physiology batch v3, which supersedes the unaccepted v2.
+
+## ADR-136 — Objective depth keeps the printed NMC level (16 November 2026)
+
+Foundation objectives store depth as the level printed in the NMC row (`knows`, `knows-how`, `shows-how`, `performs`) rather than translating it into another vocabulary. The printed level is the sourced fact; any display or exam-specific label is a mapping applied at read time. Earlier registry objectives that use other labels (for example `applied`) stay as they are until revised through a versioned objective revision.
+
