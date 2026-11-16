@@ -1,3 +1,11 @@
+## NMC Community Medicine concept batch v1 — 2026-11-16T18:55Z
+
+- `docs/evidence/2026-11-17-nmc-community-medicine-concept-batch-v1.json` (spec `ops/nmc/specs/community_medicine_concepts_v1.py`): 98 concepts (87 new; 11 reused), 141 objectives, all 136 rows. Non-synonym or ambiguous aliases removed (e.g. "PHC"). No clash with 1,242 production names.
+- Earlier batches rebuild byte-identically. Endpoint pin: commit `efb4849`, SHA-256 `16d68cbd…0388`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Forensic Medicine accepted, bound and registered — 2026-11-16T18:35Z
 
 - Owner accepted batch v1. Receipt: `nmc-forensic-medicine-concepts-v1-20261116`, SHA-256 `8d08d6db…5f3f`, accepted 2026-11-16T18:23:11Z, 99 items.
