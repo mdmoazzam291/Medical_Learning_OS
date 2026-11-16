@@ -9,12 +9,9 @@
   "modeRule": "Practical draft mode expected when the official level is SH or P; knowledge mode otherwise.",
   "scope": "All 131 Physiology references that lacked selected review evidence at the checked head (PY1.1-PY12.10; PY4.12, PY5.16 and PY6.12 already reviewed; PY9.1 is an official-replacement source exception and PY10.10 is an accepted-private canonical identity candidate (spinal cord transection patterns)).",
   "counts": {
-    "scope-aligned": 130,
-    "held-source-scope": 1
+    "scope-aligned": 131
   },
-  "heldCodes": [
-    "PY11.6"
-  ],
+  "heldCodes": [],
   "observations": [
     "PY9.1 and PY10.10 are outside the names-only index. PY9.1 is an official-replacement source exception (2026-11-13-nmc-source-exception-current-branch-checkpoint.json). PY10.10 is one of the 12 accepted-private canonical identity candidates (2026-11-12-nmc-full-index-coverage-and-canonical-candidates.json). Corrected 2026-11-16: an earlier version placed PY10.10 in the source-exception track.",
     "Topic 5 header states 3 certifiable competencies while rows PY5.14-PY5.16 show 3, 1 and 1."
@@ -2651,16 +2648,16 @@
       "originalTaskPacketSha256": "5262a4ef3e2160c1969416f1158783aa3d3f03196198054d81236df359a45216",
       "pdfPage": 159,
       "localMode": "performance-and-knowledge",
-      "domain": "K",
-      "level": "unverified",
+      "domain": "K S",
+      "level": "P",
       "core": null,
       "certificationCountReported": null,
-      "modeConsistentWithLevel": null,
+      "modeConsistentWithLevel": true,
       "officialTextRelay": "restated-by-reader",
-      "disposition": "held-source-scope",
-      "holdType": "mode-unverified",
-      "note": "The reader returned the row cells as \"K S P Y\", which does not fit the column pattern; domain reads K but the level cell is unclear, and the draft mode is practical. Scope itself matches (image formation, refractive errors and their management).",
-      "evidenceToResolve": "Inspect the rendered official row for domain and level, then confirm or change the draft mode.",
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Pinned PDF row (page 159) prints domain \"K S\", level P, core Y, with a \"Discuss\" verb and written/viva assessment. Practical draft mode is consistent with level P. Hold withdrawn 2026-11-16; the web reader had relayed the level cell incorrectly.",
+      "evidenceToResolve": null,
       "correctionAccepted": false,
       "mappingAccepted": false,
       "learnerActivation": false
@@ -2908,5 +2905,8 @@
       "learnerActivation": false
     }
   ],
-  "nextAction": "Resolve PY11.6 on the rendered official page, then continue with Surgery (116 pending references)."
+  "nextAction": "Resolve PY11.6 on the rendered official page, then continue with Surgery (116 pending references).",
+  "corrections": [
+    "2026-11-16: PY11.6 hold withdrawn after pinned-PDF check (level P)."
+  ]
 }

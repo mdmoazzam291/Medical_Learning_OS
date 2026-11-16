@@ -8,15 +8,14 @@
     "https://www.mgmuhs.com/Pathology_(CBME).pdf",
     "https://www.mgmuhs.com/Physiology%20(CBME)%20-jkfha.pdf"
   ],
-  "status": "twelve-correction-proposals-not-accepted",
-  "heldReferences": 12,
+  "status": "nine-correction-proposals-two-optional-not-accepted",
+  "heldReferences": 9,
   "proposedCorrections": 12,
   "acceptedCorrections": 0,
   "unresolvedHolds": 12,
-  "note": "Proposals for the 12 holds raised by the 2026-11-16 source-scope review packets. Proposed tasks stay inside the official row wording as read through a web reader. Mode-only proposals (PA22.4, PA22.5, PY11.6) cite a second, non-official reproduction of the same table; that corroborates but does not replace a rendered-page check of the official PDF. Original draft tasks and packets are unchanged. No clinician review, faculty acceptance or canonical mapping.",
+  "note": "Proposals for the 12 holds raised by the 2026-11-16 source-scope review packets. Proposed tasks stay inside the official row wording as read through a web reader. Mode-only proposals (PA22.4, PA22.5, PY11.6) cite a second, non-official reproduction of the same table; that corroborates but does not replace a rendered-page check of the official PDF. Original draft tasks and packets are unchanged. No clinician review, faculty acceptance or canonical mapping. 2026-11-16: pinned-PDF check confirmed 9 holds, withdrew PY11.6 and resolved PA22.4/PA22.5 (proposals kept as optional).",
   "acceptanceRequires": [
-    "Rendered-page check of the official NMC row (domain, level, wording).",
-    "Explicit owner or faculty acceptance recorded as a versioned objective revision."
+    "Explicit owner/faculty acceptance as a versioned objective revision. The rendered-page check is complete for these rows."
   ],
   "records": [
     {
@@ -38,13 +37,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "FM1.5",
@@ -65,13 +65,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "FM14.13",
@@ -92,13 +93,14 @@
       "proposedTaskMode": "performance-and-knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "GM10.15",
@@ -119,13 +121,14 @@
       "proposedTaskMode": "performance-and-knowledge",
       "proposalNote": "Sampling technique removed; the official row is indications and interpretation of the data.",
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "GM24.1",
@@ -146,13 +149,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "OG30.2",
@@ -173,13 +177,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "OR2.16",
@@ -200,13 +205,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "PA2.2",
@@ -227,13 +233,14 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": null,
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "PA22.4",
@@ -246,21 +253,22 @@
       "originalDraftMode": "knowledge",
       "originalDraftTask": "Distinguish hepatocellular, cholestatic and synthetic dysfunction patterns in sample reports.",
       "priorHeldReason": "The reader returned the domain cell as \"KS\" with level KH and a certification number; the draft mode is knowledge. Scope itself matches (interpret a liver function panel).",
-      "holdType": "mode-unverified",
-      "officialDomain": "unverified",
+      "holdType": null,
+      "officialDomain": "K S",
       "officialLevel": "KH",
-      "scopeCorrectionStatus": "proposal-made-original-hold-retained",
+      "scopeCorrectionStatus": "hold-resolved-optional-mode-proposal",
       "proposedCurriculumBoundTask": "Describe and interpret the abnormalities in a supplied liver function test panel, distinguishing hepatocellular, cholestatic and synthetic-function patterns.",
       "proposedTaskMode": "performance-and-knowledge",
-      "proposalNote": "Mode change only. Second source (MGM Pathology CBME) prints domain \"KS\", level KH, LGT/DOAP teaching, skill assessment and 4 to certify.",
+      "proposalNote": "Hold resolved: pinned PDF prints domain KS, level KH, DOAP, skill assessment, 4 to certify. The knowledge draft follows the level rule; the practical-mode proposal is optional.",
       "modeChanged": true,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "PA22.5",
@@ -273,21 +281,22 @@
       "originalDraftMode": "knowledge",
       "originalDraftTask": "Interpret representative renal function results and explain what they indicate about filtration and associated disturbances.",
       "priorHeldReason": "The reader returned the domain cell as \"KS\" with level KH and a certification number; the draft mode is knowledge. Scope itself matches (interpret a renal function panel).",
-      "holdType": "mode-unverified",
-      "officialDomain": "unverified",
+      "holdType": null,
+      "officialDomain": "K S",
       "officialLevel": "KH",
-      "scopeCorrectionStatus": "proposal-made-original-hold-retained",
+      "scopeCorrectionStatus": "hold-resolved-optional-mode-proposal",
       "proposedCurriculumBoundTask": "Describe and interpret the abnormalities in a supplied renal function test panel and state what each abnormal value indicates.",
       "proposedTaskMode": "performance-and-knowledge",
-      "proposalNote": "Mode change only. Second source (MGM Pathology CBME) prints domain \"KS\", level KH, LGT/DOAP teaching, skill assessment and 4 to certify.",
+      "proposalNote": "Hold resolved: pinned PDF prints domain KS, level KH, DOAP, skill assessment, 4 to certify. The knowledge draft follows the level rule; the practical-mode proposal is optional.",
       "modeChanged": true,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     },
     {
       "code": "PA8.5",
@@ -308,46 +317,25 @@
       "proposedTaskMode": "knowledge",
       "proposalNote": "Organ-lesion pathology removed; it is not named in the official row.",
       "modeChanged": false,
-      "sourceBodyRehashedNow": false,
+      "sourceBodyRehashedNow": true,
       "clinicalAcceptance": false,
       "canonicalConceptId": null,
       "objectiveVersionId": null,
       "mappingAccepted": false,
       "correctionAccepted": false,
-      "learnerActivation": false
-    },
-    {
-      "code": "PY11.6",
-      "sourceReferenceId": "nmc-2024-ref:9da21cd4091d534fd4554fce53be97d97c18b4236d3162825b18ad4eb590c8cc",
-      "sourceBodySha256": "16e946cd6962bc107bf425087decf5fcd9713239240bdc1de1898d69e2d17706",
-      "originalSourcePacket": "docs/evidence/2026-11-05-nmc-physiology-renal-endocrine-reproductive-senses-draft-tasks.json",
-      "sourcePdfPage": 159,
-      "reviewPacket": "docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json",
-      "reviewPacketSha256": "90bb098190410782d206a20bd03dd8a04e2318f6ddf2fa585ecbff1c9b635104",
-      "originalDraftMode": "performance-and-knowledge",
-      "originalDraftTask": "Use ray diagrams or an optical model to demonstrate focusing and accommodation and explain correction of common refractive errors.",
-      "priorHeldReason": "The reader returned the row cells as \"K S P Y\", which does not fit the column pattern; domain reads K but the level cell is unclear, and the draft mode is practical. Scope itself matches (image formation, refractive errors and their management).",
-      "holdType": "mode-unverified",
-      "officialDomain": "K",
-      "officialLevel": "unverified",
-      "scopeCorrectionStatus": "proposal-made-original-hold-retained",
-      "proposedCurriculumBoundTask": "Discuss image formation in the eye, the common refractive errors and the physiological principles of their correction, using ray diagrams.",
-      "proposedTaskMode": "knowledge",
-      "proposalNote": "Mode change only. Second source (MGM Physiology CBME 2024 batch) prints the same garbled \"K S P Y\" cells but gives \"Discuss\", LGT/SGT/ECE teaching, written/viva assessment and no certification, which supports knowledge mode.",
-      "modeChanged": true,
-      "sourceBodyRehashedNow": false,
-      "clinicalAcceptance": false,
-      "canonicalConceptId": null,
-      "objectiveVersionId": null,
-      "mappingAccepted": false,
-      "correctionAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerification": "row body hash reproduced from pinned PDF; text read from row"
     }
   ],
   "withdrawnHolds": [
     {
       "code": "SU5.2",
       "reason": "Held in error; draft mode was already performance-and-knowledge, consistent with official C/SH."
+    },
+    {
+      "code": "PY11.6",
+      "withdrawnAt": "2026-11-16",
+      "reason": "Pinned PDF prints level P; the practical draft is consistent. Proposal to switch to knowledge withdrawn."
     }
   ]
 }

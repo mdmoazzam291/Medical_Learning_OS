@@ -8,14 +8,12 @@
   "verification": "Official NMC document text read through a web reader that quotes short rows and restates long rows; first 60 rows also cross-read against a university reproduction of the same table (https://www.mgmuhs.com/Pathology_(CBME).pdf). PDF bytes, the pinned SHA-256, sourceBodySha256 values, rendered pages and table-cell alignment were not independently verified. Identity of this file with the pinned source PDF is assumed from title and date, not proven. No source prose stored.",
   "scope": "All 174 Pathology references that lacked selected review evidence at the checked head: the 60-reference queue PA1.1-PA16.2 and the remaining 114 (PA16.3-PA35.1).",
   "counts": {
-    "scope-aligned": 170,
-    "held-source-scope": 4
+    "scope-aligned": 172,
+    "held-source-scope": 2
   },
   "heldCodes": [
     "PA2.2",
-    "PA8.5",
-    "PA22.4",
-    "PA22.5"
+    "PA8.5"
   ],
   "limits": [
     "Editorial scope comparison only; no clinical, faculty, rights or canonical acceptance.",
@@ -1753,18 +1751,19 @@
       "originalTaskPacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
       "pdfPage": 194,
       "localMode": "knowledge",
-      "domain": "unverified",
+      "domain": "K S",
       "level": "KH",
       "core": true,
       "certificationCountReported": 4,
       "officialTextRelay": "quoted",
-      "disposition": "held-source-scope",
-      "holdType": "mode-unverified",
-      "note": "The reader returned the domain cell as \"KS\" with level KH and a certification number; the draft mode is knowledge. Scope itself matches (interpret a liver function panel).",
-      "evidenceToResolve": "Inspect the rendered official row for the domain, level and certification cells, then confirm or change the draft mode.",
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Pinned PDF row (page 194) prints domain \"KS\", level KH, core Y, LGT/DOAP, skill assessment, 4 to certify. Knowledge draft mode follows the level rule; scope matches. Hold resolved 2026-11-16. Practical mode stays an optional owner choice given the skill assessment and certification count.",
+      "evidenceToResolve": null,
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "modeConsistentWithLevel": true
     },
     {
       "code": "PA22.5",
@@ -1774,18 +1773,19 @@
       "originalTaskPacketSha256": "6358eb3fa4c6e53a8ef122484988abf56cebb58fdb050fab909f1381f98d00bc",
       "pdfPage": 194,
       "localMode": "knowledge",
-      "domain": "unverified",
+      "domain": "K S",
       "level": "KH",
       "core": true,
       "certificationCountReported": 4,
       "officialTextRelay": "quoted",
-      "disposition": "held-source-scope",
-      "holdType": "mode-unverified",
-      "note": "The reader returned the domain cell as \"KS\" with level KH and a certification number; the draft mode is knowledge. Scope itself matches (interpret a renal function panel).",
-      "evidenceToResolve": "Inspect the rendered official row for the domain, level and certification cells, then confirm or change the draft mode.",
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Pinned PDF row (page 194) prints domain \"KS\", level KH, core Y, LGT/DOAP, skill assessment, 4 to certify. Knowledge draft mode follows the level rule; scope matches. Hold resolved 2026-11-16. Practical mode stays an optional owner choice given the skill assessment and certification count.",
+      "evidenceToResolve": null,
       "correctionAccepted": false,
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "modeConsistentWithLevel": true
     },
     {
       "code": "PA23.1",
@@ -3678,5 +3678,8 @@
       "learnerActivation": false
     }
   ],
-  "nextAction": "Resolve the four held rows against rendered official pages, then continue with Forensic Medicine (156 pending references)."
+  "nextAction": "Resolve the four held rows against rendered official pages, then continue with Forensic Medicine (156 pending references).",
+  "corrections": [
+    "2026-11-16: PA22.4 and PA22.5 mode-unverified holds resolved after pinned-PDF check (domain KS, level KH)."
+  ]
 }

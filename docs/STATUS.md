@@ -1,3 +1,22 @@
+## NMC pinned-PDF verification — 2026-11-16T03:25Z
+
+- Writer: Claude, draft PR #421 from remote head `3d65100c7711a57b3aea36c763d54a3bb01e995f`. Ownership released after remote readback.
+- The owner uploaded the official PDF. **SHA-256 `aa601690…ae23c` matches the pinned source** (4,113,924 bytes, 467 pages, ModDate 2024-09-12). Stored outside the repo; no source prose committed.
+- PyMuPDF 1.26.6 (pinned by the repo verifiers) is not installed and installs are blocked; pdfplumber with the repo `raw_cell` method reproduced all 17 pinned bindings, so it was used.
+- Wrote `docs/evidence/2026-11-16-nmc-pinned-pdf-verification.json`:
+  - Session review rows: **1,396/1,402 row hashes reproduced**; 6 confirmed by content (AN40.1, MI1.1, MI1.3, MI1.6, MI1.7, MI1.12). Recorded domain/level agree with the PDF except the three holds below.
+  - **PY11.6 hold withdrawn**: PDF prints domain "K S", level **P**; the practical draft is consistent. The web reader had relayed the level wrongly; the knowledge-mode proposal is withdrawn.
+  - **PA22.4/PA22.5 holds resolved**: domain KS, level KH, DOAP, skill assessment, 4 to certify; knowledge draft follows the level rule; practical mode kept as an optional proposal.
+  - **9 session holds confirmed** by PDF text: PA2.2, PA8.5, FM1.5, FM14.13, OG30.2, BC14.18, OR2.16 (continues on the next page with femur/tibia fractures and child abuse), GM10.15, GM24.1.
+  - 16 Forensic Medicine KH rows with practical drafts (FM2.26–2.28, FM14.4–14.20 except FM14.13 and knowledge rows) now carry documented mode-exception notes.
+  - Source exceptions: 18/18 rows reproduced; 7 mode holds confirmed at KH; OR2.9 printed form corrected to "OR2. 2.9".
+  - Canonical identity rows: 8/8 reproduced; AN57.5 full text confirms its eight conditions; 15 links still aligned.
+  - Earlier 154 holds: 153 row hashes reproduced, AN81.2 by content; their text-layer findings now rest on verified bytes.
+- Session totals now **1,393 aligned, 9 held**. Audit still 2,607/2,607; tests 1,666/1,666; check passed.
+- Next: owner/faculty decisions only — 9 session holds, 7 exception mode holds, 7 aliases, 2 heading labels, 15 identity links, 153 earlier proposals; then objectives for PY10.7/PY10.9 uncovered elements.
+
+---
+
 ## NMC canonical identity source-scope check — 2026-11-16T03:05Z
 
 - Writer: Claude, draft PR #421 from remote head `a8eb1c42c821595c96a440e7488ad74b5ba8c3d3`. Ownership released after remote readback.

@@ -21,7 +21,7 @@
       "sha256": "fba2c49ec97583902af4e52405bab022ab813291d4820354926f47f83bb1408a"
     }
   ],
-  "verification": "Official rows AN57.1-AN57.5 and PY10.7, PY10.9, PY10.10 read from the NMC 12-09-2024 text through a web reader on 2026-11-16. AN57.5 full text was not quoted by the reader; its condition list was relayed. A direct PDF download from the workspace was refused by the network allowlist and no copy was found in Drive, so PDF bytes, the pinned SHA and rendered pages remain unverified.",
+  "verification": "Official rows AN57.1-AN57.5 and PY10.7, PY10.9, PY10.10 read from the NMC 12-09-2024 text through a web reader on 2026-11-16. AN57.5 full text was not quoted by the reader; its condition list was relayed. A direct PDF download from the workspace was refused by the network allowlist and no copy was found in Drive, so PDF bytes, the pinned SHA and rendered pages remain unverified. Update 2026-11-16: all 8 rows reproduced from the uploaded pinned PDF (pages 140, 141, 158); AN57.5 full text read, its eight listed conditions confirmed.",
   "scope": "The 12 accepted-private identities in previewCanonicalCandidates and their 15 proposed objective links. Identity acceptance is already recorded; only source mapping is checked here.",
   "counts": {
     "identities": 12,
@@ -223,7 +223,8 @@
       "holdType": null,
       "note": "Specimen orientation and external landmarks; practical task matches K/S SH.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:bff943f8f8d6a41099b670567d240e019e706516521cf0c460d77fd7e31e1a3b",
@@ -246,7 +247,8 @@
       "holdType": null,
       "note": "Child-adult extent comparison with one implication; within row.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:f6e884076849a56fc0b10a496782c2e59b8c9b232c3912a1165b51c02f4b7fb7",
@@ -269,7 +271,8 @@
       "holdType": null,
       "note": "Sketch and label both levels; mirrors the official draw-and-label task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884",
@@ -292,7 +295,8 @@
       "holdType": null,
       "note": "Sorting mid-thoracic tracts by direction; enumeration within row.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -315,7 +319,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -338,7 +343,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -361,7 +367,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -384,7 +391,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -407,7 +415,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -430,7 +439,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
@@ -453,7 +463,8 @@
       "holdType": null,
       "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
@@ -476,7 +487,8 @@
       "holdType": null,
       "note": "Complete or incomplete transection; hemisection is carried by the retained Brown-Sequard identity.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
@@ -499,7 +511,8 @@
       "holdType": null,
       "note": "Complete or incomplete transection; hemisection is carried by the retained Brown-Sequard identity.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
@@ -522,7 +535,8 @@
       "holdType": null,
       "note": "Spinal portions of ascending pathways only; somatic sensations and applied sensory aspects remain uncovered by these links.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     },
     {
       "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
@@ -545,7 +559,8 @@
       "holdType": null,
       "note": "Descending pathway course only; UMN versus LMN lesion differences remain uncovered by these links.",
       "mappingAccepted": false,
-      "learnerActivation": false
+      "learnerActivation": false,
+      "pdfVerified": true
     }
   ],
   "limits": [
