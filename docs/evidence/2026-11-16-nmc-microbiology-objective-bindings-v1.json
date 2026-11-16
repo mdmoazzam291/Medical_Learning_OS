@@ -1,0 +1,1434 @@
+{
+ "schemaVersion": 1,
+ "bindingId": "nmc-microbiology-concepts-v1-20261116:objective-bindings@1",
+ "batchId": "nmc-microbiology-concepts-v1-20261116",
+ "batchSha256": "145141e3f7532a61c417234a328efeb7196899f79db85e81bda241ea32bf5c20",
+ "acceptance": {
+  "table": "content_concept_batch_acceptances",
+  "acceptedAt": "2026-11-16T16:28:12Z",
+  "itemCount": 54,
+  "receiptPairsSha256": "92b3502fe855e95f95daa3a3f089536d0e04610c14e1cfb8e9a46734bf22ea81"
+ },
+ "status": "bound-draft-not-in-objective-registry",
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "counts": {
+  "concepts": 72,
+  "objectives": 89
+ },
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:24124ce7f84f9bd2",
+   "conceptId": "C-51f5a812-5079-4ee8-a202-5253e5ffcda0",
+   "label": "Microbiology",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:3c0e2de9d1d80944",
+   "conceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
+   "label": "Microorganisms",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8e086404420b1495",
+   "conceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+   "label": "Polymerase chain reaction",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:cdc4c0d66ce2eddb",
+   "conceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
+   "label": "Laboratory diagnosis of infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e3347334b3d95483",
+   "conceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "label": "Microbiological specimen collection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:466b5f894225d3ee",
+   "conceptId": "C-7c965fab-6521-4b1c-a4db-ba0fbd26ed44",
+   "label": "Diagnostic test counselling",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0e9531cc7e45018f",
+   "conceptId": "C-641d0da2-96e6-46a4-a64d-74698ca83bdf",
+   "label": "Patient confidentiality",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9f531bf67b1a8774",
+   "conceptId": "C-622d7c7a-02d1-4c1a-ae13-08f0da754019",
+   "label": "Gram staining",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0e1d0e61c10ce083",
+   "conceptId": "C-913bbb8a-299f-4e1c-af4e-963cfb63c95f",
+   "label": "Ziehl-Neelsen staining",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:d9f6475d0321cbdf",
+   "conceptId": "C-d6a286de-c653-433b-a4e7-681f2f53c77c",
+   "label": "Stool examination",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a6540dd275bb646d",
+   "conceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "label": "Transmission of infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7b658d61ce02bb4a",
+   "conceptId": "C-04b4d135-508d-4b4f-b4ea-41a779faed0a",
+   "label": "Sterilisation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7cab766d03428321",
+   "conceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "label": "Disinfection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0e066e0bc87fa794",
+   "conceptId": "C-76801578-01e8-4b7d-a643-c07e25b2689e",
+   "label": "Immunity",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:9fee2c5794f40346",
+   "conceptId": "C-11745acf-4db4-4c0d-b998-59a94bbedd13",
+   "label": "Immune system",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:28407acc695e0bbf",
+   "conceptId": "C-0530df41-c7ed-40cb-bfe9-ad189cac2838",
+   "label": "Complement system",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fd6d03cbacdb79b1",
+   "conceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "label": "Humoral immunity",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c916d73380f56a6d",
+   "conceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "label": "Cell-mediated immunity",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:2b9266b0e04e79ec",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "label": "Host response to infection",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:8b32381327b79861",
+   "conceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+   "label": "Serological tests",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e051a89c7004e6f5",
+   "conceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "label": "Immunisation",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8356a2b7e8f172a5",
+   "conceptId": "C-01baff8e-b4ca-4cb5-9c0a-102574fbdcb2",
+   "label": "Herd immunity",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:eaab46a9eb0d3fa3",
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "label": "Hypersensitivity reactions",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:84d17f7cb5ffbe98",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "label": "Autoimmunity",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:aee2b3dcf80b46e2",
+   "conceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "label": "Immunodeficiency",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:d04d8f8d651615b7",
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "label": "Transplant rejection",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:46ac7bd1730d5da9",
+   "conceptId": "C-08f0d5b2-db8f-4cfc-b64d-44e5aee18c2a",
+   "label": "Tumour immunity",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:2790f04d43d51a1f",
+   "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "label": "Rheumatic fever",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:f5f58b11b1b6d8af",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "label": "Infective endocarditis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:bb6cf02e7614c733",
+   "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "label": "Blood culture",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:fc7cebcaf9c51c87",
+   "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+   "label": "Pyrexia of unknown origin",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:89cc982f7babbb09",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "label": "Enteric fever",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:477b6d59f4a0605d",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "label": "Anaemia",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:28ef79db1d3fb5f6",
+   "conceptId": "C-921778b5-e1de-4439-9c14-1d3166587fb9",
+   "label": "Hookworm infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ceb6aa77a6b4477e",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "label": "Malaria",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:1cf6d32be0bc0e1b",
+   "conceptId": "C-f6228a56-6335-4d0d-93ac-e6f9c6b0e49d",
+   "label": "Visceral leishmaniasis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:206ac0c1c09d7a3e",
+   "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "label": "Lymphatic filariasis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0aab2a7da9ac3ece",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "label": "HIV infection",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:98cbfe39687f7f89",
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "label": "Diarrhoea",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:cd7d81b90e3910e1",
+   "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "label": "Dysentery",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c15caed8e980a631",
+   "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+   "label": "Food poisoning",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:239ee10aea4d97c1",
+   "conceptId": "C-6c240ee1-1316-4f68-a4ce-d11e0f061f88",
+   "label": "Helicobacter pylori infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:eef0aa9cb3937a3e",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "label": "Viral hepatitis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:76ba9f03b3d1021d",
+   "conceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "label": "Anaerobic infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:d68cf7800e9dd46b",
+   "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "label": "Osteomyelitis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:027cfe1af6a78e0d",
+   "conceptId": "C-d5c68e78-a0d8-41cb-a3e1-862f0f186feb",
+   "label": "Septic arthritis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9a84abcf92f9ed37",
+   "conceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
+   "label": "Skin and soft tissue infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:83200eea67ac0461",
+   "conceptId": "C-daaca46b-f9c5-4b66-83ec-8f0e9c3b5871",
+   "label": "Infectious rashes",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:8d54724f18b127ef",
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "label": "Leprosy",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:df5cb9a2dc029c91",
+   "conceptId": "C-c627db47-450f-48bd-b284-913e05da6363",
+   "label": "Cutaneous tuberculosis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:6063c9568db2a37f",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "label": "Meningitis",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:d5be4c416cd8ba76",
+   "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "label": "Encephalitis",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:bf092e7c5c4dc3bc",
+   "conceptId": "C-f7b33a40-242e-4222-9044-ef1ce4514014",
+   "label": "Upper respiratory tract infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7b7f277889d7609a",
+   "conceptId": "C-e90d0635-c3f9-4dff-b187-d582e03afc2a",
+   "label": "Lower respiratory tract infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b8eafc3fc9a5723c",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "label": "Pneumonia",
+   "identitySource": "existing-accepted-identity"
+  },
+  {
+   "conceptKey": "nmc-concept:2a26c5bb82830481",
+   "conceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+   "label": "Reproductive tract infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:e158fb2643c5d934",
+   "conceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "label": "Sexually transmitted infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b591a56db9464587",
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "label": "Urinary tract infection",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:7754c05047861800",
+   "conceptId": "C-db39288d-430f-467b-8ae0-1214d9c0b466",
+   "label": "Zoonoses",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:085824b9cf2e13eb",
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "label": "Opportunistic infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:0abe6d60886ab763",
+   "conceptId": "C-4b1b951d-5e5e-4a4b-8030-73bfaa70d384",
+   "label": "Oncogenic infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:6f456ffd4e5fea29",
+   "conceptId": "C-4f422ccd-251c-4324-a275-1f71e0c86d87",
+   "label": "Emerging infectious diseases",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:32de7100be2b0158",
+   "conceptId": "C-506649ad-fb9c-4f16-ae7c-cab5dccb2cb5",
+   "label": "National programmes for infectious diseases",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:ff4a343f5133a257",
+   "conceptId": "C-4f4b66c9-303f-4bed-9144-d175ea338adb",
+   "label": "Healthcare-associated infections",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b322ceaaf87bf9df",
+   "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "label": "Infection prevention and control",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:aecce23855298953",
+   "conceptId": "C-baa5bc2c-7da4-40b2-a467-fdce95892577",
+   "label": "Hand hygiene",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:87354ffc776f829d",
+   "conceptId": "C-5896c596-f5b9-4a2a-97e8-bd87f10b9783",
+   "label": "Personal protective equipment",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:89be1c888da8d26a",
+   "conceptId": "C-2396a7f1-b588-46ef-bc75-dd354b8af35e",
+   "label": "Biomedical waste management",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:c13379f83f0d0330",
+   "conceptId": "C-234b7c14-c2ba-494b-ac70-9cfc1a58c3d6",
+   "label": "Environmental microbiological surveillance",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:b9a08bcfc331ccbb",
+   "conceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "label": "Antimicrobial resistance",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:9d2395b316325b4a",
+   "conceptId": "C-1620e021-5df7-4bb0-9995-32fceebd8054",
+   "label": "Antimicrobial susceptibility testing",
+   "identitySource": "batch-acceptance-receipt"
+  },
+  {
+   "conceptKey": "nmc-concept:a1af7d0f7d58a6dd",
+   "conceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "label": "Antimicrobial stewardship",
+   "identitySource": "batch-acceptance-receipt"
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:24124ce7f84f9bd2:mechanism:bb4f3b5f@1",
+   "conceptId": "C-51f5a812-5079-4ee8-a202-5253e5ffcda0",
+   "conceptKey": "nmc-concept:24124ce7f84f9bd2",
+   "referenceId": "nmc-2024-ref:fed68a4511fb008f7aef7b7371ff5c312a9855c36b62f64a88348a8eec6356d6",
+   "code": "MI 1.1",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:3c0e2de9d1d80944:mechanism:32224c92@1",
+   "conceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
+   "conceptKey": "nmc-concept:3c0e2de9d1d80944",
+   "referenceId": "nmc-2024-ref:4df0abe029bea13e5e0a246594487a0bc853c4f8019e061e6c99b26fc555441b",
+   "code": "MI 1.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8e086404420b1495:mechanism:058ff3e0@1",
+   "conceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+   "conceptKey": "nmc-concept:8e086404420b1495",
+   "referenceId": "nmc-2024-ref:bd397c898d3bfe54d172f0360667f122964c8ebabcb8aa22ad471187d4ffa149",
+   "code": "MI 1.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cdc4c0d66ce2eddb:interpretation:3581a2a1@1",
+   "conceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
+   "conceptKey": "nmc-concept:cdc4c0d66ce2eddb",
+   "referenceId": "nmc-2024-ref:17dc800ee9de4ab857434e9564c4582a614032b155dfb68a61fa3c878bede55a",
+   "code": "MI 1.4",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cdc4c0d66ce2eddb:interpretation:eb3c7308@1",
+   "conceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
+   "conceptKey": "nmc-concept:cdc4c0d66ce2eddb",
+   "referenceId": "nmc-2024-ref:7cee991a8fa8510b14989679fe7c1475da6bdb04929219dc05091558d2823e4d",
+   "code": "MI 9.3",
+   "task": "interpretation",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e3347334b3d95483:mechanism:1cb5a1ee@1",
+   "conceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "conceptKey": "nmc-concept:e3347334b3d95483",
+   "referenceId": "nmc-2024-ref:11e5d1a71614d25bbf3c1d5893434856e64d57c7d05411750c6282e59601a840",
+   "code": "MI 1.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e3347334b3d95483:procedural-skill:74894b82@1",
+   "conceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "conceptKey": "nmc-concept:e3347334b3d95483",
+   "referenceId": "nmc-2024-ref:211d26838437468f3a940b9801f14ef51208fed99d2faf2b71a4f54e18508d8c",
+   "code": "MI 1.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e3347334b3d95483:procedural-skill:e186d03e@1",
+   "conceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "conceptKey": "nmc-concept:e3347334b3d95483",
+   "referenceId": "nmc-2024-ref:70ac758f1c34157f4ad68c542d7e37acad955acf66ebc580445868fbbcedc9ff",
+   "code": "MI 1.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:466b5f894225d3ee:procedural-skill:8aa409db@1",
+   "conceptId": "C-7c965fab-6521-4b1c-a4db-ba0fbd26ed44",
+   "conceptKey": "nmc-concept:466b5f894225d3ee",
+   "referenceId": "nmc-2024-ref:0155764603d20a8a58a5b706650568bdf19d95d98f2d81cbb598b7552e8a7c23",
+   "code": "MI 1.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0e9531cc7e45018f:procedural-skill:fe25660f@1",
+   "conceptId": "C-641d0da2-96e6-46a4-a64d-74698ca83bdf",
+   "conceptKey": "nmc-concept:0e9531cc7e45018f",
+   "referenceId": "nmc-2024-ref:85bbc25aedca3793adbb80760b84996d6a0aebebe1d01be4ae63924eeef0a466",
+   "code": "MI 1.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9f531bf67b1a8774:procedural-skill:2472adc4@1",
+   "conceptId": "C-622d7c7a-02d1-4c1a-ae13-08f0da754019",
+   "conceptKey": "nmc-concept:9f531bf67b1a8774",
+   "referenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+   "code": "MI 1.10",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0e1d0e61c10ce083:procedural-skill:dc32abf0@1",
+   "conceptId": "C-913bbb8a-299f-4e1c-af4e-963cfb63c95f",
+   "conceptKey": "nmc-concept:0e1d0e61c10ce083",
+   "referenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+   "code": "MI 1.10",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d9f6475d0321cbdf:procedural-skill:89e87840@1",
+   "conceptId": "C-d6a286de-c653-433b-a4e7-681f2f53c77c",
+   "conceptKey": "nmc-concept:d9f6475d0321cbdf",
+   "referenceId": "nmc-2024-ref:7a9930e42be73d8c7538e57450a88c38f5038920f113bf3521a1ec9d553d165b",
+   "code": "MI 1.10",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d9f6475d0321cbdf:procedural-skill:2ac8c095@1",
+   "conceptId": "C-d6a286de-c653-433b-a4e7-681f2f53c77c",
+   "conceptKey": "nmc-concept:d9f6475d0321cbdf",
+   "referenceId": "nmc-2024-ref:ea2f8ac41bd16a12f95a7f9fc2b39221acaf4792a430aac3e418bb2a6337639b",
+   "code": "MI 4.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a6540dd275bb646d:mechanism:d3391710@1",
+   "conceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptKey": "nmc-concept:a6540dd275bb646d",
+   "referenceId": "nmc-2024-ref:49438fa2b758d33967bf4f65308369ccca9ca5c5e256a7969f0508160b9f8070",
+   "code": "MI 1.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7b658d61ce02bb4a:mechanism:2824c5ad@1",
+   "conceptId": "C-04b4d135-508d-4b4f-b4ea-41a779faed0a",
+   "conceptKey": "nmc-concept:7b658d61ce02bb4a",
+   "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+   "code": "MI 1.12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7cab766d03428321:mechanism:9430391d@1",
+   "conceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "conceptKey": "nmc-concept:7cab766d03428321",
+   "referenceId": "nmc-2024-ref:4a22a5e5a53e6ed9a680480b415c778c216961f7732e2bbcc4715ade2b20965b",
+   "code": "MI 1.12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7cab766d03428321:mechanism:89a7f71a@1",
+   "conceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "conceptKey": "nmc-concept:7cab766d03428321",
+   "referenceId": "nmc-2024-ref:0e7b4aeb09b91e786f00814c8998c4db64eb5aa33306269d1ce3679f3ab08c60",
+   "code": "MI 1.13",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0e066e0bc87fa794:mechanism:1ec7fc2c@1",
+   "conceptId": "C-76801578-01e8-4b7d-a643-c07e25b2689e",
+   "conceptKey": "nmc-concept:0e066e0bc87fa794",
+   "referenceId": "nmc-2024-ref:894fde4b46a3a9fbd5588546db0ca986b2645a58f2fae5de9403179a7b81d6f7",
+   "code": "MI 2.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9fee2c5794f40346:mechanism:7739677a@1",
+   "conceptId": "C-11745acf-4db4-4c0d-b998-59a94bbedd13",
+   "conceptKey": "nmc-concept:9fee2c5794f40346",
+   "referenceId": "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c",
+   "code": "MI 2.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:28407acc695e0bbf:mechanism:8d180e42@1",
+   "conceptId": "C-0530df41-c7ed-40cb-bfe9-ad189cac2838",
+   "conceptKey": "nmc-concept:28407acc695e0bbf",
+   "referenceId": "nmc-2024-ref:72ad8c1a9acbae0dea1c43c8d988b2820bfa77b207be674980e3b954c674ed1c",
+   "code": "MI 2.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fd6d03cbacdb79b1:mechanism:3d57f1a1@1",
+   "conceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "conceptKey": "nmc-concept:fd6d03cbacdb79b1",
+   "referenceId": "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e",
+   "code": "MI 2.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c916d73380f56a6d:mechanism:925ef6bd@1",
+   "conceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptKey": "nmc-concept:c916d73380f56a6d",
+   "referenceId": "nmc-2024-ref:a9d2a9fc71089178f0b7147bddd25a6cd7f17c135f2f6f1e6ee093d9af900f0e",
+   "code": "MI 2.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2b9266b0e04e79ec:mechanism:f2729b42@1",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptKey": "nmc-concept:2b9266b0e04e79ec",
+   "referenceId": "nmc-2024-ref:ac682bea4dacea0ee231e6b8b12087da970dcabe90c31aeb31fc913478813ff7",
+   "code": "MI 2.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8b32381327b79861:interpretation:70dc0da6@1",
+   "conceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+   "conceptKey": "nmc-concept:8b32381327b79861",
+   "referenceId": "nmc-2024-ref:7a23b678c25224afa921a843f8af8b2b2bdf5852f8be578dc0afa182b3c846a5",
+   "code": "MI 2.5",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e051a89c7004e6f5:mechanism:ea9113fc@1",
+   "conceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptKey": "nmc-concept:e051a89c7004e6f5",
+   "referenceId": "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8",
+   "code": "MI 2.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8356a2b7e8f172a5:mechanism:83125cfc@1",
+   "conceptId": "C-01baff8e-b4ca-4cb5-9c0a-102574fbdcb2",
+   "conceptKey": "nmc-concept:8356a2b7e8f172a5",
+   "referenceId": "nmc-2024-ref:3a675762692ce1914b4df0e54206432aa5b1954bae3545362cc64a773a9901a8",
+   "code": "MI 2.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eaab46a9eb0d3fa3:mechanism:d75725e4@1",
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptKey": "nmc-concept:eaab46a9eb0d3fa3",
+   "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+   "code": "MI 2.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:84d17f7cb5ffbe98:mechanism:67de9976@1",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptKey": "nmc-concept:84d17f7cb5ffbe98",
+   "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+   "code": "MI 2.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:aee2b3dcf80b46e2:mechanism:783e93b6@1",
+   "conceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "conceptKey": "nmc-concept:aee2b3dcf80b46e2",
+   "referenceId": "nmc-2024-ref:2aaaabc3e0e601ed4af5cccaf9e413c742ed6691e285df648dcaeb1952e0393c",
+   "code": "MI 2.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d04d8f8d651615b7:mechanism:184a191c@1",
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "conceptKey": "nmc-concept:d04d8f8d651615b7",
+   "referenceId": "nmc-2024-ref:bb8e0a85299ef97f5fb73bfe9af0ebacce44a7bafa0aeeda2e674c0727178714",
+   "code": "MI 2.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:46ac7bd1730d5da9:mechanism:9bcc8841@1",
+   "conceptId": "C-08f0d5b2-db8f-4cfc-b64d-44e5aee18c2a",
+   "conceptKey": "nmc-concept:46ac7bd1730d5da9",
+   "referenceId": "nmc-2024-ref:bb8e0a85299ef97f5fb73bfe9af0ebacce44a7bafa0aeeda2e674c0727178714",
+   "code": "MI 2.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2790f04d43d51a1f:mechanism:a5e5cdb0@1",
+   "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "conceptKey": "nmc-concept:2790f04d43d51a1f",
+   "referenceId": "nmc-2024-ref:be22a74ce1d18df7e723b9c0a20e47da3f987bda1e5f51a1b0bfa2be2c1531bd",
+   "code": "MI 3.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f5f58b11b1b6d8af:mechanism:2f26caf2@1",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "conceptKey": "nmc-concept:f5f58b11b1b6d8af",
+   "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+   "code": "MI3.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:f5f58b11b1b6d8af:mechanism:81afb041@1",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "conceptKey": "nmc-concept:f5f58b11b1b6d8af",
+   "referenceId": "nmc-2024-ref:a9cbfb625d18c7f33d7eca7c4fd126ce20480a08b92415fbbb5a76575b744e20",
+   "code": "MI 3.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bb6cf02e7614c733:interpretation:5189300e@1",
+   "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "conceptKey": "nmc-concept:bb6cf02e7614c733",
+   "referenceId": "nmc-2024-ref:f9680378abb19aaba17d00f5303e46fb0e35ea334f903fd5140eb9e3cfdf92fc",
+   "code": "MI 3.3",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:fc7cebcaf9c51c87:mechanism:640da70b@1",
+   "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+   "conceptKey": "nmc-concept:fc7cebcaf9c51c87",
+   "referenceId": "nmc-2024-ref:c9047871596072c6cc4de2f46756cbb3f22e6264ab456bf3b427ce3a34e7050e",
+   "code": "MI 3.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:89cc982f7babbb09:mechanism:ef3b207a@1",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "conceptKey": "nmc-concept:89cc982f7babbb09",
+   "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+   "code": "MI 3.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:89cc982f7babbb09:mechanism:452ba9f7@1",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "conceptKey": "nmc-concept:89cc982f7babbb09",
+   "referenceId": "nmc-2024-ref:aa7971e542eedd96d8dbfb0bf66792f61604a0169168f403d46db45d12951237",
+   "code": "MI 3.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:89cc982f7babbb09:mechanism:9a7de3e5@1",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "conceptKey": "nmc-concept:89cc982f7babbb09",
+   "referenceId": "nmc-2024-ref:bdbf993f3deaa0b93cca67840f9442c2e9401b9934a6de4ad76d7ceeb434ad00",
+   "code": "MI 3.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:477b6d59f4a0605d:mechanism:1be61dd9@1",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptKey": "nmc-concept:477b6d59f4a0605d",
+   "referenceId": "nmc-2024-ref:4a5965a4ba3791ecc249c0742630a78686dcf31f9e1529b7801b94dbee89ba27",
+   "code": "MI 3.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:28ef79db1d3fb5f6:mechanism:b9911a6f@1",
+   "conceptId": "C-921778b5-e1de-4439-9c14-1d3166587fb9",
+   "conceptKey": "nmc-concept:28ef79db1d3fb5f6",
+   "referenceId": "nmc-2024-ref:863102a261aeea993fb66dbb7914b61b1bbe71119bc89c749d4d8bb56980e1fa",
+   "code": "MI 3.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ceb6aa77a6b4477e:mechanism:6a2ac5be@1",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "conceptKey": "nmc-concept:ceb6aa77a6b4477e",
+   "referenceId": "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be",
+   "code": "MI 3.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ceb6aa77a6b4477e:mechanism:5013e25a@1",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "conceptKey": "nmc-concept:ceb6aa77a6b4477e",
+   "referenceId": "nmc-2024-ref:e5bebcc10cee836b56d9deb3a8a0d2b038323bafafaecb0c1747630e0cc995e3",
+   "code": "MI 3.12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:1cf6d32be0bc0e1b:mechanism:4edb13d3@1",
+   "conceptId": "C-f6228a56-6335-4d0d-93ac-e6f9c6b0e49d",
+   "conceptKey": "nmc-concept:1cf6d32be0bc0e1b",
+   "referenceId": "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be",
+   "code": "MI 3.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:206ac0c1c09d7a3e:mechanism:7188baa1@1",
+   "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "conceptKey": "nmc-concept:206ac0c1c09d7a3e",
+   "referenceId": "nmc-2024-ref:7fce5add62c719ff1218bb6c6363114418e59b4b93d1f6eea7c0b58c189e87be",
+   "code": "MI 3.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0aab2a7da9ac3ece:mechanism:bb73daa0@1",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "conceptKey": "nmc-concept:0aab2a7da9ac3ece",
+   "referenceId": "nmc-2024-ref:ead4e7b4c95e124e5dd3cca329d85bce6697f8883ee690cfe285ab82c6079c50",
+   "code": "MI 3.13",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:98cbfe39687f7f89:mechanism:762b362f@1",
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptKey": "nmc-concept:98cbfe39687f7f89",
+   "referenceId": "nmc-2024-ref:470cb4abb5dbd878c4c810203a1ec3ca7cc48ab3cc8df1563faf720e550f896c",
+   "code": "MI 4.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:98cbfe39687f7f89:mechanism:9f54034b@1",
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptKey": "nmc-concept:98cbfe39687f7f89",
+   "referenceId": "nmc-2024-ref:ed6710f669fe043a625317dd331ae185eeefe087d8a22691faa59f55527b99fb",
+   "code": "MI 4.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:cd7d81b90e3910e1:mechanism:447e3a28@1",
+   "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "conceptKey": "nmc-concept:cd7d81b90e3910e1",
+   "referenceId": "nmc-2024-ref:3926e21e22f98b8730e3faee5dd7c85cb9002758f0941556cfbe2640da442144",
+   "code": "MI 4.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c15caed8e980a631:mechanism:97a59b9c@1",
+   "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+   "conceptKey": "nmc-concept:c15caed8e980a631",
+   "referenceId": "nmc-2024-ref:9ae6427dfe51efe8b447442d7ec66d49f7060044f54672714a966e7d44962ecc",
+   "code": "MI 4.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:239ee10aea4d97c1:mechanism:52688b89@1",
+   "conceptId": "C-6c240ee1-1316-4f68-a4ce-d11e0f061f88",
+   "conceptKey": "nmc-concept:239ee10aea4d97c1",
+   "referenceId": "nmc-2024-ref:f11785109a9660cc566818f568529a4332eebc857dc7fdae5049e2ba3b3a6a44",
+   "code": "MI 4.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eef0aa9cb3937a3e:mechanism:aebad595@1",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptKey": "nmc-concept:eef0aa9cb3937a3e",
+   "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
+   "code": "MI 4.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eef0aa9cb3937a3e:mechanism:d39a8977@1",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptKey": "nmc-concept:eef0aa9cb3937a3e",
+   "referenceId": "nmc-2024-ref:a98daa2a27060984baba8ae5fadaf238e6d02e95486c73e9fc4945d63444868f",
+   "code": "MI 4.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:eef0aa9cb3937a3e:mechanism:b9530b2b@1",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptKey": "nmc-concept:eef0aa9cb3937a3e",
+   "referenceId": "nmc-2024-ref:2f66649c02e129d6cf9efa1070a23d826a0889212a9b0e4b65b4c7e2791eee09",
+   "code": "MI 4.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:76ba9f03b3d1021d:mechanism:8e5f536c@1",
+   "conceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "conceptKey": "nmc-concept:76ba9f03b3d1021d",
+   "referenceId": "nmc-2024-ref:00a578a4d0ca21e5363004881e5f7802e9509813ea5d0922afbaee93b8f1cc3d",
+   "code": "MI 5.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d68cf7800e9dd46b:mechanism:1008e3e8@1",
+   "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "conceptKey": "nmc-concept:d68cf7800e9dd46b",
+   "referenceId": "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f",
+   "code": "MI 5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:027cfe1af6a78e0d:mechanism:60ef6ee9@1",
+   "conceptId": "C-d5c68e78-a0d8-41cb-a3e1-862f0f186feb",
+   "conceptKey": "nmc-concept:027cfe1af6a78e0d",
+   "referenceId": "nmc-2024-ref:3c61a128b1548ed370ee47b8141f3c2d9d58f99b0c8b9eb28a635da79b37a31f",
+   "code": "MI 5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9a84abcf92f9ed37:mechanism:4eb61208@1",
+   "conceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
+   "conceptKey": "nmc-concept:9a84abcf92f9ed37",
+   "referenceId": "nmc-2024-ref:ffc42179964594b974f47d10585b68ba82cbc6f8ea3c53743a8eca0e8137f534",
+   "code": "MI 5.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:83200eea67ac0461:mechanism:03c66012@1",
+   "conceptId": "C-daaca46b-f9c5-4b66-83ec-8f0e9c3b5871",
+   "conceptKey": "nmc-concept:83200eea67ac0461",
+   "referenceId": "nmc-2024-ref:b39d57d621c7dd23fd5a5a4436f5faad861b26c6fa3fc40b9b38efced0737de3",
+   "code": "MI 5.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:8d54724f18b127ef:mechanism:6657fbe2@1",
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "conceptKey": "nmc-concept:8d54724f18b127ef",
+   "referenceId": "nmc-2024-ref:3125049e015e51b9167027111411271d35d8bb95d1223a710ca120e0dbea6a47",
+   "code": "MI 5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:df5cb9a2dc029c91:mechanism:0dfd5e93@1",
+   "conceptId": "C-c627db47-450f-48bd-b284-913e05da6363",
+   "conceptKey": "nmc-concept:df5cb9a2dc029c91",
+   "referenceId": "nmc-2024-ref:3125049e015e51b9167027111411271d35d8bb95d1223a710ca120e0dbea6a47",
+   "code": "MI 5.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6063c9568db2a37f:mechanism:c7033111@1",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "conceptKey": "nmc-concept:6063c9568db2a37f",
+   "referenceId": "nmc-2024-ref:2192f181c5ffa328da3475110bbd81386e5a7e032c27763d1555b3717732ddac",
+   "code": "MI 6.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6063c9568db2a37f:mechanism:8e9aa8e3@1",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "conceptKey": "nmc-concept:6063c9568db2a37f",
+   "referenceId": "nmc-2024-ref:f67b8288f33c0ea2c0c20bd9afb40c5727668af86690d17ad6e7b6cf1d974cff",
+   "code": "MI 6.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:d5be4c416cd8ba76:mechanism:ec72acaf@1",
+   "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "conceptKey": "nmc-concept:d5be4c416cd8ba76",
+   "referenceId": "nmc-2024-ref:98a90e12a87beed199805af7506d062d1bb6a47a8bc183f741d2e08ef5418591",
+   "code": "MI 6.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bf092e7c5c4dc3bc:mechanism:1bd92f59@1",
+   "conceptId": "C-f7b33a40-242e-4222-9044-ef1ce4514014",
+   "conceptKey": "nmc-concept:bf092e7c5c4dc3bc",
+   "referenceId": "nmc-2024-ref:dbb0ed68638624fad3b303b43f359d675ba671696eab145c8204ac4032f41407",
+   "code": "MI 7.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:bf092e7c5c4dc3bc:procedural-skill:16bc0f8a@1",
+   "conceptId": "C-f7b33a40-242e-4222-9044-ef1ce4514014",
+   "conceptKey": "nmc-concept:bf092e7c5c4dc3bc",
+   "referenceId": "nmc-2024-ref:acc718c7fa2013c251b3c315804faedc4d795ce253b3e73c59e922681ed623d8",
+   "code": "MI 7.4",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7b7f277889d7609a:mechanism:a75ddc97@1",
+   "conceptId": "C-e90d0635-c3f9-4dff-b187-d582e03afc2a",
+   "conceptKey": "nmc-concept:7b7f277889d7609a",
+   "referenceId": "nmc-2024-ref:73ab170e07fa9e42d8bd98f0820acb4b7fddb5937c0aee4b8c6829f2e1a7cc29",
+   "code": "MI 7.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7b7f277889d7609a:procedural-skill:b330cf5d@1",
+   "conceptId": "C-e90d0635-c3f9-4dff-b187-d582e03afc2a",
+   "conceptKey": "nmc-concept:7b7f277889d7609a",
+   "referenceId": "nmc-2024-ref:9b48a0b828dfa66e4fc95a83e79614cb1c8f77c48f8a1ba856f525a1d702a03d",
+   "code": "MI 7.5",
+   "task": "procedural-skill",
+   "depth": "performs",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b8eafc3fc9a5723c:mechanism:9a83f746@1",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "conceptKey": "nmc-concept:b8eafc3fc9a5723c",
+   "referenceId": "nmc-2024-ref:8d160b85d57bc1614fe175f9f9cd66dd592d30d2f73403ef592447a28aa99a89",
+   "code": "MI 7.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:2a26c5bb82830481:mechanism:ecc77482@1",
+   "conceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+   "conceptKey": "nmc-concept:2a26c5bb82830481",
+   "referenceId": "nmc-2024-ref:fff19808da7303f78c811359dc94cd211bd94775b5029c0345a734ba070be3cb",
+   "code": "MI 8.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:e158fb2643c5d934:mechanism:04ff3f61@1",
+   "conceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "conceptKey": "nmc-concept:e158fb2643c5d934",
+   "referenceId": "nmc-2024-ref:e9af4329a314e4bade8c00066a88cf66d43825c9d2519e1c61008a2ba2a23cc1",
+   "code": "MI 8.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b591a56db9464587:mechanism:85bb2a86@1",
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "conceptKey": "nmc-concept:b591a56db9464587",
+   "referenceId": "nmc-2024-ref:460bbe029de2ea2d5834013273347fa38089e1702db2cbc26248d0923c44f760",
+   "code": "MI 8.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:7754c05047861800:mechanism:51eafde4@1",
+   "conceptId": "C-db39288d-430f-467b-8ae0-1214d9c0b466",
+   "conceptKey": "nmc-concept:7754c05047861800",
+   "referenceId": "nmc-2024-ref:48a85755bdd0e2021542260b21464013fd1552305cdb9620506f3a3334e5b947",
+   "code": "MI 9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:085824b9cf2e13eb:mechanism:6ebc212e@1",
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "conceptKey": "nmc-concept:085824b9cf2e13eb",
+   "referenceId": "nmc-2024-ref:024164cd3026557ed677a87ea680580cd18d12f2861a3109430faee4f8a550fa",
+   "code": "MI 9.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:0abe6d60886ab763:mechanism:8a9ba95a@1",
+   "conceptId": "C-4b1b951d-5e5e-4a4b-8030-73bfaa70d384",
+   "conceptKey": "nmc-concept:0abe6d60886ab763",
+   "referenceId": "nmc-2024-ref:0224b2af1abd9f1cd39ac315581dec0eb0866efd6c4a8731c74e04f21537f97f",
+   "code": "MI 9.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:6f456ffd4e5fea29:mechanism:708ee36e@1",
+   "conceptId": "C-4f422ccd-251c-4324-a275-1f71e0c86d87",
+   "conceptKey": "nmc-concept:6f456ffd4e5fea29",
+   "referenceId": "nmc-2024-ref:0eed1abc36cb49be2c1790dda5912355632627993958914f8b9e5e92b39f0bcb",
+   "code": "MI 9.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:32de7100be2b0158:mechanism:3670203d@1",
+   "conceptId": "C-506649ad-fb9c-4f16-ae7c-cab5dccb2cb5",
+   "conceptKey": "nmc-concept:32de7100be2b0158",
+   "referenceId": "nmc-2024-ref:43c2298be0d1276ec19cd54152bc2edffb42c823006dac2d86ae15580f1347d9",
+   "code": "MI 9.6",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:ff4a343f5133a257:mechanism:25b669a3@1",
+   "conceptId": "C-4f4b66c9-303f-4bed-9144-d175ea338adb",
+   "conceptKey": "nmc-concept:ff4a343f5133a257",
+   "referenceId": "nmc-2024-ref:21ae2534f9c0730bc4da13763aeae355f1521e85ffbfbc172f24d9286b0ddd1b",
+   "code": "MI 10.1",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b322ceaaf87bf9df:mechanism:ba603232@1",
+   "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "conceptKey": "nmc-concept:b322ceaaf87bf9df",
+   "referenceId": "nmc-2024-ref:b24331bd49819ae06b58f3c42423bc9920e4bf98d5510fa63b2857d3d67b4149",
+   "code": "MI 10.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:aecce23855298953:procedural-skill:a0a2ed5b@1",
+   "conceptId": "C-baa5bc2c-7da4-40b2-a467-fdce95892577",
+   "conceptKey": "nmc-concept:aecce23855298953",
+   "referenceId": "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38",
+   "code": "MI 10.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:87354ffc776f829d:procedural-skill:54835774@1",
+   "conceptId": "C-5896c596-f5b9-4a2a-97e8-bd87f10b9783",
+   "conceptKey": "nmc-concept:87354ffc776f829d",
+   "referenceId": "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38",
+   "code": "MI 10.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:89be1c888da8d26a:procedural-skill:a4484520@1",
+   "conceptId": "C-2396a7f1-b588-46ef-bc75-dd354b8af35e",
+   "conceptKey": "nmc-concept:89be1c888da8d26a",
+   "referenceId": "nmc-2024-ref:1a4fca37bb8f9858cf3cb55485b2ba108b705080e88b985c27a86e0d22b82c38",
+   "code": "MI 10.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:c13379f83f0d0330:mechanism:b1da4681@1",
+   "conceptId": "C-234b7c14-c2ba-494b-ac70-9cfc1a58c3d6",
+   "conceptKey": "nmc-concept:c13379f83f0d0330",
+   "referenceId": "nmc-2024-ref:a220eb4f61f0467b6cedb16365d63a36a00c66a94e88b96bcb128fe1d7a0b490",
+   "code": "MI 10.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b9a08bcfc331ccbb:mechanism:a2d66f24@1",
+   "conceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "conceptKey": "nmc-concept:b9a08bcfc331ccbb",
+   "referenceId": "nmc-2024-ref:e92bdcf74707f1775649c38dda70c1050fc67feafc496923d789cc5de2e5ff5a",
+   "code": "MI 10.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b9a08bcfc331ccbb:mechanism:b0e8bf5e@1",
+   "conceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "conceptKey": "nmc-concept:b9a08bcfc331ccbb",
+   "referenceId": "nmc-2024-ref:8790dc58550645cc92ccd9e32d7b129e469ff319f6298a431fdba46621ce8f6e",
+   "code": "MI 11.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:b9a08bcfc331ccbb:mechanism:3b721b01@1",
+   "conceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "conceptKey": "nmc-concept:b9a08bcfc331ccbb",
+   "referenceId": "nmc-2024-ref:706879b38e0766b9eee2351928a9de41a9890876090fce72307c0db412b8e004",
+   "code": "MI 11.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:9d2395b316325b4a:interpretation:c77b407c@1",
+   "conceptId": "C-1620e021-5df7-4bb0-9995-32fceebd8054",
+   "conceptKey": "nmc-concept:9d2395b316325b4a",
+   "referenceId": "nmc-2024-ref:8790dc58550645cc92ccd9e32d7b129e469ff319f6298a431fdba46621ce8f6e",
+   "code": "MI 11.1",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  },
+  {
+   "objectiveVersionId": "lo:a1af7d0f7d58a6dd:mechanism:b42a979e@1",
+   "conceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "conceptKey": "nmc-concept:a1af7d0f7d58a6dd",
+   "referenceId": "nmc-2024-ref:f702cf08402c184aa2050eb44b358d7aec07f60409119cf267f2ce5757be8d3d",
+   "code": "MI 11.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "status": "draft"
+  }
+ ]
+}

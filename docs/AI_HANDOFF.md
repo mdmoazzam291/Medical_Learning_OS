@@ -1,3 +1,13 @@
+## NMC Microbiology accepted, bound and registered — 2026-11-16T16:35Z
+
+- Owner accepted batch v1. Receipt: `nmc-microbiology-concepts-v1-20261116`, SHA-256 `145141e3…5c20`, accepted 2026-11-16T16:28:12Z, 54 items.
+- Bindings: 89 objectives on 72 concepts (54 from receipts, 18 reused); pairs digest `92b3502f…ea81` reproduced and tested.
+- Registry draft `@8`: totals 631 objectives, 632 bindings, 506 concepts, 477 source-linked references.
+- No clinical review, learner activation or question import. `owner-api` redeploy still pending.
+- Subjects done: Physiology, Biochemistry, Pathology, Microbiology. Remaining: 15.
+
+---
+
 ## NMC Microbiology concept batch v1 — 2026-11-16T16:40Z
 
 - Writer: Claude, branch `feat/nmc-microbiology-concept-batch-20261116`.
