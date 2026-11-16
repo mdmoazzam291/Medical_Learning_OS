@@ -1,3 +1,13 @@
+## NMC Physiology batch v3 accepted; objectives bound to concept IDs — 2026-11-16T13:40Z
+
+- Writer: Claude, branch `docs/nmc-batch-v3-deployed-20261116` (PR #426).
+- Owner confirmed the Admin screen served v3 and accepted it. Database receipt (read-only query): `nmc-physiology-concepts-v3-20261116`, SHA-256 `6a733f98…8f3f`, accepted 2026-11-16T13:29:02Z, 181 items. This also confirms the redeployed function works for an authenticated Admin.
+- `docs/evidence/2026-11-16-nmc-physiology-objective-bindings-v1.json` (builder `ops/nmc/bind_batch_objectives.py`, IDs in `ops/nmc/receipts/physiology-v3-concept-ids.txt`): all 191 objectives bound to 183 concept IDs (181 from receipts, 2 existing spinal-cord identities). The receipt key/ID pairs digest computed in the database (`051619d7…fc97`) is reproduced locally and checked by `tests/nmc-physiology-objective-bindings.test.js`. Identity digests remain in the database receipt.
+- Not done: the bindings are a repository record only. They are not yet in the objective registry (`data/nmc-learning-foundation-drafts.json`), which needs a depth/task vocabulary mapping, row boxes and a draft-version bump. No clinical review, no learner activation.
+- Next: decide the registry integration for Physiology objectives; fix the question subject fallback before the first question import; then objective ID on learning events.
+
+---
+
 ## NMC Physiology batch v3 deployed and merged — 2026-11-16T13:25Z
 
 - Writer: Claude. Owner approved ("Next", 18:43 IST) the redeploy and merge.
