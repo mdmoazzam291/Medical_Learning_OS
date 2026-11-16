@@ -1,3 +1,11 @@
+## NMC Surgery objectives bound and in registry (draft @14) — 2026-11-16T22:12Z
+
+- Owner accepted `nmc-surgery-concepts-v1-20261116` at 2026-11-16T22:07:02Z (52 receipts; pairs digest `ad4004b1…843b` matched). Receipt IDs in `ops/nmc/receipts/surgery-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-surgery-objective-bindings-v1.json` (102 concepts, 125 objectives).
+- Registry @14: +125 objectives → 1,483 objectives, 1,484 bindings, 1,050 concepts, 1,279 of 2,634 NMC rows source-linked (49%). Draft only.
+- Remaining subjects: Obstetrics & Gynaecology, Paediatrics, Anatomy, Medicine.
+
+---
+
 ## NMC Surgery concept batch v1 — 2026-11-16T21:50Z
 
 - `docs/evidence/2026-11-17-nmc-surgery-concept-batch-v1.json` (spec `ops/nmc/specs/surgery_concepts_v1.py`): 102 concepts (52 new; 50 reused, e.g. Shock, Burns, Blood transfusion, Informed consent, Breast cancer, Appendicitis), 125 objectives, all 121 recognised rows. SU24.1–24.3 and SU27.1–27.8 (no Topic 24/27 headings) stay on the source-exception track. No clash with 1,724 production names.
