@@ -1,3 +1,13 @@
+## NMC Community Medicine accepted, bound and registered — 2026-11-16T19:20Z
+
+- Owner accepted batch v1. Receipt: `nmc-community-medicine-concepts-v1-20261116` (builder date suffix is fixed at 20261116), SHA-256 `16d68cbd…0388`, accepted 2026-11-16T19:09:37Z, 87 items.
+- Bindings: 141 objectives on 98 concepts (87 from receipts, 11 reused); pairs digest `37fbd6a4…85a6` reproduced and tested.
+- Registry draft `@11`: totals 1052 objectives, 1053 bindings, 785 concepts, 862 source-linked references.
+- No clinical review, learner activation or question import. `owner-api` redeploy still pending.
+- Subjects done (7): Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine. Remaining: 12.
+
+---
+
 ## NMC Community Medicine concept batch v1 — 2026-11-16T18:55Z
 
 - `docs/evidence/2026-11-17-nmc-community-medicine-concept-batch-v1.json` (spec `ops/nmc/specs/community_medicine_concepts_v1.py`): 98 concepts (87 new; 11 reused), 141 objectives, all 136 rows. Non-synonym or ambiguous aliases removed (e.g. "PHC"). No clash with 1,242 production names.
