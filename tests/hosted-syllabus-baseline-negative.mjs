@@ -49,10 +49,11 @@ export async function verifyNegativeSurface(fetchFn = fetch) {
   return scenarios.length;
 }
 
-// Verify the actual Cloudflare preview is reachable, and that both deployed
+// Verify the deployed Cloudflare site is reachable, and that both deployed
 // APIs answer only the exact review-page Origin. No user session is involved.
 export async function verifyPreviewSurface(fetchFn = fetch) {
-  const origin = 'https://feat-admin-syllabus-baseline-drafts-202-medical-learning-os-web.medicalos.workers.dev';
+  // The original branch preview expired (404 from 2026-11-16); verify the production surface instead.
+  const origin = allowedOrigin;
   const page = await fetchFn(origin + '/web/concept-http-check.html', {
     method: 'GET', cache: 'no-store', signal: AbortSignal.timeout(12000)
   });
