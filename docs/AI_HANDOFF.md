@@ -1,3 +1,18 @@
+## NMC official-source ingestion — 2026-11-16T03:40Z
+
+- Writer: Claude, draft PR #421 from remote head `3ffbbff49c76eb30923c40aab6b7100da92540fb`. Ownership released after remote readback.
+- Owner instruction: full source-grounded ingestion of NMC CBME 2024 (guidelines + Volumes I–III). Owner chose private Drive for full text; repo gets metadata only (DECISIONS entry added).
+- Manifest: the uploaded PDF (SHA `aa601690…`, pinned) bundles all four documents — guidelines PDF 1–74, Volume I 75–241, Volume II 242–370, Volume III 371–467.
+- PyMuPDF 1.26.6 could not be installed (installs blocked). pdfplumber reproduced all 17 PyMuPDF-pinned bindings and was used; tolerance tuned (text_x_tolerance 1.5) to stop word gluing.
+- **2,634 rows extracted; 2,634/2,634 match the catalogue one-to-one; 399 topic headings match; 0 recorded-level conflicts.** 2,613 hash-verified (27 partial body), 18 content-only, 3 without a repo row box. 2,438 rows unflagged.
+- Duplicates in source: GM9.8, GM14.1, GM14.2 (printed twice, identical). Source-version conflicts: printed totals vs table rows differ for medicine (525/532), pediatrics (406/253, 35 vs 32 topics), surgery (133/132, 30 vs 28 topics), ophthalmology (60/59), OG (141/142).
+- Blank source cells confirmed on rendered pages (GM 11.5; PE28.2–PE29.1 teaching method). Nonstandard printed values flagged (e.g. GM13.11 core "K").
+- Added `data/nmc-competency-source-metadata.json`, `docs/evidence/2026-11-16-nmc-official-source-manifest.json`, `docs/evidence/2026-11-16-nmc-competency-reconciliation.json`, `docs/NMC_SOURCE_INGESTION.md`, `ops/nmc/extract_competency_tables.py`, `tests/nmc-source-ingestion.test.js`.
+- Drive: 6 package files saved and size-verified; **original PDF and competencies.jsonl not saved** (over the 3.1 MB per-file connector limit) — awaiting owner choice.
+- Next: owner choice on the two unsaved files; owner/faculty decisions on existing holds; decide treatment of printed-total conflicts.
+
+---
+
 ## NMC pinned-PDF verification — 2026-11-16T03:25Z
 
 - Writer: Claude, draft PR #421 from remote head `3d65100c7711a57b3aea36c763d54a3bb01e995f`. Ownership released after remote readback.
