@@ -73,7 +73,7 @@ for c in spec.C:
             objectives.append({'objectiveVersionId':ov,'conceptKey':key,'existingConceptId':existing,'referenceId':rid,'code':code,'task':task,'depth':DEPTH[lv],'mode':mode,'wording':w,'basis':basis,
               'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
             links.append(code)
-    subjects=[SUBJECT]+[s for s in c['extraSubjects'] if s!=SUBJECT]
+    subjects=([] if hasattr(spec,'SUBJECTS') else [SUBJECT])+[s for s in c['extraSubjects'] if s!=SUBJECT]
     expected=None
     if getattr(spec,'EVIDENCED_SUBJECTS_ONLY',False):
         evidenced=list(dict.fromkeys(byCode[k][0]['subjectId'] for k,_ in c['links']))
@@ -90,7 +90,7 @@ for c in spec.C:
     if expected is not None: item['expectedSubjects']=expected
     concepts.append(item)
 new=[c for c in concepts if not c['existingConceptId']]
-batch={'schemaVersion':1,'batchId':'nmc-'+SUBJECT+'-concepts-'+VERSION+'-20261116','subjectId':SUBJECT,'sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
+batch={'schemaVersion':1,'batchId':'nmc-'+SUBJECT+'-concepts-'+VERSION+'-20261116','subjectId':SUBJECT,**({'subjectIds':list(spec.SUBJECTS)} if hasattr(spec,'SUBJECTS') else {}),'sourceEdition':cat['edition'],'sourceSha256':cat['sourceSha256'],
  'status':'draft-batch-awaiting-admin-acceptance','attestation':'identity-and-classification-reviewed-not-medical-or-learner-release',
  'counts':{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},
  'learnerActivation':False,'clinicalApproval':False,**({**({'supersedes':spec.SUPERSEDES} if hasattr(spec,'SUPERSEDES') else {}),'conceptTypes':list(spec.CONCEPT_TYPES),'counts':{**{'concepts':len(concepts),'newConcepts':len(new),'reusedAcceptedIdentities':len(concepts)-len(new),'objectives':len(objectives),'sourceRows':len({o['referenceId'] for o in objectives})},'umbrellas':sum(1 for c in concepts if c.get('umbrella')),'flagged':sum(1 for c in concepts if c.get('reviewFlags'))}} if hasattr(spec,'CONCEPT_TYPES') else {}),'concepts':concepts,'objectives':objectives}
