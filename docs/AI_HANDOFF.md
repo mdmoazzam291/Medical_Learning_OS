@@ -1,3 +1,13 @@
+## NMC Pharmacology accepted, bound and registered — 2026-11-16T18:05Z
+
+- Owner accepted batch v1. Receipt: `nmc-pharmacology-concepts-v1-20261116`, SHA-256 `8ec0f140…deaa`, accepted 2026-11-16T17:55:03Z, 93 items.
+- Bindings: 105 objectives on 99 concepts (93 from receipts, 6 reused); pairs digest `76553549…f2a4` reproduced and tested.
+- Registry draft `@9`: totals 736 objectives, 737 bindings, 599 concepts, 569 source-linked references.
+- No clinical review, learner activation or question import. `owner-api` redeploy still pending.
+- Subjects done: Physiology, Biochemistry, Pathology, Microbiology, Pharmacology. Remaining: 14.
+
+---
+
 ## NMC Pharmacology concept batch v1 — 2026-11-16T17:15Z
 
 - `docs/evidence/2026-11-16-nmc-pharmacology-concept-batch-v1.json` (spec `ops/nmc/specs/pharmacology_concepts_v1.py`): 99 concepts (93 new; 6 reused), 105 objectives, all 92 rows. Drug-therapy rows are named by drug class; accepted diseases reused only where the row is about treating them (UTI, STI). Non-synonym aliases removed. No clash with 894 production names.
