@@ -8,7 +8,7 @@
 - Duplicates in source: GM9.8, GM14.1, GM14.2 (printed twice, identical). Source-version conflicts: printed totals vs table rows differ for medicine (525/532), pediatrics (406/253, 35 vs 32 topics), surgery (133/132, 30 vs 28 topics), ophthalmology (60/59), OG (141/142).
 - Blank source cells confirmed on rendered pages (GM 11.5; PE28.2–PE29.1 teaching method). Nonstandard printed values flagged (e.g. GM13.11 core "K").
 - Added `data/nmc-competency-source-metadata.json`, `docs/evidence/2026-11-16-nmc-official-source-manifest.json`, `docs/evidence/2026-11-16-nmc-competency-reconciliation.json`, `docs/NMC_SOURCE_INGESTION.md`, `ops/nmc/extract_competency_tables.py`, `tests/nmc-source-ingestion.test.js`.
-- Drive: 6 package files plus the dataset in three volume parts saved and size-verified. **Original PDF pending owner upload** (over the 3.1 MB per-file connector limit; file sent to owner).
+- Drive: 6 package files plus the dataset in three volume parts saved and size-verified. Original PDF uploaded by the owner (Drive `17olT4BAaxMoIrYDmbHklrUbw1iFF626H`; name and 4,113,924-byte size match; Drive checksum not available). Package complete.
 - Next: owner choice on the two unsaved files; owner/faculty decisions on existing holds; decide treatment of printed-total conflicts.
 
 ---

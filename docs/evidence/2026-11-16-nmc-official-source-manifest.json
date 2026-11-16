@@ -109,8 +109,7 @@
   },
   "privateCopies": {
     "driveOriginalsFolderId": "16xBSjquHtMFTinZu2Wsep57EKLHAh5UN",
-    "originalPdfSaved": false,
-    "reason": "4.1 MB exceeds the 3.1 MB per-file connector limit; sent to the owner for manual upload on 2026-11-16",
+    "originalPdfSaved": true,
     "datasetSavedAsVolumeParts": [
       {
         "name": "competencies-volume-I.jsonl",
@@ -131,6 +130,10 @@
         "sha256": "068d92a45b46d253e81224825d291eeeee486fed05b8f5370fefb1600d5c1dc9"
       }
     ],
-    "concatenatedSha256": "8d109b00c10b14152bd0a13e53ce9bf3b9aad4ab7d4b4ce69bbe690c308818c9"
+    "concatenatedSha256": "8d109b00c10b14152bd0a13e53ce9bf3b9aad4ab7d4b4ce69bbe690c308818c9",
+    "originalPdfDriveId": "17olT4BAaxMoIrYDmbHklrUbw1iFF626H",
+    "originalPdfUploadedBy": "owner, 2026-11-16T03:26:36Z",
+    "originalPdfCheck": "filename and byte size (4,113,924) match the pinned file; Drive exposes no checksum to this session, so SHA-256 of the Drive copy is not independently verified",
+    "driveVisibility": "PRIVATE"
   }
 }

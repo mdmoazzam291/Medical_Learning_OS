@@ -89,4 +89,4 @@ Saved and size-verified in `07_Release/NMC_CBME_2024_Competency_Foundation_v1_20
 
 Dataset saved as three volume parts (concatenation is byte-identical to the 4.9 MB `competencies.jsonl`, SHA-256 `8d109b00…18c9`): `competencies-volume-I.jsonl` (1,139 rows, `13e5ad92…aeb5`), `competencies-volume-II.jsonl` (986 rows, `6a6de6c8…c8b`), `competencies-volume-III.jsonl` (509 rows, `068d92a4…c9`). Sizes verified on Drive.
 
-**Pending owner upload:** the original PDF (4.1 MB) into `02_Originals/Content/NMC_CBME_2024` (folder `16xBSjquHtMFTinZu2Wsep57EKLHAh5UN`); it exceeds the session's 3.1 MB per-file connector limit and was sent to the owner on 2026-11-16.
+**Original PDF saved** by the owner on 2026-11-16 to `02_Originals/Content/NMC_CBME_2024` (Drive ID `17olT4BAaxMoIrYDmbHklrUbw1iFF626H`, private). Filename and byte size (4,113,924) match the pinned file; Drive exposes no checksum to this session, so its SHA-256 is not independently verified. The release package is complete.
