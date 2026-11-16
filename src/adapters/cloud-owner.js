@@ -16,11 +16,11 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
   if (!auth || typeof auth.getSession !== 'function') throw new Error('invalid_auth');
 
-  async function request(path, { method = 'GET', body, retry = true } = {}) {
+  async function request(path, { method = 'GET', body, retry = true, fn = 'owner-api' } = {}) {
     const session = await auth.getSession();
     if (!session?.accessToken) throw new CloudOwnerError(401, 'not_authenticated');
 
-    const response = await fetchFn(`${base}/functions/v1/owner-api${path}`, {
+    const response = await fetchFn(`${base}/functions/v1/${fn}${path}`, {
       method,
       headers: {
         apikey: publishableKey,
@@ -33,7 +33,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     if (response.status === 401 && retry) {
       const refreshed = await auth.getSession({ forceRefresh: true });
       if (refreshed?.accessToken && refreshed.accessToken !== session.accessToken) {
-        return request(path, { method, body, retry: false });
+        return request(path, { method, body, retry: false, fn });
       }
     }
 
@@ -53,6 +53,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     syllabusReviewPreflight({baselineId,revision}) { return request('/syllabus-review-preflight/'+encodeURIComponent(baselineId)+'?revision='+encodeURIComponent(revision)); },
     acceptConceptDraft(input) { return request('/concept-draft-accept', {method: 'POST', body: input}); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
+    adminLearnerPreview(filters = {}) { return request('?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null)), {fn: 'nmc-admin-preview'}); },
     foundationObjectiveDrafts(filters = {}) { return request('/foundation-objective-drafts?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },

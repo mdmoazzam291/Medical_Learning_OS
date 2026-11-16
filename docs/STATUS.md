@@ -1,3 +1,22 @@
+## NMC interim AI review and Admin-only learner preview — 2026-11-16T09:20Z
+
+- Writer: Claude, branch `feat/nmc-admin-learner-preview-20261116` from main `883428b` plus the #422 documentation commit.
+- Owner instructions (14:09 IST): Claude reviews the 170 accepted revisions while faculty are unavailable; publish to the Admin account as a learner preview only; skip the Admin attestation feature unless necessary.
+- `docs/evidence/2026-11-16-nmc-interim-ai-review.json`: all 170 read against full official rows. 150 pass, 17 pass with notes, 3 cleanup revisions (GM26.24, GM6.16, GM15.14 had editing/meta text; new revision IDs supersede the accepted ones). 0 clinical errors found. Interim AI review, not faculty or clinical review.
+- Admin-only preview: `data/nmc-admin-learner-preview.json` (170 objectives, built by `ops/nmc/build-admin-learner-preview.js`), new edge function `nmc-admin-preview` (GET only; runtime-access and `content_admin_status_v1` Admin checks; reads the data pinned to commit `373e1f0` with SHA-256 `f23158c8…d47b`; no writes), Admin screen `web/nmc-admin-learner-preview.js` in the NMC Foundation panel with an "Admin preview only" banner. Learner activation stays off.
+- Attestation feature: not built (owner chose the repository record; not needed for the preview).
+- Tests 1,687/1,687; check passed.
+
+---
+
+## NMC spinal-cord link attestation record — 2026-11-16T08:40Z
+
+- Writer: Claude, branch `docs/nmc-link-attestation-record-20261116` from main `883428be91a029cfa9ef8200e5aea877b07c5df2` (#415 and #421 merged earlier today; all main checks and Cloudflare builds passed).
+- The Admin console has no link-attestation action: the NMC foundation review screen is read-only and its contract requires `acceptedMappings: 0`. The owner chose the repository record as the attestation of record; an amendment was added to `docs/evidence/2026-11-16-nmc-owner-decisions.json`. No login, database or code change.
+- Remaining: optional faculty/clinical review; learner publication only with explicit approval.
+
+---
+
 ## NMC owner decisions recorded — 2026-11-16T04:55Z
 
 - Writer: Claude, draft PR #421 from remote head `eb9d6a0fa6c777d498eeaf63dd83b40482c2aa34`. Ownership released after remote readback.

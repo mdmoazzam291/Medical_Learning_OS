@@ -54,6 +54,6 @@ No row was created, filled or removed to make counts agree; numbering gaps are r
 ## Remaining actions
 
 1. Done 16 Nov: owner decisions recorded. Optional: faculty/clinical review of the 170 accepted revisions.
-2. Admin-console attestation for the 15 spinal-cord links; merge and publication need separate explicit approval.
+2. Spinal-cord link attestation: owner chose the repository record (16 Nov amendment in the owner-decisions file); no Admin-console receipt exists or is planned. Learner publication needs separate explicit approval.
 3. Record the Paediatrics heading total as a source inconsistency in any learner-facing count.
 4. Decide whether to report the printed-total inconsistencies to NMC or simply annotate them.
