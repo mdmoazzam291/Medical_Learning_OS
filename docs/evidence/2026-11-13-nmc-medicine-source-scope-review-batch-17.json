@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "c4595c0cf07ab25be9a6d4cd641740f58822807b",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 25,
+  "reviewed": 25,
+  "scopeAligned": 21,
+  "held": 4,
+  "cumulative": {
+    "reviewedSourceRows": 621,
+    "reviewedDistinctNameKeys": 620,
+    "alignedSourceRows": 566,
+    "heldSourceRows": 55,
+    "unreviewedDistinctNameKeys": 177
+  },
+  "rows": [
+    {
+      "name": "Hypertension classification",
+      "nameKey": "hypertension classification",
+      "code": "GM8.3",
+      "sourceReferenceId": "nmc-2024-ref:4e74ac95bf3c9bca50eea91006d1e69d474bd701957d7b5cbaa9bc46b714e3b3",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        313.86,
+        102.7,
+        333.72
+      ],
+      "sourceBodySha256": "249111e44d747643240152012db932097af1574ef5b5c2e1992021b9137f8f59",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit definition is missing."
+    },
+    {
+      "name": "Primary and secondary hypertension",
+      "nameKey": "primary and secondary hypertension",
+      "code": "GM8.4",
+      "sourceReferenceId": "nmc-2024-ref:3d51140c3bd6a7fe43d683c36a37d19a435f1bf97392f018572c60a9dfdc01cd",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        333.72,
+        102.7,
+        361.08
+      ],
+      "sourceBodySha256": "0f607370c4bb92083cc27c533dce1ff85429bb4175b696e884e949b89aad9d5f",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Severe hypertension",
+      "nameKey": "severe hypertension",
+      "code": "GM8.5",
+      "sourceReferenceId": "nmc-2024-ref:e466cb1b0d07ef3832aa6334456b4786d1e44d1b27c4b4097a695479a8099d19",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        361.08,
+        102.7,
+        388.44
+      ],
+      "sourceBodySha256": "ffc321a9ae941e9bea9de121ba286d23b1d98bdde687a63af410fbe08f75cf3c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Secondary hypertension clues",
+      "nameKey": "secondary hypertension clues",
+      "code": "GM8.6",
+      "sourceReferenceId": "nmc-2024-ref:75e27e6b01e3d4f2637dad9cb6aeeecc0146329e1139371e844d72ebeb4690f8",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        388.44,
+        102.7,
+        415.8
+      ],
+      "sourceBodySha256": "e2eb84459de0e37cec47f043f1664e18d1cae6af672955e38f9d6a6b98de2ff8",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Target-organ injury",
+      "nameKey": "target-organ injury",
+      "code": "GM8.7",
+      "sourceReferenceId": "nmc-2024-ref:6a2fd17d7b9f77ebde3199fd0342dcf959cfc5dc2d15f6916c0d33cdaa1e5022",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        415.8,
+        102.7,
+        443.16
+      ],
+      "sourceBodySha256": "ba6418f9fb93a45894233604fe4ad201f42539fd9c9f4989a168e8eb44f048a5",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertension history",
+      "nameKey": "hypertension history",
+      "code": "GM8.8",
+      "sourceReferenceId": "nmc-2024-ref:e256e8caa8ff299746aa36a657cdf4405aa52b911d900c9ba07bfb65b82e7c6c",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        443.16,
+        102.7,
+        497.28
+      ],
+      "sourceBodySha256": "ab57a043de19055389cd2fe6f633cdc29ef9c11b02db0683b1335256e0bf5248",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add explicit documentation, presentation, duration and environmental history."
+    },
+    {
+      "name": "Hypertension differential",
+      "nameKey": "hypertension differential",
+      "code": "GM8.10",
+      "sourceReferenceId": "nmc-2024-ref:f6aa65e6f357914cd02226225723b35557dc2408a71fb4d89da7b20f2b168c5c",
+      "sourcePdfPage": 295,
+      "sourceRowBBox": [
+        44.2,
+        497.28,
+        102.7,
+        524.82
+      ],
+      "sourceBodySha256": "842f3f949be8d44fb22711add30c58ec2fecf478cdc58c3a5ca6016aeed38538",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertension workup",
+      "nameKey": "hypertension workup",
+      "code": "GM8.11",
+      "sourceReferenceId": "nmc-2024-ref:27388143e967db1a14cbd4f544a9f946a2eb2f0ea2cda2bda97e6c5d3154f879",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        52.26,
+        102.7,
+        79.5
+      ],
+      "sourceBodySha256": "e892c336a9dd59000cc7fefc148b69c9325e4d94ac697916ab3bcec4d000e3c8",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Baseline test interpretation",
+      "nameKey": "baseline test interpretation",
+      "code": "GM8.12",
+      "sourceReferenceId": "nmc-2024-ref:3377bb4fa5c45f7e3c28bedd839ab4b1ea4d5fcd4a8a0b5cd516a7713bc36352",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        145.68,
+        102.7,
+        173.04
+      ],
+      "sourceBodySha256": "0eb86c85f77adcd8467aeae9ac863ca2f3627b32d32129e4affb9247cae13347",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Primary hypertension plan",
+      "nameKey": "primary hypertension plan",
+      "code": "GM8.13",
+      "sourceReferenceId": "nmc-2024-ref:e4b1401e21d4606af08ec86e68255bae13685e2c3939a586abb52133a1d3ce2a",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        173.04,
+        102.7,
+        192.9
+      ],
+      "sourceBodySha256": "c44665494a364a274792a807d88b5a93d5d3cb82a47dac30399f33e58faca98e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertensive emergencies",
+      "nameKey": "hypertensive emergencies",
+      "code": "GM8.14",
+      "sourceReferenceId": "nmc-2024-ref:bceb7ff5bca48a9a8dcc10cd66bd9cdc18bbcf16ba2539c7b8cea08034da2e47",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        192.9,
+        102.7,
+        212.76
+      ],
+      "sourceBodySha256": "a382240e70266f618bb755a8171cc62b212cec714d91501b572bd88d9c168042",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "ECG practical",
+      "nameKey": "ecg practical",
+      "code": "GM8.16",
+      "sourceReferenceId": "nmc-2024-ref:a8aad58d590340efdca756dbb75607a40d171f50fba763060af729bcc99c2aa8",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        253.56,
+        102.7,
+        280.92
+      ],
+      "sourceBodySha256": "86622644e5dbe34c0bcff7098337c9b483d7060c9f87db769db48d50eb05c367",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertension shared decisions",
+      "nameKey": "hypertension shared decisions",
+      "code": "GM8.17",
+      "sourceReferenceId": "nmc-2024-ref:bc3af2fe6f220c374419ac5f3dfe87578329c939426bb519a9e16306986f5f5d",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        280.92,
+        102.7,
+        308.28
+      ],
+      "sourceBodySha256": "5e4ae4aaf9c92a84fc602862cf2dff5b4ff204f0af7407c3e052341c701d11a2",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertension and daily life",
+      "nameKey": "hypertension and daily life",
+      "code": "GM8.18",
+      "sourceReferenceId": "nmc-2024-ref:f94bd13d22f51c71dc3c6ad613ec9473e9a1ff7b9ee80b2033613e3777f9d708",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        308.28,
+        102.7,
+        335.64
+      ],
+      "sourceBodySha256": "4cdc9e9d8d81705028cd21c5d1181f0c4c5fdada811c813a9711d39e20bebfce",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypertension referral",
+      "nameKey": "hypertension referral",
+      "code": "GM8.19",
+      "sourceReferenceId": "nmc-2024-ref:550966e6ed5b47facda1dbf149fee5e49fc464110669a446fa4b292d71ad9ded",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        335.64,
+        102.7,
+        355.5
+      ],
+      "sourceBodySha256": "a2c96ec2b72ab386144e68c8ce813a2033b791b96c97bcef78c2f4dcf57d26fe",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Anaemia classification",
+      "nameKey": "anaemia classification",
+      "code": "GM9.1",
+      "sourceReferenceId": "nmc-2024-ref:79f91d13b50e569d816d52ae0ca9a7456d1b7aa5fc1c78dc1f2d4c1103e0f957",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        375.36,
+        102.7,
+        402.72
+      ],
+      "sourceBodySha256": "f66f066413df3e0a7aefb8e1ed40f988e093c3b1f88312019ce2bb13a3f03ddb",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit definition is missing."
+    },
+    {
+      "name": "Anaemia morphology and causes",
+      "nameKey": "anaemia morphology and causes",
+      "code": "GM9.2",
+      "sourceReferenceId": "nmc-2024-ref:ff66c41b8946cfa1309a849da54d62b562f8743365f6f146be343116099a4206",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        402.72,
+        102.7,
+        430.08
+      ],
+      "sourceBodySha256": "74b77d7293417bdb8f1670b9e4931cb49671e68cfd93970e2d7cc012a58b39fd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Anaemia history",
+      "nameKey": "anaemia history",
+      "code": "GM9.3",
+      "sourceReferenceId": "nmc-2024-ref:703ab2632daa0f6638d153698797df8dcbc63de8f47ad43b90ee652432a175eb",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        430.08,
+        102.7,
+        470.76
+      ],
+      "sourceBodySha256": "4f5b790384b2e318f748dbf110bc4b4d3e219b4d6ee5d039f3a42f65d4b04258",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add documentation and explicit prior history."
+    },
+    {
+      "name": "Anaemia examination",
+      "nameKey": "anaemia examination",
+      "code": "GM9.4",
+      "sourceReferenceId": "nmc-2024-ref:74f99f6ff3cb3e49df9ee876b3826d5c1b1d0e9593814c2d93782e29d9a1bc2b",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        470.76,
+        102.7,
+        511.56
+      ],
+      "sourceBodySha256": "2e281f3f617e88db03a17ae8a50b70b72147825690b794bda5feb195df70b594",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Anaemia differential",
+      "nameKey": "anaemia differential",
+      "code": "GM9.5",
+      "sourceReferenceId": "nmc-2024-ref:57e695d805248048d8b425396d3b64c32c37eea3e8307bc4283ff424512f29b2",
+      "sourcePdfPage": 296,
+      "sourceRowBBox": [
+        44.2,
+        511.56,
+        102.7,
+        538.98
+      ],
+      "sourceBodySha256": "2fbc67efddb84c277e183b2f5774d571377ad441ab9e0ffe506a6b6fc38bb3cc",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Anaemia workup",
+      "nameKey": "anaemia workup",
+      "code": "GM9.6",
+      "sourceReferenceId": "nmc-2024-ref:c96f2e97eb5c4c6053684272304067e609377fcd384bf7b26f40e8438c85c868",
+      "sourcePdfPage": 297,
+      "sourceRowBBox": [
+        44.2,
+        52.26,
+        102.7,
+        79.62
+      ],
+      "sourceBodySha256": "587a6a199f54a14c306566ad1b518b783bbb87dcf6fc66bc00764065ec8912cc",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Haemogram and related tests",
+      "nameKey": "haemogram and related tests",
+      "code": "GM9.7",
+      "sourceReferenceId": "nmc-2024-ref:45f3895ebfd8c8cc180ba4c10e38f040ad80111a31f13259ee82432e9e1abed2",
+      "sourcePdfPage": 297,
+      "sourceRowBBox": [
+        44.2,
+        79.62,
+        102.7,
+        99.54
+      ],
+      "sourceBodySha256": "96d3ec82dc5ba4b4fe0764fe412b52ca7f04f813444775f1ae74c22628fc5ca8",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Marrow indications and interpretation",
+      "nameKey": "marrow indications and interpretation",
+      "code": "GM9.8",
+      "sourceReferenceId": "nmc-2024-ref:c1feebe377cc5ce347d10fc96985cdde53b6b8a8268007e024c76218077097ea",
+      "sourcePdfPage": 297,
+      "sourceRowBBox": [
+        44.2,
+        152.28,
+        102.7,
+        179.52
+      ],
+      "sourceBodySha256": "8aa7b8de88e4c4231c1fe08e5801418b6d24d4bfdaac6b1abd2269116b2c4af5",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Integrated anaemia workup",
+      "nameKey": "integrated anaemia workup",
+      "code": "GM9.9",
+      "sourceReferenceId": "nmc-2024-ref:1f04078db79571d3cb84287e5672e60d21c577e05de7a2db8c07cf1dce34737e",
+      "sourcePdfPage": 297,
+      "sourceRowBBox": [
+        44.2,
+        207.06,
+        102.7,
+        234.24
+      ],
+      "sourceBodySha256": "15cddb84ab9505f4351cfa2ac5a4c87c328868cce72ae9442827e0cdea46a975",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Haematinic replacement",
+      "nameKey": "haematinic replacement",
+      "code": "GM9.10",
+      "sourceReferenceId": "nmc-2024-ref:d644de25dfeaeb75ce44dd7a98034e50ea6a45691f5b47da367e783dc6c894f4",
+      "sourcePdfPage": 297,
+      "sourceRowBBox": [
+        44.2,
+        234.24,
+        102.7,
+        261.6
+      ],
+      "sourceBodySha256": "b811fdad30a5a434cf19dc14ecb504a5b7be8e30548617e220841de7f8bc63d6",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

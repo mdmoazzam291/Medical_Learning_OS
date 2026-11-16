@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "a8eb1c42c821595c96a440e7488ad74b5ba8c3d3",
+  "status": "source-scope-checked-mapping-not-accepted",
+  "source": "https://nmc.org.in/storage/cms/rules-regulation-nmc/YTW423v3EsCFdtPv3I5qZkaNNhuXfub42UZITDRM.pdf",
+  "inputs": [
+    {
+      "path": "docs/evidence/2026-11-12-nmc-full-index-coverage-and-canonical-candidates.json",
+      "sha256": "e172246b1e9b8c9fedab67c2ad80fefc5a9b9fd6e930e8fdf9a8eb721d651c8a"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-spinal-cord-link-plan.json",
+      "sha256": "550083789d140a332beefb73f15057d868aa527e68f71c8c317caf1c4a4597df"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-spinal-cord-identity-acceptance.json",
+      "sha256": "840a2280e1f8bd91822c833810a56aa22c75c229b184840678a353f169c5c86e"
+    },
+    {
+      "path": "docs/evidence/2026-11-04-nmc-spinal-cord-intake.json",
+      "sha256": "fba2c49ec97583902af4e52405bab022ab813291d4820354926f47f83bb1408a"
+    }
+  ],
+  "verification": "Official rows AN57.1-AN57.5 and PY10.7, PY10.9, PY10.10 read from the NMC 12-09-2024 text through a web reader on 2026-11-16. AN57.5 full text was not quoted by the reader; its condition list was relayed. A direct PDF download from the workspace was refused by the network allowlist and no copy was found in Drive, so PDF bytes, the pinned SHA and rendered pages remain unverified. Update 2026-11-16: all 8 rows reproduced from the uploaded pinned PDF (pages 140, 141, 158); AN57.5 full text read, its eight listed conditions confirmed.",
+  "scope": "The 12 accepted-private identities in previewCanonicalCandidates and their 15 proposed objective links. Identity acceptance is already recorded; only source mapping is checked here.",
+  "counts": {
+    "identities": 12,
+    "receiptsJoined": 12,
+    "objectiveLinks": 15,
+    "scope-aligned": 15
+  },
+  "coverage": {
+    "AN57.5": "All 8 officially listed conditions have an identity: 7 here plus the retained Brown-Sequard identity C-101d60e987915f6fa8175c469a265f79.",
+    "PY10.10": "Complete and incomplete transection share the transection-patterns identity; hemisection is the retained Brown-Sequard identity.",
+    "uncoveredRowElements": [
+      "PY10.7: somatic sensations and applied aspects of the sensory system",
+      "PY10.9: UMN versus LMN lesion differences and clinical implications"
+    ],
+    "note": "Uncovered elements are not holds: links are partial tasks by design (identity acceptance record allows scoped row evidence without claiming full-row alignment). They need separate identities or objectives before the rows can be called fully covered."
+  },
+  "identityJoins": [
+    {
+      "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+      "name": "Spinal cord extent and termination",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.2"
+      ],
+      "planLinks": [
+        "AN57.2"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+      "name": "Spinal cord external anatomy",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.1"
+      ],
+      "planLinks": [
+        "AN57.1"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+      "name": "Motor neuron disease",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+      "name": "Poliomyelitis",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+      "name": "Spinal cord sectional anatomy",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.3"
+      ],
+      "planLinks": [
+        "AN57.3"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+      "name": "Paraplegia",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "name": "Spinal cord pathways",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.4",
+        "PY10.7",
+        "PY10.9"
+      ],
+      "planLinks": [
+        "AN57.4",
+        "PY10.7",
+        "PY10.9"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+      "name": "Hereditary sensory neuropathy",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+      "name": "Transverse myelitis",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+      "name": "Syringomyelia",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+      "name": "Spinal cord transection patterns",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "PY10.10"
+      ],
+      "planLinks": [
+        "PY10.10",
+        "PY10.10"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    },
+    {
+      "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+      "name": "Subacute combined degeneration",
+      "receiptPresent": true,
+      "candidateReferences": [
+        "AN57.5"
+      ],
+      "planLinks": [
+        "AN57.5"
+      ],
+      "referencesMatchPlan": true,
+      "allLinksAligned": true
+    }
+  ],
+  "rows": [
+    {
+      "referenceId": "nmc-2024-ref:74d020a4a08c0746dfa925fe1cf755f4393e82556c4b1e5fb764b9cb006feb4c",
+      "code": "AN57.1",
+      "conceptId": "C-08a4114f-30af-45d9-a329-a0b0c82ea87f",
+      "conceptName": "Spinal cord external anatomy",
+      "acceptedIdentityDigest": "53df09a7d40c1d8e8b029c963e654602594e1fa76e7b5c3d048f7b02ca73caa4",
+      "proposalId": "da3db058-d364-43f6-bd78-ee47bdfffffe",
+      "expectedDraftDigest": "8aeb31d1650f6df4fb2e2f5721181077c023385fad1d6a337eeaf77c7e1b1ba1",
+      "objectiveTask": "identification",
+      "objectiveWording": "Orient a spinal cord specimen and identify its external landmarks.",
+      "officialTextRelay": "Identify external features of spinal cord",
+      "domain": "K/S",
+      "level": "SH",
+      "teachingMethod": "Practical, Demonstration",
+      "assessment": "Written/Viva voce/skill assessment",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Specimen orientation and external landmarks; practical task matches K/S SH.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:bff943f8f8d6a41099b670567d240e019e706516521cf0c460d77fd7e31e1a3b",
+      "code": "AN57.2",
+      "conceptId": "C-01e6f2e6-b01e-418d-9e72-93bdb1989770",
+      "conceptName": "Spinal cord extent and termination",
+      "acceptedIdentityDigest": "f962f10981c0933ebd0114187875d4aaab0c1c2c6582dc6476b66bc1f50b39a1",
+      "proposalId": "060ee9a5-eee5-4a90-89c0-e5300aae135c",
+      "expectedDraftDigest": "314720d6eda1491fff772d8fba2a0aa31a3d167598258dd65cff4bae1f9064f7",
+      "objectiveTask": "comparison",
+      "objectiveWording": "Compare the lower extent of the cord in a child and an adult on labelled diagrams and explain one implication of the difference.",
+      "officialTextRelay": "Describe extent of spinal cord in child & adult with its clinical implication",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT, Demonstration",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Child-adult extent comparison with one implication; within row.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:f6e884076849a56fc0b10a496782c2e59b8c9b232c3912a1165b51c02f4b7fb7",
+      "code": "AN57.3",
+      "conceptId": "C-1f869f0c-e20d-43b1-94cf-c21dab94e88c",
+      "conceptName": "Spinal cord sectional anatomy",
+      "acceptedIdentityDigest": "b02bf7f63bf48b08ee82ad9f83310f5beb8d9cac3c4fec510e4fd8569812cc97",
+      "proposalId": "a85e8451-f1dc-427e-adb8-fea616951da0",
+      "expectedDraftDigest": "0343f6c8d309149d630a8020c3cde5b7e3d7fa28f4ef7bfadc22e5263132a8bd",
+      "objectiveTask": "drawing",
+      "objectiveWording": "Sketch and label mid-cervical and mid-thoracic sections and identify features that distinguish them.",
+      "officialTextRelay": "Draw & label transverse section of spinal cord at mid-cervical & midthoracic level",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Sketch and label both levels; mirrors the official draw-and-label task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:e7f98d08bf1baf216b7f248386e71d0e70697e97c480819a07caa82af991e884",
+      "code": "AN57.4",
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "conceptName": "Spinal cord pathways",
+      "acceptedIdentityDigest": "b701d1c550396a7fcad2d60f0651c37bd0cbff2378b2c0dfe761d5abfc017c38",
+      "proposalId": "ff883705-5468-4d98-8713-e9a36cda4ce3",
+      "expectedDraftDigest": "0c52da0869cdc64c76f560916ff244e4a5c880081de1ea9f4404106e20be7c6f",
+      "objectiveTask": "classification",
+      "objectiveWording": "Sort the main pathways represented at mid-thoracic level by direction of transmission.",
+      "officialTextRelay": "Enumerate ascending & descending tracts at mid thoracic level of spinal cord",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Sorting mid-thoracic tracts by direction; enumeration within row.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+      "conceptName": "Poliomyelitis",
+      "acceptedIdentityDigest": "dacb2ac4f8e7a6f695d257cfbac802a917d0c1b3b9a9df649c50bb20ce8837df",
+      "proposalId": "b4f16dd9-33e9-4f20-826d-2b783c2b75de",
+      "expectedDraftDigest": "d3e0a847d8dd0ef13f3d2996aca775e993484a97cfca4967f88b110878c59861",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use a simulated motor examination to explain the spinal grey-matter localization considered in poliomyelitis.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+      "conceptName": "Motor neuron disease",
+      "acceptedIdentityDigest": "149c7cb3c57a50adb65a9891489eb14814d99968a56c6992f2d4aee3531be865",
+      "proposalId": "b5a1b298-690a-4796-8083-5498d674b93d",
+      "expectedDraftDigest": "ae0effed648b887d409969abaf4da75d34432301180d2e86dff859d68405bd18",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use a simulated motor examination to identify upper and lower motor neuron findings and explain the spinal structures considered in motor neuron disease.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+      "conceptName": "Syringomyelia",
+      "acceptedIdentityDigest": "3db6131abba46d4d36c713cff1a58b668b35039545f08955749edb5f4b665b61",
+      "proposalId": "6f81253f-97b5-43c4-b808-d99f2d034492",
+      "expectedDraftDigest": "930e66dea6a87c449de3480b61f4532664412e1a7d865d2d4e124b385d2186eb",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use a labelled spinal cord section to connect the distribution of findings in a simulated syringomyelia case to affected structures.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-bb568e1b-2969-4c29-92f2-1b409eeb7847",
+      "conceptName": "Hereditary sensory neuropathy",
+      "acceptedIdentityDigest": "f2fdca1cb577f78f4c99d17ffd5cf9e816582152b36042a6fa256d3767cdfdab",
+      "proposalId": "e12e9530-a472-4373-ba04-3b493ba333ff",
+      "expectedDraftDigest": "f3c77fe1d2228c44548762f15ebdf234bfe5bb56dc3c1461993ecefa3de1576c",
+      "objectiveTask": "anatomical-reasoning",
+      "objectiveWording": "Identify which structures in the sensory pathway could account for the findings in a simulated hereditary sensory neuropathy case.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+      "conceptName": "Subacute combined degeneration",
+      "acceptedIdentityDigest": "a1f55f19bde1db4073eee75c61cf8fdc3a7635cdbc1ec84bac529da906f5ec6f",
+      "proposalId": "92b5f13b-e285-43e2-a4cc-c5e9bc4d2132",
+      "expectedDraftDigest": "75cdab72e38bae7a751b3f56a4b30390cdebab9b4bd22952c104cf21fc7703a6",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use a simulated examination to explain which cord pathways could account for the combination of findings.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-c3983ac7-58aa-4ec4-bbc6-3faacfa679d3",
+      "conceptName": "Transverse myelitis",
+      "acceptedIdentityDigest": "ffdbccfe5305a9947dc6be1a0e7af93426ebb47f70a8c1280da252d51948bbac",
+      "proposalId": "fe808792-b128-4c68-86e4-6c1edafe67a8",
+      "expectedDraftDigest": "6742f7841601fbc80784e776f862a27903d2232cd0f8db8c3a430d3f5aa4ed96",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use a simulated neurological examination to propose a spinal level and explain the findings that support it.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:17e21f71bdb85fd0cca17580e49056cd364cdab3d0387b08f5f3e9ff8923ee11",
+      "code": "AN57.5",
+      "conceptId": "C-4facafc6-c8ef-4a4d-bf03-5d1d6af53375",
+      "conceptName": "Paraplegia",
+      "acceptedIdentityDigest": "f5456b768ee2d6c421f9ff4454930235594f27b5b890375a43e76aa56bbd6105",
+      "proposalId": "35679aaf-7632-430d-89da-97d7b462f12b",
+      "expectedDraftDigest": "8507aa78bf584a9c9004ea5233617c24e2b01847cb1765b5bf50269ca626fdef",
+      "objectiveTask": "localization",
+      "objectiveWording": "Use the examination in a simulated paraplegia case to compare possible anatomical localizations.",
+      "officialTextRelay": "Describe the anatomical basis of clinical conditions affecting the grey and white matter of spinal cord (opening only; the reader relayed the condition list: Brown-Sequard syndrome, poliomyelitis, ALS or motor neuron disease, syringomyelia, hereditary sensory neuropathy, subacute combined degeneration, transverse myelitis, paraplegia)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Condition named in the official AN57.5 list; localization reasoning on a simulated case is a knowledge-level task.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+      "code": "PY10.10",
+      "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+      "conceptName": "Spinal cord transection patterns",
+      "acceptedIdentityDigest": "91a9811c693a84fa60fbd544abbb55d490dadeb4c5aa9ffe7b33c7c5285f3e52",
+      "proposalId": "91830b40-fc5a-41c4-8a91-10d32ababac6",
+      "expectedDraftDigest": "7775b5fcf4b5a0d22bc6d2920c940036107b4bf0d4109f31c366ec1bfb7718ab",
+      "objectiveTask": "pattern-recognition",
+      "objectiveWording": "Describe the findings expected in a simulated complete transection and explain how the level changes the presentation.",
+      "officialTextRelay": "Discuss types and clinical features of spinal cord lesions (complete, incomplete transection and hemisection - Brown Sequard syndrome)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT, SGT, Tutorials, ECE",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Complete or incomplete transection; hemisection is carried by the retained Brown-Sequard identity.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:87272a0b24b077056486f49c08718b34af1ed01241acf8f5d0d3bb798f3219a3",
+      "code": "PY10.10",
+      "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+      "conceptName": "Spinal cord transection patterns",
+      "acceptedIdentityDigest": "91a9811c693a84fa60fbd544abbb55d490dadeb4c5aa9ffe7b33c7c5285f3e52",
+      "proposalId": "91830b40-fc5a-41c4-8a91-10d32ababac6",
+      "expectedDraftDigest": "7775b5fcf4b5a0d22bc6d2920c940036107b4bf0d4109f31c366ec1bfb7718ab",
+      "objectiveTask": "pattern-recognition",
+      "objectiveWording": "Use preserved and impaired functions in a simulated case to explain why an incomplete transection pattern is considered.",
+      "officialTextRelay": "Discuss types and clinical features of spinal cord lesions (complete, incomplete transection and hemisection - Brown Sequard syndrome)",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT, SGT, Tutorials, ECE",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Complete or incomplete transection; hemisection is carried by the retained Brown-Sequard identity.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:58a8dadf28489b736507c70d68ec76cc977c60be68fdf810fc569b392f7fb5a7",
+      "code": "PY10.7",
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "conceptName": "Spinal cord pathways",
+      "acceptedIdentityDigest": "b701d1c550396a7fcad2d60f0651c37bd0cbff2378b2c0dfe761d5abfc017c38",
+      "proposalId": "ff883705-5468-4d98-8713-e9a36cda4ce3",
+      "expectedDraftDigest": "0c52da0869cdc64c76f560916ff244e4a5c880081de1ea9f4404106e20be7c6f",
+      "objectiveTask": "pathway-tracing",
+      "objectiveWording": "Trace the spinal portions of selected ascending pathways and identify which sensory modalities each pathway carries.",
+      "officialTextRelay": "Discuss somatic sensations, ascending tracts (sensory tracts) and applied aspects of sensory system",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT, SGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Spinal portions of ascending pathways only; somatic sensations and applied sensory aspects remain uncovered by these links.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    },
+    {
+      "referenceId": "nmc-2024-ref:d8871a90092ba44acd343d18c1cd4b20fc3acc930909d697c3ad128d21a6f72d",
+      "code": "PY10.9",
+      "conceptId": "C-9d978c84-6555-496d-943f-16e358baa9fb",
+      "conceptName": "Spinal cord pathways",
+      "acceptedIdentityDigest": "b701d1c550396a7fcad2d60f0651c37bd0cbff2378b2c0dfe761d5abfc017c38",
+      "proposalId": "ff883705-5468-4d98-8713-e9a36cda4ce3",
+      "expectedDraftDigest": "0c52da0869cdc64c76f560916ff244e4a5c880081de1ea9f4404106e20be7c6f",
+      "objectiveTask": "pathway-tracing",
+      "objectiveWording": "Trace selected descending pathways through the spinal cord and identify where they connect with motor circuits.",
+      "officialTextRelay": "Describe the course of descending tracts (pyramidal and extra pyramidal), its clinical implications including difference in UMN and LMN lesions",
+      "domain": "K",
+      "level": "KH",
+      "teachingMethod": "LGT, SGT",
+      "assessment": "Written/Viva voce",
+      "alignment": "partial-task-within-row",
+      "modeConsistentWithLevel": true,
+      "disposition": "scope-aligned",
+      "holdType": null,
+      "note": "Descending pathway course only; UMN versus LMN lesion differences remain uncovered by these links.",
+      "mappingAccepted": false,
+      "learnerActivation": false,
+      "pdfVerified": true
+    }
+  ],
+  "limits": [
+    "No mapping is accepted; owner/admin attestation is still required per link.",
+    "Protected private identity resolution must exist before links show in the Admin preview (link plan activation requirement).",
+    "No clinical acceptance, learner publication or DB mutation."
+  ],
+  "nextAction": "Owner/admin attests the 15 links; then draft objectives for the PY10.7 and PY10.9 uncovered elements."
+}

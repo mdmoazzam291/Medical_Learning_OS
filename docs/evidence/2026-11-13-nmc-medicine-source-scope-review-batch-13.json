@@ -1,0 +1,1171 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "5c10713a7dd92dee1baca14d2014ac9eb9c193e9",
+  "sourceQueue": "2026-11-13-nmc-medicine-next-queue-gm1-gm3.json",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 60,
+  "reviewed": 60,
+  "held": 11,
+  "scopeAligned": 49,
+  "cumulative": {
+    "reviewedSourceRows": 542,
+    "reviewedDistinctNameKeys": 541,
+    "alignedSourceRows": 504,
+    "heldSourceRows": 38,
+    "unreviewedDistinctNameKeys": 256
+  },
+  "rows": [
+    {
+      "name": "Heart disease overview",
+      "nameKey": "heart disease overview",
+      "code": "GM1.1",
+      "sourceReferenceId": "nmc-2024-ref:6514164adf816d5b9fb210588bd81f25f57df8e8dc2896614d59e16b6b98b708",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        171.66,
+        102.7,
+        212.46
+      ],
+      "sourceBodySha256": "54ffe3489ac37e79034bd477ed49e683c19997b4eac661eb99b226edf841959f",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure stages",
+      "nameKey": "heart failure stages",
+      "code": "GM1.3",
+      "sourceReferenceId": "nmc-2024-ref:dee02340b5ea0a1e3d835a9f6d1e54fc6bd5c005919ea33639f01df49fd776d4",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        266.64,
+        102.7,
+        293.94
+      ],
+      "sourceBodySha256": "6d5d9f05f7282c7fa3e166b291ed96b3de2e94294d7bf99983f919e727003b4c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure phenotypes",
+      "nameKey": "heart failure phenotypes",
+      "code": "GM1.4",
+      "sourceReferenceId": "nmc-2024-ref:c5125466b57bc1cdb4367592fdedc58b60968722b798e3504a6e66db6e29d39b",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        293.94,
+        102.7,
+        321.42
+      ],
+      "sourceBodySha256": "44edc34e59ec3131740a2c87be501ef6f31a381696319e9c85bc06d257c76c08",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure compensation",
+      "nameKey": "heart failure compensation",
+      "code": "GM1.5",
+      "sourceReferenceId": "nmc-2024-ref:bdb2c13e100d1ae645af647c93d710c15e438902a37e4f2cfa789bcade3e9ed8",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        321.42,
+        102.7,
+        362.04
+      ],
+      "sourceBodySha256": "66a8c198b85ba28991a68d80a98a687edbd5ffb4f54a9664408391964d640cac",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure precipitants",
+      "nameKey": "heart failure precipitants",
+      "code": "GM1.6",
+      "sourceReferenceId": "nmc-2024-ref:44168bb413e80962f83d88a8cdf4fac1f8393d73d255bb800663ab5c937bf28e",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        362.04,
+        102.7,
+        402.84
+      ],
+      "sourceBodySha256": "3a80b9618078669a9eaf61954427e0117940a20f27317f41189868bc55b96a6c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Arrhythmias in heart failure",
+      "nameKey": "arrhythmias in heart failure",
+      "code": "GM1.7",
+      "sourceReferenceId": "nmc-2024-ref:edf5b88c879dcd78165f71b1e6adfa33cb8c24d03ba277a3f7e4e8a5d24ee637",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        402.84,
+        102.7,
+        443.76
+      ],
+      "sourceBodySha256": "47910a7c2a1c5501934e2496a16f293606b4629fa5383d953449f2f6b5139c6c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure history",
+      "nameKey": "heart failure history",
+      "code": "GM1.8",
+      "sourceReferenceId": "nmc-2024-ref:59116e71ee1c8c2d1e727a943fd52b9def8f0d5a34baa544977e1d7e72375ccb",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        443.76,
+        102.7,
+        511.26
+      ],
+      "sourceBodySha256": "e7b55fec2aaf52d2a466daf2f08801e479d57868817d53ce286b39900423027c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit history documentation is missing."
+    },
+    {
+      "name": "Heart failure examination",
+      "nameKey": "heart failure examination",
+      "code": "GM1.9",
+      "sourceReferenceId": "nmc-2024-ref:6d2ca10b6ede9cb0898b4f7fe3189d74327f499e2d84b64fac5fe2284881cb65",
+      "sourcePdfPage": 281,
+      "sourceRowBBox": [
+        44.2,
+        511.26,
+        102.7,
+        538.62
+      ],
+      "sourceBodySha256": "c580a508ecb6f96d172ee037c0d94afbd26520ef2802f63d839cfe7b553915f7",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Peripheral pulse",
+      "nameKey": "peripheral pulse",
+      "code": "GM1.10",
+      "sourceReferenceId": "nmc-2024-ref:8ee8d80fbc51f6df4bb334f4d2ce9a5b7564dd496be3551e6504df4c29eafc9c",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        214.86
+      ],
+      "sourceBodySha256": "cf56b98ec61d3e9e45d27a854e59c9ff60bc6bea67025c47e67ece78a20713d7",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Blood pressure assessment",
+      "nameKey": "blood pressure assessment",
+      "code": "GM1.11",
+      "sourceReferenceId": "nmc-2024-ref:88805af1bd0aa8dcf1742cd094de6ebfdc431e45ab9d2d2b8fd92b7776ac37ad",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        214.86,
+        102.7,
+        255.66
+      ],
+      "sourceBodySha256": "e199132a77f753c1be257fcbd4dfbf43b5f966ef9f95a2d84da645e9349ae9c8",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Jugular venous pressure",
+      "nameKey": "jugular venous pressure",
+      "code": "GM1.12",
+      "sourceReferenceId": "nmc-2024-ref:bd7c6ac73aecf38758b672235bb31d800aec79cb5cd5ab73d2dd72dbf9985d47",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        255.66,
+        102.7,
+        296.52
+      ],
+      "sourceBodySha256": "af09102f3ec9ae7c2f402a9188f0a891170193c51537de8135d84d385912d190",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Cardiac murmurs",
+      "nameKey": "cardiac murmurs",
+      "code": "GM1.13",
+      "sourceReferenceId": "nmc-2024-ref:9ba845f2e3e9d86027930fb0048f2f2442063da7e0cd3571c31f0777a4e44bb5",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        296.52,
+        102.7,
+        337.14
+      ],
+      "sourceBodySha256": "986ce6a10def8bb59e46b293c286c4ff6c2977ef2956736d2892e4558eb26229",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Cardiac differential diagnosis",
+      "nameKey": "cardiac differential diagnosis",
+      "code": "GM1.14",
+      "sourceReferenceId": "nmc-2024-ref:5332179664bfa4210106b8df153430f7dc8b8707cfd90579f2ac1be6805c1d24",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        337.14,
+        102.7,
+        378.06
+      ],
+      "sourceBodySha256": "151118c3a25f35f995fa39759725db555e640f5a9cac36ff8cff68328f6f7007",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Initial cardiac tests",
+      "nameKey": "initial cardiac tests",
+      "code": "GM1.15",
+      "sourceReferenceId": "nmc-2024-ref:5d9e58a4598f40a5835d1deb9782aa96f30ac6184b7e33ff5837a8a970c64c63",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        378.06,
+        102.7,
+        421.2
+      ],
+      "sourceBodySha256": "6dbbfed8b31a0b0975bceec48a7ebcb7f27dc52d10abe6d63f601d73bb342a20",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "12-lead ECG",
+      "nameKey": "12-lead ecg",
+      "code": "GM1.16",
+      "sourceReferenceId": "nmc-2024-ref:bcf25c85eb3b2f88a284cb40b1ba7ae9e8c704815d5673740c68a5e8946db5fd",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        421.2,
+        102.7,
+        446.16
+      ],
+      "sourceBodySha256": "73ee9f1ec955814b4c9c182c46339171842131ea40d903a263f3a0e992cecf10",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Advanced cardiac investigations",
+      "nameKey": "advanced cardiac investigations",
+      "code": "GM1.17",
+      "sourceReferenceId": "nmc-2024-ref:09f9c855e5c26b9912717ccb5d26a9372f1dae34ff8ed01c90efbd1ca506bf25",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        446.16,
+        102.7,
+        500.28
+      ],
+      "sourceBodySha256": "4c4ab7a1d1755c812579a9d530f6c7276c7e543b60d0e6977dabaafd62b0869c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Valvular severity",
+      "nameKey": "valvular severity",
+      "code": "GM1.18",
+      "sourceReferenceId": "nmc-2024-ref:caa4b236e582d2f9f2f32497e97834d183c381efe6ac3a59d6e7672156ce1e96",
+      "sourcePdfPage": 282,
+      "sourceRowBBox": [
+        44.2,
+        500.28,
+        102.7,
+        541.08
+      ],
+      "sourceBodySha256": "146d4a16ffd7dfd1e8953baf25c9bc8f46d62a28caf4b647371a1bae527f8f99",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Laboratory findings and surgery as an intervention option are implicit."
+    },
+    {
+      "name": "Infective endocarditis",
+      "nameKey": "infective endocarditis",
+      "code": "GM1.19",
+      "sourceReferenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        228.48
+      ],
+      "sourceBodySha256": "633eca62d8120796fe86e7225b1ad35584b4f898f4b66dc95b23b06b9f1a87e3",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Blood culture collection",
+      "nameKey": "blood culture collection",
+      "code": "GM1.20",
+      "sourceReferenceId": "nmc-2024-ref:f50c7d31633b51a0c49228709f79c4dfbeb981b1984f58d296f7bfc58b1dad26",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        228.48,
+        102.7,
+        255.66
+      ],
+      "sourceBodySha256": "913f2a27153af560b1b307df640b2e7596abb852b72081f9722f595e36b5a93f",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Non-drug heart failure care",
+      "nameKey": "non-drug heart failure care",
+      "code": "GM1.21",
+      "sourceReferenceId": "nmc-2024-ref:d1ff36cd320ba0fcc98b9ff482ac153c42da47797e1355b971e70d3221ed6d87",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        255.66,
+        102.7,
+        309.78
+      ],
+      "sourceBodySha256": "8388c070441b7856c833366d20e20a1367a679bf90034d24a4baf46ab79352fa",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure medicines",
+      "nameKey": "heart failure medicines",
+      "code": "GM1.22",
+      "sourceReferenceId": "nmc-2024-ref:e496f319f75847aa5e8d96d3b94d4d1b5064cfe01143b394f2c452b46e092282",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        309.78,
+        102.7,
+        364.02
+      ],
+      "sourceBodySha256": "250ce639aabb6f3b253d937904331735d6c2b8c17c5fd33a52e392f9601d3940",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Drug pharmacology is implicit in the indications and monitoring comparison."
+    },
+    {
+      "name": "Cardiac interventions",
+      "nameKey": "cardiac interventions",
+      "code": "GM1.23",
+      "sourceReferenceId": "nmc-2024-ref:b004176f7736dc2d1e3f9e7c91e46a22679ead7ef377030d5fa19dad6748d983",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        364.02,
+        102.7,
+        404.7
+      ],
+      "sourceBodySha256": "bdd68e7d2c6c9a20453ab269cce017192d2d69298acfa6b4b32473f7824aa65b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Heart failure management plan",
+      "nameKey": "heart failure management plan",
+      "code": "GM1.24",
+      "sourceReferenceId": "nmc-2024-ref:0216b34fde94865426c7253ea9036ca099e093d5d97ca91ec741b1e485946836",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        404.7,
+        102.7,
+        472.38
+      ],
+      "sourceBodySha256": "4f92b10107fd85b6ccde2420398281e75601a8c0c10bda1b690f79c7cfb09fa4",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Adult congenital heart disease",
+      "nameKey": "adult congenital heart disease",
+      "code": "GM1.25",
+      "sourceReferenceId": "nmc-2024-ref:54831bd78a798bf51c732a65367d1b530b82d9c5c32413eee2126de36afd6fd1",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        472.38,
+        102.7,
+        513.06
+      ],
+      "sourceBodySha256": "254b396d7bf9ac25833762451539c386a2ab451d0074457c0b97760935068eaf",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Integrated cardiac assessment",
+      "nameKey": "integrated cardiac assessment",
+      "code": "GM1.26",
+      "sourceReferenceId": "nmc-2024-ref:9e93da534384feca281be1fe5f926abd2fd3a7ca4014cec640c41111122f7dfb",
+      "sourcePdfPage": 283,
+      "sourceRowBBox": [
+        44.2,
+        513.06,
+        102.7,
+        540.6
+      ],
+      "sourceBodySha256": "659d110aa198bd923208a25ec5ebe75021d07e340436e1e5702fac75eacc24c7",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit documentation is missing."
+    },
+    {
+      "name": "Intramuscular injection",
+      "nameKey": "intramuscular injection",
+      "code": "GM1.27",
+      "sourceReferenceId": "nmc-2024-ref:80eb4053cd7e6907ee0b4c329a84a014810e2101e0f98f8f70768a6d72a76adb",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        133.8,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "167cea026d108b75870ee5f0ee0fd323b637f9bb96b6fd974ecc09c269c9e034",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Atherosclerosis epidemiology",
+      "nameKey": "atherosclerosis epidemiology",
+      "code": "GM2.1",
+      "sourceReferenceId": "nmc-2024-ref:bb9c581b72c6693123746912f9a0906d1f44d1503dd3b5b17130b1c06e106c6f",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        201.12,
+        102.7,
+        228.48
+      ],
+      "sourceBodySha256": "3c7c2a93b4ff410013550cffdb8ddbdd3ee1236e49a457e0d3b887ad89f7067b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary risk factors",
+      "nameKey": "coronary risk factors",
+      "code": "GM2.2",
+      "sourceReferenceId": "nmc-2024-ref:d32f60a2653c199c9aa8d56740ee6b54e28f79388da64a33769ce9c2709b2d73",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        228.48,
+        102.7,
+        255.84
+      ],
+      "sourceBodySha256": "f8e425dc0a7c456d2989d5e1abd476fad533ce5f65d6b913854cb13fe0460f16",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Lipids and plaque",
+      "nameKey": "lipids and plaque",
+      "code": "GM2.3",
+      "sourceReferenceId": "nmc-2024-ref:ac1ae7b0f8fa658bbfc241e1ea9eae9298e220411878e9ca8927ee6eba4143c9",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        255.84,
+        102.7,
+        283.08
+      ],
+      "sourceBodySha256": "8040d1d1bb89d3bbc93c1c8650a312b953bc50d90d37ae68c20daa13bebeb979",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Ischaemic disease progression",
+      "nameKey": "ischaemic disease progression",
+      "code": "GM2.4",
+      "sourceReferenceId": "nmc-2024-ref:d62971969f8162f77e61915d39c3b13048193eda4e5956fc5fae09b05fcc224f",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        283.08,
+        102.7,
+        310.62
+      ],
+      "sourceBodySha256": "0f37f6cabd7d118cc46a0d5443f7e6ce3bfe6e9951b9a7e023ec18d92d4b91b4",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Acute coronary syndromes",
+      "nameKey": "acute coronary syndromes",
+      "code": "GM2.5",
+      "sourceReferenceId": "nmc-2024-ref:47e30597e017d2a00629264a4687fdbc1196383e7f54f2e01d899995edefc501",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        310.62,
+        102.7,
+        337.8
+      ],
+      "sourceBodySha256": "0361b1541ae389cc9d475368905f1893fc964790bbb7aab2faab75a7239a6165",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary history",
+      "nameKey": "coronary history",
+      "code": "GM2.6",
+      "sourceReferenceId": "nmc-2024-ref:ee44e37a844eb0627eb2e6ee0aacbd76c4f7bbdf7150aae956ab6c77e2a75083",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        337.8,
+        102.7,
+        391.98
+      ],
+      "sourceBodySha256": "d4363977017ac7cf72941928df49d9e3c38c9af16ca9648e9e9bb628b336d866",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit documentation is missing and complications should be distinguished from prior events."
+    },
+    {
+      "name": "Vascular and cardiac examination",
+      "nameKey": "vascular and cardiac examination",
+      "code": "GM2.7",
+      "sourceReferenceId": "nmc-2024-ref:36b9e7aba65b513a108b4018edbab98adab76e4b6175da47bcf7470025bd1f77",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        391.98,
+        102.7,
+        432.9
+      ],
+      "sourceBodySha256": "2368d69a1f61735e246c6ef27616fd90df1d73d95865b40441d8c4d84fc560cf",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Specify both vascular and cardiac examination."
+    },
+    {
+      "name": "Coronary differential diagnosis",
+      "nameKey": "coronary differential diagnosis",
+      "code": "GM2.8",
+      "sourceReferenceId": "nmc-2024-ref:8c1d567871588d168a2f5e42045e8b642ae82184dda76408af097a41d08b6cd7",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        432.9,
+        102.7,
+        473.52
+      ],
+      "sourceBodySha256": "559f155ee7dced3e1fda8439baac76c4a682b4af77ec2660d66d652e27153257",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit differential documentation is missing."
+    },
+    {
+      "name": "Angina and infarction",
+      "nameKey": "angina and infarction",
+      "code": "GM2.9",
+      "sourceReferenceId": "nmc-2024-ref:c1c554444edf5e4a2c7f436d54a1941af41ef7bd892e568bc3785e267263a369",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        473.52,
+        102.7,
+        500.82
+      ],
+      "sourceBodySha256": "3b3ef681657d6f68c2909a49136b17c4dc761b0e626f9f0b33c3996ac6974338",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "ECG in suspected coronary disease",
+      "nameKey": "ecg in suspected coronary disease",
+      "code": "GM2.10",
+      "sourceReferenceId": "nmc-2024-ref:a81c105c975451b39dae871ef8e7d86bc4afb98dbd9d7392a22bfb19e79a46cf",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        500.82,
+        102.7,
+        521.88
+      ],
+      "sourceBodySha256": "266badf1c1147f62df71750bce52c7b69fa33d2c62b53e81355eb164e4ce950c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Chest imaging and myocardial markers",
+      "nameKey": "chest imaging and myocardial markers",
+      "code": "GM2.11",
+      "sourceReferenceId": "nmc-2024-ref:5aca0d8673e308cbb8cb0f94648c260f211c2a4ee82e2e0b01874a730b09a0a9",
+      "sourcePdfPage": 284,
+      "sourceRowBBox": [
+        44.2,
+        521.88,
+        102.7,
+        541.8
+      ],
+      "sourceBodySha256": "b2f5abaeec254197461bbe80b8ba9e75f3ed3cc41e4fa72eb16420bbb8760dac",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Lipid profile",
+      "nameKey": "lipid profile",
+      "code": "GM2.12",
+      "sourceReferenceId": "nmc-2024-ref:9bb2409f3e69613f551d4ad5a71d0e6b0224b007ccb97ef8ea2bf25991cf271b",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        153.66
+      ],
+      "sourceBodySha256": "2b15618e75464b2ec99985a44c2782051df0c68c8ba2180164ab0c70bccdd300",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary investigations",
+      "nameKey": "coronary investigations",
+      "code": "GM2.13",
+      "sourceReferenceId": "nmc-2024-ref:fee905096fd818032003a8c7cbb2b39a26d87833d05571fff3011080109c11c2",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "sourceBodySha256": "6cffcf1e5daff030af4e9099d615372edd8bbc3adc714e6372957ccefb1a8338",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary care admission",
+      "nameKey": "coronary care admission",
+      "code": "GM2.14",
+      "sourceReferenceId": "nmc-2024-ref:134e826f9acd02c70ea2e56bc6dd99a6f00a5264f50a933aac20acafe61fbe6f",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        181.14,
+        102.7,
+        221.76
+      ],
+      "sourceBodySha256": "fa1cdc3f6e22a889e4fc052bdf67eb6d71ac4d4e8c4222b3b0e4e19530e98a26",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Acute coronary medicines",
+      "nameKey": "acute coronary medicines",
+      "code": "GM2.15",
+      "sourceReferenceId": "nmc-2024-ref:2bdf500ccc3b3d6237a572b0185e1224b0d9aa481b1579ce55c455d2c26d5ffd",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        221.76,
+        102.7,
+        249.12
+      ],
+      "sourceBodySha256": "5e8564f7026e17ac9128e964e98bfc6273275e7630d4092c756c1a711a99a921",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary revascularization",
+      "nameKey": "coronary revascularization",
+      "code": "GM2.16",
+      "sourceReferenceId": "nmc-2024-ref:43d545e809b45fdff61fc9af8d4ef90e7d797885d99354c10e9aec45486bd2cf",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        249.12,
+        102.7,
+        276.48
+      ],
+      "sourceBodySha256": "af0947876e5565f9cee61d4f62c4d0f6a13af455a925b1cac7d52dc480373db9",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Cardiac rehabilitation",
+      "nameKey": "cardiac rehabilitation",
+      "code": "GM2.17",
+      "sourceReferenceId": "nmc-2024-ref:f7abcc579a055c81d660fc6949a182f8543423176c329012edd8872ef3cace45",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        276.48,
+        102.7,
+        303.84
+      ],
+      "sourceBodySha256": "926af27d2aec5273d8e90c5dd584d894364a27cc2039374346d8adc841d59c00",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Dyslipidaemia medicines",
+      "nameKey": "dyslipidaemia medicines",
+      "code": "GM2.18",
+      "sourceReferenceId": "nmc-2024-ref:b55c04b92ef3738be9231499d207d9cd981c384b716e1eda98db77e66965d0f6",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        303.84,
+        102.7,
+        344.58
+      ],
+      "sourceBodySha256": "1c43d27b2625d12c50940ec49fbfab75b1a535008d6215415cb5430880f65231",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary complications",
+      "nameKey": "coronary complications",
+      "code": "GM2.19",
+      "sourceReferenceId": "nmc-2024-ref:25317e786ee62e32a2e4709a1a6ed2e1864f7ef8c6ca8dcaf3166b2310648d8b",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        344.58,
+        102.7,
+        398.76
+      ],
+      "sourceBodySha256": "22cefeeccdd32cbddcb2267aeb6eef8522bc4dfeb87241e0a839172ef104fb74",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm1-gm2-19-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Add mechanisms of the listed complications alongside recognition and management."
+    },
+    {
+      "name": "Coronary pain",
+      "nameKey": "coronary pain",
+      "code": "GM2.20",
+      "sourceReferenceId": "nmc-2024-ref:3aeb646d3cbb3bf6ec5fdf558a4ba095ea0ecd37015d407e1935eb5ab276026a",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        398.76,
+        102.7,
+        426.12
+      ],
+      "sourceBodySha256": "b213f3344dcc45b69f7968334811745ad04f9bd0d98e185e81660ffd50de3f31",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "ACLS participation",
+      "nameKey": "acls participation",
+      "code": "GM2.21",
+      "sourceReferenceId": "nmc-2024-ref:a698cb0665f4ad3e07547c777820480b5255ac8c80770ea9b02a47d2cbac5587",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        426.12,
+        102.7,
+        453.42
+      ],
+      "sourceBodySha256": "01be3e2f17ecac7ba7d6b01f6a251fb51f5406459d28f44cb6948d1b99391f71",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Coronary drug selection",
+      "nameKey": "coronary drug selection",
+      "code": "GM2.23",
+      "sourceReferenceId": "nmc-2024-ref:b68be8b83a3c1328a6d4011c87721097e29610a5d90f643a0d4560fab00a2a93",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        480.78,
+        102.7,
+        521.58
+      ],
+      "sourceBodySha256": "3cfcee473667f0ec8e41fd99bc5cb9a9ae3d38018165026f61eae2f8dcdb79a9",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Lifestyle counselling",
+      "nameKey": "lifestyle counselling",
+      "code": "GM2.24",
+      "sourceReferenceId": "nmc-2024-ref:0f5400b311fde5f5d1f7db8904364a8d918b51ba167eec0398dc5fba1fac8621",
+      "sourcePdfPage": 285,
+      "sourceRowBBox": [
+        44.2,
+        521.58,
+        102.7,
+        541.5
+      ],
+      "sourceBodySha256": "ff78a53a3de998c9183e9be02b99dddb70b21cbdb6962ee6d01afe31cace23cb",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pneumonia classification",
+      "nameKey": "pneumonia classification",
+      "code": "GM3.1",
+      "sourceReferenceId": "nmc-2024-ref:86d1d426f30ca8843c7e7b4e19da0389d9713506e2c10cf08d30a70c60992cc4",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        146.16,
+        102.7,
+        186.96
+      ],
+      "sourceBodySha256": "66232552069af3b1c32ac0ad6d10dc2de1261279b8a812e94480aecb7030c769",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pneumonia microbiology",
+      "nameKey": "pneumonia microbiology",
+      "code": "GM3.2",
+      "sourceReferenceId": "nmc-2024-ref:222444c244f19cdef268c96ec1165e92cf174ee9638d505d59bb8b15f21c60e8",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        186.96,
+        102.7,
+        227.76
+      ],
+      "sourceBodySha256": "f88991762bb9dfb8ab23985601c40efa01486e8377a50f41d3c01ccac337e938",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pneumonia evolution",
+      "nameKey": "pneumonia evolution",
+      "code": "GM3.3",
+      "sourceReferenceId": "nmc-2024-ref:5df5a23fe92341ca4a2c6d055e4f8f66db7d5144974fa800ad7f0d03fb5513fa",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        227.76,
+        102.7,
+        268.62
+      ],
+      "sourceBodySha256": "9035bef88831a1abad60e98fa23e7a4d8dfbab5c98107df1a31d550d5601e8fd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pneumonia history",
+      "nameKey": "pneumonia history",
+      "code": "GM3.4",
+      "sourceReferenceId": "nmc-2024-ref:14d8f85d7c3fddd2f96e27383151cbce55986929483a643c925d1a046223ce1a",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        268.62,
+        102.7,
+        309.24
+      ],
+      "sourceBodySha256": "a801bf4d09ae3859c03c6bdc94d04ce7f3ad5b9ee787796c1efcf75ef8a36c4e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit history documentation and presentation are missing."
+    },
+    {
+      "name": "Respiratory examination",
+      "nameKey": "respiratory examination",
+      "code": "GM3.5",
+      "sourceReferenceId": "nmc-2024-ref:a2e47d9e6f71af8c4a3d52581bb9cb21ef55c9771df88da1b64de13945ed7c26",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        309.24,
+        102.7,
+        363.42
+      ],
+      "sourceBodySha256": "b025c3bbb7e9ccdf00aceee02263568ca34c30e6888e6643c1dce6fbf1c579ab",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pneumonia differential",
+      "nameKey": "pneumonia differential",
+      "code": "GM3.6",
+      "sourceReferenceId": "nmc-2024-ref:07c5f1083505c25348beb3b0017fbdd74d9bc6a4cac3800ae93b63f9529f359a",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        363.42,
+        102.7,
+        404.16
+      ],
+      "sourceBodySha256": "d25d076d01a7802d906973e48000e0130762868192db38ace5bbdd9f350070e3",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Explicit documentation and presentation of the differential are missing."
+    },
+    {
+      "name": "Diagnostic tests",
+      "nameKey": "diagnostic tests",
+      "code": "GM3.7",
+      "sourceReferenceId": "nmc-2024-ref:5eb7b49b5aae7600edf34a73b91fbfcfad2b8c5a7039f6bb93c26e1bc583da39",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        404.16,
+        102.7,
+        458.34
+      ],
+      "sourceBodySha256": "c3db184e109a708ce5e545ba319179872eeb18c4bd38f1ad330c2413fb7ca71c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-held",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true,
+      "scopeGap": "Specify the source-listed Mantoux test, HIV testing and arterial blood gas assessment within the broader test groups."
+    },
+    {
+      "name": "Arterial sampling",
+      "nameKey": "arterial sampling",
+      "code": "GM3.8",
+      "sourceReferenceId": "nmc-2024-ref:4066f7aae31ffb63cad96979c7b3969af41e340195a13d73bae73fd1da71d4cc",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        458.34,
+        102.7,
+        489
+      ],
+      "sourceBodySha256": "a9a0d0331eaa649d5ffa1ca495d2cf91459c595fe4447d44cd3c3a63cbb20933",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Blood gas interpretation",
+      "nameKey": "blood gas interpretation",
+      "code": "GM3.9",
+      "sourceReferenceId": "nmc-2024-ref:0fb2b00f258b6b17a8ce8b0d224834da45e075a19b0e2242ca6e78c094042a8b",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        489,
+        102.7,
+        516.48
+      ],
+      "sourceBodySha256": "599600c161ccba78987e2a27e0595be660dfb0b1d926f76a066a6a3daa60a777",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pleural aspiration",
+      "nameKey": "pleural aspiration",
+      "code": "GM3.10",
+      "sourceReferenceId": "nmc-2024-ref:a0e75d4d3c51c0e58054598c9c1cb2cb9abff5710e6ff3c8c6b950afac08721d",
+      "sourcePdfPage": 286,
+      "sourceRowBBox": [
+        44.2,
+        516.48,
+        102.7,
+        543.78
+      ],
+      "sourceBodySha256": "f53299d88c90f3e96b997f38b0cf42c5eeaebb9770a32cec71b07c21728ad6db",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    },
+    {
+      "name": "Pleural fluid analysis",
+      "nameKey": "pleural fluid analysis",
+      "code": "GM3.11",
+      "sourceReferenceId": "nmc-2024-ref:81cb55762ed6935ca045625deb4a2e931800d2f402e37680d9cf9ac7f1ff601e",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "f4392e2f72fce7af7a79e7d04bcf121ae2290ce1ac0e25e020f2653a284d267e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "editorial-source-scope-aligned",
+      "mappingAccepted": false,
+      "sourceBodyHashVerified": true
+    }
+  ]
+}

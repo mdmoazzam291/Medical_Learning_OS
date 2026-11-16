@@ -1,0 +1,48 @@
+--- saved-branch/scripts/foundation-objective-browser-check.js
++++ older-local/scripts/foundation-objective-browser-check.js
+@@ -59,7 +59,7 @@
+   await root.getByText('Accepted mappings: 0 · Learner activation: off · Coverage: not established',{exact:true}).waitFor();
+   const preview=root.locator('details').filter({has:page.getByText('Names-only draft preview',{exact:true})});
+   await preview.locator('summary').click();
+-  assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[121,2,6,1]);
++  assert.deepEqual(await preview.locator('ul').evaluateAll(lists=>lists.map(list=>list.children.length)),[91,2,6,1]);
+   assert.equal(await preview.locator('ul').last().textContent(),'PS2.1');
+   assert.equal(await preview.locator('ul').nth(2).getByText('PS2.1',{exact:true}).count(),0);
+   const relationships=root.locator('details').filter({has:page.getByText('Proposed concept relationships',{exact:true})});
+--- saved-branch/supabase/functions/owner-api/_shared/nmc-learning-foundation.js
++++ older-local/supabase/functions/owner-api/_shared/nmc-learning-foundation.js
+@@ -1,4 +1,3 @@
+-import supplement from '../../../../docs/evidence/2026-11-12-nmc-unified-queue-reuse-supplement.json' with {type:'json'};
+ import relationships from '../../../../docs/evidence/2026-11-12-nmc-shared-name-relationships.json' with {type:'json'};
+ import unified from '../../../../docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json' with {type:'json'};
+ import names from '../../../../docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json' with {type:'json'};
+@@ -49,12 +48,7 @@
+    broader: relationshipEndpoint(broader),
+   }));
+   return {...page,namesOnlyRelationships,namesOnlyPreview:{
+-   concepts:[
+-    ...unified.rows.map(row=>relationshipEndpoint({name:row.name,referenceIds:row.references.map(link=>link.referenceId)})),
+-    ...supplement.conceptProposals.map(row=>relationshipEndpoint({
+-     name:row.name,referenceIds:row.sourceLinks.map(link=>link.referenceId),
+-    })),
+-   ],
++   concepts:unified.rows.map(row=>({label:row.name,codes:[...new Set(row.references.map(link=>link.code))]})),
+    headings:names.navigationHeadings.map(row=>row.name),
+    aliases:names.searchAliases.map(row=>row.alias),
+    held:names.heldEntries.map(row=>row.alias),
+--- saved-branch/tests/nmc-foundation-api.test.js
++++ older-local/tests/nmc-foundation-api.test.js
+@@ -14,12 +14,7 @@
+  const admin=fake(),fallback=admin.from.bind(admin);admin.from=name=>name==='study_catalog'?({select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[concept]}}})})})}):fallback(name);
+  const read=()=>readFoundationDrafts({admin,actor:'actor',method:'GET',params:new URLSearchParams()});
+  const page=await read();
+- assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[121,2,6,1]);
+- assert.equal(new Set(page.namesOnlyPreview.concepts.map(row=>row.label.toLowerCase())).size,121);
+- assert.deepEqual(page.namesOnlyPreview.concepts.find(row=>row.label==='Torticollis').codes,['AN29.4','OR12.1']);
+- assert.equal(page.namesOnlyPreview.concepts.some(row=>row.label==='Precocious puberty'),true);
+- assert.ok(page.namesOnlyPreview.concepts.every(row=>row.codes.every(code=>!code.includes(' '))));
+- assert.ok(page.namesOnlyPreview.concepts.find(row=>row.label==='Adherence').codes.includes('GM14.12'));
++ assert.deepEqual(Object.values(page.namesOnlyPreview).map(rows=>rows.length),[91,2,6,1]);
+  assert.equal(page.namesOnlyRelationships.length,5);
+  assert.deepEqual(page.namesOnlyRelationships.find(row=>row.narrower.label==='Delayed puberty'),{
+   narrower:{label:'Delayed puberty',codes:['OG23.2']},

@@ -1,0 +1,126 @@
+{
+ "schemaVersion": 1,
+ "checkedAt": "2026-11-16",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409.",
+ "rule": "Printed counts never create or delete rows. Numbering gaps are recorded, not filled.",
+ "subjects": {
+  "medicine": {
+   "headingTopics": 29,
+   "headingCompetencies": 525,
+   "tableRows": 532,
+   "distinctCodes": 529,
+   "printedTopicCountSum": 531,
+   "pdfPages": [
+    281,
+    327
+   ],
+   "findings": [
+    "Heading prints 29 topics / 525 competencies; 29 topic headings; per-topic printed counts sum to 531; 532 table rows = 529 distinct codes + 3 repeated (GM9.8, GM14.1, GM14.2 printed twice).",
+    "Topic 8 prints 19 but numbering skips GM8.9 (8.8 → 8.10, rendered p.295): 18 rows. Numbering gap, not a missing row.",
+    "Topic 9 prints 21; rows GM9.1–GM9.17 are continuous with GM9.8 twice (18 rows, 17 codes). Printed count exceeds the numbered rows by 4.",
+    "Topic 14 prints 14; 16 rows because GM14.1 and GM14.2 are printed twice; 14 distinct codes match.",
+    "Topic 27 prints 15; rows GM27.1–GM27.18 are continuous (18). Printed count is 3 short."
+   ]
+  },
+  "surgery": {
+   "headingTopics": 30,
+   "headingCompetencies": 133,
+   "tableRows": 132,
+   "distinctCodes": 132,
+   "printedTopicCountSum": 122,
+   "pdfPages": [
+    402,
+    412
+   ],
+   "findings": [
+    "Heading prints 30 topics / 133 competencies; 28 printed topic headings (Topics 24 and 27 unheaded); per-topic printed counts sum to 122 (Topic 1 printed \"Topic1:\" with count 03); 132 rows: 122 counted under printed headings (Topic 26's printed 4 covers SU26.1, SU26.3, SU26.4 and SU27.1) plus 10 under the unheaded Topics 24 (SU24.1-24.3) and 27 (SU27.2-27.8); 122 + 10 = 132.",
+    "Topic 26 prints 4; numbering skips SU26.2 (26.1 → 26.3, rendered p.409) and SU27.1 is printed under the Topic 26 heading, so the printed 4 matches SU26.1, SU26.3, SU26.4 and SU27.1."
+   ]
+  },
+  "ophthalmology": {
+   "headingTopics": 10,
+   "headingCompetencies": 60,
+   "tableRows": 59,
+   "distinctCodes": 59,
+   "printedTopicCountSum": 59,
+   "pdfPages": [
+    414,
+    418
+   ],
+   "findings": [
+    "Heading prints 60; the 10 per-topic printed counts sum to 59 and match 59 rows topic by topic. Heading total off by one."
+   ]
+  },
+  "obstetrics-gynaecology": {
+   "headingTopics": 38,
+   "headingCompetencies": 141,
+   "tableRows": 142,
+   "distinctCodes": 142,
+   "printedTopicCountSum": 137,
+   "pdfPages": [
+    427,
+    442
+   ],
+   "findings": [
+    "Heading prints 38 topics / 141; 38 headings (Topic 22 printed as \"Topic: Vaginal discharge\" without a number; Topic 33 prints no competency count). Per-topic counts sum to 137 plus 5 rows under Topic 33 = 142 rows. Heading total off by one."
+   ]
+  },
+  "ent": {
+   "headingTopics": 4,
+   "headingCompetencies": 63,
+   "tableRows": 63,
+   "distinctCodes": 63,
+   "printedTopicCountSum": 61,
+   "pdfPages": [
+    420,
+    425
+   ],
+   "findings": [
+    "Heading prints 63 = 63 rows, but Topic 3 prints 1 while 3 rows (EN3.1–EN3.3) follow it; per-topic counts sum to 61."
+   ]
+  },
+  "orthopaedics": {
+   "headingTopics": 14,
+   "headingCompetencies": 40,
+   "tableRows": 40,
+   "distinctCodes": 40,
+   "printedTopicCountSum": 39,
+   "pdfPages": [
+    444,
+    450
+   ],
+   "findings": [
+    "Heading prints 40 = 40 rows, but Topic 14 prints 3 while 4 rows (OR14.1–OR14.4) follow it; per-topic counts sum to 39."
+   ]
+  },
+  "pediatrics": {
+   "headingTopics": 35,
+   "headingCompetencies": 406,
+   "tableRows": 253,
+   "distinctCodes": 253,
+   "printedTopicCountSum": 253,
+   "pdfPages": [
+    329,
+    350
+   ],
+   "findings": [
+    "See exception ledger: 32 per-topic counts sum to 253 and match rows topic by topic."
+   ]
+  },
+  "radiology": {
+   "headingTopics": 7,
+   "headingCompetencies": 21,
+   "tableRows": 21,
+   "distinctCodes": 21,
+   "printedTopicCountSum": 21,
+   "pdfPages": [
+    457,
+    465
+   ],
+   "findings": [
+    "Consistent."
+   ]
+  }
+ }
+}

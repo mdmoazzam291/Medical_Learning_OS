@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "4bb88b64e0f2bd84fc7460a90dddfc618fab7c0c",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 18,
+  "reviewed": 18,
+  "scopeAligned": 11,
+  "held": 7,
+  "cumulative": {
+    "reviewedSourceReferences": 816,
+    "alignedSourceRows": 710,
+    "heldSourceRows": 106,
+    "pendingSourceReferences": 128,
+    "distinctNamesReviewed": 797
+  },
+  "mappingAccepted": false,
+  "rows": [
+    {
+      "nameKey": "alcohol-related liver disease",
+      "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+      "subjectId": "pathology",
+      "code": "PA24.4",
+      "pdfPage": 195,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "74941040dd9fa7a2a57a481984f30859e0e69c85ab2cea193f156f1dc44b9fc4",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.5,
+        355.14,
+        105.6,
+        389.88
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "anaemia counselling",
+      "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+      "subjectId": "pediatrics",
+      "code": "PE26.16",
+      "pdfPage": 346,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "8a96291ea16adbcc3fcd8392b4d552ccfbcd53e568fe94dd827b4d64b0176b9c",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.3,
+        337.44,
+        103.1,
+        370.08
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "csf interpretation",
+      "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
+      "subjectId": "pediatrics",
+      "code": "PE27.13",
+      "pdfPage": 347,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "2e647cc9cea0452fb4dcc909154d83cde4760e22508dc8c85b6b498d13305321",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.3,
+        502.98,
+        103.1,
+        520.32
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "csf interpretation",
+      "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+      "subjectId": "pathology",
+      "code": "PA34.3",
+      "pdfPage": 203,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "ebe2c558195dd7519d500997abc491708b0b2f855030a78edc43c5d924eb1345",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.5,
+        472.32,
+        105.6,
+        494.58
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "fever of unknown origin",
+      "referenceId": "nmc-2024-ref:c9047871596072c6cc4de2f46756cbb3f22e6264ab456bf3b427ce3a34e7050e",
+      "subjectId": "microbiology",
+      "code": "MI3.5",
+      "pdfPage": 208,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b9096c3dfb1d8462f85f0bae7dc227799a2f817051ed7ec064528fcd01dafc9d",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.9,
+        425.46,
+        108.8,
+        472.62
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add explicit definition and infectious etiopathogenesis."
+    },
+    {
+      "nameKey": "gallstones and cholecystitis",
+      "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+      "subjectId": "pathology",
+      "code": "PA24.8",
+      "pdfPage": 195,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "e546d9748e2d2f364b7f7500b0180218e0946ebdbacaee3194ac1289aeb5a35a",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.5,
+        497.88,
+        105.6,
+        525.6
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "code": "MI3.2",
+      "pdfPage": 208,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "fb43508d71d1b009e1833705f319a2205531dbb23eb7176695a7c710c43d519a",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.9,
+        295.44,
+        108.8,
+        327.12
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "code": "PA26.7",
+      "pdfPage": 197,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "17e8412749ab21a02b9114c8e7f82d656a3a1812912eddfdf0f65cc3196289a2",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.5,
+        308.1,
+        105.6,
+        342.66
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover gross and microscopic pathology."
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "code": "PE22.5",
+      "pdfPage": 340,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "9c177822795c01b40fa78ea41983b2729eb582bf3789e1102c543e8271e46f04",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.3,
+        265.2,
+        103.1,
+        297.78
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "ischaemic heart disease",
+      "referenceId": "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724",
+      "subjectId": "pathology",
+      "code": "PA26.6",
+      "pdfPage": 197,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "9a67c78bd599ba6bafd7b47a697b9634af87676943bb9c9cdf1c31e561db48de",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.5,
+        254.28,
+        105.6,
+        308.1
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include clinical presentation, diagnostic tests and gross and microscopic pathology."
+    },
+    {
+      "nameKey": "obesity examination",
+      "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+      "subjectId": "pediatrics",
+      "code": "PE11.4",
+      "pdfPage": 334,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "940a56c7b7576b471cf88a1dbef70b8cfb6a3a5ded172a4fc5558bb955bf596d",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.3,
+        52.38,
+        103.1,
+        96
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Specify waist-to-hip ratio and the listed external markers."
+    },
+    {
+      "nameKey": "obesity history",
+      "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+      "subjectId": "pediatrics",
+      "code": "PE11.3",
+      "pdfPage": 333,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "7b939c00dd1f78ea653a918381cf9de1f67c88bcc836e735b901a2c862008545",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.3,
+        512.4,
+        103.1,
+        544.98
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "oesophageal anatomy",
+      "referenceId": "nmc-2024-ref:c2fcd95c7c88b246a9b60b89f545e79b41bd87ac10fa5da6c888fbf7a1bd464c",
+      "subjectId": "surgery",
+      "code": "SU28.5",
+      "pdfPage": 410,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b775bb1bb8834b1550607af628a7db14818bdfa817d76bfa274b60d903f21a7a",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        45,
+        335.46,
+        101.7,
+        359.28
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "respiratory examination",
+      "referenceId": "nmc-2024-ref:2e5f98b0ec4507a88d5174ccf01835a58de6bb9132377c826660f77dec610c11",
+      "subjectId": "physiology",
+      "code": "PY6.12",
+      "pdfPage": 155,
+      "packet": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "ff928c06b473b9fec52a2057489fe283a0cc1657c0f9807050e9e4b38710d9f4",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        58.5,
+        273.42,
+        107.8,
+        314.46
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "thyroid examination",
+      "referenceId": "nmc-2024-ref:a5b29f5555a9760371c9299f05175d3dd30f0558f7e3c4f17f4643172531658f",
+      "subjectId": "surgery",
+      "code": "SU22.3",
+      "pdfPage": 408,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "027fdf36422e579f8fe03206729b882073fd7f3c89bfc269776a1b3c3fb2e8d7",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        45,
+        259.08,
+        101.7,
+        302.76
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make management explicit alongside differential diagnosis."
+    },
+    {
+      "nameKey": "transfusion observation",
+      "referenceId": "nmc-2024-ref:55be358d271c724154af5cce9e6a896fd9cb5b8085f885e28153ce19b1de7ad3",
+      "subjectId": "surgery",
+      "code": "SU3.2",
+      "pdfPage": 403,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "528e19f76e84e2fe0843c40d9f86f8ce043459b5325c6db7ae6ffdc19c083ca1",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        45,
+        422.34,
+        101.7,
+        453.48
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "varicocele",
+      "referenceId": "nmc-2024-ref:02882aa0eca93f16104bed8f09fa1a7a73f0103870ead00dc3e39289ca433513",
+      "subjectId": "surgery",
+      "code": "SU30.4",
+      "pdfPage": 412,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a0b1eb57131e09fb6e08e653bf85bd79e94d85e0c717eac4d44ae8a044c53dc8",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        45,
+        361.26,
+        101.7,
+        396.9
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include investigations."
+    },
+    {
+      "nameKey": "viral hepatitis",
+      "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
+      "subjectId": "microbiology",
+      "code": "MI4.7",
+      "pdfPage": 210,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "c9607eba14f1dbdc35fc5c9b05a3eccb8dc2fe85377a5dc580ae7b079a27eec4",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        51.9,
+        280.8,
+        108.8,
+        321.84
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Epidemiology is broader than transmission and needs explicit coverage."
+    }
+  ]
+}

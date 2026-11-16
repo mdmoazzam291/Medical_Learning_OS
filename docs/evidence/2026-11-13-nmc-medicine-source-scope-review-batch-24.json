@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "25611dd235cd94999dba726b01f1473201d35502",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 27,
+  "reviewed": 27,
+  "scopeAligned": 21,
+  "held": 6,
+  "cumulative": {
+    "reviewedSourceRows": 798,
+    "reviewedDistinctNameKeys": 797,
+    "alignedSourceRows": 699,
+    "heldSourceRows": 99,
+    "unreviewedDistinctNameKeys": 0
+  },
+  "completionScope": "Every queued name now has an editorial disposition on at least one reviewed reference. Additional appearances, held scopes and canonical mappings remain pending.",
+  "rows": [
+    {
+      "name": "Toxidromes",
+      "nameKey": "toxidromes",
+      "code": "GM22.5",
+      "sourceReferenceId": "nmc-2024-ref:fc94c2a4883d30db11953112eb2a94bb8fa511e03faa01b7baab4a596d36720f",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        215.22,
+        102.7,
+        242.58
+      ],
+      "sourceBodySha256": "b124646a06cf7484dc8b3a34ad05c4f556a513303c40b29934d3d6258c0cd958",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly describe the inferred toxic syndrome after identifying it."
+    },
+    {
+      "name": "Insecticide poisoning",
+      "nameKey": "insecticide poisoning",
+      "code": "GM22.6",
+      "sourceReferenceId": "nmc-2024-ref:73cabee5d352f6d0ab6dfe665084afbad429db4c7f2c53ae365251e27960a7c7",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        242.58,
+        102.7,
+        283.38
+      ],
+      "sourceBodySha256": "0afbddfc96e18cc0c9e114bc776be3b6f96f75f23995f6a3e72616363e961b01",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make toxicology explicit alongside the clinical comparison."
+    },
+    {
+      "name": "Phosphide poisoning",
+      "nameKey": "phosphide poisoning",
+      "code": "GM22.7",
+      "sourceReferenceId": "nmc-2024-ref:29cd80a963c1182d34d66f1abc6a4a920b36d4a3f01c704a47cae225b0eacb14",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        283.38,
+        102.7,
+        324.12
+      ],
+      "sourceBodySha256": "9f5becaebaf9ab3987c2633d6167ba92e5a1667e6535b3a244f325b9089ce64a",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Toxic alcohol poisoning",
+      "nameKey": "toxic alcohol poisoning",
+      "code": "GM22.8",
+      "sourceReferenceId": "nmc-2024-ref:8da591f9a5dffec4858c6bfe1deaf708da6e2d57764b1881e83ed788d0a1e1b9",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        324.12,
+        102.7,
+        351.48
+      ],
+      "sourceBodySha256": "4fb090ab3c22aee6a5a6c696bc26a751962c6a5f6b89a3593d17bbfb5d37f162",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Poison centre role",
+      "nameKey": "poison centre role",
+      "code": "GM22.9",
+      "sourceReferenceId": "nmc-2024-ref:63ef761da202c4908a33eb541cbd7c778c5c180dabfe39ebba6fe6f4fb193658",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        351.48,
+        102.7,
+        392.22
+      ],
+      "sourceBodySha256": "6411deabe306fddf09e953612f525cd06a724687653984e7c3da5b36b05bfbc9",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Describe the poison centre's functions explicitly and distinguish simulated review from observation."
+    },
+    {
+      "name": "Medico-legal poisoning issues",
+      "nameKey": "medico-legal poisoning issues",
+      "code": "GM22.10",
+      "sourceReferenceId": "nmc-2024-ref:d0c0f153fc138be741f8039a33061e7db211b22d64b8fa9fd078950b515b0ffd",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        392.22,
+        102.7,
+        419.52
+      ],
+      "sourceBodySha256": "47d09f4f748a73cb6a47af31c290efe11fe7ae4ab8a1a7daae11be6a6ec7de19",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Poisoning report",
+      "nameKey": "poisoning report",
+      "code": "GM22.11",
+      "sourceReferenceId": "nmc-2024-ref:b7b58b578e97dc36fb9ca7f26f5c0ad181c1cc707edbddb571e3ab72ca65c609",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        419.52,
+        102.7,
+        446.88
+      ],
+      "sourceBodySha256": "46f51a75a6afbaf0cb950fbb12212780dab63dd5d20bed4b96472ddbc3204278",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Family counselling after poisoning",
+      "nameKey": "family counselling after poisoning",
+      "code": "GM22.12",
+      "sourceReferenceId": "nmc-2024-ref:b54b0a8650ab97d5ccbcc02f8936c28916081356f7f909214ca8e24778b590a7",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        446.88,
+        102.7,
+        474.24
+      ],
+      "sourceBodySha256": "280f43fc3c47c10d746657a258a69b75fb5e6a824a88eaf320d22ba324d7ce1a",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Self-harm assessment",
+      "nameKey": "self-harm assessment",
+      "code": "GM22.13",
+      "sourceReferenceId": "nmc-2024-ref:ce0aa523f567fb203af973381f948ad59beb042f5f7aac37f5c1ec78aec83d1d",
+      "sourcePdfPage": 314,
+      "sourceRowBBox": [
+        44.2,
+        474.24,
+        102.7,
+        515.16
+      ],
+      "sourceBodySha256": "680cf007db7e5036c02b5469ff1152986f1eb69a9bbe35eb0835774bc666e3e8",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypercalcaemia causes",
+      "nameKey": "hypercalcaemia causes",
+      "code": "GM23.1",
+      "sourceReferenceId": "nmc-2024-ref:22b135590c5ac9531dc2584a2e79fa1b844268c7da6067e7ecdd1c5ed5a0a64c",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "sourceBodySha256": "f138653cbb3583e4ded79b294ee7f81acfbca0471191a7b77157d48b39df8b37",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Primary hyperparathyroidism",
+      "nameKey": "primary hyperparathyroidism",
+      "code": "GM23.2",
+      "sourceReferenceId": "nmc-2024-ref:6b9b49794ee2c569d248484520f145fe3023f3965a47fc9e70fc5d89c720ef11",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "f9bdfa9573532680af0f7100f0eb9d2851c96ba604e01d9285bc8b801ef6b1ec",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hypercalcaemia management",
+      "nameKey": "hypercalcaemia management",
+      "code": "GM23.3",
+      "sourceReferenceId": "nmc-2024-ref:5e688ca7fe5d198b5de2f8e8de638476f70dc55491ea535df54503028cb9b5c0",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        194.4
+      ],
+      "sourceBodySha256": "23b0a2dbdbd42bd643fd55f775d3f8b38705050112082a350b41781efca25294",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hyponatraemia assessment",
+      "nameKey": "hyponatraemia assessment",
+      "code": "GM23.4",
+      "sourceReferenceId": "nmc-2024-ref:271b801d03c801760be952e0ac9238dee0330275f8be5d50477fbdd72626afe1",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        194.4,
+        102.7,
+        235.2
+      ],
+      "sourceBodySha256": "cd4d2f442977f424accf909eeec44ed44db84ea56633bcad181916ce46ea974a",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hyponatraemia laboratory interpretation",
+      "nameKey": "hyponatraemia laboratory interpretation",
+      "code": "GM23.5",
+      "sourceReferenceId": "nmc-2024-ref:35198b9023744dd6ef1e005ebe52b4ec6d51e2526a88da932a22b4c4035fc833",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "9438601591a6656588665fd6d689bb6a0493b1987fb38840c63f11704f27ee66",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover causes and diagnostic reasoning alongside interpretation and management."
+    },
+    {
+      "name": "Hypokalaemia",
+      "nameKey": "hypokalaemia",
+      "code": "GM23.6",
+      "sourceReferenceId": "nmc-2024-ref:65ca207fc755b106989212f695c8fcbdd49062beb9956bf86c57ab587aca56a4",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        275.94,
+        102.7,
+        316.62
+      ],
+      "sourceBodySha256": "2d03354e17dbc5114657c8ee2657a582de77b6f98cde505e4564d9b89f1dfebd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make clinical manifestations explicit alongside laboratory findings."
+    },
+    {
+      "name": "Metabolic acidosis",
+      "nameKey": "metabolic acidosis",
+      "code": "GM23.8",
+      "sourceReferenceId": "nmc-2024-ref:0a765a5719b866fe4d02a9dbe1bc1dfcfde191c2741b41f879f4ea87a22e3a2f",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        357.42,
+        102.7,
+        398.16
+      ],
+      "sourceBodySha256": "96cda4a19b1e586d51ce1eb715fb26ede5e6d1528301c6c14b11f3fbbe04a3b0",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Metabolic alkalosis",
+      "nameKey": "metabolic alkalosis",
+      "code": "GM23.9",
+      "sourceReferenceId": "nmc-2024-ref:21549c916e51a103f73d270e10a2298705bb52c59dac79cb03fc2a79a88cc216",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        398.16,
+        102.7,
+        425.52
+      ],
+      "sourceBodySha256": "be0a6364f5913a8e7e253d01d5933eee1023c3c3064980cf658a4812f25123c7",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Respiratory acidosis",
+      "nameKey": "respiratory acidosis",
+      "code": "GM23.10",
+      "sourceReferenceId": "nmc-2024-ref:e146fde8d04565802ebfc4863d6bffb445b5ed853ae6f0dd2d89508338ce0d79",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        425.52,
+        102.7,
+        452.88
+      ],
+      "sourceBodySha256": "df320ae1870e7fbf5ec6fd9acbbd7f36112fa0f85e3cdd152492add35d8ac2c1",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Respiratory alkalosis",
+      "nameKey": "respiratory alkalosis",
+      "code": "GM23.11",
+      "sourceReferenceId": "nmc-2024-ref:00cfc026be395eee17591afc8bf3f371bbc2795a70ac187a07843dc5835df374",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        452.88,
+        102.7,
+        480.24
+      ],
+      "sourceBodySha256": "ab7c131fd33d279d8cf6a30cffdbabe2aaa1cb597eef09b33a07134460cd26a3",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Acid–base interpretation",
+      "nameKey": "acid–base interpretation",
+      "code": "GM23.12",
+      "sourceReferenceId": "nmc-2024-ref:b749ac0285ce32e7ff94991fe0076054c56ccd6d240d7b097ba7d8e4c603a3e0",
+      "sourcePdfPage": 315,
+      "sourceRowBBox": [
+        44.2,
+        480.24,
+        102.7,
+        507.54
+      ],
+      "sourceBodySha256": "6659f3fea9fe95e9e2f61c87f8a32a7313af5b5f8581d768bc9aba1ac73035a5",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Hospital malnutrition",
+      "nameKey": "hospital malnutrition",
+      "code": "GM24.2",
+      "sourceReferenceId": "nmc-2024-ref:43a92922ea42cd6488b7f18b37e543a11d009cb74a89dbbf66093f8082cd6f77",
+      "sourcePdfPage": 316,
+      "sourceRowBBox": [
+        44.2,
+        145.08,
+        102.7,
+        172.44
+      ],
+      "sourceBodySha256": "f8cd16445af7a1540ecc7e82b066ae6c98d94a31715074342e3d6eebb7976431",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm20-2-gm24-2-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Nutritional and Vitamin Deficiencies",
+      "nameKey": "nutritional and vitamin deficiencies",
+      "code": "GM24.3",
+      "sourceReferenceId": "nmc-2024-ref:541a07207128053c96cc5130d4b85b96c3b4edbb900d77efd6b1e45a9b988e97",
+      "sourcePdfPage": 316,
+      "sourceRowBBox": [
+        44.2,
+        172.44,
+        102.7,
+        222.42
+      ],
+      "sourceBodySha256": "271e477744b42e12b80f77b6290a025f754fe28204ec14bd0b643a2195005d97",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Geriatrics",
+      "nameKey": "geriatrics",
+      "code": "GM25.1",
+      "sourceReferenceId": "nmc-2024-ref:5f2f6fa7c81b2d0017adbff9ba24db36abbcb7d88e3a18ce73cd5047c8ee51ed",
+      "sourcePdfPage": 316,
+      "sourceRowBBox": [
+        44.2,
+        297.06,
+        102.7,
+        337.74
+      ],
+      "sourceBodySha256": "b9f97775f771a0e52ae9b10883df4ca3569c9e3bd2f4f4a2cc0b235c2eaed80f",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Infectious Diseases",
+      "nameKey": "infectious diseases",
+      "code": "GM26.1",
+      "sourceReferenceId": "nmc-2024-ref:9b5a9f22bbb213df7ebcc2402e40e5bb3e9e5d8c77c06d7ea779ff94321e37f4",
+      "sourcePdfPage": 318,
+      "sourceRowBBox": [
+        44.2,
+        343.92,
+        102.7,
+        384.72
+      ],
+      "sourceBodySha256": "ad6b66fb8484c9851f5eb8c289b543573937081f521769b4253f81ef98b9022b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Tuberculosis",
+      "nameKey": "tuberculosis",
+      "code": "GM27.1",
+      "sourceReferenceId": "nmc-2024-ref:049c1109ba9f09b780ff08f7397fa3d130dd13b41bf66edd04ad74abf2adfa4c",
+      "sourcePdfPage": 321,
+      "sourceRowBBox": [
+        44.2,
+        351.06,
+        102.7,
+        378.54
+      ],
+      "sourceBodySha256": "8d1060c6ec4ed3e9f700e747d16da1df15a1658227ae3ee6bb03cd04b2413778",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Obstructive Airway Diseases",
+      "nameKey": "obstructive airway diseases",
+      "code": "GM28.1",
+      "sourceReferenceId": "nmc-2024-ref:15f0af5ee02368746a33242fa130f433ac6696636ac5aaf3575cde5ca71a3b8b",
+      "sourcePdfPage": 323,
+      "sourceRowBBox": [
+        44.2,
+        295.8,
+        102.7,
+        323.16
+      ],
+      "sourceBodySha256": "3718e55691c2f5babc0d481e06de4fed5a44457e59052ed6bd9c0bb3e31cea94",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "The role of the physician in the community",
+      "nameKey": "the role of the physician in the community",
+      "code": "GM29.1",
+      "sourceReferenceId": "nmc-2024-ref:6d083d89f08d6861207b9f46d35b7cc90e6414b3a923cfddf00345a49690008d",
+      "sourcePdfPage": 325,
+      "sourceRowBBox": [
+        44.2,
+        486.24,
+        102.7,
+        527.04
+      ],
+      "sourceBodySha256": "2e4cb2ca96dbde4f9b818ba13189af96e8487b514a0d8e0d43f9f36cfd616690",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly name and explain non-maleficence as a guiding principle."
+    }
+  ]
+}

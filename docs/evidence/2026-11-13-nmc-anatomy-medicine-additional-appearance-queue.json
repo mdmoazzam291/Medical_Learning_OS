@@ -1,0 +1,1329 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "353fc135ecc2e37df2a57fac5beec39aa9882ac7",
+  "distinctNamesReviewed": 797,
+  "totalSourceReferences": 944,
+  "reviewedSourceReferences": 798,
+  "alignedSourceRows": 699,
+  "heldSourceRows": 99,
+  "pendingSourceReferences": 146,
+  "affectedNames": 25,
+  "reviewStatus": "pending-editorial-scope-review",
+  "mappingAccepted": false,
+  "rows": [
+    {
+      "nameKey": "alcohol-related liver disease",
+      "referenceId": "nmc-2024-ref:44f308d38534a3a079b7ac05fdd0b0d1419a078ff210931b74a8219ec0f73376",
+      "subjectId": "pathology",
+      "code": "PA24.4",
+      "pdfPage": 195,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "anaemia counselling",
+      "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+      "subjectId": "pediatrics",
+      "code": "PE26.16",
+      "pdfPage": 346,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe24-6-pe26-16-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "csf interpretation",
+      "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
+      "subjectId": "pediatrics",
+      "code": "PE27.13",
+      "pdfPage": 347,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe26-17-pe32-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "csf interpretation",
+      "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+      "subjectId": "pathology",
+      "code": "PA34.3",
+      "pdfPage": 203,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "fever of unknown origin",
+      "referenceId": "nmc-2024-ref:c9047871596072c6cc4de2f46756cbb3f22e6264ab456bf3b427ce3a34e7050e",
+      "subjectId": "microbiology",
+      "code": "MI3.5",
+      "pdfPage": 208,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "gallstones and cholecystitis",
+      "referenceId": "nmc-2024-ref:0b02676a230cd9369403121959385bb65e51317b34d9a0ba87681374e39cc707",
+      "subjectId": "pathology",
+      "code": "PA24.8",
+      "pdfPage": 195,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa13-pa25-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2",
+      "subjectId": "medicine",
+      "code": "GM25.14",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:11a0c8840b483cbec6692c33c0d44e33a677fcda931e8023f275e79d2db0302a",
+      "subjectId": "medicine",
+      "code": "GM25.18",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1a54c56c0ca6f3bfe8295256a00822f8d2f6175a1b2faef3cc445dae994153a8",
+      "subjectId": "medicine",
+      "code": "GM25.22",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+      "subjectId": "medicine",
+      "code": "GM25.9",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1e402f71965cba7735df906256fa9e2e9c3521d624abba7e269b3f9a01663610",
+      "subjectId": "medicine",
+      "code": "GM25.2",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e",
+      "subjectId": "medicine",
+      "code": "GM25.16",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35",
+      "subjectId": "medicine",
+      "code": "GM25.19",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:59df6ab62ecfaf5499f219564b53ae1254be9d2342b945aab5835799def67574",
+      "subjectId": "medicine",
+      "code": "GM25.12",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b",
+      "subjectId": "medicine",
+      "code": "GM25.10",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:918b610b66f1494c77df904354dd3a184d2da0f7a416c378b37227f0ed672d43",
+      "subjectId": "medicine",
+      "code": "GM25.5",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412",
+      "subjectId": "medicine",
+      "code": "GM25.20",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f",
+      "subjectId": "medicine",
+      "code": "GM25.6",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99",
+      "subjectId": "medicine",
+      "code": "GM25.17",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74",
+      "subjectId": "medicine",
+      "code": "GM25.21",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a",
+      "subjectId": "medicine",
+      "code": "GM25.13",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206",
+      "subjectId": "medicine",
+      "code": "GM25.11",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5",
+      "subjectId": "medicine",
+      "code": "GM25.15",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef",
+      "subjectId": "medicine",
+      "code": "GM25.4",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f",
+      "subjectId": "medicine",
+      "code": "GM25.8",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde",
+      "subjectId": "medicine",
+      "code": "GM25.3",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:fb05aee947626196f3481b5282dc4f86cf29a0900aa65a90318c7240cfd4052f",
+      "subjectId": "medicine",
+      "code": "GM25.7",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064",
+      "subjectId": "medicine",
+      "code": "GM26.12",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:055f140032cda57c7b44a24a70e55efae078bb215e179e6b65fcb8f6a45b8167",
+      "subjectId": "medicine",
+      "code": "GM26.6",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+      "subjectId": "medicine",
+      "code": "GM26.30",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:13d173ccc240d08072b7fa53df260ebac688a4e15a3edf8c9392f1ef156f25b1",
+      "subjectId": "medicine",
+      "code": "GM26.34",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:271f88182306029dc7682b261bc6a684f4532ef5c48d4d0def8b5c701557eb36",
+      "subjectId": "medicine",
+      "code": "GM26.19",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:3911ada05ca60c59ae1df00b7b69830207cb880c2a705f6eb1715dee56f11a28",
+      "subjectId": "medicine",
+      "code": "GM26.23",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:3e3523d18a0b1b4baccf7ff5fe85c77baca57b1adff0118db493d0c95d479e2a",
+      "subjectId": "medicine",
+      "code": "GM26.8",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:489f24b36aa910168111744a079b9b98c80689a4bfccb154dfa0ef9fa4939863",
+      "subjectId": "medicine",
+      "code": "GM26.27",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:5410a843518868a80f0349c690086fe7a7910b4d1541951aaeb91e6c9c0ee9ca",
+      "subjectId": "medicine",
+      "code": "GM26.10",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:585d0ff3adc4715aacc2fa1934c190d6caa3912be73443e211047d327f4315fd",
+      "subjectId": "medicine",
+      "code": "GM26.32",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:5d650b9ce134dd59186f8e9df2d5fe89f326288d95e77fad16a672348032b1c5",
+      "subjectId": "medicine",
+      "code": "GM26.9",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:65ddc026f1c37c6e4aa05c820aaef024429deac9b4c05bc1619897a453f44ed9",
+      "subjectId": "medicine",
+      "code": "GM26.18",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:6772dddc8b65c4f8e7799c25de27feea47716c6ae2c297c33888b44e75abb5e6",
+      "subjectId": "medicine",
+      "code": "GM26.2",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:7bc2f91d5d82247d27d498fa51935fb890e57326c83c291fc23295fc5de4d3ae",
+      "subjectId": "medicine",
+      "code": "GM26.26",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+      "subjectId": "medicine",
+      "code": "GM26.22",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:901bb2e562aba8004eebfbf669c2b5e45c494a5b862ff1b11b30c1d201ec0807",
+      "subjectId": "medicine",
+      "code": "GM26.28",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:9954957807ed754b56e80de1c6f45479181473a338d71874604da9833e599a42",
+      "subjectId": "medicine",
+      "code": "GM26.35",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e",
+      "subjectId": "medicine",
+      "code": "GM26.24",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:a8c5fd0bc85e5650eeb18394547adc93bb9eebb833e4cf84f62feb30bb30278c",
+      "subjectId": "medicine",
+      "code": "GM26.4",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:adc434af1221f458b7cee430794d615708a27abbe5e17f547d06e5f745a7925b",
+      "subjectId": "medicine",
+      "code": "GM26.14",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:b4f2620ee1b5c0c5655e83ee6bf75d9d4402508424c574097d5675ecc3c72ba6",
+      "subjectId": "medicine",
+      "code": "GM26.31",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:b9d3ffe13be650d18c858bc95d45e63f476a2aa5c566edb61b92687874462c77",
+      "subjectId": "medicine",
+      "code": "GM26.17",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:bab0fa182965634fc6315c1f4b1c9c709cdcb0909591c0227489d76a73380abc",
+      "subjectId": "medicine",
+      "code": "GM26.33",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332",
+      "subjectId": "medicine",
+      "code": "GM26.5",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c09578f7468303be768e69ad0db1a56469a98f6df61981ed38d75c817eb9832b",
+      "subjectId": "medicine",
+      "code": "GM26.3",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c65a84bfa6a0fc87b2869bf2392498a6a342a755e56fa2a0724371b933a99a10",
+      "subjectId": "medicine",
+      "code": "GM26.15",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:c9b828aa6878d98cd28388167affa5fea8b9a45f6af88fe4de7992a5ba097daf",
+      "subjectId": "medicine",
+      "code": "GM26.29",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:cd3632f2a0aac97f651723e91418f485865648cc666c957f3f64907c2172cf60",
+      "subjectId": "medicine",
+      "code": "GM26.21",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:cde25bdd3eca7e73ac22bb9aa98904c5ccc4233dd1d57816ec58fbeba839a64a",
+      "subjectId": "medicine",
+      "code": "GM26.16",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:dc0a169df46847b0f9bdd20e890a251f731b41b1cae6972219cbfd262f816961",
+      "subjectId": "medicine",
+      "code": "GM26.7",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:e78e94dae36246b7c920a28f422a973b96909dcb2379897bdf4c44d234cacfd5",
+      "subjectId": "medicine",
+      "code": "GM26.13",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:e911855673dc645dafc7b35cdb8e7c6e72ae2099e9fd8e6e8b5b12be601c01c6",
+      "subjectId": "medicine",
+      "code": "GM26.25",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:f3e5c7673d5f5588fea4145ef83eed69b44c250400dcd4ee6a042a7445df50da",
+      "subjectId": "medicine",
+      "code": "GM26.11",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:fbda9f2323867ef8d1588b18d15ac065fb47582c26239291e835f1e13c07e7a7",
+      "subjectId": "medicine",
+      "code": "GM26.20",
+      "pdfPage": 320,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+      "subjectId": "microbiology",
+      "code": "MI3.2",
+      "pdfPage": 208,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+      "subjectId": "pathology",
+      "code": "PA26.7",
+      "pdfPage": 197,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+      "subjectId": "pediatrics",
+      "code": "PE22.5",
+      "pdfPage": 340,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe21-3-pe24-5-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "ischaemic heart disease",
+      "referenceId": "nmc-2024-ref:2c6de870a47f797b047b850cb985fde2a3fe343b5c4f2344a6f44f781404a724",
+      "subjectId": "pathology",
+      "code": "PA26.6",
+      "pdfPage": 197,
+      "packet": "docs/evidence/2026-11-05-nmc-pathology-pa26-pa35-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "lifestyle counselling",
+      "referenceId": "nmc-2024-ref:00dee43e80d11016d1285a0253bde7c729129b4037dab2a42d838e9474875c23",
+      "subjectId": "medicine",
+      "code": "GM8.15",
+      "pdfPage": 296,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "marrow indications and interpretation",
+      "referenceId": "nmc-2024-ref:f7f9437102deed837e7cb04ef1ad5c00d1ee28dbad37c97f30fb4e9c89947196",
+      "subjectId": "medicine",
+      "code": "GM9.8",
+      "pdfPage": 297,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm8-16-gm10-18-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "nutritional and vitamin deficiencies",
+      "referenceId": "nmc-2024-ref:2cc1cb75d347f50dffd375a5bab7a69419fed9c110c7c2d6232fb239cdb001dd",
+      "subjectId": "medicine",
+      "code": "GM24.5",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "nutritional and vitamin deficiencies",
+      "referenceId": "nmc-2024-ref:887b9774850bba239d7417dd7c8753e3a98a08142dc4945232077351362335ac",
+      "subjectId": "medicine",
+      "code": "GM24.4",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obesity aetiology",
+      "referenceId": "nmc-2024-ref:0a09c6200e02082f0892296b48eaa0428c9c1eb77eb8ec449ee526166a4ba3fa",
+      "subjectId": "medicine",
+      "code": "GM14.2",
+      "pdfPage": 304,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obesity definition and measurement",
+      "referenceId": "nmc-2024-ref:54a1f93e36d81d04333afc06047a3c4bfbe8834b1995b2a08d6bdbca449043b1",
+      "subjectId": "medicine",
+      "code": "GM14.1",
+      "pdfPage": 304,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm12-8-gm14-9-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obesity examination",
+      "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+      "subjectId": "pediatrics",
+      "code": "PE11.4",
+      "pdfPage": 334,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obesity history",
+      "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+      "subjectId": "pediatrics",
+      "code": "PE11.3",
+      "pdfPage": 333,
+      "packet": "docs/evidence/2026-11-05-nmc-paediatrics-pe8-pe18-2-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:008abb4c46f776b5f22d8efb2efc2ecb4f7e19fc17333423eb68c4bddb93021f",
+      "subjectId": "medicine",
+      "code": "GM28.12",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:05c1ce97a34725729551d9f1c0b48f0ff19d72d9831e8ad7d621a9a6c30aaeb1",
+      "subjectId": "medicine",
+      "code": "GM28.26",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:4235f37fae96d72a0c300b79131cf5a8fa5ff76c6757b635cbf43d328a0bdc92",
+      "subjectId": "medicine",
+      "code": "GM28.13",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:48bb791b6573389fbcc447b299bd108f0e6bae4cc475155df207e39b75611a2f",
+      "subjectId": "medicine",
+      "code": "GM28.2",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:593fbf281f729342e053705fea70dcacd8d770adfea5cf5c9adab542ac151799",
+      "subjectId": "medicine",
+      "code": "GM28.16",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:5ee5d9c8051cdca9e77c712c2a83dc9cb8adfd3dfd21dd2769c599885a9b7e33",
+      "subjectId": "medicine",
+      "code": "GM28.19",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:5f50684e9f22cf7f77ad9d57c19646c621ce7eb7063ba39099db664ee4e0069a",
+      "subjectId": "medicine",
+      "code": "GM28.23",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:6a168d59075ad1360465f4b171da142699ac788427325ceabcfee61c2ae94466",
+      "subjectId": "medicine",
+      "code": "GM28.14",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:6f8123611a283bdd6e84782c7dc1e4dc99f37471418cc12b22fde5261ebb2969",
+      "subjectId": "medicine",
+      "code": "GM28.18",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:8582cfa58b68545fe3fa5238c1bd3f78f1ccce70304ee4f9ccc5510b5c27d244",
+      "subjectId": "medicine",
+      "code": "GM28.25",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:886dee005e41e1f59891ef595cb9715c80ea61144f94cd51fd42715bf32c9254",
+      "subjectId": "medicine",
+      "code": "GM28.10",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9796b269dd278e3836ff46235ad51996899440eabf58fd49d8c729cb08b273d5",
+      "subjectId": "medicine",
+      "code": "GM28.21",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9ab1061ffeb044de8412d933870b2ac884d23bcff9016390baada551374168fc",
+      "subjectId": "medicine",
+      "code": "GM28.11",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:9dceaf8a439558ee3d17458b94b83f1a373bab8ba522824854eed90d8fbcc3e3",
+      "subjectId": "medicine",
+      "code": "GM28.4",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:a54d769a2db7aa80f396b6137515a35907de9eae3ade9256f63fb3edd876fa4c",
+      "subjectId": "medicine",
+      "code": "GM28.17",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:a926e6275eae3c7cb16126e2a6707e651367972436c240187d2f735ac0d0d209",
+      "subjectId": "medicine",
+      "code": "GM28.8",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:c0a81528745b9c46d77e5411f4141a6ff7c47675d97232386004f228e8fb0584",
+      "subjectId": "medicine",
+      "code": "GM28.22",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:c74bb2efeff4a57834800a7c94f631d75a1e24011a3fd54a119e92f3860ce28f",
+      "subjectId": "medicine",
+      "code": "GM28.9",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:d1c298acd390f6264c38f68388548b313c56f7260066288ca3b113a065af4faa",
+      "subjectId": "medicine",
+      "code": "GM28.6",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:e2222a0bbaa17cc0feb96091b1ff7f8f70ba0f0d908f56a76c70c523cad2d72e",
+      "subjectId": "medicine",
+      "code": "GM28.3",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:e27b0bd99cb50313de5c8389ed9ddb7f26ed042546466f6d8a3bf8b6e9a69052",
+      "subjectId": "medicine",
+      "code": "GM28.5",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:ea37fdc08bbf17dfed5136d1f572c961ba357f97c910bf7099c02a835a943569",
+      "subjectId": "medicine",
+      "code": "GM28.15",
+      "pdfPage": 324,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:ee0832cd067e89761b6f9fd0847b5e7c7bc8c29a57bbd8d636690a47cabb3c41",
+      "subjectId": "medicine",
+      "code": "GM28.7",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:f6b146ffaab14c923312cb3467ef9b490e40b69e3114aa8e45a321a638981d0a",
+      "subjectId": "medicine",
+      "code": "GM28.20",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "obstructive airway diseases",
+      "referenceId": "nmc-2024-ref:fe5da7d0ea87b79a324db8f182c59c9b0c675a7fc146a15c437087523f1b2892",
+      "subjectId": "medicine",
+      "code": "GM28.24",
+      "pdfPage": 325,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "oesophageal anatomy",
+      "referenceId": "nmc-2024-ref:c2fcd95c7c88b246a9b60b89f545e79b41bd87ac10fa5da6c888fbf7a1bd464c",
+      "subjectId": "surgery",
+      "code": "SU28.5",
+      "pdfPage": 410,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "respiratory examination",
+      "referenceId": "nmc-2024-ref:2e5f98b0ec4507a88d5174ccf01835a58de6bb9132377c826660f77dec610c11",
+      "subjectId": "physiology",
+      "code": "PY6.12",
+      "pdfPage": 155,
+      "packet": "docs/evidence/2026-11-05-nmc-physiology-digestive-cardiovascular-respiratory-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:000dd3aa74ec708120941cc561990e8b35103071c468bcc27ad8e86f1963caea",
+      "subjectId": "medicine",
+      "code": "GM29.14",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:0704e7cf0455eb7d01f300d3de1e0b80dbc0eb981b320f809360258ea20eaf8f",
+      "subjectId": "medicine",
+      "code": "GM29.3",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:0b11e42daa2ccdb1f3a9feb8dd6ecb157cb388dfa2fe5fe3203705e4987efbae",
+      "subjectId": "medicine",
+      "code": "GM29.24",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:102f009f16be3dc4928a89185cdaa229bcb1799c9b628df93cd2ceff27bed58c",
+      "subjectId": "medicine",
+      "code": "GM29.20",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:30b18675d1dcb44bd2ba226ab9904f0536b71ab89a1c1e2bfa7053647b849cfc",
+      "subjectId": "medicine",
+      "code": "GM29.2",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:3e39b2ea6a123021b74584edcfe27b8afd199944f789cf46541a2f09f25f7170",
+      "subjectId": "medicine",
+      "code": "GM29.23",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:494a30b16fd457a2c77f49b7026eb456e3512b0095d3245326c8a85d740ea231",
+      "subjectId": "medicine",
+      "code": "GM29.22",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:6e746005f3b6ca7c0f69d02ddb0fe422ff69722a5d4af2273adc670987482cec",
+      "subjectId": "medicine",
+      "code": "GM29.11",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:6eacd91e3f1711f4561d3cd587da391fb2332dc65e0b2cf1c454aae2e67f7a06",
+      "subjectId": "medicine",
+      "code": "GM29.25",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:73ee604d2139e2121b93a798ca7ea42fe7066c69bc493a7c412f029a3825a176",
+      "subjectId": "medicine",
+      "code": "GM29.8",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:774639a5f62163e3e8ccb02b2cfeb1e12637758b3399526cc8cfd89cab754e64",
+      "subjectId": "medicine",
+      "code": "GM29.15",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:8633bfc6c089b7365cba852ccc351e9523ef921254cc7279fb1c3ea4c369a7b8",
+      "subjectId": "medicine",
+      "code": "GM29.7",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:8943d9b182fbaaccce1ca0277df76439438a6d8a0159098f0b7fbc3d28148b76",
+      "subjectId": "medicine",
+      "code": "GM29.18",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:898af10a30624229ef32b6d30b0b75265c226f50421a6d848871320a4ebf5857",
+      "subjectId": "medicine",
+      "code": "GM29.4",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:9295df44c5f6e4f84c5b40d95a34bb4290e94aa1bbfa598aad8988022b4800fd",
+      "subjectId": "medicine",
+      "code": "GM29.16",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:9394a661f83355ae29de5b09a55741e023da7dc6b5cccc0999be34a862542c42",
+      "subjectId": "medicine",
+      "code": "GM29.21",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:a077dab6c7566ac3f4891cb46a998f6c8561f69583da295479ecbf2e90ba4548",
+      "subjectId": "medicine",
+      "code": "GM29.5",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:a76d1c7a60141e7dd778e7e40550761c62e52445167892aea58880dd44cd0250",
+      "subjectId": "medicine",
+      "code": "GM29.9",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:bdba6681456d71894abb81c92bb9a976f7dfa3bf45766e619847ad8ce971d83a",
+      "subjectId": "medicine",
+      "code": "GM29.19",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:c2912aaf68a805e5799713662d46f6cab9b18b8e4e585db090667febe4c70341",
+      "subjectId": "medicine",
+      "code": "GM29.17",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:c4d9c4c5bd5c6ca425be82a85ee0b531cdcc7c6051fa4754f9c2ff4360fd3539",
+      "subjectId": "medicine",
+      "code": "GM29.12",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:cc33a229d72ca6e98cc3f655ea604b714e9386651199c846163642386e1fc3a8",
+      "subjectId": "medicine",
+      "code": "GM29.6",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:dbf83d2e64e757072433ae9877305077471330bdc409d38948cec9494e6fec5c",
+      "subjectId": "medicine",
+      "code": "GM29.13",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:dd0ddb2c32c545a98f61b1be8972fe2e0939ee2df99ce0f8572b1b70fc779743",
+      "subjectId": "medicine",
+      "code": "GM29.10",
+      "pdfPage": 326,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "the role of the physician in the community",
+      "referenceId": "nmc-2024-ref:e4556031b122bd109258b8722b069daf30a268aa090bdbc756ac3db550a2ea92",
+      "subjectId": "medicine",
+      "code": "GM29.26",
+      "pdfPage": 327,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm29-1-gm29-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "thyroid examination",
+      "referenceId": "nmc-2024-ref:a5b29f5555a9760371c9299f05175d3dd30f0558f7e3c4f17f4643172531658f",
+      "subjectId": "surgery",
+      "code": "SU22.3",
+      "pdfPage": 408,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "transfusion observation",
+      "referenceId": "nmc-2024-ref:55be358d271c724154af5cce9e6a896fd9cb5b8085f885e28153ce19b1de7ad3",
+      "subjectId": "surgery",
+      "code": "SU3.2",
+      "pdfPage": 403,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su1-su17-5-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:0388ad06da80dff5cdb9e2a7cda0e0a128dd5b7abfd2b798ebdc4ca2a6070fd8",
+      "subjectId": "medicine",
+      "code": "GM27.10",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:12f2a876e69881f49abcb9f90ee3df85bdb2f1f74a0ecb0e580887a42ed25dfc",
+      "subjectId": "medicine",
+      "code": "GM27.18",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:174980c954938a201c6e6e9b4647350a620881003c260bf772cea9673aea7c0f",
+      "subjectId": "medicine",
+      "code": "GM27.8",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:1817fa8ed50e2ec99a0cb119bddead84bf9177ef53b4864dd1d4ce71ff2ab511",
+      "subjectId": "medicine",
+      "code": "GM27.2",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:31a36314426b12800ee154fa46bca5633083790b2aca37eb17e1e4d170bcb52a",
+      "subjectId": "medicine",
+      "code": "GM27.13",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:3e9d5db2f8672669c726effeff2bfe0a44fd29d15aa614e558ca54735dd91c25",
+      "subjectId": "medicine",
+      "code": "GM27.5",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:573e4035dbddb4e57c7133aff918d61b02a1524f7dc946e8df818b466ef69588",
+      "subjectId": "medicine",
+      "code": "GM27.3",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:61f6e9846c2ba57838ab874a8163ebbeaae034972b35e8f22f08cfad60e5db5d",
+      "subjectId": "medicine",
+      "code": "GM27.9",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:7b762ef3160f5c37a6afd698cd61aa724ed7d3ece66f6b4a34a3ca193be55e33",
+      "subjectId": "medicine",
+      "code": "GM27.15",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:812b229a152e53f7cb10eab8be458cc10daf72222e24fdd2bc85ef6eac29606b",
+      "subjectId": "medicine",
+      "code": "GM27.17",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:86042e0a820f1305a8d471a5ae018cceb7200c500b14609993f525772b5986a7",
+      "subjectId": "medicine",
+      "code": "GM27.12",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:90aa485bc0708223a78d4c016557dd0ec1e29b5741839d838221ef7231794e9b",
+      "subjectId": "medicine",
+      "code": "GM27.16",
+      "pdfPage": 323,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:93439a25564651523a61045b9c69aceeb9967f099b863d4172e55b01dec0e527",
+      "subjectId": "medicine",
+      "code": "GM27.11",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:bf8bad4cc60f8ba1928615432b2fde683846244f4deaeb79b3321af7bccf4986",
+      "subjectId": "medicine",
+      "code": "GM27.6",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:c0e054a2617793a26bb8dd8c55ec20161b23a47d77dcd1e58d19189aa32a3739",
+      "subjectId": "medicine",
+      "code": "GM27.4",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:deeca393f0e6e5e410f4b1a6ade8966f1c5d7f26095edc03b8f787a0578393c2",
+      "subjectId": "medicine",
+      "code": "GM27.14",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "tuberculosis",
+      "referenceId": "nmc-2024-ref:f16289097e9971117d92b4a590f37cbe7408ad59950bc14323548b31393ab7b6",
+      "subjectId": "medicine",
+      "code": "GM27.7",
+      "pdfPage": 322,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "varicocele",
+      "referenceId": "nmc-2024-ref:02882aa0eca93f16104bed8f09fa1a7a73f0103870ead00dc3e39289ca433513",
+      "subjectId": "surgery",
+      "code": "SU30.4",
+      "pdfPage": 412,
+      "packet": "docs/evidence/2026-11-05-nmc-surgery-su17-6-su30-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    },
+    {
+      "nameKey": "viral hepatitis",
+      "referenceId": "nmc-2024-ref:8300025d3e128965441a07cfc240a452b50a326da178593e6b405ba1725509cd",
+      "subjectId": "microbiology",
+      "code": "MI4.7",
+      "pdfPage": 210,
+      "packet": "docs/evidence/2026-11-05-nmc-microbiology-mi1-mi11-draft-tasks.json",
+      "proposedObjectiveVersionIds": []
+    }
+  ]
+}

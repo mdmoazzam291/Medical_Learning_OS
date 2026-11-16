@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "01fe7e465cc16a13becdc82388d1daf8b34d1718",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 26,
+  "reviewed": 26,
+  "held": 7,
+  "scopeAligned": 19,
+  "cumulative": {
+    "reviewedSourceRows": 568,
+    "reviewedDistinctNameKeys": 567,
+    "alignedSourceRows": 523,
+    "heldSourceRows": 45,
+    "unreviewedDistinctNameKeys": 230
+  },
+  "rows": [
+    {
+      "name": "Blood culture sampling",
+      "nameKey": "blood culture sampling",
+      "code": "GM3.12",
+      "sourceReferenceId": "nmc-2024-ref:e133ccd661e5d31c62c27bdf85578895ae77f6607a17f254ba9996e207c2f9cc",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "sourceBodySha256": "ba5ebf8b962705643d4dcee6ff6afa33108a4b8578bcbbe0426e113ad6d34a7b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Blood culture interpretation",
+      "nameKey": "blood culture interpretation",
+      "code": "GM3.13",
+      "sourceReferenceId": "nmc-2024-ref:0b3aaaa5f00b14bb767c15d9fe32144f4e1c5162eda15ea1a456a6522bd885fa",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        202.02
+      ],
+      "sourceBodySha256": "4928ca9c19d279a7e61d4981df3c884ba8ec85c071bf0f04509a34b9aa6a99bb",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Additional pneumonia testing",
+      "nameKey": "additional pneumonia testing",
+      "code": "GM3.14",
+      "sourceReferenceId": "nmc-2024-ref:75003b02a58cf526dccb67707d7b34d2e0d69b0ca2d26429001a7266fcd18f2e",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        202.02,
+        102.7,
+        229.2
+      ],
+      "sourceBodySha256": "3bf145ae4d342e4859b0e37678dfec2c83b188270528ed478f95780c40128b63",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Empirical antibiotics",
+      "nameKey": "empirical antibiotics",
+      "code": "GM3.15",
+      "sourceReferenceId": "nmc-2024-ref:986f2075ab7d32e6a3dc22a4074c76e5114c4d72322a41c1b6c725fbfd8d1e74",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        229.2,
+        102.7,
+        269.94
+      ],
+      "sourceBodySha256": "d1d12fc42231f0866b4443d13a8df9663c4d74c147fe492d34b9e010751d6fb1",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Culture-directed antibiotics",
+      "nameKey": "culture-directed antibiotics",
+      "code": "GM3.16",
+      "sourceReferenceId": "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        269.94,
+        102.7,
+        310.68
+      ],
+      "sourceBodySha256": "10f7b9f08c14cd50f9d7d26fe301cbd105d91694298d59f5aedd7c7ccb2ffc31",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Official wording combines susceptibility-based selection with the term empirical. Preserve the distinction and clarify how to address antimicrobial pharmacology and spectrum."
+    },
+    {
+      "name": "Admission criteria",
+      "nameKey": "admission criteria",
+      "code": "GM3.17",
+      "sourceReferenceId": "nmc-2024-ref:6e87e8b4b3e39696537bfed544c445f9968f8af31cb3fa958038f5c05a329706",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        310.68,
+        102.7,
+        351.48
+      ],
+      "sourceBodySha256": "68864c31c01eb3a6dd75286ee2d1799b832bb442ee592886f034566208459c9d",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Isolation and precautions",
+      "nameKey": "isolation and precautions",
+      "code": "GM3.18",
+      "sourceReferenceId": "nmc-2024-ref:89f2be49db8018b9c53ad6ff4e1a971d831484b0ce446ab6d9c0a0609589cf3f",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        351.48,
+        102.7,
+        392.16
+      ],
+      "sourceBodySha256": "b8c4ed24582569a65023e8683ecd93728198a7c943560b73aa82da02338fce5d",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Respiratory support",
+      "nameKey": "respiratory support",
+      "code": "GM3.19",
+      "sourceReferenceId": "nmc-2024-ref:84377d55955323fb840a9afbd6fa6b0d9c481631c4d322c95de3fc7ed70b07d3",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        392.16,
+        102.7,
+        433.02
+      ],
+      "sourceBodySha256": "b691fcbafd6f7adcc41d9cf87723f439d2639d71bf2ff4d6ab1f50ab3a1950e2",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Pneumonia counselling",
+      "nameKey": "pneumonia counselling",
+      "code": "GM3.20",
+      "sourceReferenceId": "nmc-2024-ref:7cfd1ab171689801df404662e3c86fa4c986ac1db1b64ce71a9cff2ac8939afb",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        433.02,
+        102.7,
+        460.32
+      ],
+      "sourceBodySha256": "898d7f7326c909e1e47d3c303572565ed1d82815ddd443bfd527d36f64c48a6e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Pneumococcal and influenza vaccination",
+      "nameKey": "pneumococcal and influenza vaccination",
+      "code": "GM3.21",
+      "sourceReferenceId": "nmc-2024-ref:38832f81dccbc6136ff64b2977b09f662850227e197d82179e50bacac5f1ad4f",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        460.32,
+        102.7,
+        501.12
+      ],
+      "sourceBodySha256": "b403cc21a4b76bd5e417c3794dc7448aa72ab122aa2395505290e1119cc3a406",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Vaccine counselling",
+      "nameKey": "vaccine counselling",
+      "code": "GM3.22",
+      "sourceReferenceId": "nmc-2024-ref:9fcb0ebe01f9849d582b9202205ac0b4eda222ea16491b60eea5344b6f20f30d",
+      "sourcePdfPage": 287,
+      "sourceRowBBox": [
+        44.2,
+        501.12,
+        102.7,
+        528.48
+      ],
+      "sourceBodySha256": "edb23398832045bce3a62d3af82bf35f5cd16fe959d13b8b4544d3d4f381aeb4",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Febrile response",
+      "nameKey": "febrile response",
+      "code": "GM4.1",
+      "sourceReferenceId": "nmc-2024-ref:518f344aa96f18c881ed13b3f9a8ef5366e013516d19ba42ff2c9f8e85c40ebd",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "57c92672a4c8698e2f760a1d326c1733ced1da553437e39340024a6498889add",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Fever and hyperthermia",
+      "nameKey": "fever and hyperthermia",
+      "code": "GM4.2",
+      "sourceReferenceId": "nmc-2024-ref:25af8620f7c3ad335119941a0c346e77d6de043b7331d11275fd9ca7430726ea",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        207.84
+      ],
+      "sourceBodySha256": "1640974992edea64bbdcb535f9e6e0278c113f7cbaecc9805182ca55822e7b65",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Regional causes of fever",
+      "nameKey": "regional causes of fever",
+      "code": "GM4.3",
+      "sourceReferenceId": "nmc-2024-ref:0a7c8a91655f292046e395d6fbbed5b1c4f203d493d577f1221a91d34f292481",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        207.84,
+        102.7,
+        235.2
+      ],
+      "sourceBodySha256": "80fa36cdf1e97e719a4cf5e93ab5b2e8054f98473421b8222a209faf4644784c",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Inflammatory fever",
+      "nameKey": "inflammatory fever",
+      "code": "GM4.4",
+      "sourceReferenceId": "nmc-2024-ref:ef278ff6c74a0baa130bb14338a6a67bcef299c96e2a506a1150992c2474b4ca",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        235.2,
+        102.7,
+        275.94
+      ],
+      "sourceBodySha256": "667fda1d78aa2c1d36c05e3709b3c9b47787307b94630911653f7d61dc40c68e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Malignant fever",
+      "nameKey": "malignant fever",
+      "code": "GM4.5",
+      "sourceReferenceId": "nmc-2024-ref:2e1920bc4397605615c780624f6feaea49f84088f9618bae663e40f74763c234",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        275.94,
+        102.7,
+        316.62
+      ],
+      "sourceBodySha256": "9c629accdf8426b24be69b0df27d03e4de78df8f188b9835dcac970fe26de8ae",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Acute febrile illness",
+      "nameKey": "acute febrile illness",
+      "code": "GM4.6",
+      "sourceReferenceId": "nmc-2024-ref:9efa08cc8d3cc9abe55d67dbc216142644e551e8d65a0125fc5550d33507c232",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        316.62,
+        102.7,
+        357.42
+      ],
+      "sourceBodySha256": "b25a9d9419c724509cc67ddca6259bf513482046a93dc912d3124eb00df50043",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Sepsis",
+      "nameKey": "sepsis",
+      "code": "GM4.7",
+      "sourceReferenceId": "nmc-2024-ref:a707c344606b740c91a24b6dc81bca220717d971de32ea3fa192261d238cd840",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        357.42,
+        102.7,
+        398.16
+      ],
+      "sourceBodySha256": "8fa792937684a1984f72ddc1881de50755bdf854620fb9bcf016d79967a1a3dd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Heat illness",
+      "nameKey": "heat illness",
+      "code": "GM4.8",
+      "sourceReferenceId": "nmc-2024-ref:5ac073ed3e079ea7404de5a63e5be2c61df5aaf8c9ef1e420c8998ad119605d5",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        398.16,
+        102.7,
+        438.9
+      ],
+      "sourceBodySha256": "2de3125d238f4fe08ff9dbf76e733a2102d01426ee11dcb838a91fa800849290",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly address pathophysiology for each heat-related illness alongside recognition and management."
+    },
+    {
+      "name": "Fever of unknown origin",
+      "nameKey": "fever of unknown origin",
+      "code": "GM4.9",
+      "sourceReferenceId": "nmc-2024-ref:6efda0ddb4e77bb68ff13e87bda8b28d6e038258dd9fe30b9d67a0654ea609fe",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        438.9,
+        102.7,
+        493.08
+      ],
+      "sourceBodySha256": "39ab536b84e2c61da983f4281ef7e04989b3e26481969903700b4a1e0a8da917",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Include FUO pathophysiology alongside causes and presentations."
+    },
+    {
+      "name": "Fever history",
+      "nameKey": "fever history",
+      "code": "GM4.10",
+      "sourceReferenceId": "nmc-2024-ref:dd9f680aca10048533a5bad5793befdbafd797784bcbb783c8d49617f3a8ae29",
+      "sourcePdfPage": 288,
+      "sourceRowBBox": [
+        44.2,
+        493.08,
+        102.7,
+        547.32
+      ],
+      "sourceBodySha256": "7b052a843d02f3b5915651dbe0ac72077e04aa70912d9d463c9969befd8a0543",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicit documentation is missing."
+    },
+    {
+      "name": "Fever examination",
+      "nameKey": "fever examination",
+      "code": "GM4.11",
+      "sourceReferenceId": "nmc-2024-ref:a01adf346f605b1e6d5ec6eec221903ddd73460bd9596f0139197c49cd4319f8",
+      "sourcePdfPage": 289,
+      "sourceRowBBox": [
+        44.2,
+        126.36,
+        102.7,
+        180.48
+      ],
+      "sourceBodySha256": "74e51bde9f10806f41b9c362937c87809d3269a96a08bd8dc07690277c88de18",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly include liver and spleen examination."
+    },
+    {
+      "name": "Fever differential",
+      "nameKey": "fever differential",
+      "code": "GM4.12",
+      "sourceReferenceId": "nmc-2024-ref:a0f99fa4e0ee7911c9572943d5e70b33f2f9ad143dc0da9116995a66f2be5ae6",
+      "sourcePdfPage": 289,
+      "sourceRowBBox": [
+        44.2,
+        180.48,
+        102.7,
+        221.4
+      ],
+      "sourceBodySha256": "cbc9a4b941e47e8b3c7a37e4a30ea0e5b0c55197c3b2cf63f7c061d5eaa7a3ce",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "name": "Fever investigations",
+      "nameKey": "fever investigations",
+      "code": "GM4.13",
+      "sourceReferenceId": "nmc-2024-ref:23366de59b7448dd6803b0f90364a954f787389a38a0afa1e385888aacbd3e0d",
+      "sourcePdfPage": 289,
+      "sourceRowBBox": [
+        44.2,
+        221.4,
+        102.7,
+        315.78
+      ],
+      "sourceBodySha256": "28f7602fe66dcf4abb4388ce612840dce06113b93dbacacd87d2122a45317a5e",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "The broad investigation groups leave several named tests implicit, including QBC and marrow examination."
+    },
+    {
+      "name": "Prolonged fever tests",
+      "nameKey": "prolonged fever tests",
+      "code": "GM4.14",
+      "sourceReferenceId": "nmc-2024-ref:b9a2278a43e1e36eb4f017cd3f8f0448466b9e919c0f65062a3e80f79540b030",
+      "sourcePdfPage": 289,
+      "sourceRowBBox": [
+        44.2,
+        315.78,
+        102.7,
+        369.96
+      ],
+      "sourceBodySha256": "3c19e1d540dadfccec40258517d858c974c9124ecf8887caa4f88c1f02c50ab6",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Specify HIV serology and both bone marrow aspiration and biopsy."
+    },
+    {
+      "name": "Marrow procedure assistance",
+      "nameKey": "marrow procedure assistance",
+      "code": "GM4.15",
+      "sourceReferenceId": "nmc-2024-ref:532f595cc5317d46d8d56163e953abbf977a1747e5d1f6b3e13831045fbd2a8d",
+      "sourcePdfPage": 289,
+      "sourceRowBBox": [
+        44.2,
+        369.96,
+        102.7,
+        410.76
+      ],
+      "sourceBodySha256": "fcf0f03fab8bf72ee5cb06f5640c56497cddea688c470f54ab1c34529bc6e969",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm2-20-gm4-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

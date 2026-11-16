@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "nmc-cbme-2024-source-manifest-v1",
+  "checkedAt": "2026-11-16",
+  "file": {
+    "originalFilename": "YTW423v3EsCFdtPv3I5qZkaNNhuXfub42UZITDRM.pdf",
+    "provenance": "Uploaded by the owner on 2026-11-16; matches the URL https://nmc.org.in/storage/cms/rules-regulation-nmc/YTW423v3EsCFdtPv3I5qZkaNNhuXfub42UZITDRM.pdf by filename",
+    "sha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+    "matchesRepoPinnedSha256": true,
+    "bytes": 4113924,
+    "pages": 467,
+    "pdfProducer": "iLovePDF",
+    "pdfModDate": "2024-09-12 17:42:11 IST",
+    "encrypted": false,
+    "textLayer": true,
+    "ocrUsed": false
+  },
+  "documents": [
+    {
+      "requested": "NMC Revised CBME Curriculum Guidelines, 12 September 2024",
+      "found": true,
+      "pdfPages": [
+        1,
+        74
+      ],
+      "title": "Guidelines for Competency Based Medical Education (CBME) Curriculum 2024",
+      "letter": "No. D-11011/500/2024-AcademicCell (e-8284443)",
+      "date": "12-09-2024",
+      "issuer": "National Medical Commission",
+      "evidence": "PDF page 1 letter heading"
+    },
+    {
+      "requested": "CBME Competencies Volume I, 2024",
+      "found": true,
+      "pdfPages": [
+        75,
+        241
+      ],
+      "title": "Competency Based Undergraduate Curriculum for the Indian Medical Graduate, Volume I-2024",
+      "subtitle": "Competency based Undergraduate Curriculum in Phase 1 & Phase 2 subjects",
+      "subjects": [
+        "AN",
+        "PY",
+        "BC",
+        "PH",
+        "PA",
+        "MI",
+        "FM"
+      ],
+      "evidence": "Title page PDF 75; section title PDF 106"
+    },
+    {
+      "requested": "CBME Competencies Volume II, 2024",
+      "found": true,
+      "pdfPages": [
+        242,
+        370
+      ],
+      "title": "Competency Based Undergraduate Curriculum for the Indian Medical Graduate, Volume II-2024",
+      "subtitle": "Competency based Undergraduate Curriculum in Medicine & Allied subjects",
+      "subjects": [
+        "CM",
+        "GM",
+        "PE",
+        "PS",
+        "DR"
+      ],
+      "evidence": "Title page PDF 242; section title PDF 267"
+    },
+    {
+      "requested": "CBME Competencies Volume III, 2024",
+      "found": true,
+      "pdfPages": [
+        371,
+        467
+      ],
+      "title": "Competency Based Undergraduate Curriculum for the Indian Medical Graduate, Volume III-2024",
+      "subtitle": "Competency based Undergraduate Curriculum in Surgery & Allied subjects",
+      "subjects": [
+        "SU",
+        "OP",
+        "EN",
+        "OG",
+        "OR",
+        "AS",
+        "RD"
+      ],
+      "evidence": "Title page PDF 371; section title PDF 401; contributor list ends PDF 467"
+    }
+  ],
+  "completeness": {
+    "allFourDocumentsPresentInOneFile": true,
+    "subjectsWithCompetencyTables": 19,
+    "lastPageIsContributorList": true,
+    "separateVolumeFilesNotSupplied": "The four documents arrive as one bundled PDF; no separate per-volume files were supplied or byte-compared."
+  },
+  "otherKnownCopies": [
+    {
+      "url": "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+      "usedBy": "2026-11-13 text-layer source checks",
+      "byteComparison": "not performed (workspace cannot download); treat as possibly the same edition until hashed"
+    }
+  ],
+  "rights": "Official public NMC regulatory document. Redistribution/derivative-publication rights not assessed. Full text kept in private Drive; public repo holds identifiers, pages, domain/level/core and hashes only (owner decision 2026-11-03, reaffirmed 2026-11-16).",
+  "tooling": {
+    "requested": "PyMuPDF 1.26.6",
+    "used": "pdfplumber 0.11.10 + pdftotext/pdftoppm (poppler)",
+    "reason": "Package installs blocked in this workspace; pdfplumber reproduced all 17 repo-pinned row hashes made with PyMuPDF 1.26.6."
+  },
+  "privateCopies": {
+    "driveOriginalsFolderId": "16xBSjquHtMFTinZu2Wsep57EKLHAh5UN",
+    "originalPdfSaved": true,
+    "datasetSavedAsVolumeParts": [
+      {
+        "name": "competencies-volume-I.jsonl",
+        "driveId": "1batSzIiPw_ys_BB2cKKuDn56D4kQylvb",
+        "rows": 1139,
+        "sha256": "13e5ad92034083ab12b7a2ee68f8256cea7a95f7b23bc474d1bc063f7b9faeb5"
+      },
+      {
+        "name": "competencies-volume-II.jsonl",
+        "driveId": "1R-YpJaXCotXwqhYGegVV5eF4GORdxO7A",
+        "rows": 986,
+        "sha256": "6a6de6c8b4ae5d81ab43888150fdb3b8e7f49f04943905fa11255a4076429c8b"
+      },
+      {
+        "name": "competencies-volume-III.jsonl",
+        "driveId": "1LTHMV14irRay3SJlu53bLDaey5R-iali",
+        "rows": 509,
+        "sha256": "068d92a45b46d253e81224825d291eeeee486fed05b8f5370fefb1600d5c1dc9"
+      }
+    ],
+    "concatenatedSha256": "8d109b00c10b14152bd0a13e53ce9bf3b9aad4ab7d4b4ce69bbe690c308818c9",
+    "originalPdfDriveId": "17olT4BAaxMoIrYDmbHklrUbw1iFF626H",
+    "originalPdfUploadedBy": "owner, 2026-11-16T03:26:36Z",
+    "originalPdfCheck": "filename and byte size (4,113,924) match the pinned file; Drive exposes no checksum to this session, so SHA-256 of the Drive copy is not independently verified",
+    "driveVisibility": "PRIVATE"
+  }
+}

@@ -1,0 +1,2915 @@
+{
+  "checkedHead": "25129156a739fda98e2b0728153fb267430fb6c3",
+  "indexBlob": "be36201443fd5eecbf8b20211cac752f84c4ff36",
+  "reviewPackets": [
+    "docs/evidence/2026-11-13-nmc-source-alias-and-paediatrics-opening-review.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json",
+    "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+  ],
+  "indexedNames": 249,
+  "reviewedPaediatricsReferences": 252,
+  "crossSubjectAppearances": 22,
+  "officialReplacement": {
+    "code": "PE6.4",
+    "evidence": "docs/evidence/2026-11-07-nmc-source-exception-task-packet.json"
+  },
+  "nextAction": "Reconcile the 22 cross-subject appearances against existing review evidence before checking outstanding rows.",
+  "rows": [
+    {
+      "nameKey": "abdominal examination",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:487d87ca6936e5b3a2ba15318d9eb5de386788c2aed951ba381c1551a6c1e23a",
+          "code": "PY4.12",
+          "subject": "physiology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:56dc863b9df869cea9a3efe6adffaaca2af93c37d41671f03e9c0b81a02322ee",
+          "code": "PE23.19",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:b7619d2fef04a6e56abf78df13c081161dcdc977ff4dd2acc93ab1cbfb55f0a5",
+          "code": "SU28.18",
+          "subject": "surgery",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "abdominal pain",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:356c2f6cff054d6a6a846772eb7b9ac85183f55027fe773b51fa28b899e2f89e",
+          "code": "PE23.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "abuse recognition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:73300816bbe4d286ee7c5d1c2615cc9afdb02c2c731eae2cc2f89c0534d8e91e",
+          "code": "PE6.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute gastroenteritis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:11cbb1182f1159e462b188a9af863f499bf44088e67a1296ddf48a6ee4ea4735",
+          "code": "PE23.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute hepatitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b500edc7ba2a88b337831b62041634bfd2bf9bc10556fd2a6f691ec4eeee402f",
+          "code": "PE23.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute liver failure",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:341964f33036074bff3d8e77ed82b5cbc190b3f6b955f28ddedb73614364ae54",
+          "code": "PE23.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute lymphoblastic leukaemia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e3338738f6c606c44e80f0ea0cd05c3dfc709552b878c24b754a2c43b7de65e3",
+          "code": "PE26.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute malnutrition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c6db74745a32b764f46a6a734990063056ce3ebd6b92ab29803effb93bf28f6e",
+          "code": "PE10.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute otitis media",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f82f310a8fd19b5443571de6927f84d8a9c1ad2c1ace56c120e9c4ef2728ac59",
+          "code": "PE25.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acute rheumatic fever",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5b719128052a3dba17d3ded821e4590c747c554c1686a9309446b78fef58160c",
+          "code": "PE22.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "acyanotic heart disease",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1b0db850192a50b56ac33c9f1e486e0e97d7f8ca49c9df9133299a1df89bbc51",
+          "code": "PE22.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adhd",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2d6f9cdfa3f7546c2283af927838419679a58626100b3aff66b1634e52e9bc75",
+          "code": "PE4.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent clinic observation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ea117179c70b46b92ef7b7ef848371c3b45ee1f959d30e0f616e43406a0ec887",
+          "code": "PE6.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent confidentiality",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3107f8ddadbfeceff8e1927992c37002d8752d77ff67d0022cbcc6b778c65aab",
+          "code": "PE6.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent eating disorders",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c9d794c8081a1a31da455483d9468c549f06436935d408d51f5dd59c0e3c6183",
+          "code": "PE6.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent health check",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ae99f1df4b5aa2821f02cb273456c4ad13bf66ea208957dada5300ec74c4b0b1",
+          "code": "PE6.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent health problems",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fb2ffadbbdfb73e69e5d3c68d535ed2e1c1902338b434f45386a2f4cbb04ec14",
+          "code": "PE6.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent mental health",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:87e7ec1811ef1a1d227cafb3199c4b2315b06021e50f6d428f81d05fa27a518d",
+          "code": "PE6.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent nutrition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ce6c07a139035b5c64d6d38d0e1872ae850e11efcb3de83dd46a7b6db056b8ad",
+          "code": "PE10.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent obesity and ncds",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c12491d57722c9369b9dbc60943e662f5f07df477b94046eae41d7de39e0d42d",
+          "code": "PE6.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent stages",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:37bf6a1677a26d2aba8a6365e398a2a4fde7d6dbf22fe57efceeaf10471949ff",
+          "code": "PE6.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "adolescent-friendly services",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:424264333b92ab14baa5ffff97a730a300163cf058bf4f83a60b0a11fb318315",
+          "code": "PE6.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "age-specific nutrition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3e8ad232310942347ab306aaa8cbb3f84cc2d6cf820c229b9da081fb030d6591",
+          "code": "PE9.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "airway positioning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1b30cffd09eb30040c3cea97a439d83b49c477128a563e58ea0931c19181d2c7",
+          "code": "PE24.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "allergic rhinitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2301693b81005a49d481d148ed0f0235b248dda7cb44a9ef60ddf917928bddc8",
+          "code": "PE28.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:62a7ad1fcdb97dcd9ba1d194e797fa59f8a60c6b1d31f29e52cc9c1aa602db75",
+          "code": "EN4.24",
+          "subject": "ent",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "anaemia counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:61894540e63ec9266d9aef2ab2d8bd316f4ceda61507007f134b7ebd42eea048",
+          "code": "GM9.12",
+          "subject": "medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:81cb0df25805bac19a2a7657b223837465361156587dbb2eb4703be502379ab1",
+          "code": "PE26.16",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "anthropometry and growth charts",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4dc8d32133617cf191fa1eb62fca5b788941e95037754821712b4fec5302a100",
+          "code": "PE1.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-source-alias-and-paediatrics-opening-review.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "approach to acute malnutrition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:48003a49f17b6b5cd041fc9c230883ef5fb10f269949f20183c48b3691a668b6",
+          "code": "PE10.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "asthma planning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3838d1977001b28b8133fa1f3833f16c25055ae29284b8220c21eb3e01695169",
+          "code": "PE28.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "atypical genital development",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1af66a44e50ab1f6a35c0e7c06a0915c2eaf2f350279e7d04c6af30b4da6c4b4",
+          "code": "PE30.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "autism",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:54ac0ade90f468c362407a96f77cb66ee4837405c7616a99ee8d039a4e53e8f7",
+          "code": "PE4.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "b-complex deficiencies",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fc5af4da0b4f6bfead4dfeda236420a2878206bb06f801510dceb815c92903d2",
+          "code": "PE12.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "b12 and folate deficiency",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f930424e9a7191c5d680908e22822283a2c265ab65a9bc6336306c9eb76e1d48",
+          "code": "PE26.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "baby-friendly practices",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:cb68a53e70f46ac4aa50882184aed469a93b9c2b317bae00f6dd8000339b282f",
+          "code": "PE7.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "bacterial meningitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:812f128d64046c820e05df51467922442acb52ac567fb4c54a64067d2fbab57f",
+          "code": "PE27.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "bag-mask ventilation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8d1e3765878dfdde27f664db78001bdac73f42d7c390dd1a7d05328db5abad56",
+          "code": "PE24.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "birth asphyxia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:76ffed5376221456428421836f34df15c386efc8146c2b8a8c8693cc85c21738",
+          "code": "PE19.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "birth injuries",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d6f01eac7f2d6d9d0854d43b6ec4fd9d8ad55da5f58f1f9d747c4b27ac5d0ce8",
+          "code": "PE19.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "bone marrow aspiration",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:9cdfa856b29298e136662ea701c6384b264c4d9e687c28276a4c265e831653ae",
+          "code": "PE26.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "breastfeeding benefits",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b78bc4c5ec5397677af14041e4e684a9ef35cdce419bad67129fdc0ea022e70d",
+          "code": "PE7.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "breastfeeding observation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1a30d4460ad8f654e3f3c7fd9dd8605fcb80614c1501e2b7ebcb5ebedfcbf6ba",
+          "code": "PE7.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "breath-holding spells",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:13e349d33ea10b418aa45c04f7cfbeb4b9d6d430d4c119dfc9d3673117302572",
+          "code": "PE5.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "calcium and magnesium",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d61e3b0026bd4c1cd8637b1fcc3eef459c6e7c6a78ca236d0699262d8fa8a5f8",
+          "code": "PE13.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cardiac care empathy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:18bafd4febe6232c20ed825fb3aab2e2985f9899d018150c890ade487908cec9",
+          "code": "PE22.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cardiomegaly on chest x-ray",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:afd10a6c2bab5d7249e3db5302c9e96539969c679c91ebd4acb4c85f7a32976d",
+          "code": "PE22.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cardiovascular examination",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:94ba6e62e3264cd9c37edae043b6f76b7419b2d62746657a6b17930bd25476e9",
+          "code": "PY5.16",
+          "subject": "physiology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:c49c8ff30f0abb8fcbb68476cc3cc086fbf580a143559346431500b4f7400d4a",
+          "code": "PE22.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "caregiver counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:789f4bc3c95c57d3501b95b28c62e0831da497351c7a9385dc8f251cc8668ebb",
+          "code": "PE3.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "caregiver immunization counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:9a36cfbc89552432cb18c6cc6d09bb621274b49b9b8ec755d63a4d94b5699908",
+          "code": "PE18.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cbc and liver tests",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:37e9212d5e67c68a4dc9f16fc927d24fea9ce882b02b180dd8667955088c9c20",
+          "code": "PE26.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cerebral palsy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5dc4a1b473fcd477bd7e70e2536073dbc32325426d29595689ab7266147dfafc",
+          "code": "OR9.1",
+          "subject": "orthopaedics",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:86a1049ee9dd7f89b89d4152ea3c5e9a28bbf611101c5bb7975a1c4ef517d631",
+          "code": "PE27.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "child development unit",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:03907db0578999468dfab387170e1039422a1930a9e657ad467b6642dc1a2264",
+          "code": "PE3.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "child imnci assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8a10186d4f07729dbf214858fae1d2e0a9a2d407a951a17d2f739ba924f3f15f",
+          "code": "PE16.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "childhood asthma",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ba070339032c6d51f8b6752f26aecc9d6c0c44519655d4c7efeb57a49b77efee",
+          "code": "PE28.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "childhood diabetes",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:99ae7b81191d4e173ce70a6bbc9eddf1abe3c16ee1bbd33a7ee368244f777918",
+          "code": "PE30.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "childhood epilepsy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5e10bfbc186f0c23fc4d31c62ac2a9b62da838b2b10911d2c2889fb4e5c82209",
+          "code": "PE27.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "childhood obesity",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2ef4a053ac82b57315848b27af63ad2bdffde3fd4e10bd937e7520150e3c6435",
+          "code": "PE11.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "childhood tuberculosis diagnosis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:09533e0d035bb004eb15f282d87bd9a04894f9c771fcf90a44e43269b214ad41",
+          "code": "PE31.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "chronic liver disease",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3541dfe12898776f3e81f507da8cb3822e8682c1366b6d61121d5a0c66f604ce",
+          "code": "PE23.15",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "cold chain",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8aa1f6d2e46680007a4be6fe1fcd9c7dec7d431872b01351dce7286ce2f24716",
+          "code": "PE18.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "complementary feeding",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:eb14a8a46c6f8d58644de4652391f9696e5045e98e834e1214036464f9d6f10d",
+          "code": "PE8.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "complementary feeding counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:16cc6337e4dc687b9c50e7e455bbcd7c2f60cc30520b9cbb4a9de60fa131f591",
+          "code": "CM5.13",
+          "subject": "community-medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:f1316dc70af7255cb77d49e7f76e821f9f32156434472bf1b500b394b26e293a",
+          "code": "PE8.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "complementary feeding principles",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f45f5b63dc1c4b60ce1deea298623a4673b717259568106a2c7954d677811901",
+          "code": "PE8.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "complementary foods",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:05bf592c81917187358bdf9d3109b6591bbf87df3af94a951835d60dc8ad6bc3",
+          "code": "PE8.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "constipation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:37d03a9c073318da41c9ec261ed34b1f1c4055ae308b7d282bdbe8997e1d8ddb",
+          "code": "PE23.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "contact and immunization assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6a1665730620cba8aa44023da795382ccfdf624f24298a54254a618bea5c605a",
+          "code": "PE31.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "convulsions and coma",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:0d1efc77e49ac99e628c891fffa6d9d43ac81f56277f96ab7842cbe458973a51",
+          "code": "PE24.15",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "croup",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4ceeb1c21fa093105c99482ebf4b39751eaae2df48acebeff3db7ecfd8ee1219",
+          "code": "PE25.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "csf interpretation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:80831489d8e48f93e30c622131ffaa6f6ced58ecdd3efc2ecae248bbe6053fe9",
+          "code": "GM17.9",
+          "subject": "medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:aafdb212f9cd9aae3c65e077e20ee708b93872ff55d65bda1a858bbc85e243b2",
+          "code": "PE27.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:eb38a81609609cc2db6e891d5ab89db95d5a5a8c55b3cbf0424f4dc0f4fc8cdb",
+          "code": "PA34.3",
+          "subject": "pathology",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "cyanotic heart disease",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b26d91415406d582a552b8c4e5de0954f32f3faa922c276263061d748cff18a2",
+          "code": "PE22.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "developmental assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d47e3f22e8049eaa8c37888f6d85b71cbdee24ea76374f5568967693c490fad8",
+          "code": "PE3.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "developmental delay and disability",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:65aaac5d848eacdac9b3b5a5fbe15e915717902550013eeefc116ba8474a17b8",
+          "code": "PE3.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "developmental milestones",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:7caab494104a49aa4e33f6f56b8e50cd65311e9a15785dc4e65aa6d4a024f20d",
+          "code": "PE1.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-source-alias-and-paediatrics-opening-review.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "diabetic ketoacidosis recognition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4e921664f60835f8552c8caf66a0d126b2e97328b8cea4ac224dc765d7ff3dda",
+          "code": "PE30.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "diarrhoea assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6faec9de959af5016c42bfbf7dd97090426cc9e6a6f2818c82444b437b5c8dbf",
+          "code": "PE23.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "diarrhoea investigations",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1b3042e97be0a6ca7ffc6b742960239f31b7ba13e38fd51d68fa9f89ee66a543",
+          "code": "PE23.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "diarrhoeal dehydration referral",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6606f00a36e80d94f97fd2b3c26b5b64eb70970014390f36fc1ba5246eb09f6b",
+          "code": "PE16.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "dietary recall",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:dacd64cef1edca627f8e708118c2d9110f3bbfdcd07d9fca3cda7f05d936e61f",
+          "code": "PE9.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "difficult news",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c3bba0da8b8e243d9a663357e1735bffdb2e03bd26d5496d3f2944cdfc59b1a4",
+          "code": "PE24.22",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "diphtheria, pertussis and tetanus",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4df168b01a7036fc03ecde67e90a36bead3a80da3f8b9f18f8d433416a14afdb",
+          "code": "PE31.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "down syndrome",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8626be69de06dfb8baa1cf0cd9193cf5adf981362c3c98ebaae5cbfec4fe9838",
+          "code": "PE29.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "duchenne muscular dystrophy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e2b497ca1e5488cef504b77718c98e286dd6847f22614b8aba36573c45588b64",
+          "code": "PE27.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "dysentery",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f4c79c2a6782b2c0b1196a27e3b19742c96dd37f5a25cf6795dd6ba709740cb0",
+          "code": "PE23.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "emergency iv access",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:7d4640d13411c52ad2a7276299259b29fdc4f6007917f1026bc1cdbad522ff92",
+          "code": "PE24.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "emergency oxygen",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5cf8d2bf6005211f17d3a32f5756b32ecd061700451ad602c559038451678912",
+          "code": "PE24.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "energy in indian foods",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1e95c83dfb4511ea78472f32aa3647487d61e807fd0ce1330d24b7ad90d7aa1e",
+          "code": "PE9.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "energy requirement and gap",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3469e86b20b940eb36e3d7ed56bbc5abb845df69e626340f6b1b40bd8711b230",
+          "code": "PE9.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "enteric fever",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:7aaf2a906d5feabd78725e72a5c7cadb6eb3016064b26ba9a64788ef69b9098a",
+          "code": "MI3.6",
+          "subject": "microbiology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:d7d1637566e3395ef8eb07b067860f980c81fca013eac0a802f052a6630dcc11",
+          "code": "PE31.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "enuresis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:04b22d770b69dc4ba102aeac4458f59c1764231ce56fee622312202e93ed7fc2",
+          "code": "PE5.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "epiglottitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1139bc2886bac06aca47bb594655a664170644ac90a6265e1f63c640326a15b1",
+          "code": "PE25.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "external gi and liver signs",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e1816efc695769d3e01b29278bbadbe0ba935e5c03b8171ca1da0f08b663d762",
+          "code": "PE23.18",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "febrile seizures",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4929e7d7cfd9b1c61ab9c14899ffd22e1eba56f155c0b4f27ca2021689e89823",
+          "code": "PE27.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "feeding history",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:abb8ce5a35b544f2db30f60abe8b6640f4e1451710e69af45f01a114053978ef",
+          "code": "PE8.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "feeding problems",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ce9d83edc967ad9504171aa38e0fd016fc2862bc0d0d2b7e3b851d27fd51bb48",
+          "code": "PE5.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "fever in children",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:94f00264179e20ed3c1307e5f778b4dbbd22eb0885c97667fb732bf2d547256a",
+          "code": "PE31.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "fluid and electrolyte needs",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ab71fe424f01d00cea0f6c75fc5748903b8c0d78a28efa5eca6bb44066fbf778",
+          "code": "PE15.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "foreign body aspiration",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ff6cc12fcb363a0b7af4dca9d7116d746a9380ff6895475be2c322b01f205110",
+          "code": "PE25.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "gastrointestinal history",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e337370f7541dc334c66889fc2d7affb1eea7fee3a5e3b3d93e85279442b88b7",
+          "code": "PE23.17",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "genetic counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ddd789974be4b629ffa00f0fb0b1e15fe7f0179c0e1b9298ab7f85f5bdae9bc6",
+          "code": "PE29.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "growth and development",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:83ac2fa70e2aae9132568507ed394ec503e0ae5920ca458ae0f7947b8e73bb08",
+          "code": "PE1.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-source-alias-and-paediatrics-opening-review.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "growth counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4d7794f1c6ae7a86feaafd172fe3d26c935d790216c7c71ead8492d68fdc788d",
+          "code": "PE2.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "growth deviations",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e64a54e099cfefa0d8832b73b33670ec297c2472308e9304dbabc45d1a9fe0ae",
+          "code": "PE30.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "growth faltering",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:516222d5a455a69ed8ace3a1205f8b26ec7e0a06950e0242b53b6c026bb4ea13",
+          "code": "PE2.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "haematology referral",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fbc00272908e94bfe13438a6315f3f2c999f46edf3c64ee9ecb3b9fe4851d4f5",
+          "code": "PE26.15",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "haemoglobin electrophoresis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:99f5aab8ff84cbe5dba90fbbf075e4b8ed07f02517ad3d777374ad82e935ea99",
+          "code": "PE26.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "haemolytic anaemias",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:34a88c3dfcbc19dbd01d16f602393735145c7a14d95887aa91143dc1e2ded5a6",
+          "code": "PE26.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "haemophilia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:42ee5ad5337839e1563ccaeef1a4c60232913548eda53f77cc1cad7360938bf7",
+          "code": "PE26.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "human milk banking",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:94a796bcfaedc082c317bd3c9838e1bad39c5f201cefd5d8ebcc2cea99be1f0a",
+          "code": "PE7.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "human milk composition",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:123cf2da586401754dc9ce7f7b3d9cd28e8fb597b23486c5a1c5a790acdf64e6",
+          "code": "PE7.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "hydrocephalus",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2b42d4a3a94e1c1dd3ff2b38a6161e51955bde01e7260f719f88e5767cba0fa0",
+          "code": "PE27.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "hypothermia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c87e597451e373bcab3d63d1d411e610a9ec6fd2d1bf98545eceed92246500d7",
+          "code": "PE24.17",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "hypotonia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b409558a55832fef008e68b46f71bcc20b8b98e43f470218293cab988d636c8a",
+          "code": "PE27.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "iga vasculitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b224a71eeedccf3df25bbadcda8b19c7f0a9809982d739533ecaab687c8d34fb",
+          "code": "PE21.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "immunization assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:759f4f7711a32518934dcbfc5a0e97c7a53a1e198950d6a9ed808f1558aa76dd",
+          "code": "PE18.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "immunization records",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b1471f2dfd4391e4a36e7b867c73113e6a88f13dc75b83667d50de45870f1125",
+          "code": "PE18.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "imnci risk classification",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8a952afba06c9846fbfe7a1b8edac36a0abcdefcaed58b3dcc0bce33efcf0bd4",
+          "code": "PE16.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "imnci undernutrition referral",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4a13a0b360443a80d45c7929f798b5679eeac9a49d937d58ad8493d142834a5e",
+          "code": "PE16.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "implied consent",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:76ba8f95fe3dc82e5557331636270ea933f0fc1eb6b6f0a18fd482791435e294",
+          "code": "PE18.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "infant and young child feeding",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:79efb0722a75143250c86725986c1a3fe844f0ff531182163c9a9e791854cb47",
+          "code": "PE7.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "infantile hemiplegia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:486f01b3c43f460c6a12e19292524f5fca9703cdad8f080786463a360429a232",
+          "code": "PE27.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "infective endocarditis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6b3e9fe17ca7f5c2353096e414ca7a4a2dea2801a1830b2b208278317c4e600a",
+          "code": "MI3.2",
+          "subject": "microbiology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:b16eb94589f501a1a40363db87bc507765f6ee19e29a6749782d01436e49f338",
+          "code": "PA26.7",
+          "subject": "pathology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:b2fe5cdc8db2d5d603355b949c779be2d534906a581695f6cc1b621fd9d36d6f",
+          "code": "GM1.19",
+          "subject": "medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:bc6a679de423850937dcaa2ca7e062c446bd1717b4c5852911c8f2e7b24a77bb",
+          "code": "PE22.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "informed consent",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:36654fe0791b8c64bc8eba8ac71440cba4e6e402a0a091fd73c558b3519ddeba",
+          "code": "FM10.19",
+          "subject": "forensic-medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:a2b6c592908673bcf2c79849a2c7232e5b05b5076757259bf4242fe0dccbd84e",
+          "code": "PE24.23",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:aca6707419b7f80d4aa0cb2cb927c14b2dfe5a76e36d2971c394d937f04f376a",
+          "code": "OG35.10",
+          "subject": "obstetrics-gynaecology",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "intellectual disability",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6757250f310296f334644748dc2211ad7e7c8b8fafef5f191fad9564dd3c1315",
+          "code": "PE27.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:6a5a935c5cd83cf75e008f0d4addc8d1b3bb3c60fa5f292749d6c074796cc0df",
+          "code": "PS11.1",
+          "subject": "psychiatry",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "intraosseous access",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:78e12b78188193519394584ab1a5d692cc362de37fee15f5a0f6f3cf546d7f1f",
+          "code": "PE15.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:a9d995275c6b48ab2d1d06ba37e84fabe420483883212c9a8ed0e69dd35b6db9",
+          "code": "PE23.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "iodine and goitre control",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:898ad3f0998532b9a7c163c8e116c35ccd11ad1762d7a0662aa272f4ee7eb728",
+          "code": "PE13.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "iron",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fe82c22f87ab47d3791f51744d9dc235b5cd407219583df83a5311972dcb90ab",
+          "code": "PE13.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "iron deficiency anaemia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c84ed01fdb385527d4801e57811ec922d9560c9dc77678134120b8e9a838257e",
+          "code": "PE26.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "juvenile idiopathic arthritis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fb205db9b1ea29f70fc679f95267f4a67de5bed53d403701c95212398b94c18c",
+          "code": "PE21.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "kawasaki disease",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:7acddbdfa6a7d745e6f8c792d77b1fb0d1bbfc8928266d47b5a10c3eaf2a1261",
+          "code": "PE21.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "kerosene ingestion",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c021af730abedca198c60c76fe19baf9805b349fb8336f4073259a70bbc1fa1a",
+          "code": "PE14.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "klinefelter syndrome",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ce8bdaac79666a3aa40133eeabf4bce237aaedbf4b44ab925d58bb191fd681cb",
+          "code": "PE29.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "kub radiograph",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f1552d1d714eeeb450f3b09315869923ee502ad9943eba0dc8baf048ce3ce525",
+          "code": "PE20.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "lactation and cultural practices",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:12648d6e4bfde68c9b3d3371c2e2ab7f20debafc92d34dbab9e41135ee824bcd",
+          "code": "PE7.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "liver investigation interpretation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f1fbcb82caf72a4c78f98d41ac4b296a556f46fcb9dba6cf2cdbcf40f9143802",
+          "code": "PE23.20",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "low birth weight",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e669fc1aaa849920cbc97aead10bf1ae5ffac236593b415ac279842f89c88b65",
+          "code": "PE19.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "lower respiratory infections",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d281742f40297c83d2f5e09cef88d2ccddb76b72761dcfd9dffec61d89569d7f",
+          "code": "PE25.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "lumbar puncture",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ea9b95539ea713317897e4084b3372013d91cf431694cae45d1ad13b8ea6ed26",
+          "code": "PE27.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "malabsorption",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:0258fc0d522a8820c3a40da696208a5811784250b7cb8938897cce08d6066ce4",
+          "code": "PE23.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:0d7a22e04abe70fcd38761f0f0f1bfb1bcd5432d354fd88ef11c4c577c05c2d0",
+          "code": "PA23.7",
+          "subject": "pathology",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "malnutrition care planning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6f99ba45016864aaa4b2e3873a6321856e0b09b8bb4f65c65f94c5dfb480f4f2",
+          "code": "PE10.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "malnutrition counselling",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:00af7c0ba523493dac28a6bde8a0821b6c7302d76918f7b18d1f563efcd684e6",
+          "code": "PE10.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "maternal and child health programmes",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f59911821198349d84bc0b506543e03bd7e2f30a7bb3ad4be11bedc9247728bf",
+          "code": "PE17.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "meningitis differentiation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:91ca9222ff92580dcbd34834167f4e974484ce9ad95a817d01236171ec6a4600",
+          "code": "PE27.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "nasogastric tube insertion",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:417f0a2cfc24f3f6298aa936e53717b0b95f526dbec9ddff9844fd9554c5b138",
+          "code": "PE23.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "national anaemia control",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:22ade19a5c6309ba7a07a41c6eb3ee3a04e5f9eda270a0ae92ebf51fa8d418a5",
+          "code": "PE26.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:22cc42255333248c11c4532bf5c18e8d4cfdbe73bf19616d42bcfa764dc313d6",
+          "code": "PE13.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "national immunization programme",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:abce99daeb111c33d77aa6cb4a854b3f88bbea3cc2dd49d947621f50e7520b33",
+          "code": "PE18.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "nebulization",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:792d7b4eb7a8d8f52ad52c76a004591ea34eba89418563a6ee4e32d6b33d6e82",
+          "code": "PE28.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal hyperbilirubinaemia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4487c9512d47216b9ac7d5c1c752ac22e3bbfb58b53ae97736f0c55d67a9ee76",
+          "code": "PE19.15",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal hypocalcaemia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:85c61e0e8478cf977b5d5bdbe069105dcdade72204420a8bbb695d6ae04842c7",
+          "code": "PE19.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal hypoglycaemia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:41853af6c3fd5e6c79c6d386527ead8597d754f8c854c286b55143c3c8a42137",
+          "code": "PE19.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal hypothermia",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d6ff6e796cbf964730cb433c9113a03d52c18a74df644b135b7a38dfa193746e",
+          "code": "PE19.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal respiratory distress",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:296f059df00514e325047decc4abd5a4f3e8d328f7fb35f3625882eea3d87ef5",
+          "code": "PE19.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal resuscitation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d80b286ce7438bc25b1cb691ada9aab14abeb48441fe7aa0f1e989a08149dd6e",
+          "code": "PE19.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal seizures",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fdc6ef142e95024eb785cd4a8d3aebcf4f9e98dd38cd86d36f221aea9b187ac1",
+          "code": "PE19.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal sepsis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:829c0619ff9c76ac585c892b86caee74d3f3fbcafcb82c63eddbcf5da666feba",
+          "code": "PE19.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal surgical conditions",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:be1f46aab2f1dea65ff5aaa13b61be515efb23e4733f6cabccc05b35405faf9c",
+          "code": "PE19.16",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "neonatal thyroid screening",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:367c51ec801ff8b6cd4603811f3dcc088c77ccccf943d346184322f3caaa640a",
+          "code": "PE30.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "newborn classification and care",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:87c89e676a60afa50673d5989e09f2134d96b6c02c022a78d915b3d0b6b84d1e",
+          "code": "PE19.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "normal newborn assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:171159ab095b292cabd9bf63cec1dc2bd366ce6e5bc6dcbc76900ac1515c66f6",
+          "code": "PE19.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "nutrition assessment methods",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2b674253409097e59e950eb7e91659d1a1df18c7b98051834afce72dfd3fae25",
+          "code": "PE9.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "nutrition classification",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c1e6279be1b7ff458602d19f14eaa0f5cea9de738530111e073437483b663298",
+          "code": "PE9.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "obesity examination",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c53f926d61a6f1779c6081bfb1c04372a56d19be24f7d99d994e1b34ecd7f96e",
+          "code": "PE11.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:e8aae08408ada990811616fbafc03c035156ca3c1490dbfa5b44d7fc8015de45",
+          "code": "GM14.7",
+          "subject": "medicine",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "obesity history",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:7420ca22950910ff212852e418b217352a784777a866ba65f70908c44cff1e0f",
+          "code": "GM14.6",
+          "subject": "medicine",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:94ad0706586d50d06a795fb96aba6f5437a11883c6405fbabeddd83994a814b3",
+          "code": "PE11.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "obesity risk and prevention",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:62921c215fcc96ab2c106016dce09ee0e87d8803b15effead47f6d8b6bf99db4",
+          "code": "PE11.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "oral rehydration and adjuncts",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:456b027e034a7d7e4c2ef7bab03a67985c5c19c7e44f50fa4093e14f9ff6b272",
+          "code": "PE23.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "organomegaly examination",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:196f3610d0e9e80fcdbf03e1805b918efa1d8bc723b2e6aa226c4fc4a5a7c1df",
+          "code": "PE26.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "organophosphate poisoning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:a4a0dfb3d2da2a2e63ca3eb2ea7031325c084e78ec07e3567a9f6262c64eedb5",
+          "code": "PE14.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "oxygen administration",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:96c9b7190765b8fb4b375c380a867147574dc35173c4c11684386a1cc906f1e5",
+          "code": "PE24.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "oxygen delivery observation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:066e1ad8ced64f75faf8d2ba19fe6c93cea589dd88b857e7401440f1f57c10cc",
+          "code": "PE24.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "oxygen toxicity",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:84c4af836b619c87e91ba89ca71f6e9014f4b85e70fecd12b5a4d1a7c2dfba38",
+          "code": "PE19.17",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric acute kidney injury",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2672fc719a83107402bb05168069b25b2028eaa09ad5f063e6c94bd01bea3374",
+          "code": "PE20.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric anaemia assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e7e95d879f25c4c87a049462c7580aeaada7686db6885ea509546a72ccda3edc",
+          "code": "PE26.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric basic life support",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:afb861cbde0a90532d503f6974bd5eaa00cd4121d66614d718c2973089deaf3e",
+          "code": "PE24.21",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric cardiorespiratory arrest",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:a067e514365407603b9ec4cd78d26c18030e9ab29cb3cfc3a53eb6426daf6a5c",
+          "code": "PE24.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric chronic kidney disease",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:709e03f64571c1c2f519f36ae98b98b1051b04b87de7d63c762c2d676483e874",
+          "code": "PE20.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric diet planning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:93ace10dc3141df70bb03d1da3713ad371109f7db53678c17b3509f29d624890",
+          "code": "PE9.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric ecg",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:a693e412e4c7881503f1dd30c17c207170e07a53cae2ab4a46b78a69e432604c",
+          "code": "PE22.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric ethics",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:bb302e1cabe959ef82a84be1db93eaac5ac7ed1d3a9ddaebe78d051e013aa79b",
+          "code": "PE32.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric haematuria",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3005bb904e2d89be225d3973293a555d389e8ff408bf461b59fad6578f3a5c14",
+          "code": "PE20.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric heart failure",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:31bb1804895c02c744c0f739e29ace7042a70c0de47784509d9428bc6aea135e",
+          "code": "PE22.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric hypertension",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:9e6e17e0a8ee25accc2a6ec72e566e942b5755df54213d46b17c308a24a1ae72",
+          "code": "PE22.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric hypothyroidism",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f93bdb17e78ae9729483b05772053e650005c6f9d3e2ccf88d7759af1678ce4e",
+          "code": "PE30.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric lupus",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:1a8cff0a17f2ee509cb50f78490411545970a154a2471407edc6dbe2888f547f",
+          "code": "PE21.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric lymphoma",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:624f7dd9a7b452ff18d7a1916385beeef58cc507b1654b92384f27f973b31cd5",
+          "code": "PE26.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric parasitic infections",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:9b3151cb17d0702559c118bb3bc4ce7be0461c3004ebdb77a1e835d81e1adc91",
+          "code": "PE31.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric proteinuria",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c5b64da7d78f29e61578feb7367eee627c79898721a559ed35cf46cae68e9166",
+          "code": "PE20.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric rheumatology",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8c1b3f6e0c866a987c465bb5c592a712d67653b174ca451efbc1c4088871ea05",
+          "code": "PE21.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric shock",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b2b6c8ad6b78ddfe0b830f1c20d4297a0503d9b4f7799080466b9825d1f47525",
+          "code": "PE24.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric stridor",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f112026b7f9a20391aa4febf13c1bb6ecf59876711e705d8e715d74835994b81",
+          "code": "PE25.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric tuberculosis epidemiology",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d210e895480bc51209b996dbd43379ca94ac04192df6294f75e23b3e4a1554b4",
+          "code": "PE31.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric urinary tract infection",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:01e8ff5884a3f217c137c9850fdc47ac8574eb9733dcd3d81cd45de132816b1f",
+          "code": "PE20.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paediatric vital signs",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:27377640e68a902bb58a353ebfacd6274bc4bc10eaa50cd322520493b2dd51f7",
+          "code": "PE22.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "paracetamol poisoning",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:bda540cd7cef034351226d8f0e79429ec9b3ad92c07538bf42d492621e5d00b7",
+          "code": "PE14.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "perinatal infections",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:bd7634dfbac4fe7eeed3e765c72bbda3dbb86edba03499bafd66744e5784a1f5",
+          "code": "PE19.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "peripheral blood smear",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:24026ff7e34ad5467d13d1648f2ef909412db7f9535e030720be0333745bcc5f",
+          "code": "PE26.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "peripheral iv access",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:015f279899d62b3a960222e5b62b14385f21f50e26483666197786dc0a6dd61d",
+          "code": "PE15.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:350a73834e3f06fdd1fe33b05471c411f660444d1f0b5a663e3fbd32ad517df2",
+          "code": "AS9.1",
+          "subject": "anaesthesia",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "peripheral iv cannulation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e79b9d017642b6f71537aef31435889c2e64c31886c2f2472aefaac841ce3f37",
+          "code": "PE23.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "portal hypertension",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:55fb66ee35faa87961af9899f33c46dfd8e667979ee16bb995111236d28eeb19",
+          "code": "PA24.5",
+          "subject": "pathology",
+          "evidence": null
+        },
+        {
+          "referenceId": "nmc-2024-ref:dad2c575fa210205f7d8e9da06a5be03e3d16f5e7e0e894a3aa08b853dfc287f",
+          "code": "PE23.16",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "poststreptococcal glomerulonephritis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ae94d22fc4d2a98ff00be568b0b5821dc4ca2d1b08b73811717530e7baccbbbe",
+          "code": "PE20.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "pubertal changes",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:26a6de476add5064cda27e63d92f6b297b49e02a24bc6c332a2d34c468abeac9",
+          "code": "PE6.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "pubertal timing",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5ef16cd71fc75b8046d497ce6c30d6939352e75e12067f5e0bd61771463b592a",
+          "code": "PE30.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "pulmonary function testing",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:aa09707e78a818b5607363a6e6ea914230f4a1d1e68339cd8038e12100331aa4",
+          "code": "PE28.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "respiratory distress",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2d7f3e8ef4857713ea9c485231b5162718916c25d27b08dacaa50135c9520ced",
+          "code": "PE24.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "respiratory distress assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:04d1f0992511d62359a33f506479300b5a94182920a3e0a961ac58ad94d8f479",
+          "code": "PE24.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "safe vaccine practice",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:a21430302a06fc62f965a105ae573ac6162c42d3457fa39058be30f317c5db8b",
+          "code": "PE18.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "severe dehydration",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:390dc78699ccfa028891da9c398aafc53aced64eff4bf969e0eb0c0b40bbd900",
+          "code": "PE24.16",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "shock assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:077fffc0a57a240078f51714520c0598c25e1b195c55c41874d1aae90d70ca08",
+          "code": "PE24.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "shock fluids",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:85a091c088792cc88ba1d27f962313aa982fe8a083892a9817356fa4a73603a8",
+          "code": "PE24.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "short stature",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:57214add5ca08e6417f9485d56b0f66fcae16c998978cc23b3b7a26fa48886ca",
+          "code": "PE2.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe2-pe4.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "sick neonate risk",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f4ca17dc359e33d8e02eeb4c5dd3da7785659b695bcc1fcf50cb63dc5b660cf4",
+          "code": "PE16.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "skin-to-skin warmth",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d6ee30a2bb88b674aa4b61f889c023d51a2f0eb2cdd6bc575165c650db1ee2b8",
+          "code": "PE24.18",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "sodium and potassium disorders",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:2ca61dbb461997143af04d4f5ab8f5933baa1269f71b9801394e69e370f28199",
+          "code": "PE15.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "special immunization situations",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:6d285e0a1516219d8a44f4a687c2fde7ad7f12e3529e5da363592d4538e2a27e",
+          "code": "PE18.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "splenectomy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8f470a58ba764b8cf5d08e7342b76eb5647494cd044fa246829572105909f38f",
+          "code": "PE26.17",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "status epilepticus",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:803f2b839ae05b6759dbadcecbe7e196200c3db93ecc17fd494516ed3bd34222",
+          "code": "PE24.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:8e512d417781eb91189b65a117282e04083c0bb4dc7344fd14e47b54e15deed5",
+          "code": "PE27.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tantrums and pica",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5cc3f95892ba91bda161ca18c80cd73367dd89c853d5d2026f4b5a6673c71494",
+          "code": "PE5.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "temperature assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:668879cce765766abfe4d3b270e1753c3b0de5209da271a67ffb2fb9b3f7f4d0",
+          "code": "PE24.20",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "therapeutic diets",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:29cb97767750a0ea030556ae16b40855d68855e492ff8c42dd69d0ca8b963742",
+          "code": "PE10.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe8-pe11.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "thermal environment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:55130060de3634eb53bd28aa17665be746a8eee540e4f9d81ce69c34fd190f62",
+          "code": "PE24.19",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "thrombocytopenia and itp",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d76927e1a3106604246996db0a9ba0f3be3303a1c0ef4a25981d92f8cabc0eb8",
+          "code": "PE26.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe24-6-pe26-16.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "trisomy 21 karyotype",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:0b0bb2940d51f61c2bc10ce4cfaebb39a65f2b4a14b94873e04329a81fe5161f",
+          "code": "PE29.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculosis blood tests",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:bcf67b15bde349b41b3b5ff0a50ee6874a0df4c0940500ec1f5e79c33d63aba1",
+          "code": "PE31.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculosis laboratory methods",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:93bc64f72217cf815baa0e633ba1493f3f55b2c6e1cfa963a0dc5bee8f781dab",
+          "code": "PE31.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculosis prevention programme",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:fde113a5dfc8b27109cc26d394326112d427445385b7c5693856e9c7d9191aa9",
+          "code": "PE31.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculosis specimens",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:616be8b2e57bf45e92791ad8e75effc487060720f159d81afbfc0b1ff9d48906",
+          "code": "PE31.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculosis treatment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e2cb1f9dbf5321408173c0f536cd683fbe73e09d4b71566b585e8d1d02ed10d7",
+          "code": "PE31.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "tuberculous meningitis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8ba97330a3ddf45fe2f556f4849ee1a61e1fdb85c4baad49ea12b21972f7bb54",
+          "code": "PE27.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "turner syndrome",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d5d8c43d8442d27b716b79dbaeb876e33ca0730ffd66070c9de0834b5472233d",
+          "code": "PE29.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "uip administration observation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d5ff8f447d509d0297c2484b5987db8817a8d025cfffc537c7e2bdf4341a3ae7",
+          "code": "PE18.11",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "unconscious child",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:13531702db0c47a0875ecd23021646b6cf02e0420049f053b8f8455306fb65f8",
+          "code": "PE24.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "upper gi endoscopy",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:8eb0a0d3038a63897f8e34b68846c93ee830d5bb37a151889006daf77e9649c3",
+          "code": "PE23.21",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "urinalysis",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:5e7e1a04ec54b3e4c1c242e2804dc7aef2467a82945543b9cca538f688925f2f",
+          "code": "PE20.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        },
+        {
+          "referenceId": "nmc-2024-ref:f65a5ef513201e7c8268969cb17a0cb1c57909830abd027ae825e77e0081e1ba",
+          "code": "BC14.3",
+          "subject": "biochemistry",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "nameKey": "vaccine administration",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ba6d458678e9e7e86cdac19e5fac5b24e02fe9b7226ae303368c5c8d6dcd7e1b",
+          "code": "PE18.12",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vaccine indications",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f8d4fa80c2e5a3d4d486579425055d8be0d4923b7fd11307b687ad8d353f3b78",
+          "code": "PE18.14",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vaccine profiles",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:84f132611966526d21531b55906b65d2af1370809da416a18b6029f40e5b5c75",
+          "code": "PE18.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vaccine storage observation",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ec62b914a5138ec66aa8242baf37b20503b6189ca5cdbe192dea6ea24c4b49d3",
+          "code": "PE18.9",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vaccine-preventable disease epidemiology",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:155ff53e14966175824c2de0e5482edfac92e6ca05266184caa72c7fbd71bb92",
+          "code": "PE18.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vector-borne febrile illness",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:0f85cd548b357a706c90452c78b61f86cd1f0a2b81c55f4eebab59105bbc32a4",
+          "code": "PE31.13",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "viral childhood illnesses",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:b5f52f5fcef7241964f67ee663143135891a4ac76ee58bdd62155fb9d8728eac",
+          "code": "PE31.10",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe26-17-pe32.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin a deficiency and excess",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:c05c124ac71e9ac3c27e3c4b7d7dcc13a3b6c928296a851b2ba48a3fdde457e9",
+          "code": "PE12.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin a physiology",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:f88a93b943fabbbb5578720c43e8fd75e1e1a15653eb39a41eb4f55a9e5963ff",
+          "code": "PE12.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin c",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:3a3899eac7eaa8c5606b718f2f5dc28cc39511f9db507b5235bec2ffb4456661",
+          "code": "PE12.8",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin d disorders",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:53996e9dc340b27076fae40c0d4bde3392ceeffbb342960152cc7bba11212049",
+          "code": "PE12.3",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin e deficiency",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:e566838cdebcdba19f826d9deda1f9bbc3f1555aaa63a676e1fae630b591feb4",
+          "code": "PE12.4",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin k deficiency",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:833a138d444d9db1941d373c0256b2d097226f98f59b3f4acbd6bd7d10a0dad7",
+          "code": "PE12.6",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin k deficiency bleeding",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4adf809f37b27236fff8eed475b0ad0f8ef1b99056630d1514b34531edc98950",
+          "code": "PE19.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vitamin k physiology",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:340b7160234c4a7683583ec3d217578550e35cd04fcef364766163b78433d82e",
+          "code": "PE12.5",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe12-pe14.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "vomiting",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:ec51d1ddd62af2e8afdea5e3a47bfc2f3fa9a8029b248b4be15ad78ea3db1f7c",
+          "code": "PE23.1",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe21-3-pe24-5.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "wilms tumour",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:d795be1b2f83393ab548103a747281f957fc118adc3f2edca6aaa916aa4241b0",
+          "code": "PE20.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe18-3-pe21-2.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "world breastfeeding week",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:581156a68d4d1f286932eca446404fa689581c1dd93ca6ca6910bd5307308015",
+          "code": "PE7.7",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe5-pe7.json"
+        }
+      ]
+    },
+    {
+      "nameKey": "young infant imnci assessment",
+      "appearances": [
+        {
+          "referenceId": "nmc-2024-ref:4240d18e1996fc5a0278f42dd8f95dd4465a212ba3320ec9a75100d4e9c8eac8",
+          "code": "PE16.2",
+          "subject": "pediatrics",
+          "evidence": "docs/evidence/2026-11-13-nmc-paediatrics-source-scope-review-pe15-pe18-2.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,360 @@
+## NMC owner decisions recorded — 2026-11-16T04:55Z
+
+- Writer: Claude, draft PR #421 from remote head `eb9d6a0fa6c777d498eeaf63dd83b40482c2aa34`. Ownership released after remote readback.
+- Owner approval: "Ok do necessary steps yourself i approve you" (09:13 IST). Recorded as owner editorial authority; no faculty or clinical review.
+- Wrote `docs/evidence/2026-11-16-nmc-owner-decisions.json` (204 decisions, one per ledger record) and `tests/nmc-owner-decisions.test.js`; DECISIONS.md entry added. Ledger and evidence packets unchanged.
+- Accepted: 170 objective revisions with `nmc-objrev:` IDs (154 earlier proposals, 9 session-hold proposals, 7 mode corrections); 7 search aliases; 2 grouping labels (SU27 widened to "Vascular and lymphatic disorders"); 15 spinal-cord links attested by owner; 7 printed totals annotated. Declined: optional PA22.4/22.5 practical mode. 6 instruction-style proposals (PE11.4, GM26.22, GM26.3, GM28.8, GM28.15, GM27.9) rewritten as final objectives before acceptance. 7 practical modes at KH/K carry documented exceptions.
+- Not done (outside the approval): merge of PR #421, production/DB writes, learner publication, Admin-console attestation receipts.
+
+---
+
+## NMC printed-count audit and held-proposal reworks — 2026-11-16T04:30Z
+
+- Writer: Claude, draft PR #421 from remote head `ac8e5c3844fee3b38b789146d12577c6e197736d`. Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-printed-count-audit.json`: heading totals vs per-topic printed counts vs table rows for 8 subjects. Medicine 525/531/532 (GM8.9 never printed; Topic 9 and 27 printed counts wrong; 3 repeated codes); Surgery 133/122/132 (Topics 24, 27 unheaded; SU26.2 never printed; SU27.1 under Topic 26); OP 60/59/59; OG 141/137+5/142; ENT 63/61/63; OR 40/39/40; Radiology consistent. Gaps confirmed on rendered pp.295, 409. No rows created or removed.
+- Added 6 verified `printed-total-discrepancy` records to the exception ledger (now 204 records).
+- Wrote `docs/evidence/2026-11-16-nmc-held-proposal-reworks.json`: reworked drafts for the 5 held earlier proposals (GM26.5, GM6.15, GM16.10, GM13.16, GM3.16), attached to their ledger records; all remain held.
+- Private ledger v1.1 with official wording saved to Drive (`1sM5AncXlHTvdWELXf4TGgvhkV6xbE3Ec`, 564,025 bytes, size-verified).
+- Next: owner/faculty decisions only (173 proposed, 21 held incl. 5 reworked).
+
+---
+
+## NMC exception ledger — 2026-11-16T04:10Z
+
+- Writer: Claude, draft PR #421 from remote head `6fcde1902bea5011fa8850fd824a9349456938fb` (open, draft, base #415 branch; main `55bae73` unchanged). Ownership released after remote readback.
+- Owner instruction: treat 9 + 7 + 7 + 2 + 15 + 153 items and the Paediatrics total as a historical exception inventory; no modification, merge or publication.
+- Wrote `docs/evidence/2026-11-16-nmc-exception-ledger.json` (198 records, stable `nmc-exc:` IDs; original value, proposed value, pinned-PDF evidence, disposition, reason, reviewer, date, remaining action), `docs/NMC_EXCEPTION_LEDGER.md` and `tests/nmc-exception-ledger.test.js`. Private copy with official wording saved to Drive (`1EJ6WWVno8xSSmDiAjax5zdyJzCE2h20e`, size-verified).
+- Dispositions: verified 3 (PA22.4, PA22.5, Paediatrics total); superseded 1 (PY11.6); **held 21** (9 session, 7 exception mode, 5 earlier proposals: GM3.16, GM26.5, GM16.10, GM6.15, GM13.16); proposed 173 (149 earlier proposals, 15 links, 7 aliases, 2 labels). Duplicates 0; not found 0.
+- 154 earlier holds (153 proposals + GM3.16) checked in one auditable batch (official-term coverage 0.30 → 0.77, out-of-row terms, mode vs PDF level); all 44 flagged items read individually.
+- **Paediatrics 406 vs 253 resolved as a source inconsistency:** 253 by tables, text-layer code tokens and catalogue; the 32 printed per-topic counts sum to 253 and match row-by-topic (Topic 21 printed "(050"). Heading "Topics:35, Competencies: 406" confirmed on rendered p.329. No rows created.
+- Reviewer for all records: AI editorial check; no human or faculty review. Nothing accepted.
+- Next: owner/faculty decisions on 173 proposed items; rework the 5 held proposals; page-level review of other printed-total leads (medicine, surgery, OP, OG, ENT, OR).
+
+---
+
+## NMC official-source ingestion — 2026-11-16T03:40Z
+
+- Writer: Claude, draft PR #421 from remote head `3ffbbff49c76eb30923c40aab6b7100da92540fb`. Ownership released after remote readback.
+- Owner instruction: full source-grounded ingestion of NMC CBME 2024 (guidelines + Volumes I–III). Owner chose private Drive for full text; repo gets metadata only (DECISIONS entry added).
+- Manifest: the uploaded PDF (SHA `aa601690…`, pinned) bundles all four documents — guidelines PDF 1–74, Volume I 75–241, Volume II 242–370, Volume III 371–467.
+- PyMuPDF 1.26.6 could not be installed (installs blocked). pdfplumber reproduced all 17 PyMuPDF-pinned bindings and was used; tolerance tuned (text_x_tolerance 1.5) to stop word gluing.
+- **2,634 rows extracted; 2,634/2,634 match the catalogue one-to-one; 399 topic headings match; 0 recorded-level conflicts.** 2,613 hash-verified (27 partial body), 18 content-only, 3 without a repo row box. 2,438 rows unflagged.
+- Duplicates in source: GM9.8, GM14.1, GM14.2 (printed twice, identical). Source-version conflicts: printed totals vs table rows differ for medicine (525/532), pediatrics (406/253, 35 vs 32 topics), surgery (133/132, 30 vs 28 topics), ophthalmology (60/59), OG (141/142).
+- Blank source cells confirmed on rendered pages (GM 11.5; PE28.2–PE29.1 teaching method). Nonstandard printed values flagged (e.g. GM13.11 core "K").
+- Added `data/nmc-competency-source-metadata.json`, `docs/evidence/2026-11-16-nmc-official-source-manifest.json`, `docs/evidence/2026-11-16-nmc-competency-reconciliation.json`, `docs/NMC_SOURCE_INGESTION.md`, `ops/nmc/extract_competency_tables.py`, `tests/nmc-source-ingestion.test.js`.
+- Drive: 6 package files plus the dataset in three volume parts saved and size-verified. Original PDF uploaded by the owner (Drive `17olT4BAaxMoIrYDmbHklrUbw1iFF626H`; name and 4,113,924-byte size match; Drive checksum not available). Package complete.
+- Next: owner choice on the two unsaved files; owner/faculty decisions on existing holds; decide treatment of printed-total conflicts.
+
+---
+
+## NMC pinned-PDF verification — 2026-11-16T03:25Z
+
+- Writer: Claude, draft PR #421 from remote head `3d65100c7711a57b3aea36c763d54a3bb01e995f`. Ownership released after remote readback.
+- The owner uploaded the official PDF. **SHA-256 `aa601690…ae23c` matches the pinned source** (4,113,924 bytes, 467 pages, ModDate 2024-09-12). Stored outside the repo; no source prose committed.
+- PyMuPDF 1.26.6 (pinned by the repo verifiers) is not installed and installs are blocked; pdfplumber with the repo `raw_cell` method reproduced all 17 pinned bindings, so it was used.
+- Wrote `docs/evidence/2026-11-16-nmc-pinned-pdf-verification.json`:
+  - Session review rows: **1,396/1,402 row hashes reproduced**; 6 confirmed by content (AN40.1, MI1.1, MI1.3, MI1.6, MI1.7, MI1.12). Recorded domain/level agree with the PDF except the three holds below.
+  - **PY11.6 hold withdrawn**: PDF prints domain "K S", level **P**; the practical draft is consistent. The web reader had relayed the level wrongly; the knowledge-mode proposal is withdrawn.
+  - **PA22.4/PA22.5 holds resolved**: domain KS, level KH, DOAP, skill assessment, 4 to certify; knowledge draft follows the level rule; practical mode kept as an optional proposal.
+  - **9 session holds confirmed** by PDF text: PA2.2, PA8.5, FM1.5, FM14.13, OG30.2, BC14.18, OR2.16 (continues on the next page with femur/tibia fractures and child abuse), GM10.15, GM24.1.
+  - 16 Forensic Medicine KH rows with practical drafts (FM2.26–2.28, FM14.4–14.20 except FM14.13 and knowledge rows) now carry documented mode-exception notes.
+  - Source exceptions: 18/18 rows reproduced; 7 mode holds confirmed at KH; OR2.9 printed form corrected to "OR2. 2.9".
+  - Canonical identity rows: 8/8 reproduced; AN57.5 full text confirms its eight conditions; 15 links still aligned.
+  - Earlier 154 holds: 153 row hashes reproduced, AN81.2 by content; their text-layer findings now rest on verified bytes.
+- Session totals now **1,393 aligned, 9 held**. Audit still 2,607/2,607; tests 1,666/1,666; check passed.
+- Next: owner/faculty decisions only — 9 session holds, 7 exception mode holds, 7 aliases, 2 heading labels, 15 identity links, 153 earlier proposals; then objectives for PY10.7/PY10.9 uncovered elements.
+
+---
+
+## NMC canonical identity source-scope check — 2026-11-16T03:05Z
+
+- Writer: Claude, draft PR #421 from remote head `a8eb1c42c821595c96a440e7488ad74b5ba8c3d3`. Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-canonical-identity-source-scope-check.json` for the **12 accepted-private identities** and their **15 proposed objective links** (AN57.1–AN57.5, PY10.7, PY10.9, PY10.10).
+- All 12 receipts join to the candidates and the link plan; candidate references match plan links exactly.
+- **15/15 links scope-aligned as partial tasks; 0 held.** AN57.1 (K/S SH) carries the only practical task (specimen identification); all others are KH reasoning tasks.
+- Coverage: all 8 conditions listed in AN57.5 have an identity (7 here plus the retained Brown-Séquard identity `C-101d60e987915f6fa8175c469a265f79`), which also carries PY10.10 hemisection. Uncovered row elements, not holds: PY10.7 somatic sensations and applied sensory aspects; PY10.9 UMN vs LMN lesion differences.
+- Limits: the official PDF could not be downloaded here (workspace network allowlist refused nmc.org.in; no copy in Drive), so rows were read through the web reader; AN57.5 full text was relayed as a condition list, not quoted. No mapping accepted.
+- Next: owner/admin attestation of the 15 links; draft objectives for the PY10.7 and PY10.9 uncovered elements.
+
+---
+
+## NMC source-exception official check — 2026-11-16T02:45Z
+
+- Writer: Claude, draft PR #421 from remote head `6a6a6da899f16eeef7a18732a3c5df53c605bdac` (remote re-verified after a pause; main still `55bae73`). Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-source-exception-official-check.json` covering the **18 editorial source exceptions** in `2026-11-13-nmc-source-exception-current-branch-checkpoint.json`. The 3 official dispositions (PY9.1, PE6.4, PS9.2) are unchanged.
+- **Aliases (7):** each printed form and its neighbours read in the official text — "14.1" (first BC Topic 14 row), "PA.29.1" (PA28.6→PA29.2), "MI 8." (MI8.2→MI8.4), "FM2:12" (FM2.11→FM2.13), "PS 2.1*" (PS1.3→PS3.1), "OR 2.2.9" (OR2.8→OR2.10), "ASS.4" (AS5.3→AS5.5). Each candidate is the only gap in its sequence: **supported, not accepted**.
+- **Surgery headings (11):** absence of Topic 24 and Topic 27 headings confirmed. "Pancreatic disorders" fits SU24; the SU27 group includes venous and lymphatic rows, so "Vascular and lymphatic disorders" would describe it more completely. Labels remain proposals.
+- **Draft-task scope (18):** 11 aligned; **7 held for mode** — SU24.3, SU27.1, SU27.4, SU27.6, SU27.7, OR2.9, AS5.4 are describe/discuss rows at KH with practical drafts; proposed mode is knowledge. Scope matches on all 18.
+- Correction: PY10.10 is an accepted-private canonical identity candidate (spinal cord transection patterns), not a source exception. Physiology packet note and two earlier handoff lines fixed; audit input hash refreshed, counts unchanged (2,607/2,607).
+- Next: owner decisions on the 7 aliases and 2 heading labels and the 12 + 7 pending holds; then the 12 canonical identity candidates.
+
+---
+
+## NMC session-hold correction proposals — 2026-11-16T01:55Z
+
+- Writer: Claude, draft PR #421 from remote head `1bcfc3a51a0261a51cf7cb04feea72265a9887ea`. Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-session-holds-correction-proposals.json`: one source-bound proposed task for each of the **12 holds** raised by this session's review packets (SU5.2 withdrawn: it was held in error — its draft is already practical, matching official C/SH; the Surgery packet is corrected to 116 aligned), in the same format as the 2026-11-13 ten-hold proposals. **0 accepted**; all 12 holds stay open; original draft packets unchanged.
+- Scope proposals (9): PA2.2 adds etiology; PA8.5 narrows to definition and pathogenesis; FM1.5 adds conduct money, witness types, court questions and witness-box conduct; FM14.13 restores the sexual-offence accused examination with trace evidence; OG30.2 adds management; BC14.18 lists all eleven techniques; OR2.16 adds leg fractures and non-accidental injury recognition; GM10.15 replaces sampling with ABG indications and interpretation; GM24.1 adds caloric-requirement calculation.
+- Mode proposals (3), each with second-source corroboration from a university reproduction of the NMC table: PA22.4 and PA22.5 to practical (domain "KS", DOAP, skill assessment, 4 to certify); PY11.6 to knowledge (same garbled "K S P Y" cells, but "Discuss", written/viva only, no certification).
+- Acceptance still requires a rendered-page check of each official row and an explicit owner or faculty decision recorded as a versioned objective revision. The handoff audit is unaffected (2,607/2,607 linked).
+- Next: owner review of the 12 proposals; then the original 154 holds, the source-exception track and the canonical candidates.
+
+---
+
+## NMC Foundation subject-wide source-scope review complete (2,607/2,607 linked) — 2026-11-16T01:40Z
+
+- Writer: Claude, draft PR #421 from remote head `ed839e0aa8b0f67e130ef08c9ca0e74d23495be2`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Final 14 Anatomy/Medicine references outside the original queue checked against the official NMC rows: **12 scope-aligned, 2 held** — `GM10.15` (official row is ABG indications and data interpretation; draft is sampling technique) and `GM24.1` (official row includes caloric-requirement calculation in illness; draft omits it). Historical provenance pointers from `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json` are carried on each row.
+- **Audit: 2,607 of 2,607 indexed references linked to selected review evidence, 0 pending; `allSubjectsReviewed: true`.** This is editorial review coverage of the names-only index, not clinical, canonical or rights acceptance, and not full NMC curriculum coverage (source exceptions are a separate track).
+- This session's 19 packets (`docs/evidence/2026-11-16-nmc-*-source-scope-review-*.json`) reviewed **1,402** references: **1,389 scope-aligned, 13 held**. New holds: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16, GM10.15, GM24.1. They are recorded in the packets only; the original 154-reference hold inventory is unchanged.
+- Source exceptions confirmed during the review and left in that track: SU24.1–SU24.3, SU27.1–SU27.8, PY9.1, BC14.1 ("14.1"), MI8.3 ("MI 8."), AS5.4 ("ASS.4"), OR2.9 ("OR 2.2.9"), PS2.1 and PS9.2. (PY10.10, listed here earlier, is a canonical identity candidate, not a source exception.)
+- Changed: new `2026-11-16-nmc-anatomy-medicine-source-scope-review-fourteen.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits for every 2026-11-16 packet: official text read through a web reader that quotes short rows and restates long ones; PDF bytes, the pinned SHA-256, source-body hashes, rendered pages and table-cell alignment were not verified; identity of the fetched file with the pinned PDF is assumed from title and date.
+- Next, in order: (1) resolve the 13 new holds on rendered official pages; (2) the original 154 holds and 153 correction proposals; (3) the 21-entry source-exception track, including the malformed codes above; (4) the 12 accepted-private canonical identity candidates. PR #421 stays draft; no merge, deployment or publication.
+
+---
+
+## NMC Radiology and Psychiatry source-scope reviews complete — 2026-11-16T01:25Z
+
+- Writer: Claude, draft PR #421 from remote head `cc721ff220a324f445c4b9885f592e09c0bd42a3`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Radiology: all **21** RD references (RD1.1–RD7.6) **scope-aligned, 0 held**; RD5.1, RD5.3 and RD5.4 print "P" in the level position and were treated as performs.
+- Psychiatry: all **14** pending PS references (PS1.1–PS13.1, PS11.1 already reviewed) **scope-aligned, 0 held**; one documented mode exception (PS4.1 diagnose and manage schizophrenia, S,K at KH). PS2.1 (printed with an asterisk) and PS9.2 are in the official table but already sit in the source-exception track. PS9.1 note: section retitled by the 10 Oct 2024 NMC clarification; rendered-page check advised.
+- Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,593 of 2,607 linked, 14 pending** — exactly the 14 Anatomy/Medicine references outside the original queue (AN25.3, AN29.1, AN29.4, AN40.1, AN47.13, AN80.6, GM1.2, GM2.22, GM10.6, GM10.15, GM11.3, GM11.23, GM23.7, GM24.1). Their provenance links exist in `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json`; official-source scope review is the last remaining step.
+- Changed: new `2026-11-16-nmc-radiology-source-scope-review-rd1-rd7.json` and `2026-11-16-nmc-psychiatry-source-scope-review-ps1-ps13.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: official-source scope review of the final 14. Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16.
+
+---
+
+## NMC Orthopaedics source-scope review complete — 2026-11-16T01:15Z
+
+- Writer: Claude, draft PR #421 from remote head `785f352ae2d3af9f2e4f569e01518334d374b2d3`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **38** OR references that lacked selected review evidence (OR1.1–OR14.4) against the official NMC 12-09-2024 CBME text: **37 scope-aligned, 1 held** — `OR2.16` (official paediatric-injury row also covers femoral, tibial and leg fractures and non-accidental injury/child abuse; draft omits them). One documented mode exception (OR11.1 level printed "K/H", row asks to demonstrate splints). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints OR2.9 as "OR 2.2.9"; OR2.9 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,558 of 2,607 linked, 49 pending**. Remaining: Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-orthopaedics-source-scope-review-or1-or14.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Radiology (21). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16.
+
+---
+
+## NMC Dermatology source-scope review complete (48/48 linked) — 2026-11-16T01:05Z
+
+- Writer: Claude, draft PR #421 from remote head `06deea76e3c85b7d9e5dc77b51c12574fc2447ba`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **48** DR references (DR1.1–DR15.3) against the official NMC 12-09-2024 CBME text: **48 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,520 of 2,607 linked, 87 pending**. Remaining: Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-dermatology-source-scope-review-dr1-dr15.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Orthopaedics (38). Open holds from this session unchanged (10).
+
+---
+
+## NMC Anaesthesia source-scope review complete — 2026-11-16T00:55Z
+
+- Writer: Claude, draft PR #421 from remote head `4cbb0a95b823aeef394e8e4ca581cbf4d5d4674d`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **50** AS references that lacked selected review evidence (AS1.1–AS11.6) against the official NMC 12-09-2024 CBME text: **50 scope-aligned, 0 held**. Two documented mode exceptions (AS9.2 central access and AS11.1 oxygen device setup, both coded KH but asking for demonstration). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints AS5.4 as "ASS.4"; AS5.4 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,472 of 2,607 linked, 135 pending**. Remaining: Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-anaesthesia-source-scope-review-as1-as11.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Dermatology (48). Open holds from this session unchanged (10).
+
+---
+
+## NMC Ophthalmology source-scope review complete (59/59 linked) — 2026-11-16T00:45Z
+
+- Writer: Claude, draft PR #421 from remote head `4721c5872b6fa6a9837af54d72b37d56fe36e9b5`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **59** OP references (OP1.1–OP10.7) against the official NMC 12-09-2024 CBME text: **59 scope-aligned, 0 held**. One documented mode exception (OP4.9 demonstrate row coded K/KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Observation: OP4.8 and OP4.9 domain/level cells look swapped, and OP7.3 (describe) reads S/SH; recheck on the rendered page.
+- Audit now: **2,422 of 2,607 linked, 185 pending**. Remaining: Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-ophthalmology-source-scope-review-op1-op10.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Anaesthesia (50). Open holds from this session unchanged (10).
+
+---
+
+## NMC ENT source-scope review complete — 2026-11-16T00:35Z
+
+- Writer: Claude, draft PR #421 from remote head `4d0e2c9cc7bad824b660bea0317d92a05f2a0341`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **62** EN references that lacked selected review evidence (EN1.1–EN4.46) against the official NMC 12-09-2024 CBME text: **62 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,363 of 2,607 linked, 244 pending**. Remaining: Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-ent-source-scope-review-en1-en4.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Ophthalmology (59). Open holds from this session unchanged (10).
+
+---
+
+## NMC Microbiology source-scope review complete — 2026-11-16T00:25Z
+
+- Writer: Claude, draft PR #421 from remote head `51067d2dc892275a0c09d53465d35820799e1b5c`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **69** MI references that lacked selected review evidence (MI1.1–MI11.3) against the official NMC 12-09-2024 CBME text: **69 scope-aligned, 0 held**. Draft mode matches the official level on every row. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints MI8.3 as "MI 8." (digit missing); MI8.3 is absent from the index, consistent with a malformed-token source exception. Not reviewed here.
+- Audit now: **2,301 of 2,607 linked, 306 pending**. Remaining: ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-microbiology-source-scope-review-mi1-mi11.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: ENT (62). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18.
+
+---
+
+## NMC Biochemistry source-scope review complete — 2026-11-16T00:15Z
+
+- Writer: Claude, draft PR #421 from remote head `ccc99f4880e61f9fc0b8658591ce29dde8e36c18`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **82** BC references that lacked selected review evidence (BC1.1–BC14.24) against the official NMC 12-09-2024 CBME text: **81 scope-aligned, 1 held** — `BC14.18` (official row lists eleven lab techniques to observe; draft names three). One documented mode exception (BC8.4 dietary advice at KH, practical draft). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The official text prints the first Topic 14 code as "14.1" without the BC prefix; BC14.1 is absent from the index and appears in the source-exception records. Not reviewed here.
+- Audit now: **2,232 of 2,607 linked, 375 pending**. Remaining: Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, Psychiatry 14, Medicine 8, Anatomy 6.
+- Changed: new `docs/evidence/2026-11-16-nmc-biochemistry-source-scope-review-bc1-bc14.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Microbiology (69). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18.
+
+---
+
+## NMC Pharmacology source-scope review complete (92/92 linked) — 2026-11-16T00:05Z
+
+- Writer: Claude, draft PR #421 from remote head `cf0791e2d66bc1d947b1cde4547ad1db3df61b27`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **92** PH references (PH1.1–PH10.17) against the official NMC 12-09-2024 CBME text: **92 scope-aligned, 0 held**. Draft mode matches the official level on every row (practical when level contains SH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Audit now: **2,150 of 2,607 linked, 457 pending**. Remaining: Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48, Orthopaedics 38, Radiology 21, plus small residues.
+- Changed: new `docs/evidence/2026-11-16-nmc-pharmacology-source-scope-review-ph1-ph10.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below. Drug names, regimens and programme guidance not checked for currency.
+- Next: Biochemistry (82). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2.
+
+---
+
+## NMC Surgery source-scope review complete — 2026-11-15T23:55Z
+
+- Writer: Claude, draft PR #421 from remote head `f7d4eb7abb5ce9e34220d25eee10f7097c728b7d`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **116** SU references that lacked selected review evidence (SU1.1–SU30.6) against the official NMC 12-09-2024 CBME text: **115 scope-aligned, 1 held** — `SU5.2` (official row is a history-taking communication skill at SH; draft scope matches but is tagged knowledge mode). Two documented mode exceptions (SU4.1 history-and-examination row at KH; SU10.3 observe/assist at KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- The reader found SU24.1–SU24.3 and SU27.1–SU27.8 without topic headings; these are exactly the 11 Surgery heading exceptions in `2026-11-13-nmc-source-exception-current-branch-checkpoint.json` and stay in that track. No SU26.2 appears in the official table.
+- Audit now: **2,058 of 2,607 linked, 549 pending**. Largest remaining: Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59, Anaesthesia 50, Dermatology 48.
+- Changed: new `docs/evidence/2026-11-16-nmc-surgery-source-scope-review-su1-su30.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Pharmacology (92). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2.
+
+---
+
+## NMC Physiology source-scope review complete — 2026-11-15T23:40Z
+
+- Writer: Claude, draft PR #421 from remote head `30da0fda37e5a9897e1977721f1d5fed522bee70`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **131** PY references that lacked selected review evidence (PY1.1–PY12.10) against the official NMC 12-09-2024 CBME text: **130 scope-aligned, 1 held** — `PY11.6` (official row cells garbled as "K S P Y"; level unclear, draft mode practical; scope matches). Draft mode matches the official level on all other rows. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- PY9.1 and PY10.10 are outside this review. PY9.1 is an official-replacement source exception; PY10.10 is an accepted-private canonical identity candidate (corrected 2026-11-16).
+- Audit now: **1,942 of 2,607 linked, 665 pending**. Largest remaining: Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59.
+- Changed: new `docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below.
+- Next: Surgery (116). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6.
+
+---
+
+## NMC Community Medicine source-scope review complete (136/136 linked) — 2026-11-15T23:20Z
+
+- Writer: Claude, draft PR #421 from remote head `47fdd50424880738d367584c96789dd4954a5aff`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **135** CM references that lacked selected review evidence (CM1.1–CM20.4) against the official NMC 12-09-2024 CBME text: **135 scope-aligned, 0 held**. Draft mode matches the official level on all rows (one documented exception, CM7.9 "describe and demonstrate" at S/KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Observations, not acted on: CM9.5 draft reframes "population control" as voluntary, rights-based approaches (framing noted); official CM10.5 reads "GMNCI" (likely IMNCI); topic headers for Topics 6 and 7 state one certifiable competency while CM6.6 and CM7.4 each show 5.
+- Audit now: **1,811 of 2,607 linked, 796 pending**; CM 136/136. Largest remaining: Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62.
+- Changed: new `docs/evidence/2026-11-16-nmc-community-medicine-source-scope-review-cm1-cm20.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below. Programme and policy names not checked for currency.
+- Next: Physiology (131). Open holds from this session unchanged: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2.
+
+---
+
+## NMC Obstetrics & Gynaecology source-scope review complete (142/142 linked) — 2026-11-15T23:05Z
+
+- Writer: Claude, draft PR #421 from remote head `67f809377945c995688ee488aef5f8501512e79a`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **141** OG references that lacked selected review evidence (OG1.1–OG38.4) against the official NMC 12-09-2024 CBME text: **140 scope-aligned, 1 held** — `OG30.2` (official row includes management of hyperandrogenism; draft omits it). Draft mode matches the official level on all rows (practical when level contains SH or P; one documented exception, OG19.3 observe/assist at KH). Zero accepted corrections or mappings; original 154-hold inventory unchanged.
+- Source observations, not acted on: official OG16.4 repeats the IUGR text of OG12.11, and official OG26.2 duplicates OG26.1. Drafts follow the official rows.
+- Audit now: **1,676 of 2,607 linked, 931 pending**; OG 142/142. Largest remaining: Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69.
+- Changed: new `docs/evidence/2026-11-16-nmc-obgyn-source-scope-review-og1-og38.json`; audit input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
+- Limits: as in the entries below; additionally the reader reported that Level and H/P columns are not cleanly separated for some OG rows. Programme and guideline names not checked for currency.
+- Next: Community Medicine (135). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2.
+
+---
+
+## NMC Forensic Medicine source-scope review complete (157/157 linked) — 2026-11-15T22:45Z
+
+- Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `08a82c890c416fbb9d080db176850333840ac401`. Parent #415 and main unchanged. Ownership released after remote readback.
+- Reviewed all **156** Forensic Medicine references that lacked selected review evidence (FM1.1–FM14.20) against the official NMC 12-09-2024 CBME document text: **154 scope-aligned, 2 held**. Held: `FM1.5` (conduct money, types of witnesses, court questions and witness-box conduct absent from draft) and `FM14.13` (official row is the sexual-offence accused examination with trace evidence; draft is a generic accused examination). Draft mode matches the official domain on all 156 rows. Zero accepted corrections or mappings; the 154-reference original hold inventory is unchanged.
+- Audit now: **1,535 of 2,607 references linked, 1,072 pending**; Forensic Medicine 157/157, Pathology 181/181. Largest remaining: Obstetrics/Gynaecology 141, Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92, Biochemistry 82.
+- Changed: new `docs/evidence/2026-11-16-nmc-forensic-medicine-source-scope-review-fm1-fm14.json`; the audit packet pattern now matches any `2026-11-16-nmc-*-source-scope-review-*.json`; input head updated; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins for 156 rows; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes (13 services / 254 locations).
+- Limits: same as the Pathology entry below — official text read through a web reader that quotes short rows and restates long ones; PDF bytes, pinned SHA-256, source-body hashes, rendered pages and cell alignment not verified. Statute names and section numbers in official rows were not checked against current law. No clinical, legal, faculty, rights or canonical acceptance.
+- Next: Obstetrics and Gynaecology (141). Open holds from this session: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13 — resolve on rendered official pages. The 14 Anatomy/Medicine references still await official-source verification.
+
+---
+
+## NMC Pathology source-scope review complete (181/181 linked) — 2026-11-15T22:15Z
+
+- Writer: Claude, draft PR #421 (`docs/nmc-am-scope-batch-01-20261112`) from remote head `d7ed78988c3e976c94498e6726ec67013175733e`. Parent #415 and main unchanged. Owner authorised the work in chat. Review commit `7a7dd4d619d9e45403df1a85e00c7ded547785ce` pushed and remote head verified after the owner installed the Claude GitHub App; ownership released.
+- Reviewed all **174** Pathology references that lacked selected review evidence (60-row queue PA1.1–PA16.2 plus the remaining 114, PA16.3–PA35.1) against the official NMC 12-09-2024 CBME document text: **170 scope-aligned, 4 held**. Held: `PA2.2` (etiology element absent), `PA8.5` (organ lesions beyond pathogenesis), `PA22.4` and `PA22.5` (domain cell read as "KS"; draft mode unverified). Zero accepted corrections or mappings. New holds live in the packet only; the 154-reference original hold inventory is unchanged.
+- Audit now: **1,379 of 2,607 references linked, 1,228 pending**; Pathology 181/181. Largest remaining: Forensic Medicine 156, Obstetrics/Gynaecology 141, Community Medicine 135, Physiology 131, Surgery 116, Pharmacology 92.
+- Changed: new `docs/evidence/2026-11-16-nmc-pathology-source-scope-review-pa1-pa35.json`; `scripts/nmc-review-handoff-audit.py` gains one packet pattern and the new input head; both generated audit outputs rewritten.
+- Verification: exact reference and packet joins for 174 rows; draft mode matches official domain on the 170 aligned rows; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes (13 services / 254 locations).
+- Limits: official text was read through a web reader that quotes short rows and restates long ones. PDF bytes, the pinned SHA-256, source-body hashes, rendered pages and table-cell alignment were not verified; identity of the fetched file with the pinned PDF is assumed from title and date. Certification counts are reader-reported. No clinical, faculty, rights or canonical acceptance.
+- Next: resolve the four holds on rendered official pages; then Forensic Medicine (156). The 14 Anatomy/Medicine references still await official-source verification. The 12 identity candidates and 21 source exceptions are untouched.
+
+---
+
+## NMC transfer follow-up — 2026-11-13T10:43:09.881559+00:00
+
+- Resumed sole-writer cleanup on draft PR #421 from remote `45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0`; parent/base unchanged. Current task is editorial provenance and recovery only; ownership released after remote readback.
+- Linked all **14** Anatomy/Medicine references outside the original queue to exact earlier editorial records and original task packets, with JSON pointers and SHA-256 hashes. These older name/scope proposals do **not** establish fresh official-source verification. All 14 retain that explicit verification gap; the 1,205 linked / 1,402 pending source-review audit counts are unchanged.
+- Reconciled **12** dirty-file appearances in two older worktrees: **8** byte-identical to saved branch, **3** earlier versions superseded by the saved branch, **1** unused staging workflow archived as inactive text. Preserved a reversible text patch for the three older versions and SHA-256 manifest for recovery files. Original worktrees unchanged; nothing installed, deployed or run from recovery.
+- Prepared an exact **60-reference Pathology queue PA1.1–PA16.2**, preserving full original task, source hash, page, mode and packet. This is a queued batch, **not 60 completed reviews**. The other 114 Pathology references remain in the full audit.
+- Evidence: `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json`, `2026-11-13-nmc-local-worktree-transfer-reconciliation.json`, `2026-11-13-nmc-pathology-next-review-batch.json`, and inert files in `docs/evidence/handoff-recovery/`.
+- Verification: exact references/codes, packet/input hashes, 14/14 prior evidence pointers, 60 unique queue references, recovery reconstruction, existing generated audit and whitespace checks passed. No runtime or checker code changed; prior 1,666 passing tests/full repository check remain the latest application validation. No new official PDF/clinical/browser/hosted verification claimed.
+- Next: the 14 references now have provenance links; verify official source scope before marking source review complete, or proceed with the ready Pathology queue while keeping them pending. Preserve original 154 holds, separate source exceptions and canonical acceptance tracks. Nothing merged or published; staging remains deferred.
+
+---
+
+## NMC Foundation — verified review reconciliation and Claude transfer — 2026-11-13T10:35:41.777181+00:00
+
+**Current checkpoint; supersedes historical next-queue instructions below.** Read [NMC_CLAUDE_HANDOFF.md](NMC_CLAUDE_HANDOFF.md) for exact resume instructions, pending queues, evidence limits and transfer scope.
+
+- Branch `docs/nmc-am-scope-batch-01-20261112`, draft PR #421, audited input head `5252e41e94e8dada7db7f66d00fcf522899cfd72`. Parent #415 remains `a8da95296e1a738a90b2a438985420af39ec19c2`; remote main verified `55bae73f1e01c0ce2a60b14dc3fa910b1e8bc5fe`. Use current remote head after checkpoint. Outgoing writer releases task ownership after remote verification; no external deployment/background job started.
+- Completed exact reconciliation of 22 Paediatrics cross-subject pairs: 4 provisional reuse, 8 shared-topic candidates, 6 shared task families, 3 population-specific tasks, 1 held narrow link. Source holds preserved on both endpoints: PA26.7, GM14.7, GM14.6 **and PE11.4**. AS9.1 remains a separate link hold. Zero accepted mappings or corrections.
+- Repeatable all-19-subject accounting: 2,427 indexed names / 2,607 distinct indexed references; 1,205 references linked to selected editorial review packets, 1,402 awaiting evidence reconciliation. Original Anatomy/Medicine 797-name / 944-reference queue has complete review-evidence linkage; Paediatrics has 252/252 references across 249 names. This does not claim clinical acceptance, all-subject source completion, or full curriculum coverage.
+- Added `scripts/nmc-review-handoff-audit.py` and generated relationship/audit JSON evidence. Exact joins, code consistency, duplicate/missing-pair checks, all 944 original queue references and all 252 Paediatrics references pass. Four in-memory negative probes rejected missing, duplicate, accepted and wrong-code decisions. Input SHA-256 manifest retained.
+- Fixed pre-existing `npm run check` blocker by removing only the stale Supabase coupling entry for `.github/workflows/nmc-hosted-staging-preflight.yml`, which is absent from this branch's Git tree. Manually reviewed checker, service register and exact missing path; did not auto-refresh baseline or add the untracked workflow from another worktree. No provider/deployment change.
+- Verification: all **1,666 npm tests passed**; audit and `npm run check:portability` passed (13 services / 254 locations). Full `npm run check` rerun: **passed** (syntax, draft catalog, decision ledger and portability). No fresh PDF bytes/rendered-source, browser, hosted or staging verification. No application behavior changed.
+- Next: reconcile 6 Anatomy and 8 Medicine references outside the old queue against earlier evidence, then Pathology (174 indexed references lacking selected review links). Preserve 154 original source holds, 12 accepted-private identity candidates with source mapping pending, and the separate 21-source-exception track. Do not reuse historical 2,346 exact-label nonmatches as a current semantic backlog count.
+- Existing uncommitted engineering files in two older local worktrees were left untouched and are not in this checkpoint; their remote persistence/ownership is unknown. This is a portable **NMC review branch** handoff, not a claim that every local project edit has transferred.
+- No merge, force-push, production/DB/publication change, staging sign-in or invented clinical receipt. PR #421 and parent #415 remain draft.
+
+---
+
+## NMC Foundation PR #421 — 61-name Anatomy review and held-source correction proposals — 2026-11-13T02:13:00.497Z
+
+- **Owner / target:** current ChatGPT review writer; `docs/nmc-am-scope-batch-01-20261112`; draft PR #421 atop draft parent PR #415, whose verified base head is `a8da95296e1a738a90b2a438985420af39ec19c2`. Entry checkpoint after evidence commit `67ebe6d3701c98e689422231c58b8d2083e24469`. Verified `main` `55bae73f1e01c0ce2a60b14dc3fa910b1e8bc5fe` and starting PR #421 `888c8a3daa1ba660ec23c0a0c794fe5c94ae30c5`.
+- **What changed:** saved `docs/evidence/2026-11-13-nmc-ten-held-scope-correction-proposals.json`: 10 original holds (7 Medicine/3 Anatomy) each have a source-bound narrower objective suggestion, original reference and task preserved, **zero accepted corrections**, ten original holds remain open. Saved `docs/evidence/2026-11-13-nmc-anatomy-source-scope-review-batch-03.json`: reviewed 61 unique Anatomy source tasks `AN13.1–AN21.11`; 59 editorially aligned and **2 newly held** (`AN13.4` comparative joint details, `AN21.8` stabilizer details). Saved `docs/evidence/2026-11-13-nmc-anatomy-next-queue-an22-an26.json`: 34 next exact unresolved names `AN22.1–AN26.7`; **AN25.3** excluded because already outside unresolved queue.
+- **Cumulative accounting:** **217** distinct names/references reviewed from original 797-name Anatomy/Medicine queue; **205** curriculum-text-layer scope-aligned, **12 held** (ten old holds with correction proposals not accepted + two new), **580** not yet reviewed. Original exact-preview-nonmatching inventory and canonical mapping backlog are not reduced by editorial review; mappings and learner activation are all false.
+- **Evidence and verification:** compared exact task packets, codes, name keys, source reference and body SHA fields, source-page coordinates and recorded original mode. Read NMC official Sept 12, 2024 curriculum code tables by PDF text layer; physical PDF-byte hash not independently rebuilt; web PDF screenshot returned cache miss. No claim of independent source-bytes validation, clinical review, medicine regimen approval, rights clearance, or medical teaching acceptance. New Anatomy batch remote readback verified **61/61 matching original queue entries, no duplicate names or references**; ten correction proposals retained no accepted mappings. Full npm checks/CI not run for evidence-only changes; no staging login, DB/auth/UI work.
+- **Next exact queue:** first review 12 held source-scope entries and 10 narrowed proposals with source+faculty/guideline support, without modifying the archived task packets. Then process `docs/evidence/2026-11-13-nmc-anatomy-next-queue-an22-an26.json` — **34 Anatomy rows AN22.1–AN26.7**, retaining 34 distinct references, no repeated AN25.3. After that **546** of the original 797 will still lack this cohort-level scope review. Keep identity/competency bindings null until independently established, preserve source and task version, and check parent PR head before downstream integration.
+- **Boundaries:** PR #421 remains draft; PR #415 unchanged; no merges, force-push, publication, staging sign-in, production edits or external background jobs. This handoff references the last evidence commit, never its own resulting SHA. Stop ownership after remote readback.
+
+## NMC Foundation scope review continuation — PR #421 — 2026-11-12T15:46:18.428Z
+
+- **Ownership/branch:** sole review writer; `docs/nmc-am-scope-batch-01-20261112` on draft PR #421, based on open parent PR #415 at `a8da95296e1a738a90b2a438985420af39ec19c2`. Original verified PR #421 head was `ae72be63368ed350be49f69cf1442d84f6276cd1`.
+- **Completed:** reviewed 78 previously provisional Medicine source scopes against the official September 2024 NMC curriculum and carried forward prior `GM5.5` / `GM16.6` checks. Medicine 80: **73 aligned, 7 held**. Reviewed 76 Anatomy `AN1.1–AN12.15`: **73 aligned, 3 held**. Combined **156 disjoint source records, 146 aligned, 10 held**. Verified exact name/reference membership, source-task packet metadata, stored SHA values and NMC row domains/levels; each output includes the source reference and original task mode.
+- **Held Medicine:** `GM6.10` (skill-mode mismatch); `GM6.14` (adverse effects/interactions omitted); `GM6.15` (IRIS management omitted); `GM6.16` (unbound current-guidance expansion); `GM15.10` (unbound procedure timing); `GM15.14` (vasopressors versus broader vasoactive drugs); `GM16.10` (identification skill versus suggestive motility).
+- **Held Anatomy:** `AN9.1` (unspecified pectoral muscle bounds); `AN10.11` (extra nerve-supply objective); `AN11.3` (unverified two-pattern venous comparison). Exact evidence to resolve each is in the source-verification JSON and the next-queue JSON.
+- **Exact next work:** first resolve ten held tasks using exact official row, original task and any additional permitted current guideline/teaching source; then review **61 Anatomy names `AN13.1–AN21.11`** in this order: 17 from `2026-11-04-nmc-anatomy-limb-integration-draft-tasks.json`, 23 from `2026-11-04-nmc-anatomy-posterior-thigh-leg-draft-tasks.json`, 21 from `2026-11-04-nmc-anatomy-lower-limb-thoracic-cage-draft-tasks.json`. All 61 have immutable source reference/body SHA and no overlap with reviewed 156. After that, **580 Anatomy/Medicine names** remain unreviewed under the original 797-name queue.
+- **Saved artifacts:** `docs/evidence/2026-11-12-nmc-medicine-source-scope-verification-batch-01.json`; `docs/evidence/2026-11-12-nmc-anatomy-source-scope-verification-batch-02.json`; `docs/evidence/2026-11-12-nmc-anatomy-next-queue-an13-an21.json`. Prior batch 01 originals preserved.
+- **Verification:** remote readback of two review packets confirmed counts, 156/156 unique names and reference IDs, 156/156 membership in source expansion queue, null identity/objective mappings, no learner activation; parent original source audit reported 944/944 source-body hashes valid. We did **not** rehash original PDF bytes independently. Official PDF text tables were inspected; screenshot attempts failed with a PDF cache miss, so visual table-layout attestation is **not** claimed. Full npm/test/browser/CI and staging sign-in **not run** for this docs-only task.
+- **Safety:** no changes to any accepted canonical ID, source provenance, medical content, learner publication, backend, production/staging, or reference mappings. All dispositions remain editorial/proposed. PR #421 remains draft; PR #415 remains parent; no merge, publication, or staging sign-in. Prior 2,346 exact-label-unmatched total is **not reduced** by scope review.
+- **Exact continuation protocol:** verify current PR #421 head; read AGENTS.md, this handoff, three new evidence files, source packets and latest PR #415 head; resolve held cases without silent changes; then consume 61-name pinned queue with source-code evidence and update `docs/AI_HANDOFF.md` / `docs/STATUS.md` before release. Current handoff entry intentionally records the previous evidence commit `9b4db346a7a6b9c20bf3ee1b075735ab4a590255`, not a self-referential final SHA.
+
 ## Mixed cross-cohort names and context leads
 
 Checked 2026-11-09T06:32:04.652Z on PR #415 from 97f1c6cc7f6a331f7f3c8afb2255cb8bc63136cd.

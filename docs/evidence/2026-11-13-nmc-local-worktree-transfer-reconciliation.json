@@ -1,0 +1,103 @@
+{
+  "checkedHead": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+  "scope": "Only files reported dirty in the two inspected worktrees. Original worktrees unchanged. Recovery files are inert, not validated deployment workflows; never apply automatically.",
+  "counts": {
+    "byte-identical-to-saved-branch": 8,
+    "earlier-version-superseded-by-saved-branch": 3,
+    "preserved-inactive-not-installed-not-tested": 1
+  },
+  "recoverySha256": {
+    "docs/evidence/handoff-recovery/earlier-local-versions.patch.txt": "839778fc9167ab80cbf1f7ac0f61dd0a2e348747b274540a32cac5d661bec696",
+    "docs/evidence/handoff-recovery/nmc-hosted-staging-preflight.yml.txt": "4463e9cf532f4ba37ed910ee56582ce79e6c5401ca17d8e7a163d246a876ca57"
+  },
+  "rows": [
+    {
+      "worktree": "mlos",
+      "path": "scripts/foundation-objective-browser-check.js",
+      "localSha256": "e8e0ab32758106b386d81ec759653da1c3bad7b330d5b2a54f6f392585d77bdb",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "earlier-version-superseded-by-saved-branch",
+      "recoveryPath": "docs/evidence/handoff-recovery/earlier-local-versions.patch.txt"
+    },
+    {
+      "worktree": "mlos",
+      "path": "supabase/functions/owner-api/_shared/nmc-learning-foundation.js",
+      "localSha256": "7941a2d6e780ef1f17ace12d0e24c68262fda77efb860505c972675bc8ff93e4",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "earlier-version-superseded-by-saved-branch",
+      "recoveryPath": "docs/evidence/handoff-recovery/earlier-local-versions.patch.txt"
+    },
+    {
+      "worktree": "mlos",
+      "path": "tests/nmc-foundation-api.test.js",
+      "localSha256": "f9e7082bf8678afe5989eb980d270f568e69f0877919eedb3afefe61516adf51",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "earlier-version-superseded-by-saved-branch",
+      "recoveryPath": "docs/evidence/handoff-recovery/earlier-local-versions.patch.txt"
+    },
+    {
+      "worktree": "mlos",
+      "path": "web/nmc-foundation-review.js",
+      "localSha256": "18384e5eb727a17374fba879a4af3ac45b6ea2b55dab602fa8b431c8ef7bc269",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "mlos",
+      "path": ".github/workflows/nmc-hosted-staging-preflight.yml",
+      "localSha256": "4463e9cf532f4ba37ed910ee56582ce79e6c5401ca17d8e7a163d246a876ca57",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "preserved-inactive-not-installed-not-tested",
+      "recoveryPath": "docs/evidence/handoff-recovery/nmc-hosted-staging-preflight.yml.txt"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json",
+      "localSha256": "8f6938ee686f2bb0226f8129ea7828c8f74ee6929421fa523927de84915e38dc",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "docs/evidence/2026-11-12-nmc-shared-name-relationships.json",
+      "localSha256": "27faee0dc36072540323df8d36c18c052aa091a7a3c0ccdf77d7ebc2c4ad041a",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "docs/evidence/2026-11-12-nmc-unified-queue-reuse-supplement.json",
+      "localSha256": "12977d6351427e8959804d0c3f242ec168c2abd83e977a30272868036d9add67",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "scripts/foundation-objective-browser-check.js",
+      "localSha256": "6e856a0600ab05225ff1b287612f1ffb23653cc5b4af6fce6a014e291e5d9a00",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "scripts/nmc-empty-preview-db-check.js",
+      "localSha256": "9648a2882c15a752dd4ac2baf6f79035f58256ccedad8c4c6f2a5247662307c4",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "supabase/functions/owner-api/_shared/nmc-learning-foundation.js",
+      "localSha256": "bbc7aae1acd79adf5f601813dc17e257b7aa6275120cf5fbec1a0f071eb1dfe0",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    },
+    {
+      "worktree": "nmc-preview",
+      "path": "tests/nmc-foundation-api.test.js",
+      "localSha256": "03453ffcefad21fbceaf3bded7cf0ff0599b86aa64c2286eae7307d524d6fbfd",
+      "reviewedAgainst": "45aa7f46e7fad1cfb6d76fa89c54fbba977d1af0",
+      "disposition": "byte-identical-to-saved-branch"
+    }
+  ]
+}

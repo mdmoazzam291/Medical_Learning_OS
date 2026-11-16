@@ -1,0 +1,37 @@
+{
+  "checkedHead": "c160e261f70c3922a5b798145c4d36bdecfe5ea1",
+  "source": "https://www.nmc.org.in/wp-content/uploads/2026/02/12bCompetencyBasedMedicalEducationCBMECurriculum12092024.pdf",
+  "priorReconciliation": "docs/evidence/2026-11-13-nmc-source-refinement-reconciliation.json",
+  "verification": "Official PDF text layer inspected by opening the surrounding table. Rendered layout and PDF bytes were not independently verified.",
+  "batchSourceTextVerified": 11,
+  "rows": [
+    {
+      "code": "GM26.22",
+      "referenceId": "nmc-2024-ref:8502a7cd6d5ff19e3c40906de498d8a6b10de59f30305fed4cb4c2ef3d1e5318",
+      "proposalPacket": "docs/evidence/2026-11-13-nmc-final-held-scope-proposals.json",
+      "priorRefinement": "Explicitly compare the clinical features of the source-listed conditions.",
+      "sourceTextLines": "24743–24749",
+      "sourceVerified": true,
+      "reconciledFinding": "Discuss aetiopathogenesis, clinical features, complications and management of varicella-zoster virus infections. The source does not require a comparison.",
+      "correctionAccepted": false,
+      "mappingAccepted": false,
+      "domain": "K",
+      "level": "KH",
+      "suggestedAssessment": "MCQ/written or viva voce"
+    },
+    {
+      "code": "GM26.24",
+      "referenceId": "nmc-2024-ref:9e73d63418732ac7d0f9e9cfe0895ee708af4a687ba274244c5c2eb2ddf53f2e",
+      "proposalPacket": "docs/evidence/2026-11-13-nmc-final-held-scope-proposals.json",
+      "priorRefinement": "Include clinical management alongside the existing prevention objective.",
+      "sourceTextLines": "24763–24769",
+      "sourceVerified": true,
+      "reconciledFinding": "Discuss aetiopathogenesis, clinical features, management and prevention of rabies. Keep management and prevention explicit.",
+      "correctionAccepted": false,
+      "mappingAccepted": false,
+      "domain": "K",
+      "level": "KH",
+      "suggestedAssessment": "MCQ/written or viva voce"
+    }
+  ]
+}

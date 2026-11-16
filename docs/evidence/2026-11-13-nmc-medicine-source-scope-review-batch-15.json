@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "6b4ca697a7b7673adad383d909c1cf62032c0627",
+  "pdfChecksumVerified": true,
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "sourceRowHashesVerified": 3,
+  "reviewed": 3,
+  "scopeAligned": 3,
+  "held": 0,
+  "cumulative": {
+    "reviewedSourceRows": 571,
+    "reviewedDistinctNameKeys": 570,
+    "alignedSourceRows": 526,
+    "heldSourceRows": 45,
+    "unreviewedDistinctNameKeys": 227
+  },
+  "rows": [
+    {
+      "name": "HIV care communication",
+      "nameKey": "hiv care communication",
+      "code": "GM6.19",
+      "sourceReferenceId": "nmc-2024-ref:b5014fd84e831f9bac8431fad61250d2c58a51ea54ab3aa9780e980d0303003d",
+      "sourcePdfPage": 293,
+      "sourceRowBBox": [
+        44.2,
+        243.12,
+        102.7,
+        270.6
+      ],
+      "sourceBodySha256": "56d588cedb2baec803191a810777353b0eb3ece34adabee1a5897a16c77103dd",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned",
+      "sourceContext": "HIV care",
+      "scopeNote": "Retain diagnosis, treatment-plan and follow-up communication."
+    },
+    {
+      "name": "Adherence counselling",
+      "nameKey": "adherence counselling",
+      "code": "GM6.20",
+      "sourceReferenceId": "nmc-2024-ref:1a30b9ada6f982c66b96e97c66c9ebb8d0787b5f0c0bd7930ce5d9fc87954894",
+      "sourcePdfPage": 293,
+      "sourceRowBBox": [
+        44.2,
+        270.6,
+        102.7,
+        297.78
+      ],
+      "sourceBodySha256": "c2f493c1beef25af13dd70a324b119500a4efb17d0418ba7ee7e9cd3b88cc22b",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned",
+      "sourceContext": "HIV care",
+      "scopeNote": "Retain communication about the importance of medication adherence."
+    },
+    {
+      "name": "Confidentiality and disclosure",
+      "nameKey": "confidentiality and disclosure",
+      "code": "GM6.21",
+      "sourceReferenceId": "nmc-2024-ref:074056175f14786b27a4af8a7670408e62ca0969b90c20620d22c4fdf443d44f",
+      "sourcePdfPage": 293,
+      "sourceRowBBox": [
+        44.2,
+        297.78,
+        102.7,
+        338.52
+      ],
+      "sourceBodySha256": "e1d1165a957f22bd9fb63c9f73ed1ee0343b2952c7c56679b497c3fc32e3af23",
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-medicine-gm6-19-gm8-15-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned",
+      "sourceContext": "HIV care",
+      "scopeNote": "Keep confidentiality and disclosure together in the ethical and legal decision scope."
+    }
+  ]
+}

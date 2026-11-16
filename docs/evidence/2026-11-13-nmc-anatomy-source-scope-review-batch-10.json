@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "2f6fdbe6d25a35554256495f69b3fc8813477626",
+  "sourceRowHashesVerified": 14,
+  "pdfChecksumVerified": true,
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "reviewed": 14,
+  "held": 1,
+  "scopeAligned": 13,
+  "cumulative": {
+    "reviewed": 441,
+    "scopeAligned": 418,
+    "held": 23,
+    "unreviewed": 356
+  },
+  "rows": [
+    {
+      "nameKey": "muscle identification",
+      "name": "Muscle identification",
+      "code": "AN67.1",
+      "sourceReferenceId": "nmc-2024-ref:138934aaae06c76c1890e23733a876236d474300aace8011030072b94d748c88",
+      "sourceBodySha256": "e1f824aeb7961a14849c0b133d91dc70b8602edb440eb98252cd4a97131efd6e",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        305.34,
+        121.9,
+        341.34
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "muscle classification",
+      "name": "Muscle classification",
+      "code": "AN67.2",
+      "sourceReferenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+      "sourceBodySha256": "d4dbf79b5a00a72708bf8b358b757d5a41084eda36e88c9ac7d278ad7e8766b7",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        341.34,
+        121.9,
+        366.18
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "muscle ultrastructure",
+      "name": "Muscle ultrastructure",
+      "code": "AN67.3",
+      "sourceReferenceId": "nmc-2024-ref:4feb2313a12f48ae88009dd71316e2a8b47e4856afc2b1a376b93e36dba569af",
+      "sourceBodySha256": "4629c3b7ccc2f51a9456364768c4e1ae51430d3c2cb8b047f9081e006bda1ac7",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        366.18,
+        121.9,
+        390.66
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "neurons, ganglia and peripheral nerves",
+      "name": "Neurons, ganglia and peripheral nerves",
+      "code": "AN68.1",
+      "sourceReferenceId": "nmc-2024-ref:103434e62986dac78055ca25b56c57827e8959794d623be215fe53159515a020",
+      "sourceBodySha256": "48a2e8a85a46ecdbdc035dfade39b6e66190470d6e26251dcb5651ed4fe1ebf2",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        413.28,
+        121.9,
+        449.28
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "neuron structure and function",
+      "name": "Neuron structure and function",
+      "code": "AN68.2",
+      "sourceReferenceId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c",
+      "sourceBodySha256": "ab7d454e818ade43ed8d26ec298a981c93de413d67e3273d09e70b7914862607",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        449.28,
+        121.9,
+        474.18
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "nervous tissue ultrastructure",
+      "name": "Nervous tissue ultrastructure",
+      "code": "AN68.3",
+      "sourceReferenceId": "nmc-2024-ref:e04fcd56edae76655599b6af50e48d1d2253c7b5cda09b0c52e6e1b43b1c9874",
+      "sourceBodySha256": "93d94bd6f7f528ca783e1e0d73d102168e46763279fde6ac0f79a929b05401bc",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        474.18,
+        121.9,
+        499.02
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "The draft covers synapses and myelin. It does not explicitly cover the wider ultrastructure of neurons and supporting glia."
+    },
+    {
+      "nameKey": "vascular histology",
+      "name": "Vascular histology",
+      "code": "AN69.1",
+      "sourceReferenceId": "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c",
+      "sourceBodySha256": "3ae974d496ae0c6e8e8d7065d83b2cd62e791f34f516ae7a970f2510bf66f340",
+      "sourcePdfPage": 144,
+      "sourceRowBBox": [
+        51.2,
+        517.68,
+        121.9,
+        542.94
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "vessel structure and function",
+      "name": "Vessel structure and function",
+      "code": "AN69.2",
+      "sourceReferenceId": "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24",
+      "sourceBodySha256": "24f4e201e4ae5fb5d0e509d5ea4fb78fa58ac50134f8dbb8a3fe73a59084412d",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        108.78,
+        122,
+        133.26
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "vascular ultrastructure",
+      "name": "Vascular ultrastructure",
+      "code": "AN69.3",
+      "sourceReferenceId": "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312",
+      "sourceBodySha256": "8fdd43058ad48b933a45f7514f03f0804d58fd2df055bbaa8eb01821f16bb068",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        133.26,
+        122,
+        154.14
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "exocrine acini",
+      "name": "Exocrine acini",
+      "code": "AN70.1",
+      "sourceReferenceId": "nmc-2024-ref:0e35b9a1a7f4af1940046da37303c532e1035ee969dece36e2774634a820abc7",
+      "sourceBodySha256": "f98e806dcdaf2fd9f59595c68e8c8ba4fc0317ac374779c38494759919b1d81d",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        172.14,
+        122,
+        204.18
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "lymphoid organs",
+      "name": "Lymphoid organs",
+      "code": "AN70.2",
+      "sourceReferenceId": "nmc-2024-ref:9f59fe56e5ee0c88c7d91cfba722a6fcf4e24dce5faf8e83a72177284613494f",
+      "sourceBodySha256": "46e744d833456e3564022871ab10cbeb1d27ccf0621b78f700f95bdfc2e51334",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        204.18,
+        122,
+        247.08
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "bone histology",
+      "name": "Bone histology",
+      "code": "AN71.1",
+      "sourceReferenceId": "nmc-2024-ref:a080cd2903174aa99b02af1204e474f381113721cf6c36622b779aca4210226b",
+      "sourceBodySha256": "1ef3b014b3e317ba60ea2e33f1e6ea7cdb6fb22cf6e68aadaa35573902b9d518",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        259.32,
+        122,
+        289.71
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "cartilage histology",
+      "name": "Cartilage histology",
+      "code": "AN71.2",
+      "sourceReferenceId": "nmc-2024-ref:9924f9e7199c44ddb477e077d8adb5c809fb613a55989099d10c3cc7da5fa341",
+      "sourceBodySha256": "1ff79a1b1a47d7cd056f93933d91f4a384fa328b6ca04a30fed700a268be6886",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        289.71,
+        122,
+        321.18
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "skin histology",
+      "name": "Skin histology",
+      "code": "AN72.1",
+      "sourceReferenceId": "nmc-2024-ref:0d7936da316a466bd923f2a55dd77023db22de63de8714339616f0163dca55e9",
+      "sourceBodySha256": "5563fab75d13202128b080328cbb159115e177368c5cb148588112db616fe203",
+      "sourcePdfPage": 145,
+      "sourceRowBBox": [
+        51.2,
+        338.46,
+        122,
+        365.46
+      ],
+      "sourcePacket": "docs/evidence/2026-11-05-nmc-anatomy-neuro-histology-genetics-embryology-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "sourceBodyHashVerified": true,
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

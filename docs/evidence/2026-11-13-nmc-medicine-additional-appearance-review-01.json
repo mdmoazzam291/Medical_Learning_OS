@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "checkedHead": "3add3af861b9483f99f0f565602b248b94d69f23",
+  "sourceQueue": "2026-11-13-nmc-anatomy-medicine-additional-appearance-queue.json",
+  "sourcePdfSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "pdfChecksumVerified": true,
+  "sourceRowHashesVerified": 25,
+  "reviewed": 25,
+  "scopeAligned": 9,
+  "held": 16,
+  "cumulative": {
+    "reviewedSourceReferences": 841,
+    "alignedSourceRows": 719,
+    "heldSourceRows": 122,
+    "pendingSourceReferences": 103,
+    "distinctNamesReviewed": 797
+  },
+  "mappingAccepted": false,
+  "rows": [
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:0506567d53f3175f04c4fe2ba03d6f23dc0a497fe57721b0df2212b961d30fc2",
+      "subjectId": "medicine",
+      "code": "GM25.14",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "d795a1fea057b559a2bdfe029bd4cf97626367832cd302e5ddd5da2d14410b4b",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        405.36,
+        102.7,
+        446.16
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make causes, presentation and stabilization explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:11a0c8840b483cbec6692c33c0d44e33a677fcda931e8023f275e79d2db0302a",
+      "subjectId": "medicine",
+      "code": "GM25.18",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b6e2831493ef7e6be1206210ec7e9a1b847b7b6900d9165295b7c574e192c2eb",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        147.24,
+        102.7,
+        174.48
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1a54c56c0ca6f3bfe8295256a00822f8d2f6175a1b2faef3cc445dae994153a8",
+      "subjectId": "medicine",
+      "code": "GM25.22",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "58c08722601ceb66c0e262e02ada3636b2a106fcb55189967a0ef43332e9b2af",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        283.32,
+        102.7,
+        324.12
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "The draft focuses on undernutrition. Clarify coverage of the broader nutritional-disorders scope and clinical presentation."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1cd7e5a4da4e8d41945ee5161360900b29e8bb952c9ab829b074ab790ef6052a",
+      "subjectId": "medicine",
+      "code": "GM25.9",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "6ab4f8ae3125a0f47a22172a5d4d9d9cbdf5c4f9f41b0307b4b75bd9edef29ab",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        201.36,
+        102.7,
+        242.16
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis, functional changes and management explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:1e402f71965cba7735df906256fa9e2e9c3521d624abba7e269b3f9a01663610",
+      "subjectId": "medicine",
+      "code": "GM25.2",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "0c6b8636b4df1a596890f924ddf2216a3cd1e60adbc94fe6911d0340638ddbe7",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        337.74,
+        102.7,
+        365.1
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:261d733a91607a35e5dbe0e182187133c80173fb84b5dd3a62299ed1f3725b1e",
+      "subjectId": "medicine",
+      "code": "GM25.16",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "f20aecc45be9649d6460ede072dab4e8cc5e82e31012b3d9af0faaed9e038054",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        500.16,
+        102.7,
+        541.08
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:46487cfe76ef58fb9228a909538d34bcc662b31dde7ffc13bdb80add7214af35",
+      "subjectId": "medicine",
+      "code": "GM25.19",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "c0f47fd7e292d50580df0b57e8bbb19b7d0c737d5169b133d3fbe989f283d09c",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        174.48,
+        102.7,
+        215.22
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:59df6ab62ecfaf5499f219564b53ae1254be9d2342b945aab5835799def67574",
+      "subjectId": "medicine",
+      "code": "GM25.12",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "dd0903c2a980f9e0d891da2272415482ea430374f2502b4878552671bfdec2f9",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        323.64,
+        102.7,
+        364.44
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover aetiopathogenesis, functional changes and acute care or stabilization."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:635a30e98c3674ae3f4bd64bd93d473db745078a6cb7a8ac394af0df32bb3e3b",
+      "subjectId": "medicine",
+      "code": "GM25.10",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "80d4163b8cc1ac8a4e575b1375b6d96005aab2c82bea28eded0bee7ba7c19141",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        242.16,
+        102.7,
+        282.96
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover aetiopathogenesis and functional changes in older adults."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:918b610b66f1494c77df904354dd3a184d2da0f7a416c378b37227f0ed672d43",
+      "subjectId": "medicine",
+      "code": "GM25.5",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "d566da5019527cd854ee9817e7115bd835ccc45825b0e1bb721fd4c16283df2b",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        446.64,
+        102.7,
+        487.32
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover aetiopathogenesis, functional changes and acute care or stabilization."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:a31686da40974c79b5a1c75793c3a65dd37acf097b8832837693d50cdad43412",
+      "subjectId": "medicine",
+      "code": "GM25.20",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "161443e3b84853c274007f806220826d352ea4e64bc0b062f103a55c04487f61",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        215.22,
+        102.7,
+        256.02
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:a4a66da1d0dc516e21313d907bb06c9401b978b33ff69feb2fde5a1d25f0a28f",
+      "subjectId": "medicine",
+      "code": "GM25.6",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "020a7339aa1f2edca657e49f76efb52364a32bfa0f2a0dfe193bdbd58b1fd6bc",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        487.32,
+        102.7,
+        541.56
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover dementia aetiopathogenesis."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:b2cfff60e48f73852d6afebb4c36749e742556fb71411b6dc46faabdbdf37f99",
+      "subjectId": "medicine",
+      "code": "GM25.17",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "f7d57ee2492f49a5abcfc59b94d27a3ab04c1c7b991d5faf673da4f3b8a961f9",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        147.24
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Preserve older-adult context and make functional changes and acute care explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d1489af58511dec6da50b8160d6ea6ac5fc5a7eeedb62cd7081bcee5ef12fe74",
+      "subjectId": "medicine",
+      "code": "GM25.21",
+      "pdfPage": 318,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "a18c6342d4d659dca7009e7a8ee5c90f7341dbdb8c6ffc5aebbc4b1a20b09882",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        256.02,
+        102.7,
+        283.32
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d3b0cb70c578695e631b412ac95688bac82fe83c222d4f916bbe440421850d3a",
+      "subjectId": "medicine",
+      "code": "GM25.13",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "c43cb1c63a73a0ad22d351ffde485d11c6fcf5c59e472cb95f3a933781510f39",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        364.44,
+        102.7,
+        405.36
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make presentation, functional changes and stabilization explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d5b03b79e6a4397ba426f6b9074cb556b3240354b9d3b26d69694c933ef3f206",
+      "subjectId": "medicine",
+      "code": "GM25.11",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "cb78f0dc031336161a23c609de7f44700f75ced8f138e9015080b20be2da3aba",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        282.96,
+        102.7,
+        323.64
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make functional changes and acute management explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:d86324f541a8c3f4b5c890bbb36dba25a317955b9db95b93401fd014a57990e5",
+      "subjectId": "medicine",
+      "code": "GM25.15",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "caca7ae7447e9bc0ec5e566028f7246fb06672c076f355ea9cadcd96116822fe",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        446.16,
+        102.7,
+        500.16
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly address stabilization, functional changes and rehabilitation in older adults."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:e151229a39a72690e379e5ee8ff0af24f94ffd44c90511575f0386562ff641ef",
+      "subjectId": "medicine",
+      "code": "GM25.4",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "dfc77e954868ec5a91ddc85744db5d62334e302f78a15079479ca45d57a8286c",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        405.84,
+        102.7,
+        446.64
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make aetiopathogenesis, functional changes and management explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:ec4485e938c266c9c80b53157a19ae212c127c6b55ef2422c50353ea9c90c38f",
+      "subjectId": "medicine",
+      "code": "GM25.8",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "b93bd33bfad989ff4785d8bb2865e02be0d4aa2a8ee4f15551db13314de237d9",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        160.56,
+        102.7,
+        201.36
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make clinical presentation and acute care or stabilization explicit."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:f17cddf498013feb29794cb90f60c16f4d58cdbb9905182afa6f6a09cfb04fde",
+      "subjectId": "medicine",
+      "code": "GM25.3",
+      "pdfPage": 316,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "1d169db261bae59b9a7885a3561ab520dacd0245633df8435d2fc9105a6d200b",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        365.1,
+        102.7,
+        405.84
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Add the mechanisms and functional changes associated with acute confusion."
+    },
+    {
+      "nameKey": "geriatrics",
+      "referenceId": "nmc-2024-ref:fb05aee947626196f3481b5282dc4f86cf29a0900aa65a90318c7240cfd4052f",
+      "subjectId": "medicine",
+      "code": "GM25.7",
+      "pdfPage": 317,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "af3f37624954ca0fd85f11f8bb88c90fdcd4448b5c6ef6dd6e6598d3f152267e",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        106.44,
+        102.7,
+        160.56
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Make causes, presentation and stabilization explicit."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:0230547e9c9670f7cabe362eb6a746907e8e43fc74bb5674e75da60add976064",
+      "subjectId": "medicine",
+      "code": "GM26.12",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "597ecf17e19ee362737c4dff7c9617a7022ece1c08e73318ae02501ad898f023",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        378.42,
+        102.7,
+        419.22
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-held",
+      "scopeGap": "Explicitly cover common causes and clinical features of each condition."
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:055f140032cda57c7b44a24a70e55efae078bb215e179e6b65fcb8f6a45b8167",
+      "subjectId": "medicine",
+      "code": "GM26.6",
+      "pdfPage": 319,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm24-3-gm26-28-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "de8668d69d03d613b7ff97b5aaae814955f8ac4e40e663b12f28440e67566b2a",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        174.06,
+        102.7,
+        201.42
+      ],
+      "mode": "knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:101f818762bf34a7da5f239381030fbcad73dc6729cbc24311fda8860a2012bb",
+      "subjectId": "medicine",
+      "code": "GM26.30",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "16bdb4794eab35173f9012f72f5f4fc5bdacf5b8dd0cc9756e9c2f36fec389be",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        153.66,
+        102.7,
+        181.14
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    },
+    {
+      "nameKey": "infectious diseases",
+      "referenceId": "nmc-2024-ref:13d173ccc240d08072b7fa53df260ebac688a4e15a3edf8c9392f1ef156f25b1",
+      "subjectId": "medicine",
+      "code": "GM26.34",
+      "pdfPage": 321,
+      "packet": "docs/evidence/2026-11-05-nmc-medicine-gm26-29-gm28-26-draft-tasks.json",
+      "proposedObjectiveVersionIds": [],
+      "sourceBodySha256": "ba243e35261c0a640e4a791fdd65dbe7ae1878683eefd371ab72339a494e1572",
+      "sourceBodyHashVerified": true,
+      "sourceRowBBox": [
+        44.2,
+        276.48,
+        102.7,
+        303.84
+      ],
+      "mode": "performance-and-knowledge",
+      "mappingAccepted": false,
+      "reviewStatus": "editorial-source-scope-aligned"
+    }
+  ]
+}

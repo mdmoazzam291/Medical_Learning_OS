@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-11-13T02:12:01.739Z",
+  "parentPr": 415,
+  "workPr": 421,
+  "reviewedNamesTotal": 217,
+  "sourceAlignedNamesTotal": 205,
+  "sourceHeldNamesTotal": 12,
+  "remainingAnatomyMedicineUnreviewed": 580,
+  "sourceIndexSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+  "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+  "sourceEdition": "nmc-cbme-2024-09-12",
+  "sourcePdfHashRebuilt": false,
+  "reviewStatus": "NOT-REVIEWED",
+  "nextCount": 34,
+  "startCode": "AN22.1",
+  "endCode": "AN26.7",
+  "skippedAlreadyMatchedInOriginalQueue": [
+    {
+      "code": "AN25.3",
+      "name": "Fetal circulation",
+      "sourceReferenceId": "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1",
+      "reason": "not in the 797-name unresolved-expansion queue; do not duplicate an already exact-preview-matched item"
+    }
+  ],
+  "postNextRemainingUnreviewed": 546,
+  "nextItems": [
+    {
+      "code": "AN22.1",
+      "name": "Pericardial anatomy",
+      "nameKey": "pericardial anatomy",
+      "sourceReferenceId": "nmc-2024-ref:1696bdd2a6bfdb67083fb667c22b8d228503a8e6355596bc5111b099cffa7d37",
+      "sourceBodySha256": "fe23de5554ed9e03a132fd0f39cd885dc36a1e86d612271baa7c4acd2ae637dc",
+      "sourcePdfPage": 121,
+      "sourceRowBBox": [
+        51.2,
+        482.82,
+        122.2,
+        529.32
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.2",
+      "name": "Cardiac chambers",
+      "nameKey": "cardiac chambers",
+      "sourceReferenceId": "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515",
+      "sourceBodySha256": "501e9c6a4b5761b72edd56e41070e57daed430ef48dd21803b3d26cd2f07dad2",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        122.2,
+        153.42
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.3",
+      "name": "Coronary arterial anatomy",
+      "nameKey": "coronary arterial anatomy",
+      "sourceReferenceId": "nmc-2024-ref:e79460b1b7e368ae2e01dd8c6698056afab0f89218d43f6acc3e2d7ec1651aca",
+      "sourceBodySha256": "f095d0776f7ca7aab52242ff2b0c67c3981d9b924ebb733f5549fb6987a1855c",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        153.42,
+        122.2,
+        201.66
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.4",
+      "name": "Ischaemic heart disease",
+      "nameKey": "ischaemic heart disease",
+      "sourceReferenceId": "nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2",
+      "sourceBodySha256": "13da2440675ccfb19ec0e94925801a473c004b9b716353b066fcc557ae190f24",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        201.66,
+        122.2,
+        234.42
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.5",
+      "name": "Coronary sinus",
+      "nameKey": "coronary sinus",
+      "sourceReferenceId": "nmc-2024-ref:0fdc1c7223e50eb4549e74b4d9e7803d2468264408f4b823562e8461661b87a4",
+      "sourceBodySha256": "04020e3c5235fd0043bc0f71db8173d2a08f34131266640c7ba1dcc634f8c399",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        234.42,
+        122.2,
+        279.06
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.6",
+      "name": "Fibrous cardiac skeleton",
+      "nameKey": "fibrous cardiac skeleton",
+      "sourceReferenceId": "nmc-2024-ref:139c18e3ccdf15f6ddecfda6bd505c332b7bdcfdeb4e276a172c51c73149446b",
+      "sourceBodySha256": "9d4fb5d9561bd30e32a147c32c5479e0b1109a6922266acd247318502f97cf56",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        279.06,
+        122.2,
+        303.9
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN22.7",
+      "name": "Cardiac conduction anatomy",
+      "nameKey": "cardiac conduction anatomy",
+      "sourceReferenceId": "nmc-2024-ref:88e0d1756c1c67ac963679a054762b14eba38159a1cff3be0734cfaf47044618",
+      "sourceBodySha256": "318bf4b9d9dd37775e1882c20c6a268d4ed4b27c5548750df33d195c3173b5c0",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        303.9,
+        122.2,
+        335.94
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.1",
+      "name": "Oesophageal anatomy",
+      "nameKey": "oesophageal anatomy",
+      "sourceReferenceId": "nmc-2024-ref:2a59cd14b8c2f5176788e13d235d3353f1054bfb64e7d5951959ad0a504f9f73",
+      "sourceBodySha256": "e245aea31dc240fa395df54924e52c6e1748ce06725dbdb0dbc0d8b1838c0fcd",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        356.04,
+        122.2,
+        399.96
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.2",
+      "name": "Thoracic duct",
+      "nameKey": "thoracic duct",
+      "sourceReferenceId": "nmc-2024-ref:f601330a50bad57e364294c0a4feade0370a3d1cc12621fa41068025154cfbbc",
+      "sourceBodySha256": "1c371a061fe83c477d287ada4ba755c95a5fd4a5a1880259ec147256b412939a",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        399.96,
+        122.2,
+        444.96
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.3",
+      "name": "Superior vena cava and azygos system",
+      "nameKey": "superior vena cava and azygos system",
+      "sourceReferenceId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a",
+      "sourceBodySha256": "5cf1d10d6260cefd774d01efdfc18fa4601a2a57b9271ad53fdb81e3718066bb",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        444.96,
+        122.2,
+        490.17
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.4",
+      "name": "Thoracic aorta",
+      "nameKey": "thoracic aorta",
+      "sourceReferenceId": "nmc-2024-ref:ef4d077334dfef48358f7eecb981d9f7cdf23a722af9e332945cd72187bff620",
+      "sourceBodySha256": "dcc2169eee36cc0b28f031654f7b833c2a928f9d6daeec6b19b76dc6f417f259",
+      "sourcePdfPage": 122,
+      "sourceRowBBox": [
+        51.2,
+        490.17,
+        122.2,
+        524.52
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.5",
+      "name": "Thoracic sympathetic chain",
+      "nameKey": "thoracic sympathetic chain",
+      "sourceReferenceId": "nmc-2024-ref:299bfed8e9a949d0d37c80e2bbedfcd03558f44fab7127cf9340bc205af07df1",
+      "sourceBodySha256": "54b1531c2a5d344b4dee9e6115c5da90cc02f45aa9a9bb75307ec81c8cc4358a",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        121.9,
+        157.74
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN23.6",
+      "name": "Thoracic splanchnic nerves",
+      "nameKey": "thoracic splanchnic nerves",
+      "sourceReferenceId": "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095",
+      "sourceBodySha256": "24398b4e62ca95df4c8810430f20eb8d1a78f38edad039477e642e3af8cdb87e",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        157.74,
+        121.9,
+        182.64
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.1",
+      "name": "Pleura and recesses",
+      "nameKey": "pleura and recesses",
+      "sourceReferenceId": "nmc-2024-ref:1a9102eed28fd5c1a3afc5b9654968c86d5951d350ea6b4c0a35dce5cc517069",
+      "sourceBodySha256": "1666814d776bd0d9424f0cacd9bce7ec19759ae60e2acff30be0c861a1d02206",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        203.1,
+        121.9,
+        252.78
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.2",
+      "name": "Lung orientation and root",
+      "nameKey": "lung orientation and root",
+      "sourceReferenceId": "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247",
+      "sourceBodySha256": "e20ac14df0e9ee6e31aaa29a0a8846cc540cebe01d489071f4faea3b771ff014",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        252.78,
+        121.9,
+        301.02
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.3",
+      "name": "Bronchopulmonary segments",
+      "nameKey": "bronchopulmonary segments",
+      "sourceReferenceId": "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6",
+      "sourceBodySha256": "98dfceb6411fcfd9173fcfcad3f0c607990ff6048224e9cf4084a6a5ee3c517e",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        301.02,
+        121.9,
+        333.78
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.4",
+      "name": "Phrenic nerve",
+      "nameKey": "phrenic nerve",
+      "sourceReferenceId": "nmc-2024-ref:294df90fa979a2c98aa26242b1a135b31a7f9fb21d7f2c28ccf6d522f204aaa1",
+      "sourceBodySha256": "4854033ea7f0e92d78a67c64d0921761c72dd46cf4a6a23b281cd453556c8b2f",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        333.78,
+        121.9,
+        364.38
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.5",
+      "name": "Pulmonary supply and drainage",
+      "nameKey": "pulmonary supply and drainage",
+      "sourceReferenceId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22",
+      "sourceBodySha256": "c7807497588893cb5022c060ce45c9729811e345ee74db1fb34995d5ccd854c4",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        364.38,
+        121.9,
+        396.42
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN24.6",
+      "name": "Tracheal anatomy",
+      "nameKey": "tracheal anatomy",
+      "sourceReferenceId": "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da",
+      "sourceBodySha256": "daccb2f8ed602f3c65233e05a9f07004d2ef235800bfa570d47df7197e19db93",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        396.42,
+        121.9,
+        421.26
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.1",
+      "name": "Tracheal and lung histology",
+      "nameKey": "tracheal and lung histology",
+      "sourceReferenceId": "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939",
+      "sourceBodySha256": "fe0cb0b72b82822d432f7f8a3b26c061986634ced1be62d459e26e478a25208a",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        441.42,
+        121.9,
+        475.98
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.2",
+      "name": "Pleural, pulmonary and cardiac development",
+      "nameKey": "pleural, pulmonary and cardiac development",
+      "sourceReferenceId": "nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd",
+      "sourceBodySha256": "2d6100a4d709f301c7c36e51dc8e6adaa8734a4773b32466835755d382c59634",
+      "sourcePdfPage": 123,
+      "sourceRowBBox": [
+        51.2,
+        475.98,
+        121.9,
+        501.03
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.4",
+      "name": "Septation and foregut anomalies",
+      "nameKey": "septation and foregut anomalies",
+      "sourceReferenceId": "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7",
+      "sourceBodySha256": "bdd6763b830576f127eb563c6609682619a353a5e9536d8fc6334700069e72c5",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        122.2,
+        148.74
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.5",
+      "name": "Development of great-vessel and positional anomalies",
+      "nameKey": "development of great-vessel and positional anomalies",
+      "sourceReferenceId": "nmc-2024-ref:4d6da4cc1317ef47b1af2644b046cab53e9500a461f8c091255efa323e2a2171",
+      "sourceBodySha256": "b4f9a11758e3099185edb9cdd7c2c7fc02ab4887b718dcde603611ffd1d9c407",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        148.74,
+        122.2,
+        194.1
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.6",
+      "name": "Great-vessel development",
+      "nameKey": "great-vessel development",
+      "sourceReferenceId": "nmc-2024-ref:d16477c090b3f238a5788b2d24992ab9867fbd76e0ad0620d4efddae4fc1953e",
+      "sourceBodySha256": "30f6e2e47004b01fe3fa72faf0a559c8737cd5967253b4be2798656f100ab9cb",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        194.1,
+        122.2,
+        226.5
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.7",
+      "name": "PA chest radiograph",
+      "nameKey": "pa chest radiograph",
+      "sourceReferenceId": "nmc-2024-ref:d6b2c435a14376fe61bf446258ae3e05016a1ce9c139e73ef6b130224b22644a",
+      "sourceBodySha256": "49f499d6a41780733cfd13cac821538bbc6184651532c7b9c8e32948ea05ba9c",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        226.5,
+        122.2,
+        261.48
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.8",
+      "name": "Barium swallow anatomy",
+      "nameKey": "barium swallow anatomy",
+      "sourceReferenceId": "nmc-2024-ref:8db929f26c797e149bf71881db6b14c12ea0227e9ae014b9df982494d1e60971",
+      "sourceBodySha256": "765a8730c7c2311d74e8d03b909a06716d3767d019b986bcf8d3793f0f4704c3",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        261.48,
+        122.2,
+        293.46
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN25.9",
+      "name": "Thoracic surface marking",
+      "nameKey": "thoracic surface marking",
+      "sourceReferenceId": "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5",
+      "sourceBodySha256": "21e47bfb2b3d496121b82154b67485df5cb64e2c51c28c8ac8beaeb19dc95e91",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        293.46,
+        122.2,
+        339.24
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.1",
+      "name": "Skull orientation",
+      "nameKey": "skull orientation",
+      "sourceReferenceId": "nmc-2024-ref:0b34e88fc8dde8481937d401e1a0c517302926d1d140e3f4ca8f90602b7d9fbc",
+      "sourceBodySha256": "d242554705b9cb733e8669a0d5120c6af8884cb393506d8897b61ad8a78575f5",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        356.82,
+        122.2,
+        384.9
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.2",
+      "name": "External skull views",
+      "nameKey": "external skull views",
+      "sourceReferenceId": "nmc-2024-ref:bce4b96de424ed243e34f6623894e4e41970952bd89573b17eeb42d9d72612a2",
+      "sourceBodySha256": "8c9638e00a9eccdf89927cae1889405fbb2d017c763075df45fd642f63a0509b",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        384.9,
+        122.2,
+        415.86
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.3",
+      "name": "Cranial fossae and foramina",
+      "nameKey": "cranial fossae and foramina",
+      "sourceReferenceId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d",
+      "sourceBodySha256": "b2c3ea234f768b827edd42e14f39514d61e89ff5da7893b0924e58d841572808",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        415.86,
+        122.2,
+        448.62
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.4",
+      "name": "Mandibular landmarks",
+      "nameKey": "mandibular landmarks",
+      "sourceReferenceId": "nmc-2024-ref:ed4f719e912a42534fb44f259a7cde221db796c6cdc892ba173c3409681b052f",
+      "sourceBodySha256": "02cf7e8caca66a2e5c544fef2d4f3785ff2e82c19252e21b295948fe0d405256",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        448.62,
+        122.2,
+        478.86
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.5",
+      "name": "Typical cervical vertebrae, atlas and axis",
+      "nameKey": "typical cervical vertebrae, atlas and axis",
+      "sourceReferenceId": "nmc-2024-ref:e7e25b3b3e212781bc48013a08704b18da909240b921702ff73efa8de8ccc079",
+      "sourceBodySha256": "9a5b0df42586706cc6282ecd115fb194293a604985567ec4dc89caf2677afaab",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        478.86,
+        122.2,
+        510.9
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.6",
+      "name": "Intramembranous ossification",
+      "nameKey": "intramembranous ossification",
+      "sourceReferenceId": "nmc-2024-ref:a96b25fbe1d48ef419e7905d53809f6c91d780589dcacc4c1642c6fe792a8e1f",
+      "sourceBodySha256": "c41c872a684f6181f96062f6c210993b7a57a52a109623dc77fb1d3a7fabc2cb",
+      "sourcePdfPage": 124,
+      "sourceRowBBox": [
+        51.2,
+        510.9,
+        122.2,
+        535.8
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    },
+    {
+      "code": "AN26.7",
+      "name": "Seventh cervical vertebra",
+      "nameKey": "seventh cervical vertebra",
+      "sourceReferenceId": "nmc-2024-ref:47048a8eb91a4d2949f3d312268197ba6fc5091b908b494205e20fe0d0a41630",
+      "sourceBodySha256": "7334cdc70e706e69810e95a3244d8600dbdb2cabbf8fa5b8ba9a9e361666e552",
+      "sourcePdfPage": 125,
+      "sourceRowBBox": [
+        51.2,
+        108.42,
+        121.6,
+        132.84
+      ],
+      "sourcePacket": "docs/evidence/2026-11-04-nmc-anatomy-thorax-skull-draft-tasks.json",
+      "mode": "performance-and-knowledge",
+      "reviewStatus": "not-reviewed",
+      "canonicalConceptId": null,
+      "objectiveVersionId": null,
+      "mappingAccepted": false
+    }
+  ]
+}
