@@ -1,3 +1,15 @@
+## NMC Pathology accepted, bound and registered — 2026-11-16T16:05Z
+
+- Writer: Claude, branch `feat/nmc-pathology-registry-20261116`.
+- Owner accepted batch v1. Receipt: `nmc-pathology-concepts-v1-20261116`, SHA-256 `7d0d54a6…6e4f`, accepted 2026-11-16T15:55:23Z, 167 items.
+- `docs/evidence/2026-11-16-nmc-pathology-objective-bindings-v1.json`: 221 objectives on 194 concepts (167 from receipts, 27 reused); pairs digest `dcfe7cdc…5b58` reproduced and tested.
+- Registry draft `@7`: all 221 added. Totals 542 objectives, 543 bindings, 452 concepts, 404 source-linked references.
+- New generic test checks every subject's binding file against its batch, receipt digest and the registry, so later subjects need no new test code.
+- Tests 1,700/1,700. No clinical review, learner activation or question import. `owner-api` redeploy still pending.
+- Subjects done: Physiology, Biochemistry, Pathology. Remaining: 16.
+
+---
+
 ## NMC Pathology concept batch v1 — 2026-11-16T15:45Z
 
 - Writer: Claude, branch `feat/nmc-pathology-concept-batch-20261116` from main `d9e847e`.
