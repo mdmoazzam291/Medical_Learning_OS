@@ -1,3 +1,11 @@
+## NMC Forensic Medicine concept batch v1 — 2026-11-16T18:40Z
+
+- `docs/evidence/2026-11-16-nmc-forensic-medicine-concept-batch-v1.json` (spec `ops/nmc/specs/forensic_medicine_concepts_v1.py`): 117 concepts (99 new; 18 reused), 175 objectives, all 157 recognised rows. FM2:12 (unresolved printed code) stays on the source-exception track. Law, ethics and procedure rows modelled as field or clinical-skill concepts. Non-synonym aliases removed. No clash with 1,072 production names.
+- Earlier batches rebuild byte-identically. Endpoint pin: commit `ecdd3ef`, SHA-256 `8d08d6db…5f3f`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Pharmacology accepted, bound and registered — 2026-11-16T18:05Z
 
 - Owner accepted batch v1. Receipt: `nmc-pharmacology-concepts-v1-20261116`, SHA-256 `8ec0f140…deaa`, accepted 2026-11-16T17:55:03Z, 93 items.
