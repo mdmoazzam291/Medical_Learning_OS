@@ -1,3 +1,11 @@
+## NMC Surgery concept batch v1 — 2026-11-16T21:50Z
+
+- `docs/evidence/2026-11-17-nmc-surgery-concept-batch-v1.json` (spec `ops/nmc/specs/surgery_concepts_v1.py`): 102 concepts (52 new; 50 reused, e.g. Shock, Burns, Blood transfusion, Informed consent, Breast cancer, Appendicitis), 125 objectives, all 121 recognised rows. SU24.1–24.3 and SU27.1–27.8 (no Topic 24/27 headings) stay on the source-exception track. No clash with 1,724 production names.
+- Endpoint pin: commit `9015375`, SHA-256 `9e44e027…0e70` (batch lists the held codes in `heldCodes`).
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC small clinical subjects objectives bound and in registry (draft @13) — 2026-11-16T21:15Z
 
 - Owner accepted `nmc-small-clinical-concepts-v1-20261116` at 2026-11-16T21:09:43Z (105 receipts; pairs digest `bfcf024d…ae2d` recomputed and matched). Receipt IDs in `ops/nmc/receipts/small-clinical-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-small-clinical-objective-bindings-v1.json` (128 concepts, 177 objectives).
