@@ -1,3 +1,15 @@
+## NMC source-exception official check — 2026-11-16T02:45Z
+
+- Writer: Claude, draft PR #421 from remote head `6a6a6da899f16eeef7a18732a3c5df53c605bdac` (remote re-verified after a pause; main still `55bae73`). Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-source-exception-official-check.json` covering the **18 editorial source exceptions** in `2026-11-13-nmc-source-exception-current-branch-checkpoint.json`. The 3 official dispositions (PY9.1, PE6.4, PS9.2) are unchanged.
+- **Aliases (7):** each printed form and its neighbours read in the official text — "14.1" (first BC Topic 14 row), "PA.29.1" (PA28.6→PA29.2), "MI 8." (MI8.2→MI8.4), "FM2:12" (FM2.11→FM2.13), "PS 2.1*" (PS1.3→PS3.1), "OR 2.2.9" (OR2.8→OR2.10), "ASS.4" (AS5.3→AS5.5). Each candidate is the only gap in its sequence: **supported, not accepted**.
+- **Surgery headings (11):** absence of Topic 24 and Topic 27 headings confirmed. "Pancreatic disorders" fits SU24; the SU27 group includes venous and lymphatic rows, so "Vascular and lymphatic disorders" would describe it more completely. Labels remain proposals.
+- **Draft-task scope (18):** 11 aligned; **7 held for mode** — SU24.3, SU27.1, SU27.4, SU27.6, SU27.7, OR2.9, AS5.4 are describe/discuss rows at KH with practical drafts; proposed mode is knowledge. Scope matches on all 18.
+- Correction: PY10.10 is an accepted-private canonical identity candidate (spinal cord transection patterns), not a source exception. Physiology packet note and two earlier handoff lines fixed; audit input hash refreshed, counts unchanged (2,607/2,607).
+- Next: owner decisions on the 7 aliases and 2 heading labels and the 12 + 7 pending holds; then the 12 canonical identity candidates.
+
+---
+
 ## NMC session-hold correction proposals — 2026-11-16T01:55Z
 
 - Writer: Claude, draft PR #421 from remote head `1bcfc3a51a0261a51cf7cb04feea72265a9887ea`. Ownership released after remote readback.
@@ -15,7 +27,7 @@
 - Final 14 Anatomy/Medicine references outside the original queue checked against the official NMC rows: **12 scope-aligned, 2 held** — `GM10.15` (official row is ABG indications and data interpretation; draft is sampling technique) and `GM24.1` (official row includes caloric-requirement calculation in illness; draft omits it). Historical provenance pointers from `2026-11-13-nmc-am-fourteen-evidence-reconciliation.json` are carried on each row.
 - **Audit: 2,607 of 2,607 indexed references linked to selected review evidence, 0 pending; `allSubjectsReviewed: true`.** This is editorial review coverage of the names-only index, not clinical, canonical or rights acceptance, and not full NMC curriculum coverage (source exceptions are a separate track).
 - This session's 19 packets (`docs/evidence/2026-11-16-nmc-*-source-scope-review-*.json`) reviewed **1,402** references: **1,389 scope-aligned, 13 held**. New holds: PA2.2, PA8.5, PA22.4, PA22.5, FM1.5, FM14.13, OG30.2, PY11.6, SU5.2, BC14.18, OR2.16, GM10.15, GM24.1. They are recorded in the packets only; the original 154-reference hold inventory is unchanged.
-- Source exceptions confirmed during the review and left in that track: SU24.1–SU24.3, SU27.1–SU27.8, PY9.1, PY10.10, BC14.1 ("14.1"), MI8.3 ("MI 8."), AS5.4 ("ASS.4"), OR2.9 ("OR 2.2.9"), PS2.1 and PS9.2.
+- Source exceptions confirmed during the review and left in that track: SU24.1–SU24.3, SU27.1–SU27.8, PY9.1, BC14.1 ("14.1"), MI8.3 ("MI 8."), AS5.4 ("ASS.4"), OR2.9 ("OR 2.2.9"), PS2.1 and PS9.2. (PY10.10, listed here earlier, is a canonical identity candidate, not a source exception.)
 - Changed: new `2026-11-16-nmc-anatomy-medicine-source-scope-review-fourteen.json`; audit input head updated; both generated audit outputs rewritten.
 - Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.
 - Limits for every 2026-11-16 packet: official text read through a web reader that quotes short rows and restates long ones; PDF bytes, the pinned SHA-256, source-body hashes, rendered pages and table-cell alignment were not verified; identity of the fetched file with the pinned PDF is assumed from title and date.
@@ -155,7 +167,7 @@
 
 - Writer: Claude, draft PR #421 from remote head `30da0fda37e5a9897e1977721f1d5fed522bee70`. Parent #415 and main unchanged. Ownership released after remote readback.
 - Reviewed all **131** PY references that lacked selected review evidence (PY1.1–PY12.10) against the official NMC 12-09-2024 CBME text: **130 scope-aligned, 1 held** — `PY11.6` (official row cells garbled as "K S P Y"; level unclear, draft mode practical; scope matches). Draft mode matches the official level on all other rows. Zero accepted corrections or mappings; original 154-hold inventory unchanged.
-- PY9.1 and PY10.10 are outside this review: they sit in the source-exception track, not the names-only index.
+- PY9.1 and PY10.10 are outside this review. PY9.1 is an official-replacement source exception; PY10.10 is an accepted-private canonical identity candidate (corrected 2026-11-16).
 - Audit now: **1,942 of 2,607 linked, 665 pending**. Largest remaining: Surgery 116, Pharmacology 92, Biochemistry 82, Microbiology 69, ENT 62, Ophthalmology 59.
 - Changed: new `docs/evidence/2026-11-16-nmc-physiology-source-scope-review-py1-py12.json`; audit input head updated; both generated audit outputs rewritten.
 - Verification: exact reference and packet joins; audit regenerated and re-verified; **1,666 npm tests pass**; `npm run check` passes.

@@ -7,7 +7,7 @@
   "accessedUtc": "2026-11-15",
   "verification": "Official NMC document text read through a web reader that quotes short rows and restates long rows. PDF bytes, the pinned SHA-256, sourceBodySha256 values, rendered pages and table-cell alignment were not independently verified. Identity of this file with the pinned source PDF is assumed from title and date, not proven. No source prose stored.",
   "modeRule": "Practical draft mode expected when the official level is SH or P; knowledge mode otherwise.",
-  "scope": "All 131 Physiology references that lacked selected review evidence at the checked head (PY1.1-PY12.10; PY4.12, PY5.16 and PY6.12 already reviewed; PY9.1 and PY10.10 sit in the separate source-exception track).",
+  "scope": "All 131 Physiology references that lacked selected review evidence at the checked head (PY1.1-PY12.10; PY4.12, PY5.16 and PY6.12 already reviewed; PY9.1 is an official-replacement source exception and PY10.10 is an accepted-private canonical identity candidate (spinal cord transection patterns)).",
   "counts": {
     "scope-aligned": 130,
     "held-source-scope": 1
@@ -16,7 +16,7 @@
     "PY11.6"
   ],
   "observations": [
-    "PY9.1 and PY10.10 appear in the official table and in docs/evidence/2026-11-09-nmc-source-exception-metadata-reconciliation.json, not in the names-only index; they belong to the separate source-exception track and are not reviewed here.",
+    "PY9.1 and PY10.10 are outside the names-only index. PY9.1 is an official-replacement source exception (2026-11-13-nmc-source-exception-current-branch-checkpoint.json). PY10.10 is one of the 12 accepted-private canonical identity candidates (2026-11-12-nmc-full-index-coverage-and-canonical-candidates.json). Corrected 2026-11-16: an earlier version placed PY10.10 in the source-exception track.",
     "Topic 5 header states 3 certifiable competencies while rows PY5.14-PY5.16 show 3, 1 and 1."
   ],
   "limits": [
