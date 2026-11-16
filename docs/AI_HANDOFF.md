@@ -1,3 +1,13 @@
+## NMC owner decisions recorded — 2026-11-16T04:55Z
+
+- Writer: Claude, draft PR #421 from remote head `eb9d6a0fa6c777d498eeaf63dd83b40482c2aa34`. Ownership released after remote readback.
+- Owner approval: "Ok do necessary steps yourself i approve you" (09:13 IST). Recorded as owner editorial authority; no faculty or clinical review.
+- Wrote `docs/evidence/2026-11-16-nmc-owner-decisions.json` (204 decisions, one per ledger record) and `tests/nmc-owner-decisions.test.js`; DECISIONS.md entry added. Ledger and evidence packets unchanged.
+- Accepted: 170 objective revisions with `nmc-objrev:` IDs (154 earlier proposals, 9 session-hold proposals, 7 mode corrections); 7 search aliases; 2 grouping labels (SU27 widened to "Vascular and lymphatic disorders"); 15 spinal-cord links attested by owner; 7 printed totals annotated. Declined: optional PA22.4/22.5 practical mode. 6 instruction-style proposals (PE11.4, GM26.22, GM26.3, GM28.8, GM28.15, GM27.9) rewritten as final objectives before acceptance. 7 practical modes at KH/K carry documented exceptions.
+- Not done (outside the approval): merge of PR #421, production/DB writes, learner publication, Admin-console attestation receipts.
+
+---
+
 ## NMC printed-count audit and held-proposal reworks — 2026-11-16T04:30Z
 
 - Writer: Claude, draft PR #421 from remote head `ac8e5c3844fee3b38b789146d12577c6e197736d`. Ownership released after remote readback.

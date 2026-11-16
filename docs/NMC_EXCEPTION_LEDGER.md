@@ -47,9 +47,13 @@ No row was created, filled or removed to make counts agree; numbering gaps are r
 
 `docs/evidence/2026-11-16-nmc-held-proposal-reworks.json` drafts reworked wording for GM26.5 (all listed tests, knowledge mode), GM6.15 (pathogenesis and management only), GM16.10 (identification only), GM13.16 (knowledge mode to match KH) and GM3.16 (all row elements, no added disease context). All five remain **held** until owner/faculty decision; GM3.16 also needs source interpretation.
 
+## Owner decisions (16 Nov, owner approval)
+
+`docs/evidence/2026-11-16-nmc-owner-decisions.json` records one decision per ledger record under the owner's approval: 170 objective revisions accepted, 7 aliases, 2 labels, 15 spinal-cord links attested, 7 printed totals annotated, 2 optional proposals declined, 1 no-action. The ledger dispositions above remain the pre-decision history. Faculty/clinical review, Admin-console receipts, merge and publication are still outstanding.
+
 ## Remaining actions
 
-1. Owner/faculty decisions on 173 proposed items, recorded as versioned revisions.
-2. Rework the 5 held earlier proposals; resolve the 16 other holds.
+1. Done 16 Nov: owner decisions recorded. Optional: faculty/clinical review of the 170 accepted revisions.
+2. Admin-console attestation for the 15 spinal-cord links; merge and publication need separate explicit approval.
 3. Record the Paediatrics heading total as a source inconsistency in any learner-facing count.
 4. Decide whether to report the printed-total inconsistencies to NMC or simply annotate them.
