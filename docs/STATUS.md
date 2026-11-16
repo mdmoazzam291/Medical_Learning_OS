@@ -1,3 +1,16 @@
+## NMC exception ledger — 2026-11-16T04:10Z
+
+- Writer: Claude, draft PR #421 from remote head `6fcde1902bea5011fa8850fd824a9349456938fb` (open, draft, base #415 branch; main `55bae73` unchanged). Ownership released after remote readback.
+- Owner instruction: treat 9 + 7 + 7 + 2 + 15 + 153 items and the Paediatrics total as a historical exception inventory; no modification, merge or publication.
+- Wrote `docs/evidence/2026-11-16-nmc-exception-ledger.json` (198 records, stable `nmc-exc:` IDs; original value, proposed value, pinned-PDF evidence, disposition, reason, reviewer, date, remaining action), `docs/NMC_EXCEPTION_LEDGER.md` and `tests/nmc-exception-ledger.test.js`. Private copy with official wording saved to Drive (`1EJ6WWVno8xSSmDiAjax5zdyJzCE2h20e`, size-verified).
+- Dispositions: verified 3 (PA22.4, PA22.5, Paediatrics total); superseded 1 (PY11.6); **held 21** (9 session, 7 exception mode, 5 earlier proposals: GM3.16, GM26.5, GM16.10, GM6.15, GM13.16); proposed 173 (149 earlier proposals, 15 links, 7 aliases, 2 labels). Duplicates 0; not found 0.
+- 154 earlier holds (153 proposals + GM3.16) checked in one auditable batch (official-term coverage 0.30 → 0.77, out-of-row terms, mode vs PDF level); all 44 flagged items read individually.
+- **Paediatrics 406 vs 253 resolved as a source inconsistency:** 253 by tables, text-layer code tokens and catalogue; the 32 printed per-topic counts sum to 253 and match row-by-topic (Topic 21 printed "(050"). Heading "Topics:35, Competencies: 406" confirmed on rendered p.329. No rows created.
+- Reviewer for all records: AI editorial check; no human or faculty review. Nothing accepted.
+- Next: owner/faculty decisions on 173 proposed items; rework the 5 held proposals; page-level review of other printed-total leads (medicine, surgery, OP, OG, ENT, OR).
+
+---
+
 ## NMC official-source ingestion — 2026-11-16T03:40Z
 
 - Writer: Claude, draft PR #421 from remote head `3ffbbff49c76eb30923c40aab6b7100da92540fb`. Ownership released after remote readback.
