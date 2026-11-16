@@ -1,6 +1,6 @@
 # NMC Foundation — Exception Ledger (16 November 2026)
 
-Historical exception inventory reconciled against draft PR #421 at `6fcde19` (main `55bae73`, unchanged). **Not authorization to modify, merge or publish.** No hold was removed to make counts agree. Full record: `docs/evidence/2026-11-16-nmc-exception-ledger.json` (198 records, stable `nmc-exc:` IDs). Official wording is kept in the private Drive copy only (`exception-ledger-v1-20261116-with-official-wording.json`, Drive ID `1EJ6WWVno8xSSmDiAjax5zdyJzCE2h20e`, 552,314 bytes, size-verified). Draft-task text in this ledger already exists in committed repo packets; no new official wording is published.
+Historical exception inventory reconciled against draft PR #421 at `6fcde19` (main `55bae73`, unchanged). **Not authorization to modify, merge or publish.** No hold was removed to make counts agree. Full record: `docs/evidence/2026-11-16-nmc-exception-ledger.json` (204 records after the 16 Nov update; 198 at first issue, stable `nmc-exc:` IDs). Official wording is kept in the private Drive copy only (`exception-ledger-v1-20261116-with-official-wording.json`, Drive ID `1EJ6WWVno8xSSmDiAjax5zdyJzCE2h20e`, 552,314 bytes, size-verified). Draft-task text in this ledger already exists in committed repo packets; no new official wording is published.
 
 Reviewer for every record: Claude, AI editorial check against the pinned PDF (SHA `aa601690…`). No human or faculty review has occurred.
 
@@ -27,13 +27,29 @@ Count notes: the inventory listed 153 earlier proposals; the repo holds 154 refe
 - **Earlier correction proposals (154):** reviewed in one auditable batch (term coverage of the official row, terms outside the row, mode against PDF level), then all 44 flagged items read individually. 149 proposed, 5 held. Mean official-term coverage rose from 0.30 (original drafts) to 0.77 (revised). Six proposals are written as amendment instructions rather than final objective text (PE11.4, GM26.22, GM26.3, GM27.9, GM28.8, plus held GM26.5).
 - **Paediatrics printed total (verified):** heading prints "Topics:35, Competencies: 406" (PDF p.329, rendered check). Three reproducible counts give 253 rows (tables, text-layer code tokens, catalogue); the 32 printed topic headings each state a count, and those counts sum to 253 and match row-by-topic (Topic 21 prints "(050", read as 5). The heading total is internally inconsistent; no competencies are missing and none are created.
 
-## Other printed-total leads (not resolved)
+## Printed-total audit (resolved as source inconsistencies, 16 Nov update)
 
-A per-topic count check on medicine, surgery, ophthalmology, OG, ENT and orthopaedics shows smaller differences (e.g. medicine Topics 8, 9, 14, 27; ENT Topic 3). Some come from headings the text pattern did not capture; they need page-level review before any conclusion.
+`docs/evidence/2026-11-16-nmc-printed-count-audit.json` compares each subject heading total, the per-topic printed counts and the table rows. Six more ledger records (verified) were added; the ledger now has 204 records.
+
+| Subject | Heading total | Per-topic sum | Table rows | Cause |
+|---|---|---|---|---|
+| Medicine | 525 | 531 | 532 (529 codes) | GM8.9 never printed (8.8 → 8.10, p.295); Topic 9 prints 21 for 17 codes; Topic 27 prints 15 for 18; GM9.8, GM14.1, GM14.2 printed twice |
+| Surgery | 133 (30 topics) | 122 | 132 | Topics 24 and 27 unheaded (10 rows); SU26.2 never printed (26.1 → 26.3, p.409); SU27.1 counted under Topic 26 |
+| Ophthalmology | 60 | 59 | 59 | Heading total off by one |
+| OG | 141 | 137 + 5 uncounted | 142 | Topic 22 unnumbered; Topic 33 prints no count |
+| ENT | 63 | 61 | 63 | Topic 3 prints 1 for 3 rows |
+| Orthopaedics | 40 | 39 | 40 | Topic 14 prints 3 for 4 rows |
+| Paediatrics | 406 (35 topics) | 253 | 253 | Heading total inconsistent with body |
+
+No row was created, filled or removed to make counts agree; numbering gaps are recorded, not filled.
+
+## Held-proposal reworks (16 Nov update)
+
+`docs/evidence/2026-11-16-nmc-held-proposal-reworks.json` drafts reworked wording for GM26.5 (all listed tests, knowledge mode), GM6.15 (pathogenesis and management only), GM16.10 (identification only), GM13.16 (knowledge mode to match KH) and GM3.16 (all row elements, no added disease context). All five remain **held** until owner/faculty decision; GM3.16 also needs source interpretation.
 
 ## Remaining actions
 
 1. Owner/faculty decisions on 173 proposed items, recorded as versioned revisions.
 2. Rework the 5 held earlier proposals; resolve the 16 other holds.
 3. Record the Paediatrics heading total as a source inconsistency in any learner-facing count.
-4. Investigate the other printed-total leads page by page.
+4. Decide whether to report the printed-total inconsistencies to NMC or simply annotate them.

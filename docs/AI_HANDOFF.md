@@ -1,3 +1,14 @@
+## NMC printed-count audit and held-proposal reworks — 2026-11-16T04:30Z
+
+- Writer: Claude, draft PR #421 from remote head `ac8e5c3844fee3b38b789146d12577c6e197736d`. Ownership released after remote readback.
+- Wrote `docs/evidence/2026-11-16-nmc-printed-count-audit.json`: heading totals vs per-topic printed counts vs table rows for 8 subjects. Medicine 525/531/532 (GM8.9 never printed; Topic 9 and 27 printed counts wrong; 3 repeated codes); Surgery 133/122/132 (Topics 24, 27 unheaded; SU26.2 never printed; SU27.1 under Topic 26); OP 60/59/59; OG 141/137+5/142; ENT 63/61/63; OR 40/39/40; Radiology consistent. Gaps confirmed on rendered pp.295, 409. No rows created or removed.
+- Added 6 verified `printed-total-discrepancy` records to the exception ledger (now 204 records).
+- Wrote `docs/evidence/2026-11-16-nmc-held-proposal-reworks.json`: reworked drafts for the 5 held earlier proposals (GM26.5, GM6.15, GM16.10, GM13.16, GM3.16), attached to their ledger records; all remain held.
+- Private ledger v1.1 with official wording saved to Drive (`1sM5AncXlHTvdWELXf4TGgvhkV6xbE3Ec`, 564,025 bytes, size-verified).
+- Next: owner/faculty decisions only (173 proposed, 21 held incl. 5 reworked).
+
+---
+
 ## NMC exception ledger — 2026-11-16T04:10Z
 
 - Writer: Claude, draft PR #421 from remote head `6fcde1902bea5011fa8850fd824a9349456938fb` (open, draft, base #415 branch; main `55bae73` unchanged). Ownership released after remote readback.

@@ -1,0 +1,95 @@
+{
+ "schemaVersion": 1,
+ "date": "2026-11-16",
+ "status": "draft-reworks-not-accepted",
+ "holdsRemain": true,
+ "scope": "Reworked proposals for the 5 earlier correction proposals held in the exception ledger. Written to the pinned PDF row; no scope added.",
+ "reviewer": "Claude (AI editorial draft); no human or faculty review",
+ "records": [
+  {
+   "ledgerId": "nmc-exc:ff114582ff21862b",
+   "code": "GM26.5",
+   "referenceId": "nmc-2024-ref:bb48bc5db6c64dc82148624020ff3f1229a7def5471c99979b876ad93d5b4332",
+   "pdfPages": [
+    319
+   ],
+   "level": "KH",
+   "domain": "K",
+   "priorProposal": {
+    "draftTask": "Retain ordering and interpretation, including differential count, urine sediment, distinct culture and sputum tests, CSF, pleural and other body fluid analysis, and the source's generic stool item. Preserve K/KH and suggested OSCE."
+   },
+   "reworkedDraftTask": "Using supplied results, describe how to order, on the basis of the differential diagnosis, and interpret: CBC with differential, blood biochemistry, peripheral smear, urinalysis with sediment, chest X-ray, blood and urine cultures, sputum Gram stain and culture, sputum AFB and culture, CSF analysis, pleural and other body fluid analysis, and stool examination.",
+   "reworkedMode": "knowledge",
+   "rationale": "Lists every test the row names; mode follows the PDF level KH; drops the editing-instruction text.",
+   "correctionAccepted": false
+  },
+  {
+   "ledgerId": "nmc-exc:05f1a371f2fe41c7",
+   "code": "GM3.16",
+   "referenceId": "nmc-2024-ref:eb813800ee4c324506853d02a67217c7d2e929e50d7da2d290ca26dcc9de1293",
+   "pdfPages": [
+    287
+   ],
+   "level": "SH",
+   "domain": "S",
+   "priorProposal": {
+    "draftTask": "In a simulated pneumonia case, select and write an initial empirical antimicrobial prescription and explain the choice using pharmacology and spectrum. When given culture and susceptibility results, explain whether the initial choice should be retained or revised and justify the decision."
+   },
+   "reworkedDraftTask": "In a simulated case, select and prescribe an appropriate empirical antimicrobial, describing the choice in terms of its pharmacology and antimicrobial spectrum, and revise the prescription when culture and sensitivity results are supplied.",
+   "reworkedMode": "performance-and-knowledge",
+   "rationale": "Keeps every element of the row without adding a disease context; the row's combination of \"empirical\" and \"based on culture and sensitivity\" still needs owner/faculty interpretation, so the hold remains.",
+   "correctionAccepted": false
+  },
+  {
+   "ledgerId": "nmc-exc:638c05701279297f",
+   "code": "GM13.16",
+   "referenceId": "nmc-2024-ref:4973f120f2b81a63f10da33b7b8e3d6eedc7a9a509ebd4188342d2c0a539ea4e",
+   "pdfPages": [
+    303
+   ],
+   "level": "KH",
+   "domain": "A/C",
+   "priorProposal": {
+    "draftTask": "Explain how patient needs and preferences inform choices about curative and palliative therapy."
+   },
+   "reworkedDraftTask": "Using a supplied case, explain how the patient's needs and preferences shape the choice between curative and palliative therapy.",
+   "reworkedMode": "knowledge",
+   "rationale": "PDF level is KH; wording and mode now agree. If the owner wants a communication station instead, the mode must be documented as an exception.",
+   "correctionAccepted": false
+  },
+  {
+   "ledgerId": "nmc-exc:27aefdda66a45a53",
+   "code": "GM6.15",
+   "referenceId": "nmc-2024-ref:c3690432d983dba2387c00f17424435e5e856bbf9cdd0f11107a0ab7ad9f237e",
+   "pdfPages": [
+    293
+   ],
+   "level": "KH",
+   "domain": "K",
+   "priorProposal": {
+    "draftTask": "Explain IRIS pathogenesis and outline its management principles using a supplied scenario, distinguishing the syndrome from plausible mimics when appropriate."
+   },
+   "reworkedDraftTask": "Discuss the pathogenesis of immune reconstitution inflammatory syndrome (IRIS) and describe its management.",
+   "reworkedMode": "knowledge",
+   "rationale": "Matches the row (pathogenesis and management); removes the distinguishing-from-mimics extension.",
+   "correctionAccepted": false
+  },
+  {
+   "ledgerId": "nmc-exc:90a575c3e5d54cf9",
+   "code": "GM16.10",
+   "referenceId": "nmc-2024-ref:bc74fbf5971990dbc9ccde914643b0563c33efceeb50df2c8570bc6988f9fea8",
+   "pdfPages": [
+    308
+   ],
+   "level": "SH",
+   "domain": "S",
+   "priorProposal": {
+    "draftTask": "In a supervised teaching exercise using a supplied hanging-drop specimen, identify findings consistent with the V. cholerae identification task and explain the limits of presumptive microscopy."
+   },
+   "reworkedDraftTask": "Identify Vibrio cholerae in a hanging-drop specimen under supervision.",
+   "reworkedMode": "performance-and-knowledge",
+   "rationale": "Matches the S/SH identification task; removes the added explanation of microscopy limits.",
+   "correctionAccepted": false
+  }
+ ]
+}

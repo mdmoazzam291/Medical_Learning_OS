@@ -22,7 +22,7 @@
   ],
   "byDisposition": {
    "held": 21,
-   "verified": 3,
+   "verified": 9,
    "superseded": 1,
    "proposed": 173
   },
@@ -33,7 +33,7 @@
    "surgery-topic-label": 2,
    "spinal-cord-identity-link": 15,
    "earlier-correction-proposal": 154,
-   "printed-total-discrepancy": 1
+   "printed-total-discrepancy": 7
   },
   "byCategoryDisposition": {
    "session-review-hold|held": 9,
@@ -45,13 +45,19 @@
    "spinal-cord-identity-link|proposed": 15,
    "earlier-correction-proposal|proposed": 149,
    "earlier-correction-proposal|held": 5,
-   "printed-total-discrepancy|verified": 1
+   "printed-total-discrepancy|verified": 7
   },
   "reconciliation": {
    "alreadyResolved": [
     "PA22.4",
     "PA22.5",
-    "PEDIATRICS"
+    "PEDIATRICS",
+    "MEDICINE",
+    "SURGERY",
+    "OPHTHALMOLOGY",
+    "OBSTETRICS-GYNAECOLOGY",
+    "ENT",
+    "ORTHOPAEDICS"
    ],
    "superseded": [
     "PY11.6"
@@ -5400,7 +5406,7 @@
    "reason": "Pinned PDF level is KH (domain K) but the draft mode is practical; the amendment note itself says to preserve K/KH. Revised text is an editing instruction and omits listed tests from the row.",
    "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
    "reviewDate": "2026-11-16",
-   "remainingAction": "Rework the proposal, then owner/faculty decision; hold stays.",
+   "remainingAction": "Owner/faculty decision on the reworked proposal; hold stays until then.",
    "acceptedByOwner": false,
    "canonicalChanged": false,
    "published": false,
@@ -5432,7 +5438,12 @@
      "suggest"
     ]
    },
-   "editorialVerdict": "wording-refinement-proposed"
+   "editorialVerdict": "wording-refinement-proposed",
+   "reworkProposal": {
+    "draftTask": "Using supplied results, describe how to order, on the basis of the differential diagnosis, and interpret: CBC with differential, blood biochemistry, peripheral smear, urinalysis with sediment, chest X-ray, blood and urine cultures, sputum Gram stain and culture, sputum AFB and culture, CSF analysis, pleural and other body fluid analysis, and stool examination.",
+    "mode": "knowledge",
+    "file": "docs/evidence/2026-11-16-nmc-held-proposal-reworks.json"
+   }
   },
   {
    "ledgerId": "nmc-exc:f72f80f44a5e547f",
@@ -7713,7 +7724,7 @@
    "reason": "Official wording needs clarification (recorded source-wording-clarification-required); interpretation is a draft only.",
    "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
    "reviewDate": "2026-11-16",
-   "remainingAction": "Rework the proposal, then owner/faculty decision; hold stays.",
+   "remainingAction": "Owner/faculty decision on the reworked proposal after source interpretation; hold stays until then.",
    "acceptedByOwner": false,
    "canonicalChanged": false,
    "published": false,
@@ -7747,7 +7758,12 @@
      "write"
     ]
    },
-   "editorialVerdict": "source-clarification-required"
+   "editorialVerdict": "source-clarification-required",
+   "reworkProposal": {
+    "draftTask": "In a simulated case, select and prescribe an appropriate empirical antimicrobial, describing the choice in terms of its pharmacology and antimicrobial spectrum, and revise the prescription when culture and sensitivity results are supplied.",
+    "mode": "performance-and-knowledge",
+    "file": "docs/evidence/2026-11-16-nmc-held-proposal-reworks.json"
+   }
   },
   {
    "ledgerId": "nmc-exc:c4a628604d4f6597",
@@ -8932,7 +8948,7 @@
    "reason": "Draft mode is practical but the revised wording is an explanation task; mode and wording disagree.",
    "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
    "reviewDate": "2026-11-16",
-   "remainingAction": "Rework the proposal, then owner/faculty decision; hold stays.",
+   "remainingAction": "Owner/faculty decision on the reworked proposal; hold stays until then.",
    "acceptedByOwner": false,
    "canonicalChanged": false,
    "published": false,
@@ -8952,7 +8968,12 @@
      "inform"
     ]
    },
-   "editorialVerdict": "wording-refinement-proposed"
+   "editorialVerdict": "wording-refinement-proposed",
+   "reworkProposal": {
+    "draftTask": "Using a supplied case, explain how the patient's needs and preferences shape the choice between curative and palliative therapy.",
+    "mode": "knowledge",
+    "file": "docs/evidence/2026-11-16-nmc-held-proposal-reworks.json"
+   }
   },
   {
    "ledgerId": "nmc-exc:c61855d1523594a1",
@@ -12048,7 +12069,7 @@
    "reason": "Revised task adds distinguishing IRIS from mimics, which the official row does not name (scope extension).",
    "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
    "reviewDate": "2026-11-16",
-   "remainingAction": "Rework the proposal, then owner/faculty decision; hold stays.",
+   "remainingAction": "Owner/faculty decision on the reworked proposal; hold stays until then.",
    "acceptedByOwner": false,
    "canonicalChanged": false,
    "published": false,
@@ -12072,7 +12093,12 @@
      "syndrome"
     ]
    },
-   "editorialVerdict": "addresses-documented-gap"
+   "editorialVerdict": "addresses-documented-gap",
+   "reworkProposal": {
+    "draftTask": "Discuss the pathogenesis of immune reconstitution inflammatory syndrome (IRIS) and describe its management.",
+    "mode": "knowledge",
+    "file": "docs/evidence/2026-11-16-nmc-held-proposal-reworks.json"
+   }
   },
   {
    "ledgerId": "nmc-exc:7902e2649f2edca7",
@@ -12325,7 +12351,7 @@
    "reason": "Revised task adds explaining the limits of presumptive microscopy, which the official row does not ask for (scope extension).",
    "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
    "reviewDate": "2026-11-16",
-   "remainingAction": "Rework the proposal, then owner/faculty decision; hold stays.",
+   "remainingAction": "Owner/faculty decision on the reworked proposal; hold stays until then.",
    "acceptedByOwner": false,
    "canonicalChanged": false,
    "published": false,
@@ -12357,7 +12383,12 @@
      "teach"
     ]
    },
-   "editorialVerdict": "wording-refinement-proposed"
+   "editorialVerdict": "wording-refinement-proposed",
+   "reworkProposal": {
+    "draftTask": "Identify Vibrio cholerae in a hanging-drop specimen under supervision.",
+    "mode": "performance-and-knowledge",
+    "file": "docs/evidence/2026-11-16-nmc-held-proposal-reworks.json"
+   }
   },
   {
    "ledgerId": "nmc-exc:3bf035d87cf09fc2",
@@ -12596,6 +12627,240 @@
    "repoState": {
     "pr": 421,
     "headChecked": "6fcde1902bea5011fa8850fd824a9349456938fb",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:2a8d7f5ba1fee4ab",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "MEDICINE",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 29,
+    "headingCompetencies": 525,
+    "printedTopicCountSum": 531
+   },
+   "proposedValue": {
+    "tableRows": 532,
+    "distinctCodes": 529
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     281,
+     327
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 29 topics / 525 competencies; 29 topic headings; per-topic printed counts sum to 531; 532 table rows = 529 distinct codes + 3 repeated (GM9.8, GM14.1, GM14.2 printed twice). Topic 8 prints 19 but numbering skips GM8.9 (8.8 → 8.10, rendered p.295): 18 rows. Numbering gap, not a missing row. Topic 9 prints 21; rows GM9.1–GM9.17 are continuous with GM9.8 twice (18 rows, 17 codes). Printed count exceeds the numbered rows by 4. Topic 14 prints 14; 16 rows because GM14.1 and GM14.2 are printed twice; 14 distinct codes match. Topic 27 prints 15; rows GM27.1–GM27.18 are continuous (18). Printed count is 3 short. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:6cc59b940b2950ab",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "SURGERY",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 30,
+    "headingCompetencies": 133,
+    "printedTopicCountSum": 122
+   },
+   "proposedValue": {
+    "tableRows": 132,
+    "distinctCodes": 132
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     402,
+     412
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 30 topics / 133 competencies; 28 printed topic headings (Topics 24 and 27 unheaded); per-topic printed counts sum to 122 (Topic 1 printed \"Topic1:\" with count 03); 132 rows: 122 counted under printed headings (Topic 26's printed 4 covers SU26.1, SU26.3, SU26.4 and SU27.1) plus 10 under the unheaded Topics 24 (SU24.1-24.3) and 27 (SU27.2-27.8); 122 + 10 = 132. Topic 26 prints 4; numbering skips SU26.2 (26.1 → 26.3, rendered p.409) and SU27.1 is printed under the Topic 26 heading, so the printed 4 matches SU26.1, SU26.3, SU26.4 and SU27.1. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:3f568c20361af9e8",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "OPHTHALMOLOGY",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 10,
+    "headingCompetencies": 60,
+    "printedTopicCountSum": 59
+   },
+   "proposedValue": {
+    "tableRows": 59,
+    "distinctCodes": 59
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     414,
+     418
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 60; the 10 per-topic printed counts sum to 59 and match 59 rows topic by topic. Heading total off by one. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:3f34d19239597360",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "OBSTETRICS-GYNAECOLOGY",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 38,
+    "headingCompetencies": 141,
+    "printedTopicCountSum": 137
+   },
+   "proposedValue": {
+    "tableRows": 142,
+    "distinctCodes": 142
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     427,
+     442
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 38 topics / 141; 38 headings (Topic 22 printed as \"Topic: Vaginal discharge\" without a number; Topic 33 prints no competency count). Per-topic counts sum to 137 plus 5 rows under Topic 33 = 142 rows. Heading total off by one. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:1b11463435d11d96",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "ENT",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 4,
+    "headingCompetencies": 63,
+    "printedTopicCountSum": 61
+   },
+   "proposedValue": {
+    "tableRows": 63,
+    "distinctCodes": 63
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     420,
+     425
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 63 = 63 rows, but Topic 3 prints 1 while 3 rows (EN3.1–EN3.3) follow it; per-topic counts sum to 61. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
+    "onMain": false
+   }
+  },
+  {
+   "ledgerId": "nmc-exc:96e9e75bf88b27e7",
+   "category": "printed-total-discrepancy",
+   "referenceId": null,
+   "printedCode": "ORTHOPAEDICS",
+   "originalRecords": [
+    "docs/evidence/2026-11-16-nmc-competency-reconciliation.json",
+    "docs/evidence/2026-11-16-nmc-printed-count-audit.json"
+   ],
+   "originalValue": {
+    "headingTopics": 14,
+    "headingCompetencies": 40,
+    "printedTopicCountSum": 39
+   },
+   "proposedValue": {
+    "tableRows": 40,
+    "distinctCodes": 40
+   },
+   "sourceEvidence": {
+    "pdfPages": [
+     444,
+     450
+    ],
+    "method": "Topic headings and printed counts read from the pdftotext -layout text layer of the pinned PDF; rows from the 2,634-row table extraction grouped by code topic number; gaps and placements confirmed on rendered pages 295 and 409."
+   },
+   "disposition": "verified",
+   "reason": "Heading prints 40 = 40 rows, but Topic 14 prints 3 while 4 rows (OR14.1–OR14.4) follow it; per-topic counts sum to 39. Source inconsistency; no rows created or removed.",
+   "reviewer": "Claude (AI editorial check against pinned PDF); no human or faculty review",
+   "reviewDate": "2026-11-16",
+   "remainingAction": "Record as a source inconsistency in any learner-facing count; no data change.",
+   "acceptedByOwner": false,
+   "canonicalChanged": false,
+   "published": false,
+   "repoState": {
+    "pr": 421,
+    "headChecked": "ac8e5c3844fee3b38b789146d12577c6e197736d",
     "onMain": false
    }
   }
