@@ -1,3 +1,15 @@
+## NMC Physiology concept pilot and batch acceptance — 2026-11-16T10:00Z
+
+- Writer: Claude, branch `feat/nmc-physiology-concept-batch-20261116` from main `05857d1`.
+- Owner choices (14:45 IST): Physiology as the end-to-end pilot; build batch acceptance.
+- `docs/evidence/2026-11-16-nmc-physiology-concept-batch-v1.json` (builder `ops/nmc/build_concept_batch.py`, spec `ops/nmc/specs/physiology_concepts_v1.py`): 180 concepts (178 new, 2 reused accepted identities: Spinal cord pathways, Spinal cord transection patterns), 188 objectives, all 136 Physiology rows. Multi-entity rows split (e.g. PY6.6 into 7 concepts); practicals attach to the measured concept (e.g. Hb estimation on Haemoglobin); ECG rows merged into one concept. Depth follows the printed level (knows / knows-how / shows-how / performs). Objectives bind to concept IDs after acceptance via receipts.
+- Migration `20261116120000_admin_concept_batch_acceptance.sql`: `concept_batch_accept_v1` runs the existing `concept_draft_save_v1` + `concept_draft_accept_v1` per item in one transaction; immutable `content_concept_batch_acceptances` receipts; deterministic request IDs for exact replay. `scripts/concept-batch-db-check.js` (added to CI) passes against PostgreSQL 16 locally: admin-only, atomic rollback on identity conflict, replay, conflict on reuse, immutability, unchanged learner catalog, and the full Physiology batch (178 concepts) accepted in a fixture.
+- `nmc-admin-preview` function gains `GET /batch` and `POST /batch-accept` (batch pinned to commit `e2e5a27`, SHA-256 `bb6882e4…2b8c`); Admin screen `web/nmc-concept-batch-review.js`.
+- Not yet done (needs owner approval): applying the migration to staging and production, redeploying `nmc-admin-preview`, merging. Applying the migration was blocked by a permission check in this session.
+- Tests 1,691/1,691; check passed.
+
+---
+
 ## NMC interim AI review and Admin-only learner preview — 2026-11-16T09:20Z
 
 - Writer: Claude, branch `feat/nmc-admin-learner-preview-20261116` from main `883428b` plus the #422 documentation commit.

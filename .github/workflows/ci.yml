@@ -46,6 +46,8 @@ jobs:
           node tests/hosted-syllabus-baseline-negative.mjs --hosted
       - name: Verify immutable concept draft persistence
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-drafts-db-check.js
+      - name: Verify atomic concept batch acceptance
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-batch-db-check.js
       - name: Verify immutable private syllabus checklist proposals
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/syllabus-baseline-db-check.js
       - name: Verify protected medical relationship registry against isolated PostgreSQL

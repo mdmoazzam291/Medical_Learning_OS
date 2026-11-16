@@ -376,6 +376,7 @@ function dashboardMarkup(data) {
     <section id="owner-foundation" class="panel" data-admin-panel="foundation" hidden aria-label="NMC Foundation">
       <section id="owner-foundation-objectives" class="concept-editor" aria-label="NMC Foundation draft review"></section>
       <section id="owner-learner-preview" class="concept-editor" aria-label="NMC objectives learner preview (Admin only)"></section>
+      <section id="owner-concept-batch" class="concept-editor" aria-label="Canonical concept batch review"></section>
     </section>
 
     <section id="owner-coverage" class="panel" data-admin-panel="coverage" hidden aria-label="Content Inventory">
