@@ -1,3 +1,13 @@
+## NMC Microbiology concept batch v1 — 2026-11-16T16:40Z
+
+- Writer: Claude, branch `feat/nmc-microbiology-concept-batch-20261116`.
+- `docs/evidence/2026-11-16-nmc-microbiology-concept-batch-v1.json` (spec `ops/nmc/specs/microbiology_concepts_v1.py`): 72 concepts (54 new; 18 reused accepted identities), 89 objectives, all 73 recognised rows. "MI 8." (unresolved printed code) stays on the source-exception track.
+- Ambiguous aliases removed before acceptance ("AST", "RTI"). Production name check: no clash with 783 existing names.
+- Earlier batches rebuild byte-identically. Endpoint pin changed to commit `370bf4e`, SHA-256 `145141e3…5c20`. New generic batch test covers every non-Physiology subject batch. Tests 1,701/1,701.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Pathology accepted, bound and registered — 2026-11-16T16:05Z
 
 - Writer: Claude, branch `feat/nmc-pathology-registry-20261116`.

@@ -110,3 +110,22 @@ test('Pathology batch v1 covers every recognised Pathology row and reuses accept
  assert.equal(new Set(names).size,names.length);
  assert.ok(!names.includes('blood components'));
 });
+
+test('every non-Physiology subject batch covers its recognised rows, reuses accepted IDs exactly and has unique new names',async()=>{
+ const {readdirSync}=await import('node:fs');
+ const dir=new URL('../docs/evidence/',import.meta.url);
+ const cat=JSON.parse(readFileSync(new URL('../data/nmc-reference-catalogue.json',import.meta.url)));
+ const accepted=new Set();
+ for(const f of readdirSync(dir).filter(f=>/-objective-bindings-v\d+\.json$/.test(f)))for(const c of JSON.parse(readFileSync(new URL(f,dir))).concepts)accepted.add(c.conceptId);
+ const files=readdirSync(dir).filter(f=>/^2026-11-\d\d-nmc-[a-z-]+-concept-batch-v\d+\.json$/.test(f)&&!f.includes('physiology'));
+ assert.ok(files.length>=3);
+ for(const f of files){
+  const b=validateBatch(JSON.parse(readFileSync(new URL(f,dir))));
+  assert.equal(b.learnerActivation,false,f);assert.equal(b.clinicalApproval,false,f);
+  const rows=cat.references.filter(r=>r.subjectId===b.subjectId&&r.identifierState==='standard'&&!r.amendmentNotice).map(r=>r.referenceId).sort();
+  assert.deepEqual([...new Set(b.objectives.map(o=>o.referenceId))].sort(),rows,f);
+  for(const c of b.concepts){assert.deepEqual(c.document.classification.subjects,[b.subjectId],f);if(c.existingConceptId)assert.ok(accepted.has(c.existingConceptId),f+' '+c.document.label);}
+  const names=b.concepts.filter(c=>!c.existingConceptId).flatMap(c=>[c.document.label,...c.document.aliases].map(x=>x.toLowerCase()));
+  assert.equal(new Set(names).size,names.length,f);
+ }
+});
