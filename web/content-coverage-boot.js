@@ -1,5 +1,6 @@
 import {mountFoundationReview} from '/web/nmc-foundation-review.js';
 import {mountLearnerPreview} from '/web/nmc-admin-learner-preview.js';
+import {mountBatchReview} from '/web/nmc-concept-batch-review.js';
 import {mountConceptDraftEditor} from '/web/concept-draft-editor.js';
 import {mountSyllabusBaselineEditor} from '/web/syllabus-baseline-editor.js';
 import {createSupabaseAuth} from '/src/adapters/supabase-auth.js';
@@ -21,6 +22,7 @@ function enhance(){
  reconcile('#owner-coverage-body',root=>mountCoverage({root,loadPage:filters=>owner.contentCoverage(filters)}));
  reconcile('#owner-concept-editor',root=>mountConceptDraftEditor({root,inspect:input=>owner.conceptDrafts(input),save:input=>owner.saveConceptDraft(input),accept:input=>owner.acceptConceptDraft(input)}));
  reconcile('#owner-syllabus-baselines',root=>mountSyllabusBaselineEditor({root,inspect:input=>owner.syllabusBaselineDrafts(input),save:input=>owner.saveSyllabusBaselineDraft(input),preflight:input=>owner.syllabusReviewPreflight(input)}));
+ reconcile('#owner-concept-batch',root=>mountBatchReview({root,load:()=>owner.conceptBatch(),accept:input=>owner.acceptConceptBatch(input),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
  reconcile('#owner-learner-preview',root=>mountLearnerPreview({root,load:filters=>owner.adminLearnerPreview(filters),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
  reconcile('#owner-foundation-objectives',root=>mountFoundationReview({root,load:filters=>owner.foundationObjectiveDrafts(filters),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
 }

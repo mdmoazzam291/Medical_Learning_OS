@@ -123,6 +123,9 @@
     "cloudflare",
     "supabase"
   ],
+  "scripts/concept-batch-db-check.js": [
+    "supabase"
+  ],
   "scripts/concept-drafts-db-check.js": [
     "supabase"
   ],
@@ -700,6 +703,9 @@
     "supabase"
   ],
   "supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261116120000_admin_concept_batch_acceptance.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [

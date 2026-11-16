@@ -2,9 +2,13 @@
 // Reads commit-pinned, checksum-verified preview data; never writes; never visible to learners.
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { validatePreviewData, parsePreviewFilters, previewPage } from "../../../src/domain/nmc-admin-learner-preview.js";
+import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput } from "../../../src/domain/nmc-concept-batch.js";
 
 const DATA_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/373e1f089f9a75f0cd0bbf2cd4bf7c4b39e34e4b/data/nmc-admin-learner-preview.json";
 const DATA_SHA256 = "f23158c802cc4a8713caa64b873494d1abb51a01177c1b3eb4b352c13ccad47b";
+
+const BATCH_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/e2e5a27a0816baf353a3366a56bbc55b60e88da0/docs/evidence/2026-11-16-nmc-physiology-concept-batch-v1.json";
+const BATCH_SHA256 = "bb6882e44e682904b87d3b2d238133fb77e4a7b65eea3241b53ed3ece7e32b8c";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -28,7 +32,7 @@ function cors(req: Request) {
   return {
     ...(origin && allowedOrigins.has(origin) ? { "Access-Control-Allow-Origin": origin } : {}),
     "Access-Control-Allow-Headers": "authorization, apikey, content-type",
-    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin"
   };
@@ -49,16 +53,31 @@ async function runtimeAccess(admin: any, token: string, userId: string) {
   } catch { return { allowed: false, reason: "session_claim_invalid" }; }
 }
 
-let cached: any = null;
-async function previewData() {
-  if (cached) return cached;
-  const res = await fetch(DATA_URL, { headers: { "User-Agent": "medical-learning-os-nmc-admin-preview" } });
-  if (!res.ok) fail(503, "preview_data_unavailable");
+const cache = new Map<string, any>();
+async function pinnedJson(url: string, sha: string, validate: (x: any) => any) {
+  if (cache.has(url)) return cache.get(url);
+  const res = await fetch(url, { headers: { "User-Agent": "medical-learning-os-nmc-admin-preview" } });
+  if (!res.ok) fail(503, "pinned_data_unavailable");
   const bytes = new Uint8Array(await res.arrayBuffer());
   const digest = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes))).map((b) => b.toString(16).padStart(2, "0")).join("");
-  if (digest !== DATA_SHA256) fail(503, "preview_data_checksum_mismatch");
-  try { cached = validatePreviewData(JSON.parse(new TextDecoder().decode(bytes))); } catch { fail(503, "preview_data_invalid"); }
-  return cached;
+  if (digest !== sha) fail(503, "pinned_data_checksum_mismatch");
+  let value;
+  try { value = validate(JSON.parse(new TextDecoder().decode(bytes))); } catch { fail(503, "pinned_data_invalid"); }
+  cache.set(url, value);
+  return value;
+}
+const previewData = () => pinnedJson(DATA_URL, DATA_SHA256, validatePreviewData);
+const batchData = () => pinnedJson(BATCH_URL, BATCH_SHA256, validateBatch);
+function routePath(url: URL) {
+  const parts = url.pathname.split("/").filter(Boolean);
+  const i = parts.lastIndexOf("nmc-admin-preview");
+  return "/" + (i >= 0 ? parts.slice(i + 1) : []).join("/");
+}
+async function jsonBody(req: Request) {
+  if (!/^application\/json(?:\s*;|$)/i.test(req.headers.get("content-type") || "")) fail(415, "json_required");
+  const text = await req.text();
+  if (new TextEncoder().encode(text).byteLength > 8192) fail(413, "body_too_large");
+  try { return JSON.parse(text); } catch { fail(400, "invalid_json"); }
 }
 
 Deno.serve(async (req: Request) => {
@@ -66,7 +85,7 @@ Deno.serve(async (req: Request) => {
     const origin = req.headers.get("origin");
     if (origin && !allowedOrigins.has(origin)) fail(403, "origin_not_allowed");
     if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) });
-    if (req.method !== "GET") fail(405, "method_not_allowed");
+    if (req.method !== "GET" && req.method !== "POST") fail(405, "method_not_allowed");
     if (!supabaseUrl || !publishableKey || !secretKey) fail(500, "server_configuration_error");
     const authorization = req.headers.get("authorization") || "";
     if (!authorization.startsWith("Bearer ")) fail(401, "unauthorized");
@@ -82,6 +101,25 @@ Deno.serve(async (req: Request) => {
     if (role.error) fail(500, "owner_authz_unavailable");
     if ((role.data as any)?.isAdmin !== true) fail(403, "content_admin_required");
     const url = new URL(req.url);
+    const path = routePath(url);
+    if (path === "/batch" && req.method === "GET") {
+      const batch = await batchData();
+      const { data: done, error } = await admin.from("content_concept_batch_acceptances").select("batch_id,accepted_at,item_count").eq("batch_id", batch.batchId).maybeSingle();
+      if (error) fail(503, "batch_state_unavailable");
+      return respond(req, 200, batchSummary(batch, done));
+    }
+    if (path === "/batch-accept" && req.method === "POST") {
+      const batch = await batchData();
+      let decision;
+      try { decision = parseAcceptRequest(await jsonBody(req), batch.batchId); } catch (e) { if (e instanceof ApiError) throw e; fail(400, "batch_accept_invalid"); }
+      const { data, error } = await admin.rpc("concept_batch_accept_v1", { p_actor: authData.user!.id, p_input: batchAcceptInput(batch, BATCH_SHA256, decision!) });
+      if (error) {
+        const code = String(error.message || "").match(/concept_[a-z_]+/)?.[0] || "batch_accept_failed";
+        fail(code === "content_admin_required" ? 403 : 409, code);
+      }
+      return respond(req, 200, data);
+    }
+    if (path !== "/" || req.method !== "GET") fail(404, "not_found");
     let filters;
     try {
       if ([...url.searchParams.keys()].some((k) => url.searchParams.getAll(k).length !== 1)) throw new Error();

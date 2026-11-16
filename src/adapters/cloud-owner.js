@@ -53,6 +53,8 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     syllabusReviewPreflight({baselineId,revision}) { return request('/syllabus-review-preflight/'+encodeURIComponent(baselineId)+'?revision='+encodeURIComponent(revision)); },
     acceptConceptDraft(input) { return request('/concept-draft-accept', {method: 'POST', body: input}); },
     contentCoverage(filters = {}) { return request('/content-coverage?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
+    conceptBatch() { return request('/batch', {fn: 'nmc-admin-preview'}); },
+    acceptConceptBatch(input) { return request('/batch-accept', {method: 'POST', body: input, fn: 'nmc-admin-preview'}); },
     adminLearnerPreview(filters = {}) { return request('?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null)), {fn: 'nmc-admin-preview'}); },
     foundationObjectiveDrafts(filters = {}) { return request('/foundation-objective-drafts?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
