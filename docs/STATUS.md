@@ -1,3 +1,11 @@
+## NMC spinal-cord link attestation record — 2026-11-16T08:40Z
+
+- Writer: Claude, branch `docs/nmc-link-attestation-record-20261116` from main `883428be91a029cfa9ef8200e5aea877b07c5df2` (#415 and #421 merged earlier today; all main checks and Cloudflare builds passed).
+- The Admin console has no link-attestation action: the NMC foundation review screen is read-only and its contract requires `acceptedMappings: 0`. The owner chose the repository record as the attestation of record; an amendment was added to `docs/evidence/2026-11-16-nmc-owner-decisions.json`. No login, database or code change.
+- Remaining: optional faculty/clinical review; learner publication only with explicit approval.
+
+---
+
 ## NMC owner decisions recorded — 2026-11-16T04:55Z
 
 - Writer: Claude, draft PR #421 from remote head `eb9d6a0fa6c777d498eeaf63dd83b40482c2aa34`. Ownership released after remote readback.
