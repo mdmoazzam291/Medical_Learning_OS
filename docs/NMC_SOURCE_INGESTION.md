@@ -8,7 +8,7 @@ Status: source-grounded extraction and reconciliation complete; nothing accepted
 |---|---|
 | Verified source-document manifest | `docs/evidence/2026-11-16-nmc-official-source-manifest.json` |
 | Subject-wise competency inventory (metadata, public) | `data/nmc-competency-source-metadata.json` (2,634 rows) |
-| Full-text machine-readable dataset (private) | Drive `07_Release/NMC_CBME_2024_Competency_Foundation_v1_20261116` (`COMPETENCIES.md` saved; `competencies.jsonl` pending, see below) |
+| Full-text machine-readable dataset (private) | Drive `07_Release/NMC_CBME_2024_Competency_Foundation_v1_20261116` (`COMPETENCIES.md` and the dataset in three volume parts) |
 | Source-page evidence | `pdfPages`, `printedPages`, `evidenceStatus`, `rowHashReproduced` per row |
 | Reconciliation report | `docs/evidence/2026-11-16-nmc-competency-reconciliation.json` and the section below |
 | Validation tests | `tests/nmc-source-ingestion.test.js` |
@@ -87,4 +87,6 @@ Full-text descriptions are stored only in this private Drive package. The public
 
 Saved and size-verified in `07_Release/NMC_CBME_2024_Competency_Foundation_v1_20261116` (folder `1C7zJK7t0pZhvXe9UPg7imdjDkxPTAd-k`): `COMPETENCIES.md`, `topics.jsonl`, `source-manifest.json`, `reconciliation.json`, `RECONCILIATION_AND_QUALITY.md`, `package-manifest.json`.
 
-**Not saved:** the original PDF (4.1 MB, for `02_Originals/Content/NMC_CBME_2024`, folder `16xBSjquHtMFTinZu2Wsep57EKLHAh5UN`) and `competencies.jsonl` (4.9 MB). Both exceed the session's 3.1 MB per-file connector limit. The package is not handoff-complete until they are saved.
+Dataset saved as three volume parts (concatenation is byte-identical to the 4.9 MB `competencies.jsonl`, SHA-256 `8d109b00…18c9`): `competencies-volume-I.jsonl` (1,139 rows, `13e5ad92…aeb5`), `competencies-volume-II.jsonl` (986 rows, `6a6de6c8…c8b`), `competencies-volume-III.jsonl` (509 rows, `068d92a4…c9`). Sizes verified on Drive.
+
+**Pending owner upload:** the original PDF (4.1 MB) into `02_Originals/Content/NMC_CBME_2024` (folder `16xBSjquHtMFTinZu2Wsep57EKLHAh5UN`); it exceeds the session's 3.1 MB per-file connector limit and was sent to the owner on 2026-11-16.

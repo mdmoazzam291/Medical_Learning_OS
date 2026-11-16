@@ -110,6 +110,27 @@
   "privateCopies": {
     "driveOriginalsFolderId": "16xBSjquHtMFTinZu2Wsep57EKLHAh5UN",
     "originalPdfSaved": false,
-    "reason": "4.1 MB exceeds the 3.1 MB per-file connector limit of this session; awaiting owner choice"
+    "reason": "4.1 MB exceeds the 3.1 MB per-file connector limit; sent to the owner for manual upload on 2026-11-16",
+    "datasetSavedAsVolumeParts": [
+      {
+        "name": "competencies-volume-I.jsonl",
+        "driveId": "1batSzIiPw_ys_BB2cKKuDn56D4kQylvb",
+        "rows": 1139,
+        "sha256": "13e5ad92034083ab12b7a2ee68f8256cea7a95f7b23bc474d1bc063f7b9faeb5"
+      },
+      {
+        "name": "competencies-volume-II.jsonl",
+        "driveId": "1R-YpJaXCotXwqhYGegVV5eF4GORdxO7A",
+        "rows": 986,
+        "sha256": "6a6de6c8b4ae5d81ab43888150fdb3b8e7f49f04943905fa11255a4076429c8b"
+      },
+      {
+        "name": "competencies-volume-III.jsonl",
+        "driveId": "1LTHMV14irRay3SJlu53bLDaey5R-iali",
+        "rows": 509,
+        "sha256": "068d92a45b46d253e81224825d291eeeee486fed05b8f5370fefb1600d5c1dc9"
+      }
+    ],
+    "concatenatedSha256": "8d109b00c10b14152bd0a13e53ce9bf3b9aad4ab7d4b4ce69bbe690c308818c9"
   }
 }
