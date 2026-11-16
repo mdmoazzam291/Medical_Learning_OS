@@ -1,3 +1,13 @@
+## NMC ENT and Ophthalmology combined concept batch v1 — 2026-11-16T19:50Z
+
+- Owner approved pairing small clinical subjects into one acceptance (00:57 IST).
+- Builder: `SUBJECTS` lets one batch cover several subjects (`subjectIds` on the batch); each concept still lists only evidenced subjects. Generic batch test updated. All earlier batches rebuild byte-identically.
+- `docs/evidence/2026-11-17-nmc-ent-ophthalmology-concept-batch-v1.json` (spec `ops/nmc/specs/ent_ophthalmology_concepts_v1.py`): 115 concepts (108 new; 7 reused), 129 objectives, all 122 rows (63 ENT, 59 Ophthalmology). Ambiguous and subtype aliases removed. No clash with 1,371 production names.
+- Endpoint pin: commit `aa0261b`, SHA-256 `767232d0…6c1b`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Community Medicine accepted, bound and registered — 2026-11-16T19:20Z
 
 - Owner accepted batch v1. Receipt: `nmc-community-medicine-concepts-v1-20261116` (builder date suffix is fixed at 20261116), SHA-256 `16d68cbd…0388`, accepted 2026-11-16T19:09:37Z, 87 items.
