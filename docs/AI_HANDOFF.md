@@ -1,3 +1,22 @@
+## NMC Physiology batch v3 accepted; objectives bound to concept IDs — 2026-11-16T13:40Z
+
+- Writer: Claude, branch `docs/nmc-batch-v3-deployed-20261116` (PR #426).
+- Owner confirmed the Admin screen served v3 and accepted it. Database receipt (read-only query): `nmc-physiology-concepts-v3-20261116`, SHA-256 `6a733f98…8f3f`, accepted 2026-11-16T13:29:02Z, 181 items. This also confirms the redeployed function works for an authenticated Admin.
+- `docs/evidence/2026-11-16-nmc-physiology-objective-bindings-v1.json` (builder `ops/nmc/bind_batch_objectives.py`, IDs in `ops/nmc/receipts/physiology-v3-concept-ids.txt`): all 191 objectives bound to 183 concept IDs (181 from receipts, 2 existing spinal-cord identities). The receipt key/ID pairs digest computed in the database (`051619d7…fc97`) is reproduced locally and checked by `tests/nmc-physiology-objective-bindings.test.js`. Identity digests remain in the database receipt.
+- Not done: the bindings are a repository record only. They are not yet in the objective registry (`data/nmc-learning-foundation-drafts.json`), which needs a depth/task vocabulary mapping, row boxes and a draft-version bump. No clinical review, no learner activation.
+- Next: decide the registry integration for Physiology objectives; fix the question subject fallback before the first question import; then objective ID on learning events.
+
+---
+
+## NMC Physiology batch v3 deployed and merged — 2026-11-16T13:25Z
+
+- Writer: Claude. Owner approved ("Next", 18:43 IST) the redeploy and merge.
+- `nmc-admin-preview` redeployed to production as version 4 with the v3 pin (commit `d2bc505`, SHA-256 `6a733f98…8f3f`); only the two batch pin constants changed. An unauthenticated request returned a client error, consistent with a booted function; an authenticated Admin load has not been observed.
+- PR #425 merged to main as `da16a8b` after check, browser, webkit and the Cloudflare build passed on head `d5a4ee1`.
+- Next: owner loads and accepts batch v3 in Admin → NMC Foundation → Canonical concept batch; then bind the 191 objectives from the receipts. Still deferred: question subject fallback before the first question import; objective ID on learning events; single subject tree.
+
+---
+
 ## NMC Physiology concept batch v3 — evidenced subjects only — 2026-11-16T11:55Z
 
 - Writer: Claude, branch `feat/nmc-physiology-concept-batch-v2-20261116` (PR #425), on top of `4e374e8`.
