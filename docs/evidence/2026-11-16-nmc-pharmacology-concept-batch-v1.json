@@ -1,0 +1,5515 @@
+{
+ "schemaVersion": 1,
+ "batchId": "nmc-pharmacology-concepts-v1-20261116",
+ "subjectId": "pharmacology",
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "status": "draft-batch-awaiting-admin-acceptance",
+ "attestation": "identity-and-classification-reviewed-not-medical-or-learner-release",
+ "counts": {
+  "concepts": 99,
+  "newConcepts": 93,
+  "reusedAcceptedIdentities": 6,
+  "objectives": 105,
+  "sourceRows": 92,
+  "umbrellas": 0,
+  "flagged": 33
+ },
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "conceptTypes": [
+  "structure",
+  "function",
+  "disorder",
+  "clinical-finding",
+  "investigation",
+  "clinical-skill",
+  "intervention",
+  "field"
+ ],
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:aa92e93d5ac988b9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.1 p.174 nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.1"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d154f86613204dd8",
+   "existingConceptId": null,
+   "document": {
+    "label": "Rational use of medicines",
+    "aliases": [
+     "Rational drug use"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.2 p.174 nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.2"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:36cd33c4fc1ea4b3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug nomenclature",
+    "aliases": [
+     "Drug names"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.3 p.174 nmc-2024-ref:e033d234b94d732098ce467f1f3855b93d40b45c376221265dcffefff1edf1fa",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.3"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c36b13c7b2858ee1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug formulations",
+    "aliases": [
+     "Dosage forms"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.4 p.174 nmc-2024-ref:d29161feb0271e8c336bbd7d4b08f3af1979a8c6fdcf1b9b701e7f6ab0f7c888",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:160ba1fcbd21c11b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Routes of drug administration",
+    "aliases": [
+     "Routes of administration"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.5 p.174 nmc-2024-ref:a53be6d2dee7cb1fa7e2cb1ca206aa673b7067a3b5ce1d10bfba6339cae799b1",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.5"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "anaesthesia"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:662ecf3860c921de",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacokinetics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.6 p.174 nmc-2024-ref:b11f518867f6d507acd79d76065ec3fe2d99706bca0803badff06161f33fea69",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:705cf9f43220af2d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacodynamics",
+    "aliases": [
+     "Mechanisms of drug action"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.7 p.174 nmc-2024-ref:1b681999780c031f430a829bfb6f62b3f1888862addf682b268ebbf013ced300; PH1.8 p.174 nmc-2024-ref:b67f8571b3040900c63e13613429430e79909d14155106a197f8be872c6ad708",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.7",
+    "PH1.8"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6a9c5f7e0cb201ff",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug combinations",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH 1.9 p.175 nmc-2024-ref:c141de8263681c6daada3e69229eba3dae8f1f26c7511497022e2624e55eac78",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH 1.9"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:be795f542424bd92",
+   "existingConceptId": null,
+   "document": {
+    "label": "Prescribing in special populations",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.10 p.175 nmc-2024-ref:013e69ca4231f02e5334eeda857dbac9ef38ebd2111bd9e410bca9bc8ef4b643; PH10.9 p.184 nmc-2024-ref:a216b95a3262aaf32f53ad901609ef6d7998a1525a97cc3b266e77c7e00ac543",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.10",
+    "PH10.9"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "pediatrics",
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:cc9e2bbf3245f75d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Adverse drug reactions",
+    "aliases": [
+     "ADR",
+     "Adverse drug events"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH 1.11 p.175 nmc-2024-ref:024daf5da54ad59f225f1247f5387f4d7fa07c4474eb923c950ea06e89b3812a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH 1.11"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:1499688a8cbd05a3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacovigilance",
+    "aliases": [
+     "Drug safety monitoring"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.12 p.175 nmc-2024-ref:a47aee4923baee757581de5742951e8d8fa5f0b7ae976f1941917b5cc0730be4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.12"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ce74e7f27c302870",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug interactions",
+    "aliases": [
+     "Drug-drug interactions"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH1.13 p.175 nmc-2024-ref:8e30581d749632fde1f73400b4c2de640548e55a52c6b765ff9522b0ab5ea915",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH1.13"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:281361c0dd76ef66",
+   "existingConceptId": null,
+   "document": {
+    "label": "Adrenergic drugs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.1 p.175 nmc-2024-ref:c66c5ee50405bfe3ca82059762b99a339b8d1ca304357e4d78f78ab8cba39834",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:99b597cb411d5057",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cholinergic drugs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.2 p.175 nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:bdd7f8c7aee01ba0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Vasopressors and inotropes",
+    "aliases": [
+     "Vasopressors"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH 2.3 p.175 nmc-2024-ref:ae62ddaac4d8a23d2394bdba6cf71361421d121e82c6ce7ebdc3bd940e1ce94a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH 2.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "anaesthesia"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:0ced29299c53cb16",
+   "existingConceptId": null,
+   "document": {
+    "label": "Skeletal muscle relaxants",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.4 p.176 nmc-2024-ref:9d947d528f49090dd76dda06cf7901cfad40d8b742f4e93bf6ca80dfca22abb4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "anaesthesia"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:81736bff120f5930",
+   "existingConceptId": null,
+   "document": {
+    "label": "Local anaesthetics",
+    "aliases": [
+     "Local anesthetics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.5 p.176 nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "anaesthesia",
+    "surgery"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3dbe7acc3e17bfb7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antihistamines",
+    "aliases": [
+     "H1 antihistamines"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.6 p.176 nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "dermatology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:8fd136891e9b07d7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Non-opioid analgesics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.7 p.176 nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:c1cb57baad15389c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antigout drugs",
+    "aliases": [
+     "Drugs for gout"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.8 p.176 nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:5ebb4f53eaa5926b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antirheumatic drugs",
+    "aliases": [
+     "DMARDs",
+     "Disease-modifying antirheumatic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.8 p.176 nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d721cab23f9e5416",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antimigraine drugs",
+    "aliases": [
+     "Drugs for migraine"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH2.8 p.176 nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH2.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:8e470a203d02f26f",
+   "existingConceptId": null,
+   "document": {
+    "label": "General anaesthetics",
+    "aliases": [
+     "General anesthetics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.1 p.176 nmc-2024-ref:96c281609dd41a6fac209980c6395d714a1013dcde8fe52ec4d904bbd1f36f19",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "anaesthesia"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:b9dcf001442400fb",
+   "existingConceptId": null,
+   "document": {
+    "label": "Sedative-hypnotics",
+    "aliases": [
+     "Sedatives and hypnotics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.2 p.176 nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "psychiatry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fe2412c49919d884",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiseizure medicines",
+    "aliases": [
+     "Antiepileptic drugs",
+     "Anticonvulsants"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.3 p.176 nmc-2024-ref:d10288a2e599aed54654eb79727a89a1154d912e0dcc3da2b3b404e4a36e18d6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9c690870ee49454d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Opioid analgesics",
+    "aliases": [
+     "Opioids"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.4 p.177 nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "anaesthesia",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:6719f141d983dc52",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antidepressants",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.5 p.177 nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "psychiatry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:cc3786ec26a49e60",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antipsychotics",
+    "aliases": [
+     "Neuroleptics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.5 p.177 nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "psychiatry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:6a3fb6b69528c64e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Anxiolytics",
+    "aliases": [
+     "Antianxiety drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.6 p.177 nmc-2024-ref:428c8d98219190b4af3594d849e1c22c68274cf3bdc5343e07ea254e05f153fc",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "psychiatry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:79ad4ff7ad4c6176",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiparkinsonian drugs",
+    "aliases": [
+     "Drugs for parkinsonism"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.7 p.177 nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:916291114115fe3e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Methanol poisoning",
+    "aliases": [
+     "Methyl alcohol poisoning"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.8 p.177 nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.8"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:04d13614992f6e98",
+   "existingConceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
+   "document": {
+    "label": "Alcohol metabolism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.8 p.177 nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.8"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:cbb1ceed2a639070",
+   "existingConceptId": null,
+   "document": {
+    "label": "Substance use disorders",
+    "aliases": [
+     "Drug dependence"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH3.9 p.177 nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1; PH10.16 p.185 nmc-2024-ref:55bb230b84c28f4a595dabd55c46d7732e52c530713ad54e3149f0cb9c42a7d3",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH3.9",
+    "PH10.16"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "psychiatry",
+    "forensic-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:27330e355cc5d1ad",
+   "existingConceptId": null,
+   "document": {
+    "label": "Haematinics",
+    "aliases": [
+     "Hematinics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.1 p.177 nmc-2024-ref:12f367ef6aa7f60f4e3f2cb512d192fa60095b6b5600a4565a623edb7f17af69",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:05aa31a575fe90c9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Anticoagulants",
+    "aliases": [
+     "Anticoagulant drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.2 p.178 nmc-2024-ref:8052aef763b8ad58804db86eca50c44d57a4a53150a3b380057c951cd4522e11",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:aa6c233913c4ad03",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fibrinolytics",
+    "aliases": [
+     "Thrombolytics",
+     "Fibrinolytic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.3 p.178 nmc-2024-ref:e645a1f114b7e0dfe85c6ffc2b6b1ede791b6b7088f8d9521cd71016db85743e",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:4390ddb7ebd69af0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiplatelet drugs",
+    "aliases": [
+     "Antiplatelet agents"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "haematological"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.4 p.178 nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:187782f3ca386f05",
+   "existingConceptId": null,
+   "document": {
+    "label": "Diuretics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.5 p.178 nmc-2024-ref:0d6156fd96709a37c9dd6ad6ee083b7c3bd031730daa8cfc4c2556ea445181b4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:95eb8e4d003cee43",
+   "existingConceptId": null,
+   "document": {
+    "label": "Renin-angiotensin system inhibitors",
+    "aliases": [
+     "RAAS inhibitors",
+     "RAS inhibitors"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.6 p.178 nmc-2024-ref:5a76da9b8cb02d0f5228be298efb422faafa482beadd283b49904b7d795a2463",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f1b0ae296d021115",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antihypertensive drugs",
+    "aliases": [
+     "Antihypertensives"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.7 p.178 nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:40cff1f024efe542",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antianginal drugs",
+    "aliases": [
+     "Drugs for ischaemic heart disease"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.8 p.178 nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ac53509ad96abc64",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drugs used in heart failure",
+    "aliases": [
+     "Heart failure pharmacotherapy"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.9 p.179 nmc-2024-ref:1948e8494f48773ad56b6e001cb674148767dcb1437a74f44d7ffa5e58451cb6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.9"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:28cc6e396e07f319",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiarrhythmic drugs",
+    "aliases": [
+     "Antiarrhythmics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.10 p.179 nmc-2024-ref:2b77cc843deeedd87fa979fae0f73c6f61d92409550866c3e9be1e0f06622871",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.10"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2dffd58e5b945fe3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lipid-lowering drugs",
+    "aliases": [
+     "Hypolipidaemic drugs",
+     "Hypolipidemic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH4.11 p.179 nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH4.11"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:702276f7eaadf213",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drugs for asthma and COPD",
+    "aliases": [
+     "Antiasthmatic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH5.1 p.179 nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH5.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:e81e12872de762a0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antitussives",
+    "aliases": [
+     "Cough medicines"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH5.2 p.179 nmc-2024-ref:87a58e0abe01416429e76279649ec24cf5282bd8fba1042715035262e5bc09ee",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH5.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:95d511b75b4691ff",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiulcer drugs",
+    "aliases": [
+     "Drugs for acid peptic disease"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH6.1 p.179 nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH6.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:efac0aa4c737def0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiemetics",
+    "aliases": [
+     "Antiemetic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH6.2 p.180 nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH6.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a6d173175b788fe2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antidiarrhoeal drugs",
+    "aliases": [
+     "Antidiarrheal drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH6.3 p.180 nmc-2024-ref:3d89747d9a8213405d5c1ac9326b00670d6bd823936038b9a5719b1670746613",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH6.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2bde3610d4f7bf71",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laxatives",
+    "aliases": [
+     "Purgatives"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH6.4 p.180 nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH6.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:790fefb4847ddf9f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drugs for inflammatory bowel disease",
+    "aliases": [
+     "IBD drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH6.5 p.180 nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH6.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9e4a4198659938b5",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antidiabetic drugs",
+    "aliases": [
+     "Hypoglycaemic agents",
+     "Hypoglycemic agents"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.1 p.180 nmc-2024-ref:bb81e8d46ca8adc24e224d7a7f2a5b56243fe3565f7512ea88a6a88fef76f5e7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d687ad10ce89893f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiosteoporotic drugs",
+    "aliases": [
+     "Drugs for osteoporosis"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.2 p.180 nmc-2024-ref:97f32aa37bb49490ccb66bafdfa21a6ed9b8c6ac240c1248cb5118ff8339621e",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:17526f09aabd5a6c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thyroid hormone replacement",
+    "aliases": [
+     "Thyroxine replacement"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.3 p.180 nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:445b8672bc6e3775",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antithyroid drugs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.3 p.180 nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:1467e7415636dd8f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pituitary hormone drugs",
+    "aliases": [
+     "Hypothalamic and pituitary hormones"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.4 p.181 nmc-2024-ref:06c70dfbdcf1d1d8a978c83795356b5a9df985d241a90615d00157cb12b77fa4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:17542150b6a71077",
+   "existingConceptId": null,
+   "document": {
+    "label": "Corticosteroids",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.5 p.181 nmc-2024-ref:64a3dadadc7de9ae51204b4c5c8a953f09a9d72a6b741a4d1e2fbdfeda6729ad",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:6e6ee41eef73e9f1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Androgens",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.6 p.181 nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d7c6e4ed4acf8bf0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drugs for erectile dysfunction",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.6 p.181 nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ad8090aee011a8c5",
+   "existingConceptId": null,
+   "document": {
+    "label": "Female sex hormones",
+    "aliases": [
+     "Estrogens and progestins",
+     "Oestrogens and progestins"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.7 p.181 nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:6e48eb28262ff029",
+   "existingConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "document": {
+    "label": "Contraception",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.7 p.181 nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:94cefe252a7a891c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Uterotonics",
+    "aliases": [
+     "Oxytocics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.8 p.181 nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:28a7bd5006ef7d73",
+   "existingConceptId": null,
+   "document": {
+    "label": "Tocolytics",
+    "aliases": [
+     "Uterine relaxants"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.8 p.181 nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:37c843abc2d8b823",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drugs for infertility",
+    "aliases": [
+     "Fertility drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH7.9 p.181 nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH7.9"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2ac23d7168cfc6fc",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antimicrobial chemotherapy",
+    "aliases": [
+     "Principles of antimicrobial therapy"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.1 p.181 nmc-2024-ref:f7109b11ff659f2b31b5cd10210fa2eec569068cc9bd3eabeadec383db11d6c1",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "microbiology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:8c8006fa3be4890d",
+   "existingConceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "document": {
+    "label": "Antimicrobial stewardship",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.2 p.181 nmc-2024-ref:97158fb5442fe1a8dd5783aa8050979b155d8bd5dc59799a220b15267cc60507",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:0185375c9f56e23c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antibacterial drugs",
+    "aliases": [
+     "Antibiotics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.3 p.182 nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "microbiology",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ff6043bd67b8d8a4",
+   "existingConceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "document": {
+    "label": "Urinary tract infection",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "renal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.4 p.182 nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:643f49e50f0f1d34",
+   "existingConceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "document": {
+    "label": "Sexually transmitted infections",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.4 p.182 nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:77719ce21f9a05ca",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antitubercular drugs",
+    "aliases": [
+     "Anti-TB drugs",
+     "Antituberculosis drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.5 p.182 nmc-2024-ref:606bce682b04f9708f6b92ceda09d643760175fd241221ef2a48cd44e487b392",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:0e99b4f9ff9b0ffb",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antileprosy drugs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.6 p.182 nmc-2024-ref:9d74ee9688adcd7528b708934a7ca5ee9b9902de0c8245e5748eda6bcd4eb6f8",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "dermatology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:759e14d968f41326",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiprotozoal drugs",
+    "aliases": [
+     "Antiprotozoals"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.7 p.182 nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:df5b745df4a7dea2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antifilarial drugs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.7 p.182 nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3815b21ea4544619",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antifungal drugs",
+    "aliases": [
+     "Antifungals"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.8 p.182 nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.8"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "dermatology",
+    "microbiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:7d50748b380c00fb",
+   "existingConceptId": null,
+   "document": {
+    "label": "Anthelmintics",
+    "aliases": [
+     "Anthelmintic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.9 p.182 nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.9"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2d05bfe9ccdca51e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiviral drugs",
+    "aliases": [
+     "Antivirals"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.10 p.182 nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.10"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "microbiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2b4ec12f279822dc",
+   "existingConceptId": null,
+   "document": {
+    "label": "Antiretroviral drugs",
+    "aliases": [
+     "ART drugs",
+     "Antiretrovirals"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.10 p.182 nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.10"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:0fee35743a129e10",
+   "existingConceptId": null,
+   "document": {
+    "label": "Anticancer drugs",
+    "aliases": [
+     "Antineoplastic drugs",
+     "Cancer chemotherapy"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH8.11 p.183 nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH8.11"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine",
+    "surgery"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:220e55398f0cc0d9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Immunomodulators",
+    "aliases": [
+     "Immunomodulatory drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.1 p.183 nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.1"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:64b0531c85df8268",
+   "existingConceptId": null,
+   "document": {
+    "label": "Poisoning",
+    "aliases": [
+     "Acute poisoning"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.2 p.183 nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:2e108428aedb522c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Snakebite",
+    "aliases": [
+     "Snake envenomation"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.2 p.183 nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9e7e90b391605821",
+   "existingConceptId": null,
+   "document": {
+    "label": "Chelating agents",
+    "aliases": [
+     "Chelators"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.3 p.183 nmc-2024-ref:cf9c887f6e80e503b62e85daf66bec81708a1e7be2386e8c0cb28546d05f53c7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "forensic-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d454bc6585c57979",
+   "existingConceptId": null,
+   "document": {
+    "label": "Vaccines",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.4 p.183 nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "community-medicine",
+    "pediatrics",
+    "microbiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3b0abf9520092001",
+   "existingConceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "document": {
+    "label": "Disinfection",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.5 p.183 nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c32dff1c0fdf0c23",
+   "existingConceptId": null,
+   "document": {
+    "label": "Dermatological drugs",
+    "aliases": [
+     "Topical skin medicines"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [
+      "skin"
+     ],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.6 p.183 nmc-2024-ref:44da0f8afc633dc317984beeb63072f04b6fb9ac4d50282bd3c345583e6d66c6",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "dermatology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:d7847586d88a1606",
+   "existingConceptId": null,
+   "document": {
+    "label": "Ocular drugs",
+    "aliases": [
+     "Ophthalmic drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [
+      "eye"
+     ],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH9.7 p.183 nmc-2024-ref:664785dc167322609aaad1a503dd0eb647c06a6a868c085e040d4d1aece52db5",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH9.7"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "ophthalmology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a5ff99aec726e0af",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug information",
+    "aliases": [
+     "Drug information sources"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.1 p.183 nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae; PH10.13 p.185 nmc-2024-ref:25bfa2b53d9061e973187eff0affd3151f8054982c5571c0a509700513d9e735",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.1",
+    "PH10.13"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a487f41485d37872",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug promotion",
+    "aliases": [
+     "Pharmaceutical promotion"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.2 p.183 nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.2"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:cc42a91c9a6609db",
+   "existingConceptId": null,
+   "document": {
+    "label": "Personal drug selection",
+    "aliases": [
+     "P-drug",
+     "Personal drugs"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.3 p.183 nmc-2024-ref:2d24d8954bdbdf01cbd0509fd7b48bae238aa67abecdc226ac382b31e9f1da41",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.3"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:25b7fadcf667a2bb",
+   "existingConceptId": null,
+   "document": {
+    "label": "Prescription writing",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.4 p.184 nmc-2024-ref:86dbd8612eb1e01a358bd541bd9de11c4a7b8a592dbee133d8823f2a3f4cda80; PH10.6 p.184 nmc-2024-ref:21171ebaf44368d4bd22c24eb4d3f8f24b0e0d8b324d6bd296ff98b0631035fb",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.4",
+    "PH10.6"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9a879befe53db007",
+   "existingConceptId": null,
+   "document": {
+    "label": "Legal and ethical aspects of prescribing",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.5 p.184 nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.5"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "forensic-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9fb43dfd4e3b13ca",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacogenomics",
+    "aliases": [
+     "Pharmacogenetics"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.7 p.184 nmc-2024-ref:a6c1f6fabbf565eeacaf8e4b6e455080311df87f44cdce082d19f1731efeaca4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.7"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "biochemistry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:5d4959b5b48e12c3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharmacoeconomics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.7 p.184 nmc-2024-ref:a6c1f6fabbf565eeacaf8e4b6e455080311df87f44cdce082d19f1731efeaca4",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.7"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9ea1acc46ed07414",
+   "existingConceptId": null,
+   "document": {
+    "label": "Essential medicines",
+    "aliases": [
+     "Essential medicines list"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.8 p.184 nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.8"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:eee4665dd87e91e0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Therapeutic drug monitoring",
+    "aliases": [
+     "TDM"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.10 p.184 nmc-2024-ref:1440f13ec0e6943bb0490bc48ac6ce264c6318202f86a783a91ab4f116a34b8c",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.10"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:0a20e3f0e1948125",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug regulation",
+    "aliases": [
+     "Drug regulatory framework"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.11 p.184 nmc-2024-ref:1b9208c6d14be5c78b5d32e51a7ca45cfb2203906a67dd15723336d80ac924a1",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.11"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6e1e3cf31ea04384",
+   "existingConceptId": null,
+   "document": {
+    "label": "Drug development",
+    "aliases": [
+     "New drug development"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.12 p.184 nmc-2024-ref:e87f202dba149cea8f63170f6b0cfe2281e3774a44284b3ef94420e881639902",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.12"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8f0b00d975b34c9b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Medication counselling",
+    "aliases": [
+     "Patient counselling on medicines"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.14 p.185 nmc-2024-ref:eb630545c297b3aeef2014a690ae0fb687439729e14389977e18a84944857812; PH10.17 p.185 nmc-2024-ref:2fca8b46ee37f410b82a73b169207dee3a6cbc79488944dfdb4c9803563fe3f7",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.14",
+    "PH10.17"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine",
+    "community-medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:556bcfa1db943e75",
+   "existingConceptId": null,
+   "document": {
+    "label": "Medication adherence",
+    "aliases": [
+     "Treatment adherence"
+    ],
+    "classification": {
+     "subjects": [
+      "pharmacology"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PH10.15 p.185 nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+    "changeReason": "Pharmacology concept batch v1: canonical concept for NMC Pharmacology source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PH10.15"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:aa92e93d5ac988b9:mechanism:2fe51765@1",
+   "conceptKey": "nmc-concept:aa92e93d5ac988b9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c485c1ca071c0091fb0ff210e6dfc2699dd870c6a708020fd052f2d60e791662",
+   "code": "PH1.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Define core pharmacology terms and distinguish drug action from therapeutic application using examples.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "7eb40863337e80c5a15896b31062f82ffc328f516394c90fd348ec06f1b8d726",
+   "descriptionSha256": "bf29fd9f9df8720ee4601ad4b494d05882b8bce2d0e4961833bfb3e28aece8cb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d154f86613204dd8:mechanism:34375410@1",
+   "conceptKey": "nmc-concept:d154f86613204dd8",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f97b1bf2ab4bf766b83081ab0b56706916fa279101891c313900d5567e1c09d9",
+   "code": "PH1.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use a simulated case to weigh evidence, benefit, harm and patient preferences when selecting a medicine.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "9d4537928d71baf9f3898571f72b08135245988274029a33223c3f8453b7c76c",
+   "descriptionSha256": "96303cbcdb68ea7ca149d8cf769d61114787a5e459a49a5d20c1d7d0453e6b8b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:36cd33c4fc1ea4b3:mechanism:e0a9c29f@1",
+   "conceptKey": "nmc-concept:36cd33c4fc1ea4b3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e033d234b94d732098ce467f1f3855b93d40b45c376221265dcffefff1edf1fa",
+   "code": "PH1.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish generic, brand and scheduled designations and compare their implications for selection and cost.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "5359f04a9ec6d576f5c3da1ade3c8800d7e9e62ca024392cb935bbf38ceaa2f6",
+   "descriptionSha256": "472ff2cf4fb42545578392c6d3759585e444f1ab89f5c885fbcb9592efe25e02",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c36b13c7b2858ee1:procedural-skill:55c2a9a8@1",
+   "conceptKey": "nmc-concept:c36b13c7b2858ee1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d29161feb0271e8c336bbd7d4b08f3af1979a8c6fdcf1b9b701e7f6ab0f7c888",
+   "code": "PH1.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify common formulations and delivery devices, demonstrate their use and compare advantages and limitations.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "6cc438433a1fd5ed55addecfe5952310c437b966db21239d001b0fd012256f73",
+   "descriptionSha256": "276464e2cddb754327804d088ea530e7fe32f9ce7507e9f50c3421b00d0628b7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:160ba1fcbd21c11b:procedural-skill:47978ad9@1",
+   "conceptKey": "nmc-concept:160ba1fcbd21c11b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a53be6d2dee7cb1fa7e2cb1ca206aa673b7067a3b5ce1d10bfba6339cae799b1",
+   "code": "PH1.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare route selection and demonstrate subcutaneous, intravenous, intramuscular, spinal, sublingual, rectal, intranasal and inhaled administration in appropriate simulation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "d7e353c5aad35118aae91488c11847ea1a7662c8ec9dc6ebc2dc5795ad75a0fe",
+   "descriptionSha256": "5e333cdc3e924a2840ebda9adbf93f7c8a6aa971b6cfe1dd7db42e2d434a4e04",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:662ecf3860c921de:mechanism:f4df3268@1",
+   "conceptKey": "nmc-concept:662ecf3860c921de",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b11f518867f6d507acd79d76065ec3fe2d99706bca0803badff06161f33fea69",
+   "code": "PH1.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace absorption, distribution, metabolism and excretion and predict how route changes exposure.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "fcc3f75f86f2021f096c379a919d512bfd9848b69ed54a540cf7a557f8f497e8",
+   "descriptionSha256": "a2b07a5e9cad0b3b0f5471331941f0a8b319b6e72c65024ed299cd066a50bea7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:705cf9f43220af2d:mechanism:7fbd70f3@1",
+   "conceptKey": "nmc-concept:705cf9f43220af2d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1b681999780c031f430a829bfb6f62b3f1888862addf682b268ebbf013ced300",
+   "code": "PH1.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare receptor, enzyme, transporter and other mechanisms and relate them to dose–response patterns.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "d91e102834254711636cdf052c890d50214443bc0f42db9eda7444c04c6d5b4e",
+   "descriptionSha256": "b336cfcad900eaac8bf0022c44101387ac9454eaa14f1e3d9efea48ebcce3f93",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:705cf9f43220af2d:procedural-skill:3dea7404@1",
+   "conceptKey": "nmc-concept:705cf9f43220af2d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b67f8571b3040900c63e13613429430e79909d14155106a197f8be872c6ad708",
+   "code": "PH1.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use a computer simulation to demonstrate mechanisms and effects of representative prototype drugs.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 174,
+   "sourceBodySha256": "5ef6f09fb80d635cee9d00d0c2dccafd91b96a26dc6a36350de24a8c316e52e3",
+   "descriptionSha256": "b1befd8dcf8a964436a93b9722efd05acf125c90180bc25e4a054d73f151708b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6a9c5f7e0cb201ff:procedural-skill:f8c8d68e@1",
+   "conceptKey": "nmc-concept:6a9c5f7e0cb201ff",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c141de8263681c6daada3e69229eba3dae8f1f26c7511497022e2624e55eac78",
+   "code": "PH 1.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare candidate combinations using kinetics, dynamics, synergy, antagonism and benefit–risk.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "4532848a73fcccf20277730bc6d492989935974639bc64d72220586f5de73916",
+   "descriptionSha256": "e3c366c75f59d3146901b3b1a5b173d9a5d1725f933661e89ca1017585bcfd88",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:be795f542424bd92:procedural-skill:0dad5fa5@1",
+   "conceptKey": "nmc-concept:be795f542424bd92",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:013e69ca4231f02e5334eeda857dbac9ef38ebd2111bd9e410bca9bc8ef4b643",
+   "code": "PH1.10",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Adjust a simulated treatment plan for age, pregnancy, lactation or hepatic or renal impairment and explain each change.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "b1b0b28a500396dadb86512d034c8a0c1aa334d90f4e57873406ddcd2491741e",
+   "descriptionSha256": "782e199a71f69ee5f10a3ca18c954131f8ac54325016f3055f3dc2a1368c0e01",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:be795f542424bd92:procedural-skill:3294cfd4@1",
+   "conceptKey": "nmc-concept:be795f542424bd92",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a216b95a3262aaf32f53ad901609ef6d7998a1525a97cc3b266e77c7e00ac543",
+   "code": "PH10.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Calculate or justify doses in simulated cases involving age, pregnancy, lactation or impaired renal or hepatic function.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "810c920a86d535a1f8cae1e82a427334ea1ab203d961ababdb523c17ed275068",
+   "descriptionSha256": "16e4aaefbbf622331e48c54ffd7234cf554fd3c71ac4e0516371e76a1abb5f7c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cc9e2bbf3245f75d:procedural-skill:d0460643@1",
+   "conceptKey": "nmc-concept:cc9e2bbf3245f75d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:024daf5da54ad59f225f1247f5387f4d7fa07c4474eb923c950ea06e89b3812a",
+   "code": "PH 1.11",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Classify suspected adverse reactions in cases and assess causality using timing, alternatives and available evidence.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "46e6907164f61ff0b2e93b644d3a599b555b54da24af9f57a3936da5ece77234",
+   "descriptionSha256": "5fb697e06801acbd120fd3a960aa394b88a97c4c3cfe6cefc10b7ae4fe5dacc5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1499688a8cbd05a3:procedural-skill:c676e4c0@1",
+   "conceptKey": "nmc-concept:1499688a8cbd05a3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a47aee4923baee757581de5742951e8d8fa5f0b7ae976f1941917b5cc0730be4",
+   "code": "PH1.12",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain the purpose of surveillance and complete a simulated adverse reaction report.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "36f3e8cafcc914a67747dd691747a82d051bdff8db61c47830ec726c09c1dbb6",
+   "descriptionSha256": "def2a047bf698806ca32f497d32b0acbdc35f150306ddc0c5979d8ea673a59d1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ce74e7f27c302870:procedural-skill:4ae29758@1",
+   "conceptKey": "nmc-concept:ce74e7f27c302870",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8e30581d749632fde1f73400b4c2de640548e55a52c6b765ff9522b0ab5ea915",
+   "code": "PH1.13",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify clinically important interactions in a sample regimen and propose monitoring, separation or substitution as appropriate.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "e9a909d682d2f793718afce9160ce9904c00515c2602b50311e9110f811776e0",
+   "descriptionSha256": "a1d5d71de2daae37632aa498100f8437dcd07f4f6d18645a8fc3cfe2dc94151f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:281361c0dd76ef66:mechanism:40c6d9bc@1",
+   "conceptKey": "nmc-concept:281361c0dd76ef66",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c66c5ee50405bfe3ca82059762b99a339b8d1ca304357e4d78f78ab8cba39834",
+   "code": "PH2.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare agonists and antagonists by receptor selectivity, kinetics, effects, uses and adverse reactions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "ad0f7c17ee0620adfd3173a395870c8d7bc80ef58aeac0441399e7422a3b350d",
+   "descriptionSha256": "3b259493b01f36303e22d507645429b8630c7ca5792737e927fb79c82ef8f076",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:99b597cb411d5057:procedural-skill:f893b6b9@1",
+   "conceptKey": "nmc-concept:99b597cb411d5057",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ca100a75be0cd348e5b64aa182d128d88d7ccc0a142d290a9464408b36cd6ac1",
+   "code": "PH2.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare cholinergic and anticholinergic agents by kinetics, actions, indications and adverse effects, then demonstrate organophosphate poisoning management in simulation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "b9a1048dcfb86d6a3e112014f5f4ae901ffa5ffe30bca938e3b57386e3dbb773",
+   "descriptionSha256": "039efb9318c6893bd45bd08f02b00e3436295003df901b259efebad4fc65bd71",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:bdd7f8c7aee01ba0:procedural-skill:d870e162@1",
+   "conceptKey": "nmc-concept:bdd7f8c7aee01ba0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ae62ddaac4d8a23d2394bdba6cf71361421d121e82c6ce7ebdc3bd940e1ce94a",
+   "code": "PH 2.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use simulated emergencies to justify and demonstrate use of noradrenaline, adrenaline, dopamine, dobutamine or atropine as appropriate.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 175,
+   "sourceBodySha256": "8cab405b14b257cef62052ebcbe60c5f4c8e7b75fe8a7cbc4f63b6319f9236d3",
+   "descriptionSha256": "88a30287a561f64a58504fa8b77655abe0cff55a9d440f97c9d5d851c34a5c5c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0ced29299c53cb16:mechanism:26ea9c2a@1",
+   "conceptKey": "nmc-concept:0ced29299c53cb16",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9d947d528f49090dd76dda06cf7901cfad40d8b742f4e93bf6ca80dfca22abb4",
+   "code": "PH2.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare major groups by kinetics, mechanism, indications and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "01f9e9f7fa45d3809c9a858ec4dbc3c04ae063ee8cebb7655051b35cce21ccf8",
+   "descriptionSha256": "deda535222b8c023ea0e984a323afb0fa97e107b62c1bee782b75dfd5cf9b759",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:81736bff120f5930:procedural-skill:22387739@1",
+   "conceptKey": "nmc-concept:81736bff120f5930",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:162d32829f6ad3a645c434c12f7c8949490e52286f9c19bddaa1e3141386b69a",
+   "code": "PH2.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare kinetics, actions, indications and toxicity and demonstrate representative administration techniques on a simulator.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "127fa5a8143fefb40188eb7bea52be7c3f6e1f40f5c64dfb352c0c36152f2dc4",
+   "descriptionSha256": "c29da1cbb466d9458bb4fabf741e714276b2b1e76142db07a7c7bcd17a444cf9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3dbe7acc3e17bfb7:mechanism:9e67c018@1",
+   "conceptKey": "nmc-concept:3dbe7acc3e17bfb7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2420272e8699aa8d57e43650cf7da7f33d6fe2ba85a796581fe90ad7c22fce77",
+   "code": "PH2.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare classes by kinetics, effects, uses and adverse reactions and distinguish their role in allergic rhinitis from symptomatic care for a cold.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "925bfb68df3d83e9d9579dc969a82affc16351005202828c0b525902f04cdaba",
+   "descriptionSha256": "79f3e97a7e2fbd1f53c5ecb642672b213f4850e2f096335c996168e54fa43d6f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8fd136891e9b07d7:mechanism:9049bed3@1",
+   "conceptKey": "nmc-concept:8fd136891e9b07d7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a211652968ed90dca1312402a132ceb2fb246fe0fadbff038b8b93d738254d94",
+   "code": "PH2.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Define pain, classify analgesics and compare non-opioids including NSAIDs by kinetics, actions, uses and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "718aefef2f080b106a91e98138b77408c7b8ddc221bcbf8f16b7e6caf6e07a8e",
+   "descriptionSha256": "500b1faac32fcd01869c5dd70733806c3ce074128b02e3fc6b69794ed2bd4bd8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c1cb57baad15389c:procedural-skill:1111a23f@1",
+   "conceptKey": "nmc-concept:c1cb57baad15389c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+   "code": "PH2.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Build and justify a pharmacotherapy plan for a simulated case of gout.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "cd04f9c0cc1a5035d88072d504015bc2077da394923941e6a32aedc47206be6e",
+   "descriptionSha256": "863481155566bf631a5d07dff67320f5b3d1753402715fe9c48269a6afe5d0e9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5ebb4f53eaa5926b:procedural-skill:7091b20b@1",
+   "conceptKey": "nmc-concept:5ebb4f53eaa5926b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+   "code": "PH2.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Build and justify a pharmacotherapy plan for a simulated case of arthritis, including disease-modifying drugs.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "cd04f9c0cc1a5035d88072d504015bc2077da394923941e6a32aedc47206be6e",
+   "descriptionSha256": "863481155566bf631a5d07dff67320f5b3d1753402715fe9c48269a6afe5d0e9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d721cab23f9e5416:procedural-skill:07aa9f3d@1",
+   "conceptKey": "nmc-concept:d721cab23f9e5416",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0b96f31196de2cabb17322f25e191b0aeaa2ad9ad8b4c4028ad9ba8d1ac78b13",
+   "code": "PH2.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Build and justify acute and preventive pharmacotherapy for a simulated case of migraine.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "cd04f9c0cc1a5035d88072d504015bc2077da394923941e6a32aedc47206be6e",
+   "descriptionSha256": "863481155566bf631a5d07dff67320f5b3d1753402715fe9c48269a6afe5d0e9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8e470a203d02f26f:mechanism:68845ab3@1",
+   "conceptKey": "nmc-concept:8e470a203d02f26f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:96c281609dd41a6fac209980c6395d714a1013dcde8fe52ec4d904bbd1f36f19",
+   "code": "PH3.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare general anaesthetics and premedications by kinetics, actions, uses and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "968383667ac69f3e4c8c8cef39e968e13350d91a713c179407ae6b18d47d0363",
+   "descriptionSha256": "8691fc39443e5376ecf77f4469929c6e3db5fd1d6c689cd7d0713a435f060316",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b9dcf001442400fb:mechanism:f1f75bf4@1",
+   "conceptKey": "nmc-concept:b9dcf001442400fb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e9451e53e02a74aeecd6372fe33c0de401e7dc785f9d0bd31d71e17c3f9f053d",
+   "code": "PH3.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare classes by kinetics, actions, indications and adverse effects and justify selection for representative cases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "de27c48db37e39d4013f200119a9d24ca3587a4213c091229219aea42358bb19",
+   "descriptionSha256": "08aa6286f1471a57a3e5d764f4705672a27e19ac244ec9623fc8cf675174377a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fe2412c49919d884:procedural-skill:60aee1a4@1",
+   "conceptKey": "nmc-concept:fe2412c49919d884",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d10288a2e599aed54654eb79727a89a1154d912e0dcc3da2b3b404e4a36e18d6",
+   "code": "PH3.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare agents by kinetics, mechanism, uses and adverse reactions and develop a simulated plan for an uncontrolled seizure.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 176,
+   "sourceBodySha256": "12382c30080b2b43bb356695203bec5930853619d87233e77920bd30745f5227",
+   "descriptionSha256": "a411519dee53e7f2b3b86cbaa447a5aa45aa8e51c145a4c3ca02ab489faecaaf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9c690870ee49454d:procedural-skill:77a22e9e@1",
+   "conceptKey": "nmc-concept:9c690870ee49454d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b9a0ce8019879efa68e0c41a56486aefc69e5c82655ff66f42d20036e82e6069",
+   "code": "PH3.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare kinetics, actions, uses and adverse effects and counsel a simulated patient on safe use.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "f1777c47fc4558264d22bdfc864dad7b902130dee16890bce3c1aef04e463c83",
+   "descriptionSha256": "a6ecb4c5a37a8bdf45acc5c35e480610ad149fd28f40cc060cc40aec0f438d44",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6719f141d983dc52:procedural-skill:11c8310e@1",
+   "conceptKey": "nmc-concept:6719f141d983dc52",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6",
+   "code": "PH3.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare antidepressant classes by kinetics, actions, uses and adverse effects and develop a simulated treatment plan for depression.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "c34bbeea77365c4e76f4cc891e000493e96f4132ec4b15aaaf00d6240402542f",
+   "descriptionSha256": "0e6c5e2e0615f0c6b1e6277f4106ea7029d1127244f2e5be7ab3fd8eaf4b8ac8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cc3786ec26a49e60:procedural-skill:038f275b@1",
+   "conceptKey": "nmc-concept:cc3786ec26a49e60",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:74a4156b8375dfa311096273f9a9cbdfb0797a0578a78703c1b0966588c99ac6",
+   "code": "PH3.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare antipsychotic classes by kinetics, actions, uses and adverse effects and develop a simulated treatment plan for psychosis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "c34bbeea77365c4e76f4cc891e000493e96f4132ec4b15aaaf00d6240402542f",
+   "descriptionSha256": "0e6c5e2e0615f0c6b1e6277f4106ea7029d1127244f2e5be7ab3fd8eaf4b8ac8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6a3fb6b69528c64e:procedural-skill:2ff50309@1",
+   "conceptKey": "nmc-concept:6a3fb6b69528c64e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:428c8d98219190b4af3594d849e1c22c68274cf3bdc5343e07ea254e05f153fc",
+   "code": "PH3.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare agents by kinetics, effects, indications and adverse reactions and explain treatment goals and trade-offs in a case.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "8ba3baa88b47b92f6fa03551791e32e199bdf20fe18467a87f2cf975adc17c6f",
+   "descriptionSha256": "e93f29dc716c582efb0d4be1f71c471387d1cc9ba8459f731a1588e94bc9ea29",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:79ad4ff7ad4c6176:mechanism:1a2c4023@1",
+   "conceptKey": "nmc-concept:79ad4ff7ad4c6176",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e8f920a1bd0d33e8709c76c01175b6fec14693d49515f3f5b72b15b7368b4fe2",
+   "code": "PH3.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drug classes by kinetics, actions, uses and adverse effects and write a simulated prescription for a case of drug-induced parkinsonism where indicated.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "99541bffa3a4b0e126c679c976135b428b2099a242ab8c55d0b1eb8f24a6ce4d",
+   "descriptionSha256": "5b30433395c383d78fd98fe2fa53e54c60e2e3ea743710b6ba8dbe428c815b71",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:916291114115fe3e:procedural-skill:6ba84912@1",
+   "conceptKey": "nmc-concept:916291114115fe3e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05",
+   "code": "PH3.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Recognise methanol poisoning and outline its supervised management.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "47861cac6f19de827018d1dc6b5fe23a5cae701edca34ed8bb3dbf9bf6ffc195",
+   "descriptionSha256": "a00c4846d7c7aa1ce7383d4c80362adad67f9c6833c9193fde825aafb7a66abd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:04d13614992f6e98:procedural-skill:6f37a6e0@1",
+   "conceptKey": "nmc-concept:04d13614992f6e98",
+   "existingConceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
+   "referenceId": "nmc-2024-ref:22b858f5ccf123b0c04700d52627656f04ec7aa965db55b6be79e4ae781eed05",
+   "code": "PH3.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Distinguish chronic ethanol-related presentations from methanol poisoning and relate them to ethanol pharmacology.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "47861cac6f19de827018d1dc6b5fe23a5cae701edca34ed8bb3dbf9bf6ffc195",
+   "descriptionSha256": "a00c4846d7c7aa1ce7383d4c80362adad67f9c6833c9193fde825aafb7a66abd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cbb1ceed2a639070:mechanism:63f70fd4@1",
+   "conceptKey": "nmc-concept:cbb1ceed2a639070",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:808cd8a7be835678b4d365069360e9726cb75704dfed139edd78bbb318a943c1",
+   "code": "PH3.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare commonly misused drug classes, distinguish dependence from addiction and outline assessment and management.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "f83d9fc166116de58080db31cfa06f1ebae09cb32f1f617b193630c22f8e10de",
+   "descriptionSha256": "2a85d33404c0189a06bf4a07c85020635a8f08c3daea5f7db066604be4b5cc4e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cbb1ceed2a639070:procedural-skill:21ed01c9@1",
+   "conceptKey": "nmc-concept:cbb1ceed2a639070",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:55bb230b84c28f4a595dabd55c46d7732e52c530713ad54e3149f0cb9c42a7d3",
+   "code": "PH10.16",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain safeguards when prescribing medicines with dependence potential and recommend a response to a simulated concern.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 185,
+   "sourceBodySha256": "2c64832b401164e12a29c89c4c6c0765e2069379e435a15e7b679f37ac7675c8",
+   "descriptionSha256": "3a8728173caf051aa8bd268d938493b02e7242a9e8c83eb8c515eefdbb060bf9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:27330e355cc5d1ad:mechanism:ef9c8046@1",
+   "conceptKey": "nmc-concept:27330e355cc5d1ad",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:12f367ef6aa7f60f4e3f2cb512d192fa60095b6b5600a4565a623edb7f17af69",
+   "code": "PH4.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative therapies by kinetics, effects, indications and adverse reactions and match them to the underlying disorder.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 177,
+   "sourceBodySha256": "3a82e3d2539e77ac2a360cde9b1644aaad72f34eabdf3d849bfce3786b842158",
+   "descriptionSha256": "de6e27c3e281454140b3675d5fb650273596906facb23b6ddcc7cccea937f1cf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:05aa31a575fe90c9:procedural-skill:8d4d3aa2@1",
+   "conceptKey": "nmc-concept:05aa31a575fe90c9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8052aef763b8ad58804db86eca50c44d57a4a53150a3b380057c951cd4522e11",
+   "code": "PH4.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare coagulants and anticoagulants by kinetics, actions, uses and adverse effects and build a simulated monitoring and adverse-effect response plan.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "bc5b940e9e4666ecdfb85362af3d0d96715d33ef9888aef5df3ee8b07b8fd40f",
+   "descriptionSha256": "a252ae25dde33a7c34e1f53dd46073f3080a74da3e65564d418957c7007e90dc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:aa6c233913c4ad03:mechanism:adab0862@1",
+   "conceptKey": "nmc-concept:aa6c233913c4ad03",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e645a1f114b7e0dfe85c6ffc2b6b1ede791b6b7088f8d9521cd71016db85743e",
+   "code": "PH4.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare fibrinolytics and antifibrinolytics by kinetics, targets, uses and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "5d4627d1ee93c91e428df61e9865c6ab2f8ccf3f7b6c017a8c84e6aa14948a4f",
+   "descriptionSha256": "c7bd22d19f042a0018ea322a579623667d4c6b6cee9d4ebc1c406b463738316d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4390ddb7ebd69af0:mechanism:8d165e08@1",
+   "conceptKey": "nmc-concept:4390ddb7ebd69af0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8784e210681e85077b9165294d1eaa6d9336417d45807b98d9946cd618b6d189",
+   "code": "PH4.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare mechanisms, kinetics, indications and adverse effects of major antiplatelet classes.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "ce0ee7ae1b087991fcb64da89f7ce7439977c9c635887316e9e44ccac6890904",
+   "descriptionSha256": "58942dab0945558452a0379a4fddaa3a17e1312171f28ab488ed5774d68a5f62",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:187782f3ca386f05:mechanism:d3d7d2bb@1",
+   "conceptKey": "nmc-concept:187782f3ca386f05",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0d6156fd96709a37c9dd6ad6ee083b7c3bd031730daa8cfc4c2556ea445181b4",
+   "code": "PH4.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map diuretic targets to nephron sites and compare their kinetics, effects, uses and adverse reactions with vasopressin and its analogues.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "6dcbf36554ed949d650f2f27379ef43291974988fe0468e37f7f7388f06fa0dd",
+   "descriptionSha256": "1e91fb4d571e748415ddef83bc1bdb3f2949a0e4dde4e6e11c81519548caeaa2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:95eb8e4d003cee43:mechanism:2da06ccd@1",
+   "conceptKey": "nmc-concept:95eb8e4d003cee43",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5a76da9b8cb02d0f5228be298efb422faafa482beadd283b49904b7d795a2463",
+   "code": "PH4.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare targets, kinetics, indications and adverse effects across major classes.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "1cf1474d9b3f5dee764fe6ad45c2b787a056f32c7ec8b5bf8a7e911bc75f3a68",
+   "descriptionSha256": "e329b74af4ac73805a3f5f0ea4f8631b9bf56854727ef06ead7d660b78833b1c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f1b0ae296d021115:mechanism:c5bfa13a@1",
+   "conceptKey": "nmc-concept:f1b0ae296d021115",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b701398638ee486d0a2e9dc1f16fd43c8fb8e8c7e3bff99955f3b306f90d8eb0",
+   "code": "PH4.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare classes by kinetics, actions, uses and adverse reactions and justify choices in simulated diabetes, pregnancy and severe hypertension scenarios.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "3b742ab4d2c32e0317d67f74b86664bb94b137c93cd9d092a0fcfdfaaaeefad0",
+   "descriptionSha256": "bd8e9b84d08436a3c19fb167136a4ef9186a038eda10b1233842f384282afaf2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:40cff1f024efe542:procedural-skill:d507e7ea@1",
+   "conceptKey": "nmc-concept:40cff1f024efe542",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b72d382309850eac94baffcaa7681e9e5e6bba36b40c00c6f14d16ccb79bd2b2",
+   "code": "PH4.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare drug options by kinetics, actions, indications and adverse effects, then build a simulated acute myocardial infarction plan.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 178,
+   "sourceBodySha256": "afe62adbf69c5caf489ee14a9c126f58ad096b9ec0d24a7f582787cdefb7f328",
+   "descriptionSha256": "ca5cf2cfbfb5b342fbb45fd631ce4413aea8d26a36d5434ff7b7272ad2bed9be",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ac53509ad96abc64:mechanism:5b88d30f@1",
+   "conceptKey": "nmc-concept:ac53509ad96abc64",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1948e8494f48773ad56b6e001cb674148767dcb1437a74f44d7ffa5e58451cb6",
+   "code": "PH4.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare agents by kinetics, actions, indications and adverse effects and distinguish symptom relief from strategies that reduce long-term complications.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "c59097a8e8d702a339451d3d9c52de6c1798c08d0655b44b2dd9de6df29a08d1",
+   "descriptionSha256": "25c2f5e99d5e9abc4f668226e8b36f5f3f1472b22c7ef5f8f61bd3d8c07a8935",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:28cc6e396e07f319:procedural-skill:3235e729@1",
+   "conceptKey": "nmc-concept:28cc6e396e07f319",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2b77cc843deeedd87fa979fae0f73c6f61d92409550866c3e9be1e0f06622871",
+   "code": "PH4.10",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare antiarrhythmics by kinetics, actions, uses and adverse effects and justify drug choices in simulated supraventricular, ventricular, fibrillation and arrest scenarios.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "dc8991f4a54f1c4f190324dfe79528fa1d7b38b069388d5ca78b4a510adf7938",
+   "descriptionSha256": "7eff98d6d678eedfcd03ab1c456cd854477db7d53e2860b375fc60257d84eb47",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2dffd58e5b945fe3:mechanism:2dfdced9@1",
+   "conceptKey": "nmc-concept:2dffd58e5b945fe3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:162be329f2f57575432a8e6004dd7554ba010675eaf5c02200cf04c22049ae46",
+   "code": "PH4.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare major agents by kinetics, actions, indications and adverse effects and identify medicines that can worsen lipid profiles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "36d7556c439339f6cf367cd49e7ee8b5d87fd639888a925b39e8f76e9c716cb9",
+   "descriptionSha256": "125313990c288fe6ed3635d91f089c2cf138095f4bb29963cc81dde46f559acd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:702276f7eaadf213:procedural-skill:140f5d38@1",
+   "conceptKey": "nmc-concept:702276f7eaadf213",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d1f029013d4afce7dfe709f7f07243476b7464a43d5b2631599bdc92c74a75d0",
+   "code": "PH5.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare drug classes by kinetics, actions and harms and justify a stage-appropriate plan in simulated cases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "5e2a6b1476b4cebe7fdbf778f8b83fd9055c9517ed79f8a3bc8270bd7590d718",
+   "descriptionSha256": "433b8aac02e615ce2453aaa2deb71671ce19238bcd11c1265cbace55c14c3cb5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e81e12872de762a0:mechanism:ba567e1c@1",
+   "conceptKey": "nmc-concept:e81e12872de762a0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:87a58e0abe01416429e76279649ec24cf5282bd8fba1042715035262e5bc09ee",
+   "code": "PH5.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare suppressants and expectorants by actions, kinetics, uses and harms and explain selection for dry and productive cough.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "17255416ad95086c004be3b6485826fe6621a70ec528023982acc8ea87970cc5",
+   "descriptionSha256": "1abd78ab8ca99adbb601941554910600f0ed0a5c402c3e47a0b74007fe3268c0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:95d511b75b4691ff:mechanism:484fd913@1",
+   "conceptKey": "nmc-concept:95d511b75b4691ff",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:99e656528f1021d2a89d2a55385fcda6a52a95ddb99ac8419306352be1b863a3",
+   "code": "PH6.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drug classes for ulcer and reflux disease and justify an ulcer regimen using its cause, expected benefits and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 179,
+   "sourceBodySha256": "86fdea6978272b6c1c7924ca1a7e0af27f464bf67dcd0dac527fdd9726ba5d44",
+   "descriptionSha256": "062a466b24713f5a42b8e1c75c3c4e5f1792f1862c1cf21d9e2fa019bbf9b442",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:efac0aa4c737def0:mechanism:6ce7579c@1",
+   "conceptKey": "nmc-concept:efac0aa4c737def0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a94de141dac2c4c59eb531946130c833321b77ae26f04dfaa03988f4febb51fd",
+   "code": "PH6.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare prokinetics, emetics and antiemetics by kinetics, targets, clinical uses and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "260ae4b7851a654d9139feed703257b57bb2e66e65f8a57a568979975600aeca",
+   "descriptionSha256": "4b4b4ecff4cb8f368b85e9fb52b0cf257bc0a7aee196cd1c2d56d1eac3f020be",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a6d173175b788fe2:procedural-skill:ea3b8813@1",
+   "conceptKey": "nmc-concept:a6d173175b788fe2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3d89747d9a8213405d5c1ac9326b00670d6bd823936038b9a5719b1670746613",
+   "code": "PH6.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare drug actions, kinetics and harms and justify separate plans for acute and chronic diarrhoea in adult and paediatric cases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "4b7ecb4c7851ec660ec2700b557f3eec36697b8058909d52088a0c1e8119342a",
+   "descriptionSha256": "c299a13289f5320e764c0654cad0256ed4a41ffd2f733823f35ac683a3143109",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2bde3610d4f7bf71:mechanism:b4a45b74@1",
+   "conceptKey": "nmc-concept:2bde3610d4f7bf71",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a1168ab068c4aa69c51b44d7ea38d9deec5fac24de8362367c1b72cf2599b10a",
+   "code": "PH6.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare laxative classes by action, onset and harms and justify a plan for a representative case.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "64f37307ef08c89c07bf0451761496141ebd4aa024f69bfceb1cb2b41db13fe9",
+   "descriptionSha256": "97735f9f2f2be8cdd30b23ea2fa8238b9efbe6bec433833988e40cb64b44fc8a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:790fefb4847ddf9f:mechanism:8dd2c652@1",
+   "conceptKey": "nmc-concept:790fefb4847ddf9f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:22e2ecb29784aa8a3fba68d06dd781e1efbf3157e7c8aee354d1d12beae0dc7a",
+   "code": "PH6.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish disease-modifying treatment from symptom-directed therapy and compare actions, kinetics and harms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "d6159af6fa27bf4031505dfa488ea651563856df9fadaa955376990e1a6ccb8c",
+   "descriptionSha256": "842202c2cc0fa46a97c1511f11595104f20ded1128f37aaf46b24c447fa4eaf5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9e4a4198659938b5:mechanism:d270155a@1",
+   "conceptKey": "nmc-concept:9e4a4198659938b5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bb81e8d46ca8adc24e224d7a7f2a5b56243fe3565f7512ea88a6a88fef76f5e7",
+   "code": "PH7.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drug classes by kinetics, mechanism and adverse effects and justify individualized treatment and complication prevention in cases with and without obesity.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "a8fdff0c5e47c17b48af53ad0e31abb892f013cd5f9773e5c9312940bf4537cc",
+   "descriptionSha256": "54a3e6c3151411172d5c6dbd84021d0655b271e827e1bb04b3d32eeeab8ecec9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d687ad10ce89893f:mechanism:b0e39b2d@1",
+   "conceptKey": "nmc-concept:d687ad10ce89893f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:97f32aa37bb49490ccb66bafdfa21a6ed9b8c6ac240c1248cb5118ff8339621e",
+   "code": "PH7.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare antiresorptive and anabolic agents by kinetics, actions, uses and harms and justify treatment choices in male and female cases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "88fbbcff2e2df6e586bf7296b85b011292099764d91f897af900d631950a3a82",
+   "descriptionSha256": "6fd0fa699105f2e3bd932105fb7f6ea32dff0f41447569b5eabcf83ee7c41e5f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:17526f09aabd5a6c:mechanism:b0e19d4b@1",
+   "conceptKey": "nmc-concept:17526f09aabd5a6c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+   "code": "PH7.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare thyroid hormone preparations and build a simulated replacement plan for hypothyroidism.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "62f4a7cfaf2ce5593b26eb26819ed8bf2bca7ed1bf9d524c51bea6f700e499f9",
+   "descriptionSha256": "d0bed3e4deb7d4a6d92d1df811dcdeaf433b38d36b271ce8c248bbad8970b5ed",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:445b8672bc6e3775:mechanism:605b8eea@1",
+   "conceptKey": "nmc-concept:445b8672bc6e3775",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f2da4418b70f1f1fe7e2ab31a4f246b4ae7895eb4da0e97a20db4944fd62bad0",
+   "code": "PH7.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare antithyroid agents by kinetics, actions and adverse effects and build a simulated plan for hyperthyroidism.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 180,
+   "sourceBodySha256": "62f4a7cfaf2ce5593b26eb26819ed8bf2bca7ed1bf9d524c51bea6f700e499f9",
+   "descriptionSha256": "d0bed3e4deb7d4a6d92d1df811dcdeaf433b38d36b271ce8c248bbad8970b5ed",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1467e7415636dd8f:mechanism:a919c6ae@1",
+   "conceptKey": "nmc-concept:1467e7415636dd8f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:06c70dfbdcf1d1d8a978c83795356b5a9df985d241a90615d00157cb12b77fa4",
+   "code": "PH7.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drugs that alter pituitary hormone release by target, indications, contraindications and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "e1ea507553c015634075f20124009959f113a4e1e92fa742189054f30485c1e0",
+   "descriptionSha256": "3c2eb89d58451f4c36ed6dc3b09773bf3f1f3ed77da4a8db61c47d5670c11f27",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:17542150b6a71077:procedural-skill:f72af9dc@1",
+   "conceptKey": "nmc-concept:17542150b6a71077",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:64a3dadadc7de9ae51204b4c5c8a953f09a9d72a6b741a4d1e2fbdfeda6729ad",
+   "code": "PH7.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare corticosteroids by kinetics, actions, indications and harms and counsel a simulated patient on safe use.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "7ee562c8181794ee30959eae2ad605f2a9897cde3a0efe72cbeb5e269d135650",
+   "descriptionSha256": "22a0fc401df4430b28cc255446e7865c69f3af1991b409b23c6b83484ec5d3fa",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6e6ee41eef73e9f1:mechanism:28673c78@1",
+   "conceptKey": "nmc-concept:6e6ee41eef73e9f1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7",
+   "code": "PH7.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare androgens and anabolic steroids by kinetics, actions, indications, contraindications and harms.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "48d121c346c5b88fc5585a401c7da66666d4fa401e726c3eb073a92fde0743c3",
+   "descriptionSha256": "5ff37ef9deb6e384f27492099119a18220fa1831f5e8172e0459e341fa79e581",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d7c6e4ed4acf8bf0:mechanism:2514c9cb@1",
+   "conceptKey": "nmc-concept:d7c6e4ed4acf8bf0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cb6b678e0cfd0811efd92d7aa2cf24d754de92c7e9e70b19ea5e683eda352fd7",
+   "code": "PH7.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drugs for erectile dysfunction by kinetics, actions, indications, contraindications and harms.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "48d121c346c5b88fc5585a401c7da66666d4fa401e726c3eb073a92fde0743c3",
+   "descriptionSha256": "5ff37ef9deb6e384f27492099119a18220fa1831f5e8172e0459e341fa79e581",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ad8090aee011a8c5:procedural-skill:4718e14e@1",
+   "conceptKey": "nmc-concept:ad8090aee011a8c5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+   "code": "PH7.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare oestrogens, progestins and their modulators by kinetics, actions, indications and harms.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
+   "descriptionSha256": "7858e6bd3451b44f924e89bdf61e6e0bab6fadaf84771e43ad7750c8474f08da",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6e48eb28262ff029:procedural-skill:e0d9f500@1",
+   "conceptKey": "nmc-concept:6e48eb28262ff029",
+   "existingConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "referenceId": "nmc-2024-ref:1cdaa50a501cf7e05cb7dd3e463b0b11e4f422fc272bd54bcc4faf2e4953aa81",
+   "code": "PH7.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare hormonal contraceptives and counsel on their correct use in a simulated consultation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "59b78f9e9d1e845c743dfbe623f21f9000184fec316a3c1cc8bf91ab01aac468",
+   "descriptionSha256": "7858e6bd3451b44f924e89bdf61e6e0bab6fadaf84771e43ad7750c8474f08da",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:94cefe252a7a891c:mechanism:3ec940ad@1",
+   "conceptKey": "nmc-concept:94cefe252a7a891c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2",
+   "code": "PH7.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare uterotonics by kinetics, actions, indications, contraindications and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "3c23fec9f7f0afdd21750a3eed8f147618d755cbff115149ac8a4fd9ae427c56",
+   "descriptionSha256": "d590fff741c4adaca8f615d5584808c4c792cbabdb8e6eee6a15bf3f6408f8c1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:28a7bd5006ef7d73:mechanism:2c8c8a17@1",
+   "conceptKey": "nmc-concept:28a7bd5006ef7d73",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2aa623c2e3be2d9230c2f2dea0cc3bd95a51668d002dc8e800e9391c63a3dfb2",
+   "code": "PH7.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare tocolytics by kinetics, actions, indications, contraindications and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "3c23fec9f7f0afdd21750a3eed8f147618d755cbff115149ac8a4fd9ae427c56",
+   "descriptionSha256": "d590fff741c4adaca8f615d5584808c4c792cbabdb8e6eee6a15bf3f6408f8c1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:37c843abc2d8b823:mechanism:26ac2e33@1",
+   "conceptKey": "nmc-concept:37c843abc2d8b823",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f5a031676f2156b5cedbb5048f88e0d68b902998ef0424e3d0f63fba8ca787d4",
+   "code": "PH7.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Match representative fertility medicines to their physiological targets and clinical roles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "7e25f5d55657ed1c03369625f9205b17bb7a91a25d9cd3bff12120e67a284f88",
+   "descriptionSha256": "b89b5eeb867e212b84d802d1eac78561bf87cb04558cc65c05e8663fffcd1ca6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2ac23d7168cfc6fc:mechanism:4bdbee8d@1",
+   "conceptKey": "nmc-concept:2ac23d7168cfc6fc",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f7109b11ff659f2b31b5cd10210fa2eec569068cc9bd3eabeadec383db11d6c1",
+   "code": "PH8.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain selective toxicity, drug exposure and resistance selection and apply the principles to a simulated case.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "3ec99f1e70e159fe095dc735eea5f19d854ebe8c26b5ac0cd8d063e4f79d3a4e",
+   "descriptionSha256": "2636f27418c80729b4ac0c105c794a887fcd98ce070f6af7012003c448a685f4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8c8006fa3be4890d:mechanism:7d229e8b@1",
+   "conceptKey": "nmc-concept:8c8006fa3be4890d",
+   "existingConceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "referenceId": "nmc-2024-ref:97158fb5442fe1a8dd5783aa8050979b155d8bd5dc59799a220b15267cc60507",
+   "code": "PH8.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use the local stewardship programme to explain empiric selection, review, narrowing and duration in a simulated case.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 181,
+   "sourceBodySha256": "a435865aeae61c2d493cc054ed88a341a193e4a70fd5ab823027be98f64b1a57",
+   "descriptionSha256": "ad739b9cb62452880ddc329edf84421a4d5f20d32ffc29a39b89a89e2978ff70",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0185375c9f56e23c:mechanism:f3852d42@1",
+   "conceptKey": "nmc-concept:0185375c9f56e23c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4be18e430b3efc2622208c16fd536ae4e476c064cf75002d61679bd5535ff4a6",
+   "code": "PH8.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare sulfonamides, quinolones, beta-lactams, macrolides, tetracyclines, aminoglycosides and newer agents by kinetics, actions, uses and harms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "c9f1b72564f2a44a50cba1b49ce478da473975b54c47b3e9fc6beaaf53d8ca81",
+   "descriptionSha256": "296cbe774dc31904f73c461fc3c37dc289a26c4881a0af5f47be244ad1975284",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ff6043bd67b8d8a4:procedural-skill:66526013@1",
+   "conceptKey": "nmc-concept:ff6043bd67b8d8a4",
+   "existingConceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "referenceId": "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+   "code": "PH8.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Build a simulated treatment plan for urinary tract infection using clinical and microbiological data and counsel on correct use.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "745b41126ad7ef7bf4daea86a1d127d6d4cc3cdbbe8e79e5ea63e753400c1d7f",
+   "descriptionSha256": "8bc4396c8ff154014495d9c23855edf932de0391b8c20b5b862e3a237cb307ce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:643f49e50f0f1d34:procedural-skill:9f74118f@1",
+   "conceptKey": "nmc-concept:643f49e50f0f1d34",
+   "existingConceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "referenceId": "nmc-2024-ref:0920409f3bedd3c08822c7bb59215f3940bdedb6415355e237976fd730d80b3a",
+   "code": "PH8.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Build a simulated treatment plan for a sexually transmitted infection using clinical and microbiological data and counsel on correct use.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "745b41126ad7ef7bf4daea86a1d127d6d4cc3cdbbe8e79e5ea63e753400c1d7f",
+   "descriptionSha256": "8bc4396c8ff154014495d9c23855edf932de0391b8c20b5b862e3a237cb307ce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:77719ce21f9a05ca:procedural-skill:dfd9546e@1",
+   "conceptKey": "nmc-concept:77719ce21f9a05ca",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:606bce682b04f9708f6b92ceda09d643760175fd241221ef2a48cd44e487b392",
+   "code": "PH8.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare drug kinetics, actions, indications and toxicity and use current programme guidance to justify plans for representative treatment categories.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "dec86644a6cb2aa39d2794b254ee348d13a9ae71d1e214b3538e3f88b212d7c9",
+   "descriptionSha256": "23cd573b4cb237f9540813ca2cb1397af2fdedec3bee4a9c0bb54c9a1ff65539",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0e99b4f9ff9b0ffb:mechanism:39c131bd@1",
+   "conceptKey": "nmc-concept:0e99b4f9ff9b0ffb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9d74ee9688adcd7528b708934a7ca5ee9b9902de0c8245e5748eda6bcd4eb6f8",
+   "code": "PH8.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drug kinetics, actions and harms and distinguish antimicrobial therapy from treatment of lepra reactions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "8690d460ffe6aaf4779c2303d8de6fded2102a25ee95f3eb4be17fdd161d1136",
+   "descriptionSha256": "9b9563b74a8584d724b14be64992b92e169c558d8118d068c4bef11233d815cc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:759e14d968f41326:mechanism:db3acc5d@1",
+   "conceptKey": "nmc-concept:759e14d968f41326",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+   "code": "PH8.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare agents for amoebiasis, visceral leishmaniasis and malaria by kinetics, targets and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "017ab4692fcc7f0e7ba2a9fdd4dde765b05e1600eac2ab4f3522842a336c3f4b",
+   "descriptionSha256": "ba74ee5893291cdc3b002ac0781d43c647a839e4cc4107b4d23c3c5d3b962f88",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:df5b745df4a7dea2:mechanism:aa8d472e@1",
+   "conceptKey": "nmc-concept:df5b745df4a7dea2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bfa2908150ee09c721b93213631a21850381922909a98ad9b51de4b3a32768a7",
+   "code": "PH8.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare agents for filariasis by kinetics, targets and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "017ab4692fcc7f0e7ba2a9fdd4dde765b05e1600eac2ab4f3522842a336c3f4b",
+   "descriptionSha256": "ba74ee5893291cdc3b002ac0781d43c647a839e4cc4107b4d23c3c5d3b962f88",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3815b21ea4544619:mechanism:c3edb194@1",
+   "conceptKey": "nmc-concept:3815b21ea4544619",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:43343bc5e5b2ea900adc06eb209117e9daae5c4c50da44e36e9fb1f1bea276fa",
+   "code": "PH8.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare drug classes by kinetics, targets, spectrum and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "32132158673f3ac08c43b8ac7ef8089af90dd3818e75a123d8508c85f7327324",
+   "descriptionSha256": "0b2e64f82df94b8179cb9c1fc6bc4847224b0073a1c893ff61a7a47011f08838",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7d50748b380c00fb:mechanism:00ede8b4@1",
+   "conceptKey": "nmc-concept:7d50748b380c00fb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3bb9f0ec041a1e5186c2b3104c22491f93b3754ab8321bc9abfad82eced0fb95",
+   "code": "PH8.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare kinetics, targets and adverse effects and match agents to representative intestinal helminths.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "0ca51ab808b04c80bca2ea6ac1bebbf3d5f39f621a90166ff89bb65a4eacd63f",
+   "descriptionSha256": "b9bcad75059d0719aa2574bf654da0eea640cec164ae4d13ca4a48b27f963b19",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2d05bfe9ccdca51e:mechanism:900b7dfe@1",
+   "conceptKey": "nmc-concept:2d05bfe9ccdca51e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e",
+   "code": "PH8.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative antiviral agents by kinetics, actions, indications, contraindications and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "7f3f8b12a6ab72ada68c04e1b2fcf3387d6bcb4054c6e892cc0301322e84e9eb",
+   "descriptionSha256": "f93f4cc09f5db1e72732e45b3f70192cff617d5cd204ac709e4eac1e32827ae4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2b4ec12f279822dc:mechanism:15532f15@1",
+   "conceptKey": "nmc-concept:2b4ec12f279822dc",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3db9852ee4d8264d1623430faa12662e3b9a928ecfeb1f47986706d317f91a3e",
+   "code": "PH8.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare antiretroviral drug classes by kinetics, actions, indications and adverse effects.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 182,
+   "sourceBodySha256": "7f3f8b12a6ab72ada68c04e1b2fcf3387d6bcb4054c6e892cc0301322e84e9eb",
+   "descriptionSha256": "f93f4cc09f5db1e72732e45b3f70192cff617d5cd204ac709e4eac1e32827ae4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0fee35743a129e10:mechanism:e638f13b@1",
+   "conceptKey": "nmc-concept:0fee35743a129e10",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:52d0e2d9e8a6eb3b8b7a6ff117191ed1f49d83eb7c90daf53f7da576e3ab9789",
+   "code": "PH8.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare classes by kinetics, actions, indications and toxicity and justify a simulated plan for mitigating treatment-related harms.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "a28be24e68efb1d449aa5e62d61dd95c4a0d0ab8a28ee70ddb21f2fb987d205e",
+   "descriptionSha256": "d50b3642a2658fd812c24c8b1f2ac4944f4160302d30d524e4388b17d995fa2f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:220e55398f0cc0d9:mechanism:c4ad1eb6@1",
+   "conceptKey": "nmc-concept:220e55398f0cc0d9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d6391b2b6ce524e7b17ff2eea77155a2a1cd6de75a2b7fb3aa30033c6480e2e6",
+   "code": "PH9.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative agents by kinetics, immune targets, clinical uses and adverse effects.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "e58e2a995bb18f39c70a21896160a809eedce10c0ab075c2bc5370e9960c582a",
+   "descriptionSha256": "adef253cfb3a4129351fc5ab0785b985955d308b20e11a6613fa40eda53f1430",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:64b0531c85df8268:mechanism:79ba3fff@1",
+   "conceptKey": "nmc-concept:64b0531c85df8268",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+   "code": "PH9.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use simulated cases to distinguish initial assessment, supportive care and specific antidotes in common poisonings.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+   "descriptionSha256": "76559fce6dba35a996bfdb58c2f564174e4aea6a29c8ae13eea0d74e86091dc6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2e108428aedb522c:mechanism:998ac1c8@1",
+   "conceptKey": "nmc-concept:2e108428aedb522c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1f3a11ead90ca5ee0786d917d49d7d7313ebbc5e09d36ff602421f747e07871d",
+   "code": "PH9.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Outline assessment, supportive care and antivenom use in a simulated snakebite or sting.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "ce0149956cf497e37675bfbf39eea7458487445fefd4da66a1066b15ed34d44b",
+   "descriptionSha256": "76559fce6dba35a996bfdb58c2f564174e4aea6a29c8ae13eea0d74e86091dc6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9e7e90b391605821:mechanism:241c4265@1",
+   "conceptKey": "nmc-concept:9e7e90b391605821",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cf9c887f6e80e503b62e85daf66bec81708a1e7be2386e8c0cb28546d05f53c7",
+   "code": "PH9.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Match representative chelators to metal exposures and justify a simulated plan including monitoring.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "49234c6988e4a09bbf1845159decd74db108de706a50c5343cc0516b7b40e57f",
+   "descriptionSha256": "80200f1d9b861c884db132f18c4ce915dbde0a7365d400489406ff8a5d44772d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d454bc6585c57979:mechanism:e1983334@1",
+   "conceptKey": "nmc-concept:d454bc6585c57979",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:de842864441c64c637e2bcb9911012ce488c3c5dbfbff41a98f3c91612a64154",
+   "code": "PH9.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Classify vaccine types and explain principles of selection and safe use.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "ec8a2c51a94ac162566a53884173f75fa8b7c190d5276f29522216faba97389d",
+   "descriptionSha256": "b7cff663a02704dd16271596abd66086a050d9900fb0867747b4643957964a13",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3b0abf9520092001:mechanism:66233af6@1",
+   "conceptKey": "nmc-concept:3b0abf9520092001",
+   "existingConceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "referenceId": "nmc-2024-ref:240c51cc9ee24cbb8504b0ca84540465142970227debf9b1fd74870c2991a2b0",
+   "code": "PH9.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Select an agent for a representative purpose and explain limitations and precautions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "fe4a3b70fbf88f529da24f2799098e27513de0b809e75f01ce1bea6480d55127",
+   "descriptionSha256": "b4ba9b983bfa3e0e0a210362cfa47179ea5a179b855a4bd5c4fe0fdaef169ca4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c32dff1c0fdf0c23:mechanism:ae9e7db3@1",
+   "conceptKey": "nmc-concept:c32dff1c0fdf0c23",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:44da0f8afc633dc317984beeb63072f04b6fb9ac4d50282bd3c345583e6d66c6",
+   "code": "PH9.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare medicines for acne, scabies, pediculosis and psoriasis and explain selection of sunscreen.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "aae2bab7bf999e672936c75b761eacb566b35f56c93529206510007da2e701ab",
+   "descriptionSha256": "267019bfa25107ea32df8579d0a4b3929cea0f9e83c0ba6dec248dce2bd87dbe",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d7847586d88a1606:mechanism:9835e66b@1",
+   "conceptKey": "nmc-concept:d7847586d88a1606",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:664785dc167322609aaad1a503dd0eb647c06a6a868c085e040d4d1aece52db5",
+   "code": "PH9.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative glaucoma and other ocular medicines and explain how topical delivery affects exposure and use.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "30bd15f0fbd6b714616ce117e56ea0fdbc3a7ac9d380bcdd823706b8073bca84",
+   "descriptionSha256": "86fe2a966d6be5a375d9e94e3f9ee4c5ebbbc47951ce9142e0055ed7afed1315",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a5ff99aec726e0af:procedural-skill:51fc511c@1",
+   "conceptKey": "nmc-concept:a5ff99aec726e0af",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d7847d721f7da881ac6e3938074cd7afd129a03235dbb273f3210db0f1eb1ae",
+   "code": "PH10.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Compare evidence sources and demonstrate how to verify a current drug claim.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "0009be4bb1da3bfef05b258a00f2e58cea66871ef7a9bc50da54ab465d2ed8ce",
+   "descriptionSha256": "b71e90a5464e6b8acfdc824705d1b11b51765e10eeca8e4b7dec38356e4b7295",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a5ff99aec726e0af:procedural-skill:a4076291@1",
+   "conceptKey": "nmc-concept:a5ff99aec726e0af",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:25bfa2b53d9061e973187eff0affd3151f8054982c5571c0a509700513d9e735",
+   "code": "PH10.13",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Role-play verifying and sharing drug information obtained from a representative or media source.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 185,
+   "sourceBodySha256": "07967bf2d94e18ebc214a6ca0fc11dfba7ca23a7e0a575b1fb5eebc4472e9465",
+   "descriptionSha256": "7e4c8ef3ee316851093fdd809e1df66d612112fe39d03932f3acc4c59ecef23d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a487f41485d37872:procedural-skill:ccb5f3d2@1",
+   "conceptKey": "nmc-concept:a487f41485d37872",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7a998c8d6c88692d5636500a1f026e95a9f792dceffdba6379ef76939eb1e43b",
+   "code": "PH10.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Critically appraise a promotional claim and interpret corresponding package information.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "412ba9993f741c04dcfcb614006966fe33221c3a49c0408045ad4b3449b919b8",
+   "descriptionSha256": "51cdd3b902d1bbacd80df34f703f7ee2d2464b7680dbd837959bee6669646bcd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cc42a91c9a6609db:procedural-skill:4614d280@1",
+   "conceptKey": "nmc-concept:cc42a91c9a6609db",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2d24d8954bdbdf01cbd0509fd7b48bae238aa67abecdc226ac382b31e9f1da41",
+   "code": "PH10.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Develop and explain a personal drug list for a simulated condition using efficacy, safety, suitability and cost.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 183,
+   "sourceBodySha256": "6bb72e0ea9bfd311b65058feb4ead82d966f9c4faf395252d31924528b5cf2a2",
+   "descriptionSha256": "a63492200d5c3817eda15a93c863912d2a793f1e11a0c037741abd5e28c4605a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:25b7fadcf667a2bb:procedural-skill:fa6c1aae@1",
+   "conceptKey": "nmc-concept:25b7fadcf667a2bb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:86dbd8612eb1e01a358bd541bd9de11c4a7b8a592dbee133d8823f2a3f4cda80",
+   "code": "PH10.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Write a clear, complete and rational prescription for a simulated case.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "85aa388bbddefe81241cc13816373930e36bc428ceeb3a915e5b0c64b1f23e25",
+   "descriptionSha256": "988f89f9efa3f09b84abc3d6c3477e3f4b96784c665b6a186f6f0b503527392f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:25b7fadcf667a2bb:mechanism:9ce68ee6@1",
+   "conceptKey": "nmc-concept:25b7fadcf667a2bb",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:21171ebaf44368d4bd22c24eb4d3f8f24b0e0d8b324d6bd296ff98b0631035fb",
+   "code": "PH10.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Review a sample prescription for errors and explain how to improve clarity, safety and appropriateness.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "8cc66088e01c7390c2594ac3cd43ee5281b881ba3c4bb81b1aec67123f74cb4b",
+   "descriptionSha256": "b03fe39a85d185aa5880dfed57c177efb6e27ed2c81a20607ade94aa60fb7654",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9a879befe53db007:mechanism:0451c45b@1",
+   "conceptKey": "nmc-concept:9a879befe53db007",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:119945b53ef0579cb082b941d9935ea8fbf610a07ee8c1551a1a56d5d9da6b60",
+   "code": "PH10.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Apply relevant rules and ethical principles to controlled drugs, off-label use and prescribing for oneself or close contacts.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "e5759462b9e01b8cd538a205021dd509736ce9a9d9bf889859f9e0480850a957",
+   "descriptionSha256": "01e52c0d6f9f15b16d535d3b15e53b79575673aa5f77917ec3bd899583656d19",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9fb43dfd4e3b13ca:procedural-skill:82a319b2@1",
+   "conceptKey": "nmc-concept:9fb43dfd4e3b13ca",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a6c1f6fabbf565eeacaf8e4b6e455080311df87f44cdce082d19f1731efeaca4",
+   "code": "PH10.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use a simulated case to explain how genetic information can affect drug selection and dosing.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "d7a75829f31709c70aa16ac1d985d8948509f5d4007bcbd00402e9108495e4c5",
+   "descriptionSha256": "827a2a8f215f497cb63a144d16bf203a916b03532eef38ce6bb3f7afa8e61be0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5d4959b5b48e12c3:procedural-skill:d6d06751@1",
+   "conceptKey": "nmc-concept:5d4959b5b48e12c3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a6c1f6fabbf565eeacaf8e4b6e455080311df87f44cdce082d19f1731efeaca4",
+   "code": "PH10.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use a simulated case to explain how treatment cost can affect drug selection.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "d7a75829f31709c70aa16ac1d985d8948509f5d4007bcbd00402e9108495e4c5",
+   "descriptionSha256": "827a2a8f215f497cb63a144d16bf203a916b03532eef38ce6bb3f7afa8e61be0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9ea1acc46ed07414:procedural-skill:fdf8b717@1",
+   "conceptKey": "nmc-concept:9ea1acc46ed07414",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:46f668025db00b759446243771e1e965bbcabc38184ee9f61b0bc32a0cd0b43b",
+   "code": "PH10.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Explain essential medicine selection and evaluate representative fixed-dose combinations and over-the-counter products.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "ca71aed9df4dafcb06337f16f5b284468ac296b04355feffc45346f2de18a894",
+   "descriptionSha256": "e2fc8834269a539e1abf60a8f0360dabe49cf286637d33dad7a5a721b8ddbe5c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:eee4665dd87e91e0:interpretation:d87f36e7@1",
+   "conceptKey": "nmc-concept:eee4665dd87e91e0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1440f13ec0e6943bb0490bc48ac6ce264c6318202f86a783a91ab4f116a34b8c",
+   "code": "PH10.10",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Select when to measure drug concentrations, choose sampling time and calculate an adjusted dose from representative data.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "af01d79b8346a53dd793135ecfa12af97c63b06593d21d2cc927a437e99b7439",
+   "descriptionSha256": "b67dc70d3e55d06437015198bbfcfb3f3f339f3bd10bb0710ccfab23e0062f6d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0a20e3f0e1948125:procedural-skill:b398f462@1",
+   "conceptKey": "nmc-concept:0a20e3f0e1948125",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1b9208c6d14be5c78b5d32e51a7ca45cfb2203906a67dd15723336d80ac924a1",
+   "code": "PH10.11",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Apply relevant regulatory principles to simulated discovery, approval or clinical-use cases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "decb062daca0d32066af2fab782c6939e4b0e0ac685079a3d0cb502155f48f28",
+   "descriptionSha256": "8667ebde67f8dc6cc2014e5201a503942a2ef1e00fdc4b9f7fbbe098f3f78eca",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6e1e3cf31ea04384:mechanism:b98f4da5@1",
+   "conceptKey": "nmc-concept:6e1e3cf31ea04384",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e87f202dba149cea8f63170f6b0cfe2281e3774a44284b3ef94420e881639902",
+   "code": "PH10.12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace development and trial phases and explain the role of Good Clinical Practice and research.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 184,
+   "sourceBodySha256": "ad869a19dc481ab504ea50021b9fe130535181fa7d10e444a51f748f9f4b8930",
+   "descriptionSha256": "8e5942463b61b129d6dfcea7bf317b979e02e1a69f444c96df00f706a05a84a5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8f0b00d975b34c9b:procedural-skill:0f4b7982@1",
+   "conceptKey": "nmc-concept:8f0b00d975b34c9b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:eb630545c297b3aeef2014a690ae0fb687439729e14389977e18a84944857812",
+   "code": "PH10.14",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Use teach-back and empathetic communication to explain correct medicine use in a simulated consultation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 185,
+   "sourceBodySha256": "ebba007c1da88b33993feca770cd081ae66421b7f479f0aab9de7073f5f24b78",
+   "descriptionSha256": "00c2208cc7be1eee661b58e6d9fd6f034c263a2fc2b940a8e4523f3389107647",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8f0b00d975b34c9b:procedural-skill:90119d5a@1",
+   "conceptKey": "nmc-concept:8f0b00d975b34c9b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2fca8b46ee37f410b82a73b169207dee3a6cbc79488944dfdb4c9803563fe3f7",
+   "code": "PH10.17",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Deliver a brief simulated patient or public explanation of safe medicine use, dependence and over-the-counter risks.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 185,
+   "sourceBodySha256": "7286d56cdcfda20b5eb1b7ebb5812f38a461125283a99bf8c8d96bf176bf16a8",
+   "descriptionSha256": "932b26d4f240c914084a99178d1cc213c6c29ae71728848b7f814d5d64632ea9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:556bcfa1db943e75:procedural-skill:5259a091@1",
+   "conceptKey": "nmc-concept:556bcfa1db943e75",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:680d9c0204077baee2cdc9248602bfab5b7da82f4bd508ddddb52e5bacd70dda",
+   "code": "PH10.15",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify barriers in a chronic disease scenario and demonstrate a conversation that supports adherence.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 185,
+   "sourceBodySha256": "6a270790035623989422b9fad1210ef753cb47407c26e3ee44194cc9269d5e75",
+   "descriptionSha256": "9faa8c99009e9f68b7da235346bcdf2969bdc0e5458a77f44d319d0ae021e4fd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  }
+ ]
+}
