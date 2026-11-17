@@ -57,7 +57,7 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
  assert.equal(inReg.length,187); // 185 + PY9.1 official-replacement pair (registry @23)
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@23');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@24');
 });
 test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
  const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));

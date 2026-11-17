@@ -1,3 +1,9 @@
+## Concept subject revisions accepted (registry @24) — 2026-11-17T13:45Z
+- New append-only identity revisions: `content_concept_identity_revisions`, `content_concept_revision_batches`, view `content_concept_current_identities`, admin RPC `concept_subject_revision_batch_v1` (subjects-only additions; learner-visible identities refused; stale-digest, atomic, idempotent). Migration `20261117130000` applied in production.
+- Owner accepted `nmc-concept-subject-revisions-v1-20261117`: 328 accepted private concepts gained 462 subjects evidenced by registry @23 source bindings. Original acceptances unchanged.
+- Registry @24 re-pins 1,177 objective identity digests; owner-api reads current identities and is re-pinned to the @24 commit.
+- Follow-up: syllabus baseline/preflight functions still read `content_concept_acceptances` directly (0 baselines in production); switch them to the current-identity view before first use.
+
 ## owner-api: foundation data fetched at a pinned commit instead of bundled — 2026-11-17T10:20Z
 
 - 2026-11-17: Root cause of foundation page stall: the private-identity lookup sent ~1,500 IDs in one PostgREST GET (520, retried until the 150 s wall limit). Now chunked by 150; data fetch gets a 12 s timeout, a jsDelivr fallback (same pinned commit + SHA-256) and stage logging.
