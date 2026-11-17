@@ -2,7 +2,7 @@
 // Reads commit-pinned, checksum-verified preview data; never writes; never visible to learners.
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { validatePreviewData, parsePreviewFilters, previewPage } from "../../../src/domain/nmc-admin-learner-preview.js";
-import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput } from "../../../src/domain/nmc-concept-batch.js";
+import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput, validateRevisionBatch, revisionSummary, revisionAcceptInput } from "../../../src/domain/nmc-concept-batch.js";
 
 const DATA_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/373e1f089f9a75f0cd0bbf2cd4bf7c4b39e34e4b/data/nmc-admin-learner-preview.json";
 const DATA_SHA256 = "f23158c802cc4a8713caa64b873494d1abb51a01177c1b3eb4b352c13ccad47b";
@@ -67,7 +67,9 @@ async function pinnedJson(url: string, sha: string, validate: (x: any) => any) {
   return value;
 }
 const previewData = () => pinnedJson(DATA_URL, DATA_SHA256, validatePreviewData);
-const batchData = () => pinnedJson(BATCH_URL, BATCH_SHA256, validateBatch);
+// The pinned batch is either a concept batch or a subject-revision batch (kind "subject-revision").
+const batchData = () => pinnedJson(BATCH_URL, BATCH_SHA256, (b: any) => b?.kind === "subject-revision" ? validateRevisionBatch(b) : validateBatch(b));
+const isRevision = (b: any) => b?.kind === "subject-revision";
 function routePath(url: URL) {
   const parts = url.pathname.split("/").filter(Boolean);
   const i = parts.lastIndexOf("nmc-admin-preview");
@@ -104,15 +106,18 @@ Deno.serve(async (req: Request) => {
     const path = routePath(url);
     if (path === "/batch" && req.method === "GET") {
       const batch = await batchData();
-      const { data: done, error } = await admin.from("content_concept_batch_acceptances").select("batch_id,accepted_at,item_count").eq("batch_id", batch.batchId).maybeSingle();
+      const table = isRevision(batch) ? "content_concept_revision_batches" : "content_concept_batch_acceptances";
+      const { data: done, error } = await admin.from(table).select("batch_id,accepted_at,item_count").eq("batch_id", batch.batchId).maybeSingle();
       if (error) fail(503, "batch_state_unavailable");
-      return respond(req, 200, batchSummary(batch, done));
+      return respond(req, 200, isRevision(batch) ? revisionSummary(batch, done) : batchSummary(batch, done));
     }
     if (path === "/batch-accept" && req.method === "POST") {
       const batch = await batchData();
       let decision;
       try { decision = parseAcceptRequest(await jsonBody(req), batch.batchId); } catch (e) { if (e instanceof ApiError) throw e; fail(400, "batch_accept_invalid"); }
-      const { data, error } = await admin.rpc("concept_batch_accept_v1", { p_actor: authData.user!.id, p_input: batchAcceptInput(batch, BATCH_SHA256, decision!) });
+      const { data, error } = isRevision(batch)
+        ? await admin.rpc("concept_subject_revision_batch_v1", { p_actor: authData.user!.id, p_input: revisionAcceptInput(batch, BATCH_SHA256, decision!) })
+        : await admin.rpc("concept_batch_accept_v1", { p_actor: authData.user!.id, p_input: batchAcceptInput(batch, BATCH_SHA256, decision!) });
       if (error) {
         const code = String(error.message || "").match(/concept_[a-z_]+/)?.[0] || "batch_accept_failed";
         fail(code === "content_admin_required" ? 403 : 409, code);

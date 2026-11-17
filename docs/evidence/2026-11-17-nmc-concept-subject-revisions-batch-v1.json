@@ -1,0 +1,5586 @@
+{
+ "schemaVersion": 1,
+ "kind": "subject-revision",
+ "batchId": "nmc-concept-subject-revisions-v1-20261117",
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "basis": "Subjects added only where an accepted concept is bound to an NMC 2024 source row of that subject in registry mbbs-foundation:original-objectives@23.",
+ "counts": {
+  "revisions": 328,
+  "addedSubjects": 462
+ },
+ "revisions": [
+  {
+   "conceptId": "C-00117568-8807-4a1e-a557-c21e1cbd26f6",
+   "previousIdentityDigest": "bb9ab0734f5a4293b463125d7b9043df3ec7f1ee8134b8a6cabc8edcab722d5c",
+   "label": "Antiulcer drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 15.15",
+    "PH6.1"
+   ]
+  },
+  {
+   "conceptId": "C-03be60df-afc8-448c-8e93-1ebf721556c1",
+   "previousIdentityDigest": "60f64636c3eb729ff84af3f0aa250a2464306d1fd3ffe4eebf49db29f37a2488",
+   "label": "Unconscious patient",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AS7.3",
+    "PE24.15",
+    "PE24.5"
+   ]
+  },
+  {
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "previousIdentityDigest": "07b0bbcb2e0f689063f226803048625a1d683f25900d2e6f09ecfef4c8f6d8fe",
+   "label": "Chronic kidney disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM10.1",
+    "GM10.10",
+    "GM10.11",
+    "GM10.17",
+    "GM10.20",
+    "GM10.24",
+    "GM10.4",
+    "GM10.7",
+    "GM10.8",
+    "GM10.9",
+    "PA27.4",
+    "PE20.6"
+   ]
+  },
+  {
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "previousIdentityDigest": "1c362ee59262711d6ad5452db5f70896964607014d3915993a798cecf142334a",
+   "label": "Urolithiasis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA27.13",
+    "SU29.5"
+   ]
+  },
+  {
+   "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "previousIdentityDigest": "32fd2d9c124f980128a8550813ae8c8e2ad14c0aabebd79f2ba9a0dd7dc2e3b4",
+   "label": "Goitre",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA31.1",
+    "SU22.2",
+    "SU22.3"
+   ]
+  },
+  {
+   "conceptId": "C-0601180d-c252-4190-a5c7-fc09620d47eb",
+   "previousIdentityDigest": "980a553ef38e92c85633c106888d636561294e0ed550720b55c97044491963a9",
+   "label": "Child abuse",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "FM9.1",
+    "PE6.12"
+   ]
+  },
+  {
+   "conceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "previousIdentityDigest": "0d9d40c8ad9a066f2bc4532dbfedbfb673a5537e6305623eca9842bcb95d23f1",
+   "label": "Wound healing",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA4.1",
+    "SU5.1"
+   ]
+  },
+  {
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "previousIdentityDigest": "5ea6d49e1af41827678df0ad77986addf64a8733ad796ec7648ac1f0aaa31418",
+   "label": "Renal function tests",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry",
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC 11.1",
+    "GM10.12",
+    "GM10.13",
+    "PA22.5",
+    "PY7.8"
+   ]
+  },
+  {
+   "conceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
+   "previousIdentityDigest": "e38b3d6d76273f3e295950d5e88bb02d99365030a8a9070adf01f06b7c68c747",
+   "label": "Oxygen therapy",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anaesthesia",
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AS11.1",
+    "AS11.2",
+    "GM 28.19",
+    "GM 3.19",
+    "PE24.10",
+    "PE24.6",
+    "PE24.7",
+    "PY6.6"
+   ]
+  },
+  {
+   "conceptId": "C-08f0d5b2-db8f-4cfc-b64d-44e5aee18c2a",
+   "previousIdentityDigest": "de3e12a583ffa96a828042f534ea01b6fee99a2109703da5791aa188979f97d4",
+   "label": "Tumour immunity",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "MI 2.8",
+    "PA6.6"
+   ]
+  },
+  {
+   "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "previousIdentityDigest": "0ef11559c06ff00602dcb0bee5dcf5c9b5312534724f36996e221a229836e576",
+   "label": "Blood culture",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.20",
+    "GM 3.13",
+    "GM3.12",
+    "MI 3.3"
+   ]
+  },
+  {
+   "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "previousIdentityDigest": "a4e5bca03a8865efbfd45fca776fc40c9f4414045ef5a4c38b22a4a808bad8c5",
+   "label": "Gallstones",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC4.7",
+    "GM 5.7",
+    "PA24.8"
+   ]
+  },
+  {
+   "conceptId": "C-0d593716-93c0-49b7-940e-8488b841d3cb",
+   "previousIdentityDigest": "801a4c63f1ffb3b3613b1cf35d01dfc0df303f54061b227239688e0ed7be5010",
+   "label": "Ocular drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "ophthalmology"
+   ],
+   "evidenceCodes": [
+    "OP3.7",
+    "PH9.7"
+   ]
+  },
+  {
+   "conceptId": "C-0e6e7454-ae68-4099-93a9-4aa91bf68104",
+   "previousIdentityDigest": "8b8046a6a2f24bdb86dd61fcb47178cc18fc2f845c2ef8990fe3e35ec60ecaa7",
+   "label": "Drugs used in heart failure",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.22",
+    "PH4.9"
+   ]
+  },
+  {
+   "conceptId": "C-0e6f39bf-a375-4247-be59-e882f8233bba",
+   "previousIdentityDigest": "17346608f66040a4f0d7bb52e46c8ef00738f4bf4a5a4684e4be039ae15d0504",
+   "label": "Karyotyping",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN73.2",
+    "PE29.2"
+   ]
+  },
+  {
+   "conceptId": "C-0e9f1b43-7745-4947-ab25-7a7669bc5853",
+   "previousIdentityDigest": "5945cccf31b0bdad285a3448e86c0eb01cf00f18e6e6569c942e8268907c18ea",
+   "label": "Upper gastrointestinal endoscopy",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 15.10",
+    "GM 15.16",
+    "PE23.21"
+   ]
+  },
+  {
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "previousIdentityDigest": "dd51bf43e30acf0a4340afd37a72d1f8d684313ca09c11d577137656aec62d9f",
+   "label": "Prostate cancer",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA28.4",
+    "PA28.6",
+    "SU29.9"
+   ]
+  },
+  {
+   "conceptId": "C-0f013d30-7f5c-4f51-ba17-d600a6e8bdd7",
+   "previousIdentityDigest": "7072fd8f07ad9a243bf001c22774606b0821a376b806f1c7f0f8bfab7501d8f6",
+   "label": "Lipid profile",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "BC14.12",
+    "BC14.15",
+    "BC4.8",
+    "GM 2.12"
+   ]
+  },
+  {
+   "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "previousIdentityDigest": "5b7dd50df71fd136a22d2f9cb73ca2de46073d338eef646543579363cff58dd6",
+   "label": "Blood pressure",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.11",
+    "PY5.11",
+    "PY5.14"
+   ]
+  },
+  {
+   "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+   "previousIdentityDigest": "de684066f8d2d5f6806816013ecd0c3674a51f521982be367d2f0277d770f6a1",
+   "label": "Blood transfusion",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "GM 15.12",
+    "GM 15.13",
+    "GM9.14",
+    "GM9.15",
+    "PA21.5",
+    "PY2.10",
+    "SU3.2",
+    "SU3.3"
+   ]
+  },
+  {
+   "conceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "previousIdentityDigest": "3f81c90e14313026be9920a19efbd9880753f6eecae06dfd7016094e88c5013c",
+   "label": "Nutritional assessment",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM5.2",
+    "CM5.9",
+    "GM 24.1",
+    "PE9.2",
+    "PE9.4",
+    "PE9.6"
+   ]
+  },
+  {
+   "conceptId": "C-11d939a5-7670-47bb-82df-fff773503064",
+   "previousIdentityDigest": "683e71bf17a6c07210de4974acb4bffba59299ecdf08641c72a8b18ebcd9bef0",
+   "label": "Essential medicines",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "community-medicine"
+   ],
+   "evidenceCodes": [
+    "CM19.1",
+    "CM19.2",
+    "CM19.4",
+    "PH10.8"
+   ]
+  },
+  {
+   "conceptId": "C-13c4bb18-d7c9-4cde-96b8-4c1122578357",
+   "previousIdentityDigest": "a5267523d2a11df9aa09950dbcb5256a49e818603dedc8dd241c464b8657ca44",
+   "label": "Head and neck cancer",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "EN 2.8",
+    "SU20.1",
+    "SU20.2"
+   ]
+  },
+  {
+   "conceptId": "C-144a5c41-0c71-44e3-9af2-1d225ebd6601",
+   "previousIdentityDigest": "f94c50563454843ec22823c35fbf976520520b555bd659a0325c2ea7df06df5e",
+   "label": "National nutrition programmes",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM5.6",
+    "GM 12.11",
+    "PE13.2",
+    "PE13.3"
+   ]
+  },
+  {
+   "conceptId": "C-15805602-d17d-4221-a430-90f6903af241",
+   "previousIdentityDigest": "941b5bff144f23f34aab40302f56465a9b198a34673876eb7198961ca9300e2a",
+   "label": "Advanced life support",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AS2.2",
+    "GM 2.21"
+   ]
+  },
+  {
+   "conceptId": "C-161aab86-3cc7-43f8-9fbc-d9c7c8ec12fe",
+   "previousIdentityDigest": "111cfaf8d677c1e809e5b3564c9129347e8e8fc668c41581f2848c1b020bbd67",
+   "label": "Lumbar puncture",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AN50.3",
+    "GM17.7",
+    "GM17.8",
+    "PE27.14"
+   ]
+  },
+  {
+   "conceptId": "C-1686faf0-7d9d-4637-96af-4dfd2ff3628a",
+   "previousIdentityDigest": "287cefd651deecba9c866fa4fb4874f550791f4b5ee310cf84bd1227ae328bb3",
+   "label": "Medical records",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "FM1.9",
+    "GM 29.13",
+    "OG35.11",
+    "OG35.12",
+    "OG35.13",
+    "OG38.4"
+   ]
+  },
+  {
+   "conceptId": "C-17785168-8736-405d-b35f-622ab672919f",
+   "previousIdentityDigest": "1e3598798deb03e356b47295cba355770387fad097f422c83051e6e44a72910e",
+   "label": "Neuron",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN7.3",
+    "PY3.1"
+   ]
+  },
+  {
+   "conceptId": "C-180e5940-3d9d-4b19-a737-6ad67e4b1344",
+   "previousIdentityDigest": "adcfe136bb989fcfeed00b413be03eb0b3eb4c7744f133c52ba8112f1f944eef",
+   "label": "Puberty",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OG23.1",
+    "PE6.2",
+    "PY9.2"
+   ]
+  },
+  {
+   "conceptId": "C-189dbaad-fa43-48bf-80f3-8f6738f4f49c",
+   "previousIdentityDigest": "945b62b727f330f914a8ce34643646c8638352a288548c9cab896778bd37c864",
+   "label": "Optics of the eye",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "ophthalmology"
+   ],
+   "evidenceCodes": [
+    "OP1.1",
+    "PY11.6"
+   ]
+  },
+  {
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "previousIdentityDigest": "dfe3bb345db104920d2b8e30235369b94da776f8754dfeaf05c5fcc02fc94d3e",
+   "label": "Enteric fever",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM26.17",
+    "MI 3.6",
+    "MI 3.7",
+    "MI 3.8",
+    "PE31.12"
+   ]
+  },
+  {
+   "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "previousIdentityDigest": "38617329dfa0e33b9fbcf7f26f9f2ea7471cb81ea40832776e928b47c80eca2a",
+   "label": "Dysentery",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 16.6",
+    "MI 4.3",
+    "PE23.5"
+   ]
+  },
+  {
+   "conceptId": "C-1b3b5ebe-8c3b-419c-8bd2-7083ee76d2a9",
+   "previousIdentityDigest": "b0287a2e19455b89b1e0880509da1b301b24e6323813a446f62b4f56e633c850",
+   "label": "Hydrocephalus",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN63.2",
+    "PE27.4"
+   ]
+  },
+  {
+   "conceptId": "C-1dcae429-60bd-4f94-8e54-79cec0fa8ca5",
+   "previousIdentityDigest": "489fbd3e2870a1fe06f7dbe7fb13fa30d3ef60af05806598a7774923fe06d703",
+   "label": "PCPNDT Act",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology",
+    "radiology"
+   ],
+   "evidenceCodes": [
+    "FM8.10",
+    "OG20.3",
+    "RD3.4"
+   ]
+  },
+  {
+   "conceptId": "C-1deffc0c-8e8c-4f1a-99e9-0a2f2ee304d0",
+   "previousIdentityDigest": "9fb9922437fe5276a4eb5e837f12ad020406f8db958807c469a97c3887cdf6b2",
+   "label": "Age estimation",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "radiology"
+   ],
+   "evidenceCodes": [
+    "FM14.4",
+    "FM4.3",
+    "RD5.2"
+   ]
+  },
+  {
+   "conceptId": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+   "previousIdentityDigest": "0332d9e6619549b3cb2a9fe1f4b58622be1d8d33a10dd4693f7ace35e169f9eb",
+   "label": "Type 1 diabetes mellitus",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 11.2",
+    "PE30.3"
+   ]
+  },
+  {
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "previousIdentityDigest": "e2af12c02dd5db94ce0cb2ef93d4f35032cea85982b89332ffd30bbf399d526c",
+   "label": "Infective endocarditis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 1.19",
+    "MI 3.4",
+    "MI3.2",
+    "PA26.7",
+    "PE22.5"
+   ]
+  },
+  {
+   "conceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "previousIdentityDigest": "b674e73cc06cdfce097a44053b9be1a40c832b2bad39b0c768ab3aa92e4dd128",
+   "label": "Water and electrolyte balance",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC9.3",
+    "PE15.1"
+   ]
+  },
+  {
+   "conceptId": "C-20d93ec9-615b-4c88-8e91-7f824bc8ecbf",
+   "previousIdentityDigest": "998d4533a0ca49a76ea190bab22afc1643358e3e61594bcee5940a27935f78c9",
+   "label": "External ear disorders",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN40.4",
+    "EN 4.2"
+   ]
+  },
+  {
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "previousIdentityDigest": "aa2472d7979d0761eadfe793b1889d9557dba4ca83dd16637a39ebf5ae6ba531",
+   "label": "Jaundice",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry",
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC5.8",
+    "GM 5.13",
+    "PA24.1",
+    "PY2.5"
+   ]
+  },
+  {
+   "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
+   "previousIdentityDigest": "63a77d87c785e91cfba81323b8ceafe7d57f024fb2b6befae92443dfb8dc3ab5",
+   "label": "Bone marrow examination",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM4.15",
+    "GM9.8",
+    "PA 17.1",
+    "PE26.14"
+   ]
+  },
+  {
+   "conceptId": "C-2396a7f1-b588-46ef-bc75-dd354b8af35e",
+   "previousIdentityDigest": "7cc5f9aea7bfb3c4063c72e427ece3c96f712b5ab8165d8fa9cda9348a0fb7d3",
+   "label": "Biomedical waste management",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "CM 14.4",
+    "CM14.1",
+    "CM14.2",
+    "CM14.3",
+    "MI 10.3",
+    "SU15.1"
+   ]
+  },
+  {
+   "conceptId": "C-25fbab0b-e72e-4ea9-8797-4cda4a9a8dc9",
+   "previousIdentityDigest": "a7804338196e99aa0c47d924d7163ce84f76b9ac508900655b86aa7489406444",
+   "label": "Urothelial carcinoma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA27.16",
+    "SU29.8"
+   ]
+  },
+  {
+   "conceptId": "C-2621d874-6f3e-48eb-8134-d1e7671299fb",
+   "previousIdentityDigest": "8174e0890fc82d34a48002888f7286af46da602a0260b32935380490b95f8e2f",
+   "label": "Suicide risk assessment",
+   "currentSubjects": [
+    "psychiatry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM22.13",
+    "PS12.1"
+   ]
+  },
+  {
+   "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "previousIdentityDigest": "5bdd0fa4607816d47dc2d45dd5f10af447cb4bdd28edd26a92689f6ef63814c2",
+   "label": "Leiomyoma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG29.1",
+    "PA29.3"
+   ]
+  },
+  {
+   "conceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "previousIdentityDigest": "cd7059f8a0738dfbc4004c15b33ada305e56cc0ec438a3d3878dfdb22e1bea93",
+   "label": "Disinfection",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "pharmacology"
+   ],
+   "evidenceCodes": [
+    "MI 1.12",
+    "MI 1.13",
+    "PH9.5"
+   ]
+  },
+  {
+   "conceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+   "previousIdentityDigest": "b7440571e4f2202fd5c5429af1d5a54d042784ef7edcc3f9f7340ff4ff1aaaf0",
+   "label": "Acute suppurative otitis media",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AN40.4",
+    "EN 4.3",
+    "PE25.1"
+   ]
+  },
+  {
+   "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "previousIdentityDigest": "5edb6262c9ba78c47e02f26587fa52460678dfbbec1e2e19dcda82a215c01964",
+   "label": "Osteomyelitis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "microbiology",
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "MI 5.2",
+    "OR3.1",
+    "OR3.3",
+    "PA32.1"
+   ]
+  },
+  {
+   "conceptId": "C-285143d2-6b3a-490b-91c3-2da164eccf6f",
+   "previousIdentityDigest": "88158681890eb737d68dcf8e9cfd3cef2c8d76379452f89965ffdb04ba21d7f3",
+   "label": "Maternal and child health",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "CM10.1",
+    "CM10.3",
+    "OG 1.5"
+   ]
+  },
+  {
+   "conceptId": "C-292c0d76-eab3-4101-9b09-aacf9070290c",
+   "previousIdentityDigest": "0dbd3e853d4a74365a91d4a5b4250d8af1145db3b325a2f3c1c436a8e31c655e",
+   "label": "Adrenal gland",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PY8.4",
+    "SU23.1",
+    "SU23.2"
+   ]
+  },
+  {
+   "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+   "previousIdentityDigest": "e2ebff95064669f614a6ba5688291fde5af68de9ddead88ee4227175f3ba7e98",
+   "label": "Drug-induced liver injury",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 5.6",
+    "PA24.3"
+   ]
+  },
+  {
+   "conceptId": "C-2c3ce0a2-1f22-4494-842a-86781bc44f56",
+   "previousIdentityDigest": "26b05f79051da6f20b57e7fd84eeae9eaa836f0d4d761460acc86be7f9631cd9",
+   "label": "Brain death",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM2.3",
+    "PY12.7"
+   ]
+  },
+  {
+   "conceptId": "C-2cfaedc1-57da-433e-b8f2-5933441f58c3",
+   "previousIdentityDigest": "570e4b4447fb021764ef82e0374c3bded85bf9dacb7a002e4b396d5d1c01e923",
+   "label": "Scorpion sting",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.19",
+    "GM21.8"
+   ]
+  },
+  {
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "previousIdentityDigest": "ee9591061ce70d568f3ce8c954ddb0ab01891f618bfae69864d5392420c220b5",
+   "label": "Leprosy",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "DR9.1",
+    "DR9.2",
+    "DR9.5",
+    "DR9.6",
+    "MI 5.5",
+    "PA10.3"
+   ]
+  },
+  {
+   "conceptId": "C-2e96f256-4cf7-4279-8d14-242404004c26",
+   "previousIdentityDigest": "a00ce0df6361226a9866c62618351b8345f4b14bfdb835aae4b039027f11b8d0",
+   "label": "Varicocele",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN46.4",
+    "SU30.4"
+   ]
+  },
+  {
+   "conceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "previousIdentityDigest": "8a7fda21882967054a73c787a86635e8ccc3e01bf808d35c6df57f7a54c39725",
+   "label": "Placenta and fetal development",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN80.3",
+    "AN80.5",
+    "OG4.1"
+   ]
+  },
+  {
+   "conceptId": "C-326aa73a-ebb4-4be2-877f-a78be8715daa",
+   "previousIdentityDigest": "ec2b0d8e1a82857d15cd2dcbaa6b5d706e87886f16c7fef297f0e883933b43c4",
+   "label": "Informed consent",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "anaesthesia",
+    "ent",
+    "obstetrics-gynaecology",
+    "orthopaedics",
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS1.3",
+    "EN 2.9",
+    "FM10.19",
+    "OG35.10",
+    "OG38.3",
+    "OR14.2",
+    "PE18.13",
+    "PE24.23",
+    "SU10.2"
+   ]
+  },
+  {
+   "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "previousIdentityDigest": "35336358c4b785c307a17eb3917829ca48a83f56157def1e6174a3f87e962a46",
+   "label": "Benign prostatic hyperplasia",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA28.3",
+    "SU29.9"
+   ]
+  },
+  {
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "previousIdentityDigest": "d6a78b1558a364428d62b05c39d26121f0ec84090a89c0cdf6a3dea7b98e5be2",
+   "label": "Breast cancer",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA30.2",
+    "PA30.5",
+    "SU25.3",
+    "SU25.4"
+   ]
+  },
+  {
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "previousIdentityDigest": "4f7e8bc0d5ffa748e4796126365704558f84d38af9f606144a03bbc4824f22ad",
+   "label": "Asthma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 28.7",
+    "PA25.3",
+    "PE28.2",
+    "PE28.3"
+   ]
+  },
+  {
+   "conceptId": "C-363e5b94-17a7-4bd3-b1e1-523d3bbf25b0",
+   "previousIdentityDigest": "0fb4598b814c1e6c0bd2d83c6accf409b9422f93c5f856ef151339d6b0a4328d",
+   "label": "General anaesthetics",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "anaesthesia"
+   ],
+   "evidenceCodes": [
+    "AS4.1",
+    "PH3.1"
+   ]
+  },
+  {
+   "conceptId": "C-36599f5a-30b5-4167-b9b3-c144b3f79f50",
+   "previousIdentityDigest": "ca6ac03b53a51132c29aa83ef4ad7758c6f9a798d21d8b6622786b5ac0f4296c",
+   "label": "Palliative care",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AS8.4",
+    "AS8.5",
+    "GM 13.5",
+    "GM13.19",
+    "GM13.6"
+   ]
+  },
+  {
+   "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+   "previousIdentityDigest": "7ceaa6ab9c2fbab7d30ce95cb801f30f2a6a2c5459183b25ad9368813df87b86",
+   "label": "Haemolytic anaemia",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA16.1",
+    "PA16.3",
+    "PE26.4"
+   ]
+  },
+  {
+   "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+   "previousIdentityDigest": "0908108fffb6f663789d7882a48c76d6855be0d7cda0485bb3b8c805e7399549",
+   "label": "Food poisoning",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.20",
+    "GM 26.10",
+    "MI 4.5"
+   ]
+  },
+  {
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "previousIdentityDigest": "96788ac9bbeae4d0a493a19ee10b854b068280b13bd432b3bce56520818633d2",
+   "label": "Gout",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM7.16",
+    "PA32.6"
+   ]
+  },
+  {
+   "conceptId": "C-378f2d4b-13eb-4334-a983-f46baf5cfe40",
+   "previousIdentityDigest": "c750e11fc7018620736bf69bfefd52cd8e3f1c1c0e295bf5349c7f8b873ce30c",
+   "label": "Peripheral nerve injury",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "OR11.1",
+    "PY3.3"
+   ]
+  },
+  {
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "previousIdentityDigest": "2f95d1bf9470dab7b40232c45b21168a181de2b4bf8a45343ccf02976983b756",
+   "label": "Shock",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "orthopaedics",
+    "pathology",
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "GM 15.3",
+    "OR1.2",
+    "PA5.3",
+    "PE24.14",
+    "PE24.3",
+    "PY5.13",
+    "SU2.1",
+    "SU2.2"
+   ]
+  },
+  {
+   "conceptId": "C-3b04059f-a944-440c-8a10-8a4f0f534325",
+   "previousIdentityDigest": "b6161e2b58bb34506e852a5c6b8cce5a107b95a8dc75fa660709703058111a7b",
+   "label": "Cardiac surgery",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.23",
+    "SU26.1"
+   ]
+  },
+  {
+   "conceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "previousIdentityDigest": "150ba468abcecbb5dee85c8bf19a286c5fd33f2791fe81576db0b305346d025c",
+   "label": "Vitamins",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC8.1",
+    "PA12.2"
+   ]
+  },
+  {
+   "conceptId": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+   "previousIdentityDigest": "e44e636edf1baab1df1bc7374a814036818dbb71b44a267dbeb72569f8c0c5aa",
+   "label": "Vitamin B12 deficiency",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA15.1",
+    "PE26.3"
+   ]
+  },
+  {
+   "conceptId": "C-3d1fdbd5-c82c-4f15-bc6d-a20b3b3fe372",
+   "previousIdentityDigest": "8c9c51288c9bfba28f5e79f64c8baa4dca40ddb7b64b893bc189f83db39b7cf3",
+   "label": "Heat stroke",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM2.17",
+    "GM4.8",
+    "PY12.2"
+   ]
+  },
+  {
+   "conceptId": "C-3e73e076-2bf0-421a-894d-0165b8f4c66c",
+   "previousIdentityDigest": "d96f69c92d4600f7f71be025370c01d96e8f30d2d17b7aa3df6ffe17059d922d",
+   "label": "Complementary feeding",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM 5.13",
+    "CM 5.18",
+    "CM 5.22",
+    "PE8.1",
+    "PE8.2",
+    "PE8.3",
+    "PE8.4",
+    "PE8.5"
+   ]
+  },
+  {
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "previousIdentityDigest": "ba7555b1eeeeb94cf77b67f703239161776c4aab60f9eb8882fa5e7534614289",
+   "label": "Diabetes mellitus",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC3.5",
+    "GM 11.1",
+    "GM 11.10",
+    "GM 11.11",
+    "GM 11.17",
+    "GM 11.4",
+    "GM 11.7",
+    "GM 11.8",
+    "GM11.21",
+    "PA31.5"
+   ]
+  },
+  {
+   "conceptId": "C-41135e3e-7002-4f7f-b27a-b03f47d53276",
+   "previousIdentityDigest": "94be36ea8058e0296ce5bc1070cfa81a76d73daf889ab0f429b86ff3e8adae58",
+   "label": "Antiretroviral drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "DR11.2",
+    "GM6.14",
+    "GM6.20",
+    "PH8.10"
+   ]
+  },
+  {
+   "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+   "previousIdentityDigest": "3db8f170e0307fa4a9a927648889a9e059cc72a20b0c99f0a1ec82ddf9c3e32e",
+   "label": "Malabsorption syndrome",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA23.7",
+    "PE23.12"
+   ]
+  },
+  {
+   "conceptId": "C-418a472f-5e3d-4b0d-81e1-6aba1ac19596",
+   "previousIdentityDigest": "262bb52a97ac92fb0c67c1fba27804dd6c5b8186ccb45f2795dfc53d844a83a6",
+   "label": "Pain",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anaesthesia"
+   ],
+   "evidenceCodes": [
+    "AS8.1",
+    "PY10.8"
+   ]
+  },
+  {
+   "conceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "previousIdentityDigest": "82865b47798a7be78b2189ba01d631ddec27dd368c68093157ae1e195e005428",
+   "label": "Atherosclerosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 2.1",
+    "GM 2.2",
+    "GM 2.3",
+    "PA26.1"
+   ]
+  },
+  {
+   "conceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "previousIdentityDigest": "8a87c79af0db6f08ef1b491be222b573e74537807025ae21cfba22cdb50a77cb",
+   "label": "Digestion and absorption",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry"
+   ],
+   "evidenceCodes": [
+    "BC 5.3",
+    "BC3.2",
+    "BC4.2",
+    "PY4.7"
+   ]
+  },
+  {
+   "conceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "previousIdentityDigest": "e365596eeae62ac5f64989e59aa74e42cc2f7b88a86577537bb11f25e8ef6b01",
+   "label": "Sexually transmitted infections",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "pharmacology"
+   ],
+   "evidenceCodes": [
+    "DR10.1",
+    "DR10.5",
+    "MI 8.",
+    "MI 8.2",
+    "PH8.4"
+   ]
+  },
+  {
+   "conceptId": "C-44b4af02-89ad-42b1-800c-c04f2cc4cd95",
+   "previousIdentityDigest": "19569573429ff81bced1bc906604a87af7e3766be20ea379cb268bc09554ac43",
+   "label": "Micronutrient deficiencies",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "CM5.3",
+    "GM 24.3"
+   ]
+  },
+  {
+   "conceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "previousIdentityDigest": "599542ed00457830f262bd89b1b51f69bbbeb3c7cecaca88e212f76161a36dc1",
+   "label": "Haemoglobin",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC5.9",
+    "PA13.4",
+    "PY2.11",
+    "PY2.3"
+   ]
+  },
+  {
+   "conceptId": "C-47b2af3c-1aab-4ad9-a4c4-71612f5c34a9",
+   "previousIdentityDigest": "06be2426a77ce839d2309ad2ef612f9fb5112d1c4a54dd1196eff06f5c656e02",
+   "label": "Neonatal resuscitation",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OG18.2",
+    "OG18.4",
+    "PE19.2"
+   ]
+  },
+  {
+   "conceptId": "C-47b9d310-9b50-41e1-ab41-be38c372826e",
+   "previousIdentityDigest": "3da517b48c7bf8cb134928fa92aaa28ea7fcae2a66a9f89af5eacbcb2bbc9a34",
+   "label": "Paget disease of bone",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "OR7.1",
+    "PA32.4"
+   ]
+  },
+  {
+   "conceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "previousIdentityDigest": "b6d235059bcb1615c10188d51e1eb7f38561e5b926da818a1d5a35f394d6851a",
+   "label": "Haemostasis",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA5.4",
+    "PY2.9"
+   ]
+  },
+  {
+   "conceptId": "C-4a75d8f7-6820-4399-a9c4-f4f76a231ee0",
+   "previousIdentityDigest": "e6f8121e5382f282cf5db60b76aaa21673673dca31a41b9403574d1e7e09a57c",
+   "label": "Professional conduct",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "FM10.24",
+    "FM10.28",
+    "FM10.4",
+    "FM10.6",
+    "GM 29.12",
+    "GM 29.14",
+    "GM 29.16",
+    "GM 29.17",
+    "GM 29.18",
+    "GM 29.19",
+    "GM 29.8",
+    "SU8.3"
+   ]
+  },
+  {
+   "conceptId": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "previousIdentityDigest": "8c242e20c032ad2c0a1bdd3877bcc24796ed94c626f48e00a52d11ba2a9fe64f",
+   "label": "Diabetic ketoacidosis",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 11.23",
+    "PE30.4"
+   ]
+  },
+  {
+   "conceptId": "C-4ad0a6f8-98ab-4d55-b414-c09b76252dfa",
+   "previousIdentityDigest": "2def00e9b4b0680f0724d84234e334a601187dae1367ea142fcf9d1c9e805553",
+   "label": "Infertility",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "FM8.11",
+    "OG28.1",
+    "OG28.2",
+    "PY9.10"
+   ]
+  },
+  {
+   "conceptId": "C-4c4dd879-d463-4a2d-92ec-4ec8e8d81864",
+   "previousIdentityDigest": "65ecd5e54cac298933def745fd73d97c543e71c53d9fa5a601d0125f2deddaaa",
+   "label": "Cerebral palsy",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OR9.1",
+    "PE27.10"
+   ]
+  },
+  {
+   "conceptId": "C-4d256d05-6009-4931-987d-07482915fe2c",
+   "previousIdentityDigest": "f5942817cd2fd15f0d03407617db5f638d81743b59d2631a2cc8b0aff6fa8545",
+   "label": "Sinusitis",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN37.3",
+    "EN 4.32"
+   ]
+  },
+  {
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "previousIdentityDigest": "e69007016f0917c424b302b918f0aefcea886cece53ca6a621c1b0d91cab3cb6",
+   "label": "Urinary tract infection",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics",
+    "pharmacology",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "GM 26.11",
+    "MI 8.4",
+    "PE20.1",
+    "PH8.4",
+    "SU29.3"
+   ]
+  },
+  {
+   "conceptId": "C-506649ad-fb9c-4f16-ae7c-cab5dccb2cb5",
+   "previousIdentityDigest": "de1ba33997baa41226a2356042f2eb6a031e22656c687faffaccdc5a859f6dcf",
+   "label": "National programmes for infectious diseases",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "CM8.3",
+    "GM 27.16",
+    "GM 27.17",
+    "MI 9.6"
+   ]
+  },
+  {
+   "conceptId": "C-54c44fd0-1d3e-4dd2-8fb0-f67521a2754e",
+   "previousIdentityDigest": "a2d74fceb378f6ba83f1fcb6c2c682595f0d6da40daa60fa8608bb33b6ca5eaa",
+   "label": "Mass disaster management",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "CM 13.5",
+    "CM13.1",
+    "CM13.2",
+    "CM13.3",
+    "CM13.4",
+    "FM2.28",
+    "SU17.3"
+   ]
+  },
+  {
+   "conceptId": "C-57699b57-3d51-4387-804f-8e67fd55d467",
+   "previousIdentityDigest": "cddb8ba3ededef8b54e6233f351653ee6fb480c761d91fe7f55220bc6878c1b6",
+   "label": "Gestational trophoblastic disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG34.3",
+    "PA29.5"
+   ]
+  },
+  {
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "previousIdentityDigest": "a1f979e3233ec8b162b2413ab433e777343b14ab085f26d7bf38a99516cd2fc2",
+   "label": "Protein-energy malnutrition",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC8.3",
+    "CM5.3",
+    "GM 24.2",
+    "PA12.2"
+   ]
+  },
+  {
+   "conceptId": "C-58bc42da-5335-48be-bb64-345e6706b7d5",
+   "previousIdentityDigest": "e3ff3b89f11f5da7d4c566b9dbb9e6facdf96442ea692f851d7d61eeb11f3de8",
+   "label": "Leucocyte counts",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA13.4",
+    "PY2.11"
+   ]
+  },
+  {
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "previousIdentityDigest": "4e529ba65c8f294bb8cce7d98efc40ac267f28ddc5b8d0dc7f5b6cd4eaf7afd2",
+   "label": "Opportunistic infections",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM6.10",
+    "GM6.11",
+    "GM6.12",
+    "GM6.17",
+    "GM6.3",
+    "GM6.4",
+    "MI 9.2"
+   ]
+  },
+  {
+   "conceptId": "C-5b56177b-a601-4e90-ab6b-488b116956cd",
+   "previousIdentityDigest": "11b546a562aba5e72a76c151c02cb58f327e3102b816640cc8e39b0291d8904c",
+   "label": "Stem cells",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM10.12",
+    "PA1.3"
+   ]
+  },
+  {
+   "conceptId": "C-5bc44284-6703-42d4-9045-6b0d250157bc",
+   "previousIdentityDigest": "a50aa0f0ca49b1e9fb4c6fb7925690f9f20bf2e76ff7f8630c3dc98c9fa6e9fd",
+   "label": "Amputation",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "OR14.4",
+    "SU27.4"
+   ]
+  },
+  {
+   "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+   "previousIdentityDigest": "1981a58c3a45c05757bfa4e81e656435de54ed32aa0832545f53e27a27be10f3",
+   "label": "Testicular tumours",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA28.1",
+    "SU30.6"
+   ]
+  },
+  {
+   "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "previousIdentityDigest": "1450798fb05facf1b2ee1bb9f06bc16d9c94785fa97d7c12b457a39374820a53",
+   "label": "Lymphadenopathy",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AN20.4",
+    "PA19.1",
+    "SU27.7"
+   ]
+  },
+  {
+   "conceptId": "C-5d8ce34a-437e-4345-a660-e57d966a7802",
+   "previousIdentityDigest": "fb64a48d7c3ef21a4ece97864e58a51bfb57153b8ac915a0e8a44621060e11c7",
+   "label": "Female reproductive system",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG2.1",
+    "PY9.4"
+   ]
+  },
+  {
+   "conceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "previousIdentityDigest": "0a19999947fd72563e0b6930c921a1369ff8d545e8f6f6954666e93be74fda3f",
+   "label": "Basic life support",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anaesthesia",
+    "medicine",
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS2.1",
+    "GM 2.22",
+    "PE24.21",
+    "PY12.10",
+    "SU17.2"
+   ]
+  },
+  {
+   "conceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "previousIdentityDigest": "df0edd46837813fd1a9d2a1b9063eabf9d00026e05722972443d46f2a6f98b62",
+   "label": "Transmission of infection",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "community-medicine"
+   ],
+   "evidenceCodes": [
+    "CM7.2",
+    "MI 1.11"
+   ]
+  },
+  {
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "previousIdentityDigest": "ae7fff9d86ee426646a093456342da03b665eb7a18e3ebbb5a2f2635171041e2",
+   "label": "Heart failure",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 1.1",
+    "GM 1.14",
+    "GM 1.21",
+    "GM 1.24",
+    "GM 1.26",
+    "GM 1.3",
+    "GM 1.4",
+    "GM 1.5",
+    "GM 1.6",
+    "GM 1.8",
+    "GM 1.9",
+    "PA26.3",
+    "PE22.3",
+    "PY5.13"
+   ]
+  },
+  {
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "previousIdentityDigest": "1fbc5edbd375e2f6b3d6070f7e48dc324f90d02cca6c8f664de8dc538d8659f4",
+   "label": "Pneumonia",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM 3.20",
+    "GM3.1",
+    "GM3.14",
+    "GM3.17",
+    "GM3.2",
+    "GM3.3",
+    "GM3.4",
+    "GM3.6",
+    "GM3.7",
+    "MI 7.3",
+    "PA25.1"
+   ]
+  },
+  {
+   "conceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "previousIdentityDigest": "4ac40ccf0d3d7f765860ba26a191b23c5a91100a6be3485b3441b23b03c2f858",
+   "label": "Mechanics of breathing",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN21.9",
+    "PY6.2"
+   ]
+  },
+  {
+   "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+   "previousIdentityDigest": "f44f5324b4d57d99c261151f2390841ef1a170938126d54f6bf0682948cc6914",
+   "label": "Airway management",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS11.3",
+    "AS11.4",
+    "AS11.5",
+    "PE24.11",
+    "PE24.9",
+    "SU11.3"
+   ]
+  },
+  {
+   "conceptId": "C-6329e2bb-7e91-4fb7-b224-b5aeaec9275f",
+   "previousIdentityDigest": "3508ae72270998a80e8219e8b1487f28d7109b814f8fb5866d3774cdbd5d1765",
+   "label": "Oesophagus",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN23.1",
+    "SU28.5"
+   ]
+  },
+  {
+   "conceptId": "C-6345395e-86f2-4328-b1af-55cbc71c535d",
+   "previousIdentityDigest": "91d8487788697b5982343611b75b70b7b1573cb65275762a73b771faa0baa9a1",
+   "label": "Substance use disorders",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "psychiatry"
+   ],
+   "evidenceCodes": [
+    "FM13.20",
+    "PH10.16",
+    "PH3.9",
+    "PS 3.1"
+   ]
+  },
+  {
+   "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "previousIdentityDigest": "ac912ffc092df404af4250f7c144c8377fe47d7d43e9accf66af9fc1329604a1",
+   "label": "Urinalysis",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC14.3",
+    "BC14.4",
+    "GM 11.13",
+    "PA22.1",
+    "PE20.8"
+   ]
+  },
+  {
+   "conceptId": "C-63860775-db4c-4785-96e9-fa1e3a91e4da",
+   "previousIdentityDigest": "8f2ca9a7f6142d3f50b17335e24186342e9d11caf7b4f77ab411b9dcf0fae54c",
+   "label": "Newborn assessment",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OG18.1",
+    "OG18.3",
+    "PE19.1",
+    "PE19.3"
+   ]
+  },
+  {
+   "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "previousIdentityDigest": "33ce72c017414b2d4fece4cfe5c01184b63d6ed92f4b0e3cca1d254ac91b65e5",
+   "label": "Peptic ulcer disease",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA23.3",
+    "PA23.9",
+    "PY4.11"
+   ]
+  },
+  {
+   "conceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "previousIdentityDigest": "fdd5ce700b5fba2d6998a8b2495dc2d3178c9154e3a038452e350cb0e1c6cb02",
+   "label": "Heart",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN22.2",
+    "AN22.5",
+    "AN22.6",
+    "PY5.1"
+   ]
+  },
+  {
+   "conceptId": "C-641d0da2-96e6-46a4-a64d-74698ca83bdf",
+   "previousIdentityDigest": "40ac5ca9c9fe5edb2acb522d6e89f1a24cfab1a7b1e117eb2a3c647f58578fad",
+   "label": "Patient confidentiality",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM10.20",
+    "GM 29.10",
+    "GM 29.9",
+    "GM6.21",
+    "MI 1.9"
+   ]
+  },
+  {
+   "conceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "previousIdentityDigest": "a461a3aed40f01abab862b7e5fef8f43a4001db145294a7c31efead13137c25e",
+   "label": "Poisoning",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.3",
+    "FM13.6",
+    "FM13.8",
+    "FM14.2",
+    "GM22.1",
+    "GM22.10",
+    "GM22.11",
+    "GM22.12",
+    "GM22.5",
+    "GM22.9",
+    "PH9.2"
+   ]
+  },
+  {
+   "conceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "previousIdentityDigest": "7f22ba38b146cd31fe29d61a63316165d96511b595649c8d12aa1e7d1c76fed2",
+   "label": "Pulmonary function tests",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 28.11",
+    "PE28.4",
+    "PY6.10",
+    "PY6.7"
+   ]
+  },
+  {
+   "conceptId": "C-6633209a-7dc0-493a-86b2-1207ae99bb45",
+   "previousIdentityDigest": "567855fb28243014aaf8eb2e458d5e07fa8015d9cff41fc54a77715c51fa22e8",
+   "label": "Abortion",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "FM8.15",
+    "FM8.16",
+    "OG20.1",
+    "OG20.2",
+    "OG37.7",
+    "OG9.1",
+    "OG9.3"
+   ]
+  },
+  {
+   "conceptId": "C-66e37b7d-9f84-425c-81ae-bea625066ad1",
+   "previousIdentityDigest": "13781da596e4b9d21da55fca1b2154dda0434eb3c1494dbc0a1f6ef03dfa4ade",
+   "label": "Thyroid hormone replacement",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 12.13",
+    "PH7.3"
+   ]
+  },
+  {
+   "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "previousIdentityDigest": "6bc1f75a9cc9170d028644855d2e90acd1f9fd8f0a1b2aaf5c6221c30c259a73",
+   "label": "Alcohol-related liver disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 5.4",
+    "PA24.4"
+   ]
+  },
+  {
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "previousIdentityDigest": "69205445fdfef4418cadb7f3f7ce0e20c41ba7aa38963204868395ab9fe0ea52",
+   "label": "HIV infection",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "ent",
+    "forensic-medicine",
+    "medicine",
+    "microbiology",
+    "obstetrics-gynaecology",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC13.3",
+    "DR11.1",
+    "EN 4.46",
+    "FM10.7",
+    "GM6.1",
+    "GM6.18",
+    "GM6.19",
+    "GM6.2",
+    "GM6.22",
+    "GM6.6",
+    "GM6.7",
+    "GM6.8",
+    "GM6.9",
+    "MI 3.13",
+    "OG12.7",
+    "PA8.6"
+   ]
+  },
+  {
+   "conceptId": "C-6953f087-32d3-49de-ad1f-b18dac984c41",
+   "previousIdentityDigest": "9dad7157202402de74a2b57c47bd4287876593450dd1f5018f0737300b693ffc",
+   "label": "Antiprotozoal drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 16.13",
+    "PH8.7"
+   ]
+  },
+  {
+   "conceptId": "C-69a0ed0a-242e-46c1-b2fc-cc3f35f1f894",
+   "previousIdentityDigest": "f172275af8f35adfcc83641bca4c5e7038fddfba03eec93b9e5687a7c44b34e8",
+   "label": "Research ethics",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM10.25",
+    "FM10.27",
+    "FM10.29",
+    "GM 29.26",
+    "GM 29.7"
+   ]
+  },
+  {
+   "conceptId": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+   "previousIdentityDigest": "70e296d2c46ae2174ab64a237f5fa5b9625b0d788763f1442622f042a53824fb",
+   "label": "Benign breast disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA30.1",
+    "SU25.2"
+   ]
+  },
+  {
+   "conceptId": "C-6a665032-76c9-4b06-a1a8-4757dc0e4150",
+   "previousIdentityDigest": "6b91986a4c7a831a067122dcddeec461a43fd0ebab45a1f268e416c881955e5f",
+   "label": "Liver",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PY4.9",
+    "SU28.10"
+   ]
+  },
+  {
+   "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "previousIdentityDigest": "04a2cb8cfcc576d7aedaa66afba5df11eaf022bd989e1007cb565b5008bb4a53",
+   "label": "Renal tumours",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA27.14",
+    "PA27.17",
+    "SU29.6"
+   ]
+  },
+  {
+   "conceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "previousIdentityDigest": "a1c8abbad94ac9a0ed384f84d86de7db9b992336072e7b2a7e23410cce76ac35",
+   "label": "Antimicrobial stewardship",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "pharmacology"
+   ],
+   "evidenceCodes": [
+    "MI 11.3",
+    "PH8.2"
+   ]
+  },
+  {
+   "conceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "previousIdentityDigest": "a2b4ccd8d4cb9b92672de50cb5ce90a2219ffc888032fcee665cc8d76dec2039",
+   "label": "Chromosomal disorders",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN75.1",
+    "AN75.3",
+    "PA11.1"
+   ]
+  },
+  {
+   "conceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "previousIdentityDigest": "c792b4aaf582f7cabc9f424682b346dccd74dc91bcf73e4c6cfae8a1133a52a2",
+   "label": "Delirium",
+   "currentSubjects": [
+    "medicine"
+   ],
+   "addSubjects": [
+    "psychiatry"
+   ],
+   "evidenceCodes": [
+    "GM 25.3",
+    "PS 2.1*"
+   ]
+  },
+  {
+   "conceptId": "C-6c240ee1-1316-4f68-a4ce-d11e0f061f88",
+   "previousIdentityDigest": "3ca8004cf26a4e477aa953a22f6ad105d25777b0b386fc607d70cf9200293915",
+   "label": "Helicobacter pylori infection",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM26.15",
+    "MI 4.6"
+   ]
+  },
+  {
+   "conceptId": "C-6e472b7d-2ced-4ec5-ad21-14a78c4ff95b",
+   "previousIdentityDigest": "7d4a42f34fa134f450a5f8dee38c1b0293e89de4bbd172b0802008397f55e09f",
+   "label": "Cold injury",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM2.17",
+    "PY12.2"
+   ]
+  },
+  {
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "previousIdentityDigest": "78be08f07e0e024f23d126d1137cac0892d1bcce4561eced04f353a0c37885a3",
+   "label": "Lung carcinoma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA25.6",
+    "PA25.7",
+    "SU26.4"
+   ]
+  },
+  {
+   "conceptId": "C-7279234f-5a32-4caf-add2-63b9f369b542",
+   "previousIdentityDigest": "2d1da3cd8e4f1664063a689c21eded9c3d7de8a6fc878d9ed9b9f993ab89379a",
+   "label": "Cerebral arterial supply",
+   "currentSubjects": [
+    "anatomy"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AN62.6",
+    "GM 18.1"
+   ]
+  },
+  {
+   "conceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
+   "previousIdentityDigest": "3871114d37ea453193258ad288861a209e29947c94207bb8b15fbbdcc3d29e9d",
+   "label": "Alcohol metabolism",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "pharmacology"
+   ],
+   "evidenceCodes": [
+    "BC13.4",
+    "PH3.8"
+   ]
+  },
+  {
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "previousIdentityDigest": "b2033475d59ce0b6381fce2f4968ab46780b89ed7770024c2871623d10b74e18",
+   "label": "Appendicitis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA23.5",
+    "SU28.15"
+   ]
+  },
+  {
+   "conceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "previousIdentityDigest": "b9ec78c1c54b06bceec3402af086b0340ebb1f305e076b3bdf67d50c114d5505",
+   "label": "Vaccines",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 3.21",
+    "GM 3.22",
+    "PE18.14",
+    "PE18.3",
+    "PH9.4"
+   ]
+  },
+  {
+   "conceptId": "C-75bdefc6-3be3-4b81-9b73-5ad485978104",
+   "previousIdentityDigest": "1fdf4afd0805c4fea1c88d19de8e90be1260996909b1933c78a6a42c9529bedf",
+   "label": "Injury report",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "FM14.1",
+    "FM5.5",
+    "SU5.4"
+   ]
+  },
+  {
+   "conceptId": "C-75ee394a-5ebb-44a4-a617-bd734aa482d4",
+   "previousIdentityDigest": "0976f2b11d3cf3064c3df4e5671214137776e5925520cbbde1875910b742c2ef",
+   "label": "Fetal age estimation",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN80.6",
+    "FM14.12",
+    "FM8.5"
+   ]
+  },
+  {
+   "conceptId": "C-7613683b-bae8-463e-98f6-76a6a5b18254",
+   "previousIdentityDigest": "81a9bfe29f7ea1cfcdf3dbc4f5c3f5dace30a7f92a1b2bf25a8024cdd8ba4548",
+   "label": "Vomiting",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE 23.1",
+    "PY4.11"
+   ]
+  },
+  {
+   "conceptId": "C-76801578-01e8-4b7d-a643-c07e25b2689e",
+   "previousIdentityDigest": "03da618e6c80cb1004fcedebc5b457c61ac4e541268a4c9d0d9b21c1fee82de2",
+   "label": "Immunity",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "microbiology",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "MI 2.1",
+    "PA8.1",
+    "PY2.7"
+   ]
+  },
+  {
+   "conceptId": "C-76ac99ee-4fc6-49a1-afdf-873b2b13f43c",
+   "previousIdentityDigest": "cfc636b8cc1c161310ef011d718ac08f157d35cb43df45d8d61bd29c405ab164",
+   "label": "Vitamin A deficiency",
+   "currentSubjects": [
+    "ophthalmology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OP10.4",
+    "PE12.1",
+    "PE12.2"
+   ]
+  },
+  {
+   "conceptId": "C-76c5bfa3-dd7d-4d84-a358-6798ac3229b3",
+   "previousIdentityDigest": "0df4f647f209f3910f7ef2d2d3f3aed48528f63604da2541c52fb09a10b5ae39",
+   "label": "Vascular access",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AS9.1",
+    "AS9.2",
+    "GM10.16",
+    "PE15.3",
+    "PE23.10",
+    "PE24.13"
+   ]
+  },
+  {
+   "conceptId": "C-771f5c27-8a38-4412-9b4c-d6f2f927a966",
+   "previousIdentityDigest": "8a04cbc4a7683ff44c88032462ff4a55ef0f603e1c349080d803dfca7742a8be",
+   "label": "Penile carcinoma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA28.2",
+    "SU30.1"
+   ]
+  },
+  {
+   "conceptId": "C-7808faaf-0983-4818-8541-2aadeb68067e",
+   "previousIdentityDigest": "5990fa1ae1000f5f5b906475e57de523a68af40ab25828c76a16d0cf3f1bd3e5",
+   "label": "Refractive errors",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "ophthalmology"
+   ],
+   "evidenceCodes": [
+    "OP1.2",
+    "PY11.6"
+   ]
+  },
+  {
+   "conceptId": "C-781c301e-9438-42ff-9206-cd669624be8b",
+   "previousIdentityDigest": "cb2fa3da13766d1ba274312889f63e5423b62e43285aa6663b8bdf3af5495adf",
+   "label": "Antimigraine drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM17.11",
+    "PH2.8"
+   ]
+  },
+  {
+   "conceptId": "C-7882e2fc-242b-4e96-84a2-3c604018bb23",
+   "previousIdentityDigest": "9d00548f7c1ae745c788f547c53af71bc8af332aeb03f540b6a144a68ebbdfde",
+   "label": "Prenatal screening",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN81.1",
+    "BC11.2"
+   ]
+  },
+  {
+   "conceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "previousIdentityDigest": "710731f8039d4c3792ee933965ede554b9311a9a64a9e7284b0d93f557067e5f",
+   "label": "Dementia",
+   "currentSubjects": [
+    "medicine"
+   ],
+   "addSubjects": [
+    "psychiatry"
+   ],
+   "evidenceCodes": [
+    "GM 25.6",
+    "PS 2.1*"
+   ]
+  },
+  {
+   "conceptId": "C-79d0924a-e2a2-43d8-92a9-9a1e538dcc8f",
+   "previousIdentityDigest": "10b441f9f3ee2a3e19d42345dff6b3b52f4fc7bc3b16195c8824eb210e1ab84d",
+   "label": "Anaesthesiology",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS1.1",
+    "AS1.2",
+    "AS1.4",
+    "SU11.2"
+   ]
+  },
+  {
+   "conceptId": "C-79f2cfe4-f1e2-4f7e-b122-b300a6fb1266",
+   "previousIdentityDigest": "31b12baafdbe2abea4b45951981286834869d14c19ff3b24b06e70b1335780c0",
+   "label": "Antiparkinsonian drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 19.8",
+    "PH3.7"
+   ]
+  },
+  {
+   "conceptId": "C-7c965fab-6521-4b1c-a4db-ba0fbd26ed44",
+   "previousIdentityDigest": "089ef797f3d8587369edd0ac6097565b50c34137285027558c7b7aee51ba29da",
+   "label": "Diagnostic test counselling",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "MI 1.8",
+    "SU9.3"
+   ]
+  },
+  {
+   "conceptId": "C-7d1938fd-1098-42fb-9df0-febc699c41e7",
+   "previousIdentityDigest": "37365e60823e3bfaecabe1b2c46c2dab100760e3bc99066fc9402d610cb0c3e6",
+   "label": "Plasma proteins",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry"
+   ],
+   "evidenceCodes": [
+    "BC 5.4",
+    "BC14.11",
+    "PY2.2"
+   ]
+  },
+  {
+   "conceptId": "C-7d7ee881-1f50-43e8-8bed-00d02d7e41a7",
+   "previousIdentityDigest": "a54c0562891b0d6417cd194d76541ab503bd6fb6088e4d2038ff95785368d0df",
+   "label": "Arterial pulse",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.10",
+    "PY5.14"
+   ]
+  },
+  {
+   "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+   "previousIdentityDigest": "637f53954d5c598d02eb3e68136c5d9b04dbf449c4928b4b77f8dcd9a2899b91",
+   "label": "Radiograph interpretation",
+   "currentSubjects": [
+    "radiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM7.13",
+    "RD5.1",
+    "RD5.3"
+   ]
+  },
+  {
+   "conceptId": "C-7d9262c8-6ed0-4783-8179-473a7fd7c959",
+   "previousIdentityDigest": "3e72bb133ebf49687d6d049bbeb214d68684775bbe6a71baacc134aebe2f82ac",
+   "label": "Arboviral infections",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM26.25",
+    "PE31.13"
+   ]
+  },
+  {
+   "conceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+   "previousIdentityDigest": "3e6bc464ec924377f3e0e73607a80c69aeb48ba7e3d03d5a900e88fc52b3780a",
+   "label": "Depression",
+   "currentSubjects": [
+    "psychiatry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 25.5",
+    "PS 5.1",
+    "PS 5.2"
+   ]
+  },
+  {
+   "conceptId": "C-7ed39c9c-7be2-4fbc-ba60-7d0406d7e628",
+   "previousIdentityDigest": "a29ee6961d057ac0a6b7d1322fa1309f5b45f79f32487eea1e4f25a3b1a8d758",
+   "label": "Antitubercular drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 27.13",
+    "PH8.5"
+   ]
+  },
+  {
+   "conceptId": "C-7edcaa85-e0f9-4370-8d3b-a50ada347e6e",
+   "previousIdentityDigest": "13d8b68ead45aa7e1d837cd919c69896e69ccbb797c05a0913b8c965af74e2d1",
+   "label": "Growth monitoring",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE1.2",
+    "PE30.7",
+    "PY12.5"
+   ]
+  },
+  {
+   "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+   "previousIdentityDigest": "ab7e86bddc7926e21c674b22eab781a69efefd698e654d7d563c5237c571bc98",
+   "label": "Hepatic failure",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA24.2",
+    "PE23.14"
+   ]
+  },
+  {
+   "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "previousIdentityDigest": "4c8e4bee2ca7389d4687a639aa611619d291a5560ae26ebc99a3fd2c7e07bb46",
+   "label": "Rheumatic fever",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "microbiology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "MI 3.1",
+    "PA26.5",
+    "PE22.4"
+   ]
+  },
+  {
+   "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "previousIdentityDigest": "e5f38a83230837d7ab63319e7c7bb9d172075b49f1278a5080424e5b296fa95f",
+   "label": "Cerebrospinal fluid",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "medicine",
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AN56.2",
+    "AN63.1",
+    "BC14.17",
+    "GM17.9",
+    "PA34.3",
+    "PE27.13"
+   ]
+  },
+  {
+   "conceptId": "C-82939e95-7c9f-4668-8f79-d55a253cd9cd",
+   "previousIdentityDigest": "d114ad4ed4420754cceea401e672f68e0d6a00f6bd046f3f8a9108041f92d3f7",
+   "label": "Blood products",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anaesthesia",
+    "obstetrics-gynaecology",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS9.4",
+    "OG10.2",
+    "PA21.2",
+    "SU3.1"
+   ]
+  },
+  {
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "previousIdentityDigest": "74c303d3932f21f40644ec2910fe8fb8948252ec179c94cefbf84034a39f97b7",
+   "label": "Thyrotoxicosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 12.14",
+    "PA31.2",
+    "PA31.3"
+   ]
+  },
+  {
+   "conceptId": "C-84182a33-36d3-433f-b9c7-eb63b3133e8e",
+   "previousIdentityDigest": "3d46160fca200d99b212051697a6e840467e088102c3a07241d5725968707dfc",
+   "label": "Chest radiograph",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN25.7",
+    "PE22.9"
+   ]
+  },
+  {
+   "conceptId": "C-8489203c-98b8-4874-b9c3-e6adb886d122",
+   "previousIdentityDigest": "36458f4e8ec064bbbf447fd5a5ed96b33bed395a29de8527f2ceb39eb33a13b1",
+   "label": "Status epilepticus",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 20.5",
+    "PE24.4",
+    "PE27.8"
+   ]
+  },
+  {
+   "conceptId": "C-84ffe2e8-0437-4264-9a5b-a048070bc0f3",
+   "previousIdentityDigest": "370d93dde9f9b9af36362aee4a66ef13b881c737fafff54cd9393b9483d51932",
+   "label": "Lactation",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OG17.1",
+    "PE7.1",
+    "PY9.7"
+   ]
+  },
+  {
+   "conceptId": "C-8549225d-6c88-4c10-ac6c-f28713795fde",
+   "previousIdentityDigest": "c8b6266289ae312421d4e547ec12b75df53e8804b7b618019da9c6e7cda694fe",
+   "label": "Minimally invasive surgery",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG38.1",
+    "OG38.2",
+    "SU16.1"
+   ]
+  },
+  {
+   "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+   "previousIdentityDigest": "857c880a366e30eb3decb9e9a7dafc0eb837223d9ca7ded72b2515692ce5336f",
+   "label": "Vitamin K deficiency",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA20.2",
+    "PE12.5",
+    "PE12.6",
+    "PE19.7"
+   ]
+  },
+  {
+   "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+   "previousIdentityDigest": "e4739360b165e2353ad7a2657b6fb23945137f39408172e22ea1555cf470cb6c",
+   "label": "Prostatitis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA28.5",
+    "SU29.9"
+   ]
+  },
+  {
+   "conceptId": "C-87193dfe-37b8-44fb-bc8f-ade92e95074d",
+   "previousIdentityDigest": "a5d387bea041b8ae0f47c0d5f438b655d51f2d97319bc97250084f66ebc99a50",
+   "label": "Connective tissue disorders",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "BC6.2",
+    "GM7.17",
+    "GM7.7"
+   ]
+  },
+  {
+   "conceptId": "C-8736617a-09b7-40a0-b98e-58cf2db36829",
+   "previousIdentityDigest": "c89c24a986c75503948906d6850811a9f68e449ca1968e5cccf10768f12cd68b",
+   "label": "Antithyroid drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 12.12",
+    "PH7.3"
+   ]
+  },
+  {
+   "conceptId": "C-880a6014-4afb-495a-84c9-5e83fd098057",
+   "previousIdentityDigest": "bc8bcb9fb8a0424173a2204918e523755f728b29986c18512c60da99fa57d590",
+   "label": "Joint dislocations",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN17.3",
+    "OR1.4",
+    "OR1.5"
+   ]
+  },
+  {
+   "conceptId": "C-88759b1f-7794-4c15-9f74-f93edb81f081",
+   "previousIdentityDigest": "3df3835ba18767c51008369390aa9a157acfde5efe47b5327e3497b236ed77f1",
+   "label": "Drug poisoning",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "FM13.17",
+    "FM13.18",
+    "GM 22.4",
+    "PE14.3"
+   ]
+  },
+  {
+   "conceptId": "C-887f1442-5f21-46ef-af96-d9846af7c2ec",
+   "previousIdentityDigest": "72912449c0475b27da55e4081a5bfb051da9bfa9d42613f6533f000f65411a22",
+   "label": "Lipid-lowering drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 2.18",
+    "PH4.11"
+   ]
+  },
+  {
+   "conceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "previousIdentityDigest": "8660672cf53195d41f3b24e6961bcbfcbd7b28ae6b803a2ee097f0cdfbadb12b",
+   "label": "Breastfeeding",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM 5.16",
+    "CM 5.17",
+    "CM 5.22",
+    "CM5.12",
+    "OG17.2",
+    "PE7.3",
+    "PE7.4",
+    "PE7.6",
+    "PE7.7"
+   ]
+  },
+  {
+   "conceptId": "C-88e3251e-1383-4271-acf2-78afd13f47d9",
+   "previousIdentityDigest": "0be71242f953afbe83c1d70167e1aacfa6c2bee1e7fab193b60868f380d4d7b9",
+   "label": "Speech",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 18.6",
+    "PY10.18"
+   ]
+  },
+  {
+   "conceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
+   "previousIdentityDigest": "48eafc29cbc2951722d5d5ddf3902350da4a8b30e63a0180eab997da8cb497ae",
+   "label": "Cardiac conduction system",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN22.7",
+    "PY5.3"
+   ]
+  },
+  {
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "previousIdentityDigest": "b199ca85675f8a3ce45d9e045ec6e6a825ce3f235554d2d343ef4505bc0d94a9",
+   "label": "Transplant rejection",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "microbiology",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "MI 2.8",
+    "PA8.3",
+    "SU13.1"
+   ]
+  },
+  {
+   "conceptId": "C-8a5e96a6-b364-4e88-8266-a0516d3f3d16",
+   "previousIdentityDigest": "aac23bcf1e6ad8332cc0908504eff59768e76b7908c13f89e0094166f9b0766d",
+   "label": "Dietary counselling",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "medicine",
+    "obstetrics-gynaecology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC8.4",
+    "CM 5.10",
+    "CM 5.14",
+    "CM 5.15",
+    "CM 5.20",
+    "CM 5.21",
+    "CM5.11",
+    "CM5.4",
+    "GM 24.5",
+    "GM10.18",
+    "OG8.6",
+    "PE9.3",
+    "PE9.5",
+    "PE9.7"
+   ]
+  },
+  {
+   "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "previousIdentityDigest": "1c53d46efe585e508d9257004e69cd0bc4959d9ff931ac98ffe1a7da6ec4c863",
+   "label": "Fever",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 4.2",
+    "GM 4.3",
+    "GM4.1",
+    "GM4.10",
+    "GM4.11",
+    "GM4.12",
+    "GM4.13",
+    "GM4.16",
+    "GM4.19",
+    "GM4.4",
+    "GM4.5",
+    "PE31.9",
+    "PY12.2"
+   ]
+  },
+  {
+   "conceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "previousIdentityDigest": "af530b29ea183d073aa8bc966d729246eb67654e2fd6ae50719f2250d76a8e41",
+   "label": "Drugs for asthma and COPD",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 28.15",
+    "PH5.1"
+   ]
+  },
+  {
+   "conceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
+   "previousIdentityDigest": "a288ac4848292eaf595b6b2b8317dcc0a2011b1a5eeadf805195a0c531601ec0",
+   "label": "Cerebral cortex",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN62.2",
+    "PY10.16"
+   ]
+  },
+  {
+   "conceptId": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+   "previousIdentityDigest": "64de2f1aff52742cd2d197973887bf68768087ed356af69d1cea0846459ba59d",
+   "label": "Pesticide poisoning",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "FM13.15",
+    "GM22.6",
+    "GM22.7",
+    "PE14.2"
+   ]
+  },
+  {
+   "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "previousIdentityDigest": "6335ab94bc8b3eb8526f9f1eb7d9b0218e8f2d3269dc153b297e7a0cda266ecc",
+   "label": "Gangrene",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA2.5",
+    "SU27.4"
+   ]
+  },
+  {
+   "conceptId": "C-8f2b319c-ddf8-4c95-b5f9-7db1ec98eb2e",
+   "previousIdentityDigest": "eeaf2156a6bb40542bfb9ba26dd9798640716dea19cc556e19c3cbf78ae84b26",
+   "label": "Adolescent health",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM10.8",
+    "PE6.1",
+    "PE6.10",
+    "PE6.3",
+    "PE6.7",
+    "PE6.8",
+    "PE6.9"
+   ]
+  },
+  {
+   "conceptId": "C-8f559e73-cf2d-453c-bf28-1553c0c03a3c",
+   "previousIdentityDigest": "ffec921b67cadf927562be21b4f1228fb7a7c0fc1459daf05522d433a220a5dc",
+   "label": "Asphyxia",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM3.1",
+    "PY6.6"
+   ]
+  },
+  {
+   "conceptId": "C-8ffc7431-d905-4d03-a514-7c633d573f9b",
+   "previousIdentityDigest": "c96e1095e5c3c31499f34f01e05c03211371e51d5a4e022b3e9029e341d46622",
+   "label": "Vital statistics",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "CM9.2",
+    "CM9.7",
+    "OG1.3"
+   ]
+  },
+  {
+   "conceptId": "C-90d792a8-2138-4675-bae6-bc08b6fb7d30",
+   "previousIdentityDigest": "48bc13032569145f17be1bc148e4696cc1f32707fa503fa2b641d4d8ba3fca7f",
+   "label": "Hypothalamus and limbic system",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN62.4",
+    "PY10.15"
+   ]
+  },
+  {
+   "conceptId": "C-92240784-4174-4eae-80ba-908a9c6a065b",
+   "previousIdentityDigest": "016d3832b67dbf46f12bacfe55b1ad354212e92f8b37d45078d44a502af4d440",
+   "label": "Intellectual disability",
+   "currentSubjects": [
+    "psychiatry"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE27.9",
+    "PS11.1"
+   ]
+  },
+  {
+   "conceptId": "C-93fec1d5-8dfc-45f0-84e3-6736aebc104c",
+   "previousIdentityDigest": "9840994422b22961c7758f345341e34763949626707f11bdaaf7b91f87d53ef9",
+   "label": "Preoperative assessment",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS3.1",
+    "AS3.2",
+    "AS3.3",
+    "AS3.4",
+    "AS3.5",
+    "SU11.1"
+   ]
+  },
+  {
+   "conceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+   "previousIdentityDigest": "2ec3e3243090d7c5c9a068e96e963a7bc187ef6ab40419c7cd85ec8d5424bcc6",
+   "label": "Assisted reproductive technology",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "AN77.6",
+    "FM 8.14",
+    "OG28.4"
+   ]
+  },
+  {
+   "conceptId": "C-9583a4d9-e46d-4ddf-b6b3-1daa832f0268",
+   "previousIdentityDigest": "d4ae5ff278f4dfa734424e453b1b99395dc80d5cb9c1c8701ac1a79ff1857e11",
+   "label": "Femoral neck fracture",
+   "currentSubjects": [
+    "anatomy"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "AN17.2",
+    "OR2. 2.9"
+   ]
+  },
+  {
+   "conceptId": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+   "previousIdentityDigest": "af6bfaccec66ab81ed0068f626d876a02f4827690bd3d02c4cc51b88ba260665",
+   "label": "Hydronephrosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA27.13",
+    "SU29.4"
+   ]
+  },
+  {
+   "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+   "previousIdentityDigest": "31006ea4831a9c61621b818944196ed565e4fe514f0d32ceee83e28680fe7a82",
+   "label": "Glomerulonephritis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA27.5",
+    "PE20.2"
+   ]
+  },
+  {
+   "conceptId": "C-9903031a-6460-4557-9453-17e7751ca6d0",
+   "previousIdentityDigest": "0781c475059ccaa3610e4b9acffcd48764cb14f2e19db9ff449e9b36d248b4e3",
+   "label": "Haematinics",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM9.10",
+    "PH4.1"
+   ]
+  },
+  {
+   "conceptId": "C-99cf5538-5d14-4a36-8e8e-08667fa7ca31",
+   "previousIdentityDigest": "35cc295dcdf391a117134104027364aaaa68fe492342576c26d9b40fddbb8849",
+   "label": "Salivary gland disorders",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "EN 4.35",
+    "SU21.1",
+    "SU21.2"
+   ]
+  },
+  {
+   "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+   "previousIdentityDigest": "99d8a67ac3c05abb59c4d33bc5cd35a4e38386e53c1412bc4bd2013a8af44a9c",
+   "label": "Blood gas analysis",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "BC14.2",
+    "GM 23.12",
+    "GM 28.14",
+    "GM10.15",
+    "GM3.8",
+    "GM3.9"
+   ]
+  },
+  {
+   "conceptId": "C-9bff84ee-8e2f-49ca-959e-3588e2911758",
+   "previousIdentityDigest": "da362258512343173dfbb95ebf8456f018dc32b82302f44ca82d643af46f8e70",
+   "label": "Red cell count",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA13.4",
+    "PY2.11"
+   ]
+  },
+  {
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "previousIdentityDigest": "a20a96ddb043d342aad76dab7de8becef1748537df33cc0edca3153551dbce51",
+   "label": "Viral hepatitis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM 5.16",
+    "GM 5.3",
+    "MI 4.7",
+    "MI 4.8",
+    "MI 4.9",
+    "PA24.3",
+    "PA24.6"
+   ]
+  },
+  {
+   "conceptId": "C-9e836600-05a3-4b68-934d-98e74f7952f7",
+   "previousIdentityDigest": "6f9e791911c891983205ff09c8504c3d0a751aafba31c62fbc1a6a795a0bb769",
+   "label": "Soft tissue injuries",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "OR1.3",
+    "SU17.7"
+   ]
+  },
+  {
+   "conceptId": "C-9f13c669-ef1b-4950-b382-34719d38383f",
+   "previousIdentityDigest": "647fbd7b28c6316ed1aebbaa056e79d50b18c2fca4967c86a40e471aee08103f",
+   "label": "Parathyroid glands",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN35.2",
+    "SU22.5"
+   ]
+  },
+  {
+   "conceptId": "C-9f37cabc-193a-4bc7-ac2a-660848d63634",
+   "previousIdentityDigest": "51b20da896c2ea5120047d26151c0b108178e79429cfba4e049064b6be84da2d",
+   "label": "Nutritional support",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 24.4",
+    "SU12.3"
+   ]
+  },
+  {
+   "conceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "previousIdentityDigest": "c0e34556ad9a78a5073e981c685dc2a9448ded53db45ce4d249b1e5be18b859d",
+   "label": "Antidiabetic drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 11.16",
+    "PH7.1"
+   ]
+  },
+  {
+   "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "previousIdentityDigest": "12c679556f79c9e69a7067134e072de2b59030189a53b92595ea94a0f76d030a",
+   "label": "Ischaemic heart disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AN22.4",
+    "GM 2.13",
+    "GM 2.19",
+    "GM 2.20",
+    "GM 2.23",
+    "GM 2.4",
+    "GM 2.6",
+    "GM 2.8",
+    "GM 2.9",
+    "PA26.6"
+   ]
+  },
+  {
+   "conceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "previousIdentityDigest": "cb0e3e3b455452aa390e3032516a5c90c18e3d1d1ce10ee58fb4b0f124ea9cdb",
+   "label": "Pregnancy",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "FM8.8",
+    "OG7.1",
+    "PY9.7"
+   ]
+  },
+  {
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "previousIdentityDigest": "7bdc0fd2190ff4e49066e0bf306a47682df314730cae3e3c16a6225920a93604",
+   "label": "Pulmonary tuberculosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 27.1",
+    "GM 27.10",
+    "GM 27.11",
+    "GM 27.14",
+    "GM 27.15",
+    "GM 27.18",
+    "GM 27.2",
+    "GM 27.3",
+    "GM 27.5",
+    "GM 27.6",
+    "GM 27.8",
+    "GM 27.9",
+    "PA25.4"
+   ]
+  },
+  {
+   "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "previousIdentityDigest": "c9ace2cc8e277179851303803df618ea5300e9a0bd36a61c4066f16d953622d1",
+   "label": "Obesity",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry",
+    "medicine",
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC4.7",
+    "BC8.5",
+    "GM 14.1",
+    "GM 14.10",
+    "GM 14.11",
+    "GM 14.12",
+    "GM 14.14",
+    "GM 14.2",
+    "GM 14.4",
+    "GM 14.5",
+    "GM 14.6",
+    "GM 14.7",
+    "GM 14.8",
+    "GM 14.9",
+    "PA12.3",
+    "PE11.1",
+    "PE11.2",
+    "PE11.3",
+    "PE11.4",
+    "PE6.11",
+    "PY12.4"
+   ]
+  },
+  {
+   "conceptId": "C-a4396a40-9125-4f8a-8245-76d2c02a8581",
+   "previousIdentityDigest": "5b7f9e8960ece7cb2bb83f5814382abc3725a1b54f857848983c59a852d1ee71",
+   "label": "Pain management",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS8.2",
+    "AS8.3",
+    "SU11.5"
+   ]
+  },
+  {
+   "conceptId": "C-a723112f-132c-4cd6-b5e0-fb24de1bf903",
+   "previousIdentityDigest": "6d6d3bb989151dd0bd46288d1977cf549ebe3babbc4a785981c3b49d30d1966c",
+   "label": "Sexual dysfunction",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "psychiatry"
+   ],
+   "evidenceCodes": [
+    "FM8.11",
+    "PS 9.1"
+   ]
+  },
+  {
+   "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "previousIdentityDigest": "39765ea446bb4fbb75b5f3dc0421734bf94579bbabff99c586b289696bfc21e2",
+   "label": "Thyroid function tests",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC 11.1",
+    "GM 12.10",
+    "GM 12.2",
+    "GM 12.8",
+    "PA22.3"
+   ]
+  },
+  {
+   "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "previousIdentityDigest": "118b94da08aa910db748ca3c3b920b6546513881f832378e2e56c2708bbacc6c",
+   "label": "Hyperparathyroidism",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "GM 23.2",
+    "PA31.6",
+    "SU22.6"
+   ]
+  },
+  {
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "previousIdentityDigest": "3fcf5d8d3fd5e7a51cda4727b4e430dfa9b5aeeeb4edbffae108414bd1f2edb3",
+   "label": "Acute kidney injury",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM10.1",
+    "GM10.19",
+    "GM10.2",
+    "GM10.3",
+    "PA27.3",
+    "PE20.5"
+   ]
+  },
+  {
+   "conceptId": "C-aab0f877-59bc-4753-a8df-a0457d082ab4",
+   "previousIdentityDigest": "1f754236dcbce2a28d805c4a2abe2382adb45f0776de595f9b777cfbfb600f32",
+   "label": "Pituitary gland",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN30.5",
+    "PY8.2"
+   ]
+  },
+  {
+   "conceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+   "previousIdentityDigest": "01e409f506c48e1b9a6d8afee528328580555145829eec58f970e995183e51d1",
+   "label": "Reproductive tract infections",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "MI 8.1",
+    "OG27.1"
+   ]
+  },
+  {
+   "conceptId": "C-ac029c61-2593-4449-8be7-cecd7bbd4c76",
+   "previousIdentityDigest": "daf6316da3f7b1bc81bfc8e1db9b5bd0012b63324cd68b5f7ceb99e1b7d9fefd",
+   "label": "Varicella zoster infection",
+   "currentSubjects": [
+    "dermatology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "DR8.3",
+    "GM26.22"
+   ]
+  },
+  {
+   "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "previousIdentityDigest": "65f181a7888bb96718bf5979d68caa20c8891dc3c24e0e0a14bc02c01ffc23c3",
+   "label": "Lymphatic filariasis",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 26.32",
+    "MI 3.11"
+   ]
+  },
+  {
+   "conceptId": "C-aec2f495-99a8-4ae0-bc5c-6840d441c59a",
+   "previousIdentityDigest": "29c1c998bf26d7cfa563a62087a2abf9ced77fd5ba9f4ff151e35d8e74896bbb",
+   "label": "Deafness",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "ent"
+   ],
+   "evidenceCodes": [
+    "EN 4.14",
+    "EN 4.20",
+    "PY11.4"
+   ]
+  },
+  {
+   "conceptId": "C-af4cf87c-3d76-4f50-b900-67a26c0266ef",
+   "previousIdentityDigest": "1229c1f535cffd480580811af48ee8906f5cab00b9e3fac5130f395cee965f5f",
+   "label": "Respiratory examination",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM3.5",
+    "PY6.12"
+   ]
+  },
+  {
+   "conceptId": "C-afa76f1a-6edc-4b94-8750-5563e5e7f0d9",
+   "previousIdentityDigest": "fb46a8436b6d3caf4a9c2fd8f7393340078813e16f216e05c92a8fb2a0de65e5",
+   "label": "Constipation",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE23.2",
+    "PY4.11"
+   ]
+  },
+  {
+   "conceptId": "C-afaa1fc0-4c9e-43b9-a120-049df5c893ea",
+   "previousIdentityDigest": "1dcff97095cf05226d47ddbd765e9b6053490c3318abafc31dd551d098c62cab",
+   "label": "National Anaemia Control Programme",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM9.11",
+    "PE26.5"
+   ]
+  },
+  {
+   "conceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "previousIdentityDigest": "7fd9fa68e01ff7ae0097f05d3e3546775349a51759ed0331196d16103521e355",
+   "label": "Immunisation",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "obstetrics-gynaecology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM10.5",
+    "MI 2.6",
+    "OG8.7",
+    "PE18.1",
+    "PE18.10",
+    "PE18.11",
+    "PE18.5",
+    "PE18.6",
+    "PE18.7"
+   ]
+  },
+  {
+   "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "previousIdentityDigest": "78cd657acdcd0d10de87783d6a2668eddaa0e37d04bed1633a7743199fb4c8d6",
+   "label": "Thyroid neoplasms",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA31.4",
+    "SU22.4"
+   ]
+  },
+  {
+   "conceptId": "C-b31b6030-aee1-4012-a979-e2c8a516490c",
+   "previousIdentityDigest": "881fe88a192c17e310271b2db13458d05c3fd316b31a9bf564b494ed742ad88d",
+   "label": "Research methodology",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "CM 7.10",
+    "CM6.1",
+    "SU7.2"
+   ]
+  },
+  {
+   "conceptId": "C-b35f746a-93a1-4964-bf05-2dc25667c9c3",
+   "previousIdentityDigest": "eb2b130f28dded3f70a6ba0343dba5274829a0182ba03b77d905bc790e56088d",
+   "label": "Disorders of puberty",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "OG23.2",
+    "OG23.3",
+    "PE30.6"
+   ]
+  },
+  {
+   "conceptId": "C-b5f3f095-0a3a-40be-adf9-0499d91221ad",
+   "previousIdentityDigest": "b461d02e078f8ef700db0c7954b261c72d7bf59942f33aa6c8c0a79ec8446f5f",
+   "label": "Proteinuria",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM10.6",
+    "PE20.3"
+   ]
+  },
+  {
+   "conceptId": "C-b67d7951-c6aa-4807-84a8-b760d6bc42a6",
+   "previousIdentityDigest": "d3c17042aab7df68c4e84c8bb36592b953c6c417aa3f8fb713195915003f4bce",
+   "label": "Antiseizure medicines",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM20.3",
+    "PH3.3"
+   ]
+  },
+  {
+   "conceptId": "C-b74384a2-9237-49c2-ac61-3be155aacb1d",
+   "previousIdentityDigest": "8417936f0ea370ce55ccd3d5b502b66406f60c510683d93597c2aade1eb4ce06",
+   "label": "Congenital heart disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 1.25",
+    "PA26.4",
+    "PE22.1",
+    "PE22.2"
+   ]
+  },
+  {
+   "conceptId": "C-b9de459a-5d94-46e4-9f74-c57efa21eade",
+   "previousIdentityDigest": "686b641baf83ef724f501110a4c9435499d1f6b2c98f3400f34508c885654556",
+   "label": "Allergic rhinitis",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "EN 4.24",
+    "PE28.1"
+   ]
+  },
+  {
+   "conceptId": "C-ba2f6710-93b6-47a1-8db1-9b121e3d64c4",
+   "previousIdentityDigest": "b16f49a32ed90d2f8cc1c51ef2d24f83363b5d750f742a7f2374734c1dd0274f",
+   "label": "Mental disorders",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "community-medicine"
+   ],
+   "evidenceCodes": [
+    "CM 15.4",
+    "CM15.2",
+    "FM11.1"
+   ]
+  },
+  {
+   "conceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
+   "previousIdentityDigest": "e133917f69861b4c6b71d647fd1bb22f284e2413a4fee8e7f459ddc08671174f",
+   "label": "Skin and soft tissue infections",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "medicine",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "DR15.1",
+    "DR15.3",
+    "GM 26.8",
+    "MI 5.3",
+    "SU18.1"
+   ]
+  },
+  {
+   "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
+   "previousIdentityDigest": "88fa1112b0367bfc72987a0bba989ce311afad8dac2a0308284e4c9c8a7387b1",
+   "label": "Cysticercosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM26.33",
+    "PA10.2"
+   ]
+  },
+  {
+   "conceptId": "C-be01055a-b65d-47d1-a332-224289d4d165",
+   "previousIdentityDigest": "8d1517814bd4c78a62928eeccff64d3e9503491d3272af7fa2262dbcd65e0816",
+   "label": "Digital rectal examination",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 15.7",
+    "SU28.18",
+    "SU29.10"
+   ]
+  },
+  {
+   "conceptId": "C-bf9ec559-4815-49d2-9267-345c88d0e828",
+   "previousIdentityDigest": "4d20aa84b70f017b45c82421f309181f27e8734e2cc989238d266d629dd50b4f",
+   "label": "Antiplatelet drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 18.12",
+    "PH4.4"
+   ]
+  },
+  {
+   "conceptId": "C-c0a77490-b0e0-4c93-b1d5-22b424e8d0eb",
+   "previousIdentityDigest": "a35e5e3c175f789fa4ddf249971141ef7a45aa0f8711496e724d9652b72c908c",
+   "label": "Breast",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN9.2",
+    "AN9.3",
+    "SU25.1"
+   ]
+  },
+  {
+   "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "previousIdentityDigest": "153b0bc4ded54f0dc4396eedbec6d7ebf637431e3168a652a02cf90e3c4a9d17",
+   "label": "Electrocardiogram",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 1.16",
+    "GM 2.10",
+    "GM 8.16",
+    "PE22.10",
+    "PY5.15",
+    "PY5.5",
+    "PY5.6"
+   ]
+  },
+  {
+   "conceptId": "C-c12dbb34-f5f4-44c0-a5c6-b808151f5b21",
+   "previousIdentityDigest": "017c655b6af4713ddfb44d483764fdc5cbb116dee0d55d23de355ee7c2e7151e",
+   "label": "Menopause",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG32.1",
+    "PY9.9"
+   ]
+  },
+  {
+   "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "previousIdentityDigest": "de4ef5bf0e7aafa74656447606b664c824ed4085b26d0804d4f12f2fb83ab19a",
+   "label": "Osteoporosis",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM25.8",
+    "OR7.1"
+   ]
+  },
+  {
+   "conceptId": "C-c22016b3-792f-4d4e-b172-14ccb933f140",
+   "previousIdentityDigest": "5faf244d63537517ad495c01d13f7acddf800a7eb6d928c33eec2f5524fe4886",
+   "label": "Oesophageal disorders",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "EN 4.45",
+    "SU28.6"
+   ]
+  },
+  {
+   "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "previousIdentityDigest": "6c8a3d9da5fa882a8c75d7c73ab0498678abbc46eaf9ab4a51a5e151628a2af8",
+   "label": "Infection prevention and control",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM3.18",
+    "MI 10.2"
+   ]
+  },
+  {
+   "conceptId": "C-c2832f1a-179d-4018-bef0-85afa8363b8d",
+   "previousIdentityDigest": "2bf8f1f649a65b263065badfe487b80d670d4043cb6b5d6b92199c64f46c8ffa",
+   "label": "Gallbladder",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN47.7",
+    "PY4.9"
+   ]
+  },
+  {
+   "conceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "previousIdentityDigest": "3f60566f70b0d7ef8c766ec7710bdd2563adcd533395164a7ac7d8e5148dc193",
+   "label": "Thyroid gland",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AN35.2",
+    "AN35.8",
+    "PY8.3",
+    "SU22.1"
+   ]
+  },
+  {
+   "conceptId": "C-c4485002-96cb-4b84-ba24-e954f8773335",
+   "previousIdentityDigest": "366f456ab2bd8d67c174a66520c1ab60b3c4b1a3837ca44b0caf2d11e8e3a13e",
+   "label": "Renal replacement therapy",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM10.21",
+    "GM10.22",
+    "PY7.9"
+   ]
+  },
+  {
+   "conceptId": "C-c55fea74-b72a-48bf-a5dc-481de72fced7",
+   "previousIdentityDigest": "92641604e404afdadef73c71f1494c7e8cc42eb855f27067e940e7647b4c2914",
+   "label": "Phimosis and paraphimosis",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN46.5",
+    "SU30.1"
+   ]
+  },
+  {
+   "conceptId": "C-c5b985f7-188c-4601-a318-1002362506e1",
+   "previousIdentityDigest": "f34306badcc02d4d3ec2fcb8ab035a8772572a0e474ebe559f9047289befbb01",
+   "label": "Integrated Management of Neonatal and Childhood Illness",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM10.5",
+    "PE16.1",
+    "PE16.2",
+    "PE16.3",
+    "PE16.4",
+    "PE16.5",
+    "PE16.6"
+   ]
+  },
+  {
+   "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+   "previousIdentityDigest": "c26dcb51938429f0d2ef7b0071a7ce178e7d0797b6d1d5b6b1a2ba5bf2d952cb",
+   "label": "Burns",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "FM2.18",
+    "SU4.1",
+    "SU4.2",
+    "SU4.3",
+    "SU4.4"
+   ]
+  },
+  {
+   "conceptId": "C-c647ee65-6415-4edb-bb57-d4e9073007e5",
+   "previousIdentityDigest": "5e68ed61aef40c3e3651a504146a62f562297abac523d74b2c4269275bb4f1bd",
+   "label": "Tumour markers",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "BC 13.2",
+    "GM13.12"
+   ]
+  },
+  {
+   "conceptId": "C-c7b5c09f-1c2f-487f-b9c9-81fc54048b53",
+   "previousIdentityDigest": "d1e058fc0e5eecedd50f431ee99c6c262dd633f8789480a26c6c9dcf755228ca",
+   "label": "Cataract",
+   "currentSubjects": [
+    "ophthalmology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN41.2",
+    "OP8.2",
+    "OP8.3",
+    "OP8.6"
+   ]
+  },
+  {
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "previousIdentityDigest": "60062971d3e16a3f229c185caad011599cbefc79fb37d6753d7faa887e2b4fac",
+   "label": "Hypersensitivity reactions",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "MI 2.7",
+    "PA8.2"
+   ]
+  },
+  {
+   "conceptId": "C-c8c2d3e6-d532-4f05-91b0-0d75851773f7",
+   "previousIdentityDigest": "97a2eda682559e34172590e4727ccba2900ecd2e49cd2ec103511993c9a27f2a",
+   "label": "Prognosis counselling",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "OG35.7",
+    "OR14.1",
+    "OR14.3",
+    "SU2.3"
+   ]
+  },
+  {
+   "conceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "previousIdentityDigest": "ef85ec2f5093e5600fdb33ae3cb85ddcd529fd62a8b9a2cf66f6847d228d9bc4",
+   "label": "Contraception",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "community-medicine",
+    "forensic-medicine",
+    "obstetrics-gynaecology",
+    "pharmacology"
+   ],
+   "evidenceCodes": [
+    "AN77.5",
+    "CM10.6",
+    "FM8.13",
+    "OG19.2",
+    "OG21.1",
+    "PH7.7",
+    "PY9.6"
+   ]
+  },
+  {
+   "conceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+   "previousIdentityDigest": "bb39da0a825eb09a23b5527f64d95bb1155fb777d44dacfd1671690ae3bcd091",
+   "label": "Polymerase chain reaction",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "BC10.7",
+    "MI 1.3"
+   ]
+  },
+  {
+   "conceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "previousIdentityDigest": "8ef909b74795a223d78681e683379b97e8a9f03dae65890ddcf3b09274f4d02d",
+   "label": "Blood groups",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "FM14.7",
+    "PA21.1",
+    "PA21.6",
+    "PY2.10",
+    "PY2.11"
+   ]
+  },
+  {
+   "conceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "previousIdentityDigest": "5d680c6ddc3dc4ae1e089b019ee5b741f2567759d4cb9bfc4ce956e42d5c4cdc",
+   "label": "Iron metabolism",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC9.1",
+    "PA14.1",
+    "PE13.1"
+   ]
+  },
+  {
+   "conceptId": "C-cd19e19e-1bb5-4a34-a362-3ee005197890",
+   "previousIdentityDigest": "971f1def51b61ea37b1b6c43d0b5072029b5641e2de9d5d23f5fba74276c3fb4",
+   "label": "Organ donation",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "FM2.4",
+    "SU13.3",
+    "SU13.4"
+   ]
+  },
+  {
+   "conceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "previousIdentityDigest": "10547f3f821eb5f73b420b232f52492197ce790389da6462fb9170d99d294f63",
+   "label": "Menstrual cycle",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "AN77.1",
+    "AN77.2",
+    "OG3.1",
+    "PY9.5"
+   ]
+  },
+  {
+   "conceptId": "C-ce8f4cd2-1b82-404f-a455-0cc7ca53a853",
+   "previousIdentityDigest": "4c7bb592327e1a53a27a274a01facc1cb32b4eda11d9654cdccb227340405959",
+   "label": "Imaging modalities",
+   "currentSubjects": [
+    "radiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN54.1",
+    "AN54.4",
+    "RD1.1"
+   ]
+  },
+  {
+   "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "previousIdentityDigest": "cd005e533feeb55aaf9d5465506de51066d9b9691bc2e2a2b3424ed198fa9305",
+   "label": "Portal hypertension",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anatomy",
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "AN47.11",
+    "GM 5.5",
+    "PA24.5",
+    "PE23.16"
+   ]
+  },
+  {
+   "conceptId": "C-cf863984-06c6-4dde-be84-02d8d42d2a99",
+   "previousIdentityDigest": "2335cca088f7b4d61162e423960a74bb01b1a9295901fbd166a276043648c0ec",
+   "label": "Coronary circulation",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN22.3",
+    "PY5.1"
+   ]
+  },
+  {
+   "conceptId": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+   "previousIdentityDigest": "2fba57361a5369df83dbccba7c49296a8927d6b0cee9341261417f027bc0dee3",
+   "label": "Endometriosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG 34.6",
+    "PA29.7"
+   ]
+  },
+  {
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "previousIdentityDigest": "5487918f9c5db5452b8df8f8e3d0ac5c147bf9b71399c28fdf04b0440846c40c",
+   "label": "Autoimmunity",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM7.1",
+    "MI 2.7",
+    "PA8.4"
+   ]
+  },
+  {
+   "conceptId": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+   "previousIdentityDigest": "7012b9b9665ec127f2f9e2d1e781512b12a9ea4a192e4b3e491eb9ef956a6742",
+   "label": "Tonsillitis",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN36.6",
+    "EN 4.38"
+   ]
+  },
+  {
+   "conceptId": "C-d2cea6d4-2adc-4577-afaf-e42d8f270f6c",
+   "previousIdentityDigest": "1d0dd450e069baf2b133530ba5cf3ec5f6b41cfd5fbe82eb650fec203fd952b6",
+   "label": "Perioperative fluid therapy",
+   "currentSubjects": [
+    "anaesthesia"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AS9.3",
+    "SU12.2"
+   ]
+  },
+  {
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "previousIdentityDigest": "31e73fbfca90632cc59dea8bf1eea8d88c04860134de4bc90e55e6772ceef4e1",
+   "label": "Inflammatory bowel disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 16.15",
+    "GM 16.17",
+    "PA23.6"
+   ]
+  },
+  {
+   "conceptId": "C-d37242ef-2027-4d25-887e-86e2d875ab99",
+   "previousIdentityDigest": "11655cf4917bffe9e710207815d360904a53ebcd6bad5059e4687ccdd3f45f8e",
+   "label": "Kidney",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA27.1",
+    "PY7.1"
+   ]
+  },
+  {
+   "conceptId": "C-d402514d-bdeb-49be-bdb8-6ced2c389f10",
+   "previousIdentityDigest": "e2c5bf86f956726844264689392665e67347c1d35928ffec4aa26c095d2047e5",
+   "label": "Musculoskeletal deformities",
+   "currentSubjects": [
+    "orthopaedics"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN19.6",
+    "OR12.1"
+   ]
+  },
+  {
+   "conceptId": "C-d481b63b-7010-4f22-bbad-58b10f6b5611",
+   "previousIdentityDigest": "ce45b9ef399cbbe11af21a6d21a5da757a2142970920bca03c082bd73ad45487",
+   "label": "Apoptosis",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "PA2.4",
+    "PY1.3"
+   ]
+  },
+  {
+   "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "previousIdentityDigest": "180e433d02b61cd95b8d391a2f6cbebd08ca063422ef42dce756b75eda109a1d",
+   "label": "Encephalitis",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 26.12",
+    "MI 6.2"
+   ]
+  },
+  {
+   "conceptId": "C-d5c68e78-a0d8-41cb-a3e1-862f0f186feb",
+   "previousIdentityDigest": "64f0698bae0a199a97c1609d2f51b6722d9cb4fe8ea69e019dada06bc712dec3",
+   "label": "Septic arthritis",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "MI 5.2",
+    "OR3.1",
+    "OR3.2"
+   ]
+  },
+  {
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "previousIdentityDigest": "1a4f421dd924cae438b50f73a764920e3d3447698ef44be23f4291b8abf2400d",
+   "label": "Cirrhosis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 5.5",
+    "PA24.4",
+    "PA24.9"
+   ]
+  },
+  {
+   "conceptId": "C-d63eee28-ec75-45ce-9caf-26c14c6c4c95",
+   "previousIdentityDigest": "b89865e609772735e7c5c356a1793feae91906860cb459d48a097876f23162b1",
+   "label": "Non-opioid analgesics",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "OR2.3",
+    "PH2.7"
+   ]
+  },
+  {
+   "conceptId": "C-d6a286de-c653-433b-a4e7-681f2f53c77c",
+   "previousIdentityDigest": "0818179d02e6a3867067ac011dad203ef16c97dbf905fe5ffe694df519a21904",
+   "label": "Stool examination",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 16.10",
+    "GM 16.9",
+    "MI 1.10",
+    "MI 4.4"
+   ]
+  },
+  {
+   "conceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "previousIdentityDigest": "b4162381f0ef469d35f430221586d994b552183b3035363fdcfc468f2fabe090",
+   "label": "Carcinogenesis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 13.2",
+    "GM 13.3",
+    "PA6.3"
+   ]
+  },
+  {
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "previousIdentityDigest": "4737a6a6a1b33dfe172ddefa2944a2b494b7c9bad8c810f2a0784743394c3941",
+   "label": "Meningitis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM17.13",
+    "MI 6.1",
+    "MI 6.3",
+    "PA34.1",
+    "PA34.3",
+    "PE27.1",
+    "PE27.2",
+    "PE27.3"
+   ]
+  },
+  {
+   "conceptId": "C-d90b4e39-e402-4133-abfe-173664c5b368",
+   "previousIdentityDigest": "e8318beb45b9a187149e20c0623e24bc77bc4093e5ea69ff7ff00b4a49e280df",
+   "label": "Reproductive and child health programme",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "CM 10.10",
+    "PE17.1"
+   ]
+  },
+  {
+   "conceptId": "C-db39288d-430f-467b-8ae0-1214d9c0b466",
+   "previousIdentityDigest": "45e8752b973cbb96ccc4c8db7ba9bfca74cf7d1a49358746f377ff65c9589fea",
+   "label": "Zoonoses",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM26.18",
+    "MI 9.1"
+   ]
+  },
+  {
+   "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "previousIdentityDigest": "e7c22e404274583c7701cd8c104d277f21bc7caec3dc42cf4e8e1eb9314bf279",
+   "label": "Liver function tests",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry",
+    "pathology",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC 11.1",
+    "BC14.13",
+    "BC14.16",
+    "PA22.4",
+    "PA24.6",
+    "PE23.20",
+    "PE26.11",
+    "PY4.9"
+   ]
+  },
+  {
+   "conceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+   "previousIdentityDigest": "cbad2a630087018b83097ea67a19b9f24e0c81dec47449b399691bfee8e6091b",
+   "label": "Metabolic syndrome",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "biochemistry"
+   ],
+   "evidenceCodes": [
+    "BC8.5",
+    "PY12.4"
+   ]
+  },
+  {
+   "conceptId": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+   "previousIdentityDigest": "739073c76b0c0ed8f9b0aea46d49917eb1d292af0263fbd8ccee9a7ea463fe98",
+   "label": "Bone tumours",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "orthopaedics"
+   ],
+   "evidenceCodes": [
+    "OR10.1",
+    "PA32.2",
+    "PA32.7"
+   ]
+  },
+  {
+   "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+   "previousIdentityDigest": "5b37691902ec35be5b9427b9c3f9a315e667d55950f6e05677c8294c5c526cd2",
+   "label": "Ovarian tumours",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG34.2",
+    "PA29.10",
+    "PA29.4"
+   ]
+  },
+  {
+   "conceptId": "C-df26f5a5-748a-4519-9c9e-8f114ea58011",
+   "previousIdentityDigest": "e30b543721c37e16ff08599ea9925a8aca2dd2ccae0e0419eb7374ccc63c3955",
+   "label": "Antirheumatic drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM7.15",
+    "GM7.18",
+    "GM7.20",
+    "PH2.8"
+   ]
+  },
+  {
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "previousIdentityDigest": "d54cf67f687d57a23d8f185002b1429e36c32108898e718a7cfdff53267f2893",
+   "label": "Chronic obstructive pulmonary disease",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 28.5",
+    "GM25.10",
+    "PA25.3"
+   ]
+  },
+  {
+   "conceptId": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "previousIdentityDigest": "bf97997c424f82753cb59afad0f5fa0414dbe143c8a1e46bb962b6ebddb56a2e",
+   "label": "Varicose veins",
+   "currentSubjects": [
+    "anatomy"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AN20.5",
+    "SU27.6"
+   ]
+  },
+  {
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "previousIdentityDigest": "837d5baad5e53962f611c10ae55c68b78f961eb733b4e7f32ab0c155e6ddf3fc",
+   "label": "Host response to infection",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM 26.1",
+    "MI 2.4",
+    "PA10.4"
+   ]
+  },
+  {
+   "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+   "previousIdentityDigest": "4e94b214d7571798b6ad07b46c6344fe0a8cf6726a90e9b9d6affed2dc39e97a",
+   "label": "Systemic lupus erythematosus",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA8.5",
+    "PE21.4"
+   ]
+  },
+  {
+   "conceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "previousIdentityDigest": "fb74b3b1ba3c4bd2b79c91bf1be32c4b3e5a2b24517d133087ee942a51dc0ec6",
+   "label": "Basal ganglia",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN62.4",
+    "PY10.12"
+   ]
+  },
+  {
+   "conceptId": "C-e132c81b-ccd6-40da-b4b0-d36ffdcfe6fe",
+   "previousIdentityDigest": "542aee48e13702c3f96a25a6420e7c547264b9112faeaccc193b33228156a937",
+   "label": "Synapse",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN7.7",
+    "PY10.4"
+   ]
+  },
+  {
+   "conceptId": "C-e1cb7a8d-57b9-47eb-aa45-6edd74aa1c25",
+   "previousIdentityDigest": "277103719e19b3642abd276da1c89ab928f951c9a5b6fce419019f2286f1a00e",
+   "label": "Adrenal tumours",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PA31.10",
+    "SU23.3"
+   ]
+  },
+  {
+   "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
+   "previousIdentityDigest": "c400667788836a639574cf6e4505f9ecb33f0c5a8032bf522e6d4a550a7dbeb5",
+   "label": "Cardiovascular examination",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "GM 2.7",
+    "PE22.8",
+    "PY5.16"
+   ]
+  },
+  {
+   "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+   "previousIdentityDigest": "5cf3186ec3ccccb3feed61a771047bd722dce07161dcdc85dbbca85eeb987bfc",
+   "label": "Pyrexia of unknown origin",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM4.14",
+    "GM4.18",
+    "GM4.20",
+    "GM4.9",
+    "MI 3.5"
+   ]
+  },
+  {
+   "conceptId": "C-e5e7a4f8-ad0c-490a-9e43-ea30d57d3f1f",
+   "previousIdentityDigest": "86d743e9f1630c3e8210ef4ac2fb0739d8fb7e25d5f2850216637385ed3b91a0",
+   "label": "Occupational exposure to bloodborne infections",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM6.16",
+    "OG35.14"
+   ]
+  },
+  {
+   "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+   "previousIdentityDigest": "5fed7214ebc053ae73aeef6184c5f962bbac7cff13ac6596528fff5cc888a5a6",
+   "label": "Hernia",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN15.4",
+    "AN44.5",
+    "AN47.14",
+    "SU28.1",
+    "SU28.2"
+   ]
+  },
+  {
+   "conceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "previousIdentityDigest": "9fb4ff22f0664e080b69b4552f3fc56309bcc4b845be2e4057752f0896732173",
+   "label": "Cervical cancer",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "OG33.1",
+    "OG33.2",
+    "PA.29.1"
+   ]
+  },
+  {
+   "conceptId": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+   "previousIdentityDigest": "578c6609b24d733938eb20d690a16a86b8a534c2b24a67076cf97ad6a6b0bb74",
+   "label": "Peritonitis",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN47.3",
+    "SU28.3"
+   ]
+  },
+  {
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "previousIdentityDigest": "b9f19ac79635680a8fb26796a960881e8ddb3607b1b7898b04ed47a151e36bed",
+   "label": "Diarrhoea",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM 16.1",
+    "GM 16.11",
+    "GM 16.12",
+    "GM 16.16",
+    "GM 16.2",
+    "GM 16.3",
+    "GM 16.4",
+    "GM 16.5",
+    "GM 16.7",
+    "GM 16.8",
+    "GM6.13",
+    "MI 4.1",
+    "MI 4.2",
+    "PY4.11"
+   ]
+  },
+  {
+   "conceptId": "C-e8459978-fcc6-4d40-a2a2-ec84ca74eadd",
+   "previousIdentityDigest": "106ebc107551374d1b04a4baca39418efeac9c6cef26050640793031dc1cf706",
+   "label": "Haematuria",
+   "currentSubjects": [
+    "surgery"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE20.4",
+    "SU29.1"
+   ]
+  },
+  {
+   "conceptId": "C-e8a0a3da-bf71-491e-a805-64131993a573",
+   "previousIdentityDigest": "0cf42a32bf6e8ad578cdb2d42634560791bfd420432e9463bc0f10567382edf9",
+   "label": "Family welfare programme",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "CM10.7",
+    "OG19.4"
+   ]
+  },
+  {
+   "conceptId": "C-e981e4a8-f583-4fc1-a808-f525b254df3f",
+   "previousIdentityDigest": "d19934c2c613124e2e9b1b0a2680962c049f4d5ebee4135e14282e793396b317",
+   "label": "Corrosive poisoning",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.11",
+    "GM 22.3"
+   ]
+  },
+  {
+   "conceptId": "C-e98ea73a-122d-4834-99c7-136b8440a1b5",
+   "previousIdentityDigest": "05e1cf94a22ab95ab0d0354f7de52c7008d8c0e808027d11798b48c2c5335246",
+   "label": "Myringotomy",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN40.5",
+    "EN 4.10"
+   ]
+  },
+  {
+   "conceptId": "C-ea5c037c-f133-4ada-ae08-db878106c61c",
+   "previousIdentityDigest": "037ec7aeae39c7b2e4519003cf0c326def948b55509aa0e7a30828409f253c35",
+   "label": "Doctor-patient relationship",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "CM1.10",
+    "SU8.2"
+   ]
+  },
+  {
+   "conceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "previousIdentityDigest": "55bfbafae7fcd707cc3aec2036a47de7f513bc2e63a2a8765e08d22246054a35",
+   "label": "Osteoarthritis",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN18.7",
+    "PA32.6"
+   ]
+  },
+  {
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "previousIdentityDigest": "9e540cab8b44e946bd9e926553be40169b8481e2f15da215168013cc8a8ad6bc",
+   "label": "Malaria",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology"
+   ],
+   "evidenceCodes": [
+    "GM26.29",
+    "GM26.30",
+    "MI 3.11",
+    "MI 3.12",
+    "PA10.1"
+   ]
+  },
+  {
+   "conceptId": "C-ebf836f2-9336-47b4-869f-40ea6b0bdbaa",
+   "previousIdentityDigest": "d2a555e4acc8fc85aae4386d9afeceb4bffe66a46573e7537d4ed6debeed7fbb",
+   "label": "Drowning",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM3.4",
+    "PY6.6"
+   ]
+  },
+  {
+   "conceptId": "C-ec957217-56cb-4b0b-8a05-d70de3ca0f95",
+   "previousIdentityDigest": "1b924cf13514173e62cc38f9418e3822065ac14505d22d800069e31b43ed0f1c",
+   "label": "Neurogenic bladder",
+   "currentSubjects": [
+    "anatomy"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "AN48.6",
+    "GM18.7"
+   ]
+  },
+  {
+   "conceptId": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+   "previousIdentityDigest": "903145273f258e9ce9cd628fbe16ee5a02fefb17e50f1954ecf9a71820ef6a66",
+   "label": "Endometrial carcinoma",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "OG34.1",
+    "PA29.2"
+   ]
+  },
+  {
+   "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "previousIdentityDigest": "a3cd690e2b920aa3fd23d21498e842b5ab81e4b6804b535f0bb2457222371182",
+   "label": "Epilepsy",
+   "currentSubjects": [
+    "pediatrics"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 20.1",
+    "GM 20.2",
+    "GM 20.4",
+    "PE27.7"
+   ]
+  },
+  {
+   "conceptId": "C-ee33f220-23a6-4972-89c7-698bf92cad30",
+   "previousIdentityDigest": "2d724ec8087764299dbc13ce61994604a5bfccf44c26949d584dc4b8cc162a79",
+   "label": "Hearing tests",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "ent"
+   ],
+   "evidenceCodes": [
+    "EN 2.4",
+    "EN2.3",
+    "PY11.4"
+   ]
+  },
+  {
+   "conceptId": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "previousIdentityDigest": "15236793dd5d170de86e74cd9f681a5c29ee0799aaac500c5f392658e7787bdd",
+   "label": "Deep vein thrombosis",
+   "currentSubjects": [
+    "anatomy"
+   ],
+   "addSubjects": [
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "AN20.5",
+    "SU27.6"
+   ]
+  },
+  {
+   "conceptId": "C-f0218df1-d3ae-4ae4-afd1-2c2cd3a6224b",
+   "previousIdentityDigest": "c4a5848fd4293dafea4d6317d83cf7b74ef0c9387fb2740c302a06d4f6cea5dd",
+   "label": "Facial nerve palsy",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN28.7",
+    "EN 4.16"
+   ]
+  },
+  {
+   "conceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "previousIdentityDigest": "11e40614601d37ba21a2eb77c3ac96ba09729bffe1b5c132f814790f549a1ce2",
+   "label": "Cerebellum",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN60.1",
+    "AN60.2",
+    "AN60.3",
+    "PY10.11"
+   ]
+  },
+  {
+   "conceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "previousIdentityDigest": "4f428d880b49e8f90ab92732eaaa0b5f6fc6ea9670006d713bfe21044d576cb8",
+   "label": "Medical ethics",
+   "currentSubjects": [
+    "forensic-medicine"
+   ],
+   "addSubjects": [
+    "medicine",
+    "obstetrics-gynaecology",
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "FM10.1",
+    "GM 29.1",
+    "GM 29.24",
+    "GM 29.3",
+    "GM 29.4",
+    "GM 29.6",
+    "GM10.23",
+    "OG35.9",
+    "PE32.1",
+    "SU8.1"
+   ]
+  },
+  {
+   "conceptId": "C-f2d82a38-55a8-4cf2-affc-4234b05208dc",
+   "previousIdentityDigest": "bc7e03ee3b6e77b4aa1d8af5c4c6cd584aeff9156677c5cf1726ca74ec08d731",
+   "label": "Multiple pregnancy",
+   "currentSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN80.4",
+    "OG11.1"
+   ]
+  },
+  {
+   "conceptId": "C-f3892c15-1ce1-452f-8e2e-b14e4c48dbae",
+   "previousIdentityDigest": "572e979c2ca77370ef7c415c79348c0483788dac229d9dde62e5aa82f3ae0c94",
+   "label": "Ageing",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 25.1",
+    "GM25.18",
+    "PY12.6"
+   ]
+  },
+  {
+   "conceptId": "C-f3e6413b-ee47-423c-95ce-9dc8606d6bd3",
+   "previousIdentityDigest": "1469d3256ced39831946a5b6dc551b24fa34296eab8abe6e4ebabba8fa2658e9",
+   "label": "Child and adolescent psychiatric disorders",
+   "currentSubjects": [
+    "psychiatry"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PE6.6",
+    "PS 10.1"
+   ]
+  },
+  {
+   "conceptId": "C-f42d7efc-54dd-4dee-b592-c0746d7af247",
+   "previousIdentityDigest": "d58502718941333959d8c6594cb899f2ddcf6ec9dacf089150a063b76e846a8b",
+   "label": "Snakebite",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.19",
+    "GM21.1",
+    "GM21.2",
+    "GM21.3",
+    "GM21.4",
+    "GM21.5",
+    "GM21.6",
+    "GM21.7",
+    "PH9.2"
+   ]
+  },
+  {
+   "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "previousIdentityDigest": "c1482c15199aaf59df516374afb91854d5546a036e02a8230b04f00a47366c21",
+   "label": "Hypothyroidism",
+   "currentSubjects": [
+    "pathology"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "PA31.3",
+    "PE30.1",
+    "PE30.2"
+   ]
+  },
+  {
+   "conceptId": "C-f4609e70-6e01-4ec3-b88b-a0c6b67e484d",
+   "previousIdentityDigest": "263211a1627f31f26b6ad85b5d1c54d4ab7094a6e5a889ef2f4d48061b19e9ed",
+   "label": "In vitro fertilization",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "forensic-medicine"
+   ],
+   "evidenceCodes": [
+    "FM8.12",
+    "PY9.10"
+   ]
+  },
+  {
+   "conceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+   "previousIdentityDigest": "c55434ef583d880252931b13e6d6db56281e797bf0977c8dd5f8e328b1533a16",
+   "label": "Abdominal examination",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "pediatrics",
+    "surgery"
+   ],
+   "evidenceCodes": [
+    "PE23.19",
+    "PE26.10",
+    "PY4.12",
+    "SU28.9"
+   ]
+  },
+  {
+   "conceptId": "C-f6228a56-6335-4d0d-93ac-e6f9c6b0e49d",
+   "previousIdentityDigest": "a506a8478893a30c4dd9a50668bcbaba3120edea0645bd73cf3ed55348cdd989",
+   "label": "Visceral leishmaniasis",
+   "currentSubjects": [
+    "microbiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM26.31",
+    "MI 3.11"
+   ]
+  },
+  {
+   "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "previousIdentityDigest": "75b822f5b416a14c1522a218337b8ae0c3da970976ead58ffc1a6235c923405d",
+   "label": "Acid-base disorders",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "BC14.2",
+    "BC9.3",
+    "GM 23.10",
+    "GM 23.11",
+    "GM 23.8",
+    "GM 23.9"
+   ]
+  },
+  {
+   "conceptId": "C-f939afc2-5d09-43ea-8b50-2489c159b284",
+   "previousIdentityDigest": "ba3ac4b1dc4085c5af810639d7d8ab0bfb57e03860255fc1f7ee8c93336f46ca",
+   "label": "Methanol poisoning",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "forensic-medicine",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "FM13.14",
+    "GM22.8",
+    "PH3.8"
+   ]
+  },
+  {
+   "conceptId": "C-f97c8419-1017-4459-a2c1-67eae7d11a48",
+   "previousIdentityDigest": "ebf846f8356ef6628ff71ea3ef977eef3a8b35a41dd8216bdbb9946fdb16c1a3",
+   "label": "Retinal vascular occlusion",
+   "currentSubjects": [
+    "ophthalmology"
+   ],
+   "addSubjects": [
+    "anatomy"
+   ],
+   "evidenceCodes": [
+    "AN41.2",
+    "OP9.3"
+   ]
+  },
+  {
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "previousIdentityDigest": "b9b4bc8254ef5056b4756bc94a83b1a284a1f38a8f4402aa9f8eab0bcf100f97",
+   "label": "Anaemia",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine",
+    "microbiology",
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "GM9.1",
+    "GM9.12",
+    "GM9.13",
+    "GM9.16",
+    "GM9.17",
+    "GM9.2",
+    "GM9.3",
+    "GM9.4",
+    "GM9.5",
+    "GM9.6",
+    "GM9.9",
+    "MI 3.9",
+    "PA13.2",
+    "PY2.5"
+   ]
+  },
+  {
+   "conceptId": "C-fa4ae732-e4f8-4e0b-892c-84c50fbd3fea",
+   "previousIdentityDigest": "b2f689f4d7291604b78d8785a062496717c3b1f3a5e70a419c6f36c8027d144a",
+   "label": "Herpes simplex infection",
+   "currentSubjects": [
+    "dermatology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "DR8.2",
+    "GM26.21"
+   ]
+  },
+  {
+   "conceptId": "C-fade20c5-b671-4cca-87f9-8d2425152d0c",
+   "previousIdentityDigest": "8079b4fcea9d35108a83310eccc8d7e499f79b92f26437561617c448c1288e4e",
+   "label": "Vaginal discharge",
+   "currentSubjects": [
+    "dermatology"
+   ],
+   "addSubjects": [
+    "obstetrics-gynaecology"
+   ],
+   "evidenceCodes": [
+    "DR10.10",
+    "OG22.1",
+    "OG22.2"
+   ]
+  },
+  {
+   "conceptId": "C-fddfc29b-c5d0-43ee-8e00-a10d056f1d60",
+   "previousIdentityDigest": "c58d748c9f4696c4bc3bf6a0d94996a4ce06003ff101d70cd742ac1975f8ea9a",
+   "label": "Stridor",
+   "currentSubjects": [
+    "ent"
+   ],
+   "addSubjects": [
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "EN 4.43",
+    "PE25.4"
+   ]
+  },
+  {
+   "conceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "previousIdentityDigest": "f52bd8a881829f619bbf97bda4c0a2f7997792240c27f882a11cfb9c543609dd",
+   "label": "Nutrients",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "community-medicine",
+    "pediatrics"
+   ],
+   "evidenceCodes": [
+    "BC8.2",
+    "CM5.1",
+    "PE9.1"
+   ]
+  },
+  {
+   "conceptId": "C-ff7469b8-0b81-40a1-b46b-2b2b07a2c433",
+   "previousIdentityDigest": "a0e279c5fe84eba01a509a12a0ac0b81d48eec6261ba851e9946c62be4eaa083",
+   "label": "Oncogenes and tumour suppressor genes",
+   "currentSubjects": [
+    "biochemistry"
+   ],
+   "addSubjects": [
+    "pathology"
+   ],
+   "evidenceCodes": [
+    "BC 13.1",
+    "PA6.2"
+   ]
+  },
+  {
+   "conceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
+   "previousIdentityDigest": "cf93c5631ed7a9c6ac8acc611d395684086eaf65b3832e64fe1c06c49d546b25",
+   "label": "Geriatric assessment",
+   "currentSubjects": [
+    "community-medicine"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "CM 12.5",
+    "GM 25.2",
+    "GM25.16"
+   ]
+  },
+  {
+   "conceptId": "C-ffb2c2c6-ad9c-4361-8b73-f4aed539d128",
+   "previousIdentityDigest": "19848284adb448b0ca5c6efb5866e4de0c071c74a209bb96aae9b24fa77378a1",
+   "label": "Antibacterial drugs",
+   "currentSubjects": [
+    "pharmacology"
+   ],
+   "addSubjects": [
+    "dermatology",
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "DR15.2",
+    "GM3.15",
+    "GM3.16",
+    "PH8.3"
+   ]
+  },
+  {
+   "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+   "previousIdentityDigest": "d1030a17709ec3cba74c91436e94feafc7629269ba08df7c964de34fef64d1a1",
+   "label": "Cardiac arrhythmias",
+   "currentSubjects": [
+    "physiology"
+   ],
+   "addSubjects": [
+    "medicine"
+   ],
+   "evidenceCodes": [
+    "GM 1.7",
+    "PY5.6"
+   ]
+  }
+ ]
+}

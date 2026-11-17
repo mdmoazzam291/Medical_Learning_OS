@@ -37,7 +37,8 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    // Chunked: ~1,500 IDs in one GET produced an oversized PostgREST URL.
    const rows=[];
    for(let i=0;i<missingIds.length;i+=150){
-    const privateResult=await admin.from('content_concept_acceptances').select('concept_id,accepted_document').in('concept_id',missingIds.slice(i,i+150));
+    // Current identity: latest subject revision, else the original acceptance.
+    const privateResult=await admin.from('content_concept_current_identities').select('concept_id,accepted_document').in('concept_id',missingIds.slice(i,i+150));
     if(privateResult.error||!Array.isArray(privateResult.data))throw new Error();
     rows.push(...privateResult.data);
    }

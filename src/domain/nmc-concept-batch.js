@@ -37,3 +37,28 @@ export function batchAcceptInput(b,batchSha256,{requestId,reviewNotes}){
  return {schemaVersion:1,requestId,batchId:b.batchId,batchSha256,reviewNotes,attestation:ATTESTATION,
   items:newConcepts(b).map(c=>({conceptKey:c.conceptKey,document:c.document}))};
 }
+// Subject-classification revisions of accepted private identities (kind 'subject-revision').
+// Only additions to classification.subjects; each item names the identity digest it revises.
+const SUBJECT_ID=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export function validateRevisionBatch(b){
+ if(!b||b.schemaVersion!==1||b.kind!=='subject-revision'||typeof b.batchId!=='string'||!/^[a-z0-9][a-z0-9:._-]{0,119}$/.test(b.batchId)||b.learnerActivation!==false||b.clinicalApproval!==false)throw new Error('batch_invalid');
+ if(!Array.isArray(b.revisions)||!b.revisions.length||b.revisions.length>1000)throw new Error('batch_invalid');
+ const ids=new Set();
+ for(const r of b.revisions){
+  if(typeof r.conceptId!=='string'||!/^C-(?:[0-9a-f]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/.test(r.conceptId)||ids.has(r.conceptId)||!/^[a-f0-9]{64}$/.test(r.previousIdentityDigest)||typeof r.label!=='string'||
+   !Array.isArray(r.currentSubjects)||!Array.isArray(r.addSubjects)||!r.addSubjects.length||r.addSubjects.some(s=>!SUBJECT_ID.test(s)||r.currentSubjects.includes(s))||new Set(r.addSubjects).size!==r.addSubjects.length||!Array.isArray(r.evidenceCodes))throw new Error('batch_invalid');
+  ids.add(r.conceptId);
+ }
+ return b;
+}
+export function revisionSummary(b,acceptance=null){
+ return {contractId:BATCH_CONTRACT,kind:'subject-revision',batchId:b.batchId,subjectId:null,counts:b.counts,learnerActivation:false,
+  acceptance:acceptance?{status:'batch_accepted',acceptedAt:acceptance.accepted_at||acceptance.acceptedAt,items:acceptance.item_count??acceptance.items}:null,
+  concepts:b.revisions.map(r=>({conceptKey:r.conceptId,existingConceptId:r.conceptId,label:r.label,aliases:[],
+   classification:{subjects:[...r.currentSubjects,...r.addSubjects],systems:[],domains:[]},conceptType:null,umbrella:false,
+   reviewFlags:['adds-subjects: '+r.addSubjects.join(', ')],linkedCodes:r.evidenceCodes,objectives:[]}))};
+}
+export function revisionAcceptInput(b,batchSha256,{requestId,reviewNotes}){
+ return {schemaVersion:1,requestId,batchId:b.batchId,batchSha256,reviewNotes,attestation:ATTESTATION,
+  items:b.revisions.map(r=>({conceptId:r.conceptId,previousIdentityDigest:r.previousIdentityDigest,addSubjects:r.addSubjects}))};
+}
