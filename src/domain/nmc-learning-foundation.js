@@ -1,7 +1,7 @@
 // Draft-only bridge: source references -> original learning objectives -> existing
 // canonical IDs. Uses the established objective model; no active exam mappings.
 import {validatePreparationCurriculum} from './preparation-pathways.js';
-import {validateReferenceCatalogue} from './nmc-reference-catalogue.js';
+import {validateReferenceCatalogue,validateReferenceOverlay} from './nmc-reference-catalogue.js';
 const bad=()=>{throw new TypeError('foundation_draft_invalid');};
 const exact=(o,keys)=>o&&typeof o==='object'&&!Array.isArray(o)&&Object.keys(o).sort().join('|')===keys.sort().join('|');
 const sha=s=>typeof s==='string'&&/^[a-f0-9]{64}$/.test(s);
@@ -15,10 +15,14 @@ export async function canonicalIdentityDigest(c){
 // Standard rows bind directly. Source exceptions bind only through their own basis: misprinted codes and
 // unheaded rows ('source-exception-resolved', resolved by the reference overlay) and official amendment
 // replacements ('official-replacement'; the replaced row may lack a row box). Deleted rows never bind.
-const basisFits=(ref,basis)=>ref.amendmentNotice?basis==='official-replacement'&&ref.searchCode!=='PS9.2':
- ref.identifierState!=='standard'||ref.topicId===null?basis==='source-exception-resolved':['literal-name-in-source-row','scoped-task-in-source-row'].includes(basis);
-export function validateFoundationDrafts(input,catalogue){
+// Each exception binding must rest on the overlay row for that exact reference.
+const basisFits=(ref,basis,resolution)=>ref.amendmentNotice?basis==='official-replacement'&&resolution?.kind==='official-replacement':
+ ref.identifierState!=='standard'||ref.topicId===null?basis==='source-exception-resolved'&&['search-alias','topic-group'].includes(resolution?.kind):
+ ['literal-name-in-source-row','scoped-task-in-source-row'].includes(basis);
+export function validateFoundationDrafts(input,catalogue,overlay){
  const c=validateReferenceCatalogue(catalogue);
+ if(!overlay)bad();
+ let resolutions;try{resolutions=new Map(validateReferenceOverlay(overlay,c).rows.map(r=>[r.referenceId,r]));}catch{bad();}
  if(!exact(input,['schemaVersion','draftVersion','authoredCatalogVersion','sourceEdition','sourceSha256','clinicalApproval','sourceAlignmentApproved','learnerActivation','objectives','sourceBindings'])||
  input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2','mbbs-foundation:original-objectives@3','mbbs-foundation:original-objectives@4','mbbs-foundation:original-objectives@5','mbbs-foundation:original-objectives@6','mbbs-foundation:original-objectives@7','mbbs-foundation:original-objectives@8','mbbs-foundation:original-objectives@9','mbbs-foundation:original-objectives@10','mbbs-foundation:original-objectives@11','mbbs-foundation:original-objectives@12','mbbs-foundation:original-objectives@13','mbbs-foundation:original-objectives@14','mbbs-foundation:original-objectives@15','mbbs-foundation:original-objectives@16','mbbs-foundation:original-objectives@17','mbbs-foundation:original-objectives@18','mbbs-foundation:original-objectives@19','mbbs-foundation:original-objectives@20','mbbs-foundation:original-objectives@21','mbbs-foundation:original-objectives@22','mbbs-foundation:original-objectives@23','mbbs-foundation:original-objectives@24'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
  input.sourceEdition!==c.edition||input.sourceSha256!==c.sourceSha256||input.clinicalApproval!==false||input.sourceAlignmentApproved!==false||input.learnerActivation!==false||
@@ -34,7 +38,7 @@ export function validateFoundationDrafts(input,catalogue){
  for(const link of input.sourceBindings){
   const ref=refs.get(link.referenceId),key=link.referenceId+'|'+link.objectiveVersionId;
   if(!exact(link,['referenceId','objectiveVersionId','status','basis','sourcePage','rowBBox','sourceBodySha256','namedConcept'])||
-   !ref||!objectives.has(link.objectiveVersionId)||seen.has(key)||!basisFits(ref,link.basis)||
+   !ref||!objectives.has(link.objectiveVersionId)||seen.has(key)||!basisFits(ref,link.basis,resolutions.get(link.referenceId))||
    link.status!=='proposed'||link.sourcePage!==ref.pdfPage||!sha(link.sourceBodySha256)||!text(link.namedConcept,2,240)||
    !(link.basis==='official-replacement'&&link.rowBBox===null||Array.isArray(link.rowBBox)&&link.rowBBox.length===4&&link.rowBBox.every(x=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=10000)&&
    link.rowBBox[0]<link.rowBBox[2]&&link.rowBBox[1]<link.rowBBox[3]))bad();
@@ -49,8 +53,8 @@ export function parseFoundationFilters(input={}){
  (input.subject!==undefined&&typeof input.subject!=='string')||(input.search!==undefined&&!text(input.search,0,200)))bad();
  return {subject:input.subject||'',search:input.search||'',offset:Number(offset)};
 }
-export async function foundationDraftPage(input,catalogue,catalog,filters={}){
- const p=validateFoundationDrafts(input,catalogue),f=parseFoundationFilters(filters);
+export async function foundationDraftPage(input,catalogue,catalog,filters={},overlay){
+ const p=validateFoundationDrafts(input,catalogue,overlay),f=parseFoundationFilters(filters);
  if(!catalog||!Number.isSafeInteger(catalog.version)||catalog.version<0||!Array.isArray(catalog.concepts)||catalog.concepts.length>5000)bad();
  const known=new Map();
  for(const c of catalog.concepts){if(!c||known.has(c.conceptId))bad();known.set(c.conceptId,c);}

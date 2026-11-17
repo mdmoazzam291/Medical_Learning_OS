@@ -48,6 +48,6 @@ for(const o of batch.objectives){
  have.add(o.objectiveVersionId);added++;
 }
 pack.draftVersion=draftVersion;
-validateFoundationDrafts(pack,catalogue);
+validateFoundationDrafts(pack,catalogue,read('data/nmc-reference-overlay.json'));
 writeFileSync(PACK,JSON.stringify(pack,null,1)+'\n');
 console.log(JSON.stringify({added,skipped,objectives:pack.objectives.length,bindings:pack.sourceBindings.length}));

@@ -11,7 +11,7 @@ export async function readFoundationDrafts({admin,actor,method,params}){
  let data,stage='load';
  const failStage=()=>{console.error(JSON.stringify({event:'foundation_drafts_failed',stage}));fail(503,'foundation_drafts_unavailable');};
  try{data=await loadFoundationData();}catch{failStage();}
- const {supplement,relationships,unified,names,pack,catalogue}=data;
+ const {supplement,relationships,unified,names,pack,catalogue,overlay}=data;
  const codeByReference=new Map(catalogue.references.map(row=>[row.referenceId,row.searchCode]));
  let filters;
  try{
@@ -51,7 +51,7 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    }
   }
   stage='page';
-  const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
+  const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters,overlay);
   const namesOnlyRelationships = relationships.relationships.map(({narrower, broader}) => ({
    narrower: relationshipEndpoint(codeByReference, narrower),
    broader: relationshipEndpoint(codeByReference, broader),

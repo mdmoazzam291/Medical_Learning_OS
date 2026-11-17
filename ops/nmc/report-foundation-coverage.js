@@ -2,9 +2,10 @@ import {readFileSync, readdirSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import catalogue from '../../data/nmc-reference-catalogue.json' with {type: 'json'};
 import pack from '../../data/nmc-learning-foundation-drafts.json' with {type: 'json'};
+import overlay from '../../data/nmc-reference-overlay.json' with {type: 'json'};
 import {validateFoundationDrafts} from '../../src/domain/nmc-learning-foundation.js';
 
-const drafts = validateFoundationDrafts(pack, catalogue);
+const drafts = validateFoundationDrafts(pack, catalogue, overlay);
 const proposedReferences = new Set(drafts.sourceBindings.map(binding => binding.referenceId));
 const references = new Map(catalogue.references.map(row => [row.referenceId, row]));
 const draftedReferences = new Set();
