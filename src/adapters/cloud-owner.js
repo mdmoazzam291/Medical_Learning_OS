@@ -56,6 +56,8 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     conceptBatch() { return request('/batch', {fn: 'nmc-admin-preview'}); },
     acceptConceptBatch(input) { return request('/batch-accept', {method: 'POST', body: input, fn: 'nmc-admin-preview'}); },
     adminLearnerPreview(filters = {}) { return request('?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null)), {fn: 'nmc-admin-preview'}); },
+    editConceptIdentity(input) { return request('/concept-identity-edits', {method: 'POST', body: input}); },
+    editObjectiveWording(input) { return request('/foundation-objective-edits', {method: 'POST', body: input}); },
     foundationObjectiveDrafts(filters = {}) { return request('/foundation-objective-drafts?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },

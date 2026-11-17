@@ -50,6 +50,8 @@ jobs:
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-batch-db-check.js
       - name: Verify concept subject revisions
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-subject-revision-db-check.js
+      - name: Verify concept identity edits
+        run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/concept-identity-edits-db-check.js
       - name: Verify immutable private syllabus checklist proposals
         run: PGLITE_MODULE_URL="file://$RUNNER_TEMP/mlos-pg/node_modules/@electric-sql/pglite/dist/index.js" node scripts/syllabus-baseline-db-check.js
       - name: Verify protected medical relationship registry against isolated PostgreSQL

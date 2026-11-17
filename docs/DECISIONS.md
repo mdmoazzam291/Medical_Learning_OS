@@ -1694,3 +1694,12 @@ A canonical concept's `classification.subjects` lists only subjects whose own so
 
 Foundation objectives store depth as the level printed in the NMC row (`knows`, `knows-how`, `shows-how`, `performs`) rather than translating it into another vocabulary. The printed level is the sourced fact; any display or exam-specific label is a mapping applied at read time. Earlier registry objectives that use other labels (for example `applied`) stay as they are until revised through a versioned objective revision.
 
+
+## ADR-137 — NMC foundation follow-ups: prerequisites, automated review state, owner edits (17 November 2026)
+
+Owner instruction "Do remaining nmc gaps" (2026-11-17 22:59 IST), with faculty review skipped (19:29 IST).
+- **Prerequisites (registry @26):** derived only within a canonical concept. Each objective depends on that concept's objectives at the nearest lower level of (task tier: know → recognise → act, then curriculum phase: preclinical → paraclinical → clinical). Acyclic by construction. Cross-concept prerequisites need medical judgement and are not authored; topic headings were rejected as a basis because only 2 of 391 cross phases.
+- **Review state:** `reviewState` is `auto-checked` or `needs-attention` from deterministic wording checks. No human-review state exists in the registry; the validator rejects any other value.
+- **Owner edits:** concept label/aliases and objective wording are edited through append-only revisions guarded by the digest the editor saw (`concept_identity_edit_v1`, `foundation_objective_revision_v1`). The registry wording is revision 0. Learner-visible identities cannot be edited this way. Edits are recorded as owner edits, never as faculty or clinical review. After an identity edit, linked objectives show "changed" until registry digests are re-pinned.
+- **Name uniqueness:** a derived, trigger-maintained index of normalised current names enforces that no name belongs to two identities and replaces the per-item nested scan in acceptance.
+- **GM28.18:** the unaccepted draft "COPD exacerbation management" (C-f2c27acd) is a narrower acute-management proposal, not a duplicate of Obstructive airway disease (C-e8c03208). It stays an unaccepted draft outside the foundation; GM28.18 binds only to C-e8c03208. Historical evidence files are unchanged.

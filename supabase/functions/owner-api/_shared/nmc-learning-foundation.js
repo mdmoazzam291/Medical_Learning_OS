@@ -38,7 +38,7 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    const rows=[];
    for(let i=0;i<missingIds.length;i+=150){
     // Current identity: latest subject revision, else the original acceptance.
-    const privateResult=await admin.from('content_concept_current_identities').select('concept_id,accepted_document').in('concept_id',missingIds.slice(i,i+150));
+    const privateResult=await admin.from('content_concept_current_identities').select('concept_id,accepted_document,identity_digest').in('concept_id',missingIds.slice(i,i+150));
     if(privateResult.error||!Array.isArray(privateResult.data))throw new Error();
     rows.push(...privateResult.data);
    }
@@ -47,11 +47,21 @@ export async function readFoundationDrafts({admin,actor,method,params}){
     const identity=row.accepted_document;
     if(!requested.has(row.concept_id)||identity?.conceptId!==row.concept_id)throw new Error();
     requested.delete(row.concept_id);
-    concepts.push({conceptId:row.concept_id,label:identity.label,aliases:identity.aliases,subjectTags:identity.classification?.subjects,identityKind:'accepted-private'});
+    concepts.push({conceptId:row.concept_id,label:identity.label,aliases:identity.aliases,subjectTags:identity.classification?.subjects,identityKind:'accepted-private',identityDigest:row.identity_digest});
    }
   }
   stage='page';
   const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters,overlay);
+  // Owner wording edits overlay the registry wording (registry = revision 0). Not faculty or clinical review.
+  stage='wording-revisions';
+  const edits=await admin.from('foundation_objective_current_wordings').select('objective_version_id,revision,wording,edited_at').range(0,9999);
+  if(edits.error||!Array.isArray(edits.data))throw new Error();
+  const edited=new Map(edits.data.map(r=>[r.objective_version_id,r]));
+  page.objectives=page.objectives.map(o=>{const r=edited.get(o.objective.objectiveVersionId);
+   return r?{...o,registryWording:o.wording,wording:r.wording,wordingRevision:r.revision,wordingEditedAt:r.edited_at}:{...o,wordingRevision:0};});
+  const used=new Set(pack.objectives.map(row=>row.objective.conceptId));
+  page.editableIdentities=concepts.filter(c=>c.identityKind==='accepted-private'&&used.has(c.conceptId))
+   .map(c=>({conceptId:c.conceptId,label:c.label,aliases:c.aliases,identityDigest:c.identityDigest}));
   const namesOnlyRelationships = relationships.relationships.map(({narrower, broader}) => ({
    narrower: relationshipEndpoint(codeByReference, narrower),
    broader: relationshipEndpoint(codeByReference, broader),

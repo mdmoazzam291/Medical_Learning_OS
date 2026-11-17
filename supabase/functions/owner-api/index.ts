@@ -1,4 +1,5 @@
 import { readFoundationDrafts } from './_shared/nmc-learning-foundation.js';
+import { editConceptIdentity, editObjectiveWording } from './_shared/foundation-edits.js';
 import { acceptConceptDraft } from './_shared/concept-acceptance.js';
 import { conceptDraftRequest } from './_shared/concept-drafts.js';
 import { syllabusBaselineDraftRequest } from './_shared/syllabus-baseline-drafts.js';
@@ -253,6 +254,17 @@ Deno.serve(async (req: Request) => {
       } catch (error) {
         const problem=error as {status?: number; code?: string};
         fail(problem.status || 503, problem.code || "foundation_drafts_unavailable");
+      }
+    }
+
+    if (path === "/concept-identity-edits" || path === "/foundation-objective-edits") {
+      try {
+        const handler = path === "/concept-identity-edits" ? editConceptIdentity : editObjectiveWording;
+        return response(req, 200, await handler({ admin, actor: authData.user.id, method: req.method, params: url.searchParams,
+          input: req.method === "POST" ? await jsonBody(req, 16384) : undefined }));
+      } catch (error) {
+        const problem = error as { status?: number; code?: string };
+        fail(problem.status || 503, problem.code || "foundation_edit_unavailable");
       }
     }
 
