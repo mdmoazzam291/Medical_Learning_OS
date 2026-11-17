@@ -150,3 +150,15 @@ test('non-subject curriculum parts are recorded separately and are not in the fo
  assert.deepEqual(d.parts.map(p=>p.partId),['aetcom','foundation-course','early-clinical-exposure','pandemic-modules','electives-fap-logbook']);
  assert.equal(d.sourceEdition,pack.sourceEdition);
 });
+test('cross-concept prerequisites: known concepts, no self links or duplicates, acyclic, AI-draft only',async()=>{
+ const {validateConceptPrerequisites,prerequisiteSummary}=await import('../src/domain/nmc-concept-prerequisites.js');
+ const doc=JSON.parse(readFileSync(new URL('../data/nmc-concept-prerequisites.json',import.meta.url)));
+ const ids=[...new Set(pack.objectives.map(r=>r.objective.conceptId))];
+ validateConceptPrerequisites(doc,ids);
+ assert.ok(doc.subjectsAuthored.includes('medicine'));assert.ok(prerequisiteSummary(doc).links>300);
+ const l=doc.links[0];
+ for(const mutate of [d=>{d.links.push({...l});},d=>{d.links[0].conceptId=d.links[0].prerequisiteConceptId;},d=>{d.links[0].strength='required';},
+  d=>{d.status='faculty-reviewed';},d=>{d.links[0].conceptId='C-missing';},
+  d=>{d.links.push({...l,prerequisiteConceptId:l.conceptId,conceptId:l.prerequisiteConceptId});}])
+  {const d=structuredClone(doc);mutate(d);assert.throws(()=>validateConceptPrerequisites(d,ids));}
+});
