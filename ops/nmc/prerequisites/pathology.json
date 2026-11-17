@@ -1,0 +1,632 @@
+[
+ {
+  "prerequisite": "Cell",
+  "concept": "Cell injury",
+  "strength": "essential",
+  "reason": "Cell injury disrupts normal cell function"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Necrosis",
+  "strength": "essential",
+  "reason": "Necrosis is irreversible cell injury"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Apoptosis",
+  "strength": "essential",
+  "reason": "Apoptosis is a form of cell death"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Intracellular accumulations",
+  "strength": "essential",
+  "reason": "Accumulations follow sublethal injury"
+ },
+ {
+  "prerequisite": "Necrosis",
+  "concept": "Pathological calcification",
+  "strength": "essential",
+  "reason": "Dystrophic calcification follows necrosis"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Cellular adaptations",
+  "strength": "helpful",
+  "reason": "Adaptations precede injury"
+ },
+ {
+  "prerequisite": "Cellular adaptations",
+  "concept": "Dysplasia",
+  "strength": "essential",
+  "reason": "Dysplasia follows disordered adaptation"
+ },
+ {
+  "prerequisite": "Cell cycle",
+  "concept": "Cellular ageing",
+  "strength": "helpful",
+  "reason": "Ageing limits cell cycling"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Inflammation",
+  "strength": "essential",
+  "reason": "Inflammation responds to injury"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Inflammatory mediators",
+  "strength": "essential",
+  "reason": "Mediators drive inflammation"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Chronic inflammation",
+  "strength": "essential",
+  "reason": "Chronic inflammation follows persistent injury"
+ },
+ {
+  "prerequisite": "Chronic inflammation",
+  "concept": "Granulomatous inflammation",
+  "strength": "essential",
+  "reason": "Granulomas are chronic inflammation"
+ },
+ {
+  "prerequisite": "Haemodynamics",
+  "concept": "Oedema",
+  "strength": "essential",
+  "reason": "Oedema follows Starling forces"
+ },
+ {
+  "prerequisite": "Haemodynamics",
+  "concept": "Congestion",
+  "strength": "helpful",
+  "reason": "Congestion is impaired venous drainage"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Thrombosis",
+  "strength": "essential",
+  "reason": "Thrombosis is haemostasis in the wrong place"
+ },
+ {
+  "prerequisite": "Thrombosis",
+  "concept": "Embolism",
+  "strength": "essential",
+  "reason": "Most emboli are thrombi"
+ },
+ {
+  "prerequisite": "Embolism",
+  "concept": "Ischaemia",
+  "strength": "essential",
+  "reason": "Emboli cause ischaemia"
+ },
+ {
+  "prerequisite": "Ischaemia",
+  "concept": "Infarction",
+  "strength": "essential",
+  "reason": "Infarction is ischaemic necrosis"
+ },
+ {
+  "prerequisite": "Necrosis",
+  "concept": "Infarction",
+  "strength": "essential",
+  "reason": "Infarcts are necrosis"
+ },
+ {
+  "prerequisite": "Cell cycle",
+  "concept": "Neoplasia",
+  "strength": "essential",
+  "reason": "Neoplasia is uncontrolled cell cycling"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Metastasis",
+  "strength": "essential",
+  "reason": "Metastasis is spread of neoplasms"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Paraneoplastic syndromes",
+  "strength": "essential",
+  "reason": "Paraneoplastic effects come from tumours"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Laboratory diagnosis of cancer",
+  "strength": "essential",
+  "reason": "Diagnosis targets neoplasms"
+ },
+ {
+  "prerequisite": "Immune system",
+  "concept": "Tumour immunity",
+  "strength": "essential",
+  "reason": "Tumour immunity uses the immune system"
+ },
+ {
+  "prerequisite": "Laboratory diagnosis of cancer",
+  "concept": "Diagnostic cytology",
+  "strength": "helpful",
+  "reason": "Cytology is a cancer diagnostic method"
+ },
+ {
+  "prerequisite": "Immune system",
+  "concept": "Hypersensitivity reactions",
+  "strength": "essential",
+  "reason": "Hypersensitivity is immune overreaction"
+ },
+ {
+  "prerequisite": "Immune system",
+  "concept": "Human leucocyte antigens",
+  "strength": "essential",
+  "reason": "HLA presents antigens"
+ },
+ {
+  "prerequisite": "Proteins",
+  "concept": "Amyloidosis",
+  "strength": "essential",
+  "reason": "Amyloid is misfolded protein"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "COVID-19",
+  "strength": "helpful",
+  "reason": "COVID-19 spreads by respiratory transmission"
+ },
+ {
+  "prerequisite": "Chromosomes",
+  "concept": "Chromosomal disorders",
+  "strength": "essential",
+  "reason": "Chromosomal disorders affect chromosomes"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Childhood tumours",
+  "strength": "essential",
+  "reason": "Childhood tumours are neoplasms"
+ },
+ {
+  "prerequisite": "Enzymes",
+  "concept": "Lysosomal storage disorders",
+  "strength": "essential",
+  "reason": "Lysosomal disorders are enzyme deficiencies"
+ },
+ {
+  "prerequisite": "Cell injury",
+  "concept": "Environmental pathology",
+  "strength": "helpful",
+  "reason": "Environmental agents cause cell injury"
+ },
+ {
+  "prerequisite": "Stem cells",
+  "concept": "Haematopoiesis",
+  "strength": "essential",
+  "reason": "Haematopoiesis comes from stem cells"
+ },
+ {
+  "prerequisite": "Blood composition",
+  "concept": "Blood specimen collection",
+  "strength": "helpful",
+  "reason": "Specimens sample blood components"
+ },
+ {
+  "prerequisite": "Iron metabolism",
+  "concept": "Microcytic anaemia",
+  "strength": "essential",
+  "reason": "Microcytosis follows iron deficiency"
+ },
+ {
+  "prerequisite": "Vitamin B12 deficiency",
+  "concept": "Megaloblastic anaemia",
+  "strength": "essential",
+  "reason": "B12 deficiency causes megaloblastic anaemia"
+ },
+ {
+  "prerequisite": "Haemolytic anaemia",
+  "concept": "Sickle cell disease",
+  "strength": "helpful",
+  "reason": "Sickle cell disease is haemolytic"
+ },
+ {
+  "prerequisite": "Haemoglobinopathies",
+  "concept": "Sickle cell disease",
+  "strength": "essential",
+  "reason": "Sickle cell is a haemoglobinopathy"
+ },
+ {
+  "prerequisite": "Haemoglobinopathies",
+  "concept": "Thalassaemia",
+  "strength": "essential",
+  "reason": "Thalassaemia is a haemoglobinopathy"
+ },
+ {
+  "prerequisite": "Haematopoiesis",
+  "concept": "Aplastic anaemia",
+  "strength": "essential",
+  "reason": "Aplastic anaemia is marrow failure"
+ },
+ {
+  "prerequisite": "Leucocytes",
+  "concept": "Leucocytosis",
+  "strength": "essential",
+  "reason": "Leucocytosis is raised leucocytes"
+ },
+ {
+  "prerequisite": "Leucocytes",
+  "concept": "Leucopenia",
+  "strength": "essential",
+  "reason": "Leucopenia is low leucocytes"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Leukaemias",
+  "strength": "essential",
+  "reason": "Leukaemias are neoplasms"
+ },
+ {
+  "prerequisite": "Haematopoiesis",
+  "concept": "Leukaemias",
+  "strength": "essential",
+  "reason": "Leukaemias arise in haematopoiesis"
+ },
+ {
+  "prerequisite": "Lymphadenopathy",
+  "concept": "Tuberculous lymphadenitis",
+  "strength": "essential",
+  "reason": "TB lymphadenitis is a cause of lymphadenopathy"
+ },
+ {
+  "prerequisite": "Granulomatous inflammation",
+  "concept": "Tuberculous lymphadenitis",
+  "strength": "essential",
+  "reason": "TB nodes show granulomas"
+ },
+ {
+  "prerequisite": "Lymphadenopathy",
+  "concept": "Hodgkin lymphoma",
+  "strength": "essential",
+  "reason": "Hodgkin lymphoma presents with nodes"
+ },
+ {
+  "prerequisite": "Lymphadenopathy",
+  "concept": "Non-Hodgkin lymphoma",
+  "strength": "essential",
+  "reason": "NHL presents with nodes"
+ },
+ {
+  "prerequisite": "Spleen",
+  "concept": "Splenomegaly",
+  "strength": "helpful",
+  "reason": "Splenomegaly enlarges the spleen"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Bleeding disorders",
+  "strength": "essential",
+  "reason": "Bleeding disorders disrupt haemostasis"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Disseminated intravascular coagulation",
+  "strength": "essential",
+  "reason": "DIC is consumption of haemostasis"
+ },
+ {
+  "prerequisite": "Immunoglobulins",
+  "concept": "Multiple myeloma",
+  "strength": "essential",
+  "reason": "Myeloma is plasma cell immunoglobulin excess"
+ },
+ {
+  "prerequisite": "Blood transfusion",
+  "concept": "Blood products",
+  "strength": "helpful",
+  "reason": "Products are prepared for transfusion"
+ },
+ {
+  "prerequisite": "Blood transfusion",
+  "concept": "Transfusion-transmitted infections",
+  "strength": "essential",
+  "reason": "TTIs follow transfusion"
+ },
+ {
+  "prerequisite": "Blood transfusion",
+  "concept": "Transfusion reactions",
+  "strength": "essential",
+  "reason": "Reactions follow transfusion"
+ },
+ {
+  "prerequisite": "Blood groups",
+  "concept": "Compatibility testing",
+  "strength": "essential",
+  "reason": "Compatibility tests match blood groups"
+ },
+ {
+  "prerequisite": "Oedema",
+  "concept": "Body fluid analysis",
+  "strength": "helpful",
+  "reason": "Fluid analysis separates transudate and exudate"
+ },
+ {
+  "prerequisite": "Male reproductive system",
+  "concept": "Semen analysis",
+  "strength": "essential",
+  "reason": "Semen analysis reflects male reproduction"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Oral cancer",
+  "strength": "helpful",
+  "reason": "Oral cancer is a neoplasm"
+ },
+ {
+  "prerequisite": "Oesophagus",
+  "concept": "Oesophageal cancer",
+  "strength": "essential",
+  "reason": "Oesophageal cancer by site and type"
+ },
+ {
+  "prerequisite": "Stomach",
+  "concept": "Gastric carcinoma",
+  "strength": "essential",
+  "reason": "Gastric carcinoma arises in the stomach"
+ },
+ {
+  "prerequisite": "Granulomatous inflammation",
+  "concept": "Intestinal tuberculosis",
+  "strength": "essential",
+  "reason": "Intestinal TB is granulomatous"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Colorectal carcinoma",
+  "strength": "helpful",
+  "reason": "Colorectal carcinoma is a neoplasm"
+ },
+ {
+  "prerequisite": "Cirrhosis",
+  "concept": "Hepatocellular carcinoma",
+  "strength": "essential",
+  "reason": "Most HCC arises in cirrhosis"
+ },
+ {
+  "prerequisite": "Gallbladder",
+  "concept": "Cholecystitis",
+  "strength": "essential",
+  "reason": "Cholecystitis is gallbladder inflammation"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Lung abscess",
+  "strength": "essential",
+  "reason": "Lung abscess is suppurative inflammation"
+ },
+ {
+  "prerequisite": "Chronic inflammation",
+  "concept": "Bronchiectasis",
+  "strength": "essential",
+  "reason": "Bronchiectasis follows chronic infection"
+ },
+ {
+  "prerequisite": "Chronic inflammation",
+  "concept": "Pneumoconioses",
+  "strength": "essential",
+  "reason": "Pneumoconioses are dust-induced fibrosis"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Mesothelioma",
+  "strength": "helpful",
+  "reason": "Mesothelioma is a pleural neoplasm"
+ },
+ {
+  "prerequisite": "Atherosclerosis",
+  "concept": "Aneurysms",
+  "strength": "essential",
+  "reason": "Most aneurysms are atherosclerotic"
+ },
+ {
+  "prerequisite": "Hypersensitivity reactions",
+  "concept": "Rheumatic fever",
+  "strength": "essential",
+  "reason": "Rheumatic fever is cross-reactive immunity"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Pericardial disease",
+  "strength": "helpful",
+  "reason": "Pericarditis is inflammation"
+ },
+ {
+  "prerequisite": "Cardiac muscle properties",
+  "concept": "Cardiomyopathies",
+  "strength": "essential",
+  "reason": "Cardiomyopathies disturb cardiac muscle"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Cardiovascular tumours",
+  "strength": "helpful",
+  "reason": "Cardiac tumours are neoplasms"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Nephrotic syndrome",
+  "strength": "essential",
+  "reason": "Nephrotic syndrome is glomerular protein leak"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Nephritic syndrome",
+  "strength": "essential",
+  "reason": "Nephritic syndrome is glomerular inflammation"
+ },
+ {
+  "prerequisite": "Glomerulonephritis",
+  "concept": "IgA nephropathy",
+  "strength": "essential",
+  "reason": "IgA nephropathy is a glomerulonephritis"
+ },
+ {
+  "prerequisite": "Diabetes mellitus",
+  "concept": "Diabetic nephropathy",
+  "strength": "essential",
+  "reason": "Diabetic nephropathy is a diabetic complication"
+ },
+ {
+  "prerequisite": "Systemic lupus erythematosus",
+  "concept": "Lupus nephritis",
+  "strength": "essential",
+  "reason": "Lupus nephritis is renal SLE"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Tubulointerstitial nephritis",
+  "strength": "essential",
+  "reason": "Interstitial disease affects tubules"
+ },
+ {
+  "prerequisite": "Ischaemia",
+  "concept": "Acute tubular necrosis",
+  "strength": "essential",
+  "reason": "ATN follows ischaemic tubular injury"
+ },
+ {
+  "prerequisite": "Urinary tract infection",
+  "concept": "Pyelonephritis",
+  "strength": "essential",
+  "reason": "Pyelonephritis is upper urinary infection"
+ },
+ {
+  "prerequisite": "Pyelonephritis",
+  "concept": "Reflux nephropathy",
+  "strength": "helpful",
+  "reason": "Reflux causes recurrent pyelonephritis"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Renal vascular disorders",
+  "strength": "helpful",
+  "reason": "Vascular disorders affect renal supply"
+ },
+ {
+  "prerequisite": "Development of the urinary system",
+  "concept": "Cystic kidney disease",
+  "strength": "helpful",
+  "reason": "Cystic disease follows renal development"
+ },
+ {
+  "prerequisite": "Thrombosis",
+  "concept": "Thrombotic microangiopathies",
+  "strength": "essential",
+  "reason": "TMAs are microvascular thrombosis"
+ },
+ {
+  "prerequisite": "Leiomyoma",
+  "concept": "Leiomyosarcoma",
+  "strength": "helpful",
+  "reason": "Leiomyosarcoma is the malignant counterpart"
+ },
+ {
+  "prerequisite": "Reproductive tract infections",
+  "concept": "Cervicitis",
+  "strength": "essential",
+  "reason": "Cervicitis is a reproductive tract infection"
+ },
+ {
+  "prerequisite": "Endometriosis",
+  "concept": "Adenomyosis",
+  "strength": "helpful",
+  "reason": "Adenomyosis is endometrium in myometrium"
+ },
+ {
+  "prerequisite": "Breast",
+  "concept": "Phyllodes tumour",
+  "strength": "essential",
+  "reason": "Phyllodes arise in breast stroma"
+ },
+ {
+  "prerequisite": "Female sex hormones",
+  "concept": "Gynaecomastia",
+  "strength": "essential",
+  "reason": "Gynaecomastia is oestrogen-androgen imbalance"
+ },
+ {
+  "prerequisite": "Thyroid gland",
+  "concept": "Hypothyroidism",
+  "strength": "essential",
+  "reason": "Hypothyroidism is thyroid hormone deficiency"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Pancreatic carcinoma",
+  "strength": "helpful",
+  "reason": "Pancreatic carcinoma is a neoplasm"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Adrenal insufficiency",
+  "strength": "essential",
+  "reason": "Adrenal insufficiency is cortical failure"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Cushing syndrome",
+  "strength": "essential",
+  "reason": "Cushing syndrome is cortisol excess"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Soft tissue tumours",
+  "strength": "helpful",
+  "reason": "Soft tissue tumours are neoplasms"
+ },
+ {
+  "prerequisite": "Autoimmunity",
+  "concept": "Rheumatoid arthritis",
+  "strength": "essential",
+  "reason": "RA is autoimmune"
+ },
+ {
+  "prerequisite": "Cartilage",
+  "concept": "Osteoarthritis",
+  "strength": "essential",
+  "reason": "Osteoarthritis is cartilage degeneration"
+ },
+ {
+  "prerequisite": "Skin histology",
+  "concept": "Cutaneous squamous cell carcinoma",
+  "strength": "essential",
+  "reason": "SCC arises from keratinocytes"
+ },
+ {
+  "prerequisite": "Skin histology",
+  "concept": "Basal cell carcinoma",
+  "strength": "essential",
+  "reason": "BCC arises from basal cells"
+ },
+ {
+  "prerequisite": "Melanocytic naevi",
+  "concept": "Melanoma",
+  "strength": "helpful",
+  "reason": "Some melanomas arise in naevi"
+ },
+ {
+  "prerequisite": "Skin histology",
+  "concept": "Melanocytic naevi",
+  "strength": "helpful",
+  "reason": "Naevi are melanocyte collections"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Central nervous system tumours",
+  "strength": "helpful",
+  "reason": "CNS tumours are neoplasms"
+ },
+ {
+  "prerequisite": "Oncogenes and tumour suppressor genes",
+  "concept": "Retinoblastoma",
+  "strength": "essential",
+  "reason": "Retinoblastoma follows RB gene loss"
+ }
+]

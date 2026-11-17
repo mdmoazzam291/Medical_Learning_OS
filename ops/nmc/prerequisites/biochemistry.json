@@ -1,0 +1,428 @@
+[
+ {
+  "prerequisite": "Proteins",
+  "concept": "Enzymes",
+  "strength": "essential",
+  "reason": "Enzymes are proteins"
+ },
+ {
+  "prerequisite": "Enzymes",
+  "concept": "Enzyme kinetics",
+  "strength": "essential",
+  "reason": "Kinetics describes enzyme activity"
+ },
+ {
+  "prerequisite": "Enzyme kinetics",
+  "concept": "Enzyme inhibition",
+  "strength": "essential",
+  "reason": "Inhibition alters kinetics"
+ },
+ {
+  "prerequisite": "Enzymes",
+  "concept": "Diagnostic enzymes",
+  "strength": "essential",
+  "reason": "Diagnostic enzymes leak from injured cells"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Glycolysis",
+  "strength": "essential",
+  "reason": "Glycolysis breaks down carbohydrates"
+ },
+ {
+  "prerequisite": "Glycolysis",
+  "concept": "Gluconeogenesis",
+  "strength": "essential",
+  "reason": "Gluconeogenesis reverses glycolysis"
+ },
+ {
+  "prerequisite": "Glycolysis",
+  "concept": "Tricarboxylic acid cycle",
+  "strength": "essential",
+  "reason": "Pyruvate feeds the TCA cycle"
+ },
+ {
+  "prerequisite": "Tricarboxylic acid cycle",
+  "concept": "Oxidative phosphorylation",
+  "strength": "essential",
+  "reason": "The TCA cycle feeds oxidative phosphorylation"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Glycogen metabolism",
+  "strength": "essential",
+  "reason": "Glycogen is stored carbohydrate"
+ },
+ {
+  "prerequisite": "Glycolysis",
+  "concept": "Pentose phosphate pathway",
+  "strength": "helpful",
+  "reason": "The pentose pathway branches from glycolysis"
+ },
+ {
+  "prerequisite": "Glycolysis",
+  "concept": "Fructose metabolism",
+  "strength": "essential",
+  "reason": "Fructose enters glycolysis"
+ },
+ {
+  "prerequisite": "Glycolysis",
+  "concept": "Galactose metabolism",
+  "strength": "essential",
+  "reason": "Galactose enters glycolysis"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Polyol pathway",
+  "strength": "helpful",
+  "reason": "The polyol pathway uses glucose"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Uronic acid pathway",
+  "strength": "helpful",
+  "reason": "The uronic acid pathway uses glucose"
+ },
+ {
+  "prerequisite": "Glycogen metabolism",
+  "concept": "Fed-fast cycle",
+  "strength": "essential",
+  "reason": "The fed-fast cycle shifts glycogen use"
+ },
+ {
+  "prerequisite": "Gluconeogenesis",
+  "concept": "Fed-fast cycle",
+  "strength": "essential",
+  "reason": "Fasting relies on gluconeogenesis"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Glycaemic tests",
+  "strength": "essential",
+  "reason": "Glycaemic tests measure glucose"
+ },
+ {
+  "prerequisite": "Glycaemic tests",
+  "concept": "Oral glucose tolerance test",
+  "strength": "essential",
+  "reason": "OGTT is a glycaemic test"
+ },
+ {
+  "prerequisite": "Haemoglobin",
+  "concept": "Glycated haemoglobin",
+  "strength": "essential",
+  "reason": "HbA1c is glycated haemoglobin"
+ },
+ {
+  "prerequisite": "Lipids",
+  "concept": "Fatty acid oxidation",
+  "strength": "essential",
+  "reason": "Fatty acids are lipids"
+ },
+ {
+  "prerequisite": "Fatty acid oxidation",
+  "concept": "Ketone bodies",
+  "strength": "essential",
+  "reason": "Ketones come from fatty acid oxidation"
+ },
+ {
+  "prerequisite": "Lipids",
+  "concept": "Triglyceride metabolism",
+  "strength": "essential",
+  "reason": "Triglycerides are lipids"
+ },
+ {
+  "prerequisite": "Lipids",
+  "concept": "Cholesterol metabolism",
+  "strength": "essential",
+  "reason": "Cholesterol is a lipid"
+ },
+ {
+  "prerequisite": "Cholesterol metabolism",
+  "concept": "Lipoproteins",
+  "strength": "essential",
+  "reason": "Lipoproteins carry cholesterol"
+ },
+ {
+  "prerequisite": "Triglyceride metabolism",
+  "concept": "Lipoproteins",
+  "strength": "essential",
+  "reason": "Lipoproteins carry triglycerides"
+ },
+ {
+  "prerequisite": "Lipids",
+  "concept": "Eicosanoids",
+  "strength": "essential",
+  "reason": "Eicosanoids come from fatty acids"
+ },
+ {
+  "prerequisite": "Triglyceride metabolism",
+  "concept": "Fatty liver",
+  "strength": "essential",
+  "reason": "Fatty liver is triglyceride accumulation"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Proteins",
+  "strength": "essential",
+  "reason": "Proteins are built of amino acids"
+ },
+ {
+  "prerequisite": "Proteins",
+  "concept": "Immunoglobulins",
+  "strength": "essential",
+  "reason": "Immunoglobulins are proteins"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Ammonia metabolism",
+  "strength": "essential",
+  "reason": "Ammonia comes from amino acid breakdown"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Amino acid derivatives",
+  "strength": "essential",
+  "reason": "Derivatives come from amino acids"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Inborn errors of amino acid metabolism",
+  "strength": "essential",
+  "reason": "Inborn errors block amino acid pathways"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Haem metabolism",
+  "strength": "essential",
+  "reason": "Haem is built from glycine"
+ },
+ {
+  "prerequisite": "Haem metabolism",
+  "concept": "Porphyrias",
+  "strength": "essential",
+  "reason": "Porphyrias block haem synthesis"
+ },
+ {
+  "prerequisite": "Haemoglobin",
+  "concept": "Haemoglobinopathies",
+  "strength": "essential",
+  "reason": "Haemoglobinopathies are abnormal haemoglobins"
+ },
+ {
+  "prerequisite": "Proteins",
+  "concept": "Extracellular matrix",
+  "strength": "essential",
+  "reason": "Matrix proteins are proteins"
+ },
+ {
+  "prerequisite": "Protein synthesis",
+  "concept": "Protein targeting",
+  "strength": "essential",
+  "reason": "Targeting follows protein synthesis"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Nutrients",
+  "strength": "helpful",
+  "reason": "Vitamins are nutrients"
+ },
+ {
+  "prerequisite": "Nutrients",
+  "concept": "Food composition",
+  "strength": "essential",
+  "reason": "Food composition lists nutrients"
+ },
+ {
+  "prerequisite": "Carbohydrates",
+  "concept": "Glycaemic index",
+  "strength": "essential",
+  "reason": "Glycaemic index ranks carbohydrate foods"
+ },
+ {
+  "prerequisite": "Trace elements",
+  "concept": "Iron metabolism",
+  "strength": "helpful",
+  "reason": "Iron is a trace element"
+ },
+ {
+  "prerequisite": "Trace elements",
+  "concept": "Copper metabolism",
+  "strength": "helpful",
+  "reason": "Copper is a trace element"
+ },
+ {
+  "prerequisite": "Body fluid compartments",
+  "concept": "Water and electrolyte balance",
+  "strength": "essential",
+  "reason": "Balance follows body fluid compartments"
+ },
+ {
+  "prerequisite": "Nucleic acids",
+  "concept": "Purine metabolism",
+  "strength": "essential",
+  "reason": "Purines are nucleic acid components"
+ },
+ {
+  "prerequisite": "Purine metabolism",
+  "concept": "Hyperuricaemia",
+  "strength": "essential",
+  "reason": "Hyperuricaemia is excess purine breakdown"
+ },
+ {
+  "prerequisite": "Nucleic acids",
+  "concept": "DNA replication",
+  "strength": "essential",
+  "reason": "Replication copies DNA"
+ },
+ {
+  "prerequisite": "DNA replication",
+  "concept": "Gene transcription",
+  "strength": "helpful",
+  "reason": "Transcription reads DNA"
+ },
+ {
+  "prerequisite": "Gene transcription",
+  "concept": "Protein synthesis",
+  "strength": "essential",
+  "reason": "Translation follows transcription"
+ },
+ {
+  "prerequisite": "DNA replication",
+  "concept": "DNA repair",
+  "strength": "essential",
+  "reason": "Repair corrects replication errors"
+ },
+ {
+  "prerequisite": "DNA replication",
+  "concept": "Gene mutations",
+  "strength": "essential",
+  "reason": "Mutations are replication or repair errors"
+ },
+ {
+  "prerequisite": "Gene transcription",
+  "concept": "Regulation of gene expression",
+  "strength": "essential",
+  "reason": "Regulation acts on transcription"
+ },
+ {
+  "prerequisite": "DNA replication",
+  "concept": "Recombinant DNA technology",
+  "strength": "helpful",
+  "reason": "Recombinant methods use DNA biology"
+ },
+ {
+  "prerequisite": "DNA replication",
+  "concept": "Polymerase chain reaction",
+  "strength": "essential",
+  "reason": "PCR copies DNA"
+ },
+ {
+  "prerequisite": "Gene transcription",
+  "concept": "DNA microarray",
+  "strength": "helpful",
+  "reason": "Microarrays measure expression"
+ },
+ {
+  "prerequisite": "Chromosomes",
+  "concept": "Fluorescence in situ hybridisation",
+  "strength": "essential",
+  "reason": "FISH targets chromosomes"
+ },
+ {
+  "prerequisite": "Recombinant DNA technology",
+  "concept": "CRISPR gene editing",
+  "strength": "essential",
+  "reason": "CRISPR is gene editing technology"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Adrenal function tests",
+  "strength": "essential",
+  "reason": "Tests reflect adrenal hormones"
+ },
+ {
+  "prerequisite": "Female reproductive system",
+  "concept": "Reproductive hormone tests",
+  "strength": "essential",
+  "reason": "Tests reflect reproductive hormones"
+ },
+ {
+  "prerequisite": "Chromosomes",
+  "concept": "Prenatal screening",
+  "strength": "helpful",
+  "reason": "Screening detects chromosomal disorders"
+ },
+ {
+  "prerequisite": "Enzymes",
+  "concept": "Xenobiotic metabolism",
+  "strength": "essential",
+  "reason": "Xenobiotic metabolism is enzymatic"
+ },
+ {
+  "prerequisite": "Oxidative stress",
+  "concept": "Antioxidants",
+  "strength": "essential",
+  "reason": "Antioxidants counter oxidative stress"
+ },
+ {
+  "prerequisite": "Oxidative phosphorylation",
+  "concept": "Oxidative stress",
+  "strength": "helpful",
+  "reason": "Free radicals arise from oxidative metabolism"
+ },
+ {
+  "prerequisite": "Gene mutations",
+  "concept": "Oncogenes and tumour suppressor genes",
+  "strength": "essential",
+  "reason": "Oncogenes arise by mutation"
+ },
+ {
+  "prerequisite": "Xenobiotic metabolism",
+  "concept": "Alcohol metabolism",
+  "strength": "essential",
+  "reason": "Alcohol is metabolised as a xenobiotic"
+ },
+ {
+  "prerequisite": "Colorimetry and spectrophotometry",
+  "concept": "Laboratory analytical techniques",
+  "strength": "helpful",
+  "reason": "Colorimetry is a core analytical method"
+ },
+ {
+  "prerequisite": "Ammonia metabolism",
+  "concept": "Blood urea",
+  "strength": "essential",
+  "reason": "Urea is made from ammonia"
+ },
+ {
+  "prerequisite": "Amino acids",
+  "concept": "Serum creatinine",
+  "strength": "helpful",
+  "reason": "Creatinine comes from muscle creatine"
+ },
+ {
+  "prerequisite": "Purine metabolism",
+  "concept": "Serum uric acid",
+  "strength": "essential",
+  "reason": "Uric acid is the end product of purines"
+ },
+ {
+  "prerequisite": "Laboratory analytical techniques",
+  "concept": "Laboratory test interpretation",
+  "strength": "essential",
+  "reason": "Interpretation follows analytical methods"
+ },
+ {
+  "prerequisite": "Laboratory analytical techniques",
+  "concept": "Laboratory errors",
+  "strength": "essential",
+  "reason": "Errors arise in analytical steps"
+ },
+ {
+  "prerequisite": "Laboratory errors",
+  "concept": "Laboratory quality control",
+  "strength": "essential",
+  "reason": "Quality control detects errors"
+ }
+]
