@@ -8,6 +8,7 @@ export const FOUNDATION_DATA_FILES={
  unified:{path:'docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json',sha256:'8f6938ee686f2bb0226f8129ea7828c8f74ee6929421fa523927de84915e38dc'},
  names:{path:'docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json',sha256:'ccfe6304f0ba8d793479c59f09eb1f322a2e123260477d2dbaa93ca86373d33b'},
  pack:{path:'data/nmc-learning-foundation-drafts.json',sha256:'bc7769785835a7e2eba22aa6968839d03a53c3ba402bdb595dcb2455d2aecc52'},
+ overlay:{path:'data/nmc-reference-overlay.json',sha256:'2c652273d57b2886447df1d1683dc4ef765288768c10397454935717eb8935ff'},
  catalogue:{path:'data/nmc-reference-catalogue.json',sha256:'8656e6e9ce902056ed60fe12a92baa1db2852ae69f76bf5f726196807ef2903f'}
 };
 let cached=null;

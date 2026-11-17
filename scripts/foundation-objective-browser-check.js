@@ -9,6 +9,7 @@ import {coveragePage,parseCoverageFilters} from '../src/domain/content-coverage.
 import {readFoundationDrafts} from '../supabase/functions/owner-api/_shared/nmc-learning-foundation.js';
 import draftSeed from '../data/nmc-learning-foundation-drafts.json' with {type:'json'};
 import sourceCatalogue from '../data/nmc-reference-catalogue.json' with {type:'json'};
+import referenceOverlay from '../data/nmc-reference-overlay.json' with {type:'json'};
 import {foundationDraftPage,canonicalIdentityDigest} from '../src/domain/nmc-learning-foundation.js';
 const drafts=structuredClone(draftSeed);
 const conceptIds=[...new Set(drafts.objectives.map(row=>row.objective.conceptId))];
@@ -46,7 +47,7 @@ try{
    if(path.endsWith('/review-api/me'))return reply({isAdmin:true,reviewKinds:['medical','references','rights']});
    if(path.endsWith('/review-api/transfer-pairs'))return reply({pairs:[]});
    if(path.endsWith('/owner-api/dashboard'))return reply({contractId:'owner-admin-dashboard-v1',owner:{singleton:true,email:user.email},generatedAt:snapshot.asOf,users:{total:0,recent:[]},learning:{},content:{concepts:2,questions:1,sources:0},learnerAdministration:{auditEvents:0},reviewAuthority:{temporary:true,grants:[]},ai:{telemetryAvailable:false},infrastructure:{database:'healthy',cloudflare:{status:'healthy'}}});
-   if(path.endsWith('/owner-api/foundation-objective-drafts')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow)await new Promise(resolve=>setTimeout(resolve,400));return reply({...await foundationDraftPage(drafts,sourceCatalogue,draftCatalog,Object.fromEntries(url.searchParams)),namesOnlyPreview,namesOnlyRelationships});}
+   if(path.endsWith('/owner-api/foundation-objective-drafts')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow)await new Promise(resolve=>setTimeout(resolve,400));return reply({...await foundationDraftPage(drafts,sourceCatalogue,draftCatalog,Object.fromEntries(url.searchParams),referenceOverlay),namesOnlyPreview,namesOnlyRelationships});}
    if(path.endsWith('/owner-api/content-coverage')){reads++;if(failure)return reply({error:'synthetic_failure'},failure);if(slow&&url.searchParams.get('search')==='Alpha')await new Promise(resolve=>setTimeout(resolve,400));return reply(coveragePage(snapshot,parseCoverageFilters(url.searchParams)));}
    if(path.includes('/owner-api/'))return reply({flags:[],alerts:[]});
    return reply({});

@@ -1,6 +1,6 @@
 # Medical Learning OS — context register
 
-Last reconciled: 2026-10-23 (Asia/Kolkata).
+Last reconciled: 2026-11-17 (Asia/Kolkata). Current engineering state lives in AI_HANDOFF.md and STATUS.md; dated sections below are historical.
 
 ## Supplied-material reconciliation — 2026-10-23
 
