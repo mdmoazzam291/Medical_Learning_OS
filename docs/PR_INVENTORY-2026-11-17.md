@@ -16,3 +16,8 @@ Nothing has been closed. Each group needs the owner's explicit approval before a
 Total: 5 + 31 + 24 + 8 + 5 + 3 = 76.
 
 Suggested approval wording: "Close groups A–E" (73 PRs), with a separate answer for group F.
+
+## Outcome (2026-11-17, owner-approved)
+- Groups A–E: all 73 closed; branches kept.
+- PARSE rebrand (#203 `docs/parse-brand-identity-20261008` @ `10d0d542`, #228 `feat/parse-preview-brand-20261013` @ `dacb3b14`): closed; owner asked for deletion. Branch deletion is blocked from the agent session, so the owner deletes them on GitHub.
+- #229: its regression test (Google sign-in must not call back to a hardcoded localhost) was re-added from current `main`; the doc was dropped; #229 closed.

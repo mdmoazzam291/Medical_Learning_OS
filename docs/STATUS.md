@@ -11,7 +11,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ### 2026-11-17 — Deploys, open-PR inventory, product principles
 - Deployed owner-api v25 (registry @25, overlay-checked validation) and nmc-admin-preview v26 (@25 Admin learner preview). PR #468 merged after all four checks passed.
-- `docs/PR_INVENTORY-2026-11-17.md`: 76 open PRs grouped for owner approval; none closed.
+- `docs/PR_INVENTORY-2026-11-17.md`: 76 open PRs grouped; owner approved closing 75 (PARSE rebrand dropped). `tests/account-oauth-redirect.test.js` restored from #229 as a regression guard.
 - `docs/PRODUCT_PRINCIPLES.md`: durable design rules (exam yield ≠ forgetting, competence vs session state, no early RL/bandits, measure transfer, no learning-style labels).
 
 ### 2026-11-17 — Registry @25: learning metadata; full Admin learner preview

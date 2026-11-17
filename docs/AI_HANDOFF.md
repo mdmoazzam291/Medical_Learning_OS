@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-17T16:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-17T17:00Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -22,9 +22,8 @@ Checked: 2026-11-17T16:35Z. Full history up to this date: [archive/AI_HANDOFF-th
 - GM28.18: draft respiratory-slice concept C-f2c27acd vs accepted Obstructive airway disease C-e8c03208 (deferred).
 - Batch acceptance RPC times out above ~60 new concepts (8 s).
 - Source-exception batch metadata says `subjectId: surgery` although it spans nine subjects (accepted file is checksum-pinned; reports should use `subjectIds`).
-- 76 open PRs (71 drafts): grouped in `docs/PR_INVENTORY-2026-11-17.md`; nothing closed yet.
+- Open-PR clean-up done 2026-11-17 (see `docs/PR_INVENTORY-2026-11-17.md`): groups A–E (73) closed with branches kept; PARSE rebrand #203/#228 closed by owner decision, branches pending manual deletion by the owner (proxy blocks ref deletion); #229 replaced by a fresh test PR.
 
 ## Next actions
-1. Owner approval of the PR inventory groups (A–E close, F decide); then close only the approved PRs, keeping branches.
-2. Deferred foundation gaps above, in owner-chosen order (prerequisites, per-objective review status, Admin edit path, GM28.18, acceptance RPC speed).
+1. Deferred foundation gaps above, in owner-chosen order (prerequisites, per-objective review status, Admin edit path, GM28.18, acceptance RPC speed).
 Product rules: `docs/PRODUCT_PRINCIPLES.md`.
