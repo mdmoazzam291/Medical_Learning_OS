@@ -1,0 +1,5498 @@
+{
+ "schemaVersion": 1,
+ "batchId": "nmc-anatomy-concepts-part-a2-v1-20261116",
+ "subjectId": "anatomy",
+ "scopeCodes": [
+  "AN21.1",
+  "AN21.2",
+  "AN21.3",
+  "AN21.4",
+  "AN21.5",
+  "AN21.6",
+  "AN21.7",
+  "AN21.8",
+  "AN21.9",
+  "AN21.10",
+  "AN21.11",
+  "AN22.1",
+  "AN22.2",
+  "AN22.3",
+  "AN22.4",
+  "AN22.5",
+  "AN22.6",
+  "AN22.7",
+  "AN23.1",
+  "AN23.2",
+  "AN23.3",
+  "AN23.4",
+  "AN23.5",
+  "AN23.6",
+  "AN24.1",
+  "AN24.2",
+  "AN24.3",
+  "AN24.4",
+  "AN24.5",
+  "AN24.6",
+  "AN25.1",
+  "AN25.2",
+  "AN25.3",
+  "AN25.4",
+  "AN25.5",
+  "AN25.6",
+  "AN25.7",
+  "AN25.8",
+  "AN25.9",
+  "AN26.1",
+  "AN26.2",
+  "AN26.3",
+  "AN26.4",
+  "AN26.5",
+  "AN26.6",
+  "AN26.7",
+  "AN27.1",
+  "AN27.2",
+  "AN28.1",
+  "AN28.2",
+  "AN28.3",
+  "AN28.4",
+  "AN28.5",
+  "AN28.6",
+  "AN28.7",
+  "AN28.8",
+  "AN28.9",
+  "AN28.10",
+  "AN29.1",
+  "AN29.2",
+  "AN29.3",
+  "AN29.4",
+  "AN29.5",
+  "AN30.1",
+  "AN30.2",
+  "AN30.3",
+  "AN30.4",
+  "AN30.5",
+  "AN31.1",
+  "AN31.2",
+  "AN31.3",
+  "AN31.4",
+  "AN31.5",
+  "AN32.1",
+  "AN32.2",
+  "AN33.1",
+  "AN33.2",
+  "AN33.3",
+  "AN33.4",
+  "AN33.5",
+  "AN34.1",
+  "AN34.2",
+  "AN34.3",
+  "AN35.1",
+  "AN35.2",
+  "AN35.3",
+  "AN35.4",
+  "AN35.5",
+  "AN35.6",
+  "AN35.7",
+  "AN35.8",
+  "AN35.9",
+  "AN35.10",
+  "AN36.1",
+  "AN36.2",
+  "AN36.3",
+  "AN36.4",
+  "AN36.5",
+  "AN36.6",
+  "AN36.7",
+  "AN37.1",
+  "AN37.2",
+  "AN37.3",
+  "AN38.1",
+  "AN38.2",
+  "AN38.3",
+  "AN39.1",
+  "AN39.2",
+  "AN40.1",
+  "AN40.2",
+  "AN40.3",
+  "AN40.4",
+  "AN40.5",
+  "AN41.1",
+  "AN41.2",
+  "AN41.3",
+  "AN42.1",
+  "AN42.2",
+  "AN42.3",
+  "AN43.1",
+  "AN43.2",
+  "AN43.3",
+  "AN43.4",
+  "AN43.5",
+  "AN43.6",
+  "AN43.7",
+  "AN43.8",
+  "AN43.9"
+ ],
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "status": "draft-batch-awaiting-admin-acceptance",
+ "attestation": "identity-and-classification-reviewed-not-medical-or-learner-release",
+ "counts": {
+  "concepts": 85,
+  "newConcepts": 65,
+  "reusedAcceptedIdentities": 20,
+  "objectives": 133,
+  "sourceRows": 128,
+  "umbrellas": 0,
+  "flagged": 48
+ },
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "conceptTypes": [
+  "structure",
+  "function",
+  "disorder",
+  "clinical-finding",
+  "investigation",
+  "clinical-skill",
+  "intervention",
+  "field"
+ ],
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:6a2456b318efc350",
+   "existingConceptId": "C-219dd28f-2a19-47df-ba16-d4272df448f1",
+   "document": {
+    "label": "Ossification",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [
+      "bone"
+     ],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN26.6 p.124 nmc-2024-ref:a96b25fbe1d48ef419e7905d53809f6c91d780589dcacc4c1642c6fe792a8e1f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN26.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:fd24b02407a3e72a",
+   "existingConceptId": "C-1d5d355a-37c6-4e30-91e2-bc318881dc78",
+   "document": {
+    "label": "Brachial plexus injuries",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN29.3 p.126 nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN29.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": [
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a707550e7a9c1c5b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thoracic skeleton",
+    "aliases": [
+     "Bones of the thorax"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "bone"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN21.1 p.120 nmc-2024-ref:0292af8852d59c884264f205427b9486df44ada9a6a9e15ae71baad9ce1f10a6; AN21.2 p.120 nmc-2024-ref:9cdb077f28058ac07e99f5dea5ad8024b816112df0888b4297cd56eb71d37422; AN21.8 p.121 nmc-2024-ref:0414c5aec52c98880d6d149ce8533ba676a246717162aa144c196019fbf07879; AN21.10 p.121 nmc-2024-ref:83fc0126888430e6d792b4411571d60eb55cbe2644441857af4ba8418502c591",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN21.1",
+    "AN21.2",
+    "AN21.8",
+    "AN21.10"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thoracic wall",
+    "aliases": [
+     "Chest wall"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN21.3 p.120 nmc-2024-ref:527f01d307e798344f0c150a74488cfdb478a722d127540b9b699ee83442489f; AN21.4 p.121 nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b; AN21.5 p.121 nmc-2024-ref:f7ce9230447298db1dc4724ca06fa67eea0784eb9fe1a41fde0a43919d0a8b8d; AN21.6 p.121 nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256; AN21.7 p.121 nmc-2024-ref:0d693efb73df8db7abceadcc3e489d82cef8e1add5608ebe586288d642ead4b0",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN21.3",
+    "AN21.4",
+    "AN21.5",
+    "AN21.6",
+    "AN21.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:06348ab087406874",
+   "existingConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "document": {
+    "label": "Mechanics of breathing",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN21.9 p.121 nmc-2024-ref:4d82f84b69b5f5c515d6e663552c9ebd839245825941c30274bd5fd31ec11dfb",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN21.9"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:cbb7d55f9e57fffd",
+   "existingConceptId": null,
+   "document": {
+    "label": "Mediastinum",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "mediastinum"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN21.11 p.121 nmc-2024-ref:8849d33451cb86b18c2bbbaf75ccec1c6550ab4a2bd7e180f49d6aaba7bfe02f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN21.11"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a9f1581c259c16e7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pericardium",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [
+      "heart"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN22.1 p.121 nmc-2024-ref:1696bdd2a6bfdb67083fb667c22b8d228503a8e6355596bc5111b099cffa7d37",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN22.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b1708727cf3a47c5",
+   "existingConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "document": {
+    "label": "Heart",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN22.2 p.122 nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515; AN22.5 p.122 nmc-2024-ref:0fdc1c7223e50eb4549e74b4d9e7803d2468264408f4b823562e8461661b87a4; AN22.6 p.122 nmc-2024-ref:139c18e3ccdf15f6ddecfda6bd505c332b7bdcfdeb4e276a172c51c73149446b",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN22.2",
+    "AN22.5",
+    "AN22.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d50fd21e87d5ea10",
+   "existingConceptId": "C-cf863984-06c6-4dde-be84-02d8d42d2a99",
+   "document": {
+    "label": "Coronary circulation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN22.3 p.122 nmc-2024-ref:e79460b1b7e368ae2e01dd8c6698056afab0f89218d43f6acc3e2d7ec1651aca",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN22.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ddb165c12dcbc058",
+   "existingConceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "document": {
+    "label": "Ischaemic heart disease",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN22.4 p.122 nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN22.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c25b029ccc6d4cbf",
+   "existingConceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
+   "document": {
+    "label": "Cardiac conduction system",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN22.7 p.122 nmc-2024-ref:88e0d1756c1c67ac963679a054762b14eba38159a1cff3be0734cfaf47044618",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN22.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3533ee20ed2a6b75",
+   "existingConceptId": "C-6329e2bb-7e91-4fb7-b224-b5aeaec9275f",
+   "document": {
+    "label": "Oesophagus",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN23.1 p.122 nmc-2024-ref:2a59cd14b8c2f5176788e13d235d3353f1054bfb64e7d5951959ad0a504f9f73",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN23.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8211b7381e9853ec",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thoracic duct",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN23.2 p.122 nmc-2024-ref:f601330a50bad57e364294c0a4feade0370a3d1cc12621fa41068025154cfbbc",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN23.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b79f4fbffbc4915a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Great veins of the thorax",
+    "aliases": [
+     "Superior vena cava and azygos system"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN23.3 p.122 nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN23.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:0c915270548567dc",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thoracic aorta",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN23.4 p.122 nmc-2024-ref:ef4d077334dfef48358f7eecb981d9f7cdf23a722af9e332945cd72187bff620",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN23.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b2da85024ac8b411",
+   "existingConceptId": null,
+   "document": {
+    "label": "Thoracic autonomic nerves",
+    "aliases": [
+     "Thoracic sympathetic trunk"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN23.5 p.123 nmc-2024-ref:299bfed8e9a949d0d37c80e2bbedfcd03558f44fab7127cf9340bc205af07df1; AN23.6 p.123 nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN23.5",
+    "AN23.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:2d841257b02398f0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pleura",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "lung"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN24.1 p.123 nmc-2024-ref:1a9102eed28fd5c1a3afc5b9654968c86d5951d350ea6b4c0a35dce5cc517069",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN24.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:88f66362a0040a82",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lungs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "lung"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN24.2 p.123 nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247; AN24.3 p.123 nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6; AN24.5 p.123 nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN24.2",
+    "AN24.3",
+    "AN24.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:479bc3a50f7c08af",
+   "existingConceptId": null,
+   "document": {
+    "label": "Phrenic nerve",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN24.4 p.123 nmc-2024-ref:294df90fa979a2c98aa26242b1a135b31a7f9fb21d7f2c28ccf6d522f204aaa1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN24.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:685686cd26bfa7b1",
+   "existingConceptId": null,
+   "document": {
+    "label": "Trachea",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "trachea"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN24.6 p.123 nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN24.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d8eb0db8b0074d54",
+   "existingConceptId": null,
+   "document": {
+    "label": "Respiratory system histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.1 p.123 nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:dfdce96beb742dee",
+   "existingConceptId": null,
+   "document": {
+    "label": "Development of the respiratory system",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.2 p.123 nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:218166fb9b271b0e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Development of the heart",
+    "aliases": [
+     "Cardiac development"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.2 p.123 nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd; AN25.4 p.124 nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7; AN25.5 p.124 nmc-2024-ref:4d6da4cc1317ef47b1af2644b046cab53e9500a461f8c091255efa323e2a2171; AN25.6 p.124 nmc-2024-ref:d16477c090b3f238a5788b2d24992ab9867fbd76e0ad0620d4efddae4fc1953e",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.2",
+    "AN25.4",
+    "AN25.5",
+    "AN25.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:5aaded3073e90816",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fetal circulation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.3 p.123 nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "physiology",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3d728e096c2ed898",
+   "existingConceptId": "C-84182a33-36d3-433f-b9c7-eb63b3133e8e",
+   "document": {
+    "label": "Chest radiograph",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.7 p.124 nmc-2024-ref:d6b2c435a14376fe61bf446258ae3e05016a1ce9c139e73ef6b130224b22644a",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ab39ecdeff2f1e0e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Barium swallow",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.8 p.124 nmc-2024-ref:8db929f26c797e149bf71881db6b14c12ea0227e9ae014b9df982494d1e60971",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.8"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "radiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:cb80f21d29097943",
+   "existingConceptId": null,
+   "document": {
+    "label": "Surface anatomy of the thorax",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN25.9 p.124 nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN25.9"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Skull",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [
+      "bone"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN26.1 p.124 nmc-2024-ref:0b34e88fc8dde8481937d401e1a0c517302926d1d140e3f4ca8f90602b7d9fbc; AN26.2 p.124 nmc-2024-ref:bce4b96de424ed243e34f6623894e4e41970952bd89573b17eeb42d9d72612a2; AN26.3 p.124 nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d; AN26.4 p.124 nmc-2024-ref:ed4f719e912a42534fb44f259a7cde221db796c6cdc892ba173c3409681b052f; AN30.1 p.126 nmc-2024-ref:cb6319cb2238011d42c4d052bf6009df3699053b633b25916200e37cee28388d; AN30.2 p.127 nmc-2024-ref:6a9af2a1517646643430b8b2f7edfd26eeac6909ed033bcbc88efbc3a751890c",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN26.1",
+    "AN26.2",
+    "AN26.3",
+    "AN26.4",
+    "AN30.1",
+    "AN30.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9a1927c47b81ec0a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cervical vertebrae",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [
+      "spine"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN26.5 p.124 nmc-2024-ref:e7e25b3b3e212781bc48013a08704b18da909240b921702ff73efa8de8ccc079; AN26.7 p.125 nmc-2024-ref:47048a8eb91a4d2949f3d312268197ba6fc5091b908b494205e20fe0d0a41630",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN26.5",
+    "AN26.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:5c329645d45a3570",
+   "existingConceptId": null,
+   "document": {
+    "label": "Scalp",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN27.1 p.125 nmc-2024-ref:a9e7a9568e0a2b1090c6900059e4d627606031991b20133ad11824d7af0dc37f; AN27.2 p.125 nmc-2024-ref:58e711b15936b416054519a27f276fd50f45eadc77a28c84c8b3d6422fb7a116",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN27.1",
+    "AN27.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Face",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.1 p.125 nmc-2024-ref:3db04f51aa6f605c6cc9d2bed6cbfdfe61dcb7fba90119cb857827e1ed078c15; AN28.2 p.125 nmc-2024-ref:739389f8994bb09cb641ebc976ab66f71ae150526c34ab84b9b8006cf0028cb2; AN28.3 p.125 nmc-2024-ref:08b122fbfb9efe49038a6c11a348135f592904ce6b32026bf4f21927535e0e3a; AN28.6 p.125 nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc; AN28.8 p.126 nmc-2024-ref:89f3e99d6a7abb2aa88ccd79f4d520e853edd97cebe7feed4c5846a8ec2dbefc",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.1",
+    "AN28.2",
+    "AN28.3",
+    "AN28.6",
+    "AN28.8"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8e68531e70b2fa5d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Facial nerve",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.4 p.125 nmc-2024-ref:030be2cf0a8fb95b2ae27bd3a059cf0d480618463200401fdd4dcd1e0cce67d1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:198b8fa9a1b18a66",
+   "existingConceptId": null,
+   "document": {
+    "label": "Head and neck lymphatics",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.5 p.125 nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61; AN35.5 p.129 nmc-2024-ref:1028a68d67bbd73497e221fbb27c0550a8ab05cd7a86238ac618c3e8510fd764",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.5",
+    "AN35.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:75455d59333689d4",
+   "existingConceptId": "C-f0218df1-d3ae-4ae4-afd1-2c2cd3a6224b",
+   "document": {
+    "label": "Facial nerve palsy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.7 p.126 nmc-2024-ref:0b49855fc32d2bc2cee5364f606de80299b1b4fbdd38ca14e35d1ffb2796dc4f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:617f63075fcd95d4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Parotid gland",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [
+      "salivary-gland"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.9 p.126 nmc-2024-ref:e820bd8908da31ceb6accf6af23e7349612765a0357f026ccd17d8aa1475d7e6",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.9"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c76351af60d4ac46",
+   "existingConceptId": null,
+   "document": {
+    "label": "Frey syndrome",
+    "aliases": [
+     "Gustatory sweating"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN28.10 p.126 nmc-2024-ref:215a54022529d818c67afdee18b39781281c327f1fbb2c55d412f1455b5dd491",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN28.10"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "surgery"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:7e12f2c45c81fae9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Posterior triangle of the neck",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN29.1 p.126 nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66; AN29.5 p.126 nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN29.1",
+    "AN29.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1224fb793014076f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Sternocleidomastoid",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN29.2 p.126 nmc-2024-ref:d896be94b196b089b17e232c23094409bfb5a0e67eca61eb925362da1dbabb87",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN29.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:4b4295ea9d77fed0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Torticollis",
+    "aliases": [
+     "Wry neck"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN29.4 p.126 nmc-2024-ref:c74196034f600a466ef9398a9101160a67be1072129c98642ebef1130fff133f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN29.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:318c491a7333512c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Dural venous sinuses",
+    "aliases": [
+     "Cranial venous sinuses"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN30.3 p.127 nmc-2024-ref:cf4e7673e783b4f072f8c2c0df7d01506e0ee9f05074a1ef4847c38cd73873a3; AN30.4 p.127 nmc-2024-ref:38506d0c7317aa04a4b09f0eba8d722cca169f2548efd5483ed4a874d2d6f909",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN30.3",
+    "AN30.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:89a4a5413cef8166",
+   "existingConceptId": "C-aab0f877-59bc-4753-a8df-a0457d082ab4",
+   "document": {
+    "label": "Pituitary gland",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN30.5 p.127 nmc-2024-ref:0b9dc26202129dd9898047f47e9f5f295c68c7e9410a6deec94ab381b18da21d",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN30.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8b61bcfc7ce2fc40",
+   "existingConceptId": null,
+   "document": {
+    "label": "Orbit",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [
+      "eye"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN31.1 p.127 nmc-2024-ref:891435aeef9d617c5ca01dfdbc63cf8d821b5972368d7b71e940b4caf1f5bd2b; AN31.2 p.127 nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN31.1",
+    "AN31.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:95179d70f5b25827",
+   "existingConceptId": null,
+   "document": {
+    "label": "Horner syndrome",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN31.3 p.127 nmc-2024-ref:93d7256d9713852c60e02c41487c50eb38a0e85ee9193df1099dc55abf6d5124",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN31.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "ophthalmology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fd929987de23d437",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lacrimal apparatus",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [
+      "eye"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN31.4 p.127 nmc-2024-ref:bf5e339554f062601229c83c6f1fe5b5d26077eb783a01018948c9b762079855",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN31.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b17a051d552a0197",
+   "existingConceptId": null,
+   "document": {
+    "label": "Ocular motor nerve palsies",
+    "aliases": [
+     "Oculomotor, trochlear and abducent nerve palsies"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN31.5 p.127 nmc-2024-ref:2890f10b2a314a9d5b13023606665135ea569584424093537e93156f079cd853",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN31.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "ophthalmology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f4714ff776c139bf",
+   "existingConceptId": null,
+   "document": {
+    "label": "Anterior triangle of the neck",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN32.1 p.127 nmc-2024-ref:53b1cfd7cd9f5cc62d0153e2a3a1f24971d4e5baab2522ec3cecdc3df3afcef7; AN32.2 p.128 nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN32.1",
+    "AN32.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:664e4f763bea048b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Temporal and infratemporal fossae",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN33.1 p.128 nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d; AN33.4 p.128 nmc-2024-ref:c10f726e7a1270a55fe1482fd45016f9e5c5afdaabf9f638a0575f541768fc49",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN33.1",
+    "AN33.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:c52b292238f41e1f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Muscles of mastication",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN33.2 p.128 nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN33.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:f44422dcd426ec97",
+   "existingConceptId": null,
+   "document": {
+    "label": "Temporomandibular joint",
+    "aliases": [
+     "TMJ"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [
+      "joint"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN33.3 p.128 nmc-2024-ref:be7cf5ab9a5652ef795caa14d67be11c0cb7a40fc32ea6fd6914e0937eb26850; AN33.5 p.128 nmc-2024-ref:17f8e323e03186803b0d05d2029b8e5a578a49f647d9ec5ca134a6805736b632",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN33.3",
+    "AN33.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:108ed07b5aac8f3b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Submandibular region",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN34.1 p.128 nmc-2024-ref:9409131d7c8292ed35da1b4e94d3fd93e260691fb0762cffa62fad7b6d60bbeb; AN34.2 p.128 nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289; AN34.3 p.128 nmc-2024-ref:985cad26020fd666db285c798fa52b1f1bd380db11656451f5e2c7d91b171a9a",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN34.1",
+    "AN34.2",
+    "AN34.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:928089f63a78e369",
+   "existingConceptId": null,
+   "document": {
+    "label": "Deep cervical fascia",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.1 p.128 nmc-2024-ref:60b6986859fa065d718251a1ffd58c26b3a844f3e8171930cc3d9c4969b1299c; AN35.10 p.129 nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.1",
+    "AN35.10"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:7e934860c192176f",
+   "existingConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "document": {
+    "label": "Thyroid gland",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.2 p.129 nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831; AN35.8 p.129 nmc-2024-ref:aa78f36321c9dd4dac8413bb187dcf14d2842d26f43fb06276e7f37c21068642",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.2",
+    "AN35.8"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:2c99f9a460417b01",
+   "existingConceptId": "C-9f13c669-ef1b-4950-b382-34719d38383f",
+   "document": {
+    "label": "Parathyroid glands",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.2 p.129 nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9e05fa088551f131",
+   "existingConceptId": null,
+   "document": {
+    "label": "Subclavian artery",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.3 p.129 nmc-2024-ref:aab2ef25bc5992dae98b46bd2c5ca1855cd26d96a3c1e1e5e7363510aab56a1f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:7f87a95f9603c737",
+   "existingConceptId": null,
+   "document": {
+    "label": "Veins of the neck",
+    "aliases": [
+     "Internal jugular and brachiocephalic veins"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.4 p.129 nmc-2024-ref:38cb85bc98826c3a4c65132519b8ac9aa424cfa69af18097744595d60c890b0f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:eca25a0fc7b39cd7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cervical sympathetic chain",
+    "aliases": [
+     "Cervical sympathetic trunk"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.6 p.129 nmc-2024-ref:220e194bb4153f6e405863f486e8e53eb9c0b19f6479d6dab900f4070a6d977b",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:253100cbc7fa3699",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lower cranial nerves",
+    "aliases": [
+     "Glossopharyngeal, vagus, accessory and hypoglossal nerves"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.7 p.129 nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ee130cfa296d2751",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cervical rib",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN35.9 p.129 nmc-2024-ref:c2ef106d0a02b452be2643cc8d927a4f6e0fb8739f1a27d8479434ea5d4b4145",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN35.9"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "orthopaedics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9e3f6594a8ad3ff9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Oral cavity",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN36.1 p.129 nmc-2024-ref:1fb7a8cf949f437095ef43421465b76b9b596c07fa53c70a06117de4329dcfab",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN36.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:033f98fc0916c737",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pharynx",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN36.3 p.130 nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7; AN36.4 p.130 nmc-2024-ref:e8af69814d5cc35bd76b8766b933ce5420206df5147a931883030fd9fb99aab9; AN36.5 p.130 nmc-2024-ref:e82186ca655963809fe18e0826a1a1b50c31845cf372287f88e5cfa23107c945; AN36.7 p.130 nmc-2024-ref:c7b5973118fccb0ba0276602f02df95c7a225facebbedceba816c26be4393064",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN36.3",
+    "AN36.4",
+    "AN36.5",
+    "AN36.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:f096b839da7ab1f5",
+   "existingConceptId": null,
+   "document": {
+    "label": "Palatine tonsil and soft palate",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN36.2 p.130 nmc-2024-ref:592bcfc5aa58b409a28c98f1b58753d910e1ea99c3c7b88cd3c0da8e824fd03c",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN36.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:5f980394fe1928bf",
+   "existingConceptId": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+   "document": {
+    "label": "Tonsillitis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN36.6 p.130 nmc-2024-ref:3daa463e11d9a5cbea79d9425239c92f6298e39f50bb434d135212bc109414f3",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN36.6"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e2ed6e28b421a6b2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Nasal cavity",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN37.1 p.130 nmc-2024-ref:aa1de5d04c4382c2b5c982385cafb7c5856fdaf9d7796087bb6e35c56168d34f",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN37.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:aa47b7cce03b0322",
+   "existingConceptId": null,
+   "document": {
+    "label": "Paranasal sinuses",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN37.2 p.130 nmc-2024-ref:16f677a0c9d4def63671dbeb728f5692729541e3853c944e014dc97fcfce9bfe",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN37.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a4b98896cea61ccf",
+   "existingConceptId": "C-4d256d05-6009-4931-987d-07482915fe2c",
+   "document": {
+    "label": "Sinusitis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN37.3 p.130 nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN37.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e0b301518bd889e3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Larynx",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "respiratory"
+     ],
+     "organs": [
+      "larynx"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN38.1 p.130 nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7; AN38.2 p.130 nmc-2024-ref:d291acd0442797bddc086fe7f75f8f59e6b5bd5a9c3552dd8e4c9cc5514e482d",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN38.1",
+    "AN38.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:327aada21ec9538b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Recurrent laryngeal nerve palsy",
+    "aliases": [
+     "Recurrent laryngeal nerve injury"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN38.3 p.131 nmc-2024-ref:09c59cdb74b2fc59e7641df9a2691d31bc8217853db530e622bc91086cdb1276",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN38.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "ent",
+    "surgery"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ef43d2d457aa233e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Tongue",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN39.1 p.131 nmc-2024-ref:09f0ab211677cdb8eed5e8dff9185439ae9e9bbf0ddec2144ff0fe7ff79743a9",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN39.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e3d428235fa9b95a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Hypoglossal nerve palsy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN39.2 p.131 nmc-2024-ref:d0081208b8c4e68b0e8194c32e612c8a52be99c0283046b10c9045620ec6cd4a",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN39.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:ad19eee073a409f0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Ear",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [
+      "ear"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN40.1 p.131 nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6; AN40.2 p.131 nmc-2024-ref:bfc9348565af97ae9deec0703c0e2874ed0e158586bf76cc8a4b2aae8aed9cb9; AN40.3 p.131 nmc-2024-ref:26c2ef52b1f02ec88596fcbde26dc73065d38fda1986735b419289e25b036538",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN40.1",
+    "AN40.2",
+    "AN40.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:55690cca5280c4e5",
+   "existingConceptId": "C-20d93ec9-615b-4c88-8e91-7f824bc8ecbf",
+   "document": {
+    "label": "External ear disorders",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN40.4 p.131 nmc-2024-ref:df69910707c9eb9d211305f29e7f551f892fb4b799848bb165eda5438eff4343",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN40.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:5a519c8bc0e92a89",
+   "existingConceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+   "document": {
+    "label": "Acute suppurative otitis media",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN40.4 p.131 nmc-2024-ref:df69910707c9eb9d211305f29e7f551f892fb4b799848bb165eda5438eff4343",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN40.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:62d2a96bc62f1972",
+   "existingConceptId": "C-e98ea73a-122d-4834-99c7-136b8440a1b5",
+   "document": {
+    "label": "Myringotomy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN40.5 p.131 nmc-2024-ref:0d35f7e099ca6ff4719fc8aa23016d34d660d5d1cc3c13a52974d3512a7b2ded",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN40.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": [
+    "ent"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:906d49500e2a2a91",
+   "existingConceptId": null,
+   "document": {
+    "label": "Eyeball",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [
+      "eye"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN41.1 p.131 nmc-2024-ref:c5920c9ef921a0d078e7e806b966fbc75a9c8b95cab713e11a58c23ccb71c189; AN41.3 p.131 nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN41.1",
+    "AN41.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:39602af530ef1ae4",
+   "existingConceptId": "C-c7b5c09f-1c2f-487f-b9c9-81fc54048b53",
+   "document": {
+    "label": "Cataract",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN41.2 p.131 nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN41.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:eff5595bf234dfba",
+   "existingConceptId": null,
+   "document": {
+    "label": "Aqueous humour circulation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN41.2 p.131 nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN41.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": [
+    "ophthalmology",
+    "physiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:91af7386314f8aba",
+   "existingConceptId": "C-f97c8419-1017-4459-a2c1-67eae7d11a48",
+   "document": {
+    "label": "Retinal vascular occlusion",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "special-senses"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN41.2 p.131 nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN41.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1937a2ccbda60a5d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Vertebral canal",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN42.1 p.132 nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN42.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6ff8742161078bb7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Back of the neck",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN42.2 p.132 nmc-2024-ref:40dc768aca06a35b423a912c02df11d4e942374a548bd0db7cbc04d80fe0b8cc; AN42.3 p.132 nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN42.2",
+    "AN42.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3c6ce1106c651101",
+   "existingConceptId": null,
+   "document": {
+    "label": "Craniovertebral joints",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [
+      "joint"
+     ],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.1 p.132 nmc-2024-ref:a1f5d34d64e29c19635351e3cf86320f9cc32e37eb847f46f4afe5926826781c",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:2e6f00582f2c1b01",
+   "existingConceptId": null,
+   "document": {
+    "label": "Head and neck histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.2 p.132 nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6; AN43.3 p.132 nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.2",
+    "AN43.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:35796987f2d45f84",
+   "existingConceptId": null,
+   "document": {
+    "label": "Development of the head and neck",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.4 p.132 nmc-2024-ref:ff2e5ec814f0f7d43e977d7415d808184c1e05adf2efc1ec732d170e6cdce9a1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8842adb425d83e1b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Surface anatomy of the head and neck",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.5 p.133 nmc-2024-ref:6072a5d9ceedabe0c224cfa7c34f8e342c6039c965c8455c84d95cb7fad26a14; AN43.6 p.133 nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.5",
+    "AN43.6"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:89470ab87236f08c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Head and neck radiographic anatomy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.7 p.133 nmc-2024-ref:51a45a4ed66d4921aa3dbc20999dbb24fb97ccdf352cdb15444fdbc39c0071e1",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.7"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "radiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:4c6945be0b24f08d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cerebral angiography",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN43.8 p.133 nmc-2024-ref:6a5ceaa35bde67697e6eb372ec745bb0a4f422288f753b522d85c8f60bd26877; AN43.9 p.133 nmc-2024-ref:9d128e611d7c108e1fa660e171a963bc0a5e31f51c018b7ce9ad0c2ad1fe589c",
+    "changeReason": "Anatomy concept batch part-a2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN43.8",
+    "AN43.9"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "radiology"
+   ]
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:6a2456b318efc350:mechanism:9855c576@1",
+   "conceptKey": "nmc-concept:6a2456b318efc350",
+   "existingConceptId": "C-219dd28f-2a19-47df-ba16-d4272df448f1",
+   "referenceId": "nmc-2024-ref:a96b25fbe1d48ef419e7905d53809f6c91d780589dcacc4c1642c6fe792a8e1f",
+   "code": "AN26.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how bone develops directly in mesenchyme and identify representative skull bones and regions formed by this process.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "c41c872a684f6181f96062f6c210993b7a57a52a109623dc77fb1d3a7fabc2cb",
+   "descriptionSha256": "d4313f58f06838ac0c9371f75c7663a6103a31cb760846ce1669ea70a9ab3e04",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fd24b02407a3e72a:mechanism:7435c9f2@1",
+   "conceptKey": "nmc-concept:fd24b02407a3e72a",
+   "existingConceptId": "C-1d5d355a-37c6-4e30-91e2-bc318881dc78",
+   "referenceId": "nmc-2024-ref:2d72413ca9f27d5706a3a95ebdb52894e35a70b27c0732aec8ed36673d6d67fb",
+   "code": "AN29.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare upper and lower plexus injury using affected roots, motor and sensory territories and characteristic postures.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "7a2ef107f30fdd9872069c88b5e27e48f48a4f27e6fce3e547125985e92463b6",
+   "descriptionSha256": "eec36538b9a31cf98726d2c0339ddaa15b69ee8a1a31656434da363b5c2d62e7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a707550e7a9c1c5b:procedural-skill:139aae4b@1",
+   "conceptKey": "nmc-concept:a707550e7a9c1c5b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0292af8852d59c884264f205427b9486df44ada9a6a9e15ae71baad9ce1f10a6",
+   "code": "AN21.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify a sternum, typical rib and typical thoracic vertebra on specimens. Point out features that establish orientation and show where each bone articulates.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 120,
+   "sourceBodySha256": "6237e925d689eb641419c8dccf7ceec2364eb25f2452a51c94562c880024bfe7",
+   "descriptionSha256": "d7bf19816cd3740c363e1c0d9a87ccd9dcf77561a26ea2838ec4e56dd3b98f04",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a707550e7a9c1c5b:procedural-skill:9c287e54@1",
+   "conceptKey": "nmc-concept:a707550e7a9c1c5b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9cdb077f28058ac07e99f5dea5ad8024b816112df0888b4297cd56eb71d37422",
+   "code": "AN21.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Sort a specimen set into typical and atypical examples and justify the atypical identifications from their distinguishing features.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 120,
+   "sourceBodySha256": "0bf14c3b5c2c67855f57339f1678c5723d27e8adade412a690e429e84a588e13",
+   "descriptionSha256": "14ee1f7668bca10dc0dc7bd1939c65d26538b84af759ff698c88212bb3805d5c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a707550e7a9c1c5b:procedural-skill:b7d7ad8d@1",
+   "conceptKey": "nmc-concept:a707550e7a9c1c5b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0414c5aec52c98880d6d149ce8533ba676a246717162aa144c196019fbf07879",
+   "code": "AN21.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Describe and demonstrate the joint type, articular surfaces and movements of the manubriosternal, costovertebral, costotransverse and xiphisternal joints.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "10da916185b08422784227b6c7705d94cb7c277e9cc2ebf89769b5f451ed6a91",
+   "descriptionSha256": "6c1848d1ffbb49c98bedf52fa8a0ab91aa36cf9ffe2707fccf77bc04fe21ed96",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a707550e7a9c1c5b:mechanism:5dd07d10@1",
+   "conceptKey": "nmc-concept:a707550e7a9c1c5b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:83fc0126888430e6d792b4411571d60eb55cbe2644441857af4ba8418502c591",
+   "code": "AN21.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Locate costochondral and interchondral junctions on a diagram and compare their constituent structures and joint types.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "80c668f094518b68f2f34ac171ead48d1e52c2e81f8859f1eef02c4b64e43176",
+   "descriptionSha256": "7061567dade038e1bb5b549e88356c414640369358d5de3485d010d4723816f4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c93007b1d2b5d48e:procedural-skill:3d6709db@1",
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:527f01d307e798344f0c150a74488cfdb478a722d127540b9b699ee83442489f",
+   "code": "AN21.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Show the superior and inferior thoracic apertures and the limits of the cavity on a model. Relate the cervicoaxillary passage to possible compression of nerves or vessels.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 120,
+   "sourceBodySha256": "7a2e953a0985cf9866ae74e55f0f734cb2029f806d74fea57867e2b6a5ec1477",
+   "descriptionSha256": "c3b36416c8786ff450268058d86173ac135be28721715745fff6439e9a44c417",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c93007b1d2b5d48e:procedural-skill:b3215040@1",
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7771b81a778e5ff2c8bc5703bbe42eb93450e67596e7c22de667043d20ed523b",
+   "code": "AN21.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a model, distinguish the intercostal layers by extent, attachments and fibre direction. Identify their innervation and demonstrate how they contribute to rib movement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "b41793ad40cd4fd009a96cde25cbb1411b673125f470e5197422aebc9054aa89",
+   "descriptionSha256": "4ea56258b0a99810566010b72e90790e8a8dfbae98383afeb9b440116537cdf6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c93007b1d2b5d48e:procedural-skill:55337473@1",
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f7ce9230447298db1dc4724ca06fa67eea0784eb9fe1a41fde0a43919d0a8b8d",
+   "code": "AN21.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace a typical intercostal nerve from its origin through the intercostal space on a model. Show its relations to the vessels and identify its collateral and cutaneous branches.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "0c2d880245acbbefe79fabd84aebb94327810f984b50b28dc8bbb81862f899c6",
+   "descriptionSha256": "2d61a704a736cf8707ded3d902359d287d9e8b21f365db4fb77c255cebaae379",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c93007b1d2b5d48e:mechanism:a54d7a09@1",
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:147abb04921abc3ae22da4ae8b06ecea843391db8c42ed4ef9d9681f7bcc7256",
+   "code": "AN21.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sketch the anterior and posterior intercostal vessels and the internal thoracic vessels, tracing arterial origins and branches and venous tributaries and drainage.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "86f4175df2af07a1ac35d192f31774937c37709865d18ce244b1bc30d67298d7",
+   "descriptionSha256": "43ce3540918368a85fa38154d224ef0b095660baf34e37e232ae04c383343a06",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c93007b1d2b5d48e:mechanism:fa8acc0b@1",
+   "conceptKey": "nmc-concept:c93007b1d2b5d48e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0d693efb73df8db7abceadcc3e489d82cef8e1add5608ebe586288d642ead4b0",
+   "code": "AN21.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare atypical intercostal nerves with a typical nerve by origin, route, relations and branching. Map the origin, course, relations and branches of the superior intercostal and subcostal arteries.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "1d05603ffb7333b72bc6b8571903d9c35584bac66fcd9aa9e776accb182a6e1f",
+   "descriptionSha256": "780c41da0e3bac31bf06b138e402f852c5544237bd24029b8db85a8110d577a2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:06348ab087406874:procedural-skill:92d12845@1",
+   "conceptKey": "nmc-concept:06348ab087406874",
+   "existingConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "referenceId": "nmc-2024-ref:4d82f84b69b5f5c515d6e663552c9ebd839245825941c30274bd5fd31ec11dfb",
+   "code": "AN21.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate how diaphragm descent and rib movement change thoracic dimensions. Compare quiet and forced breathing and illustrate pump-handle and bucket-handle motion.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "c0843528b62f5e34c72dbcde7244900efbd1e3e32fe3a5a152dcbe9fe76e0346",
+   "descriptionSha256": "dcbc9314a1af91baf82e1c9df57f6ef3540eb5fd7414bb0486599c0bd1f811f1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cbb7d55f9e57fffd:mechanism:50d41083@1",
+   "conceptKey": "nmc-concept:cbb7d55f9e57fffd",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8849d33451cb86b18c2bbbaf75ccec1c6550ab4a2bd7e180f49d6aaba7bfe02f",
+   "code": "AN21.11",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw the plane dividing the superior and inferior mediastinum. Delimit the anterior, middle and posterior subdivisions and assign the principal contents to each compartment.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "b39a065b2937d6438582b8fd53d327378e72acaf484b70ce0d26549aa459072d",
+   "descriptionSha256": "c30c9de6b0591ac41a05e61cc36a321d93f490d7875a2934c78c7ebc0cbced71",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a9f1581c259c16e7:procedural-skill:5cb9bc97@1",
+   "conceptKey": "nmc-concept:a9f1581c259c16e7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1696bdd2a6bfdb67083fb667c22b8d228503a8e6355596bc5111b099cffa7d37",
+   "code": "AN22.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a specimen, distinguish the fibrous and serous layers, pass a probe through the transverse sinus and locate the oblique sinus. Explain the vascular and sensory supply.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 121,
+   "sourceBodySha256": "fe23de5554ed9e03a132fd0f39cd885dc36a1e86d612271baa7c4acd2ae637dc",
+   "descriptionSha256": "ad2db16cc7b47d1fcf581ba682c2cf1741ee46a747d40411743ee1227b51a001",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b1708727cf3a47c5:procedural-skill:f5200331@1",
+   "conceptKey": "nmc-concept:b1708727cf3a47c5",
+   "existingConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "referenceId": "nmc-2024-ref:38730cd90ceeb7decdd06c044cdf1b737e18ae12048a4e49d63261d978eda515",
+   "code": "AN22.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a heart specimen and identify the surfaces, inflow and outflow, septal features and internal landmarks of all four chambers.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "501e9c6a4b5761b72edd56e41070e57daed430ef48dd21803b3d26cd2f07dad2",
+   "descriptionSha256": "3166113f6bfe4c7e5f2fc599f2c69d8aa41913d15ed775f7281698d504996b66",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b1708727cf3a47c5:procedural-skill:bf086471@1",
+   "conceptKey": "nmc-concept:b1708727cf3a47c5",
+   "existingConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "referenceId": "nmc-2024-ref:0fdc1c7223e50eb4549e74b4d9e7803d2468264408f4b823562e8461661b87a4",
+   "code": "AN22.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a specimen, trace the formation and course of the coronary sinus, identify its major tributaries and locate its opening into the right atrium.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "04020e3c5235fd0043bc0f71db8173d2a08f34131266640c7ba1dcc634f8c399",
+   "descriptionSha256": "00494f933a9ec43ea92fee91db3ff9d10d90fbe4796bf8cba07163333a2838dc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b1708727cf3a47c5:mechanism:560034ed@1",
+   "conceptKey": "nmc-concept:b1708727cf3a47c5",
+   "existingConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "referenceId": "nmc-2024-ref:139c18e3ccdf15f6ddecfda6bd505c332b7bdcfdeb4e276a172c51c73149446b",
+   "code": "AN22.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sketch the annuli and fibrous trigones, explaining how they support valve orifices and electrically separate atrial from ventricular myocardium.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "9d4fb5d9561bd30e32a147c32c5479e0b1109a6922266acd247318502f97cf56",
+   "descriptionSha256": "c224133fe2c78027721d3e8cf324c1cd91f66f33cd50cb8b4cc9b2ebdd4ab897",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d50fd21e87d5ea10:procedural-skill:1b9437b7@1",
+   "conceptKey": "nmc-concept:d50fd21e87d5ea10",
+   "existingConceptId": "C-cf863984-06c6-4dde-be84-02d8d42d2a99",
+   "referenceId": "nmc-2024-ref:e79460b1b7e368ae2e01dd8c6698056afab0f89218d43f6acc3e2d7ec1651aca",
+   "code": "AN22.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace the coronary arteries and major branches from the aortic root on a specimen and determine dominance from the origin of the posterior interventricular artery.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "f095d0776f7ca7aab52242ff2b0c67c3981d9b924ebb733f5549fb6987a1855c",
+   "descriptionSha256": "3ccfd6c9c96d287021d7e20798651e70dad55c26863152d785c7094a133b3991",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ddb165c12dcbc058:mechanism:2dc32327@1",
+   "conceptKey": "nmc-concept:ddb165c12dcbc058",
+   "existingConceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "referenceId": "nmc-2024-ref:9e0fe22da3b4544ec3c85275384618f7590fe5b96e1c6fafee08cca23772b6c2",
+   "code": "AN22.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of ischaemic heart disease.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "13da2440675ccfb19ec0e94925801a473c004b9b716353b066fcc557ae190f24",
+   "descriptionSha256": "c15b3897324963fcc0426b7eff14738d731076b7bce9c883687f901891eaceb0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c25b029ccc6d4cbf:mechanism:7d5002eb@1",
+   "conceptKey": "nmc-concept:c25b029ccc6d4cbf",
+   "existingConceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
+   "referenceId": "nmc-2024-ref:88e0d1756c1c67ac963679a054762b14eba38159a1cff3be0734cfaf47044618",
+   "code": "AN22.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the nodes, atrioventricular bundle, bundle branches and Purkinje network, and relate their positions to their usual arterial supply.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "318bf4b9d9dd37775e1882c20c6a268d4ed4b27c5548750df33d195c3173b5c0",
+   "descriptionSha256": "371e45c83e6f67c6c0c96b5797e0e07cda7b118bd881f1b39a47d6d22ec162b7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3533ee20ed2a6b75:procedural-skill:1483fc07@1",
+   "conceptKey": "nmc-concept:3533ee20ed2a6b75",
+   "existingConceptId": "C-6329e2bb-7e91-4fb7-b224-b5aeaec9275f",
+   "referenceId": "nmc-2024-ref:2a59cd14b8c2f5176788e13d235d3353f1054bfb64e7d5951959ad0a504f9f73",
+   "code": "AN23.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the oesophagus and its constrictions on a specimen, relate them to neighbouring structures and explain how its vascular, neural and lymphatic pathways inform applied anatomy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "e245aea31dc240fa395df54924e52c6e1748ce06725dbdb0dbc0d8b1838c0fcd",
+   "descriptionSha256": "3881a50d13d9f4cddcd469bbaa5e423938b1d04e553d805e02afa9d0f2b43675",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8211b7381e9853ec:procedural-skill:b792d297@1",
+   "conceptKey": "nmc-concept:8211b7381e9853ec",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f601330a50bad57e364294c0a4feade0370a3d1cc12621fa41068025154cfbbc",
+   "code": "AN23.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace the thoracic duct on a model, identifying its extent, relations, tributaries and venous termination. Use the course to explain how injury can produce chylothorax.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "1c371a061fe83c477d287ada4ba755c95a5fd4a5a1880259ec147256b412939a",
+   "descriptionSha256": "d5634ae02f6467f294c2f84859567ec514eeae8ab7635ae92fa1148a86793c01",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b79f4fbffbc4915a:procedural-skill:17de6b72@1",
+   "conceptKey": "nmc-concept:b79f4fbffbc4915a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2fd229be714c7594f708d6e0a8c096cffe593d4eac851961b9ad8e57d420615a",
+   "code": "AN23.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace the SVC and the azygos, hemiazygos and accessory hemiazygos veins on a specimen. Identify origins, tributaries, relations and drainage endpoints, and reconstruct the collateral route.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "5cf1d10d6260cefd774d01efdfc18fa4601a2a57b9271ad53fdb81e3718066bb",
+   "descriptionSha256": "970d31a8a98b0e632b3522b7820014c5f573f0fadce0ad611fa697df62d7b4d9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:0c915270548567dc:mechanism:04ad96b0@1",
+   "conceptKey": "nmc-concept:0c915270548567dc",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ef4d077334dfef48358f7eecb981d9f7cdf23a722af9e332945cd72187bff620",
+   "code": "AN23.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw the arch and descending thoracic aorta, marking where each begins and ends, their principal branches and their relationships to adjacent structures.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 122,
+   "sourceBodySha256": "dcc2169eee36cc0b28f031654f7b833c2a928f9d6daeec6b19b76dc6f417f259",
+   "descriptionSha256": "ec815b97073a911ce297a590bbd20fd5ffebfe5031cf2b6e18f9ec3967587ea0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b2da85024ac8b411:procedural-skill:ca715525@1",
+   "conceptKey": "nmc-concept:b2da85024ac8b411",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:299bfed8e9a949d0d37c80e2bbedfcd03558f44fab7127cf9340bc205af07df1",
+   "code": "AN23.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Locate the thoracic sympathetic chain on a specimen and identify its upper and lower extent relative to the rib heads and diaphragm.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "54b1531c2a5d344b4dee9e6115c5da90cc02f45aa9a9bb75307ec81c8cc4358a",
+   "descriptionSha256": "b1b008bf35e50973e1a3f27ab584a2cf4df621885622bac62db6b09ba71e1d86",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b2da85024ac8b411:mechanism:78a12b22@1",
+   "conceptKey": "nmc-concept:b2da85024ac8b411",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3b21f4db834a2b54aef889150215a251428f921f27fb22499b6e0ef98af82095",
+   "code": "AN23.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare the origins and descending courses of the greater, lesser and least thoracic splanchnic nerves and trace their passage to abdominal plexuses.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "24398b4e62ca95df4c8810430f20eb8d1a78f38edad039477e642e3af8cdb87e",
+   "descriptionSha256": "4c446b02e7446fcf9ad1ba967085248254f1e9a16823ea391afed887f987bc73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2d841257b02398f0:mechanism:f1fadfc4@1",
+   "conceptKey": "nmc-concept:2d841257b02398f0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1a9102eed28fd5c1a3afc5b9654968c86d5951d350ea6b4c0a35dce5cc517069",
+   "code": "AN24.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw the pleural reflections and recesses, compare the blood, lymphatic and sensory pathways of the two pleural layers, and explain where fluid can collect in an upright patient.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "1666814d776bd0d9424f0cacd9bce7ec19759ae60e2acff30be0c861a1d02206",
+   "descriptionSha256": "7cfd2cbcdf2813e66a73fcd1d5a5bc7867dd6192551ab79bf557edf56e47a604",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:88f66362a0040a82:procedural-skill:c7ad5568@1",
+   "conceptKey": "nmc-concept:88f66362a0040a82",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9bc5a398ba8ae180905f47d387de50e8ac15b9a94f7d6a55c0d38a7a11d32247",
+   "code": "AN24.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Side a lung specimen from its surfaces, lobes and fissures. Identify hilar relations and trace bronchial branching, using bronchial geometry to explain a clinical pattern of aspiration.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "e20ac14df0e9ee6e31aaa29a0a8846cc540cebe01d489071f4faea3b771ff014",
+   "descriptionSha256": "c74e3537e39319f118856359b1b046dbbfe7ae053a6ebaa50a9b71be555291b1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:88f66362a0040a82:mechanism:a0b4ef47@1",
+   "conceptKey": "nmc-concept:88f66362a0040a82",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5cfd2e9bf5795d4dd1e500bcab4341f770a64f1963f35b5a30569a9fc0bc5bb6",
+   "code": "AN24.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw a segment with its bronchus and arterial branch and show the intersegmental venous planes. Explain how this arrangement supports segmental resection.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "98dfceb6411fcfd9173fcfcad3f0c607990ff6048224e9cf4084a6a5ee3c517e",
+   "descriptionSha256": "5e9868e4b2d58cb994b697ffe5f66a9e5f87902075a18d5080cd2a5002243c87",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:88f66362a0040a82:mechanism:e79a597e@1",
+   "conceptKey": "nmc-concept:88f66362a0040a82",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:422f79905b38a3cf1ace10c8f523f6a03566cc30f4a94c52ba5cead578447e22",
+   "code": "AN24.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare pulmonary and bronchial circulations and map the lymphatic routes and autonomic pathways of the lungs.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "c7807497588893cb5022c060ce45c9729811e345ee74db1fb34995d5ccd854c4",
+   "descriptionSha256": "389839b9994a71b735feec95c6a46fd962f73f541159c9e5ee335cc77c44d4ca",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:479bc3a50f7c08af:procedural-skill:d7e168a2@1",
+   "conceptKey": "nmc-concept:479bc3a50f7c08af",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:294df90fa979a2c98aa26242b1a135b31a7f9fb21d7f2c28ccf6d522f204aaa1",
+   "code": "AN24.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the phrenic nerve on a specimen and trace it from its cervical roots past the lung root to its diaphragmatic and sensory distributions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "4854033ea7f0e92d78a67c64d0921761c72dd46cf4a6a23b281cd453556c8b2f",
+   "descriptionSha256": "26f50b8896c25e9328e2e686c31b5eaa16ec8145e9fd7ac409c8177a7a66e904",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:685686cd26bfa7b1:mechanism:18c25137@1",
+   "conceptKey": "nmc-concept:685686cd26bfa7b1",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:71fe6672d0b017e6e1369606b56f1d61e78f72d5bb77f1915dc2d348734122da",
+   "code": "AN24.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the trachea from its cervical origin to the carina, estimate its length, compare cervical and thoracic relations, and trace its vascular, lymphatic and neural pathways.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "daccb2f8ed602f3c65233e05a9f07004d2ef235800bfa570d47df7197e19db93",
+   "descriptionSha256": "3261dc16d6a43d6701698e133e8d341bb8410d7a33314161d7b2d0008e346c1b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d8eb0db8b0074d54:procedural-skill:f4274b2a@1",
+   "conceptKey": "nmc-concept:d8eb0db8b0074d54",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e61bd5cce5935e4384c714771ad728be733801961abadd31f939245eb838c939",
+   "code": "AN25.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify both specimens on microscopy and produce labelled sketches that distinguish the tracheal wall from intrapulmonary airways and gas-exchange tissue.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "fe0cb0b72b82822d432f7f8a3b26c061986634ced1be62d459e26e478a25208a",
+   "descriptionSha256": "8d9bd8ce1d28e4d770be0251b825b661a2edb9f76441d9eca4ad1ed5068aee83",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:dfdce96beb742dee:mechanism:d27aa378@1",
+   "conceptKey": "nmc-concept:dfdce96beb742dee",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd",
+   "code": "AN25.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the development of the pleura and lungs.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "2d6100a4d709f301c7c36e51dc8e6adaa8734a4773b32466835755d382c59634",
+   "descriptionSha256": "d7940569f58db0a67fd449e19079eddfae12c422eb8056956d56fd0b1744cbee",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:218166fb9b271b0e:mechanism:48e1b065@1",
+   "conceptKey": "nmc-concept:218166fb9b271b0e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5e28bc3611dfe0b0b6c67ecd49957ae50fcdbb3c595c30b0af8ad144b36993fd",
+   "code": "AN25.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the development of the heart.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "2d6100a4d709f301c7c36e51dc8e6adaa8734a4773b32466835755d382c59634",
+   "descriptionSha256": "d7940569f58db0a67fd449e19079eddfae12c422eb8056956d56fd0b1744cbee",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:218166fb9b271b0e:mechanism:7e00e7e0@1",
+   "conceptKey": "nmc-concept:218166fb9b271b0e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:11ba98856c43deb2f4f028bafafb2beacbd5240a36b4025eae6216eaeca466d7",
+   "code": "AN25.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use developmental diagrams to explain representative mechanisms for atrial and ventricular septal defects, tetralogy of Fallot and tracheoesophageal fistula.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "bdd6763b830576f127eb563c6609682619a353a5e9536d8fc6334700069e72c5",
+   "descriptionSha256": "349a94c8e5f10e28093daee9ad87e4cd6ea3fad5154d6321f9343fb95baafa4a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:218166fb9b271b0e:mechanism:b9e7f46c@1",
+   "conceptKey": "nmc-concept:218166fb9b271b0e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4d6da4cc1317ef47b1af2644b046cab53e9500a461f8c091255efa323e2a2171",
+   "code": "AN25.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use separate sketches to relate abnormal outflow alignment, cardiac positioning, ductal persistence and aortic arch development to transposition, dextrocardia, patent ductus arteriosus and coarctation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "b4f9a11758e3099185edb9cdd7c2c7fc02ab4887b718dcde603611ffd1d9c407",
+   "descriptionSha256": "9350ac9b8107ee35e68d3ec395016a77923fd77fa86124ef780efde5693115c8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:218166fb9b271b0e:mechanism:7a387a47@1",
+   "conceptKey": "nmc-concept:218166fb9b271b0e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d16477c090b3f238a5788b2d24992ab9867fbd76e0ad0620d4efddae4fc1953e",
+   "code": "AN25.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map embryonic aortic arch arteries and venous channels to the adult arteries, SVC, IVC and coronary sinus.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "30f6e2e47004b01fe3fa72faf0a559c8737cd5967253b4be2798656f100ab9cb",
+   "descriptionSha256": "abe71872db9e924fda11a9e22681aef6fc9db618b13feed6a7d825f46bdac132",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5aaded3073e90816:mechanism:82d713fb@1",
+   "conceptKey": "nmc-concept:5aaded3073e90816",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9b7d97802d91b4e29f9651b342f185a6796b981ae05742f4771ac3b712bfcfd1",
+   "code": "AN25.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace blood flow from the placenta through the fetal shunts and back. Use pressure and oxygen changes at birth to explain each major transition.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 123,
+   "sourceBodySha256": "5379b04e8bab0b599f32d5b338494f18773d2fc3576cdb618d25ac03c68ec45b",
+   "descriptionSha256": "b3bbeeaec661d28c148be0e97f06ad4900579014adf8790560db577f085d1b13",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3d728e096c2ed898:procedural-skill:c66d8aaf@1",
+   "conceptKey": "nmc-concept:3d728e096c2ed898",
+   "existingConceptId": "C-84182a33-36d3-433f-b9c7-eb63b3133e8e",
+   "referenceId": "nmc-2024-ref:d6b2c435a14376fe61bf446258ae3e05016a1ce9c139e73ef6b130224b22644a",
+   "code": "AN25.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a normal PA chest radiograph and identify the visible bones, airway, hilar structures, cardiac and mediastinal contours, diaphragms and costophrenic angles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "49f499d6a41780733cfd13cac821538bbc6184651532c7b9c8e32948ea05ba9c",
+   "descriptionSha256": "1aeb72e61648f0dacf38c3140f199c4c2627b45af28dff224e64610dbb2e0ec0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ab39ecdeff2f1e0e:procedural-skill:175a4ef1@1",
+   "conceptKey": "nmc-concept:ab39ecdeff2f1e0e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8db929f26c797e149bf71881db6b14c12ea0227e9ae014b9df982494d1e60971",
+   "code": "AN25.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify a barium swallow image and describe the contrast column, normal constrictions and its course to the gastro-oesophageal junction.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "765a8730c7c2311d74e8d03b909a06716d3767d019b986bcf8d3793f0f4704c3",
+   "descriptionSha256": "0532808ca4a4c2e8c6948eb3951766320beb49a30552240b7f7eaa19879d3600",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:cb80f21d29097943:procedural-skill:719b52a3@1",
+   "conceptKey": "nmc-concept:cb80f21d29097943",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:8cede089e203be25fc78e0755eb996e88741f2bb9f5a4ae2865eec87840b58b5",
+   "code": "AN25.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a model, mark pleural reflections, lung margins and fissures, trachea and cardiac borders. Mark the apex beat and distinguish projected valve positions from auscultation sites.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "21e47bfb2b3d496121b82154b67485df5cb64e2c51c28c8ac8beaeb19dc95e91",
+   "descriptionSha256": "c1f44acf4160d686083dce4e097bc172b485b7c98d2df53c1600341872bbb991",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:3323d0d9@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0b34e88fc8dde8481937d401e1a0c517302926d1d140e3f4ca8f90602b7d9fbc",
+   "code": "AN26.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Place a skull in anatomical position and identify its individual cranial and facial bones on the assembled specimen.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "d242554705b9cb733e8669a0d5120c6af8884cb393506d8897b61ad8a78575f5",
+   "descriptionSha256": "6d87df84401b13618b2ec4b4affe3726300a0987f4f2ec41040dde2cad1ec818",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:0a15a805@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bce4b96de424ed243e34f6623894e4e41970952bd89573b17eeb42d9d72612a2",
+   "code": "AN26.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Rotate a skull through anterior, superior, posterior, lateral and inferior views. Point out the defining landmarks and sutures in each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "8c9638e00a9eccdf89927cae1889405fbb2d017c763075df45fd642f63a0509b",
+   "descriptionSha256": "6fb13eb771a42b06edc4f3eefd55b4c84f0e4b0ab0c5ef3616fa9e4d089301de",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:a8ab81b6@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6f3505a8dade3f8f68729e3204f4cd0d4e0c04f0b523b6b29485548a3c738e8d",
+   "code": "AN26.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the cranial fossae and their boundaries on a skull base. Locate each major foramen and trace the nerves or vessels that use it.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "b2c3ea234f768b827edd42e14f39514d61e89ff5da7893b0924e58d841572808",
+   "descriptionSha256": "e00ef0dca1dc37f3240fc82bbf2c06b212905a335a1681ebf1a28b434326ee67",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:6d887448@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ed4f719e912a42534fb44f259a7cde221db796c6cdc892ba173c3409681b052f",
+   "code": "AN26.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a mandible and identify the body, ramus, processes, alveolar part, foramina and grooves on the specimen.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "02cf7e8caca66a2e5c544fef2d4f3785ff2e82c19252e21b295948fe0d405256",
+   "descriptionSha256": "ee2eb8cd3c52b44e83e242793684df53da4183e03034797cdf5321e5a57bb644",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:46db6608@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cb6319cb2238011d42c4d052bf6009df3699053b633b25916200e37cee28388d",
+   "code": "AN30.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient the skull base and identify the boundaries and representative structures of each fossa.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "8806df07b90b336bdd5ebb26ab04b650cf6c0df75f6423a51b0b4fa9aaf68c91",
+   "descriptionSha256": "b644a77c6092db1efc94583b5e8441e8e154218edc50661fc612facab5db49fd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6157e0ab74bbc87f:procedural-skill:83683546@1",
+   "conceptKey": "nmc-concept:6157e0ab74bbc87f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6a9af2a1517646643430b8b2f7edfd26eeac6909ed033bcbc88efbc3a751890c",
+   "code": "AN30.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify major skull-base openings on a specimen and assign their principal nerves and vessels.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "7b75a88483545eaa9fbf831228719be46399a3c6231556c7049d920df0ac7155",
+   "descriptionSha256": "52466489b70c150a65f3cac5672f713cc61041e188858d0fea11bfbc7d69d459",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9a1927c47b81ec0a:procedural-skill:8d1b85fc@1",
+   "conceptKey": "nmc-concept:9a1927c47b81ec0a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e7e25b3b3e212781bc48013a08704b18da909240b921702ff73efa8de8ccc079",
+   "code": "AN26.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Sort cervical specimens by their distinguishing features and demonstrate how the atlas and axis articulate and permit movement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 124,
+   "sourceBodySha256": "9a5b0df42586706cc6282ecd115fb194293a604985567ec4dc89caf2677afaab",
+   "descriptionSha256": "fa5f025182510aea43e995239710c917b08fa98b9136ae57477cea8e288841d6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9a1927c47b81ec0a:procedural-skill:c420645a@1",
+   "conceptKey": "nmc-concept:9a1927c47b81ec0a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:47048a8eb91a4d2949f3d312268197ba6fc5091b908b494205e20fe0d0a41630",
+   "code": "AN26.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify C7 on a specimen using its spinous process and transverse features and distinguish it from adjacent cervical and thoracic levels.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "7334cdc70e706e69810e95a3244d8600dbdb2cabbf8fa5b8ba9a9e361666e552",
+   "descriptionSha256": "7e65186605ef3798fb22005487ab6506adfef8a9314e332e3c7e58e96c9cd3f0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5c329645d45a3570:procedural-skill:32092505@1",
+   "conceptKey": "nmc-concept:5c329645d45a3570",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a9e7a9568e0a2b1090c6900059e4d627606031991b20133ad11824d7af0dc37f",
+   "code": "AN27.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a model identify the five layers and trace their arterial and sensory supply. Explain profuse bleeding and why wounds that divide the aponeurosis gape.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "fc6d2b1f4f0fcdd2666fc83583913881cf3e37f13eaf7ace17001a7962bde7f0",
+   "descriptionSha256": "643e79863a79a2a5f2e39ea93ccd2b5dee138a6b87210268624bf56cc48cbffc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5c329645d45a3570:mechanism:d8d10179@1",
+   "conceptKey": "nmc-concept:5c329645d45a3570",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:58e711b15936b416054519a27f276fd50f45eadc77a28c84c8b3d6422fb7a116",
+   "code": "AN27.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram an emissary connection between scalp veins and a dural sinus and explain how it can transmit infection.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "a265d2019ea6dead38c59ace0e72e2c32cefc56e82f26027184af9d77938a7bd",
+   "descriptionSha256": "0683b4f0ba5baa009081fca529d8665e3555747781de703417e0e1e50e10ed98",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f6c8a2ee1bd1fc4:procedural-skill:663c249d@1",
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3db04f51aa6f605c6cc9d2bed6cbfdfe61dcb7fba90119cb857827e1ed078c15",
+   "code": "AN28.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate facial movements and identify the muscles and facial nerve branches responsible.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "5c9a3ee749b4e0a4db95baae0e3e0a3aca05cf67b4b5a7a8143a8a2612584143",
+   "descriptionSha256": "6dd030faa9eca31b7343dc56828e5cad7f509ea97f266b3925b789a255709c7a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f6c8a2ee1bd1fc4:mechanism:a1b06f33@1",
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:739389f8994bb09cb641ebc976ab66f71ae150526c34ab84b9b8006cf0028cb2",
+   "code": "AN28.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the cutaneous territories of the trigeminal divisions and identify the cervical sensory exception near the mandibular angle.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "229881d2043ec0c5c1dce11a9a47438c33250a2b2eaaa83f062752ab8f9e543e",
+   "descriptionSha256": "8486fc00594659c020ba2d2127181c309e0a099950c04a8bbf68277e914a1d8e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f6c8a2ee1bd1fc4:procedural-skill:0ded7f81@1",
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:08b122fbfb9efe49038a6c11a348135f592904ce6b32026bf4f21927535e0e3a",
+   "code": "AN28.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace the facial artery and vein on a specimen, identifying their origin or formation, course, branches or tributaries and endpoints.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "9ddd00dc4dfab683a6e4b561830d7101eba0eab86c187605ff605da26297cb13",
+   "descriptionSha256": "95bf4df4121c4d85a32690264d8c33b5ca1fb082bd1c1adbdcf82b80332721d5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f6c8a2ee1bd1fc4:procedural-skill:388f2134@1",
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:afd84a7ce06c1bb0379cd58b19e7934096c7669dab864c50b48058a2b46285dc",
+   "code": "AN28.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify superficial muscles on an image or specimen and pair each with its innervation and visible action.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "97a83131afd646715a1f341b055e8abaa3dd51bbb3c8ea1db75371dd12a6c1ea",
+   "descriptionSha256": "2c85a5b445d0968d1526471779581dea9466e2f48486e828ed17191bf7f4db1e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f6c8a2ee1bd1fc4:mechanism:92da8686@1",
+   "conceptKey": "nmc-concept:7f6c8a2ee1bd1fc4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:89f3e99d6a7abb2aa88ccd79f4d520e853edd97cebe7feed4c5846a8ec2dbefc",
+   "code": "AN28.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the connection from facial vein to pterygoid plexus and explain its relevance to surgery and infection spread.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "bb95c88cc3d8e071e2cf0d88b50fbd81a55a0b364682d1a8d5a807605a807368",
+   "descriptionSha256": "e7029289acfd8dfec7d598ba00377b347d682aaa5381880f21e0eaa7a6047ce4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8e68531e70b2fa5d:procedural-skill:148a28e5@1",
+   "conceptKey": "nmc-concept:8e68531e70b2fa5d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:030be2cf0a8fb95b2ae27bd3a059cf0d480618463200401fdd4dcd1e0cce67d1",
+   "code": "AN28.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace facial nerve branches from the main trunk and match the peripheral branches to the muscles they supply.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "610a5ac2c0a341bde4233742f665644aaebf1c00eb7d07ef01fce8a78a2c4e38",
+   "descriptionSha256": "2f5c09c9cc00a00a2385d1ea3d29510ef5137ae4d2001f4eb541212bd2e92199",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:198b8fa9a1b18a66:mechanism:61921df7@1",
+   "conceptKey": "nmc-concept:198b8fa9a1b18a66",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d827b33dc216f6c74bac2f2cc74cfff5594887127d865eb307b9ddea4d700d61",
+   "code": "AN28.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map drainage from representative scalp, face and neck sites through regional nodes to deep cervical chains.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 125,
+   "sourceBodySha256": "7e597b3c739bf4c987018f40eaa0224c5e662bf5801bc7472b292c1776080a5a",
+   "descriptionSha256": "e636981e313860bcbf9cda553cb06d4710169a89a1f146516cd5f9fd4a13636b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:198b8fa9a1b18a66:procedural-skill:ea84778f@1",
+   "conceptKey": "nmc-concept:198b8fa9a1b18a66",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1028a68d67bbd73497e221fbb27c0550a8ab05cd7a86238ac618c3e8510fd764",
+   "code": "AN35.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Locate the main cervical nodal groups on a model, trace their drainage territories and use them to localize possible sources of enlargement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "1369a639a4f2c1def35a24c27100eee55c823a7d12a4f0b448c14c37756f0408",
+   "descriptionSha256": "c2edf6cd6118067e0a9b9f741d9ac3773fe28d518a05a54ef06e4734a65b91f3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:75455d59333689d4:mechanism:159bca21@1",
+   "conceptKey": "nmc-concept:75455d59333689d4",
+   "existingConceptId": "C-f0218df1-d3ae-4ae4-afd1-2c2cd3a6224b",
+   "referenceId": "nmc-2024-ref:0b49855fc32d2bc2cee5364f606de80299b1b4fbdd38ca14e35d1ffb2796dc4f",
+   "code": "AN28.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare facial weakness from supranuclear and peripheral lesions using upper and lower facial motor pathways.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "38c74b562458562c46af23d3d6b6d42b88051f46f930df74644bcd057315cbad",
+   "descriptionSha256": "ce14d00a012240231ff51f19b1e9fe6eb108bf4d996bcfea2c3ffa9c850376a6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:617f63075fcd95d4:procedural-skill:4570d970@1",
+   "conceptKey": "nmc-concept:617f63075fcd95d4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e820bd8908da31ceb6accf6af23e7349612765a0357f026ccd17d8aa1475d7e6",
+   "code": "AN28.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient the gland on a model and identify its borders, surfaces, relations and contents. Trace its duct and secretomotor supply and explain the facial nerve's surgical relevance.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "b82ed5628f84e0d32841477c85a2353f7e1f0400c650f0b0f352968545eaa331",
+   "descriptionSha256": "fc2841636030d7e3a239b4ca7a6d8c4bcf79f07c4aff77515614afecd6f2e935",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c76351af60d4ac46:mechanism:8896822b@1",
+   "conceptKey": "nmc-concept:c76351af60d4ac46",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:215a54022529d818c67afdee18b39781281c327f1fbb2c55d412f1455b5dd491",
+   "code": "AN28.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the normal parotid secretomotor pathway and explain gustatory sweating after aberrant reinnervation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "17db3e84da6e17cf481c929e290ba3e115dd99e96fd86ea84a16a87f620ae9db",
+   "descriptionSha256": "d557056ecba1faf2702ed77cee7805aff975085df7786df573b43d85b9106ea5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e12f2c45c81fae9:procedural-skill:003035ea@1",
+   "conceptKey": "nmc-concept:7e12f2c45c81fae9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9b9485dbd233fbb29b09d2f5b04991af91a123ea1405eb57dbf6d0e5cbba2e66",
+   "code": "AN29.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate the boundaries, roof, floor and subdivisions and identify their key neurovascular contents.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "23ad83907f67335dd6cf4e32c485d4421b1100f513c9adbf56484027d240421f",
+   "descriptionSha256": "d3c59faf140e14fdc0cc0231b64eeafd529b5ab78f0f0bfdcb3f9b1e8a00eb51",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e12f2c45c81fae9:procedural-skill:61d69166@1",
+   "conceptKey": "nmc-concept:7e12f2c45c81fae9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a07f4afd87b6d736a904276d1aca7f68379bfe3802d92d9a6da3c3a8bc6431df",
+   "code": "AN29.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Show the attachments of the inferior omohyoid belly, anterior and middle scalenes and levator scapulae on a model.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "d02b152f3cdc728d836eb93881181a8e7820459cf1f5c360a3cd34bc23237bb6",
+   "descriptionSha256": "e1cd537a56ea37f53a8d68f02e0ae764a188b00cb4ce6081980a43416cff0e8b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1224fb793014076f:procedural-skill:1c918ccb@1",
+   "conceptKey": "nmc-concept:1224fb793014076f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d896be94b196b089b17e232c23094409bfb5a0e67eca61eb925362da1dbabb87",
+   "code": "AN29.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Locate attachments, innervation and relations on a specimen, then demonstrate unilateral and bilateral actions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "d9394aad5b91296b5d219dc9925f3411eabcfb73b2a5c96d79119b2656df4a09",
+   "descriptionSha256": "8929657ecd812f2d3e539d8d86073283eccf487036df420d9382f5d88c7c7e8c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4b4295ea9d77fed0:mechanism:57fa092f@1",
+   "conceptKey": "nmc-concept:4b4295ea9d77fed0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c74196034f600a466ef9398a9101160a67be1072129c98642ebef1130fff133f",
+   "code": "AN29.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use sternocleidomastoid actions to predict the head tilt and chin rotation from unilateral shortening.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 126,
+   "sourceBodySha256": "a7215ca130f4fe2e9595d3f65bccbd99799bbe52b0f2a5e286afd15ff02fa131",
+   "descriptionSha256": "2ef286e1e46f21bd3cb9d810c1f163d13a813a65661295395fceb42011451a73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:318c491a7333512c:procedural-skill:891f00ee@1",
+   "conceptKey": "nmc-concept:318c491a7333512c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cf4e7673e783b4f072f8c2c0df7d01506e0ee9f05074a1ef4847c38cd73873a3",
+   "code": "AN30.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the main dural folds and associated sinuses and trace their drainage toward the jugular outlet.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "f42a2ba9d78c6ba1bf604a76bcd2940d5ee74f02283be1f24782fecd8aeb5694",
+   "descriptionSha256": "30a3799d20b4a9dc2513b602eb8f29255c4a6444130fa131c337aab6ba5b999a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:318c491a7333512c:mechanism:37cb9d6d@1",
+   "conceptKey": "nmc-concept:318c491a7333512c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:38506d0c7317aa04a4b09f0eba8d722cca169f2548efd5483ed4a874d2d6f909",
+   "code": "AN30.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain routes of thrombosis or infection spread and localize deficits using the structures related to the cavernous sinus.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "0484a57422b11f88898efc6da0baef80ffd5793519142a2c3010819691dba0a8",
+   "descriptionSha256": "3cf8a6b3c7d58a7947a42f675dd4c6931bae11ca416dabed131cf33cc92c119f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:89a4a5413cef8166:mechanism:63593a8c@1",
+   "conceptKey": "nmc-concept:89a4a5413cef8166",
+   "existingConceptId": "C-aab0f877-59bc-4753-a8df-a0457d082ab4",
+   "referenceId": "nmc-2024-ref:0b9dc26202129dd9898047f47e9f5f295c68c7e9410a6deec94ab381b18da21d",
+   "code": "AN30.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of visual field defects from a pituitary mass.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "a785cb0ef1019603dd244042b4c292901d2c6090c0d33f10ac66751ae7fa51e8",
+   "descriptionSha256": "fb1975443b9804cae5f395045ae1e7e41bdb17ecf7137df23f3fdd4e41ef9205",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b61bcfc7ce2fc40:procedural-skill:80d0070f@1",
+   "conceptKey": "nmc-concept:8b61bcfc7ce2fc40",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:891435aeef9d617c5ca01dfdbc63cf8d821b5972368d7b71e940b4caf1f5bd2b",
+   "code": "AN31.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the extraocular muscles on a model, show their attachments and explain actions in different gaze positions and their clinical testing.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "2e688748a2b7db7b6dca8472fc1de09917c32a658bc1a4df64fabe8bedb3d2e9",
+   "descriptionSha256": "5d5bc7c4a52c20df4f8bbf345884349d263d1ca68976df5fc4d3ec662d182db4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b61bcfc7ce2fc40:procedural-skill:44a1d09e@1",
+   "conceptKey": "nmc-concept:8b61bcfc7ce2fc40",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:fb04b2013f52170aab90ad8500a3c49b3ae616321f92a872dd30cc0c52bc3988",
+   "code": "AN31.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace the major nerves and vessels through the orbital openings and demonstrate their relations and distribution.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "09ff1580f36596e85f142edb4f5ebe50793ed1558724cb40f3efda608a55eec4",
+   "descriptionSha256": "d1134905f64e319ec0dcf05fb05d7be0f7abb120326bcefc735ed627a86f6479",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:95179d70f5b25827:mechanism:3d97a65e@1",
+   "conceptKey": "nmc-concept:95179d70f5b25827",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:93d7256d9713852c60e02c41487c50eb38a0e85ee9193df1099dc55abf6d5124",
+   "code": "AN31.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the oculosympathetic pathway and relate interruption to pupillary, eyelid and sweating findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "5d33af4992bcf561e4fb1dc9e7c2b959f4f96785d1cf418ba40634a0370ba073",
+   "descriptionSha256": "1ec23834f5153c965e646c69a04122b332e8fd9b375d1fd7353669d423161039",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fd929987de23d437:mechanism:e3218df2@1",
+   "conceptKey": "nmc-concept:fd929987de23d437",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bf5e339554f062601229c83c6f1fe5b5d26077eb783a01018948c9b762079855",
+   "code": "AN31.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram tear production and drainage from the lacrimal gland through the canaliculi, sac and nasolacrimal duct.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "fde7b1b61d0d09512d90e8eff039eda7c4ee57f4390d09ce17b9db09a5b4fb4a",
+   "descriptionSha256": "8e99f28bda35cf2ab32fada93f3a7e9683602b50dee184c78c408a3d8f0f260f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b17a051d552a0197:mechanism:97e488da@1",
+   "conceptKey": "nmc-concept:b17a051d552a0197",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2890f10b2a314a9d5b13023606665135ea569584424093537e93156f079cd853",
+   "code": "AN31.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Predict resting alignment and gaze deficits for lesions of cranial nerves III, IV and VI and explain the resulting strabismus.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "93aa042659bccf57ce73cfc54fdf95eb8df40654648e8776c96f6fc01cad038f",
+   "descriptionSha256": "e48e3f12473ddd5fe5a186dd81f7f11813f2386b04a3757c8587a21e2ad4b016",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f4714ff776c139bf:mechanism:46e75ea6@1",
+   "conceptKey": "nmc-concept:f4714ff776c139bf",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:53b1cfd7cd9f5cc62d0153e2a3a1f24971d4e5baab2522ec3cecdc3df3afcef7",
+   "code": "AN32.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw the boundaries of the anterior triangle and show how the digastric and omohyoid define its subdivisions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 127,
+   "sourceBodySha256": "6539853536a57f39bdd66101da8028d29df86cf41753a9dcfa9291e75a94d462",
+   "descriptionSha256": "b593aa7a9798679a3c4bafddacc07b71f637f29f65963f25f74c6130d203ac49",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f4714ff776c139bf:procedural-skill:1094169a@1",
+   "conceptKey": "nmc-concept:f4714ff776c139bf",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:902dd2fc5d690ed752385d4aba43c2ebbc145a4f623eef450a9722705fc151c3",
+   "code": "AN32.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Outline the muscular, carotid, digastric and submental triangles on a model and identify the principal contents of each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "ee7d1074e89cd2f73aeb8fa7e6ff1300c2820620de91f3def7aa539904ec76e6",
+   "descriptionSha256": "170fbad76e407e024394a8ac884ca2ef0868eb5f7fb806e0a47efb84371e56af",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:664e4f763bea048b:procedural-skill:8448771c@1",
+   "conceptKey": "nmc-concept:664e4f763bea048b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2f9548faf171ceb12e77050b9152cd49d87cd5e549b8bd8b92a6906ce074fe5d",
+   "code": "AN33.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate boundaries, communications and key contents of both fossae on a skull and sectional model.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "81ce6ea58b3758e850c91d2add956ae9d88609f582b0c249cbcf03458ec2a680",
+   "descriptionSha256": "ec43aa433199c22cd6e261add5649ad5ad69d437b7a566ff895f403fe6065ae0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:664e4f763bea048b:mechanism:5c557312@1",
+   "conceptKey": "nmc-concept:664e4f763bea048b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c10f726e7a1270a55fe1482fd45016f9e5c5afdaabf9f638a0575f541768fc49",
+   "code": "AN33.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map its venous communications and explain their relevance to infection spread and bleeding during deep facial procedures.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "93572d14786274cbf6435e1ae4221620a0154ef66c99b611d52463fe736f596c",
+   "descriptionSha256": "d001f2d1c6a656712ddeec44dc6a5edfa7a74aa82d4b87622a4a4a8394cc4ec5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c52b292238f41e1f:procedural-skill:0386d5b8@1",
+   "conceptKey": "nmc-concept:c52b292238f41e1f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c28290d055350a8bd5197015547b1d441bd14f46a7290daf2f30ee17f90d3bf2",
+   "code": "AN33.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify attachments and fibre direction on a model and demonstrate jaw movement while matching each muscle to its motor supply.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "f5ef4588293153aa68501fde17b892ace88c2c33e092ea20dfccc1263c43ee37",
+   "descriptionSha256": "9c191c08c7d12e9c4f77141c95022bd6606427d1087c783b671e979a722d9c68",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f44422dcd426ec97:procedural-skill:25bf1582@1",
+   "conceptKey": "nmc-concept:f44422dcd426ec97",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:be7cf5ab9a5652ef795caa14d67be11c0cb7a40fc32ea6fd6914e0937eb26850",
+   "code": "AN33.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the articular surfaces and disc, classify the joint and demonstrate rotation and translation during jaw movement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "75735069e0a8ba68412e56ebb39fe58f35bdee2016bf877636a9422a600c883d",
+   "descriptionSha256": "d0d6fe9f3267d3e40d3febd423279bfeae5b4ead3c432bb5c3ba06ee2597c234",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f44422dcd426ec97:mechanism:36d74028@1",
+   "conceptKey": "nmc-concept:f44422dcd426ec97",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:17f8e323e03186803b0d05d2029b8e5a578a49f647d9ec5ca134a6805736b632",
+   "code": "AN33.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use condylar position relative to the articular eminence to explain the typical open-mouth presentation of anterior dislocation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "0e2f8204487a7205bc43fed5dba7334b7f99a244225ae081fe1b2252c886ce1a",
+   "descriptionSha256": "9b38e654d50b9a412161aff9875f1e3de552cd0e711c2a0fe7138ab867493f85",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:108ed07b5aac8f3b:procedural-skill:c778fe91@1",
+   "conceptKey": "nmc-concept:108ed07b5aac8f3b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9409131d7c8292ed35da1b4e94d3fd93e260691fb0762cffa62fad7b6d60bbeb",
+   "code": "AN34.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a specimen identify superficial and deep planes and trace the key muscles, salivary glands, vessels and nerves.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "2a309cce8e6e72aadefd3f5961b375b9afb68063c8261e24e6df6e1cf451a0ab",
+   "descriptionSha256": "7b74ff6041e0c2661f110c19a58eb2c6a53a9993d0ace763db5cf3b7c1e563ef",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:108ed07b5aac8f3b:procedural-skill:d6397bdf@1",
+   "conceptKey": "nmc-concept:108ed07b5aac8f3b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:27debbe9e82631121b2301fc310aedaf84d01ee0e51821070c6093ef86dc2289",
+   "code": "AN34.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient the gland around mylohyoid, demonstrate its relations and duct course, and trace the secretomotor pathway through the ganglion.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "419cc5538ea318c693162c6b1096c23dcd0ee1119c98e3a69ba60fcb5ad134bb",
+   "descriptionSha256": "745e8f2415fd066f3eb5a92a86335ab6dc34cd649cde31649ae1ec48a73d505c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:108ed07b5aac8f3b:mechanism:914ae5ce@1",
+   "conceptKey": "nmc-concept:108ed07b5aac8f3b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:985cad26020fd666db285c798fa52b1f1bd380db11656451f5e2c7d91b171a9a",
+   "code": "AN34.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate duct course and salivary characteristics to stone formation and explain why obstruction causes meal-related swelling.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "b070041a133f0caa19631528a50bdf52d5b1875e5317c57eacbd10beca439ed2",
+   "descriptionSha256": "d3caf5987f0662f324a8cfcd14ec253d5487d17d769ff9e5b08c4ab29945b6b9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:928089f63a78e369:mechanism:b90c7abe@1",
+   "conceptKey": "nmc-concept:928089f63a78e369",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:60b6986859fa065d718251a1ffd58c26b3a844f3e8171930cc3d9c4969b1299c",
+   "code": "AN35.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sketch the deep cervical fascial layers and show their attachments, longitudinal extent and major specializations.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 128,
+   "sourceBodySha256": "e6113cb027e1658760d7b2c06da5f62cb854f65fc9f4f2440099428f225e7b7d",
+   "descriptionSha256": "52d2f357c6c02e98757afd861ecbadd71ab155cbe55ad79693c9aebdc7a2ffc6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:928089f63a78e369:mechanism:c4261f9b@1",
+   "conceptKey": "nmc-concept:928089f63a78e369",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a3f739d16be122be44ddd465275488f10f2184b78d73876617982b9bbe689f67",
+   "code": "AN35.10",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram the main deep neck spaces and distinguish the pathways by which infection can spread into the mediastinum.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "77e0ca51b055d27ca1b14790e6b186b591d6172f1c5ccd5690a642563c8afac7",
+   "descriptionSha256": "09bdb0d655d7ab7f84b34f8d4254a7bdf9e8fa68a3a55a0ca45b096efb892888",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e934860c192176f:procedural-skill:430c534c@1",
+   "conceptKey": "nmc-concept:7e934860c192176f",
+   "existingConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "referenceId": "nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831",
+   "code": "AN35.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Describe and demonstrate the thyroid gland’s location, parts, borders, surfaces, relations, blood supply and applied anatomy. Briefly describe the parathyroid glands.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "59542bc47c0f1d522d038b4016f8430de7b34a969be3dbb6d824ef69322aad33",
+   "descriptionSha256": "9656f240cc99f9e72c1d4ee7f81c795e5d768b915aafec9829d1b7356bef5271",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e934860c192176f:mechanism:01db63de@1",
+   "conceptKey": "nmc-concept:7e934860c192176f",
+   "existingConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "referenceId": "nmc-2024-ref:aa78f36321c9dd4dac8413bb187dcf14d2842d26f43fb06276e7f37c21068642",
+   "code": "AN35.8",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of thyroid swellings.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "42ad7701a955e0c03878a28806ce9389d91d4b287f826e60a518bf44e2ad59b7",
+   "descriptionSha256": "cc36d1302a4c876c04989db9365352726d1517517678fdd3d1dd2787cf530ceb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2c99f9a460417b01:procedural-skill:591ff4ba@1",
+   "conceptKey": "nmc-concept:2c99f9a460417b01",
+   "existingConceptId": "C-9f13c669-ef1b-4950-b382-34719d38383f",
+   "referenceId": "nmc-2024-ref:0434e86b3bc48a9bd26bc40236dcda2a812d5914768d706c8db131511a680831",
+   "code": "AN35.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Describe the anatomy of the parathyroid glands.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "59542bc47c0f1d522d038b4016f8430de7b34a969be3dbb6d824ef69322aad33",
+   "descriptionSha256": "9656f240cc99f9e72c1d4ee7f81c795e5d768b915aafec9829d1b7356bef5271",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9e05fa088551f131:procedural-skill:70c78c72@1",
+   "conceptKey": "nmc-concept:9e05fa088551f131",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:aab2ef25bc5992dae98b46bd2c5ca1855cd26d96a3c1e1e5e7363510aab56a1f",
+   "code": "AN35.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace both origins and the artery's course relative to anterior scalene on a model, identifying the three parts and their principal branches.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "b5204ce885b80960b3ca86ac8a8a7eb2142d020f7114811f41501650ae16ab45",
+   "descriptionSha256": "4a41fff2fab0ecfc7c7daba17f27d8b2f874713899142cd39e551cd280f77cf5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7f87a95f9603c737:procedural-skill:a0e22d77@1",
+   "conceptKey": "nmc-concept:7f87a95f9603c737",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:38cb85bc98826c3a4c65132519b8ac9aa424cfa69af18097744595d60c890b0f",
+   "code": "AN35.4",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Trace formation, course, relations, tributaries and termination of these veins on a model and distinguish right from left brachiocephalic anatomy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "6637bd083cfb61588d5bdf7476e3ced3f5da381d9bc400e406750894f3e1860f",
+   "descriptionSha256": "8139ad196bbeddfa3caf24866a5e3fef9fa7e624378b5f1f07fd191be8e3f68d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:eca25a0fc7b39cd7:procedural-skill:affaf8ea@1",
+   "conceptKey": "nmc-concept:eca25a0fc7b39cd7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:220e194bb4153f6e405863f486e8e53eb9c0b19f6479d6dab900f4070a6d977b",
+   "code": "AN35.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Describe and demonstrate the extent, formation, relations and branches of the cervical sympathetic chain.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "d5d4cf7488850f1429abdedf8f71cea734a62ac0506a369ffd182369d0af9395",
+   "descriptionSha256": "f25942f2a3db4c844d7970156db58e55d45a6c800f11dfeb582d294b708e23a5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:253100cbc7fa3699:mechanism:7fb0bf5e@1",
+   "conceptKey": "nmc-concept:253100cbc7fa3699",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ef4aa733e92e0a8d622a9386ae91209d13e6220fbe6df8a99d6e8db123ec20a5",
+   "code": "AN35.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace cranial nerves IX, X, XI and XII through the neck and identify their major cervical branches.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "89c879a832152d80ae14a495419027e69a1b2275752d61420353204f7588c24c",
+   "descriptionSha256": "00c8a34e184b7a83d08127ca7e0c14db70d19c4ee74e00d44afaee753e301714",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ee130cfa296d2751:mechanism:ea5c87bf@1",
+   "conceptKey": "nmc-concept:ee130cfa296d2751",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c2ef106d0a02b452be2643cc8d927a4f6e0fb8739f1a27d8479434ea5d4b4145",
+   "code": "AN35.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare vascular findings from subclavian arterial compression with sensory and motor findings from lower plexus compression.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "4367e5a5db5ed7505d535bd1f5e2be718b2936c57867cbb7db07a9643828401a",
+   "descriptionSha256": "5c205d5ef4d0b7ad956e91e0b650d04a12d445028c2a7dcf3ce01e0cf29c2bdd",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9e3f6594a8ad3ff9:procedural-skill:7fa6534a@1",
+   "conceptKey": "nmc-concept:9e3f6594a8ad3ff9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1fb7a8cf949f437095ef43421465b76b9b596c07fa53c70a06117de4329dcfab",
+   "code": "AN36.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a model distinguish vestibule from oral cavity proper and identify their boundaries, structures and duct openings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 129,
+   "sourceBodySha256": "d11cbcd8e3ebc628c42e5a815b6004599aa605475f73ad9d661dc245d5c821bf",
+   "descriptionSha256": "db6ce1d26a9c77f376dbc39cbeb301020006230bcc55894f5a6c645bed5b5b9b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:033f98fc0916c737:procedural-skill:d7a0a3ce@1",
+   "conceptKey": "nmc-concept:033f98fc0916c737",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a0d2e53f90426c35eb24a2966b31540c238f3fe4edafb314bea495a4b039f3d7",
+   "code": "AN36.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify constrictors and longitudinal muscles on a specimen and trace their innervation, arterial supply and lymphatic drainage.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "478d4c2b946b613974aa816c2c95fd67d14d322955236e8d7559eeb49e66dfcb",
+   "descriptionSha256": "2732bfec6ed25d123016f61767b8b2aebc7c540f6a8f5e61ea0349d89a087d04",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:033f98fc0916c737:mechanism:55d05207@1",
+   "conceptKey": "nmc-concept:033f98fc0916c737",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e8af69814d5cc35bd76b8766b933ce5420206df5147a931883030fd9fb99aab9",
+   "code": "AN36.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Locate each tonsillar component and explain how their arrangement supports mucosal immune surveillance.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "b502cd6760e880b11f77de61fca7805bf9b0095ee15ac76a72d8379cd6e05182",
+   "descriptionSha256": "089c5b26c00289828f5f762b1766fc2f54fe44a972b7b1354fdaea15bd25efe5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:033f98fc0916c737:mechanism:0d57916c@1",
+   "conceptKey": "nmc-concept:033f98fc0916c737",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e82186ca655963809fe18e0826a1a1b50c31845cf372287f88e5cfa23107c945",
+   "code": "AN36.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the principal pharyngeal spaces and their communications. Delimit the pyriform recess and explain the risk to nearby structures from an impacted foreign body.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "ba095c0511a09775dbd5e88e82a7f2120c474e6e2d83b859cbb1b2b93807212b",
+   "descriptionSha256": "999e56c756f49a131b6b986ba340fbaa0606aaccee160a6046626306fa5aa760",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:033f98fc0916c737:mechanism:f7ea0310@1",
+   "conceptKey": "nmc-concept:033f98fc0916c737",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c7b5973118fccb0ba0276602f02df95c7a225facebbedceba816c26be4393064",
+   "code": "AN36.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Locate the weak zone between the thyropharyngeal and cricopharyngeal fibres and explain how a pharyngeal pouch can form there.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "d72ce1da5a8e26d32861b96aaa8608b1777c7cd15503f5fca26a44bd89ba5de1",
+   "descriptionSha256": "9b13d62986dee10dfc0fdec7a5d67133f6da84e9aa80f5fe07cdba64baa372f3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f096b839da7ab1f5:mechanism:ff009bfc@1",
+   "conceptKey": "nmc-concept:f096b839da7ab1f5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:592bcfc5aa58b409a28c98f1b58753d910e1ea99c3c7b88cd3c0da8e824fd03c",
+   "code": "AN36.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the morphology, relations, blood supply and applied anatomy of the palatine tonsil and the composition of the soft palate.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "11af99ebe32ed34caf82a9ef5a2bd09dfaebde9869dceb6e420eb630d026a40a",
+   "descriptionSha256": "3cbb523e9c99d8f0f45e0de92b03899f5ab5430085f9c9af9ed383908af67637",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5f980394fe1928bf:mechanism:4b30bc93@1",
+   "conceptKey": "nmc-concept:5f980394fe1928bf",
+   "existingConceptId": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+   "referenceId": "nmc-2024-ref:3daa463e11d9a5cbea79d9425239c92f6298e39f50bb434d135212bc109414f3",
+   "code": "AN36.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of tonsillitis, tonsillectomy and peritonsillar abscess.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "1e45d6fc2f60826cd436bab7ea090c9aa3267ce5cd1a438ec23647042b2aec2c",
+   "descriptionSha256": "b3402ea8dac4aea8a53d29325a8421e94a134454ba3189a2debb1d31c6f2f559",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e2ed6e28b421a6b2:procedural-skill:74190821@1",
+   "conceptKey": "nmc-concept:e2ed6e28b421a6b2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:aa1de5d04c4382c2b5c982385cafb7c5856fdaf9d7796087bb6e35c56168d34f",
+   "code": "AN37.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a specimen identify the septum, conchae, meatuses and principal openings. Trace vascular and sensory supply to the septum and lateral wall.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "cda7eda9edd69a59a8210678cae6642d55a85357fab3e95727818f9b09566316",
+   "descriptionSha256": "3f300a34dd045215bb7b9c13c60c5116e4f7d3d1bb301d8f64bf801930b496f1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:aa47b7cce03b0322:mechanism:1f3b1622@1",
+   "conceptKey": "nmc-concept:aa47b7cce03b0322",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:16f677a0c9d4def63671dbeb728f5692729541e3853c944e014dc97fcfce9bfe",
+   "code": "AN37.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Locate each sinus on cross-sectional images and map its drainage route into the nasal cavity.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "37f3c4248267861a8f5c51d6d98e032f3115332ce541c97220767fb3a7ff27a4",
+   "descriptionSha256": "9e793d7097da0025fe83c5c50a0297404838c5cc898590f3cb710ba51fc2a12c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a4b98896cea61ccf:mechanism:cd79ccc6@1",
+   "conceptKey": "nmc-concept:a4b98896cea61ccf",
+   "existingConceptId": "C-4d256d05-6009-4931-987d-07482915fe2c",
+   "referenceId": "nmc-2024-ref:c3932ec21bfa6774ec8c2c658ad065c5215fe64ba744490383422bcd18efccf5",
+   "code": "AN37.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of sinusitis and maxillary sinus masses.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "fb61d219b9e94421ba24adf4ca4e444d533726051cb5fe21f777111248f9499c",
+   "descriptionSha256": "b8fb5b487f991aaefc5601e79cb814863462cf99ce59c9a0eacf8d71c00ca398",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e0b301518bd889e3:procedural-skill:aa7ba093@1",
+   "conceptKey": "nmc-concept:e0b301518bd889e3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9ee258f1cd7a45dea82930cf5f3a07c3ec61d0c327210a77d6b793ad543058a7",
+   "code": "AN38.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a model of the larynx and identify cartilages, membranes, folds and cavity subdivisions. Demonstrate intrinsic and extrinsic muscle actions and trace the arterial and neural supply.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "e9de6a324cb58d89bc26e86717bb9e2c21338b8ca2b9c32961428f80f5824114",
+   "descriptionSha256": "1d46814359837968a8f32e89b3151d32f0f5322a5c5eef11163a9c85c94439ed",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e0b301518bd889e3:mechanism:cb14a7c1@1",
+   "conceptKey": "nmc-concept:e0b301518bd889e3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d291acd0442797bddc086fe7f75f8f59e6b5bd5a9c3552dd8e4c9cc5514e482d",
+   "code": "AN38.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use a laryngeal section to explain how mucosal inflammation and oedema alter vocal fold vibration and airway calibre.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 130,
+   "sourceBodySha256": "c48c4b31664af49fa6921366596b2567a441f7665f3342af2313c87ea029e36d",
+   "descriptionSha256": "f9c93a96c287bb9dc62424072abc7a60e7330fff29b7bc2722aa4d79e3ca8d33",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:327aada21ec9538b:mechanism:e16d2c98@1",
+   "conceptKey": "nmc-concept:327aada21ec9538b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:09c59cdb74b2fc59e7641df9a2691d31bc8217853db530e622bc91086cdb1276",
+   "code": "AN38.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the nerve on each side and relate unilateral and bilateral injury to vocal fold mobility, voice and airway findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "1031eadbe63c136ef9b0d5b147d186f94b928e4eeebfc6a2777f28dfdaa45b9c",
+   "descriptionSha256": "24d863b12e5f6bdae4d669383a7bac64d622969ff808df2acf503a604085f54c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ef43d2d457aa233e:procedural-skill:ff602473@1",
+   "conceptKey": "nmc-concept:ef43d2d457aa233e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:09f0ab211677cdb8eed5e8dff9185439ae9e9bbf0ddec2144ff0fe7ff79743a9",
+   "code": "AN39.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify tongue landmarks and demonstrate intrinsic and extrinsic muscle actions on a model. Map arterial, lymphatic and neural pathways and relate sensory territories to embryological origin.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "9894cbf76e1d89c367625b813a7cf7ff4cd7828161c664d675d9dcf00ab193f3",
+   "descriptionSha256": "7b3cac467f421489c12535283790ee050bad3f878b334efe6cd8defd62bb45a6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e3d428235fa9b95a:mechanism:7f4b42e5@1",
+   "conceptKey": "nmc-concept:e3d428235fa9b95a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d0081208b8c4e68b0e8194c32e612c8a52be99c0283046b10c9045620ec6cd4a",
+   "code": "AN39.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use genioglossus action to predict deviation on protrusion in a unilateral lower motor neuron lesion and explain the associated atrophy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "fd6b2d0618c830420a7e773416411b0eb30a5aa429b8ba38bc82c9a9d6449587",
+   "descriptionSha256": "c40243ab7b3c42224d4136a695f38c136776cd14c74cecbb61195cb93afd5121",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ad19eee073a409f0:procedural-skill:4b812fe8@1",
+   "conceptKey": "nmc-concept:ad19eee073a409f0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9915e66f581faa39daa15404e6849374cebaaed3f759d938643b6eec3d1311d6",
+   "code": "AN40.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the auricle and external acoustic meatus on a model and map their arterial and sensory territories.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "a86ed6aec1bea29c18d298da316c4cbf9880308e1f794dbdfbb847fcfcab4895",
+   "descriptionSha256": "2b9799a83e10fbdcfc3072a9bcfb701193ec71b1f597b8c5015c270dbf406c6b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ad19eee073a409f0:procedural-skill:fa6d4f33@1",
+   "conceptKey": "nmc-concept:ad19eee073a409f0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bfc9348565af97ae9deec0703c0e2874ed0e158586bf76cc8a4b2aae8aed9cb9",
+   "code": "AN40.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the walls, contents and relations of the tympanic cavity on a model. Demonstrate ossicular transmission and trace the auditory tube to the nasopharynx.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "35658ec0df7c447327d7b587e71e892f68dd6dc1c84e886bbfb989306d437ee2",
+   "descriptionSha256": "bd203028e2fa42420d01d3abd42529ed021d27340fcc8a6cd13359cd689502ae",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ad19eee073a409f0:mechanism:5d709d4a@1",
+   "conceptKey": "nmc-concept:ad19eee073a409f0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:26c2ef52b1f02ec88596fcbde26dc73065d38fda1986735b419289e25b036538",
+   "code": "AN40.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish the bony and membranous labyrinths and locate the cochlear and vestibular components and their fluid compartments.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "ffd4f60896d002c0a5e7df23f78b6171077c25f0b1b0a1832cdc03c18dee9dc0",
+   "descriptionSha256": "56776ef55dd2d05ae997c77fef0739dc53d94b169726338ff8833c0cb197dd52",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:55690cca5280c4e5:mechanism:639bbf77@1",
+   "conceptKey": "nmc-concept:55690cca5280c4e5",
+   "existingConceptId": "C-20d93ec9-615b-4c88-8e91-7f824bc8ecbf",
+   "referenceId": "nmc-2024-ref:df69910707c9eb9d211305f29e7f551f892fb4b799848bb165eda5438eff4343",
+   "code": "AN40.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of otitis externa.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "771c960d707e0db8a8ee9e33dd23d8268917f3ae41e51847b48dacbbd59563e4",
+   "descriptionSha256": "1fefd2a3321bc23a7d188da99966e770b0830cf4fc27aa9f00ff00d4dba7ac46",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:5a519c8bc0e92a89:mechanism:1132ab5b@1",
+   "conceptKey": "nmc-concept:5a519c8bc0e92a89",
+   "existingConceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+   "referenceId": "nmc-2024-ref:df69910707c9eb9d211305f29e7f551f892fb4b799848bb165eda5438eff4343",
+   "code": "AN40.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of otitis media.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "771c960d707e0db8a8ee9e33dd23d8268917f3ae41e51847b48dacbbd59563e4",
+   "descriptionSha256": "1fefd2a3321bc23a7d188da99966e770b0830cf4fc27aa9f00ff00d4dba7ac46",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:62d2a96bc62f1972:mechanism:44cb7b98@1",
+   "conceptKey": "nmc-concept:62d2a96bc62f1972",
+   "existingConceptId": "C-e98ea73a-122d-4834-99c7-136b8440a1b5",
+   "referenceId": "nmc-2024-ref:0d35f7e099ca6ff4719fc8aa23016d34d660d5d1cc3c13a52974d3512a7b2ded",
+   "code": "AN40.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Identify tympanic membrane quadrants on a diagram and explain how the position of the ossicles and chorda tympani informs incision placement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "567d4beab6082eba1a093d422c4004f0f1870948f8b911291fcb2986602dbed1",
+   "descriptionSha256": "d92855b40a7caaee831f3a412d2fc81fcef29b10c34caca2f9254dfe35544c20",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:906d49500e2a2a91:procedural-skill:9a9f767b@1",
+   "conceptKey": "nmc-concept:906d49500e2a2a91",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c5920c9ef921a0d078e7e806b966fbc75a9c8b95cab713e11a58c23ccb71c189",
+   "code": "AN41.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a sectioned eye model and identify the fibrous, vascular and neural coats, optical structures and fluid compartments.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "dc19bd42b2211d76688c6136730acf8df2bd32f2ffb5eb8973f8550c843d20bc",
+   "descriptionSha256": "261009110f33fbd4296f2783b3e679b7c0a13a9ece20f4264c86473496f9c800",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:906d49500e2a2a91:mechanism:729b2ea6@1",
+   "conceptKey": "nmc-concept:906d49500e2a2a91",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:020fa5e71a365aafe89007425215d3a3547115cb85f984c88abe48ab945d138a",
+   "code": "AN41.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the sphincter, dilator and ciliary muscles and explain their autonomic supply and effects on pupil size and accommodation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "4fe31176f1a96076420265637324b454473d85f56382b9dc2c6a1d1ca3b11b8b",
+   "descriptionSha256": "b1fef60bb0a143483e1c9c22fe33e5be51ec6a42f478c9fa1235c1feec5b6c6a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:39602af530ef1ae4:mechanism:1470926a@1",
+   "conceptKey": "nmc-concept:39602af530ef1ae4",
+   "existingConceptId": "C-c7b5c09f-1c2f-487f-b9c9-81fc54048b53",
+   "referenceId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+   "code": "AN41.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of cataract.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "fd3fdd6f50b742e314b8628e51ed2a424e8d7346a78c87ad008f83684e857e50",
+   "descriptionSha256": "b10c0187a8c7378bbde1d8b4da3870375cb27fa9b956948cb235f4f29391b73d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:eff5595bf234dfba:mechanism:89d6b810@1",
+   "conceptKey": "nmc-concept:eff5595bf234dfba",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+   "code": "AN41.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of glaucoma.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "fd3fdd6f50b742e314b8628e51ed2a424e8d7346a78c87ad008f83684e857e50",
+   "descriptionSha256": "b10c0187a8c7378bbde1d8b4da3870375cb27fa9b956948cb235f4f29391b73d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:91af7386314f8aba:mechanism:68e2eacd@1",
+   "conceptKey": "nmc-concept:91af7386314f8aba",
+   "existingConceptId": "C-f97c8419-1017-4459-a2c1-67eae7d11a48",
+   "referenceId": "nmc-2024-ref:a78a2782d708b4b3b05d23d5b45e62d6e1c0fad5c3baef28e961c3171ae11f26",
+   "code": "AN41.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the anatomical basis of central retinal artery occlusion.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 131,
+   "sourceBodySha256": "fd3fdd6f50b742e314b8628e51ed2a424e8d7346a78c87ad008f83684e857e50",
+   "descriptionSha256": "b10c0187a8c7378bbde1d8b4da3870375cb27fa9b956948cb235f4f29391b73d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1937a2ccbda60a5d:procedural-skill:46474284@1",
+   "conceptKey": "nmc-concept:1937a2ccbda60a5d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:107365c31569cc90bb734205651e10ac4563d281a47bfd5904ef48258b120c56",
+   "code": "AN42.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a sectional model identify the cord or cauda equina at the appropriate level, meninges, roots, vessels and epidural contents.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "97440b6e9d4a32d452ed9c1a471c87058ab0955d8faecfc5bcc88ae13e67ccec",
+   "descriptionSha256": "2bbb76ffd350e01d30c0b8fe087c49408a9401e44dc31ffb3c0d181a0fa62ca8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6ff8742161078bb7:procedural-skill:ca2e4696@1",
+   "conceptKey": "nmc-concept:6ff8742161078bb7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:40dc768aca06a35b423a912c02df11d4e942374a548bd0db7cbc04d80fe0b8cc",
+   "code": "AN42.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate its muscular boundaries, roof and floor and identify the vertebral artery and suboccipital nerve within it.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "d6a7eb0bbee44a84577db87e8ab89cce39a656414b4d919188443c76b2e0a91d",
+   "descriptionSha256": "d576ba01163ecdd65b6dd04375378b3cf19f6826cc3dbb7d64eee46e6af7301e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6ff8742161078bb7:mechanism:c8a85629@1",
+   "conceptKey": "nmc-concept:6ff8742161078bb7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:51ee83bb89098e55d039381b74df64a7bfc47c43bc25f743619feaae1a135d40",
+   "code": "AN42.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the position, fibre direction, relations, nerve supply and actions of semispinalis capitis and splenius capitis.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "a7793077ea42b8f2fd61959c95a361bc18fbe55db3a8da98e1a953c82932eacb",
+   "descriptionSha256": "bf3719889a1b77d1a5ef31106342ce99edc19cce798d0be7319c88d50eb7fcae",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3c6ce1106c651101:procedural-skill:800d5bc3@1",
+   "conceptKey": "nmc-concept:3c6ce1106c651101",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a1f5d34d64e29c19635351e3cf86320f9cc32e37eb847f46f4afe5926826781c",
+   "code": "AN43.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate nodding and axial rotation on a model, localize each movement to the appropriate joint and identify the contributing muscles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "d20cfcb819ca66a70cc8d0d57141b2d9ecc1323613daa7e1de1bfa95ff170fd6",
+   "descriptionSha256": "8c8baa2ba1a5c9a54648ec925fea8c8188995a6a73a4266011e784f657790bce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2e6f00582f2c1b01:procedural-skill:94a8c1df@1",
+   "conceptKey": "nmc-concept:2e6f00582f2c1b01",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:67e8c689d8a0760cb23fa911eb294abc8aba1a4ea7df8d64b7a71037bfc1dec6",
+   "code": "AN43.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify and sketch slides of pituitary, thyroid, parathyroid, tongue, salivary glands, tonsil, epiglottis, cornea and retina. Label a distinguishing feature on each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "56ab611fa3c14c6f52c81eeece82fa3661c51c003be214987940fd88f8352d23",
+   "descriptionSha256": "473d1bfc0784c5ff0d9ff0d7542be5a84480075ee2ed92499b974449a8dce7bf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2e6f00582f2c1b01:procedural-skill:4c11f556@1",
+   "conceptKey": "nmc-concept:2e6f00582f2c1b01",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c822d1dc5f03ad82390778e2604ee13b51ba068086f4c880e994dd6efb21f6c3",
+   "code": "AN43.3",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify and sketch olfactory mucosa, eyelid, lip, corneoscleral junction, optic nerve, organ of Corti and pineal gland. Label a distinguishing feature on each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "28a3caa763cbbf8911bc7952eb5f8c935c12243d69b820c6238b87ac3ea4a197",
+   "descriptionSha256": "a016a9bc8ba959e627bec8d9631ee53d9bb457b70101baa312759f1d998762d0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:35796987f2d45f84:mechanism:fe1dff74@1",
+   "conceptKey": "nmc-concept:35796987f2d45f84",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ff2e5ec814f0f7d43e977d7415d808184c1e05adf2efc1ec732d170e6cdce9a1",
+   "code": "AN43.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use separate developmental diagrams for face, palate, tongue, pharyngeal apparatus, pituitary, thyroid and eye, and explain a representative anomaly for each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 132,
+   "sourceBodySha256": "166911ce24c76dd6f2ff1c0876ae1a2e39dc166cf184df4329d9dc6095f9ae4f",
+   "descriptionSha256": "f1ddb26e1a809d977c859feb79dcdbd84ed8e87579c8f1452e1204c1adb165d4",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8842adb425d83e1b:procedural-skill:895b3cfb@1",
+   "conceptKey": "nmc-concept:8842adb425d83e1b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6072a5d9ceedabe0c224cfa7c34f8e342c6039c965c8455c84d95cb7fad26a14",
+   "code": "AN43.5",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate testing of the muscles of facial expression, extraocular muscles and muscles of mastication, and palpation of the carotid, facial and superficial temporal arteries. Locate the internal and external jugular veins and identify the hyoid bone, thyroid cartilage and cricoid cartilage with their vertebral levels.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 133,
+   "sourceBodySha256": "13b9c58ddf3ccbca170bf828a5a96b657684e19114e3387234847e876fd5ba43",
+   "descriptionSha256": "6c8e71d724688d304de0e9c26f81320c8786bcb5fe1fed92f156ae59880433b0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8842adb425d83e1b:procedural-skill:3d0286d9@1",
+   "conceptKey": "nmc-concept:8842adb425d83e1b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a14b2cf8cb70a11ee87c84310edd9aee7b386e536828361613a5c06ee0bc74e1",
+   "code": "AN43.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "On a model mark the thyroid, parotid and duct, pterion, common carotid, internal and external jugular veins, subclavian vein, facial artery and accessory nerve.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 133,
+   "sourceBodySha256": "a70ca4c14e2b0c0804d5079382df97434b3d7430a63960a4faccd071eb4792fa",
+   "descriptionSha256": "c35eb83f2b84cae4b812fc4d5c252e26aa4e118548d6517724338215cb4145e7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:89470ab87236f08c:procedural-skill:43f54f94@1",
+   "conceptKey": "nmc-concept:89470ab87236f08c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:51a45a4ed66d4921aa3dbc20999dbb24fb97ccdf352cdb15444fdbc39c0071e1",
+   "code": "AN43.7",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify landmarks on AP and lateral skull and cervical spine films and on a plain paranasal sinus view.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 133,
+   "sourceBodySha256": "4df42695c0c8a855e81526604812058a6d546d4ec1fe91af98a0a407d6b60a64",
+   "descriptionSha256": "51dd6f99f0925bcb38704dea4bc157420e5b5ec80d626900980ffa55bc222336",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4c6945be0b24f08d:interpretation:99df6200@1",
+   "conceptKey": "nmc-concept:4c6945be0b24f08d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6a5ceaa35bde67697e6eb372ec745bb0a4f422288f753b522d85c8f60bd26877",
+   "code": "AN43.8",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace the arterial route from a representative access site to the carotid and vertebral targets, accounting for right and left origins.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 133,
+   "sourceBodySha256": "3a9d4746701a2a41c0e1a50b7019163cc3b9d69c8b044bf5cbf9b3588657c35e",
+   "descriptionSha256": "2ee62c7be0354c143d3c88bfcb618aa1b44d4338414897ddb59e2580232815e5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4c6945be0b24f08d:procedural-skill:87995bc0@1",
+   "conceptKey": "nmc-concept:4c6945be0b24f08d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9d128e611d7c108e1fa660e171a963bc0a5e31f51c018b7ce9ad0c2ad1fe589c",
+   "code": "AN43.9",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient carotid and vertebral angiograms and identify the major vessels, branches and territories visible on each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 133,
+   "sourceBodySha256": "d951e0c448c54176d8fa46d2a342f185d72e3dcc9e026e6b5c4c9a84b2a6dd06",
+   "descriptionSha256": "1685ad1a9f44dc0ad6ae65ab6e03d7a3861202aeb03a25a6af259c3284505baf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  }
+ ]
+}
