@@ -15,3 +15,30 @@ test('coverage triage shows objective details without claiming complete coverage
  assert.match(html,/No linked objective in this pack · Coverage unverified/);
  assert.match(html,/Source resolution needed · amendment requires review · Coverage unverified/);
 });
+test('owner edits: forms appear on demand, send the displayed wording digest and reload; failures change nothing',async()=>{
+ const p={...packet(),editableIdentities:[{conceptId:'one',label:'Concept one',aliases:['First'],identityDigest:'d'.repeat(64)}]};
+ p.objectives[0]={...p.objectives[0],wording:'Original wording for the edit test.',wordingRevision:2,registryWording:'Registry wording.',reviewState:'needs-attention',reviewFindings:['duplicate-wording'],objective:{...p.objectives[0].objective,prerequisites:['x@1']}};
+ const html=foundationReviewMarkup(p);
+ assert.match(html,/Owner-edited wording, revision 2/);assert.match(html,/Needs attention: duplicate wording/);assert.match(html,/1 prerequisite/);
+ assert.match(html,/data-edit-objective="o@1"/);assert.match(html,/data-edit-identity="one"/);assert.doesNotMatch(html,/data-objective-edit-form/);
+ const handlers={},root={innerHTML:'',addEventListener(k,f){handlers[k]=f;},removeEventListener(){},replaceChildren(){}};
+ const sent=[];let loads=0,fail=false;
+ mountFoundationReview({root,window:{addEventListener(){},removeEventListener(){}},identity:async()=>'me',load:async()=>{loads++;return p;},
+  editObjective:async input=>{if(fail)throw Object.assign(new Error(),{code:'objective_edit_stale'});sent.push(input);return {status:'objective_wording_edited'};},editIdentity:async input=>{sent.push(input);return {};}});
+ const btn=attrs=>({target:{closest:()=>({hasAttribute:k=>k in attrs,getAttribute:k=>attrs[k]})}});
+ await handlers.click(btn({'data-foundation-load':''}));await new Promise(r=>setTimeout(r,0));assert.equal(loads,1);
+ handlers.click(btn({'data-edit-objective':'o@1'}));assert.match(root.innerHTML,/data-objective-edit-form/);
+ const form=(id,fields)=>({matches:s=>s==='[data-objective-edit-form]'?!('label' in fields):s==='[data-identity-edit-form]'?('label' in fields):false,getAttribute:()=>id,_fields:fields});
+ const FD=globalThis.FormData;globalThis.FormData=class{constructor(f){this.f=f._fields;}*[Symbol.iterator](){yield* Object.entries(this.f);}};
+ try{
+  await handlers.submit({preventDefault(){},target:form('o@1',{wording:'A clearer owner wording.',changeReason:'Owner clarified scope.'})});
+  const {createHash}=await import('node:crypto');
+  assert.equal(sent[0].baseWordingSha256,createHash('sha256').update('Original wording for the edit test.').digest('hex'));
+  assert.equal(sent[0].objectiveVersionId,'o@1');assert.equal(loads,2,'reloads after save');
+  await handlers.submit({preventDefault(){},target:form('one',{label:'Concept one renamed',aliases:'First\n\n Second ',changeReason:'Owner clarified the name.'})});
+  assert.deepEqual(sent[1].aliases,['First','Second']);assert.equal(sent[1].previousIdentityDigest,'d'.repeat(64));
+  fail=true;handlers.click(btn({'data-edit-objective':'o@1'}));
+  await handlers.submit({preventDefault(){},target:form('o@1',{wording:'Another wording here.',changeReason:'Owner clarified scope.'})});
+  assert.match(root.innerHTML,/Not saved: objective_edit_stale/);assert.equal(loads,3);
+ }finally{globalThis.FormData=FD;}
+});

@@ -24,7 +24,7 @@ function enhance(){
  reconcile('#owner-syllabus-baselines',root=>mountSyllabusBaselineEditor({root,inspect:input=>owner.syllabusBaselineDrafts(input),save:input=>owner.saveSyllabusBaselineDraft(input),preflight:input=>owner.syllabusReviewPreflight(input)}));
  reconcile('#owner-concept-batch',root=>mountBatchReview({root,load:()=>owner.conceptBatch(),accept:input=>owner.acceptConceptBatch(input),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
  reconcile('#owner-learner-preview',root=>mountLearnerPreview({root,load:filters=>owner.adminLearnerPreview(filters),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
- reconcile('#owner-foundation-objectives',root=>mountFoundationReview({root,load:filters=>owner.foundationObjectiveDrafts(filters),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
+ reconcile('#owner-foundation-objectives',root=>mountFoundationReview({root,load:filters=>owner.foundationObjectiveDrafts(filters),editObjective:input=>owner.editObjectiveWording(input),editIdentity:input=>owner.editConceptIdentity(input),identity:async()=>globalThis.mlosNavigationAdmin===true?(await auth.getSession())?.user?.id||null:null}));
 }
 new MutationObserver(enhance).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','data-owner-state']});
 window.addEventListener('mlos:admin-ready',enhance);window.addEventListener('mlos:access',enhance);window.addEventListener('hashchange',enhance);enhance();

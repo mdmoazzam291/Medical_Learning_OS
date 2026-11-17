@@ -853,5 +853,17 @@
   "wrangler.jsonc": [
     "cloudflare",
     "render"
+  ],
+  "scripts/concept-identity-edits-db-check.js": [
+    "supabase"
+  ],
+  "supabase/functions/owner-api/_shared/foundation-edits.js": [
+    "supabase"
+  ],
+  "supabase/migrations/20261117170000_concept_identity_name_index.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261117180000_admin_identity_and_objective_edits.sql": [
+    "supabase"
   ]
 }

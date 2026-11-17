@@ -24,6 +24,7 @@ const previewAdmin={
  rpc:async()=>({data:{isAdmin:true}}),
  from:name=>name==='study_catalog'
   ?{select:()=>({eq:()=>({single:async()=>({data:{version:448,body:{concepts:[]}}})})})}
+  :name==='foundation_objective_current_wordings'?{select:()=>({range:async()=>({data:[]})})}
   :{select:()=>({in:async()=>({data:[]})})},
 };
 const {namesOnlyPreview,namesOnlyRelationships}=await readFoundationDrafts({admin:previewAdmin,actor:'fixture',method:'GET',params:new URLSearchParams()});
