@@ -1,3 +1,11 @@
+## NMC Paediatrics objectives bound and in registry (draft @16) — 2026-11-17T06:20Z
+
+- Owner accepted `nmc-pediatrics-concepts-v1-20261116` at 2026-11-17T06:14:34Z (104 receipts; pairs digest `36e16d2c…e0db` matched). Receipt IDs in `ops/nmc/receipts/paediatrics-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-paediatrics-objective-bindings-v1.json` (174 concepts, 254 objectives).
+- Registry @16: +254 objectives → 1,883 objectives, 1,884 bindings, 1,226 concepts, 1,673 of 2,634 NMC rows source-linked (64%). Draft only; 129 Paediatrics objectives carry AI-merged scope-amendment wording awaiting faculty review.
+- Remaining subjects: Anatomy, Medicine.
+
+---
+
 ## NMC Paediatrics concept batch v1 — 2026-11-17T03:40Z
 
 - `docs/evidence/2026-11-17-nmc-paediatrics-concept-batch-v1.json` (spec `ops/nmc/specs/paediatrics_concepts_v1.py`): 174 concepts (104 new; 70 reused, e.g. Growth monitoring, Breastfeeding, Complementary feeding, IMNCI, Immunisation, Nephrotic syndrome, Rheumatic fever, Meningitis, Asthma, Thalassaemia), 254 objectives, all 252 recognised rows. PE6.4 (amendment notice) stays on the source-exception track.
