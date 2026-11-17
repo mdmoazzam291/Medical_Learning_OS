@@ -9,6 +9,10 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Registry @27: duplicate wordings resolved; identity re-pin script
+- The 8 @26 duplicate-wording findings are rewritten (GM9.8, GM14.1, GM14.2 split into their two skills; MI4.2/MI4.3 name their own condition). No IDs removed; all 2,865 objectives auto-checked. Evidence: `docs/evidence/2026-11-18-nmc-duplicate-wording-fixes-v1.json`, `...-prerequisites-and-review-v2.json`.
+- `ops/nmc/repin-identity-digests.js <export.json> --write <n>` re-pins registry digests to current identities after owner label/alias edits (SQL export query in the script header).
+
 ### 2026-11-17 — NMC gaps closed: prerequisites, review state, owner edits, acceptance speed, GM28.18
 - Registry @26 (PR #471): 1,549 same-concept prerequisite links on 1,015 objectives (know → recognise → act, then preclinical → paraclinical → clinical; acyclic). Cross-concept prerequisites not authored. `reviewState` from deterministic wording checks: 2,857 auto-checked, 8 needs-attention (duplicate wording). Evidence: `docs/evidence/2026-11-17-nmc-prerequisites-and-review-v1.json`.
 - Acceptance speed: name-conflict check was ~320 ms per item at 1,543 identities (nested scan). New trigger-maintained `content_concept_identity_names` index (unique per name; reads current identities). Local check: 200-item batch over 302 identities in 373 ms.
