@@ -1,0 +1,3767 @@
+{
+ "schemaVersion": 1,
+ "batchId": "nmc-anatomy-concepts-part-b2-v1-20261116",
+ "subjectId": "anatomy",
+ "scopeCodes": [
+  "AN58.1",
+  "AN58.2",
+  "AN58.3",
+  "AN58.4",
+  "AN59.1",
+  "AN59.2",
+  "AN59.3",
+  "AN59.4",
+  "AN60.1",
+  "AN60.2",
+  "AN60.3",
+  "AN61.1",
+  "AN61.2",
+  "AN61.3",
+  "AN62.1",
+  "AN62.2",
+  "AN62.3",
+  "AN62.4",
+  "AN62.5",
+  "AN62.6",
+  "AN63.1",
+  "AN63.2",
+  "AN63.3",
+  "AN64.1",
+  "AN64.2",
+  "AN64.3",
+  "AN65.1",
+  "AN65.2",
+  "AN66.1",
+  "AN66.2",
+  "AN67.1",
+  "AN67.2",
+  "AN67.3",
+  "AN68.1",
+  "AN68.2",
+  "AN68.3",
+  "AN69.1",
+  "AN69.2",
+  "AN69.3",
+  "AN70.1",
+  "AN70.2",
+  "AN71.1",
+  "AN71.2",
+  "AN72.1",
+  "AN73.1",
+  "AN73.2",
+  "AN73.3",
+  "AN74.1",
+  "AN74.2",
+  "AN74.3",
+  "AN74.4",
+  "AN75.1",
+  "AN75.2",
+  "AN75.3",
+  "AN75.4",
+  "AN75.5",
+  "AN76.1",
+  "AN76.2",
+  "AN77.1",
+  "AN77.2",
+  "AN77.3",
+  "AN77.4",
+  "AN77.5",
+  "AN77.6",
+  "AN78.1",
+  "AN78.2",
+  "AN78.3",
+  "AN78.4",
+  "AN78.5",
+  "AN79.1",
+  "AN79.2",
+  "AN79.3",
+  "AN79.4",
+  "AN79.5",
+  "AN79.6",
+  "AN80.1",
+  "AN80.2",
+  "AN80.3",
+  "AN80.4",
+  "AN80.5",
+  "AN80.6",
+  "AN80.7",
+  "AN81.1",
+  "AN81.2",
+  "AN81.3",
+  "AN 82.1"
+ ],
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "status": "draft-batch-awaiting-admin-acceptance",
+ "attestation": "identity-and-classification-reviewed-not-medical-or-learner-release",
+ "counts": {
+  "concepts": 59,
+  "newConcepts": 44,
+  "reusedAcceptedIdentities": 15,
+  "objectives": 89,
+  "sourceRows": 86,
+  "umbrellas": 0,
+  "flagged": 32
+ },
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "conceptTypes": [
+  "structure",
+  "function",
+  "disorder",
+  "clinical-finding",
+  "investigation",
+  "clinical-skill",
+  "intervention",
+  "field"
+ ],
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:50b66ff2a278eda3",
+   "existingConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "document": {
+    "label": "Cerebrospinal fluid",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN63.1 p.143 nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN63.1"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:aad3d4213c8e3ea6",
+   "existingConceptId": null,
+   "document": {
+    "label": "Medulla oblongata",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN58.1 p.141 nmc-2024-ref:e867a541724bb6f78b29d5b8ba1aa9c1e9313af5204008fedd4697479e88f097; AN58.2 p.141 nmc-2024-ref:c4bfd3e232a763d9701e3296eb82261dfc4101aeea9225a81f7243bf10ccf7fe; AN58.3 p.141 nmc-2024-ref:a0bd189e988fdc58c73606be22577efbf3f15301cab4ed1c1d636d3404104415",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN58.1",
+    "AN58.2",
+    "AN58.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6766301732c0645d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Brainstem lesion syndromes",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN58.4 p.141 nmc-2024-ref:48eb3d4eb5f6d4524b6c5c8d9db8543343e6d6f9e03fa85278bb81454491f387; AN59.4 p.142 nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba; AN61.3 p.142 nmc-2024-ref:d7fad23a61017a88a04dd3fd97f0c03c4d033f26dc6802db375c4c90bcfafc8d",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN58.4",
+    "AN59.4",
+    "AN61.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:199cf26fa8699467",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pons",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN59.1 p.141 nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d; AN59.2 p.141 nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304; AN59.3 p.142 nmc-2024-ref:3b5f6a364f788bbf1e2c408369178b50a02c266be58adea58a68cabc29cbb7ab",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN59.1",
+    "AN59.2",
+    "AN59.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:82dc24d0c3197a7c",
+   "existingConceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "document": {
+    "label": "Cerebellum",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN60.1 p.142 nmc-2024-ref:85bd6b694b5e480fd8847b1ffbb2134a111f682b074dc00be5353b898fa7ef66; AN60.2 p.142 nmc-2024-ref:12d9abcd32e1f24133f4eeec121015a0f0795f9d25190dd9a834960ff043090f; AN60.3 p.142 nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN60.1",
+    "AN60.2",
+    "AN60.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:2026d212d35b9da6",
+   "existingConceptId": null,
+   "document": {
+    "label": "Midbrain",
+    "aliases": [
+     "Mesencephalon"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN61.1 p.142 nmc-2024-ref:94e3a1bffb98b44e24fcd453991e7549b961a02f8b3009311d775294c8cc4ed3; AN61.2 p.142 nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN61.1",
+    "AN61.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a20a9222c5af1ac5",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cranial nerve nuclei",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.1 p.142 nmc-2024-ref:ffd92c00d2b06d375b9bd627c88320662c9f42b148fd5a0294309c454cbe786a",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8b24dce779433a85",
+   "existingConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
+   "document": {
+    "label": "Cerebral cortex",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.2 p.143 nmc-2024-ref:db895d7f4f6aabe7b06849e53695763dcbb7a4eb81d02b982b51166c251d1fc1",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3bf83ad41d85ed8c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cerebral white matter",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.3 p.143 nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3e0b55d38888b7d3",
+   "existingConceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "document": {
+    "label": "Basal ganglia",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.4 p.143 nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:34cd528c0b631282",
+   "existingConceptId": "C-90d792a8-2138-4675-bae6-bc08b6fb7d30",
+   "document": {
+    "label": "Hypothalamus and limbic system",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.4 p.143 nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.4"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3b8782c659a3f686",
+   "existingConceptId": null,
+   "document": {
+    "label": "Diencephalon",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.5 p.143 nmc-2024-ref:5d75a6a2f3e3f3888345abdf5dbef613668ac06262700719f8524658dea72c1b",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:770f9fcd39e65e6b",
+   "existingConceptId": null,
+   "document": {
+    "label": "Cerebral arterial supply",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN62.6 p.143 nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN62.6"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "medicine"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:98550cf7acd127c5",
+   "existingConceptId": "C-1b3b5ebe-8c3b-419c-8bd2-7083ee76d2a9",
+   "document": {
+    "label": "Hydrocephalus",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN63.2 p.143 nmc-2024-ref:7a424265da2c4eede6a9cd81fdd1d170553158f1c4b860dc727866b23912b27d",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN63.2"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:92fd963a114a8f76",
+   "existingConceptId": null,
+   "document": {
+    "label": "Special sensory pathways",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN63.3 p.143 nmc-2024-ref:1b3a137fe6aaf4bfbdc285d681f32ff818bc9392d17d14f8964db1edccfddffd",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN63.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "physiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:c8853f4decea87da",
+   "existingConceptId": null,
+   "document": {
+    "label": "Nervous tissue histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN64.1 p.143 nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be; AN68.1 p.144 nmc-2024-ref:103434e62986dac78055ca25b56c57827e8959794d623be215fe53159515a020; AN68.2 p.144 nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c; AN68.3 p.144 nmc-2024-ref:e04fcd56edae76655599b6af50e48d1d2253c7b5cda09b0c52e6e1b43b1c9874",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN64.1",
+    "AN68.1",
+    "AN68.2",
+    "AN68.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e3e3e8de6fff5c13",
+   "existingConceptId": null,
+   "document": {
+    "label": "Development of the nervous system",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN64.2 p.143 nmc-2024-ref:e5d35235da08df6dddc717f3500cfe1974b52d53b8b7349ea2fc4fa35d4e83c1",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN64.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fb797b6ef6736c37",
+   "existingConceptId": null,
+   "document": {
+    "label": "Neural tube defects",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN64.3 p.144 nmc-2024-ref:0ca898f443c501397b4364f5524f1114e2fdb4e96f1c223da4d5fa233ffa6d87; AN79.5 p.147 nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN64.3",
+    "AN79.5"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "pediatrics",
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:539ab43909d56d22",
+   "existingConceptId": null,
+   "document": {
+    "label": "Epithelium",
+    "aliases": [
+     "Epithelial tissue"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN65.1 p.144 nmc-2024-ref:6b180d834afa25745e755faf4df1936644ed4fb8ef9e2b13cd8e58396b85321b; AN65.2 p.144 nmc-2024-ref:5ae6abaa898b5043e1ba705a18792314e52e8edb02dd36c3c3d2ef38efcba772",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN65.1",
+    "AN65.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9645c551f0b7cb63",
+   "existingConceptId": null,
+   "document": {
+    "label": "Connective tissue",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN66.1 p.144 nmc-2024-ref:1ca97fc81b1c62db41ac62513f716f847ff03dade4784d7d002cbdb89aecb687; AN66.2 p.144 nmc-2024-ref:522a19847b3a8ec9a2c952f566450d39bf5edf127e7d35cb277f0d20f3cef8a0",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN66.1",
+    "AN66.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:b06a7e7fd3e613f7",
+   "existingConceptId": null,
+   "document": {
+    "label": "Muscle tissue histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN67.1 p.144 nmc-2024-ref:138934aaae06c76c1890e23733a876236d474300aace8011030072b94d748c88; AN67.2 p.144 nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de; AN67.3 p.144 nmc-2024-ref:4feb2313a12f48ae88009dd71316e2a8b47e4856afc2b1a376b93e36dba569af",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN67.1",
+    "AN67.2",
+    "AN67.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:94de4d77bcdc072c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Blood vessel histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "interpretation",
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN69.1 p.144 nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c; AN69.2 p.145 nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24; AN69.3 p.145 nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN69.1",
+    "AN69.2",
+    "AN69.3"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:795f561d5941c38c",
+   "existingConceptId": null,
+   "document": {
+    "label": "Exocrine glands",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN70.1 p.145 nmc-2024-ref:0e35b9a1a7f4af1940046da37303c532e1035ee969dece36e2774634a820abc7",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN70.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:483f7700f23b1401",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lymphoid organs",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN70.2 p.145 nmc-2024-ref:9f59fe56e5ee0c88c7d91cfba722a6fcf4e24dce5faf8e83a72177284613494f",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN70.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pathology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a0dc4bbb25fd7965",
+   "existingConceptId": null,
+   "document": {
+    "label": "Bone and cartilage histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN71.1 p.145 nmc-2024-ref:a080cd2903174aa99b02af1204e474f381113721cf6c36622b779aca4210226b; AN71.2 p.145 nmc-2024-ref:9924f9e7199c44ddb477e077d8adb5c809fb613a55989099d10c3cc7da5fa341",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN71.1",
+    "AN71.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:38670a0dfc9017ac",
+   "existingConceptId": null,
+   "document": {
+    "label": "Skin histology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN72.1 p.145 nmc-2024-ref:0d7936da316a466bd923f2a55dd77023db22de63de8714339616f0163dca55e9",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN72.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:066b11df80b84b8e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Chromosomes",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN73.1 p.145 nmc-2024-ref:561dbe977a276d1261c866126258b676ec02bd951e411d32c6385d210d68ab65",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN73.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "biochemistry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:24c7049c91aaceb5",
+   "existingConceptId": "C-0e6f39bf-a375-4247-be59-e882f8233bba",
+   "document": {
+    "label": "Karyotyping",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN73.2 p.145 nmc-2024-ref:a5a5048d01747edf8da32222ea0be8d4f3257fe7a10e2667e6b478c7a80dfaed",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN73.2"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:02fbc99860d8aa78",
+   "existingConceptId": null,
+   "document": {
+    "label": "X chromosome inactivation",
+    "aliases": [
+     "Lyonisation",
+     "Lyonization"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN73.3 p.145 nmc-2024-ref:af7ae8293dae82fa7800d76d9107c6429125cdbd1739207adb7b070265192844",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN73.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:295596cb45a8f9fd",
+   "existingConceptId": null,
+   "document": {
+    "label": "Modes of inheritance",
+    "aliases": [
+     "Patterns of inheritance"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN74.1 p.145 nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa; AN74.2 p.145 nmc-2024-ref:e860726261af5095bf395df74535799fbcfb8cb35e69025aa0d13b62efbfdc68",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN74.1",
+    "AN74.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "biochemistry",
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:7cd8ffd84d01e590",
+   "existingConceptId": null,
+   "document": {
+    "label": "Multifactorial inheritance",
+    "aliases": [
+     "Polygenic inheritance"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN74.3 p.146 nmc-2024-ref:246dad106a7e9353c7db16973f404a77da02fc146e27cd783725cdbe81978cec",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN74.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "biochemistry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:215ad54040408688",
+   "existingConceptId": null,
+   "document": {
+    "label": "Single-gene disorders",
+    "aliases": [
+     "Monogenic disorders"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN74.4 p.146 nmc-2024-ref:e863b1cbd610fe2f90db2d910bed6b24296602ca7fdd53ddf18b5b7eec8ff785",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN74.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pediatrics"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:91a0ee783201d261",
+   "existingConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "document": {
+    "label": "Chromosomal disorders",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN75.1 p.146 nmc-2024-ref:80a19497cc6ce011a12513e7d54f5b910d1f4775b3719bf1e17a2ac3e1e6eea4; AN75.3 p.146 nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN75.1",
+    "AN75.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:4b28745c79e5207a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Mosaicism and chimerism",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN75.2 p.146 nmc-2024-ref:9a23f7508185934770abccb7439bcdf70cd756435126003562238e76984468db",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN75.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:72a345eb8ca9fcb3",
+   "existingConceptId": null,
+   "document": {
+    "label": "Genetic variation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN75.4 p.146 nmc-2024-ref:198a19a6ee93ba081bd70b88288513f3e9add033ff51e15be33ec2a5bf0ea4bd",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN75.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "biochemistry"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:86ed3cd4b812bd90",
+   "existingConceptId": null,
+   "document": {
+    "label": "Genetic testing and counselling",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN75.5 p.146 nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN75.5"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "pediatrics",
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:3c378e4adfda29b4",
+   "existingConceptId": null,
+   "document": {
+    "label": "Human development",
+    "aliases": [
+     "Stages of human development"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN76.1 p.146 nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989; AN76.2 p.146 nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN76.1",
+    "AN76.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:623a36c62f8edee0",
+   "existingConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "document": {
+    "label": "Menstrual cycle",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.1 p.146 nmc-2024-ref:ab1cbba07cb1ff1e2a398d2f6fcbc5aadb7d0eb0382fbd58ed0b3d8e7490e3e0; AN77.2 p.146 nmc-2024-ref:343138e4a2627c50c8bbbed64219dea689e24668299167053277b15b785f73e2",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.1",
+    "AN77.2"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1d20fcc151d82878",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gametogenesis",
+    "aliases": [
+     "Spermatogenesis and oogenesis"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.3 p.146 nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "physiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:fba62fc2bfa8d8be",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fertilisation",
+    "aliases": [
+     "Fertilization"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.4 p.146 nmc-2024-ref:08151ab8cceccd4c845b947b93de09bdddf2e17a919bca976a177eeb47703992",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "physiology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:a0d9e1b7954398a4",
+   "existingConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "document": {
+    "label": "Contraception",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.5 p.146 nmc-2024-ref:d410a80c0f91e0c4d78b1ed0a5094d50712c8aef6854119576dd7f9f1e89ca05",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.5"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1607686ab8082fd5",
+   "existingConceptId": null,
+   "document": {
+    "label": "Teratogenesis",
+    "aliases": [
+     "Teratology"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.6 p.147 nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16; AN79.6 p.147 nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.6",
+    "AN79.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology",
+    "pharmacology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:41cb7b1cfc6c86b6",
+   "existingConceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+   "document": {
+    "label": "Assisted reproductive technology",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN77.6 p.147 nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN77.6"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:80bcdeb50e2b60ad",
+   "existingConceptId": null,
+   "document": {
+    "label": "Early embryonic development",
+    "aliases": [
+     "Pre-embryonic period"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN78.1 p.147 nmc-2024-ref:a7ba6e33fcad24cc6fd9d19bbf51bd5546e9278cb10ed095380caf514e1ae670; AN78.2 p.147 nmc-2024-ref:4ee2e522d7053d60948f10c34b6918a92e92daf7b98257c9e532bffb1d49e70d; AN78.4 p.147 nmc-2024-ref:b0c929fe22187c85c0d76d51d175a35220a7b7ca283f0ef3ed588f8fc3a38d43",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN78.1",
+    "AN78.2",
+    "AN78.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:a7c998eb43431dca",
+   "existingConceptId": null,
+   "document": {
+    "label": "Implantation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN78.3 p.147 nmc-2024-ref:5687678ee0952a8eb3a12d60de74195f6aed087e3bb4bc331f7c293c07794b36",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN78.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:76b940d97da6f78e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Early pregnancy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN78.5 p.147 nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173; AN79.6 p.147 nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN78.5",
+    "AN79.6"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:71edcc90b42d91e0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Gastrulation",
+    "aliases": [
+     "Primitive streak formation"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN79.1 p.147 nmc-2024-ref:9340fa82033b93ac24e41d64ffd566d6a974faa08b33f13877c7e1941a581587",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN79.1"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6bd0a0266f2be925",
+   "existingConceptId": null,
+   "document": {
+    "label": "Notochord",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN79.2 p.147 nmc-2024-ref:431f81526a2c7d35a16771e7606227c05593d1a75f5de28006d6e2c9549b5335",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN79.2"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ef6f7de18bce9971",
+   "existingConceptId": null,
+   "document": {
+    "label": "Neurulation",
+    "aliases": [
+     "Neural tube formation"
+    ],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN79.3 p.147 nmc-2024-ref:7491ddd67d909d9255dc6a3a1a446d445fec6a5aae08468251091f34e1621999",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN79.3"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:d952a91415d30a5e",
+   "existingConceptId": null,
+   "document": {
+    "label": "Somites and intraembryonic coelom",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN79.4 p.147 nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN79.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:52ce9193ba1b3567",
+   "existingConceptId": null,
+   "document": {
+    "label": "Fetal membranes",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN80.1 p.147 nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN80.1"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:9b026d887cbb5736",
+   "existingConceptId": null,
+   "document": {
+    "label": "Umbilical cord",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN80.2 p.147 nmc-2024-ref:f504bf67ac0f4c145aea9b3dd58bbb409b8c18e32362e182ab745450fc556368; AN80.7 p.148 nmc-2024-ref:6c2fff14581055e31591f382f037ab3fbfe7100deac68abe77f4be9a87ccf559",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN80.2",
+    "AN80.7"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "merges-source-rows"
+   ],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f302133ff7ad03cc",
+   "existingConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "document": {
+    "label": "Placenta and fetal development",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN80.3 p.148 nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a; AN80.5 p.148 nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN80.3",
+    "AN80.5"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8b8b49c71e5ccb7a",
+   "existingConceptId": "C-f2d82a38-55a8-4cf2-affc-4234b05208dc",
+   "document": {
+    "label": "Multiple pregnancy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN80.4 p.148 nmc-2024-ref:ec2fdad0d4d94894e2edb27ca66dca9f1c2c3d43914cc06e470eb39bbdff7f72",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN80.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:3c773a454e55856d",
+   "existingConceptId": "C-75ee394a-5ebb-44a4-a617-bd734aa482d4",
+   "document": {
+    "label": "Fetal age estimation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN80.6 p.148 nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN80.6"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:f5eb74f862d9c700",
+   "existingConceptId": "C-7882e2fc-242b-4e96-84a2-3c604018bb23",
+   "document": {
+    "label": "Prenatal screening",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "investigation"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN81.1 p.148 nmc-2024-ref:f9a4416841b1c78af4a9b38258675538f21ec4a5138c6277139f10586d18a60d",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN81.1"
+   ],
+   "conceptType": "investigation",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:61b10a7812d10157",
+   "existingConceptId": null,
+   "document": {
+    "label": "Amniocentesis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN81.2 p.148 nmc-2024-ref:60ed1df241190b97bf50920172b8e52b9bd8f086e63afdba9f3feaf756c75919",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN81.2"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:c82629b01c8c962f",
+   "existingConceptId": null,
+   "document": {
+    "label": "Chorionic villus sampling",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "interpretation"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN81.3 p.148 nmc-2024-ref:c19653105f105a34f76ff4aaa547cd14f0c515773bf84ce10b12a072170aa6d3",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN81.3"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": [
+    "obstetrics-gynaecology"
+   ]
+  },
+  {
+   "conceptKey": "nmc-concept:f9e26e3f28471fa2",
+   "existingConceptId": null,
+   "document": {
+    "label": "Respectful handling of human remains",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anatomy"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): AN 82.1 p.148 nmc-2024-ref:e20db5a56fcf4123da61aa8294ff6488ff502531819faf2f213236fc60c6ce51",
+    "changeReason": "Anatomy concept batch part-b2-v1: canonical concept for NMC Anatomy source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "AN 82.1"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:50b66ff2a278eda3:procedural-skill:3cab0759@1",
+   "conceptKey": "nmc-concept:50b66ff2a278eda3",
+   "existingConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "referenceId": "nmc-2024-ref:a4332410b32df2f67b6b1dbcdba2f272968b47a744be10a093ecf36e1632aecf",
+   "code": "AN63.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate the parts, boundaries and landmarks of the lateral, third and fourth ventricles on sections.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "6840b3603a79c10f5b561a54a27d9f1dc85142cbe423213aaa3edea99cc3bb2e",
+   "descriptionSha256": "d0a90ae782ee74fc76ac0bc6b35b0aee3e4d4eb2351b865ad40b8d1d14c385a5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:aad3d4213c8e3ea6:procedural-skill:3cea8a91@1",
+   "conceptKey": "nmc-concept:aad3d4213c8e3ea6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e867a541724bb6f78b29d5b8ba1aa9c1e9313af5204008fedd4697479e88f097",
+   "code": "AN58.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a medulla specimen and identify the pyramids, olives, dorsal tubercles and cranial nerve exit zones.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "a742579c9179a5c10c3deeb9ff3d0d703d8bf35c5b9bc0d1be8d55bdb6cbb768",
+   "descriptionSha256": "d959a63f18ccc379b05ae6953a012c004afe35d6faa1a5fbfc15a14ad24cc8fc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:aad3d4213c8e3ea6:mechanism:dee888d9@1",
+   "conceptKey": "nmc-concept:aad3d4213c8e3ea6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c4bfd3e232a763d9701e3296eb82261dfc4101aeea9225a81f7243bf10ccf7fe",
+   "code": "AN58.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare sections at the pyramidal decussation, sensory decussation and inferior olive, identifying the fibres that cross at each decussation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "5359c09183805df9b122af8936d5e39d8e153f19ea15a5b10d91dddda50254bb",
+   "descriptionSha256": "ad02a511e153d2d426bbe6a6d6cea1a042c3b599f5020b85853a795a2353de32",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:aad3d4213c8e3ea6:mechanism:bea6c6d7@1",
+   "conceptKey": "nmc-concept:aad3d4213c8e3ea6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a0bd189e988fdc58c73606be22577efbf3f15301cab4ed1c1d636d3404104415",
+   "code": "AN58.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map the medullary nuclei by location and functional modality and associate them with their cranial nerves.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "9ff62260adc15fa160151cfe451330c8dad76da93dbd5c2bd633db8f1f67a710",
+   "descriptionSha256": "664530eac653cafeec8d56e29e742d599db42d10d13f74179aa751d05d101942",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6766301732c0645d:mechanism:762d44ce@1",
+   "conceptKey": "nmc-concept:6766301732c0645d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:48eb3d4eb5f6d4524b6c5c8d9db8543343e6d6f9e03fa85278bb81454491f387",
+   "code": "AN58.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Contrast medial and lateral medullary lesions by the pathways affected and use brainstem anatomy to explain crossed motor findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "97dd656419224af29fb6cacb57a5343f4e657764118b974bf6aba808f7688664",
+   "descriptionSha256": "83b0bda2edad376d5b8b797df5d9288740be595840700569bbb3b87169aa1a08",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6766301732c0645d:mechanism:a7d32958@1",
+   "conceptKey": "nmc-concept:6766301732c0645d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:964d8c7b498d9418b3574bdd3b3bb74ea52411892b2405ea357206cfe27788ba",
+   "code": "AN59.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare locked-in syndrome, pontine haemorrhage and the Foville, Raymond and Millard-Gubler patterns using tract, nuclear and fascicular anatomy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "3c442e4651c4fce04cb22e6e11d5c40ee5b797212bfe12adfca19c1bd743977d",
+   "descriptionSha256": "62bfd68056091596e56668c94e7a5575ad6623c4469cd2cb584ae8cb5f343ecf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6766301732c0645d:mechanism:685b5c16@1",
+   "conceptKey": "nmc-concept:6766301732c0645d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:d7fad23a61017a88a04dd3fd97f0c03c4d033f26dc6802db375c4c90bcfafc8d",
+   "code": "AN61.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Localize Weber, Benedikt and Parinaud syndromes on sectional maps.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "12b883755f3cbaeb061910c363bd3f43775edc29e553e1d8680b867ba5f23cc4",
+   "descriptionSha256": "567065599dbe59595880eff5f9504a9ddbea42f8a3c3a5bf42ffa87bceb8efa8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:199cf26fa8699467:procedural-skill:62d46fe8@1",
+   "conceptKey": "nmc-concept:199cf26fa8699467",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:2fd5f2ff168048799b90c4cd175dd596314e311e6c786ae6066884d48346894d",
+   "code": "AN59.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a pons specimen and identify the basilar groove, cerebellar connections and visible cranial nerve root attachments.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "357f0af3a065b8c332b3a5a7c49ca2cf63c568695a8dea600e7d3669cbc62d5e",
+   "descriptionSha256": "859e890c0ca1bc4dc189293b10a06e0cd34a96e264e294841d38eed29267e692",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:199cf26fa8699467:mechanism:6594f98b@1",
+   "conceptKey": "nmc-concept:199cf26fa8699467",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:62b7329f9bac74a3b81fa7f4137cf1079b54004ee8ebaa77b90a994d4ccdf304",
+   "code": "AN59.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw upper and lower pontine sections and label the key landmarks and tracts that distinguish them.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 141,
+   "sourceBodySha256": "b0c2fae6a9c7bcfcbecfaaa08d5079a772eecfddb0b8050365609acfadb38714",
+   "descriptionSha256": "a93a5450874dfe24595878d8807dc687f3eac32688e7e6432ead73998871bf3c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:199cf26fa8699467:mechanism:8d8db226@1",
+   "conceptKey": "nmc-concept:199cf26fa8699467",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3b5f6a364f788bbf1e2c408369178b50a02c266be58adea58a68cabc29cbb7ab",
+   "code": "AN59.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the cranial nerve nuclei of the pons by functional group.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "940e9829eeefb0c1af52e4965defe876fc37f102be2f59a08c302d79f131a102",
+   "descriptionSha256": "21e0509fd545a7434989f2e66c95a858a5e1fab51301d576a6191cd13ea75f76",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:82dc24d0c3197a7c:procedural-skill:bc55763a@1",
+   "conceptKey": "nmc-concept:82dc24d0c3197a7c",
+   "existingConceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "referenceId": "nmc-2024-ref:85bd6b694b5e480fd8847b1ffbb2134a111f682b074dc00be5353b898fa7ef66",
+   "code": "AN60.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a model or specimen, demonstrate lobes, fissures, vermis and peduncles, then identify internal white matter and deep nuclei.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "d9d9b0e8b03647b770076f8aa9cfeabd0366f35a7fa9ef9acc4b71d435c966eb",
+   "descriptionSha256": "1b72ee4040e6aa94253c9adf1953e2a6affd7dfaddf806bab23e65477f23f6ce",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:82dc24d0c3197a7c:mechanism:49978507@1",
+   "conceptKey": "nmc-concept:82dc24d0c3197a7c",
+   "existingConceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "referenceId": "nmc-2024-ref:12d9abcd32e1f24133f4eeec121015a0f0795f9d25190dd9a834960ff043090f",
+   "code": "AN60.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram input to the cortex, Purkinje output and connections of the deep nuclei to downstream targets.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "b753de0ff73ce61b0d80ef9a88464a04da2b2420bde8ff4bacb5c56eae43960e",
+   "descriptionSha256": "0873e909a81613f730fc222ee170d99dde833504a2ac17d199e11a215ffaf8a5",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:82dc24d0c3197a7c:mechanism:4a0346fd@1",
+   "conceptKey": "nmc-concept:82dc24d0c3197a7c",
+   "existingConceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "referenceId": "nmc-2024-ref:5ac3e085d9e1d008075443af515ce48736ab9ba411d4fe1f8e805a15b03f4db0",
+   "code": "AN60.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use functional regions and connections to explain representative gait, limb coordination and eye movement findings.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "58037934f3256fefe816c931388b517f1f26a0bb6383c158c559b27dd123777a",
+   "descriptionSha256": "b5abe5e21a53586ee7dcd2c709d2464265e0d105e6c3f751a390bda780aa89ea",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2026d212d35b9da6:procedural-skill:2c1d4d6f@1",
+   "conceptKey": "nmc-concept:2026d212d35b9da6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:94e3a1bffb98b44e24fcd453991e7549b961a02f8b3009311d775294c8cc4ed3",
+   "code": "AN61.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Orient a specimen and identify colliculi, peduncles, aqueduct and major internal landmarks.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "66a57928df77b4fe138ac65dcd0e5e466eea14331411a3be1921e309ec27887d",
+   "descriptionSha256": "b9e5b82c7efc79c6f9a27a3572f1a965b34c4ded08f260e36d67441b6d8feaee",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:2026d212d35b9da6:mechanism:9eb3ebc9@1",
+   "conceptKey": "nmc-concept:2026d212d35b9da6",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:fb2874b6f9b062e849a5b6f059c94d7e82b7890451daae51f745858e17dc4f40",
+   "code": "AN61.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare superior and inferior collicular sections by nuclei, tracts and decussations.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "9a0e9e2c8ec784de2aab5e558eeb7197dafb8af7b90e43090429b97e982835cc",
+   "descriptionSha256": "64f124acb26f11021292662e5da1e7a2cd55a35c19c07a2746e4a6278b415c4e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a20a9222c5af1ac5:mechanism:ee8601e7@1",
+   "conceptKey": "nmc-concept:a20a9222c5af1ac5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:ffd92c00d2b06d375b9bd627c88320662c9f42b148fd5a0294309c454cbe786a",
+   "code": "AN62.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map brainstem nuclei by level, functional modality and associated nerves.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 142,
+   "sourceBodySha256": "3959746d06f4329ca1058888b20f8da130792fcc8c2f255dbd41d26ef631a182",
+   "descriptionSha256": "ed673f588641a92aa48a34b1dba61edafd5a03e8246910838f98b1ea25f31a3d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b24dce779433a85:procedural-skill:a9a1071d@1",
+   "conceptKey": "nmc-concept:8b24dce779433a85",
+   "existingConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
+   "referenceId": "nmc-2024-ref:db895d7f4f6aabe7b06849e53695763dcbb7a4eb81d02b982b51166c251d1fc1",
+   "code": "AN62.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify surfaces, poles, sulci, gyri and functional areas on a model and predict deficits from representative lesions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "007f390cc1c8eb3824fa761badd68e13aab5de8ee4c9ec88a852219fcd3d52a0",
+   "descriptionSha256": "585814787d1ba7119aa8f1c08c5e1f64363c35f0c7c03e89fb35595427a14691",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3bf83ad41d85ed8c:mechanism:d20fc307@1",
+   "conceptKey": "nmc-concept:3bf83ad41d85ed8c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:38ff624f9fb0817777d21c479dceadba7ec193d08a965f9947f578cc615955c2",
+   "code": "AN62.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish association, commissural and projection fibres and predict deficits after callosal or internal capsule lesions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "f824933aba723580192ab09d263c5629a8197af927bb2c364ad0ab3da5026907",
+   "descriptionSha256": "9f24ea0936b6d753c370bba280272847c398ea60bf560b96e56f06aba56993cf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3e0b55d38888b7d3:mechanism:c7c152be@1",
+   "conceptKey": "nmc-concept:3e0b55d38888b7d3",
+   "existingConceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "referenceId": "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5",
+   "code": "AN62.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the basal ganglia and their connections.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "3f9af3ace2f51a8b030921205d35be8c6b1a8038c9a691f40b40c7b9bd15e04c",
+   "descriptionSha256": "4da262257797136b51e14d83357956e909b3e622a841f16953f560a68350b938",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:34cd528c0b631282:mechanism:f8ca2b33@1",
+   "conceptKey": "nmc-concept:34cd528c0b631282",
+   "existingConceptId": "C-90d792a8-2138-4675-bae6-bc08b6fb7d30",
+   "referenceId": "nmc-2024-ref:3ba1382bb6e8e6849ffa38bce52b36fc5be32fba32100e69b89929e6c4cd97d5",
+   "code": "AN62.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the limbic lobe and its connections.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "3f9af3ace2f51a8b030921205d35be8c6b1a8038c9a691f40b40c7b9bd15e04c",
+   "descriptionSha256": "4da262257797136b51e14d83357956e909b3e622a841f16953f560a68350b938",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3b8782c659a3f686:mechanism:3a1c5fba@1",
+   "conceptKey": "nmc-concept:3b8782c659a3f686",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5d75a6a2f3e3f3888345abdf5dbef613668ac06262700719f8524658dea72c1b",
+   "code": "AN62.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare subdivisions by boundaries, relations, major nuclei and principal connections.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "6bd8124de9b1fe9785644b5921e1c6cedfc67681f7a9e966fad710d97421d5de",
+   "descriptionSha256": "2108c08584d78468928d374120fa37201aec1a3852db3b31fa9f1ae21940ae08",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:770f9fcd39e65e6b:procedural-skill:43b14b77@1",
+   "conceptKey": "nmc-concept:770f9fcd39e65e6b",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0fabaed5e7d8e27e7941c6bff2a31bb134d9087adac2af6e3a55ae0194631181",
+   "code": "AN62.6",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify the arteries forming the circle of Willis on a model and trace major cerebral branches to their territories.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "6d5b3f828ee88258695a900db07e8d0cdbcda7e3aa0e7c1bd0009b2503cb50a3",
+   "descriptionSha256": "65aa6e50811a4db62f6e4493fa36e9773691eb822322bd275e05db16d5f8718f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:98550cf7acd127c5:mechanism:a61d0fb9@1",
+   "conceptKey": "nmc-concept:98550cf7acd127c5",
+   "existingConceptId": "C-1b3b5ebe-8c3b-419c-8bd2-7083ee76d2a9",
+   "referenceId": "nmc-2024-ref:7a424265da2c4eede6a9cd81fdd1d170553158f1c4b860dc727866b23912b27d",
+   "code": "AN63.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use ventricular patterns to predict the anatomical level of a congenital CSF obstruction.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "4e47d792ff002b97c8dec5a7eef878ecb3bcb57374e02617991da622c77ca25c",
+   "descriptionSha256": "e240ef7b7276e6591c8974b0bf719a935189055b5b4bb2b889830817183e418f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:92fd963a114a8f76:mechanism:8f5815b4@1",
+   "conceptKey": "nmc-concept:92fd963a114a8f76",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1b3a137fe6aaf4bfbdc285d681f32ff818bc9392d17d14f8964db1edccfddffd",
+   "code": "AN63.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace olfactory, visual, auditory and gustatory signals to their central targets.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "ad63fd5d14ff718829da4a1b1bc2d3125c61773d2ea52d1ff5a1c36c5e6f7caa",
+   "descriptionSha256": "88ee7aa28a540ce3bbf7bf4c8782b1ab70bfdbb6b79a1eaa35a1a89e9c7d0914",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c8853f4decea87da:procedural-skill:acd58de2@1",
+   "conceptKey": "nmc-concept:c8853f4decea87da",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3bdcdba5dc7822da5c3f1642126efcbb30f3e0889790f94b76c8dac97c07e0be",
+   "code": "AN64.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify spinal cord, cerebellum and cerebrum slides and justify each identification by its architecture.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "27db6b221f290f4db98161eba25208215707dbcce5508b1a73ed65dff2be5038",
+   "descriptionSha256": "f72738b8b5a084d5398634ee0df6c7eb427bedfc5e2e3434f69050668f720f73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c8853f4decea87da:procedural-skill:8c64d5b6@1",
+   "conceptKey": "nmc-concept:c8853f4decea87da",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:103434e62986dac78055ca25b56c57827e8959794d623be215fe53159515a020",
+   "code": "AN68.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify multipolar and pseudounipolar neurons, representative ganglia and peripheral nerve on slides.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "48a2e8a85a46ecdbdc035dfade39b6e66190470d6e26251dcb5651ed4fe1ebf2",
+   "descriptionSha256": "3c146d2000170fc2d4c14d21f71c4eddd0d1814e8cccf8892f0c19c0c32a30df",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c8853f4decea87da:interpretation:9728cbae@1",
+   "conceptKey": "nmc-concept:c8853f4decea87da",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:af81819d6bef2f79a014938104ab4fedcd1755e851fa6ba4e08581bf316c184c",
+   "code": "AN68.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate dendrites, soma, axon and terminals to signal reception, integration and transmission.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "ab7d454e818ade43ed8d26ec298a981c93de413d67e3273d09e70b7914862607",
+   "descriptionSha256": "61ea9bd14a810c1cdb4599bd6ba2eceb686389a79088880f02843fd168bce481",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c8853f4decea87da:interpretation:3e8b220d@1",
+   "conceptKey": "nmc-concept:c8853f4decea87da",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e04fcd56edae76655599b6af50e48d1d2253c7b5cda09b0c52e6e1b43b1c9874",
+   "code": "AN68.3",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the ultrastructure of nervous tissue.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "93d94bd6f7f528ca783e1e0d73d102168e46763279fde6ac0f79a929b05401bc",
+   "descriptionSha256": "a5b9fba39e2f5fbbedcf4b096b2b3f16b974862ab34ae5d515178d9e27137504",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e3e3e8de6fff5c13:mechanism:72895b26@1",
+   "conceptKey": "nmc-concept:e3e3e8de6fff5c13",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e5d35235da08df6dddc717f3500cfe1974b52d53b8b7349ea2fc4fa35d4e83c1",
+   "code": "AN64.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the development of the neural tube, spinal cord, medulla oblongata, pons, midbrain, cerebral hemisphere and cerebellum.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 143,
+   "sourceBodySha256": "23fb71613935b2ec60a32ebfc47c27d149206dfa87a6c71b7ea274a5d4d36e77",
+   "descriptionSha256": "604523f0c0f692ebc1c8800c7d4b67322e0aea3cd3a0bd9d5b1c78673ce750dc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fb797b6ef6736c37:mechanism:ccee99b9@1",
+   "conceptKey": "nmc-concept:fb797b6ef6736c37",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0ca898f443c501397b4364f5524f1114e2fdb4e96f1c223da4d5fa233ffa6d87",
+   "code": "AN64.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative open defects by site and mechanism of failed closure.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "508159da24b80d9173d673db66f823520fedbd8ebe6884e2f9484ddc3e3a31cd",
+   "descriptionSha256": "cd3eb81a5f7e65cbb84cbf07f688601221ab3e2780c8573f181115659143e7f3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fb797b6ef6736c37:mechanism:df4dbb7d@1",
+   "conceptKey": "nmc-concept:fb797b6ef6736c37",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:907c652d1c643eff39e3ecdd1aa4f3460793354a3c697879f1dd9189a7ac5bf9",
+   "code": "AN79.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate persistent primitive streak, notochord remnants and failed neural closure to teratoma, nucleus pulposus and representative malformations.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "287cc29277c92c8a83583362c2185104c399a679b723e8f1a9d47151f3f9b1e9",
+   "descriptionSha256": "2ca71cbb689eb7d9a78b43c6b2137a6457fbab9540788198fee146b73b4ec29b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:539ab43909d56d22:procedural-skill:6bc2cb7b@1",
+   "conceptKey": "nmc-concept:539ab43909d56d22",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6b180d834afa25745e755faf4df1936644ed4fb8ef9e2b13cd8e58396b85321b",
+   "code": "AN65.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Classify unknown epithelial slides by layering and cell shape and relate each structure to function.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "12a58901a4eb67544e42e53326d3ac8de4890fa3fb8bde33874660027e94b7b7",
+   "descriptionSha256": "df9b734c57e0ad6d92e2592c12187feed2dc0b096e21736bd19d1450ec2ecfab",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:539ab43909d56d22:mechanism:3bdd9f89@1",
+   "conceptKey": "nmc-concept:539ab43909d56d22",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5ae6abaa898b5043e1ba705a18792314e52e8edb02dd36c3c3d2ef38efcba772",
+   "code": "AN65.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Identify junctions, surface specializations and basal attachments on electron micrographs and explain their roles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "4fdca3af982dc302dc96c24e506d4507e4f6e2b4d78dacae9ce1867c85abcb8f",
+   "descriptionSha256": "e5cd561a8c57c864ac7660d862ea77818993f8419bacb6530cbc1a68459416ec",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9645c551f0b7cb63:procedural-skill:e3b9c064@1",
+   "conceptKey": "nmc-concept:9645c551f0b7cb63",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:1ca97fc81b1c62db41ac62513f716f847ff03dade4784d7d002cbdb89aecb687",
+   "code": "AN66.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Distinguish representative connective tissues on slides by cells, fibres and matrix and explain their functions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "dff739cc9752bf822f4b012a2138baa29007414e05da6e76dd37db31743da0a2",
+   "descriptionSha256": "da37e4373ae1d0ea1af86cbe168b2e10ab4c443858910bb896da420b9ffcfb9b",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9645c551f0b7cb63:mechanism:ad7abda4@1",
+   "conceptKey": "nmc-concept:9645c551f0b7cb63",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:522a19847b3a8ec9a2c952f566450d39bf5edf127e7d35cb277f0d20f3cef8a0",
+   "code": "AN66.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how ultrastructural features of fibres, matrix and resident cells support tissue function.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "37238a5bb390896f1abb34485b357ca55dc4fb6af8a234c8c94c51977243b701",
+   "descriptionSha256": "f58208891bd55b46d4aa6d7e88f173df3724bd3fe0d4cb358e40d9e125605aba",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b06a7e7fd3e613f7:procedural-skill:c9c29258@1",
+   "conceptKey": "nmc-concept:b06a7e7fd3e613f7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:138934aaae06c76c1890e23733a876236d474300aace8011030072b94d748c88",
+   "code": "AN67.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify skeletal, cardiac and smooth muscle on slides using striation, nuclei and cellular arrangement.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "e1f824aeb7961a14849c0b133d91dc70b8602edb440eb98252cd4a97131efd6e",
+   "descriptionSha256": "ba50fa8e354af8d74bc768dd0b2bff87ac1d94751ade926b858403e1422026df",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b06a7e7fd3e613f7:interpretation:e1094adf@1",
+   "conceptKey": "nmc-concept:b06a7e7fd3e613f7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bdbc46ff4693a82b29fb08b44fae61e7e471586e10bea7b1c2812bbb3d04d8de",
+   "code": "AN67.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare the three muscle types and relate organization to contraction and physiological role.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "d4dbf79b5a00a72708bf8b358b757d5a41084eda36e88c9ac7d278ad7e8766b7",
+   "descriptionSha256": "f1d7a350efdc0c761fbe2c22144fa1a585313099d67c785be152c7c60855c536",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:b06a7e7fd3e613f7:interpretation:95938748@1",
+   "conceptKey": "nmc-concept:b06a7e7fd3e613f7",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4feb2313a12f48ae88009dd71316e2a8b47e4856afc2b1a376b93e36dba569af",
+   "code": "AN67.3",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare sarcomeres, membrane systems and contractile anchoring in the three muscle types.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "4629c3b7ccc2f51a9456364768c4e1ae51430d3c2cb8b047f9081e006bda1ac7",
+   "descriptionSha256": "12508004044d4e271feabd09ada157d13c3eb477af45905021ca1764e7783a4c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:94de4d77bcdc072c:procedural-skill:d7c98148@1",
+   "conceptKey": "nmc-concept:94de4d77bcdc072c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:317c4fbe03f6e07cd2b51faa2b4ea68bff2ed52136bb3b0505b441b951aed18c",
+   "code": "AN69.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify elastic and muscular arteries and capillaries on slides and justify each classification.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 144,
+   "sourceBodySha256": "3ae974d496ae0c6e8e8d7065d83b2cd62e791f34f516ae7a970f2510bf66f340",
+   "descriptionSha256": "dd3e2d2451a34c82aba54e377575b407eeb048975118fc2fab8bbbf26dc35d5f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:94de4d77bcdc072c:interpretation:c28d4a8f@1",
+   "conceptKey": "nmc-concept:94de4d77bcdc072c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bbb28e1e8f11ee7035992c83ac14ec2e789b786ce633eae1084006e83ebe9b24",
+   "code": "AN69.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare arterial, venous and capillary architecture and explain how each supports its haemodynamic role.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "24f4e201e4ae5fb5d0e509d5ea4fb78fa58ac50134f8dbb8a3fe73a59084412d",
+   "descriptionSha256": "10ee1324b0ce7143710aa433ae50ab4fd695a3d5887ed719d25675956bd62cdb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:94de4d77bcdc072c:interpretation:a49183c4@1",
+   "conceptKey": "nmc-concept:94de4d77bcdc072c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0e6b22116cb3e6ad5fdc75e8c695add6540dbe502e26e63f0da83026488d8312",
+   "code": "AN69.3",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare endothelial junctions, basal lamina and supporting structures across representative vessel types.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "8fdd43058ad48b933a45f7514f03f0804d58fd2df055bbaa8eb01821f16bb068",
+   "descriptionSha256": "6da807b46f9a356d1e98c9ae7adea0dbb486e19ec9730764c0ae844a4f52f689",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:795f561d5941c38c:procedural-skill:dd94e619@1",
+   "conceptKey": "nmc-concept:795f561d5941c38c",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0e35b9a1a7f4af1940046da37303c532e1035ee969dece36e2774634a820abc7",
+   "code": "AN70.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify serous, mucous and mixed acini on slides and explain the distinguishing appearances.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "f98e806dcdaf2fd9f59595c68e8c8ba4fc0317ac374779c38494759919b1d81d",
+   "descriptionSha256": "ef2044f6471f491ef4ae3ef9223bdfb5e58f26dc1ef6d7c4add84e8049560254",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:483f7700f23b1401:procedural-skill:5609d151@1",
+   "conceptKey": "nmc-concept:483f7700f23b1401",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9f59fe56e5ee0c88c7d91cfba722a6fcf4e24dce5faf8e83a72177284613494f",
+   "code": "AN70.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify lymph node, spleen, thymus and tonsil on slides and explain how their compartments support distinct immune functions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "46e744d833456e3564022871ab10cbeb1d27ccf0621b78f700f95bdfc2e51334",
+   "descriptionSha256": "d876dfb5c7b204f11a0bea5ec6a96dc60fc61bf97f80529f622c394ee5a33863",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a0dc4bbb25fd7965:procedural-skill:686b36a8@1",
+   "conceptKey": "nmc-concept:a0dc4bbb25fd7965",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a080cd2903174aa99b02af1204e474f381113721cf6c36622b779aca4210226b",
+   "code": "AN71.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify bone on microscopy, distinguish compact and trabecular organization and relate architecture to load and remodelling.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "1ef3b014b3e317ba60ea2e33f1e6ea7cdb6fb22cf6e68aadaa35573902b9d518",
+   "descriptionSha256": "8878e2fd751388b995c3e97c43f08c80e291cbd218e830523c4755f52f55e086",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a0dc4bbb25fd7965:procedural-skill:ce334dfc@1",
+   "conceptKey": "nmc-concept:a0dc4bbb25fd7965",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9924f9e7199c44ddb477e077d8adb5c809fb613a55989099d10c3cc7da5fa341",
+   "code": "AN71.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify hyaline, elastic and fibrocartilage on slides and relate their matrices to mechanical roles.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "1ff79a1b1a47d7cd056f93933d91f4a384fa328b6ca04a30fed700a268be6886",
+   "descriptionSha256": "745d5959f90eef1b86191bb318a40f885bcc7f1aa73ff9b53b433bb0449c7558",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:38670a0dfc9017ac:procedural-skill:77d03882@1",
+   "conceptKey": "nmc-concept:38670a0dfc9017ac",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0d7936da316a466bd923f2a55dd77023db22de63de8714339616f0163dca55e9",
+   "code": "AN72.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Identify thick and thin skin and their appendages and explain the functional significance of the differences.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "5563fab75d13202128b080328cbb159115e177368c5cb148588112db616fe203",
+   "descriptionSha256": "558770c5a5a31a2a932b0004f157dd09e45a317f1bf1e65a58bd4477fd45c114",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:066b11df80b84b8e:mechanism:4e58ca05@1",
+   "conceptKey": "nmc-concept:066b11df80b84b8e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:561dbe977a276d1261c866126258b676ec02bd951e411d32c6385d210d68ab65",
+   "code": "AN73.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Label a metaphase chromosome and classify chromosomes by centromere position.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "22cc775e5a6394299acb04b44614489be4b7e0a646c8ef951b75bc03a5d7dad1",
+   "descriptionSha256": "e0147c013c450eb132575a183cd957b57c4cdfd6b3fc15bd1e5bd842714d86e7",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:24c7049c91aaceb5:interpretation:0bdfc213@1",
+   "conceptKey": "nmc-concept:24c7049c91aaceb5",
+   "existingConceptId": "C-0e6f39bf-a375-4247-be59-e882f8233bba",
+   "referenceId": "nmc-2024-ref:a5a5048d01747edf8da32222ea0be8d4f3257fe7a10e2667e6b478c7a80dfaed",
+   "code": "AN73.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sequence specimen preparation, chromosome banding and arrangement and explain what abnormalities a karyotype can detect.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "ab7e9b0dca2f267bb780b21441eddd1b77756c7929d42c27550aa5f6964e4267",
+   "descriptionSha256": "5f1dee14be0b4266faf3c41d06eb4fc87ad69b1cbb816c0bb73a28d63a9d9504",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:02fbc99860d8aa78:mechanism:ebaad485@1",
+   "conceptKey": "nmc-concept:02fbc99860d8aa78",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:af7ae8293dae82fa7800d76d9107c6429125cdbd1739207adb7b070265192844",
+   "code": "AN73.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain lyonization and use a representative example to relate mosaic expression to phenotype.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "fcbd089d79b71f68cc54e8638f298def0d399e095965740dad6a8268f87d8ac6",
+   "descriptionSha256": "0d7c9126d91024dc153205c08d6a90cdb4d71a97f014b73e913a8136644714cf",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:295596cb45a8f9fd:mechanism:fcd20f74@1",
+   "conceptKey": "nmc-concept:295596cb45a8f9fd",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:3be06b22f51bab36141b9bcc4652af802fd01e2277dc5ea9aa3e89796721f8fa",
+   "code": "AN74.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare Mendelian and non-Mendelian inheritance using representative disorders.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "03720f1662f836e43ad85dc757e262319c5532cd6664abf03cf05d070a5ed000",
+   "descriptionSha256": "9a83a5c12b514a413f411cccc17938e463f833891a437b923c43ff1f16bc192a",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:295596cb45a8f9fd:mechanism:da267d39@1",
+   "conceptKey": "nmc-concept:295596cb45a8f9fd",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e860726261af5095bf395df74535799fbcfb8cb35e69025aa0d13b62efbfdc68",
+   "code": "AN74.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw pedigrees for major inheritance modes and annotate representative disorders and transmission clues.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 145,
+   "sourceBodySha256": "f44ba229ef3a33ab50a604b1152027653d3fb6fc713d6f6145ad740671b981de",
+   "descriptionSha256": "7efaaaf01ecfff830b940ce1aa56062dfc79d845e5fe2f69647f4c3a24fda964",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7cd8ffd84d01e590:mechanism:9c7c2614@1",
+   "conceptKey": "nmc-concept:7cd8ffd84d01e590",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:246dad106a7e9353c7db16973f404a77da02fc146e27cd783725cdbe81978cec",
+   "code": "AN74.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how genetic susceptibility and environmental factors combine in representative multifactorial traits.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "7e566b1709fd83eb83b186da03e18d018a4289a48dea24f3b39444d595456c6e",
+   "descriptionSha256": "1d0262f0a4c1a565926035747d7a839bb2f0dea5372405d0f22bb9f7de2296e0",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:215ad54040408688:mechanism:2b9fc2fa@1",
+   "conceptKey": "nmc-concept:215ad54040408688",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e863b1cbd610fe2f90db2d910bed6b24296602ca7fdd53ddf18b5b7eec8ff785",
+   "code": "AN74.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare genetic mechanisms, inheritance and distinguishing clinical features of achondroplasia, cystic fibrosis and hereditary vitamin D-resistant rickets.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "cee342db92f36302cee1c4385ad88b7b848a7e5c41f2423d3881a353aeac3bb0",
+   "descriptionSha256": "54dd8e88add9e36c44292f5902a706ad952382b8a48ae9dc298ad87824ef9b52",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:91a0ee783201d261:mechanism:ab25e711@1",
+   "conceptKey": "nmc-concept:91a0ee783201d261",
+   "existingConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "referenceId": "nmc-2024-ref:80a19497cc6ce011a12513e7d54f5b910d1f4775b3719bf1e17a2ac3e1e6eea4",
+   "code": "AN75.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish numerical abnormalities from deletions, duplications, inversions and translocations using diagrams.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "83c2410fbe2eed40eab28b4690b01366416493f7acfa527fd8eab3b96dd72e6b",
+   "descriptionSha256": "6a80dcd80e51242204c3620154599ca98663dc5583c3b8f17d5f82ceaaec6dcc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:91a0ee783201d261:mechanism:39dc2b91@1",
+   "conceptKey": "nmc-concept:91a0ee783201d261",
+   "existingConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "referenceId": "nmc-2024-ref:c3741719d4c0bb9e72984daee5ee1b39cb3286b9c55545a78616d42441857403",
+   "code": "AN75.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Match Prader-Willi, Edwards, Patau, Down, Turner and Klinefelter syndromes to their genetic mechanisms and representative clinical features.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "022d59696bd0d4fc77124d916c383b3668bc1df913bcec2f02e84a0b2b0cc09a",
+   "descriptionSha256": "5a12dc375937295711740f755b010175e619ce1208f6de387d4f255f3e4227d1",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4b28745c79e5207a:mechanism:74ced3a4@1",
+   "conceptKey": "nmc-concept:4b28745c79e5207a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9a23f7508185934770abccb7439bcdf70cd756435126003562238e76984468db",
+   "code": "AN75.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare the origin of distinct cell lines in mosaicism and chimerism using an example of each.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "2894453255537d8d8b67be7ec9e7a1e96fc6c7d74267d6ae2caced47eb09432e",
+   "descriptionSha256": "46eaa51f722201dfc748ba6e588fb783d048d57666c9bbee334a3858d3e300d6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:72a345eb8ca9fcb3:mechanism:f5c534c7@1",
+   "conceptKey": "nmc-concept:72a345eb8ca9fcb3",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:198a19a6ee93ba081bd70b88288513f3e9add033ff51e15be33ec2a5bf0ea4bd",
+   "code": "AN75.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the genetic basis of variation, including polymorphism and mutation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "a3055849e22193102156121fbd8a13bcd24f7d99d1549e4e2c4cdff0ec9f234c",
+   "descriptionSha256": "3ad8f247e6fc6909a5020ff9924c315cf95a1e7eb4c9023a59fe0afded155752",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:86ed3cd4b812bd90:interpretation:ab4c1713@1",
+   "conceptKey": "nmc-concept:86ed3cd4b812bd90",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5956b92d0a91b0509640d16cfe59017322f54a6dd8d69e5f452520e72477c36f",
+   "code": "AN75.5",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare counselling, karyotyping, FISH, PCR and sequencing by purpose and use a representative case to choose a test.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "21751caeed57bb88b389985b46d0923a5cfaa4829ff5abab41296b4669ffeb8f",
+   "descriptionSha256": "fcacceed3d9db1f71ba8eed9c79b66de849701ab38fb2a1bdecaeb5155432391",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3c378e4adfda29b4:mechanism:fe8d363e@1",
+   "conceptKey": "nmc-concept:3c378e4adfda29b4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:227fe66ef2cae3e23e1e279a948586f2d6823e490b446760aa3db5221cf4b989",
+   "code": "AN76.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Order major prenatal and postnatal stages and identify the transitions that separate them.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "71719be4d5ffec4efe92d24ca8938eebd2d6dce1245bd2b95fd9636720a06b12",
+   "descriptionSha256": "6e75b4854d572a43b9499099bf82cbc2dd1b856cd772ccfa702a98ea4e5a2298",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3c378e4adfda29b4:mechanism:129e0cea@1",
+   "conceptKey": "nmc-concept:3c378e4adfda29b4",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:829cf59937d96bd6f99aa14cf3d6ef0890d3b95419e21b865e238b2786db0825",
+   "code": "AN76.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish ontogeny from phylogeny and explain trimester and fetal viability in developmental context.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "a8bc332495b0cf1d40dc3b7b6a24761140ec6b9837b67dc3b995a9a65578e72d",
+   "descriptionSha256": "bf4f80dd801098faff468a147ef065b1717ab7591f68b7ac3448a884413153c9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:623a36c62f8edee0:mechanism:dd29d39e@1",
+   "conceptKey": "nmc-concept:623a36c62f8edee0",
+   "existingConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "referenceId": "nmc-2024-ref:ab1cbba07cb1ff1e2a398d2f6fcbc5aadb7d0eb0382fbd58ed0b3d8e7490e3e0",
+   "code": "AN77.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram endometrial changes during menstrual, proliferative and secretory phases.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "5116b36ebab324d4448a4ec98151f0ced19e01f9bc97694c9ea9fda7f2d7de88",
+   "descriptionSha256": "c31485f295ae1fba8607111311d26d71f9305aa35d965a5fcd65bcd8099b74ca",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:623a36c62f8edee0:mechanism:814ac884@1",
+   "conceptKey": "nmc-concept:623a36c62f8edee0",
+   "existingConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "referenceId": "nmc-2024-ref:343138e4a2627c50c8bbbed64219dea689e24668299167053277b15b785f73e2",
+   "code": "AN77.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Align ovarian and endometrial phases on a timeline and explain their hormonal coordination.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "f16a0f44588d98a3b7fa7ec19385637af18437ee8b6c997ac6e007a6e0ef7b53",
+   "descriptionSha256": "68afbbf35b55752f929bd69857ee5ad44a82e3e898008f611e6f3b43735a78fa",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1d20fcc151d82878:mechanism:751d09ef@1",
+   "conceptKey": "nmc-concept:1d20fcc151d82878",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:bca83a8cfa8a776cb1a33a1432ac7d2cce2afdb10751854cf8b803ebfc33e415",
+   "code": "AN77.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw spermatogenesis and oogenesis and compare meiotic timing, arrests and products.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "c738ca427a7a4727f15eadb19ce9a0f575f3a7a0257303d00fb69fbc71265fe7",
+   "descriptionSha256": "55ae0bac1b1ade4366984da16da8ddacdef5159b10910da721d56199a8e2bf73",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:fba62fc2bfa8d8be:mechanism:a72249b3@1",
+   "conceptKey": "nmc-concept:fba62fc2bfa8d8be",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:08151ab8cceccd4c845b947b93de09bdddf2e17a919bca976a177eeb47703992",
+   "code": "AN77.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sequence gamete interaction, fusion and zygote formation and explain the consequences for ploidy and developmental activation.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "e907067b1c62b2277e27b0089ed22629196eeadbea5cad8418b6885586063abe",
+   "descriptionSha256": "f870586e5b699ab8121271956956cdebad8317cb7a5d45236eb823412183ed00",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a0d9e1b7954398a4:mechanism:08b3236f@1",
+   "conceptKey": "nmc-concept:a0d9e1b7954398a4",
+   "existingConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "referenceId": "nmc-2024-ref:d410a80c0f91e0c4d78b1ed0a5094d50712c8aef6854119576dd7f9f1e89ca05",
+   "code": "AN77.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Map representative contraceptive methods to the reproductive structures or events they affect.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 146,
+   "sourceBodySha256": "59af4bb8b4f89559400ac58f84dd340fd73584f87e7700f6011da14d30da26d7",
+   "descriptionSha256": "14730f0ddef19298ad68951222cfa8e2a9ec3765bc74401f4ea77d944d0186bc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1607686ab8082fd5:mechanism:ca1939b8@1",
+   "conceptKey": "nmc-concept:1607686ab8082fd5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16",
+   "code": "AN77.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish teratogenic effects from factors affecting fertility.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "d3c0e47cc24016c5e2e2e2553f9c1471d6bfb447e91e88c7d3927bc5a4dd0250",
+   "descriptionSha256": "19a6b177286c035c8c2485057363fb76194acf0157282c2d7ab74ac5c36eed41",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1607686ab8082fd5:mechanism:4907cad3@1",
+   "conceptKey": "nmc-concept:1607686ab8082fd5",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+   "code": "AN79.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate teratogenic risk to developmental timing in early pregnancy.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "17b8bd365137b837bbcc458016c2481dab0acbae4d4a3d8b620046cb295c7d99",
+   "descriptionSha256": "82ff7c7d0af5d52a5efcda574aba5fd0cb88f82aeb2c9449f27565f3400233b6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:41cb7b1cfc6c86b6:mechanism:c6b3ef92@1",
+   "conceptKey": "nmc-concept:41cb7b1cfc6c86b6",
+   "existingConceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+   "referenceId": "nmc-2024-ref:7ae4600eb3555bc1295379251aff9594640a5fde7f0995de2e3965528279de16",
+   "code": "AN77.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain surrogacy, assisted reproduction and related reproductive and social concepts.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "d3c0e47cc24016c5e2e2e2553f9c1471d6bfb447e91e88c7d3927bc5a4dd0250",
+   "descriptionSha256": "19a6b177286c035c8c2485057363fb76194acf0157282c2d7ab74ac5c36eed41",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:80bcdeb50e2b60ad:mechanism:12c27963@1",
+   "conceptKey": "nmc-concept:80bcdeb50e2b60ad",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a7ba6e33fcad24cc6fd9d19bbf51bd5546e9278cb10ed095380caf514e1ae670",
+   "code": "AN78.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sequence cleavage, compaction and cavitation and identify the major blastocyst compartments.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "05d56b62f2b98988fbaa975c0b0b8d16746493b79d402203bb9028709a82967a",
+   "descriptionSha256": "9baa3c93c0b730da32540443c90588c0a9f1d27b64647d520fbed608a35737e2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:80bcdeb50e2b60ad:mechanism:8bbd33e3@1",
+   "conceptKey": "nmc-concept:80bcdeb50e2b60ad",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:4ee2e522d7053d60948f10c34b6918a92e92daf7b98257c9e532bffb1d49e70d",
+   "code": "AN78.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace trophoblast differentiation and relate the resulting layers to implantation and early exchange.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "d65c2874d1492a13cb65f08e1684a689f1b034eaf36b52bc64f948e0a5a1996e",
+   "descriptionSha256": "fb2298ad193b80710f43ccb56d4ee39522db749d6ba57489456bd10bb8b47d12",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:80bcdeb50e2b60ad:mechanism:06138607@1",
+   "conceptKey": "nmc-concept:80bcdeb50e2b60ad",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:b0c929fe22187c85c0d76d51d175a35220a7b7ca283f0ef3ed588f8fc3a38d43",
+   "code": "AN78.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the formation of the extraembryonic mesoderm and coelom, bilaminar disc and prechordal plate.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "9423a5a8ec37163baeb67d7a045ecf018645721a2d7421d4ffe0da3980221308",
+   "descriptionSha256": "2ef7bf67439d6bbdff28bae1a7551979db61ab1977fec0019b09ab79a489871c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:a7c998eb43431dca:mechanism:a33874f6@1",
+   "conceptKey": "nmc-concept:a7c998eb43431dca",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5687678ee0952a8eb3a12d60de74195f6aed087e3bb4bc331f7c293c07794b36",
+   "code": "AN78.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram normal implantation and distinguish common ectopic sites by anatomy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "40bb4a80da0ccb6374c590d8f6120ef0138deb92f94912ddc265c61f453663c1",
+   "descriptionSha256": "ef143108fc1caf4e638f3581519083fee00bb338e4bc92f9ab78afc4421d9278",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:76b940d97da6f78e:mechanism:27555727@1",
+   "conceptKey": "nmc-concept:76b940d97da6f78e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6f85391fd7e88b79c3f66bd7956122721ae2a6f3ab17a01dade763eb588d3173",
+   "code": "AN78.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the decidual reaction, distinguish early pregnancy loss from normal development and identify the basis of hCG testing.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "29989e2f594ba8fe414a1ba81e0c9311bf5c3ce9e2552767f4f13946dcdd1890",
+   "descriptionSha256": "a9b7523ca41fb1c709c9eaf4f8f9b7515da6dbe77169682fd8cb97d459167bbe",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:76b940d97da6f78e:mechanism:a77590bc@1",
+   "conceptKey": "nmc-concept:76b940d97da6f78e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:709a1faefa2bafc405f2ccfaeb322bcfc827e3e646a5ec5b2c10233b45d8ca7b",
+   "code": "AN79.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain how early pregnancy is established and assessed in the first trimester.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "17b8bd365137b837bbcc458016c2481dab0acbae4d4a3d8b620046cb295c7d99",
+   "descriptionSha256": "82ff7c7d0af5d52a5efcda574aba5fd0cb88f82aeb2c9449f27565f3400233b6",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:71edcc90b42d91e0:mechanism:0bb70cbf@1",
+   "conceptKey": "nmc-concept:71edcc90b42d91e0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:9340fa82033b93ac24e41d64ffd566d6a974faa08b33f13877c7e1941a581587",
+   "code": "AN79.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram streak formation, cell migration and regression and identify the resulting germ layers.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "30aee37c6fa61c13e9d21124ee8b42ab3657a058c32d3b46a0e4565457b25be6",
+   "descriptionSha256": "6967608a31c6e5e45d31835b2d504ec94476013fc02eb78813bb0ba823169122",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6bd0a0266f2be925:mechanism:921e8c82@1",
+   "conceptKey": "nmc-concept:6bd0a0266f2be925",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:431f81526a2c7d35a16771e7606227c05593d1a75f5de28006d6e2c9549b5335",
+   "code": "AN79.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Sequence notochord formation and explain its inductive role and adult remnant.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "debbd8f4e224d5d8cf4c26ccb7591bd0bae1596c1d479b7e44a8dec8187e3f64",
+   "descriptionSha256": "7833f551b8e765c7d1a4883face67d4a751b9ae5205f89bd1b9581be46520219",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ef6f7de18bce9971:mechanism:dc852a82@1",
+   "conceptKey": "nmc-concept:ef6f7de18bce9971",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7491ddd67d909d9255dc6a3a1a446d445fec6a5aae08468251091f34e1621999",
+   "code": "AN79.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Draw neural plate folding, tube closure and neural crest separation in developmental order.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "51e4e84bf3fb981c8d2af2166ccd8c267c80d8f017b271a0f5f172378364142d",
+   "descriptionSha256": "bc17e5074ce736c1e90893c1e9e0b5d545bc7229dfe29f6e52a2ec6a8a74ce3f",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:d952a91415d30a5e:mechanism:602192bb@1",
+   "conceptKey": "nmc-concept:d952a91415d30a5e",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:5903c5d15ab12cf92b7f08d98d64f66663a8063c354219d1f6eec9a3acb20573",
+   "code": "AN79.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace segmentation of paraxial mesoderm and the emergence of the embryonic body cavity.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "4e0a0c6b5182c410018a03365ecd2cc9059afda17a87e4abf580518c67cc4670",
+   "descriptionSha256": "768b1458a25098327b910f900fa9fca6b8f4e18e1f9dbdfddcb9b92316f889c9",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:52ce9193ba1b3567:mechanism:61b2aee1@1",
+   "conceptKey": "nmc-concept:52ce9193ba1b3567",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:66ec2106bc82cc93806d52eb7ef1e2201300699e6370ad31184cdf19089ea9fc",
+   "code": "AN80.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare formation, function and fate of chorion, amnion, yolk sac, allantois and decidua.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "313a416c5314d888017ae364e57ada73a69d76d6c71dd37cdce5882ae6b3cd75",
+   "descriptionSha256": "c856ce9a01f1c06d95498c54c18a9b6156897dc351cf262b008a5de5f752c0d3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9b026d887cbb5736:mechanism:4cae47ee@1",
+   "conceptKey": "nmc-concept:9b026d887cbb5736",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:f504bf67ac0f4c145aea9b3dd58bbb409b8c18e32362e182ab745450fc556368",
+   "code": "AN80.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Trace cord formation and label the vessels, supporting tissue and covering on a cross-section.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 147,
+   "sourceBodySha256": "4c0a264ae44b4defcec2f3adc37f0451ffa126096d0712c0b74aac6baaa5b4d9",
+   "descriptionSha256": "4752197ad7721a94b494905711e69d82d21378401fffbae545c015b1598d6b6c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9b026d887cbb5736:mechanism:1baf9dcc@1",
+   "conceptKey": "nmc-concept:9b026d887cbb5736",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:6c2fff14581055e31591f382f037ab3fbfe7100deac68abe77f4be9a87ccf559",
+   "code": "AN80.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Identify central, eccentric, marginal and velamentous insertions on placental diagrams.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "961c20d0b21d7eca66ea262bc9a53af82c74de387d49c1d8d895c13284b3ba5f",
+   "descriptionSha256": "88bfc81a75a38ddd3b659c6a47ee8d907163069850bf62be27ead22010d4fd99",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f302133ff7ad03cc:mechanism:7c69cefa@1",
+   "conceptKey": "nmc-concept:f302133ff7ad03cc",
+   "existingConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "referenceId": "nmc-2024-ref:8613d0fd4eb1e09b35bd1e91de0313fc8275fbfea562bf7b6b930924c99b9f6a",
+   "code": "AN80.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Diagram villous development, maternal and fetal circulations and the exchange barrier and explain key placental functions.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "c2d3984454be8326a6d2462a647dce3bc02cea11858c6340017f9e46f9ffab95",
+   "descriptionSha256": "d08f46f0717e82902a86034625bcb58b1702daefb7c5f169006d524242f616dc",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f302133ff7ad03cc:mechanism:0c1031a3@1",
+   "conceptKey": "nmc-concept:f302133ff7ad03cc",
+   "existingConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "referenceId": "nmc-2024-ref:357f4a95a49d5e8c439f1e71d5f36e503bc12fe0983d336b6f4bab8bc459da44",
+   "code": "AN80.5",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Relate placental hormones to uterine growth, pregnancy maintenance and changes approaching parturition.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "8d99c90e013a9247db47f2e500a2f49ac5860a380d0e04e2c194d99913eb33b4",
+   "descriptionSha256": "9d9f2e78581c23e0a0a184e91af57a589787ee5096a638c62f82da785a066190",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b8b49c71e5ccb7a:mechanism:03f9c8c6@1",
+   "conceptKey": "nmc-concept:8b8b49c71e5ccb7a",
+   "existingConceptId": "C-f2d82a38-55a8-4cf2-affc-4234b05208dc",
+   "referenceId": "nmc-2024-ref:ec2fdad0d4d94894e2edb27ca66dca9f1c2c3d43914cc06e470eb39bbdff7f72",
+   "code": "AN80.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare dizygotic and monozygotic twinning and relate the timing of embryonic division to placentation.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "d1416f9677301d61e4d54b9cb9b25f3d3e12447142d704a6b79ac32dfb6c71a6",
+   "descriptionSha256": "b2d5c064d4a23a74d83c31ebdd5e626905e56808862e4736072fc933d978db3c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:3c773a454e55856d:interpretation:dcf36b8e@1",
+   "conceptKey": "nmc-concept:3c773a454e55856d",
+   "existingConceptId": "C-75ee394a-5ebb-44a4-a617-bd734aa482d4",
+   "referenceId": "nmc-2024-ref:9665d775460fa8c78d73c0265bf8224cfe34a3a7fa219c108c59550b4678c610",
+   "code": "AN80.6",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare age estimation from developmental landmarks and fetal measurements and distinguish gestational from postfertilization age.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "db61aa3016f09535bd190430207508a8f1c287a3142c7c7dc61768a5e5ff11ac",
+   "descriptionSha256": "dd3285798fee2a9ac3618f2127bf6e9ae0ce9d95b15f150c9308c65e4572172e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f5eb74f862d9c700:mechanism:69dc23cd@1",
+   "conceptKey": "nmc-concept:f5eb74f862d9c700",
+   "existingConceptId": "C-7882e2fc-242b-4e96-84a2-3c604018bb23",
+   "referenceId": "nmc-2024-ref:f9a4416841b1c78af4a9b38258675538f21ec4a5138c6277139f10586d18a60d",
+   "code": "AN81.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare screening and diagnostic approaches and distinguish invasive sampling from non-invasive methods.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "dd55c57a7665c4d693dc956474894c19c31ee397e76e34835fbd9c50c841f26e",
+   "descriptionSha256": "07af683f6d2a869ffd7d3d452f7421ad9b5797495883c8302bd2c77042006150",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:61b10a7812d10157:interpretation:aa355d55@1",
+   "conceptKey": "nmc-concept:61b10a7812d10157",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:60ed1df241190b97bf50920172b8e52b9bd8f086e63afdba9f3feaf756c75919",
+   "code": "AN81.2",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the indications, process and disadvantages of amniocentesis.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "69ecfdbff9a340f93a0c8c6c6cf71d0a16a4e36b8c3ca26ee663938c6527e232",
+   "descriptionSha256": "021a9616157525a72b6da6cb2fd3c18cde949ae824ae9d1dc84431627654a0cb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:c82629b01c8c962f:interpretation:c2bd714f@1",
+   "conceptKey": "nmc-concept:c82629b01c8c962f",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c19653105f105a34f76ff4aaa547cd14f0c515773bf84ce10b12a072170aa6d3",
+   "code": "AN81.3",
+   "task": "interpretation",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the indications, process and disadvantages of chorionic villus biopsy.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "4c44c409c43b067f1864cb31f8a2fbb3d33db9224b5726e6d02506bfff50d248",
+   "descriptionSha256": "7f94c308db55762fe402e7e68471d71b8d21fd481cf0be96a45d37643b1e5afb",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:f9e26e3f28471fa2:procedural-skill:7842921b@1",
+   "conceptKey": "nmc-concept:f9e26e3f28471fa2",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e20db5a56fcf4123da61aa8294ff6488ff502531819faf2f213236fc60c6ce51",
+   "code": "AN 82.1",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate respectful cadaver and tissue handling under observation, following local procedures for exposure, movement and return of specimens.",
+   "basis": "literal-name-in-source-row",
+   "sourcePage": 148,
+   "sourceBodySha256": "6f383fb3356dff9ee0ac249192f3b33890153e5e4d109f157d77d2d9bf5f0742",
+   "descriptionSha256": "3ceb90ba40ffccad2f7c2fa68682205b4cfce5fe247b5447aa85d8285af1595e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  }
+ ]
+}
