@@ -12,6 +12,11 @@ export async function canonicalIdentityDigest(c){
  const identity={conceptId:c.conceptId,label:c.label,aliases:[...c.aliases].sort(),subjectTags:[...c.subjectTags].sort()};
  return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(stable(identity))))].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
+// Standard rows bind directly. Source exceptions bind only through their own basis: misprinted codes and
+// unheaded rows ('source-exception-resolved', resolved by the reference overlay) and official amendment
+// replacements ('official-replacement'; the replaced row may lack a row box). Deleted rows never bind.
+const basisFits=(ref,basis)=>ref.amendmentNotice?basis==='official-replacement'&&ref.searchCode!=='PS9.2':
+ ref.identifierState!=='standard'||ref.topicId===null?basis==='source-exception-resolved':['literal-name-in-source-row','scoped-task-in-source-row'].includes(basis);
 export function validateFoundationDrafts(input,catalogue){
  const c=validateReferenceCatalogue(catalogue);
  if(!exact(input,['schemaVersion','draftVersion','authoredCatalogVersion','sourceEdition','sourceSha256','clinicalApproval','sourceAlignmentApproved','learnerActivation','objectives','sourceBindings'])||
@@ -29,10 +34,10 @@ export function validateFoundationDrafts(input,catalogue){
  for(const link of input.sourceBindings){
   const ref=refs.get(link.referenceId),key=link.referenceId+'|'+link.objectiveVersionId;
   if(!exact(link,['referenceId','objectiveVersionId','status','basis','sourcePage','rowBBox','sourceBodySha256','namedConcept'])||
-   !ref||!objectives.has(link.objectiveVersionId)||seen.has(key)||ref.identifierState!=='standard'||ref.amendmentNotice||ref.topicId===null||
-   link.status!=='proposed'||!['literal-name-in-source-row','scoped-task-in-source-row'].includes(link.basis)||link.sourcePage!==ref.pdfPage||!sha(link.sourceBodySha256)||!text(link.namedConcept,2,240)||
-   !Array.isArray(link.rowBBox)||link.rowBBox.length!==4||!link.rowBBox.every(x=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=10000)||
-   !(link.rowBBox[0]<link.rowBBox[2]&&link.rowBBox[1]<link.rowBBox[3]))bad();
+   !ref||!objectives.has(link.objectiveVersionId)||seen.has(key)||!basisFits(ref,link.basis)||
+   link.status!=='proposed'||link.sourcePage!==ref.pdfPage||!sha(link.sourceBodySha256)||!text(link.namedConcept,2,240)||
+   !(link.basis==='official-replacement'&&link.rowBBox===null||Array.isArray(link.rowBBox)&&link.rowBBox.length===4&&link.rowBBox.every(x=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=10000)&&
+   link.rowBBox[0]<link.rowBBox[2]&&link.rowBBox[1]<link.rowBBox[3]))bad();
   seen.add(key);
  }
  return structuredClone(input);

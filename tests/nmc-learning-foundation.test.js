@@ -59,3 +59,16 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
  assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@22');
 });
+test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
+ const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));
+ const cat=JSON.parse(readFileSync(new URL('../data/nmc-reference-catalogue.json',import.meta.url)));
+ const overlay=new Map(JSON.parse(readFileSync(new URL('../data/nmc-reference-overlay.json',import.meta.url))).rows.map(r=>[r.referenceId,r.kind]));
+ const refs=new Map(cat.references.map(r=>[r.referenceId,r]));
+ for(const b of pack.sourceBindings){
+  const r=refs.get(b.referenceId),kind=overlay.get(b.referenceId);
+  assert.notEqual(kind,'official-deletion');
+  if(b.basis==='source-exception-resolved')assert.ok(['search-alias','topic-group'].includes(kind)&&(r.identifierState!=='standard'||r.topicId===null),b.referenceId);
+  else if(b.basis==='official-replacement')assert.ok(kind==='official-replacement'&&r.amendmentNotice,b.referenceId);
+  else assert.ok(r.identifierState==='standard'&&!r.amendmentNotice&&r.topicId!==null,b.referenceId);
+ }
+});

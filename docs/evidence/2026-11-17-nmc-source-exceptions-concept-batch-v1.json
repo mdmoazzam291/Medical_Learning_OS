@@ -1,0 +1,1415 @@
+{
+ "schemaVersion": 1,
+ "batchId": "nmc-surgery-concepts-source-exceptions-v1-20261116",
+ "subjectId": "surgery",
+ "subjectIds": [
+  "biochemistry",
+  "pathology",
+  "microbiology",
+  "forensic-medicine",
+  "psychiatry",
+  "surgery",
+  "orthopaedics",
+  "anaesthesia",
+  "pediatrics"
+ ],
+ "scopeCodes": [
+  "14.1",
+  "PA.29.1",
+  "MI 8.",
+  "FM2:12",
+  "PS 2.1*",
+  "SU24.1",
+  "SU24.2",
+  "SU24.3",
+  "SU27.1",
+  "SU27.2",
+  "SU27.3",
+  "SU27.4",
+  "SU27.5",
+  "SU27.6",
+  "SU27.7",
+  "SU27.8",
+  "OR2. 2.9",
+  "ASS.4",
+  "PE6.4"
+ ],
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
+ "status": "draft-batch-awaiting-admin-acceptance",
+ "attestation": "identity-and-classification-reviewed-not-medical-or-learner-release",
+ "counts": {
+  "concepts": 25,
+  "newConcepts": 14,
+  "reusedAcceptedIdentities": 11,
+  "objectives": 27,
+  "sourceRows": 19,
+  "umbrellas": 0,
+  "flagged": 18
+ },
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "conceptTypes": [
+  "structure",
+  "function",
+  "disorder",
+  "clinical-finding",
+  "investigation",
+  "clinical-skill",
+  "intervention",
+  "field"
+ ],
+ "concepts": [
+  {
+   "conceptKey": "nmc-concept:f18c77d3706f1ece",
+   "existingConceptId": null,
+   "document": {
+    "label": "Laboratory equipment and biosafety",
+    "aliases": [
+     "Laboratory safety"
+    ],
+    "classification": {
+     "subjects": [
+      "biochemistry"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): 14.1 p.169 nmc-2024-ref:7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "14.1"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ce3fde399267b1e6",
+   "existingConceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "document": {
+    "label": "Cervical cancer",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pathology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PA.29.1 p.200 nmc-2024-ref:9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PA.29.1"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8cbd44f061ca4c35",
+   "existingConceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "document": {
+    "label": "Sexually transmitted infections",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "microbiology"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): MI 8. p.212 nmc-2024-ref:7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "MI 8."
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:e9e1ae5f966ed297",
+   "existingConceptId": null,
+   "document": {
+    "label": "Mortuary and embalming",
+    "aliases": [
+     "Embalming"
+    ],
+    "classification": {
+     "subjects": [
+      "forensic-medicine"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "field"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): FM2:12 p.217 nmc-2024-ref:a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "FM2:12"
+   ],
+   "conceptType": "field",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:01d427f7777da233",
+   "existingConceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "document": {
+    "label": "Delirium",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "psychiatry"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PS 2.1* p.352 nmc-2024-ref:f51e3441c089b730d29c4604cf6372ac44a8bcfccfd9ebcb48ebe5ee77de6637",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PS 2.1*"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:612e69804b49ce47",
+   "existingConceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "document": {
+    "label": "Dementia",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "psychiatry"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PS 2.1* p.352 nmc-2024-ref:f51e3441c089b730d29c4604cf6372ac44a8bcfccfd9ebcb48ebe5ee77de6637",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PS 2.1*"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8b5d8b6553d096a9",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pancreatitis",
+    "aliases": [
+     "Acute pancreatitis",
+     "Chronic pancreatitis"
+    ],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "gastrointestinal"
+     ],
+     "organs": [
+      "pancreas"
+     ],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU24.1 p.408 nmc-2024-ref:af976ff499dc2d79b35da2cb05691d32c5cd54abcfa367c460798bd81de2cdf1; SU24.3 p.409 nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU24.1",
+    "SU24.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:868428fb4600c6e0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Pancreatic endocrine tumours",
+    "aliases": [
+     "Pancreatic neuroendocrine tumours"
+    ],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "endocrine"
+     ],
+     "organs": [
+      "pancreas"
+     ],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU24.2 p.408 nmc-2024-ref:df5d0fb4296539b3c0d8df0425c8ce5aec8b9c08c81454adc4b5a17550b0a0b5; SU24.3 p.409 nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU24.2",
+    "SU24.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row",
+    "merges-source-rows"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:4b40ab17cfa14b07",
+   "existingConceptId": null,
+   "document": {
+    "label": "Peripheral arterial disease",
+    "aliases": [
+     "Occlusive arterial disease"
+    ],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.1 p.409 nmc-2024-ref:afde2dbbb31f9c9a938c96cac43b36876618c0948669dcabc97a45fe2a501d77",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.1"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:4d2b63e67a5beb39",
+   "existingConceptId": null,
+   "document": {
+    "label": "Peripheral vascular examination",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.2 p.409 nmc-2024-ref:cd91cb9cc687c595b75c76061465cbc3445a387e7b95502416e7a77fd103aaa9",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.2"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8aa220511f528ce0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Vasospastic disorders",
+    "aliases": [
+     "Raynaud phenomenon"
+    ],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.3 p.409 nmc-2024-ref:e5579dc23d48cebd3b3ac0dbdd4d4d42635c76185c3015f63fffb7da94234178",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.3"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:9932c6548d97d416",
+   "existingConceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "document": {
+    "label": "Gangrene",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.4 p.409 nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.4"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:8a7c2af4a6d6b84d",
+   "existingConceptId": "C-5bc44284-6703-42d4-9045-6b0d250157bc",
+   "document": {
+    "label": "Amputation",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.4 p.409 nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:03e345078e68114d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lower limb venous system",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "structure"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.5 p.409 nmc-2024-ref:97fa0972606477d89b208643ca1920d3da7c1257131828ea2eeabc9aa84fdd67",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.5"
+   ],
+   "conceptType": "structure",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:7e01cca7d8da60fb",
+   "existingConceptId": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "document": {
+    "label": "Deep vein thrombosis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.6 p.410 nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.6"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6ed0da8448b9290a",
+   "existingConceptId": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "document": {
+    "label": "Varicose veins",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "cardiovascular"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.6 p.410 nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.6"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1b9786fd7cae5279",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lymphoedema",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.7 p.410 nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:34316d7cdfc7155d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lymphangitis",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.7 p.410 nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:6d16a19b768ad8de",
+   "existingConceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "document": {
+    "label": "Lymphadenopathy",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.7 p.410 nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.7"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:dd957a4bda88327d",
+   "existingConceptId": null,
+   "document": {
+    "label": "Lymphatic system examination",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "surgery"
+     ],
+     "systems": [
+      "immune"
+     ],
+     "organs": [],
+     "domains": [
+      "clinical-skill"
+     ],
+     "tasks": [
+      "procedural-skill"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): SU27.8 p.410 nmc-2024-ref:0dd1c053ec1f7ebe7ec74246257adaaba9d2b06d17838cfeb9621857df2cc0b5",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "SU27.8"
+   ],
+   "conceptType": "clinical-skill",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:49d3731619f9ee8d",
+   "existingConceptId": "C-9583a4d9-e46d-4ddf-b6b3-1daa832f0268",
+   "document": {
+    "label": "Femoral neck fracture",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "orthopaedics"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): OR2. 2.9 p.445 nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "OR2. 2.9"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity",
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:25436040fd1cd1c0",
+   "existingConceptId": null,
+   "document": {
+    "label": "Intertrochanteric fracture",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "orthopaedics"
+     ],
+     "systems": [
+      "musculoskeletal"
+     ],
+     "organs": [],
+     "domains": [
+      "disorder"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): OR2. 2.9 p.445 nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "OR2. 2.9"
+   ],
+   "conceptType": "disorder",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:1365e2f5af9cb02b",
+   "existingConceptId": "C-325ccfa8-97bc-4139-b9dc-6c25703fca32",
+   "document": {
+    "label": "Regional anaesthesia",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "anaesthesia"
+     ],
+     "systems": [
+      "nervous"
+     ],
+     "organs": [],
+     "domains": [
+      "intervention"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): ASS.4 p.454 nmc-2024-ref:26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "ASS.4"
+   ],
+   "conceptType": "intervention",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "reuses-accepted-identity"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:49a7508611587972",
+   "existingConceptId": null,
+   "document": {
+    "label": "Adolescent sexuality",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pediatrics"
+     ],
+     "systems": [
+      "reproductive"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PE6.4 p.331 nmc-2024-ref:690c424b466d13302a61e006cbd488690c7f87120ae69fa04691b5e2cb2e16b4",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PE6.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  },
+  {
+   "conceptKey": "nmc-concept:ed2d64c13267ee2a",
+   "existingConceptId": null,
+   "document": {
+    "label": "Sexual orientation and gender identity",
+    "aliases": [],
+    "classification": {
+     "subjects": [
+      "pediatrics"
+     ],
+     "systems": [
+      "general"
+     ],
+     "organs": [],
+     "domains": [
+      "function"
+     ],
+     "tasks": [
+      "mechanism"
+     ]
+    },
+    "sourceEvidence": "NMC CBME 2024-09-12 (sha256 aa601690b9e9): PE6.4 p.331 nmc-2024-ref:690c424b466d13302a61e006cbd488690c7f87120ae69fa04691b5e2cb2e16b4",
+    "changeReason": "Source-exception concept batch source-exceptions-v1: canonical concept for NMC Source-exception source rows; objectives bind after acceptance."
+   },
+   "linkedCodes": [
+    "PE6.4"
+   ],
+   "conceptType": "function",
+   "umbrella": false,
+   "scoringUnit": true,
+   "reviewFlags": [
+    "split-source-row"
+   ],
+   "expectedSubjects": []
+  }
+ ],
+ "objectives": [
+  {
+   "objectiveVersionId": "lo:f18c77d3706f1ece:mechanism:1777638a@1",
+   "conceptKey": "nmc-concept:f18c77d3706f1ece",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:7d2a706c29651248b0969c62397ce58085b93028bc5cc506bb05880fa47ce87d",
+   "code": "14.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain the purpose of common laboratory equipment and use a simulated workflow to identify safe practice, biological hazards and waste handling needs.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 169,
+   "sourceBodySha256": "2f0b9b9ca81fc09044c9717006a245f66338a4ac6986df730295ce58124a2563",
+   "descriptionSha256": "1e29ec80c3422870916ffd4d6aeff9dc9c37a6cb7669e505fb6275910979c919",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ce3fde399267b1e6:mechanism:826b88d3@1",
+   "conceptKey": "nmc-concept:ce3fde399267b1e6",
+   "existingConceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "referenceId": "nmc-2024-ref:9de3e1ec33225578059e682461dfb57af836448a7c3094162d33c1304b745a0c",
+   "code": "PA.29.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Connect cervical carcinoma risk and pathogenesis with pathological changes, screening, diagnosis and disease progression in case examples.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 200,
+   "sourceBodySha256": "396899e0e61a258f706320a7c2f1adcd0ccec00f114c045f96058a8703bae36d",
+   "descriptionSha256": "dc08ce62058fde99c613d6ccd123b9d0c7c1458ff59a9f4ec1614fd5e357a9ae",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8cbd44f061ca4c35:mechanism:617c9fb9@1",
+   "conceptKey": "nmc-concept:8cbd44f061ca4c35",
+   "existingConceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+   "referenceId": "nmc-2024-ref:7c3da9599fe21ecdf3f44ebf749d07a7b141114ac3870725edf6cd648f11431d",
+   "code": "MI 8.",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Explain when syndromic assessment of a sexually transmitted infection can guide initial care and discuss its limitations in case examples.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 212,
+   "sourceBodySha256": "be00afd9ff0b226ddc01d70e7bf41726b981712104275a22906f7dbd3613021b",
+   "descriptionSha256": "275115bb07429b1d061f2e20e193156a810898b9c1d3b009df0b5f8f25df2d0e",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:e9e1ae5f966ed297:mechanism:3cbf1f6b@1",
+   "conceptKey": "nmc-concept:e9e1ae5f966ed297",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:a633e0e38517ce646a2585414fc6ca07db22feb87d5ca656d7f64f0a13b59d1b",
+   "code": "FM2:12",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe mortuary organization and the facilities needed for post-mortem work, then explain the purpose and principles of embalming.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 217,
+   "sourceBodySha256": "fc669cb0bd3e7de7838fc89d58151932dc0f085402236d9c236055b152ebf037",
+   "descriptionSha256": "ddce3d11c66db029601e673d0dce9737bf680bb7a9cda38c8232dd573272939c",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:01d427f7777da233:mechanism:0305cb37@1",
+   "conceptKey": "nmc-concept:01d427f7777da233",
+   "existingConceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "referenceId": "nmc-2024-ref:f51e3441c089b730d29c4604cf6372ac44a8bcfccfd9ebcb48ebe5ee77de6637",
+   "code": "PS 2.1*",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the clinical features, common causes and course of delirium and distinguish it from dementia.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 352,
+   "sourceBodySha256": "c72a15929d746c7365eb8af687b7c13c59975f435a3b71728b3ce4c776a8f9a6",
+   "descriptionSha256": "dfc54a1fdc7e9cab092704651410e01458ce6685e3ddeff83e814142e6c13f71",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:612e69804b49ce47:mechanism:da47010a@1",
+   "conceptKey": "nmc-concept:612e69804b49ce47",
+   "existingConceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "referenceId": "nmc-2024-ref:f51e3441c089b730d29c4604cf6372ac44a8bcfccfd9ebcb48ebe5ee77de6637",
+   "code": "PS 2.1*",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the clinical features, common causes and course of dementia and distinguish it from delirium.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 352,
+   "sourceBodySha256": "c72a15929d746c7365eb8af687b7c13c59975f435a3b71728b3ce4c776a8f9a6",
+   "descriptionSha256": "dfc54a1fdc7e9cab092704651410e01458ce6685e3ddeff83e814142e6c13f71",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b5d8b6553d096a9:mechanism:48347e55@1",
+   "conceptKey": "nmc-concept:8b5d8b6553d096a9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:af976ff499dc2d79b35da2cb05691d32c5cd54abcfa367c460798bd81de2cdf1",
+   "code": "SU24.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Use a pancreatitis case to explain presentation, investigation choices, prognostic assessment and management principles.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 408,
+   "sourceBodySha256": "a2bf875839200bc007a744aac6a36d81f9352fafac6fa63fa27c7c281760d359",
+   "descriptionSha256": "9e4e7c469eec28cd23998d7932407e7ba3e2c346f95281cc0dae313b5c9bc648",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8b5d8b6553d096a9:mechanism:dede23c2@1",
+   "conceptKey": "nmc-concept:8b5d8b6553d096a9",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+   "code": "SU24.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the principles of investigating and managing pancreatitis and explain how the findings guide treatment decisions.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "369ab9c645a02d6c128b4a87db664845749d112de1b42abebe739dd6a89cec20",
+   "descriptionSha256": "8da7465cfc034ecfe03ddd8dc5d947608d34884193495c2b84d4bd2c3d8039ad",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:868428fb4600c6e0:mechanism:a9edba33@1",
+   "conceptKey": "nmc-concept:868428fb4600c6e0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:df5d0fb4296539b3c0d8df0425c8ce5aec8b9c08c81454adc4b5a17550b0a0b5",
+   "code": "SU24.2",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare representative pancreatic endocrine tumour presentations and explain investigation, prognosis and management principles.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 408,
+   "sourceBodySha256": "ddda1fe75a1711061ae0c1fa167db6961158105a3f83039c5f1e500049cf89d0",
+   "descriptionSha256": "2a4eab5c42ad8b334825fc254f54170d74a38759a674f015cdb7296d4bbd9557",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:868428fb4600c6e0:mechanism:f2e074ba@1",
+   "conceptKey": "nmc-concept:868428fb4600c6e0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:aaab036aa1b78552b3c685d19427fd2dd2333fb135f14b2576dce3e7db564319",
+   "code": "SU24.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the principles of investigating and managing pancreatic endocrine tumours and how they differ from those for pancreatitis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "369ab9c645a02d6c128b4a87db664845749d112de1b42abebe739dd6a89cec20",
+   "descriptionSha256": "8da7465cfc034ecfe03ddd8dc5d947608d34884193495c2b84d4bd2c3d8039ad",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4b40ab17cfa14b07:mechanism:218c1e6e@1",
+   "conceptKey": "nmc-concept:4b40ab17cfa14b07",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:afde2dbbb31f9c9a938c96cac43b36876618c0948669dcabc97a45fe2a501d77",
+   "code": "SU27.1",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the causes, pathophysiology, clinical features, investigation and treatment principles of occlusive arterial disease.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "4fa67c91a4f14a11310a5387df184ae8017317dec3712f054f00df07ce9e20e9",
+   "descriptionSha256": "64600c1bfe923abf834c1754cbb0dc6d1d41eb22c30c6705366e4916e1a01f00",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:4d2b63e67a5beb39:procedural-skill:e848e86b@1",
+   "conceptKey": "nmc-concept:4d2b63e67a5beb39",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:cd91cb9cc687c595b75c76061465cbc3445a387e7b95502416e7a77fd103aaa9",
+   "code": "SU27.2",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate a structured vascular examination and explain how the findings guide the choice of investigations.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "b6158390cf9740b2da7fe9cdd99d8302ab11c33725d81e33c15e976108032955",
+   "descriptionSha256": "5b2a29ced2444345a765ec314c45a20b66bebd1aa84303822bc8f878dd4f82af",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8aa220511f528ce0:mechanism:2c0e7e55@1",
+   "conceptKey": "nmc-concept:8aa220511f528ce0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:e5579dc23d48cebd3b3ac0dbdd4d4d42635c76185c3015f63fffb7da94234178",
+   "code": "SU27.3",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Compare vasospastic presentations and explain investigation choices and management principles using clinical cases.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "aa7e901eb7b35a4bc83d8a3720ca9574ee3904a688fb8a859361d065a4abfc53",
+   "descriptionSha256": "41f3787872203517dba5530819cc7f52848906af7fde17f8a3eded6ae962d613",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:9932c6548d97d416:mechanism:5a9bbfa8@1",
+   "conceptKey": "nmc-concept:9932c6548d97d416",
+   "existingConceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "referenceId": "nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+   "code": "SU27.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the types of gangrene, their causes and clinical features, and the principles of their management.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "d9410d3d27eb111a6d152bead29bb6159f33d86abdec5ba2a4ff4fb1f8219d41",
+   "descriptionSha256": "8cc4b5ccc30d8c2bf2d3d36f2b00a41843f5a08e4eef041a9acf2425816b2f77",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:8a7c2af4a6d6b84d:mechanism:4ff68fa7@1",
+   "conceptKey": "nmc-concept:8a7c2af4a6d6b84d",
+   "existingConceptId": "C-5bc44284-6703-42d4-9045-6b0d250157bc",
+   "referenceId": "nmc-2024-ref:6d6e8488476e4ccc9f3d4aa4a83fb7bc28b06f4eca3a50189324a6b6fce7c75c",
+   "code": "SU27.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the indications for amputation, the choice of level and the principles of postoperative care.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "d9410d3d27eb111a6d152bead29bb6159f33d86abdec5ba2a4ff4fb1f8219d41",
+   "descriptionSha256": "8cc4b5ccc30d8c2bf2d3d36f2b00a41843f5a08e4eef041a9acf2425816b2f77",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:03e345078e68114d:mechanism:fdcbf883@1",
+   "conceptKey": "nmc-concept:03e345078e68114d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:97fa0972606477d89b208643ca1920d3da7c1257131828ea2eeabc9aa84fdd67",
+   "code": "SU27.5",
+   "task": "mechanism",
+   "depth": "knows",
+   "mode": "knowledge",
+   "wording": "Explain lower-limb venous anatomy and use diagrams to relate superficial, deep and communicating veins to clinical assessment.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 409,
+   "sourceBodySha256": "66edd593fe5669c4c6de6fc3f9895199244f8a9ab29270f76bab6d4dc6fbb660",
+   "descriptionSha256": "883d087ce0b21f46eee278c7b79d28aa8ec1add395ea80e34fe436ea5405561d",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:7e01cca7d8da60fb:mechanism:9685c69f@1",
+   "conceptKey": "nmc-concept:7e01cca7d8da60fb",
+   "existingConceptId": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "referenceId": "nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+   "code": "SU27.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the pathophysiology, clinical features, investigation and management principles of deep vein thrombosis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "b12ec0d46563f9a5b41146fad7febc23507499638d28d5c7131733fc2c96d4dd",
+   "descriptionSha256": "3950855d787b12075b8aadd3c2234fdfcaa7035bf16187ec4f2282853a76def2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6ed0da8448b9290a:mechanism:dead466d@1",
+   "conceptKey": "nmc-concept:6ed0da8448b9290a",
+   "existingConceptId": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "referenceId": "nmc-2024-ref:6642c541c1f5fdf997dad6bc404f3fdb5a0e34a3323f2a279af0d3e59be24f53",
+   "code": "SU27.6",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the pathophysiology, clinical features, investigation and management principles of varicose veins.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "b12ec0d46563f9a5b41146fad7febc23507499638d28d5c7131733fc2c96d4dd",
+   "descriptionSha256": "3950855d787b12075b8aadd3c2234fdfcaa7035bf16187ec4f2282853a76def2",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1b9786fd7cae5279:mechanism:bd6f4d4f@1",
+   "conceptKey": "nmc-concept:1b9786fd7cae5279",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+   "code": "SU27.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the causes, clinical features, investigation and management principles of lymphoedema.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "8abb6af714bf6b661c6f58df23d3f62ac72ea1608f4e290cca5333dbb3845848",
+   "descriptionSha256": "ed34e4d195d37cae17f2e4c5eb037896cd6789c5812bf1c7a8288311a54edbc3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:34316d7cdfc7155d:mechanism:9c1b9e8b@1",
+   "conceptKey": "nmc-concept:34316d7cdfc7155d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+   "code": "SU27.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the causes, clinical features and management principles of lymphangitis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "8abb6af714bf6b661c6f58df23d3f62ac72ea1608f4e290cca5333dbb3845848",
+   "descriptionSha256": "ed34e4d195d37cae17f2e4c5eb037896cd6789c5812bf1c7a8288311a54edbc3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:6d16a19b768ad8de:mechanism:f464dd2b@1",
+   "conceptKey": "nmc-concept:6d16a19b768ad8de",
+   "existingConceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "referenceId": "nmc-2024-ref:c5660fb4b5b4bc26b39441ea893cc3d5f4dff8e206b41e97088a4dd1bbb41536",
+   "code": "SU27.7",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe how lymphoma can present as lymph node enlargement and the principles of its surgical evaluation, including biopsy.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "8abb6af714bf6b661c6f58df23d3f62ac72ea1608f4e290cca5333dbb3845848",
+   "descriptionSha256": "ed34e4d195d37cae17f2e4c5eb037896cd6789c5812bf1c7a8288311a54edbc3",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:dd957a4bda88327d:procedural-skill:e2c00718@1",
+   "conceptKey": "nmc-concept:dd957a4bda88327d",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:0dd1c053ec1f7ebe7ec74246257adaaba9d2b06d17838cfeb9621857df2cc0b5",
+   "code": "SU27.8",
+   "task": "procedural-skill",
+   "depth": "shows-how",
+   "mode": "performance-and-knowledge",
+   "wording": "Demonstrate a structured lymphatic examination, describe findings and explain their relevance to the differential diagnosis.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 410,
+   "sourceBodySha256": "a41b8563d5dc8641af509a3b364f563dca7c28f063dbdebe8f303aea9ee136fb",
+   "descriptionSha256": "3986f387d30b968d5187610ec84eb847c0c3f7414f1a6fb2cfc81e39f6319630",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:49d3731619f9ee8d:mechanism:69a2ee81@1",
+   "conceptKey": "nmc-concept:49d3731619f9ee8d",
+   "existingConceptId": "C-9583a4d9-e46d-4ddf-b6b3-1daa832f0268",
+   "referenceId": "nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+   "code": "OR2. 2.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the mechanism of injury, clinical features, investigation and management principles of femoral neck fractures, including their functional consequences.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 445,
+   "sourceBodySha256": "e7c9b9269ba35898aa8b4b6da666562d1ac37895514b2889474f771adbfa1bf8",
+   "descriptionSha256": "b802db78c86e2dd384ffbdb6b55dc8d8a288420c1bcc5834b276daeb3975ecde",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:25436040fd1cd1c0:mechanism:5a1ea866@1",
+   "conceptKey": "nmc-concept:25436040fd1cd1c0",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:172395b810d311752ac505364212c1b4cf33366933dce90dbf07cec098e5cbf9",
+   "code": "OR2. 2.9",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the mechanism of injury, clinical features, investigation and management principles of intertrochanteric fractures, including their functional consequences.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 445,
+   "sourceBodySha256": "e7c9b9269ba35898aa8b4b6da666562d1ac37895514b2889474f771adbfa1bf8",
+   "descriptionSha256": "b802db78c86e2dd384ffbdb6b55dc8d8a288420c1bcc5834b276daeb3975ecde",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:1365e2f5af9cb02b:mechanism:d3498ad2@1",
+   "conceptKey": "nmc-concept:1365e2f5af9cb02b",
+   "existingConceptId": "C-325ccfa8-97bc-4139-b9dc-6c25703fca32",
+   "referenceId": "nmc-2024-ref:26cf4470eeb4d6f2e04a07bdb89f4509fc6cca6aef0aef7a045616984406364e",
+   "code": "ASS.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe the drugs and adjuncts used in regional anaesthesia, their intended roles and the precautions for their safe use.",
+   "basis": "scoped-task-in-source-row",
+   "sourcePage": 454,
+   "sourceBodySha256": "cfbe382b0ae22a030cf92c7b67468cd18f74ea6a63537033fbbcf35bff78fe56",
+   "descriptionSha256": "64d779fca8cf9110d08014ddcc0d656279da03635b70c2c2bceb22be8f255361",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:49a7508611587972:mechanism:f6e07482@1",
+   "conceptKey": "nmc-concept:49a7508611587972",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:690c424b466d13302a61e006cbd488690c7f87120ae69fa04691b5e2cb2e16b4",
+   "code": "PE6.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Describe adolescent sexuality in an age-appropriate clinical education discussion.",
+   "basis": "official-replacement",
+   "sourcePage": 331,
+   "sourceBodySha256": null,
+   "descriptionSha256": "1ab63ca94b6e0efcb75c9287144d6ef516bb33b5d4667471007b99b5b85bdbd8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  },
+  {
+   "objectiveVersionId": "lo:ed2d64c13267ee2a:mechanism:9c2dfe89@1",
+   "conceptKey": "nmc-concept:ed2d64c13267ee2a",
+   "existingConceptId": null,
+   "referenceId": "nmc-2024-ref:690c424b466d13302a61e006cbd488690c7f87120ae69fa04691b5e2cb2e16b4",
+   "code": "PE6.4",
+   "task": "mechanism",
+   "depth": "knows-how",
+   "mode": "knowledge",
+   "wording": "Distinguish sexual orientation and gender identity and explain diversity in both using respectful clinical language.",
+   "basis": "official-replacement",
+   "sourcePage": 331,
+   "sourceBodySha256": null,
+   "descriptionSha256": "1ab63ca94b6e0efcb75c9287144d6ef516bb33b5d4667471007b99b5b85bdbd8",
+   "status": "draft",
+   "authorship": "ai_generated_original"
+  }
+ ]
+}
