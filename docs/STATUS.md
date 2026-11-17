@@ -1,3 +1,11 @@
+## NMC Obstetrics & Gynaecology objectives bound and in registry (draft @15) — 2026-11-17T02:55Z
+
+- Owner accepted `nmc-obstetrics-gynaecology-concepts-v1-20261116` at 2026-11-17T02:48:13Z (72 receipts; pairs digest `f0bb705b…092f` matched). Receipt IDs in `ops/nmc/receipts/obgyn-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-obgyn-objective-bindings-v1.json` (103 concepts, 146 objectives).
+- Registry @15: +146 objectives → 1,629 objectives, 1,630 bindings, 1,122 concepts, 1,421 of 2,634 NMC rows source-linked (54%). Draft only.
+- Remaining subjects: Paediatrics, Anatomy, Medicine.
+
+---
+
 ## NMC Obstetrics & Gynaecology concept batch v1 — 2026-11-17T02:50Z
 
 - `docs/evidence/2026-11-17-nmc-obgyn-concept-batch-v1.json` (spec `ops/nmc/specs/obgyn_concepts_v1.py`): 103 concepts (72 new; 31 reused, e.g. Pregnancy, Abortion — whose accepted aliases already include medical termination — Contraception, Infertility, Leiomyoma, Menopause, PCPNDT Act, Informed consent), 146 objectives, all 142 rows. Subtype and ambiguous aliases removed (e.g. "PROM", "PID", "ARM"). No clash with 1,788 production names.
