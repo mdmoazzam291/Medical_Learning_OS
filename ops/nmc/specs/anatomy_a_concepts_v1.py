@@ -156,7 +156,7 @@ c('Face', ST, G, [('AN28.1', None), ('AN28.2', None), ('AN28.3', None), ('AN28.6
 c('Facial nerve', ST, NV, [('AN28.4', None)], [])
 c('Head and neck lymphatics', ST, IM, [('AN28.5', None), ('AN35.5', None)], [])
 c('Facial nerve palsy', D, NV, [('AN28.7', None)])
-c('Parotid gland', ST, GI, [('AN28.9', None)], [], [], ['salivary gland'])
+c('Parotid gland', ST, GI, [('AN28.9', None)], [], [], ['salivary-gland'])
 c('Frey syndrome', D, NV, [('AN28.10', None)], ['Gustatory sweating'], ['surgery'])
 c('Posterior triangle of the neck', ST, MS, [('AN29.1', None), ('AN29.5', None)], [])
 c('Sternocleidomastoid', ST, MS, [('AN29.2', None)], [])
