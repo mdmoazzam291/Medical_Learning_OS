@@ -8,8 +8,9 @@ function relationshipEndpoint(codeByReference, {name, referenceIds}) {
 }
 export async function readFoundationDrafts({admin,actor,method,params}){
  if(method!=='GET')fail(405,'method_not_allowed');
- let data;
- try{data=await loadFoundationData();}catch{fail(503,'foundation_drafts_unavailable');}
+ let data,stage='load';
+ const failStage=()=>{console.error(JSON.stringify({event:'foundation_drafts_failed',stage}));fail(503,'foundation_drafts_unavailable');};
+ try{data=await loadFoundationData();}catch{failStage();}
  const {supplement,relationships,unified,names,pack,catalogue}=data;
  const codeByReference=new Map(catalogue.references.map(row=>[row.referenceId,row.searchCode]));
  let filters;
@@ -22,7 +23,8 @@ export async function readFoundationDrafts({admin,actor,method,params}){
  if(role.error)fail(503,'foundation_drafts_unavailable');
  if(role.data?.isAdmin!==true)fail(403,'content_admin_required');
  const result=await admin.from('study_catalog').select('version,body').eq('id',1).single();
- if(result.error||!result.data)fail(503,'foundation_drafts_unavailable');
+ stage='catalog';
+ if(result.error||!result.data)failStage();
  // Only inspect accepted private identities referenced by this pack and absent
  // from the learner catalogue. No draft bodies or reviewer details are needed.
  try{
@@ -31,16 +33,23 @@ export async function readFoundationDrafts({admin,actor,method,params}){
   const catalogIds=new Set(concepts.map(c=>c.conceptId));
   const missingIds=[...new Set(pack.objectives.map(row=>row.objective.conceptId))].filter(id=>!catalogIds.has(id));
   if(missingIds.length){
-   const privateResult=await admin.from('content_concept_acceptances').select('concept_id,accepted_document').in('concept_id',missingIds);
-   if(privateResult.error||!Array.isArray(privateResult.data))throw new Error();
+   stage='private-identities';
+   // Chunked: ~1,500 IDs in one GET produced an oversized PostgREST URL.
+   const rows=[];
+   for(let i=0;i<missingIds.length;i+=150){
+    const privateResult=await admin.from('content_concept_acceptances').select('concept_id,accepted_document').in('concept_id',missingIds.slice(i,i+150));
+    if(privateResult.error||!Array.isArray(privateResult.data))throw new Error();
+    rows.push(...privateResult.data);
+   }
    const requested=new Set(missingIds);
-   for(const row of privateResult.data){
+   for(const row of rows){
     const identity=row.accepted_document;
     if(!requested.has(row.concept_id)||identity?.conceptId!==row.concept_id)throw new Error();
     requested.delete(row.concept_id);
     concepts.push({conceptId:row.concept_id,label:identity.label,aliases:identity.aliases,subjectTags:identity.classification?.subjects,identityKind:'accepted-private'});
    }
   }
+  stage='page';
   const page=await foundationDraftPage(pack,catalogue,{version:result.data.version,concepts},filters);
   const namesOnlyRelationships = relationships.relationships.map(({narrower, broader}) => ({
    narrower: relationshipEndpoint(codeByReference, narrower),
@@ -57,5 +66,5 @@ export async function readFoundationDrafts({admin,actor,method,params}){
    aliases:names.searchAliases.map(row=>row.alias),
    held:names.heldEntries.map(row=>row.alias),
   }};
- }catch{fail(503,'foundation_drafts_unavailable');}
+ }catch{failStage();}
 }
