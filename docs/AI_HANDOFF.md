@@ -2,6 +2,7 @@
 
 - Owner accepted `nmc-medicine-concepts-part-b-v1-20261116` at 09:36:13Z (56 receipts; pairs digest `f6d28e72…c70c` matched). Registry @22: 2,836 objectives, 2,837 bindings, 1,528 concepts, **2,613 of 2,634 NMC rows linked (99.2%)**. All draft; no clinical approval, learner activation or question import.
 - The 21 unlinked rows are exactly the source-exception track: unresolved identifiers BC "14.1", PA.29.1, "MI 8.", FM2:12, PS 2.1*, OR2. 2.9, ASS.4; amendment notices PY9.1, PE6.4, PS9.2; Surgery heading exceptions SU24.1–24.3 and SU27.1–27.8.
+- GM28.18 now carries both the accepted canonical objective (Obstructive airway disease) and three earlier draft objectives on the draft-registry concept 'COPD exacerbation management' (2026-11-08 respiratory slice); the completion-report test was updated to that state. Reconciling that draft concept with the canonical registry is deferred.
 - Remaining work (not started): source-exception resolution; faculty review (the 129 Paediatrics scope-amended wordings first); `owner-api` redeploy so the registry reaches the app; acceptance RPC performance (8 s timeout caps batches at ~60 new concepts); subject-classification revisions for reused concepts.
 
 ---
