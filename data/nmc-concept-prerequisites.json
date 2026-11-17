@@ -1,0 +1,2740 @@
+{
+ "schemaVersion": 1,
+ "contractId": "nmc-concept-prerequisites-v1",
+ "status": "ai-draft",
+ "clinicalApproval": false,
+ "learnerActivation": false,
+ "subjectsAuthored": [
+  "medicine"
+ ],
+ "links": [
+  {
+   "prerequisiteConceptId": "C-d1641fbd-5e04-4dd1-8a89-6c36b330df89",
+   "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "prerequisiteLabel": "Acid-base buffer systems",
+   "label": "Acid-base disorders",
+   "strength": "essential",
+   "reason": "Buffer systems explain acid-base compensation"
+  },
+  {
+   "prerequisiteConceptId": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "prerequisiteLabel": "Renal regulation of fluid, electrolytes and acid-base",
+   "label": "Acid-base disorders",
+   "strength": "essential",
+   "reason": "Renal compensation determines acid-base disorders"
+  },
+  {
+   "prerequisiteConceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "conceptId": "C-7844dd1c-585a-4987-9e76-609c3f6c69d8",
+   "prerequisiteLabel": "Anaerobic infections",
+   "label": "Actinomycosis and nocardiosis",
+   "strength": "essential",
+   "reason": "Actinomyces are anaerobic organisms"
+  },
+  {
+   "prerequisiteConceptId": "C-6989415c-edfe-472f-8fee-045935b6b0d4",
+   "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "prerequisiteLabel": "Cardiac biomarkers",
+   "label": "Acute coronary syndrome",
+   "strength": "essential",
+   "reason": "ACS diagnosis and timing rely on cardiac biomarkers"
+  },
+  {
+   "prerequisiteConceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "prerequisiteLabel": "Electrocardiogram",
+   "label": "Acute coronary syndrome",
+   "strength": "essential",
+   "reason": "STEMI vs NSTEMI is an ECG decision"
+  },
+  {
+   "prerequisiteConceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "prerequisiteLabel": "Ischaemic heart disease",
+   "label": "Acute coronary syndrome",
+   "strength": "essential",
+   "reason": "ACS is plaque rupture on established coronary disease"
+  },
+  {
+   "prerequisiteConceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "conceptId": "C-11843e14-bf02-4e26-82e6-a48b10948d33",
+   "prerequisiteLabel": "Fever",
+   "label": "Acute febrile illness",
+   "strength": "essential",
+   "reason": "Acute febrile illness is approached through fever"
+  },
+  {
+   "prerequisiteConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "prerequisiteLabel": "Renal function tests",
+   "label": "Acute kidney injury",
+   "strength": "essential",
+   "reason": "AKI is diagnosed and staged on creatinine and urine output"
+  },
+  {
+   "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "prerequisiteLabel": "Urine formation",
+   "label": "Acute kidney injury",
+   "strength": "essential",
+   "reason": "GFR and tubular function define prerenal, renal and postrenal AKI"
+  },
+  {
+   "prerequisiteConceptId": "C-2c1be0a7-9cb0-41d9-a067-151f4135a497",
+   "conceptId": "C-29e868e2-f5ab-4f41-be7a-aecd38e1e399",
+   "prerequisiteLabel": "End-of-life ethics",
+   "label": "Advance directives",
+   "strength": "essential",
+   "reason": "Advance directives are an end-of-life ethics tool"
+  },
+  {
+   "prerequisiteConceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "conceptId": "C-15805602-d17d-4221-a430-90f6903af241",
+   "prerequisiteLabel": "Basic life support",
+   "label": "Advanced life support",
+   "strength": "essential",
+   "reason": "Advanced support builds on basic life support"
+  },
+  {
+   "prerequisiteConceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+   "conceptId": "C-15805602-d17d-4221-a430-90f6903af241",
+   "prerequisiteLabel": "Cardiac arrhythmias",
+   "label": "Advanced life support",
+   "strength": "essential",
+   "reason": "Shockable rhythms guide advanced support"
+  },
+  {
+   "prerequisiteConceptId": "C-3e8a2486-7993-46f8-8454-a4659156f0d5",
+   "conceptId": "C-f3892c15-1ce1-452f-8e2e-b14e4c48dbae",
+   "prerequisiteLabel": "Cellular ageing",
+   "label": "Ageing",
+   "strength": "helpful",
+   "reason": "Cellular ageing underlies organ ageing"
+  },
+  {
+   "prerequisiteConceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
+   "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "prerequisiteLabel": "Alcohol metabolism",
+   "label": "Alcohol-related liver disease",
+   "strength": "essential",
+   "reason": "Alcohol metabolism causes liver injury"
+  },
+  {
+   "prerequisiteConceptId": "C-abdf5f51-b915-45f2-ab6c-78ca92a9a397",
+   "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "prerequisiteLabel": "Fatty liver",
+   "label": "Alcohol-related liver disease",
+   "strength": "essential",
+   "reason": "Fatty liver is the first stage of alcohol-related disease"
+  },
+  {
+   "prerequisiteConceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "conceptId": "C-7c263735-46c3-4459-9eaf-6ac116616b51",
+   "prerequisiteLabel": "Dysentery",
+   "label": "Amoebiasis",
+   "strength": "helpful",
+   "reason": "Amoebic dysentery is a form of dysentery"
+  },
+  {
+   "prerequisiteConceptId": "C-03c4b5a6-3872-480a-9898-3eec8ee7f13d",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "prerequisiteLabel": "Erythropoiesis",
+   "label": "Anaemia",
+   "strength": "essential",
+   "reason": "Production failure vs loss or destruction classifies anaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "prerequisiteLabel": "Haemoglobin",
+   "label": "Anaemia",
+   "strength": "essential",
+   "reason": "Haemoglobin function defines anaemia and its effects"
+  },
+  {
+   "prerequisiteConceptId": "C-bc3f0fef-fb14-4b5e-b3f2-206d655df3c7",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "prerequisiteLabel": "Red cell indices",
+   "label": "Anaemia",
+   "strength": "essential",
+   "reason": "Red cell indices drive the morphological classification"
+  },
+  {
+   "prerequisiteConceptId": "C-f7b02278-84e4-41d4-bc3a-81a92b30e634",
+   "conceptId": "C-ffb2c2c6-ad9c-4361-8b73-f4aed539d128",
+   "prerequisiteLabel": "Antimicrobial chemotherapy",
+   "label": "Antibacterial drugs",
+   "strength": "essential",
+   "reason": "Antibacterials follow chemotherapy principles"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Antidiabetic drugs",
+   "strength": "essential",
+   "reason": "Antidiabetic drugs treat diabetes mechanisms"
+  },
+  {
+   "prerequisiteConceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
+   "conceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "prerequisiteLabel": "Endocrine pancreas",
+   "label": "Antidiabetic drugs",
+   "strength": "essential",
+   "reason": "Drugs act on insulin secretion and action"
+  },
+  {
+   "prerequisiteConceptId": "C-d30c0b31-242f-4221-89c8-50bfa358eaef",
+   "conceptId": "C-781c301e-9438-42ff-9206-cd669624be8b",
+   "prerequisiteLabel": "Migraine",
+   "label": "Antimigraine drugs",
+   "strength": "essential",
+   "reason": "Antimigraine drugs treat migraine"
+  },
+  {
+   "prerequisiteConceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "conceptId": "C-79f2cfe4-f1e2-4f7e-b122-b300a6fb1266",
+   "prerequisiteLabel": "Basal ganglia",
+   "label": "Antiparkinsonian drugs",
+   "strength": "essential",
+   "reason": "Parkinson's drugs restore basal ganglia dopamine balance"
+  },
+  {
+   "prerequisiteConceptId": "C-2f1cdae0-62bd-427a-ac3c-9e01c8ad8f9a",
+   "conceptId": "C-79f2cfe4-f1e2-4f7e-b122-b300a6fb1266",
+   "prerequisiteLabel": "Neurotransmitters",
+   "label": "Antiparkinsonian drugs",
+   "strength": "essential",
+   "reason": "Dopamine and acetylcholine pharmacology explains the drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-bf9ec559-4815-49d2-9267-345c88d0e828",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Antiplatelet drugs",
+   "strength": "essential",
+   "reason": "Haemostasis explains where antiplatelets act"
+  },
+  {
+   "prerequisiteConceptId": "C-c1ec079a-b2b3-43f7-be0b-751dc99ecff5",
+   "conceptId": "C-bf9ec559-4815-49d2-9267-345c88d0e828",
+   "prerequisiteLabel": "Platelets",
+   "label": "Antiplatelet drugs",
+   "strength": "essential",
+   "reason": "Antiplatelets block platelet activation"
+  },
+  {
+   "prerequisiteConceptId": "C-f7b02278-84e4-41d4-bc3a-81a92b30e634",
+   "conceptId": "C-6953f087-32d3-49de-ad1f-b18dac984c41",
+   "prerequisiteLabel": "Antimicrobial chemotherapy",
+   "label": "Antiprotozoal drugs",
+   "strength": "helpful",
+   "reason": "Antiprotozoals follow chemotherapy principles"
+  },
+  {
+   "prerequisiteConceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "conceptId": "C-6953f087-32d3-49de-ad1f-b18dac984c41",
+   "prerequisiteLabel": "Malaria",
+   "label": "Antiprotozoal drugs",
+   "strength": "essential",
+   "reason": "Antimalarials target the parasite life cycle"
+  },
+  {
+   "prerequisiteConceptId": "C-0cc140b4-445c-4f0a-9ca2-7bd2d91a04c2",
+   "conceptId": "C-41135e3e-7002-4f7f-b27a-b03f47d53276",
+   "prerequisiteLabel": "Antiviral drugs",
+   "label": "Antiretroviral drugs",
+   "strength": "helpful",
+   "reason": "Antiretrovirals are a class of antivirals"
+  },
+  {
+   "prerequisiteConceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "conceptId": "C-41135e3e-7002-4f7f-b27a-b03f47d53276",
+   "prerequisiteLabel": "HIV infection",
+   "label": "Antiretroviral drugs",
+   "strength": "essential",
+   "reason": "Antiretrovirals target the HIV life cycle"
+  },
+  {
+   "prerequisiteConceptId": "C-54340ace-104e-49c5-874b-5a00c1502754",
+   "conceptId": "C-df26f5a5-748a-4519-9c9e-8f114ea58011",
+   "prerequisiteLabel": "Pharmacodynamics",
+   "label": "Antirheumatic drugs",
+   "strength": "helpful",
+   "reason": "Mechanisms of action explain drug choice"
+  },
+  {
+   "prerequisiteConceptId": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+   "conceptId": "C-df26f5a5-748a-4519-9c9e-8f114ea58011",
+   "prerequisiteLabel": "Rheumatoid arthritis",
+   "label": "Antirheumatic drugs",
+   "strength": "essential",
+   "reason": "Antirheumatic drugs target rheumatoid arthritis"
+  },
+  {
+   "prerequisiteConceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "conceptId": "C-b67d7951-c6aa-4807-84a8-b760d6bc42a6",
+   "prerequisiteLabel": "Epilepsy",
+   "label": "Antiseizure medicines",
+   "strength": "essential",
+   "reason": "Antiseizure drugs are chosen by seizure type"
+  },
+  {
+   "prerequisiteConceptId": "C-5563d4f1-94e1-4c3d-b152-27611448ddd3",
+   "conceptId": "C-b67d7951-c6aa-4807-84a8-b760d6bc42a6",
+   "prerequisiteLabel": "Membrane potentials",
+   "label": "Antiseizure medicines",
+   "strength": "helpful",
+   "reason": "Drugs act on neuronal excitability"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-8736617a-09b7-40a0-b98e-58cf2db36829",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Antithyroid drugs",
+   "strength": "essential",
+   "reason": "Drugs block thyroid hormone synthesis"
+  },
+  {
+   "prerequisiteConceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "conceptId": "C-8736617a-09b7-40a0-b98e-58cf2db36829",
+   "prerequisiteLabel": "Thyrotoxicosis",
+   "label": "Antithyroid drugs",
+   "strength": "essential",
+   "reason": "Antithyroid drugs treat thyrotoxicosis"
+  },
+  {
+   "prerequisiteConceptId": "C-f7b02278-84e4-41d4-bc3a-81a92b30e634",
+   "conceptId": "C-7ed39c9c-7be2-4fbc-ba60-7d0406d7e628",
+   "prerequisiteLabel": "Antimicrobial chemotherapy",
+   "label": "Antitubercular drugs",
+   "strength": "essential",
+   "reason": "Antitubercular therapy follows chemotherapy principles"
+  },
+  {
+   "prerequisiteConceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "conceptId": "C-7ed39c9c-7be2-4fbc-ba60-7d0406d7e628",
+   "prerequisiteLabel": "Pulmonary tuberculosis",
+   "label": "Antitubercular drugs",
+   "strength": "essential",
+   "reason": "Regimens are built for tuberculosis"
+  },
+  {
+   "prerequisiteConceptId": "C-cbf897f0-7b70-4fcf-a7fb-059c6114bfec",
+   "conceptId": "C-00117568-8807-4a1e-a557-c21e1cbd26f6",
+   "prerequisiteLabel": "Gastric secretion",
+   "label": "Antiulcer drugs",
+   "strength": "essential",
+   "reason": "Antiulcer drugs block gastric acid secretion"
+  },
+  {
+   "prerequisiteConceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
+   "conceptId": "C-fcbf17b9-28dc-4fde-ae3e-707a3e4c3deb",
+   "prerequisiteLabel": "Laboratory diagnosis of infection",
+   "label": "Approach to infectious disease",
+   "strength": "essential",
+   "reason": "The approach relies on laboratory diagnosis"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-fcbf17b9-28dc-4fde-ae3e-707a3e4c3deb",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Approach to infectious disease",
+   "strength": "essential",
+   "reason": "Transmission routes guide the approach"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-7d9262c8-6ed0-4783-8179-473a7fd7c959",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Arboviral infections",
+   "strength": "helpful",
+   "reason": "Mosquito transmission explains epidemiology"
+  },
+  {
+   "prerequisiteConceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "conceptId": "C-7d7ee881-1f50-43e8-8bed-00d02d7e41a7",
+   "prerequisiteLabel": "Cardiac cycle",
+   "label": "Arterial pulse",
+   "strength": "essential",
+   "reason": "Pulse character reflects ejection in the cardiac cycle"
+  },
+  {
+   "prerequisiteConceptId": "C-b4e7fdb8-a2b4-407a-87d6-85c7ca76eef4",
+   "conceptId": "C-433afda4-08ac-4eb3-9595-d6357ba2ba0a",
+   "prerequisiteLabel": "Body fluid analysis",
+   "label": "Arthrocentesis",
+   "strength": "helpful",
+   "reason": "Synovial fluid analysis follows aspiration"
+  },
+  {
+   "prerequisiteConceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+   "conceptId": "C-7603137c-3eed-43ac-b4ea-10c6c8840a1b",
+   "prerequisiteLabel": "Oedema",
+   "label": "Ascitic fluid analysis",
+   "strength": "helpful",
+   "reason": "Ascites is a form of oedema"
+  },
+  {
+   "prerequisiteConceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "conceptId": "C-7603137c-3eed-43ac-b4ea-10c6c8840a1b",
+   "prerequisiteLabel": "Portal hypertension",
+   "label": "Ascitic fluid analysis",
+   "strength": "essential",
+   "reason": "Ascites mostly follows portal hypertension"
+  },
+  {
+   "prerequisiteConceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "conceptId": "C-91f9f345-6cab-4f74-ae4b-3d20c03095f4",
+   "prerequisiteLabel": "Immunodeficiency",
+   "label": "Aspergillosis",
+   "strength": "helpful",
+   "reason": "Invasive aspergillosis follows immunodeficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "prerequisiteLabel": "Hypersensitivity reactions",
+   "label": "Asthma",
+   "strength": "essential",
+   "reason": "Asthma is driven by type I hypersensitivity"
+  },
+  {
+   "prerequisiteConceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "prerequisiteLabel": "Pulmonary function tests",
+   "label": "Asthma",
+   "strength": "essential",
+   "reason": "Reversible obstruction is shown on spirometry"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Atherosclerosis",
+   "strength": "helpful",
+   "reason": "Atherosclerosis is an inflammatory process"
+  },
+  {
+   "prerequisiteConceptId": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+   "conceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "prerequisiteLabel": "Lipoproteins",
+   "label": "Atherosclerosis",
+   "strength": "essential",
+   "reason": "LDL handling drives atheroma formation"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-1f764859-f85a-4c5c-b602-25aa0cf7fb7b",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Autoimmune serology",
+   "strength": "essential",
+   "reason": "Autoantibodies are markers of autoimmunity"
+  },
+  {
+   "prerequisiteConceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+   "conceptId": "C-1f764859-f85a-4c5c-b602-25aa0cf7fb7b",
+   "prerequisiteLabel": "Serological tests",
+   "label": "Autoimmune serology",
+   "strength": "essential",
+   "reason": "Autoimmune serology uses serological methods"
+  },
+  {
+   "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "prerequisiteLabel": "Hypersensitivity reactions",
+   "label": "Autoimmunity",
+   "strength": "essential",
+   "reason": "Autoimmune damage occurs by hypersensitivity mechanisms"
+  },
+  {
+   "prerequisiteConceptId": "C-11745acf-4db4-4c0d-b998-59a94bbedd13",
+   "conceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "prerequisiteLabel": "Immune system",
+   "label": "Autoimmunity",
+   "strength": "essential",
+   "reason": "Autoimmunity is a failure of immune tolerance"
+  },
+  {
+   "prerequisiteConceptId": "C-a10786ca-0ee7-46c0-b8cb-4197353c70fe",
+   "conceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "prerequisiteLabel": "Artificial respiration",
+   "label": "Basic life support",
+   "strength": "helpful",
+   "reason": "Rescue breathing applies artificial respiration"
+  },
+  {
+   "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptId": "C-614bd939-dfe6-4789-be58-a7662b164d88",
+   "prerequisiteLabel": "Cell-mediated immunity",
+   "label": "BCG vaccine",
+   "strength": "helpful",
+   "reason": "BCG acts through cell-mediated immunity"
+  },
+  {
+   "prerequisiteConceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptId": "C-614bd939-dfe6-4789-be58-a7662b164d88",
+   "prerequisiteLabel": "Immunisation",
+   "label": "BCG vaccine",
+   "strength": "essential",
+   "reason": "BCG applies immunisation principles"
+  },
+  {
+   "prerequisiteConceptId": "C-0af2d9fe-5f54-41dc-85fa-b118855a034f",
+   "conceptId": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
+   "prerequisiteLabel": "Haem metabolism",
+   "label": "Bilirubin metabolism",
+   "strength": "essential",
+   "reason": "Bilirubin comes from haem breakdown"
+  },
+  {
+   "prerequisiteConceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "prerequisiteLabel": "Microbiological specimen collection",
+   "label": "Blood culture",
+   "strength": "essential",
+   "reason": "Blood culture yield depends on correct collection"
+  },
+  {
+   "prerequisiteConceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+   "prerequisiteLabel": "Acid-base disorders",
+   "label": "Blood gas analysis",
+   "strength": "essential",
+   "reason": "Gas results are read as acid-base disorders"
+  },
+  {
+   "prerequisiteConceptId": "C-2d6dbc72-6158-415b-8587-1313de6e841f",
+   "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+   "prerequisiteLabel": "Transport of respiratory gases",
+   "label": "Blood gas analysis",
+   "strength": "essential",
+   "reason": "Oxygen and CO2 transport explain blood gas values"
+  },
+  {
+   "prerequisiteConceptId": "C-7d3f8df6-c118-45d3-8bc3-9b71a057d9ec",
+   "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "prerequisiteLabel": "Cardiovascular regulation",
+   "label": "Blood pressure",
+   "strength": "essential",
+   "reason": "Baroreflex and hormonal control set blood pressure"
+  },
+  {
+   "prerequisiteConceptId": "C-1a7961d9-b80b-49b0-b722-b994800d357c",
+   "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "prerequisiteLabel": "Haemodynamics",
+   "label": "Blood pressure",
+   "strength": "essential",
+   "reason": "Flow, resistance and compliance determine pressure"
+  },
+  {
+   "prerequisiteConceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+   "prerequisiteLabel": "Blood groups",
+   "label": "Blood transfusion",
+   "strength": "essential",
+   "reason": "ABO and Rh grouping underpin safe transfusion"
+  },
+  {
+   "prerequisiteConceptId": "C-e9f1f4cd-63fe-4234-8d45-09edd066392e",
+   "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+   "prerequisiteLabel": "Compatibility testing",
+   "label": "Blood transfusion",
+   "strength": "essential",
+   "reason": "Crossmatching prevents incompatible transfusion"
+  },
+  {
+   "prerequisiteConceptId": "C-20b45dcd-131d-4f98-8e8c-1c90b4737622",
+   "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
+   "prerequisiteLabel": "Haematopoiesis",
+   "label": "Bone marrow examination",
+   "strength": "essential",
+   "reason": "Marrow findings are read against normal haematopoiesis"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-367dcd38-7f3a-4d77-b555-aa7e732f8c48",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Cancer",
+   "strength": "essential",
+   "reason": "Cancer is neoplasia"
+  },
+  {
+   "prerequisiteConceptId": "C-367dcd38-7f3a-4d77-b555-aa7e732f8c48",
+   "conceptId": "C-122f94f6-0a81-4724-aa29-58c606ebc6da",
+   "prerequisiteLabel": "Cancer",
+   "label": "Cancer pain",
+   "strength": "helpful",
+   "reason": "Pain arises from tumour effects"
+  },
+  {
+   "prerequisiteConceptId": "C-418a472f-5e3d-4b0d-81e1-6aba1ac19596",
+   "conceptId": "C-122f94f6-0a81-4724-aa29-58c606ebc6da",
+   "prerequisiteLabel": "Pain",
+   "label": "Cancer pain",
+   "strength": "essential",
+   "reason": "Cancer pain applies pain pathways"
+  },
+  {
+   "prerequisiteConceptId": "C-367dcd38-7f3a-4d77-b555-aa7e732f8c48",
+   "conceptId": "C-7fb577db-e2ee-4c57-9676-5fd791b607db",
+   "prerequisiteLabel": "Cancer",
+   "label": "Cancer screening",
+   "strength": "essential",
+   "reason": "Screening targets specific cancers"
+  },
+  {
+   "prerequisiteConceptId": "C-4a23a410-7b47-42c0-b37f-4cd6885e15a2",
+   "conceptId": "C-d4954b09-3e73-49e0-94ed-3a101e8f0e3f",
+   "prerequisiteLabel": "Anticancer drugs",
+   "label": "Cancer treatment",
+   "strength": "essential",
+   "reason": "Chemotherapy uses anticancer drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-367dcd38-7f3a-4d77-b555-aa7e732f8c48",
+   "conceptId": "C-d4954b09-3e73-49e0-94ed-3a101e8f0e3f",
+   "prerequisiteLabel": "Cancer",
+   "label": "Cancer treatment",
+   "strength": "essential",
+   "reason": "Treatment depends on cancer type and stage"
+  },
+  {
+   "prerequisiteConceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "conceptId": "C-01ff39f1-c7c1-4cb5-a545-c09d4f4678ef",
+   "prerequisiteLabel": "Immunodeficiency",
+   "label": "Candidiasis",
+   "strength": "helpful",
+   "reason": "Invasive candidiasis follows immunodeficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-7ce2f2c2-f895-4182-bf0b-e8ddd9ac1e6e",
+   "conceptId": "C-b859d7e0-26c8-4749-98c5-f71150630284",
+   "prerequisiteLabel": "Glycaemic tests",
+   "label": "Capillary blood glucose monitoring",
+   "strength": "essential",
+   "reason": "Glucometer readings are glycaemic tests"
+  },
+  {
+   "prerequisiteConceptId": "C-53be03df-148b-4626-accb-9fd60b65027b",
+   "conceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "prerequisiteLabel": "Gene mutations",
+   "label": "Carcinogenesis",
+   "strength": "essential",
+   "reason": "Mutations initiate carcinogenesis"
+  },
+  {
+   "prerequisiteConceptId": "C-ff7469b8-0b81-40a1-b46b-2b2b07a2c433",
+   "conceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "prerequisiteLabel": "Oncogenes and tumour suppressor genes",
+   "label": "Carcinogenesis",
+   "strength": "essential",
+   "reason": "Oncogenes and tumour suppressors drive carcinogenesis"
+  },
+  {
+   "prerequisiteConceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
+   "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+   "prerequisiteLabel": "Cardiac conduction system",
+   "label": "Cardiac arrhythmias",
+   "strength": "essential",
+   "reason": "Conduction pathways explain re-entry and blocks"
+  },
+  {
+   "prerequisiteConceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+   "prerequisiteLabel": "Electrocardiogram",
+   "label": "Cardiac arrhythmias",
+   "strength": "essential",
+   "reason": "Arrhythmias are recognised on the ECG"
+  },
+  {
+   "prerequisiteConceptId": "C-797b3b93-443d-4175-acfe-765a45a748b3",
+   "conceptId": "C-6989415c-edfe-472f-8fee-045935b6b0d4",
+   "prerequisiteLabel": "Infarction",
+   "label": "Cardiac biomarkers",
+   "strength": "essential",
+   "reason": "Biomarkers are released by myocardial infarction"
+  },
+  {
+   "prerequisiteConceptId": "C-6989415c-edfe-472f-8fee-045935b6b0d4",
+   "conceptId": "C-1b2ff089-7fa4-40ea-a594-d9730383b2d0",
+   "prerequisiteLabel": "Cardiac biomarkers",
+   "label": "Cardiac investigations",
+   "strength": "helpful",
+   "reason": "Biomarkers are part of cardiac work-up"
+  },
+  {
+   "prerequisiteConceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "conceptId": "C-1b2ff089-7fa4-40ea-a594-d9730383b2d0",
+   "prerequisiteLabel": "Electrocardiogram",
+   "label": "Cardiac investigations",
+   "strength": "essential",
+   "reason": "ECG is the first cardiac investigation"
+  },
+  {
+   "prerequisiteConceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "conceptId": "C-e7bd95a1-44cd-4da2-8949-e6628d17ca9d",
+   "prerequisiteLabel": "Ischaemic heart disease",
+   "label": "Cardiac rehabilitation",
+   "strength": "essential",
+   "reason": "Rehabilitation follows ischaemic heart disease"
+  },
+  {
+   "prerequisiteConceptId": "C-7d7ee881-1f50-43e8-8bed-00d02d7e41a7",
+   "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
+   "prerequisiteLabel": "Arterial pulse",
+   "label": "Cardiovascular examination",
+   "strength": "essential",
+   "reason": "Pulse assessment is part of the cardiovascular examination"
+  },
+  {
+   "prerequisiteConceptId": "C-b212077b-ee32-4512-96c3-041ad2c0ebdf",
+   "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
+   "prerequisiteLabel": "Heart murmurs",
+   "label": "Cardiovascular examination",
+   "strength": "essential",
+   "reason": "Murmur interpretation is part of the cardiovascular examination"
+  },
+  {
+   "prerequisiteConceptId": "C-67dec6e0-bfc3-459e-87cc-9f276d878e30",
+   "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
+   "prerequisiteLabel": "Jugular venous pressure",
+   "label": "Cardiovascular examination",
+   "strength": "essential",
+   "reason": "JVP assessment is part of the cardiovascular examination"
+  },
+  {
+   "prerequisiteConceptId": "C-c2c4195a-db70-491d-a04f-96ec1ce12dce",
+   "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "prerequisiteLabel": "Central nervous system",
+   "label": "Cerebrospinal fluid",
+   "strength": "helpful",
+   "reason": "CSF physiology relates to the central nervous system"
+  },
+  {
+   "prerequisiteConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "prerequisiteLabel": "Renal function tests",
+   "label": "Chronic kidney disease",
+   "strength": "essential",
+   "reason": "CKD is staged by GFR"
+  },
+  {
+   "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "prerequisiteLabel": "Urine formation",
+   "label": "Chronic kidney disease",
+   "strength": "essential",
+   "reason": "Nephron loss explains CKD progression"
+  },
+  {
+   "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "prerequisiteLabel": "Mechanics of breathing",
+   "label": "Chronic obstructive pulmonary disease",
+   "strength": "essential",
+   "reason": "Airflow obstruction follows breathing mechanics"
+  },
+  {
+   "prerequisiteConceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "prerequisiteLabel": "Pulmonary function tests",
+   "label": "Chronic obstructive pulmonary disease",
+   "strength": "essential",
+   "reason": "COPD is diagnosed by spirometry"
+  },
+  {
+   "prerequisiteConceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "prerequisiteLabel": "Alcohol-related liver disease",
+   "label": "Cirrhosis",
+   "strength": "essential",
+   "reason": "Alcohol-related disease is a major cause of cirrhosis"
+  },
+  {
+   "prerequisiteConceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "prerequisiteLabel": "Viral hepatitis",
+   "label": "Cirrhosis",
+   "strength": "essential",
+   "reason": "Chronic viral hepatitis is a major cause of cirrhosis"
+  },
+  {
+   "prerequisiteConceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "prerequisiteLabel": "Wound healing",
+   "label": "Cirrhosis",
+   "strength": "helpful",
+   "reason": "Fibrosis follows repair mechanisms"
+  },
+  {
+   "prerequisiteConceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "conceptId": "C-bac5c802-58e9-4f84-b89d-c70c2d29ba22",
+   "prerequisiteLabel": "Anaerobic infections",
+   "label": "Clostridial infections",
+   "strength": "essential",
+   "reason": "Clostridia are anaerobic organisms"
+  },
+  {
+   "prerequisiteConceptId": "C-0c3953c0-b611-4ea0-a99b-f23f3da66c08",
+   "conceptId": "C-e19204e5-1971-4b5c-9ea3-682f09f9fd6c",
+   "prerequisiteLabel": "Blood composition",
+   "label": "Complete blood count",
+   "strength": "essential",
+   "reason": "The blood count measures blood components"
+  },
+  {
+   "prerequisiteConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "conceptId": "C-b74384a2-9237-49c2-ac61-3be155aacb1d",
+   "prerequisiteLabel": "Heart",
+   "label": "Congenital heart disease",
+   "strength": "essential",
+   "reason": "Cardiac development and structure explain congenital lesions"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-87193dfe-37b8-44fb-bc8f-ade92e95074d",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Connective tissue disorders",
+   "strength": "essential",
+   "reason": "Connective tissue disorders are autoimmune diseases"
+  },
+  {
+   "prerequisiteConceptId": "C-f964e45f-426d-4b20-bd9d-6d595136addd",
+   "conceptId": "C-87193dfe-37b8-44fb-bc8f-ade92e95074d",
+   "prerequisiteLabel": "Extracellular matrix",
+   "label": "Connective tissue disorders",
+   "strength": "helpful",
+   "reason": "Extracellular matrix explains tissue involvement"
+  },
+  {
+   "prerequisiteConceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "conceptId": "C-27875d3d-90c3-4409-91d2-f5aaffdd8fac",
+   "prerequisiteLabel": "Acute coronary syndrome",
+   "label": "Coronary revascularisation",
+   "strength": "essential",
+   "reason": "Revascularisation treats acute coronary syndrome"
+  },
+  {
+   "prerequisiteConceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "conceptId": "C-e981e4a8-f583-4fc1-a808-f525b254df3f",
+   "prerequisiteLabel": "Poisoning",
+   "label": "Corrosive poisoning",
+   "strength": "essential",
+   "reason": "Corrosive poisoning follows general poisoning management"
+  },
+  {
+   "prerequisiteConceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
+   "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
+   "prerequisiteLabel": "Microorganisms",
+   "label": "Cysticercosis",
+   "strength": "helpful",
+   "reason": "The tapeworm life cycle explains cysticercosis"
+  },
+  {
+   "prerequisiteConceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "conceptId": "C-1cbf336a-01f3-472d-a9b8-54c3b18f9bf9",
+   "prerequisiteLabel": "Osteoarthritis",
+   "label": "Degenerative joint disease in older adults",
+   "strength": "essential",
+   "reason": "Degenerative joint disease is osteoarthritis"
+  },
+  {
+   "prerequisiteConceptId": "C-84ccc19e-294c-42a4-a488-1538d721e95c",
+   "conceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "prerequisiteLabel": "Reticular activating system",
+   "label": "Delirium",
+   "strength": "helpful",
+   "reason": "Arousal systems explain fluctuating consciousness"
+  },
+  {
+   "prerequisiteConceptId": "C-159ef665-2d67-46c5-bb83-e852f785b5aa",
+   "conceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "prerequisiteLabel": "Learning and memory",
+   "label": "Dementia",
+   "strength": "essential",
+   "reason": "Dementia is loss of memory and cognition"
+  },
+  {
+   "prerequisiteConceptId": "C-2f1cdae0-62bd-427a-ac3c-9e01c8ad8f9a",
+   "conceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+   "prerequisiteLabel": "Neurotransmitters",
+   "label": "Depression",
+   "strength": "essential",
+   "reason": "Monoamines explain depression and its treatment"
+  },
+  {
+   "prerequisiteConceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "prerequisiteLabel": "Endocrine pancreas",
+   "label": "Diabetes mellitus",
+   "strength": "essential",
+   "reason": "Insulin secretion and action define type 1 vs type 2"
+  },
+  {
+   "prerequisiteConceptId": "C-7ce2f2c2-f895-4182-bf0b-e8ddd9ac1e6e",
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "prerequisiteLabel": "Glycaemic tests",
+   "label": "Diabetes mellitus",
+   "strength": "essential",
+   "reason": "Diagnosis uses fasting, OGTT and HbA1c criteria"
+  },
+  {
+   "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "conceptId": "C-d97f896c-f21b-4823-ba62-8cf0cc6a2f88",
+   "prerequisiteLabel": "Atherosclerosis",
+   "label": "Diabetic complications",
+   "strength": "helpful",
+   "reason": "Macrovascular complications are atherosclerotic"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-d97f896c-f21b-4823-ba62-8cf0cc6a2f88",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Diabetic complications",
+   "strength": "essential",
+   "reason": "Complications follow chronic hyperglycaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+   "prerequisiteLabel": "Diabetic ketoacidosis",
+   "label": "Diabetic emergencies",
+   "strength": "essential",
+   "reason": "DKA is a diabetic emergency"
+  },
+  {
+   "prerequisiteConceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+   "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+   "prerequisiteLabel": "Hypoglycaemia",
+   "label": "Diabetic emergencies",
+   "strength": "essential",
+   "reason": "Hypoglycaemia is a diabetic emergency"
+  },
+  {
+   "prerequisiteConceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "conceptId": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "prerequisiteLabel": "Acid-base disorders",
+   "label": "Diabetic ketoacidosis",
+   "strength": "essential",
+   "reason": "DKA is a high anion gap metabolic acidosis"
+  },
+  {
+   "prerequisiteConceptId": "C-0b6ee5d6-f59f-48f8-a360-6136be98bcb4",
+   "conceptId": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "prerequisiteLabel": "Ketone bodies",
+   "label": "Diabetic ketoacidosis",
+   "strength": "essential",
+   "reason": "Ketogenesis without insulin is the core of DKA"
+  },
+  {
+   "prerequisiteConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "prerequisiteLabel": "Digestion and absorption",
+   "label": "Diarrhoea",
+   "strength": "essential",
+   "reason": "Osmotic vs secretory diarrhoea follows absorption physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-d1e33bd9-b3cb-4ee2-a156-68ddc4da7aa7",
+   "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "prerequisiteLabel": "Intestinal secretion",
+   "label": "Diarrhoea",
+   "strength": "essential",
+   "reason": "Intestinal secretion explains secretory diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-355640fb-3d02-4096-8cb8-ab22cd1a17ad",
+   "conceptId": "C-8a5e96a6-b364-4e88-8266-a0516d3f3d16",
+   "prerequisiteLabel": "Food composition",
+   "label": "Dietary counselling",
+   "strength": "essential",
+   "reason": "Counselling uses food composition"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-8a5e96a6-b364-4e88-8266-a0516d3f3d16",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Dietary counselling",
+   "strength": "essential",
+   "reason": "Counselling applies nutrient requirements"
+  },
+  {
+   "prerequisiteConceptId": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
+   "conceptId": "C-88759b1f-7794-4c15-9f74-f93edb81f081",
+   "prerequisiteLabel": "Pharmacokinetics",
+   "label": "Drug poisoning",
+   "strength": "helpful",
+   "reason": "Pharmacokinetics guides elimination"
+  },
+  {
+   "prerequisiteConceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "conceptId": "C-88759b1f-7794-4c15-9f74-f93edb81f081",
+   "prerequisiteLabel": "Poisoning",
+   "label": "Drug poisoning",
+   "strength": "essential",
+   "reason": "Drug overdose follows general poisoning management"
+  },
+  {
+   "prerequisiteConceptId": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
+   "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+   "prerequisiteLabel": "Pharmacokinetics",
+   "label": "Drug-induced liver injury",
+   "strength": "helpful",
+   "reason": "Pharmacokinetics explains dose-related injury"
+  },
+  {
+   "prerequisiteConceptId": "C-9840d126-a15d-4ade-87e2-32a4b24eea0f",
+   "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+   "prerequisiteLabel": "Xenobiotic metabolism",
+   "label": "Drug-induced liver injury",
+   "strength": "essential",
+   "reason": "Drug metabolism explains hepatotoxicity"
+  },
+  {
+   "prerequisiteConceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "conceptId": "C-5b1314a3-8a4e-4891-9cca-c09018963bb5",
+   "prerequisiteLabel": "Antimicrobial resistance",
+   "label": "Drug-resistant tuberculosis",
+   "strength": "essential",
+   "reason": "Resistance mechanisms explain DR-TB"
+  },
+  {
+   "prerequisiteConceptId": "C-7ed39c9c-7be2-4fbc-ba60-7d0406d7e628",
+   "conceptId": "C-5b1314a3-8a4e-4891-9cca-c09018963bb5",
+   "prerequisiteLabel": "Antitubercular drugs",
+   "label": "Drug-resistant tuberculosis",
+   "strength": "essential",
+   "reason": "Resistance is defined against standard drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "conceptId": "C-5b1314a3-8a4e-4891-9cca-c09018963bb5",
+   "prerequisiteLabel": "Pulmonary tuberculosis",
+   "label": "Drug-resistant tuberculosis",
+   "strength": "essential",
+   "reason": "Drug-resistant TB is a form of tuberculosis"
+  },
+  {
+   "prerequisiteConceptId": "C-9f377fb9-6722-4fbd-a2fe-0952bbe02e97",
+   "conceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "prerequisiteLabel": "Adrenergic drugs",
+   "label": "Drugs for asthma and COPD",
+   "strength": "essential",
+   "reason": "Beta-agonists are adrenergic drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "conceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "prerequisiteLabel": "Asthma",
+   "label": "Drugs for asthma and COPD",
+   "strength": "essential",
+   "reason": "Asthma drugs target asthma mechanisms"
+  },
+  {
+   "prerequisiteConceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "conceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "prerequisiteLabel": "Chronic obstructive pulmonary disease",
+   "label": "Drugs for asthma and COPD",
+   "strength": "essential",
+   "reason": "COPD drugs target COPD mechanisms"
+  },
+  {
+   "prerequisiteConceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "conceptId": "C-0e6e7454-ae68-4099-93a9-4aa91bf68104",
+   "prerequisiteLabel": "Heart failure",
+   "label": "Drugs used in heart failure",
+   "strength": "essential",
+   "reason": "Each heart-failure drug class targets a specific mechanism"
+  },
+  {
+   "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "prerequisiteLabel": "Diarrhoea",
+   "label": "Dysentery",
+   "strength": "essential",
+   "reason": "Dysentery is an invasive form of diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
+   "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "prerequisiteLabel": "Cardiac conduction system",
+   "label": "Electrocardiogram",
+   "strength": "essential",
+   "reason": "ECG waves record the conduction system"
+  },
+  {
+   "prerequisiteConceptId": "C-5563d4f1-94e1-4c3d-b152-27611448ddd3",
+   "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "prerequisiteLabel": "Membrane potentials",
+   "label": "Electrocardiogram",
+   "strength": "helpful",
+   "reason": "Depolarisation and repolarisation produce the ECG"
+  },
+  {
+   "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "prerequisiteLabel": "Cerebrospinal fluid",
+   "label": "Encephalitis",
+   "strength": "essential",
+   "reason": "Encephalitis is investigated with CSF"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-2c1be0a7-9cb0-41d9-a067-151f4135a497",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "End-of-life ethics",
+   "strength": "essential",
+   "reason": "End-of-life decisions apply core ethics"
+  },
+  {
+   "prerequisiteConceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "prerequisiteLabel": "Blood culture",
+   "label": "Enteric fever",
+   "strength": "essential",
+   "reason": "Enteric fever is confirmed by blood culture"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Enteric fever",
+   "strength": "helpful",
+   "reason": "Faecal-oral transmission explains prevention"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-9ea6d9f5-6081-4273-a172-401044548b73",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Envenomation",
+   "strength": "essential",
+   "reason": "Haemotoxic venoms disrupt haemostasis"
+  },
+  {
+   "prerequisiteConceptId": "C-7b7954c5-9aa2-4611-a9b0-0d89c2299b84",
+   "conceptId": "C-9ea6d9f5-6081-4273-a172-401044548b73",
+   "prerequisiteLabel": "Neuromuscular transmission",
+   "label": "Envenomation",
+   "strength": "essential",
+   "reason": "Neurotoxic venoms block neuromuscular transmission"
+  },
+  {
+   "prerequisiteConceptId": "C-25ea8448-3810-491e-a64f-4c2abef56c55",
+   "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "prerequisiteLabel": "Electroencephalogram",
+   "label": "Epilepsy",
+   "strength": "helpful",
+   "reason": "EEG classifies seizure types"
+  },
+  {
+   "prerequisiteConceptId": "C-5563d4f1-94e1-4c3d-b152-27611448ddd3",
+   "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "prerequisiteLabel": "Membrane potentials",
+   "label": "Epilepsy",
+   "strength": "essential",
+   "reason": "Seizures arise from abnormal neuronal excitability"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-bfc2d0aa-1931-437c-bc97-e515bce5a1f1",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Ethics of care for older adults",
+   "strength": "essential",
+   "reason": "Ethics of care applies core principles"
+  },
+  {
+   "prerequisiteConceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
+   "conceptId": "C-e4c4e5a1-77ea-4028-b96d-c125ea18b8b3",
+   "prerequisiteLabel": "Geriatric assessment",
+   "label": "Falls in older adults",
+   "strength": "essential",
+   "reason": "Fall risk is part of geriatric assessment"
+  },
+  {
+   "prerequisiteConceptId": "C-5ea54622-1a66-48b8-b2c9-116b3f68ec08",
+   "conceptId": "C-e4c4e5a1-77ea-4028-b96d-c125ea18b8b3",
+   "prerequisiteLabel": "Muscle tone and posture",
+   "label": "Falls in older adults",
+   "strength": "helpful",
+   "reason": "Posture and tone control prevent falls"
+  },
+  {
+   "prerequisiteConceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "prerequisiteLabel": "Host response to infection",
+   "label": "Fever",
+   "strength": "helpful",
+   "reason": "Pyrogens come from the host response to infection"
+  },
+  {
+   "prerequisiteConceptId": "C-f822df0f-9571-4904-aa38-e5c690b180a2",
+   "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "prerequisiteLabel": "Thermoregulation",
+   "label": "Fever",
+   "strength": "essential",
+   "reason": "Fever is a reset hypothalamic set point"
+  },
+  {
+   "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+   "prerequisiteLabel": "Diarrhoea",
+   "label": "Food poisoning",
+   "strength": "essential",
+   "reason": "Food poisoning presents as acute diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "conceptId": "C-a3496933-6297-4a61-aa3f-702d93cf6f88",
+   "prerequisiteLabel": "Osteoporosis",
+   "label": "Fragility fractures",
+   "strength": "essential",
+   "reason": "Fragility fractures follow osteoporosis"
+  },
+  {
+   "prerequisiteConceptId": "C-0f92b112-7ee0-4ec8-99e7-759b7fbc7579",
+   "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "prerequisiteLabel": "Bile",
+   "label": "Gallstones",
+   "strength": "essential",
+   "reason": "Bile composition determines stone formation"
+  },
+  {
+   "prerequisiteConceptId": "C-64846678-af73-4840-9803-98f42c607844",
+   "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "prerequisiteLabel": "Cholesterol metabolism",
+   "label": "Gallstones",
+   "strength": "essential",
+   "reason": "Cholesterol supersaturation of bile forms gallstones"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Gastrointestinal bleeding",
+   "strength": "helpful",
+   "reason": "Haemostasis affects bleeding severity"
+  },
+  {
+   "prerequisiteConceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+   "prerequisiteLabel": "Peptic ulcer disease",
+   "label": "Gastrointestinal bleeding",
+   "strength": "essential",
+   "reason": "Peptic ulcer is a major cause of GI bleeding"
+  },
+  {
+   "prerequisiteConceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+   "prerequisiteLabel": "Portal hypertension",
+   "label": "Gastrointestinal bleeding",
+   "strength": "helpful",
+   "reason": "Variceal bleeding comes from portal hypertension"
+  },
+  {
+   "prerequisiteConceptId": "C-f3892c15-1ce1-452f-8e2e-b14e4c48dbae",
+   "conceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
+   "prerequisiteLabel": "Ageing",
+   "label": "Geriatric assessment",
+   "strength": "essential",
+   "reason": "Geriatric assessment applies changes of ageing"
+  },
+  {
+   "prerequisiteConceptId": "C-0febcd78-05d3-4bab-aa1d-cc34b4102e1a",
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "prerequisiteLabel": "Hyperuricaemia",
+   "label": "Gout",
+   "strength": "essential",
+   "reason": "Hyperuricaemia precedes gout"
+  },
+  {
+   "prerequisiteConceptId": "C-22457423-7498-4bf8-a6de-3bb29f5bcc2d",
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "prerequisiteLabel": "Purine metabolism",
+   "label": "Gout",
+   "strength": "essential",
+   "reason": "Uric acid comes from purine metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "conceptId": "C-7a2016b8-0b78-4b8a-8b6a-e61ebafc1538",
+   "prerequisiteLabel": "Antimicrobial resistance",
+   "label": "Gram-negative bacillary infections",
+   "strength": "helpful",
+   "reason": "Resistance limits treatment"
+  },
+  {
+   "prerequisiteConceptId": "C-622d7c7a-02d1-4c1a-ae13-08f0da754019",
+   "conceptId": "C-7a2016b8-0b78-4b8a-8b6a-e61ebafc1538",
+   "prerequisiteLabel": "Gram staining",
+   "label": "Gram-negative bacillary infections",
+   "strength": "essential",
+   "reason": "Gram stain identifies gram-negative bacilli"
+  },
+  {
+   "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptId": "C-9903031a-6460-4557-9453-17e7751ca6d0",
+   "prerequisiteLabel": "Anaemia",
+   "label": "Haematinics",
+   "strength": "essential",
+   "reason": "Haematinics treat specific anaemia types"
+  },
+  {
+   "prerequisiteConceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "conceptId": "C-9903031a-6460-4557-9453-17e7751ca6d0",
+   "prerequisiteLabel": "Iron metabolism",
+   "label": "Haematinics",
+   "strength": "essential",
+   "reason": "Iron absorption and stores explain haematinic use"
+  },
+  {
+   "prerequisiteConceptId": "C-418a472f-5e3d-4b0d-81e1-6aba1ac19596",
+   "conceptId": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
+   "prerequisiteLabel": "Pain",
+   "label": "Headache",
+   "strength": "helpful",
+   "reason": "Headache follows pain pathways"
+  },
+  {
+   "prerequisiteConceptId": "C-516420eb-4757-446f-b6c6-80c83f5ba629",
+   "conceptId": "C-33728a6c-5a00-4158-ae2e-7d369a50c72b",
+   "prerequisiteLabel": "Hearing",
+   "label": "Hearing loss in older adults",
+   "strength": "essential",
+   "reason": "Presbycusis is loss of hearing physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "prerequisiteLabel": "Cardiac cycle",
+   "label": "Heart failure",
+   "strength": "essential",
+   "reason": "Systolic vs diastolic failure follows the cycle's pressure-volume events"
+  },
+  {
+   "prerequisiteConceptId": "C-457f7157-a44b-4e0a-a20f-5f6fd960f77f",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "prerequisiteLabel": "Cardiac output",
+   "label": "Heart failure",
+   "strength": "essential",
+   "reason": "Frank-Starling, preload and afterload explain decompensation"
+  },
+  {
+   "prerequisiteConceptId": "C-7d3f8df6-c118-45d3-8bc3-9b71a057d9ec",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "prerequisiteLabel": "Cardiovascular regulation",
+   "label": "Heart failure",
+   "strength": "essential",
+   "reason": "Sympathetic and RAAS compensation drives progression and drug targets"
+  },
+  {
+   "prerequisiteConceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "conceptId": "C-b212077b-ee32-4512-96c3-041ad2c0ebdf",
+   "prerequisiteLabel": "Cardiac cycle",
+   "label": "Heart murmurs",
+   "strength": "essential",
+   "reason": "Murmur timing follows the cardiac cycle"
+  },
+  {
+   "prerequisiteConceptId": "C-8fcef932-cd03-4039-8885-dc6a6e08d5ce",
+   "conceptId": "C-3d1fdbd5-c82c-4f15-bc6d-a20b3b3fe372",
+   "prerequisiteLabel": "Adaptation to heat and cold",
+   "label": "Heat stroke",
+   "strength": "helpful",
+   "reason": "Heat acclimatisation affects risk"
+  },
+  {
+   "prerequisiteConceptId": "C-f822df0f-9571-4904-aa38-e5c690b180a2",
+   "conceptId": "C-3d1fdbd5-c82c-4f15-bc6d-a20b3b3fe372",
+   "prerequisiteLabel": "Thermoregulation",
+   "label": "Heat stroke",
+   "strength": "essential",
+   "reason": "Heat stroke is failure of thermoregulation"
+  },
+  {
+   "prerequisiteConceptId": "C-cbf897f0-7b70-4fcf-a7fb-059c6114bfec",
+   "conceptId": "C-6c240ee1-1316-4f68-a4ce-d11e0f061f88",
+   "prerequisiteLabel": "Gastric secretion",
+   "label": "Helicobacter pylori infection",
+   "strength": "essential",
+   "reason": "Gastric acid physiology explains H. pylori effects"
+  },
+  {
+   "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "prerequisiteLabel": "Cell-mediated immunity",
+   "label": "HIV infection",
+   "strength": "essential",
+   "reason": "HIV destroys CD4 cell-mediated immunity"
+  },
+  {
+   "prerequisiteConceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "prerequisiteLabel": "Immunodeficiency",
+   "label": "HIV infection",
+   "strength": "essential",
+   "reason": "HIV is an acquired immunodeficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "conceptId": "C-a2e99731-86b9-454f-86da-27b02422b579",
+   "prerequisiteLabel": "HIV infection",
+   "label": "HIV-associated malignancies",
+   "strength": "essential",
+   "reason": "These cancers arise in HIV infection"
+  },
+  {
+   "prerequisiteConceptId": "C-4b1b951d-5e5e-4a4b-8030-73bfaa70d384",
+   "conceptId": "C-a2e99731-86b9-454f-86da-27b02422b579",
+   "prerequisiteLabel": "Oncogenic infections",
+   "label": "HIV-associated malignancies",
+   "strength": "essential",
+   "reason": "Oncogenic viruses drive HIV-associated cancers"
+  },
+  {
+   "prerequisiteConceptId": "C-11745acf-4db4-4c0d-b998-59a94bbedd13",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "prerequisiteLabel": "Immune system",
+   "label": "Host response to infection",
+   "strength": "essential",
+   "reason": "Host response uses innate and adaptive immunity"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Host response to infection",
+   "strength": "essential",
+   "reason": "Host response is built on inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Hypercalcaemia",
+   "strength": "essential",
+   "reason": "Calcium handling explains hypercalcaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-c46f0873-5939-4a43-9f96-25066e60e6e7",
+   "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
+   "prerequisiteLabel": "Calcium-regulating hormones",
+   "label": "Hypercalcaemia",
+   "strength": "essential",
+   "reason": "PTH and vitamin D drive most causes"
+  },
+  {
+   "prerequisiteConceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "conceptId": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+   "prerequisiteLabel": "Electrocardiogram",
+   "label": "Hyperkalaemia",
+   "strength": "helpful",
+   "reason": "ECG changes decide treatment urgency"
+  },
+  {
+   "prerequisiteConceptId": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "conceptId": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+   "prerequisiteLabel": "Renal regulation of fluid, electrolytes and acid-base",
+   "label": "Hyperkalaemia",
+   "strength": "essential",
+   "reason": "Potassium excretion and shifts explain causes"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-bfe650cd-53c5-414d-9a81-746b8aefaf87",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Hyperosmolar hyperglycaemic state",
+   "strength": "essential",
+   "reason": "HHS is a hyperglycaemic emergency"
+  },
+  {
+   "prerequisiteConceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "conceptId": "C-bfe650cd-53c5-414d-9a81-746b8aefaf87",
+   "prerequisiteLabel": "Water and electrolyte balance",
+   "label": "Hyperosmolar hyperglycaemic state",
+   "strength": "essential",
+   "reason": "Severe dehydration and osmolality define HHS"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Hyperparathyroidism",
+   "strength": "essential",
+   "reason": "Calcium handling explains the biochemical picture"
+  },
+  {
+   "prerequisiteConceptId": "C-c46f0873-5939-4a43-9f96-25066e60e6e7",
+   "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "prerequisiteLabel": "Calcium-regulating hormones",
+   "label": "Hyperparathyroidism",
+   "strength": "essential",
+   "reason": "PTH physiology explains hyperparathyroidism"
+  },
+  {
+   "prerequisiteConceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "conceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "prerequisiteLabel": "Blood pressure",
+   "label": "Hypertension",
+   "strength": "essential",
+   "reason": "Determinants of blood pressure explain causes and drug choice"
+  },
+  {
+   "prerequisiteConceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "conceptId": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
+   "prerequisiteLabel": "Hypertension",
+   "label": "Hypertensive emergencies",
+   "strength": "essential",
+   "reason": "Emergencies assume chronic BP physiology and target-organ damage"
+  },
+  {
+   "prerequisiteConceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+   "prerequisiteLabel": "Antidiabetic drugs",
+   "label": "Hypoglycaemia",
+   "strength": "essential",
+   "reason": "Insulin and sulphonylureas cause most hypoglycaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-9735c557-c0e8-4578-875c-f76570728927",
+   "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+   "prerequisiteLabel": "Fed-fast cycle",
+   "label": "Hypoglycaemia",
+   "strength": "essential",
+   "reason": "Fasting glucose regulation explains hypoglycaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "conceptId": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+   "prerequisiteLabel": "Renal regulation of fluid, electrolytes and acid-base",
+   "label": "Hypokalaemia",
+   "strength": "essential",
+   "reason": "Renal and transcellular potassium handling explain causes"
+  },
+  {
+   "prerequisiteConceptId": "C-9918b646-21a3-466d-a289-5d28564adf54",
+   "conceptId": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+   "prerequisiteLabel": "Urine concentration and dilution",
+   "label": "Hyponatraemia",
+   "strength": "essential",
+   "reason": "ADH and free-water handling classify hyponatraemia"
+  },
+  {
+   "prerequisiteConceptId": "C-41135e3e-7002-4f7f-b27a-b03f47d53276",
+   "conceptId": "C-78990369-c4c9-4eba-98ca-1a64da2a42c5",
+   "prerequisiteLabel": "Antiretroviral drugs",
+   "label": "Immune reconstitution inflammatory syndrome",
+   "strength": "essential",
+   "reason": "IRIS follows antiretroviral therapy"
+  },
+  {
+   "prerequisiteConceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "conceptId": "C-78990369-c4c9-4eba-98ca-1a64da2a42c5",
+   "prerequisiteLabel": "Opportunistic infections",
+   "label": "Immune reconstitution inflammatory syndrome",
+   "strength": "essential",
+   "reason": "IRIS unmasks opportunistic infections"
+  },
+  {
+   "prerequisiteConceptId": "C-baa5bc2c-7da4-40b2-a467-fdce95892577",
+   "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "prerequisiteLabel": "Hand hygiene",
+   "label": "Infection prevention and control",
+   "strength": "essential",
+   "reason": "Hand hygiene is the core of infection control"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Infection prevention and control",
+   "strength": "essential",
+   "reason": "Infection control interrupts transmission routes"
+  },
+  {
+   "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptId": "C-ccdd9fd2-f95c-472f-8d1f-ac88c4382634",
+   "prerequisiteLabel": "Diarrhoea",
+   "label": "Infectious diarrhoea treatment",
+   "strength": "essential",
+   "reason": "Treatment follows diarrhoea type"
+  },
+  {
+   "prerequisiteConceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "conceptId": "C-ccdd9fd2-f95c-472f-8d1f-ac88c4382634",
+   "prerequisiteLabel": "Water and electrolyte balance",
+   "label": "Infectious diarrhoea treatment",
+   "strength": "essential",
+   "reason": "Rehydration corrects fluid and electrolyte loss"
+  },
+  {
+   "prerequisiteConceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "prerequisiteLabel": "Blood culture",
+   "label": "Infective endocarditis",
+   "strength": "essential",
+   "reason": "Endocarditis is diagnosed by blood cultures"
+  },
+  {
+   "prerequisiteConceptId": "C-b212077b-ee32-4512-96c3-041ad2c0ebdf",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "prerequisiteLabel": "Heart murmurs",
+   "label": "Infective endocarditis",
+   "strength": "helpful",
+   "reason": "New murmurs signal valve involvement"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Inflammatory bowel disease",
+   "strength": "helpful",
+   "reason": "Immune dysregulation drives IBD"
+  },
+  {
+   "prerequisiteConceptId": "C-3f041abe-d4b3-4932-89e0-7a03811f2c1e",
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "prerequisiteLabel": "Chronic inflammation",
+   "label": "Inflammatory bowel disease",
+   "strength": "essential",
+   "reason": "IBD is chronic inflammation of the gut"
+  },
+  {
+   "prerequisiteConceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "conceptId": "C-be004069-4feb-4a3c-b87d-7d59e4193ae0",
+   "prerequisiteLabel": "Drugs for asthma and COPD",
+   "label": "Inhaler technique",
+   "strength": "essential",
+   "reason": "Technique delivers inhaled drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "conceptId": "C-356764df-4117-4caa-91b5-8fc1326f2a5d",
+   "prerequisiteLabel": "Antidiabetic drugs",
+   "label": "Insulin administration",
+   "strength": "essential",
+   "reason": "Insulin types guide administration"
+  },
+  {
+   "prerequisiteConceptId": "C-c054491e-626a-4c25-9b82-0345c5f89cf3",
+   "conceptId": "C-356764df-4117-4caa-91b5-8fc1326f2a5d",
+   "prerequisiteLabel": "Routes of drug administration",
+   "label": "Insulin administration",
+   "strength": "helpful",
+   "reason": "Subcutaneous route affects absorption"
+  },
+  {
+   "prerequisiteConceptId": "C-c054491e-626a-4c25-9b82-0345c5f89cf3",
+   "conceptId": "C-942cf2f3-98d2-4f3a-871a-b4ceee4a7be6",
+   "prerequisiteLabel": "Routes of drug administration",
+   "label": "Intramuscular injection",
+   "strength": "essential",
+   "reason": "IM injection is a route of administration"
+  },
+  {
+   "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "prerequisiteLabel": "Atherosclerosis",
+   "label": "Ischaemic heart disease",
+   "strength": "essential",
+   "reason": "Plaque formation causes most ischaemic heart disease"
+  },
+  {
+   "prerequisiteConceptId": "C-cf863984-06c6-4dde-be84-02d8d42d2a99",
+   "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "prerequisiteLabel": "Coronary circulation",
+   "label": "Ischaemic heart disease",
+   "strength": "essential",
+   "reason": "Coronary supply-demand and territories explain angina and infarct site"
+  },
+  {
+   "prerequisiteConceptId": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "prerequisiteLabel": "Bilirubin metabolism",
+   "label": "Jaundice",
+   "strength": "essential",
+   "reason": "Pre-hepatic, hepatic and post-hepatic jaundice follow the pathway"
+  },
+  {
+   "prerequisiteConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "prerequisiteLabel": "Liver function tests",
+   "label": "Jaundice",
+   "strength": "helpful",
+   "reason": "Liver function tests localise the cause"
+  },
+  {
+   "prerequisiteConceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "conceptId": "C-67dec6e0-bfc3-459e-87cc-9f276d878e30",
+   "prerequisiteLabel": "Cardiac cycle",
+   "label": "Jugular venous pressure",
+   "strength": "essential",
+   "reason": "JVP waves follow right heart cycle events"
+  },
+  {
+   "prerequisiteConceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+   "conceptId": "C-e94d9e67-590a-4407-a66b-ce6277c2aaf5",
+   "prerequisiteLabel": "Metabolic syndrome",
+   "label": "Lifestyle counselling",
+   "strength": "helpful",
+   "reason": "Counselling targets metabolic risk factors"
+  },
+  {
+   "prerequisiteConceptId": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+   "conceptId": "C-0f013d30-7f5c-4f51-ba17-d600a6e8bdd7",
+   "prerequisiteLabel": "Lipoproteins",
+   "label": "Lipid profile",
+   "strength": "essential",
+   "reason": "Lipid profile measures lipoprotein classes"
+  },
+  {
+   "prerequisiteConceptId": "C-64846678-af73-4840-9803-98f42c607844",
+   "conceptId": "C-887f1442-5f21-46ef-af96-d9846af7c2ec",
+   "prerequisiteLabel": "Cholesterol metabolism",
+   "label": "Lipid-lowering drugs",
+   "strength": "essential",
+   "reason": "Statins and others act on cholesterol synthesis"
+  },
+  {
+   "prerequisiteConceptId": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+   "conceptId": "C-887f1442-5f21-46ef-af96-d9846af7c2ec",
+   "prerequisiteLabel": "Lipoproteins",
+   "label": "Lipid-lowering drugs",
+   "strength": "essential",
+   "reason": "Lipid-lowering targets specific lipoproteins"
+  },
+  {
+   "prerequisiteConceptId": "C-6a665032-76c9-4b06-a1a8-4757dc0e4150",
+   "conceptId": "C-cf5ec55c-64e1-4482-88b8-38234f05bed7",
+   "prerequisiteLabel": "Liver",
+   "label": "Liver disease",
+   "strength": "essential",
+   "reason": "Liver disease follows hepatocyte functions"
+  },
+  {
+   "prerequisiteConceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+   "conceptId": "C-cf5ec55c-64e1-4482-88b8-38234f05bed7",
+   "prerequisiteLabel": "Liver function tests",
+   "label": "Liver disease",
+   "strength": "essential",
+   "reason": "Liver disease is assessed with liver function tests"
+  },
+  {
+   "prerequisiteConceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "conceptId": "C-a30d36a9-5747-4faa-b7ce-fbd82efc6b79",
+   "prerequisiteLabel": "Cirrhosis",
+   "label": "Liver transplantation",
+   "strength": "essential",
+   "reason": "Cirrhosis is the main indication"
+  },
+  {
+   "prerequisiteConceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "conceptId": "C-a30d36a9-5747-4faa-b7ce-fbd82efc6b79",
+   "prerequisiteLabel": "Transplant rejection",
+   "label": "Liver transplantation",
+   "strength": "essential",
+   "reason": "Graft survival depends on preventing rejection"
+  },
+  {
+   "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "conceptId": "C-161aab86-3cc7-43f8-9fbc-d9c7c8ec12fe",
+   "prerequisiteLabel": "Cerebrospinal fluid",
+   "label": "Lumbar puncture",
+   "strength": "helpful",
+   "reason": "Lumbar puncture samples CSF"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Lymphatic filariasis",
+   "strength": "helpful",
+   "reason": "Vector transmission explains distribution"
+  },
+  {
+   "prerequisiteConceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "prerequisiteLabel": "Microorganisms",
+   "label": "Malaria",
+   "strength": "helpful",
+   "reason": "The parasite life cycle explains clinical malaria"
+  },
+  {
+   "prerequisiteConceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "conceptId": "C-1a55e556-8b26-45a3-8cd3-9dd28e27846c",
+   "prerequisiteLabel": "Nutritional assessment",
+   "label": "Malnutrition in older adults",
+   "strength": "essential",
+   "reason": "Assessment identifies malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptId": "C-1a55e556-8b26-45a3-8cd3-9dd28e27846c",
+   "prerequisiteLabel": "Protein-energy malnutrition",
+   "label": "Malnutrition in older adults",
+   "strength": "essential",
+   "reason": "Malnutrition in old age is protein-energy malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "prerequisiteLabel": "Cerebrospinal fluid",
+   "label": "Meningitis",
+   "strength": "essential",
+   "reason": "Meningitis is diagnosed and typed on CSF"
+  },
+  {
+   "prerequisiteConceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "prerequisiteLabel": "Host response to infection",
+   "label": "Meningitis",
+   "strength": "helpful",
+   "reason": "Host response explains meningeal inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "conceptId": "C-f939afc2-5d09-43ea-8b50-2489c159b284",
+   "prerequisiteLabel": "Acid-base disorders",
+   "label": "Methanol poisoning",
+   "strength": "essential",
+   "reason": "Methanol causes high anion gap metabolic acidosis"
+  },
+  {
+   "prerequisiteConceptId": "C-a3e51d73-dcb4-4020-bd8e-e4d6c422d068",
+   "conceptId": "C-44b4af02-89ad-42b1-800c-c04f2cc4cd95",
+   "prerequisiteLabel": "Trace elements",
+   "label": "Micronutrient deficiencies",
+   "strength": "essential",
+   "reason": "Deficiency features follow trace element functions"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-44b4af02-89ad-42b1-800c-c04f2cc4cd95",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Micronutrient deficiencies",
+   "strength": "essential",
+   "reason": "Deficiency features follow vitamin functions"
+  },
+  {
+   "prerequisiteConceptId": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
+   "conceptId": "C-d30c0b31-242f-4221-89c8-50bfa358eaef",
+   "prerequisiteLabel": "Headache",
+   "label": "Migraine",
+   "strength": "essential",
+   "reason": "Migraine is a primary headache"
+  },
+  {
+   "prerequisiteConceptId": "C-53be03df-148b-4626-accb-9fd60b65027b",
+   "conceptId": "C-fee832a8-5696-4c5f-b7f0-b4ebb3cbe9ab",
+   "prerequisiteLabel": "Gene mutations",
+   "label": "Monogenic obesity",
+   "strength": "essential",
+   "reason": "Single-gene mutations cause it"
+  },
+  {
+   "prerequisiteConceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "conceptId": "C-fee832a8-5696-4c5f-b7f0-b4ebb3cbe9ab",
+   "prerequisiteLabel": "Obesity",
+   "label": "Monogenic obesity",
+   "strength": "essential",
+   "reason": "Monogenic obesity is a form of obesity"
+  },
+  {
+   "prerequisiteConceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "conceptId": "C-8dc7199c-ddf7-410e-9334-3b50b6775ed2",
+   "prerequisiteLabel": "Basal ganglia",
+   "label": "Movement disorders",
+   "strength": "essential",
+   "reason": "Most movement disorders arise in the basal ganglia"
+  },
+  {
+   "prerequisiteConceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "conceptId": "C-8dc7199c-ddf7-410e-9334-3b50b6775ed2",
+   "prerequisiteLabel": "Cerebellum",
+   "label": "Movement disorders",
+   "strength": "helpful",
+   "reason": "Cerebellar disorders cause ataxia"
+  },
+  {
+   "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptId": "C-afaa1fc0-4c9e-43b9-a120-049df5c893ea",
+   "prerequisiteLabel": "Anaemia",
+   "label": "National Anaemia Control Programme",
+   "strength": "essential",
+   "reason": "The programme targets anaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "conceptId": "C-afaa1fc0-4c9e-43b9-a120-049df5c893ea",
+   "prerequisiteLabel": "Iron metabolism",
+   "label": "National Anaemia Control Programme",
+   "strength": "helpful",
+   "reason": "Iron supplementation follows iron metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-44b4af02-89ad-42b1-800c-c04f2cc4cd95",
+   "conceptId": "C-144a5c41-0c71-44e3-9af2-1d225ebd6601",
+   "prerequisiteLabel": "Micronutrient deficiencies",
+   "label": "National nutrition programmes",
+   "strength": "essential",
+   "reason": "Programmes target specific micronutrient deficiencies"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-506649ad-fb9c-4f16-ae7c-cab5dccb2cb5",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "National programmes for infectious diseases",
+   "strength": "helpful",
+   "reason": "Programmes target specific transmission routes"
+  },
+  {
+   "prerequisiteConceptId": "C-c3961b49-71aa-43f6-b446-18115817793c",
+   "conceptId": "C-ec957217-56cb-4b0b-8a05-d70de3ca0f95",
+   "prerequisiteLabel": "Micturition",
+   "label": "Neurogenic bladder",
+   "strength": "essential",
+   "reason": "Bladder control follows micturition reflex pathways"
+  },
+  {
+   "prerequisiteConceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
+   "conceptId": "C-89866cc3-391f-4d59-bf09-6657f46a3f06",
+   "prerequisiteLabel": "Laboratory diagnosis of infection",
+   "label": "Newer diagnostic techniques in infection",
+   "strength": "essential",
+   "reason": "They extend standard laboratory diagnosis"
+  },
+  {
+   "prerequisiteConceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+   "conceptId": "C-89866cc3-391f-4d59-bf09-6657f46a3f06",
+   "prerequisiteLabel": "Polymerase chain reaction",
+   "label": "Newer diagnostic techniques in infection",
+   "strength": "essential",
+   "reason": "Newer techniques are nucleic-acid based"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Nutritional assessment",
+   "strength": "essential",
+   "reason": "Assessment compares intake with requirements"
+  },
+  {
+   "prerequisiteConceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "conceptId": "C-9f37cabc-193a-4bc7-ac2a-660848d63634",
+   "prerequisiteLabel": "Nutritional assessment",
+   "label": "Nutritional support",
+   "strength": "essential",
+   "reason": "Support is planned from nutritional assessment"
+  },
+  {
+   "prerequisiteConceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptId": "C-9f37cabc-193a-4bc7-ac2a-660848d63634",
+   "prerequisiteLabel": "Protein-energy malnutrition",
+   "label": "Nutritional support",
+   "strength": "helpful",
+   "reason": "Malnutrition is the main indication"
+  },
+  {
+   "prerequisiteConceptId": "C-9735c557-c0e8-4578-875c-f76570728927",
+   "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "prerequisiteLabel": "Fed-fast cycle",
+   "label": "Obesity",
+   "strength": "helpful",
+   "reason": "Fed-fast metabolism explains fat storage"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Obesity",
+   "strength": "helpful",
+   "reason": "Energy balance and nutrients underlie obesity"
+  },
+  {
+   "prerequisiteConceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
+   "conceptId": "C-6357d2b3-b769-4914-acf8-ed7ca48d8645",
+   "prerequisiteLabel": "Obesity",
+   "label": "Obesity treatment",
+   "strength": "essential",
+   "reason": "Treatment follows obesity causes"
+  },
+  {
+   "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "conceptId": "C-e8c03208-4e55-4653-9cbc-e95ef07ebd79",
+   "prerequisiteLabel": "Mechanics of breathing",
+   "label": "Obstructive airway disease",
+   "strength": "essential",
+   "reason": "Obstruction follows breathing mechanics"
+  },
+  {
+   "prerequisiteConceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "conceptId": "C-e8c03208-4e55-4653-9cbc-e95ef07ebd79",
+   "prerequisiteLabel": "Pulmonary function tests",
+   "label": "Obstructive airway disease",
+   "strength": "essential",
+   "reason": "Obstruction is shown on spirometry"
+  },
+  {
+   "prerequisiteConceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
+   "conceptId": "C-e5e7a4f8-ad0c-490a-9e43-ea30d57d3f1f",
+   "prerequisiteLabel": "Infection prevention and control",
+   "label": "Occupational exposure to bloodborne infections",
+   "strength": "essential",
+   "reason": "Prevention applies infection control"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-e5e7a4f8-ad0c-490a-9e43-ea30d57d3f1f",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Occupational exposure to bloodborne infections",
+   "strength": "essential",
+   "reason": "Needle-stick risk follows bloodborne transmission"
+  },
+  {
+   "prerequisiteConceptId": "C-941a4acb-68ed-4949-ade0-95fbce629ff3",
+   "conceptId": "C-f7fc2ce5-5e1f-4690-8baf-fb2c8b6fb30e",
+   "prerequisiteLabel": "Pneumoconioses",
+   "label": "Occupational lung disease prevention",
+   "strength": "essential",
+   "reason": "Prevention targets pneumoconioses"
+  },
+  {
+   "prerequisiteConceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "prerequisiteLabel": "HIV infection",
+   "label": "Opportunistic infections",
+   "strength": "essential",
+   "reason": "HIV is the main cause of opportunistic infections"
+  },
+  {
+   "prerequisiteConceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "prerequisiteLabel": "Immunodeficiency",
+   "label": "Opportunistic infections",
+   "strength": "essential",
+   "reason": "Immunodeficiency permits opportunistic infections"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Osteoporosis",
+   "strength": "essential",
+   "reason": "Bone mineral depends on calcium metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-c46f0873-5939-4a43-9f96-25066e60e6e7",
+   "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "prerequisiteLabel": "Calcium-regulating hormones",
+   "label": "Osteoporosis",
+   "strength": "essential",
+   "reason": "Hormonal control of bone explains osteoporosis"
+  },
+  {
+   "prerequisiteConceptId": "C-feed7858-a94a-459f-9ba4-386f99db6802",
+   "conceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
+   "prerequisiteLabel": "Hypoxia",
+   "label": "Oxygen therapy",
+   "strength": "essential",
+   "reason": "Oxygen therapy corrects specific types of hypoxia"
+  },
+  {
+   "prerequisiteConceptId": "C-2d6dbc72-6158-415b-8587-1313de6e841f",
+   "conceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
+   "prerequisiteLabel": "Transport of respiratory gases",
+   "label": "Oxygen therapy",
+   "strength": "essential",
+   "reason": "Oxygen carriage explains when supplementation helps"
+  },
+  {
+   "prerequisiteConceptId": "C-122f94f6-0a81-4724-aa29-58c606ebc6da",
+   "conceptId": "C-36599f5a-30b5-4167-b9b3-c144b3f79f50",
+   "prerequisiteLabel": "Cancer pain",
+   "label": "Palliative care",
+   "strength": "helpful",
+   "reason": "Cancer pain is a major palliative problem"
+  },
+  {
+   "prerequisiteConceptId": "C-6adbce4f-1611-4095-ac1c-36857807178c",
+   "conceptId": "C-36599f5a-30b5-4167-b9b3-c144b3f79f50",
+   "prerequisiteLabel": "Opioid analgesics",
+   "label": "Palliative care",
+   "strength": "essential",
+   "reason": "Opioids are central to palliative symptom control"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-641d0da2-96e6-46a4-a64d-74698ca83bdf",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Patient confidentiality",
+   "strength": "essential",
+   "reason": "Confidentiality applies core ethical principles"
+  },
+  {
+   "prerequisiteConceptId": "C-7a863f48-1343-4bae-aeba-db737a190eba",
+   "conceptId": "C-68c31855-6c80-4ace-9043-066657b4f28a",
+   "prerequisiteLabel": "Adverse drug reactions",
+   "label": "Patient safety",
+   "strength": "helpful",
+   "reason": "Adverse drug reactions are a major safety problem"
+  },
+  {
+   "prerequisiteConceptId": "C-dcb8ba9a-aac2-417f-a4a4-e0239c15b057",
+   "conceptId": "C-52282d04-3943-4795-b971-06541f4f8fea",
+   "prerequisiteLabel": "Peak expiratory flow rate",
+   "label": "Peak expiratory flow measurement",
+   "strength": "essential",
+   "reason": "PEF measurement applies peak flow physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
+   "conceptId": "C-539c3df3-3732-4220-8663-ee8d0e1dc8a7",
+   "prerequisiteLabel": "Geriatric assessment",
+   "label": "Perioperative care of older adults",
+   "strength": "essential",
+   "reason": "Perioperative care uses geriatric assessment"
+  },
+  {
+   "prerequisiteConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
+   "conceptId": "C-d24ad60b-5240-4893-b67b-fbd26f855982",
+   "prerequisiteLabel": "Cerebral cortex",
+   "label": "Personality change in older adults",
+   "strength": "helpful",
+   "reason": "Frontal cortex changes alter personality"
+  },
+  {
+   "prerequisiteConceptId": "C-a29d3636-7d8e-432d-bfcd-d0ff097513b6",
+   "conceptId": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+   "prerequisiteLabel": "Cholinergic drugs",
+   "label": "Pesticide poisoning",
+   "strength": "essential",
+   "reason": "Organophosphates inhibit cholinesterase"
+  },
+  {
+   "prerequisiteConceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "conceptId": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+   "prerequisiteLabel": "Poisoning",
+   "label": "Pesticide poisoning",
+   "strength": "essential",
+   "reason": "Pesticide poisoning follows general poisoning management"
+  },
+  {
+   "prerequisiteConceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "conceptId": "C-fb4fdb84-4663-4244-96da-2570cf2c6595",
+   "prerequisiteLabel": "Poisoning",
+   "label": "Plant poisoning",
+   "strength": "essential",
+   "reason": "Plant poisoning follows general poisoning management"
+  },
+  {
+   "prerequisiteConceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+   "conceptId": "C-e10f4fda-02a2-41af-8ea8-19033d6654bc",
+   "prerequisiteLabel": "Oedema",
+   "label": "Pleural fluid analysis",
+   "strength": "essential",
+   "reason": "Transudate vs exudate follows Starling forces"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Pneumonia",
+   "strength": "helpful",
+   "reason": "Consolidation is an inflammatory response"
+  },
+  {
+   "prerequisiteConceptId": "C-e90d0635-c3f9-4dff-b187-d582e03afc2a",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "prerequisiteLabel": "Lower respiratory tract infections",
+   "label": "Pneumonia",
+   "strength": "essential",
+   "reason": "Pneumonia is a lower respiratory tract infection"
+  },
+  {
+   "prerequisiteConceptId": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
+   "conceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+   "prerequisiteLabel": "Pharmacokinetics",
+   "label": "Poisoning",
+   "strength": "essential",
+   "reason": "Toxic dose and elimination follow pharmacokinetics"
+  },
+  {
+   "prerequisiteConceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "prerequisiteLabel": "Cirrhosis",
+   "label": "Portal hypertension",
+   "strength": "essential",
+   "reason": "Cirrhosis is the main cause of portal hypertension"
+  },
+  {
+   "prerequisiteConceptId": "C-1a7961d9-b80b-49b0-b722-b994800d357c",
+   "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "prerequisiteLabel": "Haemodynamics",
+   "label": "Portal hypertension",
+   "strength": "helpful",
+   "reason": "Resistance and flow explain portal pressure"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-4a75d8f7-6820-4399-a9c4-f4f76a231ee0",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Professional conduct",
+   "strength": "helpful",
+   "reason": "Professional conduct applies ethics"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Protein-energy malnutrition",
+   "strength": "essential",
+   "reason": "Protein and energy requirements define malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "prerequisiteLabel": "Nutritional assessment",
+   "label": "Protein-energy malnutrition",
+   "strength": "essential",
+   "reason": "Anthropometry classifies malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "conceptId": "C-b5f3f095-0a3a-40be-adf9-0499d91221ad",
+   "prerequisiteLabel": "Urinalysis",
+   "label": "Proteinuria",
+   "strength": "essential",
+   "reason": "Proteinuria is detected on urinalysis"
+  },
+  {
+   "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "conceptId": "C-b5f3f095-0a3a-40be-adf9-0499d91221ad",
+   "prerequisiteLabel": "Urine formation",
+   "label": "Proteinuria",
+   "strength": "essential",
+   "reason": "Proteinuria reflects glomerular and tubular handling"
+  },
+  {
+   "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "conceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "prerequisiteLabel": "Mechanics of breathing",
+   "label": "Pulmonary function tests",
+   "strength": "essential",
+   "reason": "Spirometry measures the mechanics of breathing"
+  },
+  {
+   "prerequisiteConceptId": "C-e8fc50ee-ac3a-41d0-b47e-98b76289d60d",
+   "conceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "prerequisiteLabel": "Pulmonary compliance and gas exchange",
+   "label": "Pulmonary function tests",
+   "strength": "helpful",
+   "reason": "Gas transfer tests reflect compliance and diffusion"
+  },
+  {
+   "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "prerequisiteLabel": "Cell-mediated immunity",
+   "label": "Pulmonary tuberculosis",
+   "strength": "essential",
+   "reason": "Containment of TB depends on cell-mediated immunity"
+  },
+  {
+   "prerequisiteConceptId": "C-ab223fa1-6148-4880-99f4-c8f996e837e4",
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "prerequisiteLabel": "Granulomatous inflammation",
+   "label": "Pulmonary tuberculosis",
+   "strength": "essential",
+   "reason": "TB lesions are granulomatous inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+   "prerequisiteLabel": "Fever",
+   "label": "Pyrexia of unknown origin",
+   "strength": "essential",
+   "reason": "PUO is defined by fever patterns and duration"
+  },
+  {
+   "prerequisiteConceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptId": "C-435e32ca-e801-4ceb-9741-d6e3ee85ceda",
+   "prerequisiteLabel": "Immunisation",
+   "label": "Rabies",
+   "strength": "essential",
+   "reason": "Post-exposure prophylaxis applies immunisation"
+  },
+  {
+   "prerequisiteConceptId": "C-db39288d-430f-467b-8ae0-1214d9c0b466",
+   "conceptId": "C-435e32ca-e801-4ceb-9741-d6e3ee85ceda",
+   "prerequisiteLabel": "Zoonoses",
+   "label": "Rabies",
+   "strength": "essential",
+   "reason": "Rabies is a zoonosis"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-b0ab0af7-eadb-4fc9-a343-589725a71423",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Radioactive iodine uptake",
+   "strength": "essential",
+   "reason": "Iodine uptake reflects thyroid hormone synthesis"
+  },
+  {
+   "prerequisiteConceptId": "C-910dad41-a204-4bf3-a8a3-7b9d7a6db693",
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "prerequisiteLabel": "Blood urea",
+   "label": "Renal function tests",
+   "strength": "helpful",
+   "reason": "Urea adds to renal function interpretation"
+  },
+  {
+   "prerequisiteConceptId": "C-58920ee2-35c2-4e13-aa9c-fbc7fe401270",
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "prerequisiteLabel": "Serum creatinine",
+   "label": "Renal function tests",
+   "strength": "essential",
+   "reason": "Creatinine is the main renal function marker"
+  },
+  {
+   "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+   "prerequisiteLabel": "Urine formation",
+   "label": "Renal function tests",
+   "strength": "essential",
+   "reason": "Urea and creatinine reflect glomerular filtration"
+  },
+  {
+   "prerequisiteConceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "conceptId": "C-c4485002-96cb-4b84-ba24-e954f8773335",
+   "prerequisiteLabel": "Acute kidney injury",
+   "label": "Renal replacement therapy",
+   "strength": "essential",
+   "reason": "Dialysis indications arise from AKI"
+  },
+  {
+   "prerequisiteConceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "conceptId": "C-c4485002-96cb-4b84-ba24-e954f8773335",
+   "prerequisiteLabel": "Chronic kidney disease",
+   "label": "Renal replacement therapy",
+   "strength": "essential",
+   "reason": "Dialysis indications arise from CKD"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-69a0ed0a-242e-46c1-b2fc-cc3f35f1f894",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Research ethics",
+   "strength": "essential",
+   "reason": "Research ethics extends core ethical principles"
+  },
+  {
+   "prerequisiteConceptId": "C-36967369-44ee-4847-a9ad-54e42615161d",
+   "conceptId": "C-af4cf87c-3d76-4f50-b900-67a26c0266ef",
+   "prerequisiteLabel": "Respiratory system",
+   "label": "Respiratory examination",
+   "strength": "helpful",
+   "reason": "Examination findings follow respiratory structure and function"
+  },
+  {
+   "prerequisiteConceptId": "C-f7b33a40-242e-4222-9044-ef1ce4514014",
+   "conceptId": "C-319bf53f-d078-4dc2-99ea-88eee2274e47",
+   "prerequisiteLabel": "Upper respiratory tract infections",
+   "label": "Respiratory viral infections",
+   "strength": "helpful",
+   "reason": "Most present as upper respiratory infection"
+  },
+  {
+   "prerequisiteConceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "conceptId": "C-a92460ef-29fd-4538-a84b-98c5dc3ea081",
+   "prerequisiteLabel": "Rheumatic fever",
+   "label": "Rheumatic heart disease",
+   "strength": "essential",
+   "reason": "Rheumatic heart disease follows rheumatic fever"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-26ad2051-3860-4384-a3cf-891744e428a0",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Rickettsial infections",
+   "strength": "essential",
+   "reason": "Rickettsiae are vector-borne"
+  },
+  {
+   "prerequisiteConceptId": "C-7d3f8df6-c118-45d3-8bc3-9b71a057d9ec",
+   "conceptId": "C-2cfaedc1-57da-433e-b8f2-5933441f58c3",
+   "prerequisiteLabel": "Cardiovascular regulation",
+   "label": "Scorpion sting",
+   "strength": "helpful",
+   "reason": "Autonomic storm explains cardiovascular effects"
+  },
+  {
+   "prerequisiteConceptId": "C-9ea6d9f5-6081-4273-a172-401044548b73",
+   "conceptId": "C-2cfaedc1-57da-433e-b8f2-5933441f58c3",
+   "prerequisiteLabel": "Envenomation",
+   "label": "Scorpion sting",
+   "strength": "essential",
+   "reason": "Scorpion sting is a form of envenomation"
+  },
+  {
+   "prerequisiteConceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptId": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+   "prerequisiteLabel": "Host response to infection",
+   "label": "Sepsis",
+   "strength": "essential",
+   "reason": "Sepsis is a dysregulated host response"
+  },
+  {
+   "prerequisiteConceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "conceptId": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+   "prerequisiteLabel": "Shock",
+   "label": "Sepsis",
+   "strength": "essential",
+   "reason": "Septic shock is a form of shock"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-66198612-2c00-4b4b-9020-429570efb0d9",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Shared decision-making",
+   "strength": "helpful",
+   "reason": "Shared decisions apply autonomy"
+  },
+  {
+   "prerequisiteConceptId": "C-457f7157-a44b-4e0a-a20f-5f6fd960f77f",
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "prerequisiteLabel": "Cardiac output",
+   "label": "Shock",
+   "strength": "essential",
+   "reason": "Shock types are separated by cardiac output and resistance"
+  },
+  {
+   "prerequisiteConceptId": "C-1a7961d9-b80b-49b0-b722-b994800d357c",
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "prerequisiteLabel": "Haemodynamics",
+   "label": "Shock",
+   "strength": "essential",
+   "reason": "Haemodynamics explain tissue hypoperfusion"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Skin and soft tissue infections",
+   "strength": "helpful",
+   "reason": "Cellulitis and abscess are inflammatory responses"
+  },
+  {
+   "prerequisiteConceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "conceptId": "C-0ebe7690-fe39-44f0-b335-55eb4cc3c564",
+   "prerequisiteLabel": "Chronic obstructive pulmonary disease",
+   "label": "Smoking cessation",
+   "strength": "helpful",
+   "reason": "Smoking is the main cause of COPD"
+  },
+  {
+   "prerequisiteConceptId": "C-6345395e-86f2-4328-b1af-55cbc71c535d",
+   "conceptId": "C-0ebe7690-fe39-44f0-b335-55eb4cc3c564",
+   "prerequisiteLabel": "Substance use disorders",
+   "label": "Smoking cessation",
+   "strength": "essential",
+   "reason": "Cessation applies addiction principles"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-f42d7efc-54dd-4dee-b592-c0746d7af247",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Snakebite",
+   "strength": "essential",
+   "reason": "Haemotoxic venom disrupts haemostasis"
+  },
+  {
+   "prerequisiteConceptId": "C-7b7954c5-9aa2-4611-a9b0-0d89c2299b84",
+   "conceptId": "C-f42d7efc-54dd-4dee-b592-c0746d7af247",
+   "prerequisiteLabel": "Neuromuscular transmission",
+   "label": "Snakebite",
+   "strength": "essential",
+   "reason": "Neurotoxic venom blocks neuromuscular transmission"
+  },
+  {
+   "prerequisiteConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
+   "conceptId": "C-88e3251e-1383-4271-acf2-78afd13f47d9",
+   "prerequisiteLabel": "Cerebral cortex",
+   "label": "Speech",
+   "strength": "essential",
+   "reason": "Speech disorders localise to cortical areas"
+  },
+  {
+   "prerequisiteConceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "conceptId": "C-8489203c-98b8-4874-b9c3-e6adb886d122",
+   "prerequisiteLabel": "Epilepsy",
+   "label": "Status epilepticus",
+   "strength": "essential",
+   "reason": "Status epilepticus is prolonged epileptic activity"
+  },
+  {
+   "prerequisiteConceptId": "C-7279234f-5a32-4caf-add2-63b9f369b542",
+   "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+   "prerequisiteLabel": "Cerebral arterial supply",
+   "label": "Stroke",
+   "strength": "essential",
+   "reason": "Arterial territories explain stroke syndromes"
+  },
+  {
+   "prerequisiteConceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+   "prerequisiteLabel": "Thrombosis",
+   "label": "Stroke",
+   "strength": "essential",
+   "reason": "Thrombosis and embolism cause ischaemic stroke"
+  },
+  {
+   "prerequisiteConceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+   "conceptId": "C-2621d874-6f3e-48eb-8134-d1e7671299fb",
+   "prerequisiteLabel": "Depression",
+   "label": "Suicide risk assessment",
+   "strength": "essential",
+   "reason": "Depression is the key risk factor for suicide"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-9784e465-87b3-4ecb-82f7-b317ca4461b3",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Thyroid disorders",
+   "strength": "essential",
+   "reason": "Hormone synthesis and feedback explain hypo- and hyperthyroidism"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Thyroid function tests",
+   "strength": "essential",
+   "reason": "TSH and T3/T4 reflect the thyroid axis"
+  },
+  {
+   "prerequisiteConceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "conceptId": "C-66e37b7d-9f84-425c-81ae-bea625066ad1",
+   "prerequisiteLabel": "Hypothyroidism",
+   "label": "Thyroid hormone replacement",
+   "strength": "essential",
+   "reason": "Thyroxine replaces deficient hormone"
+  },
+  {
+   "prerequisiteConceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "prerequisiteLabel": "Thyroid function tests",
+   "label": "Thyrotoxicosis",
+   "strength": "essential",
+   "reason": "TSH and T3/T4 patterns separate the causes"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Thyrotoxicosis",
+   "strength": "essential",
+   "reason": "Thyroid hormone physiology explains features"
+  },
+  {
+   "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptId": "C-24b34065-a195-4554-8601-54894339184b",
+   "prerequisiteLabel": "Hypersensitivity reactions",
+   "label": "Tuberculin skin test",
+   "strength": "essential",
+   "reason": "The tuberculin test is a type IV reaction"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-c647ee65-6415-4edb-bb57-d4e9073007e5",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Tumour markers",
+   "strength": "essential",
+   "reason": "Tumour markers are products of neoplasms"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Type 1 diabetes mellitus",
+   "strength": "essential",
+   "reason": "Type 1 diabetes is autoimmune beta-cell destruction"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Type 1 diabetes mellitus",
+   "strength": "essential",
+   "reason": "Type 1 is a form of diabetes mellitus"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-e3cc839d-3593-48f5-8b4c-e132c3d54518",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Type 2 diabetes mellitus",
+   "strength": "essential",
+   "reason": "Type 2 is a form of diabetes mellitus"
+  },
+  {
+   "prerequisiteConceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
+   "conceptId": "C-e3cc839d-3593-48f5-8b4c-e132c3d54518",
+   "prerequisiteLabel": "Metabolic syndrome",
+   "label": "Type 2 diabetes mellitus",
+   "strength": "essential",
+   "reason": "Insulin resistance links metabolic syndrome and type 2"
+  },
+  {
+   "prerequisiteConceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "conceptId": "C-2285772b-855a-448b-abbb-11122f2158a6",
+   "prerequisiteLabel": "Chronic kidney disease",
+   "label": "Uraemia",
+   "strength": "essential",
+   "reason": "Uraemia is the end-stage of CKD"
+  },
+  {
+   "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "prerequisiteLabel": "Urine formation",
+   "label": "Urinalysis",
+   "strength": "essential",
+   "reason": "Urinalysis findings reflect urine formation"
+  },
+  {
+   "prerequisiteConceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "prerequisiteLabel": "Microbiological specimen collection",
+   "label": "Urinary tract infection",
+   "strength": "helpful",
+   "reason": "Clean-catch collection affects culture results"
+  },
+  {
+   "prerequisiteConceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "prerequisiteLabel": "Urinalysis",
+   "label": "Urinary tract infection",
+   "strength": "essential",
+   "reason": "UTI is diagnosed from urinalysis"
+  },
+  {
+   "prerequisiteConceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "conceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "prerequisiteLabel": "Humoral immunity",
+   "label": "Vaccines",
+   "strength": "essential",
+   "reason": "Vaccines work through humoral immunity"
+  },
+  {
+   "prerequisiteConceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "prerequisiteLabel": "Immunisation",
+   "label": "Vaccines",
+   "strength": "essential",
+   "reason": "Vaccines apply immunisation principles"
+  },
+  {
+   "prerequisiteConceptId": "C-b212077b-ee32-4512-96c3-041ad2c0ebdf",
+   "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+   "prerequisiteLabel": "Heart murmurs",
+   "label": "Valvular heart disease",
+   "strength": "essential",
+   "reason": "Valve lesions are recognised by murmurs"
+  },
+  {
+   "prerequisiteConceptId": "C-a92460ef-29fd-4538-a84b-98c5dc3ea081",
+   "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+   "prerequisiteLabel": "Rheumatic heart disease",
+   "label": "Valvular heart disease",
+   "strength": "helpful",
+   "reason": "Rheumatic disease is a major cause of valve lesions"
+  },
+  {
+   "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptId": "C-ac029c61-2593-4449-8be7-cecd7bbd4c76",
+   "prerequisiteLabel": "Cell-mediated immunity",
+   "label": "Varicella zoster infection",
+   "strength": "essential",
+   "reason": "Zoster is reactivation when cell-mediated immunity wanes"
+  },
+  {
+   "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "conceptId": "C-1b5f6ccc-7ea4-4dd3-861c-0d796818395a",
+   "prerequisiteLabel": "Atherosclerosis",
+   "label": "Vascular disease in older adults",
+   "strength": "essential",
+   "reason": "Vascular disease is atherosclerotic"
+  },
+  {
+   "prerequisiteConceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+   "conceptId": "C-83735e09-6c87-48a8-b12b-8dac3b111b3c",
+   "prerequisiteLabel": "Gastrointestinal bleeding",
+   "label": "Vasoactive drugs in variceal bleeding",
+   "strength": "essential",
+   "reason": "Used in variceal GI bleeding"
+  },
+  {
+   "prerequisiteConceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+   "conceptId": "C-83735e09-6c87-48a8-b12b-8dac3b111b3c",
+   "prerequisiteLabel": "Portal hypertension",
+   "label": "Vasoactive drugs in variceal bleeding",
+   "strength": "essential",
+   "reason": "Vasoactive drugs lower portal pressure"
+  },
+  {
+   "prerequisiteConceptId": "C-6a665032-76c9-4b06-a1a8-4757dc0e4150",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "prerequisiteLabel": "Liver",
+   "label": "Viral hepatitis",
+   "strength": "essential",
+   "reason": "Hepatocyte function explains hepatitis effects"
+  },
+  {
+   "prerequisiteConceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "prerequisiteLabel": "Serological tests",
+   "label": "Viral hepatitis",
+   "strength": "essential",
+   "reason": "Hepatitis B status is read from serology patterns"
+  },
+  {
+   "prerequisiteConceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "conceptId": "C-694d9491-1f79-472b-89a7-1d3b75f0af44",
+   "prerequisiteLabel": "Anaerobic infections",
+   "label": "Visceral abscesses",
+   "strength": "helpful",
+   "reason": "Many visceral abscesses are anaerobic"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-694d9491-1f79-472b-89a7-1d3b75f0af44",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Visceral abscesses",
+   "strength": "helpful",
+   "reason": "Abscess is localised inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-418b4d78-df71-4fa8-8728-67881a0af21d",
+   "conceptId": "C-f6228a56-6335-4d0d-93ac-e6f9c6b0e49d",
+   "prerequisiteLabel": "Splenomegaly",
+   "label": "Visceral leishmaniasis",
+   "strength": "helpful",
+   "reason": "Splenomegaly is the key sign of kala-azar"
+  },
+  {
+   "prerequisiteConceptId": "C-189dbaad-fa43-48bf-80f3-8f6738f4f49c",
+   "conceptId": "C-44c415b8-4738-4f5c-8a12-fa838051fe56",
+   "prerequisiteLabel": "Optics of the eye",
+   "label": "Visual impairment in older adults",
+   "strength": "helpful",
+   "reason": "Age-related vision loss affects optics and accommodation"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-db39288d-430f-467b-8ae0-1214d9c0b466",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Zoonoses",
+   "strength": "essential",
+   "reason": "Zoonoses are defined by animal-to-human transmission"
+  }
+ ]
+}

@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Cross-concept prerequisites: Medicine
+- `data/nmc-concept-prerequisites.json` (new, separate from the objective registry): 341 AI-drafted "understand A before B" links for Medicine (271 essential, 70 helpful), covering 215 concepts; 16 Medicine concepts have no real prerequisite (skills, ethics, imaging) and are left unlinked. Direct prerequisites only; no cap per concept, more than 6 flagged (none).
+- Validated by `src/domain/nmc-concept-prerequisites.js` (known concepts, no duplicates/self links, acyclic). Source list: `ops/nmc/prerequisites/medicine.json`; builder `ops/nmc/build-concept-prerequisites.js` adds subjects one at a time.
+- Not yet shown in the app; not faculty-reviewed.
+
 ### 2026-11-18 — NMC foundation marked complete (subject-competency scope)
 - Owner decision (ADR-138): foundation complete for the 2,633 live subject competency rows; AI-drafted objectives, no faculty review, no learner material.
 - The five non-subject parts are kept separate in `data/nmc-non-subject-curriculum-deferred.json` (counts, overlap, recommendation, pointer to the retained audit branch `feat/nmc-support-cohort-reconciliation-20261103` @ `5524c5a`). AETCOM is the first candidate if ever needed.
