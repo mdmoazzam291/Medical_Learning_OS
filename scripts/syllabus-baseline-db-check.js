@@ -28,6 +28,7 @@ try{
   [privateId,privateDigest,{conceptId:privateId,label:'Admin-only accepted synthetic',classification:{subjects:['medicine']}}]);
  await db.exec(await readFile(new URL('../supabase/migrations/20261028223000_admin_syllabus_baseline_drafts.sql',import.meta.url),'utf8'));
  await db.exec(await readFile(new URL('../supabase/migrations/20261029000100_admin_syllabus_review_preflight.sql',import.meta.url),'utf8'));
+ for(const f of ['20261117130000_admin_concept_subject_revisions.sql','20261117150000_syllabus_current_concept_identities.sql'])await db.exec(await readFile(new URL('../supabase/migrations/'+f,import.meta.url),'utf8'));
  const preflight=async(id,revision,user=actor)=>(await db.query('select public.syllabus_baseline_review_preflight_v1($1,$2,$3) packet',
   [user,id,revision])).rows[0].packet;
  const save=async(value,user=actor,reg=registry)=>(await db.query('select public.syllabus_baseline_draft_save_v1($1,$2,$3) receipt',[user,reg,value])).rows[0].receipt;
@@ -108,6 +109,19 @@ try{
  const changed=await preflight(first.baselineId,2);
  assert.equal(changed.authoredCatalogVersion,4);
  assert.equal(changed.currentCatalogVersion,5,'preflight must report catalog drift, not imply current approval');
+ // A subject revision of a private identity is what new checklist versions pin and preflight compares.
+ await db.exec('reset role');
+ await db.query("insert into content_concept_identity_revisions(concept_id,revision,previous_identity_digest,revised_document,revised_identity_digest,added_subjects,batch_id,accepted_by) values($1,2,$2,$3,$4,'[\"anatomy\"]','synthetic',$5)",
+  [privateId,privateDigest,{conceptId:privateId,label:'Admin-only accepted synthetic',classification:{subjects:['medicine','anatomy']}},'c'.repeat(64),actor]);
+ await db.exec('set role service_role');
+ const revisedIdentity=await save({...fresh(),document:{...doc(),label:'Revised identity checklist',conceptIds:['one',privateId]}});
+ await db.exec('reset role');
+ const pinnedRow=(await db.query("select private_identity_bindings b from content_syllabus_baseline_draft_versions where baseline_id=$1",[revisedIdentity.baselineId])).rows[0].b;
+ assert.deepEqual(pinnedRow,[{conceptId:privateId,identityDigest:'c'.repeat(64)}],'new checklist pins the revised identity');
+ await db.exec('set role service_role');
+ const revisedPacket=await preflight(revisedIdentity.baselineId,1);
+ assert.equal(revisedPacket.members.find(m=>m.conceptId===privateId).bindingMatches,true);
+ assert.equal(revisedPacket.members.find(m=>m.conceptId===privateId).identityDigest,'c'.repeat(64));
  console.log('Syllabus preflight PostgreSQL checks passed: Admin-only published/private/missing classification, frozen identity binding, metadata isolation, stale catalog and actor denials.');
  console.log('Syllabus baseline draft PostgreSQL tests passed: accepted-private identity bindings, immutable revisions, unknown IDs, role isolation, shared catalog unchanged, no activation.');
 }finally{await db.close();}

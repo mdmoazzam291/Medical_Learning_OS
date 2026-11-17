@@ -1,3 +1,8 @@
+## Syllabus functions read current identities; faculty review skipped — 2026-11-17T14:15Z
+- Owner instruction (19:29 IST): skip faculty review (the 129 Paediatrics AI-merged wordings included); continue with necessary tasks. Objectives stay draft with AI authorship; no clinician review is claimed.
+- Migration `20261117150000_syllabus_current_concept_identities.sql`: `syllabus_baseline_draft_save_v1` and `syllabus_baseline_review_preflight_v1` now read `content_concept_current_identities` (latest subject revision, else the acceptance). Bodies otherwise unchanged. `scripts/syllabus-baseline-db-check.js` covers a revised identity: new checklists pin the revised digest and preflight matches it.
+- Deferred, not needed now: GM28.18 draft respiratory-slice concept (C-f2c27acd, with draft teaching/case files) vs accepted Obstructive airway disease (C-e8c03208); acceptance RPC speed (only matters for future batches).
+
 ## Concept subject revisions accepted (registry @24) — 2026-11-17T13:45Z
 - New append-only identity revisions: `content_concept_identity_revisions`, `content_concept_revision_batches`, view `content_concept_current_identities`, admin RPC `concept_subject_revision_batch_v1` (subjects-only additions; learner-visible identities refused; stale-digest, atomic, idempotent). Migration `20261117130000` applied in production.
 - Owner accepted `nmc-concept-subject-revisions-v1-20261117`: 328 accepted private concepts gained 462 subjects evidenced by registry @23 source bindings. Original acceptances unchanged.
