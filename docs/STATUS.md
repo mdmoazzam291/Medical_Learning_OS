@@ -32,7 +32,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 ### 2026-11-18 — NMC foundation marked complete (subject-competency scope)
 - Owner decision (ADR-138): foundation complete for the 2,633 live subject competency rows; AI-drafted objectives, no faculty review, no learner material.
 - The five non-subject parts are kept separate in `data/nmc-non-subject-curriculum-deferred.json` (counts, overlap, recommendation, pointer to the retained audit branch `feat/nmc-support-cohort-reconciliation-20261103` @ `5524c5a`). AETCOM is the first candidate if ever needed.
-- Production: owner-api v27, nmc-admin-preview v28 on registry @27.
+- Production: owner-api v28, nmc-admin-preview v29 on registry @28.
+
+### 2026-11-18 — Registry @28: quality-audit fixes
+- Seeded audit (60 objectives, 60 prerequisite links, 20 confusion pairs): wording and NMC row matches sound; one systematic issue — 146 clinical-phase objectives carried the classifier's fallback 'mechanism' label.
+- Owner rule: keep 'mechanism' only where the NMC competency text asks for it. Checked each against the official NMC 2024 text: 27 kept, 119 relabelled (treatment-selection 39, procedural-skill 16, ethics 10, prevention 10, others). Wording, IDs and bindings unchanged; same-concept prerequisites recomputed (1,532).
+- Radial nerve injury ← Humerus fractures reversed (helpful); Abdominal examination → Abdominal pain in children now helpful; 3 general-vs-specific confusion pairs removed (170 left).
+- Evidence: `docs/evidence/2026-11-18-nmc-fallback-task-relabels-v1.json`, `...-prerequisites-and-review-v3.json`. AI-authored; not faculty or clinical review.
 
 ### 2026-11-18 — Registry @27: duplicate wordings resolved; identity re-pin script
 - The 8 @26 duplicate-wording findings are rewritten (GM9.8, GM14.1, GM14.2 split into their two skills; MI4.2/MI4.3 name their own condition). No IDs removed; all 2,865 objectives auto-checked. Evidence: `docs/evidence/2026-11-18-nmc-duplicate-wording-fixes-v1.json`, `...-prerequisites-and-review-v2.json`.
