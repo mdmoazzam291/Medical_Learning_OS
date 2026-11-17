@@ -1,13 +1,13 @@
 // Foundation registry inputs (~4.4 MB) are not bundled into owner-api. In the Edge runtime they are
 // fetched from GitHub at a pinned commit and checked against pinned SHA-256 digests (fail closed);
 // in Node tests they are read from the working tree, and tests assert the pins match those files.
-export const FOUNDATION_DATA_COMMIT='bbccf9c77bd2365d3d83320d8c7f02020e6816c9';
+export const FOUNDATION_DATA_COMMIT='1841c3a289c9d85e2e91d838d5d1323d9b3e4f5c';
 export const FOUNDATION_DATA_FILES={
  supplement:{path:'docs/evidence/2026-11-12-nmc-unified-queue-reuse-supplement.json',sha256:'12977d6351427e8959804d0c3f242ec168c2abd83e977a30272868036d9add67'},
  relationships:{path:'docs/evidence/2026-11-12-nmc-shared-name-relationships.json',sha256:'27faee0dc36072540323df8d36c18c052aa091a7a3c0ccdf77d7ebc2c4ad041a'},
  unified:{path:'docs/evidence/2026-11-09-nmc-unified-subject-reference-audit.json',sha256:'8f6938ee686f2bb0226f8129ea7828c8f74ee6929421fa523927de84915e38dc'},
  names:{path:'docs/evidence/2026-11-09-nmc-names-only-source-linked-draft-projection.json',sha256:'ccfe6304f0ba8d793479c59f09eb1f322a2e123260477d2dbaa93ca86373d33b'},
- pack:{path:'data/nmc-learning-foundation-drafts.json',sha256:'bc7769785835a7e2eba22aa6968839d03a53c3ba402bdb595dcb2455d2aecc52'},
+ pack:{path:'data/nmc-learning-foundation-drafts.json',sha256:'d5b6d502534404955add454910e1ac4520a052ac132fd0f9f77a67186c4a03b2'},
  overlay:{path:'data/nmc-reference-overlay.json',sha256:'2c652273d57b2886447df1d1683dc4ef765288768c10397454935717eb8935ff'},
  catalogue:{path:'data/nmc-reference-catalogue.json',sha256:'8656e6e9ce902056ed60fe12a92baa1db2852ae69f76bf5f726196807ef2903f'}
 };

@@ -6,6 +6,7 @@ import {validatePreviewData,parsePreviewFilters,previewPage} from '../src/domain
 import {learnerPreviewMarkup} from '../web/nmc-admin-learner-preview.js';
 const raw=readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url));
 const data=JSON.parse(raw);
+const fn=readFileSync(new URL('../supabase/functions/nmc-admin-preview/index.ts',import.meta.url),'utf8');
 const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url),'utf8'));
 test('preview data is admin-only, valid and lists every registry objective',()=>{
  validatePreviewData(data);
