@@ -14,14 +14,14 @@ async function fixture(){
  return {p,catalog:{version:p.authoredCatalogVersion,concepts}};
 }
 test('original objectives reuse the established objective shape, stable canonical identities and scoped source proposals',()=>{
- const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,1483);assert.equal(p.sourceBindings.length,1484);
- assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,1483);
- assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1050);
+ const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,1629);assert.equal(p.sourceBindings.length,1630);
+ assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,1629);
+ assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1122);
  assert.equal(registry.objectives.length,0);assert.equal(registry.mappings.length,0);
 });
 test('Admin projection tracks all source appearances, pending originals and explicit canonical identities',async()=>{
  const {p,catalog}=await fixture();const result=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,1483);assert.equal(result.totals.sourceLinkedReferences,1279);
+ assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,1629);assert.equal(result.totals.sourceLinkedReferences,1421);
  assert.equal(result.acceptedMappings,0);assert.equal(result.learnerActivation,false);assert.equal(result.coverageFraction,null);
  assert.equal(result.objectives.find(r=>r.sourceReferences.length===2).identityState,'current');
  assert.equal(result.totals.unboundObjectiveDrafts,0);
@@ -57,5 +57,5 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
  assert.equal(inReg.length,185);
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@14');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@15');
 });
