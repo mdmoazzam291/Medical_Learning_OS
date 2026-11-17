@@ -1,3 +1,11 @@
+## Medicine part A bound (registry @21); Medicine part B batch — 2026-11-17T09:30Z
+
+- Owner accepted `nmc-medicine-concepts-part-a-v1-20261116` at 09:14:39Z (40 receipts; pairs digest `caf9cb0a…a2fb` matched). Registry @21: 2,556 objectives, 2,557 bindings, 1,472 concepts, 2,333 of 2,634 rows (89%).
+- Medicine part B `nmc-medicine-concepts-part-b-v1-20261116` (GM13–GM29; spec `ops/nmc/specs/medicine_b_concepts_v1.py`): 132 concepts (56 new; 76 reused), 280 objectives, all 280 rows including both copies of GM 14.1/14.2. No clash with 2,357 production names. This is the last subject batch; after it only the source-exception rows remain unlinked.
+- Endpoint pin: commit `3b83253`, SHA-256 `c190bcd2…e393`.
+
+---
+
 ## Anatomy complete (registry @20); Medicine part A batch — 2026-11-17T09:10Z
 
 - Owner accepted `nmc-anatomy-concepts-part-b2-v1-20261116` at 08:54:26Z (44 receipts; pairs digest `6ae90b98…fbd4` matched). Registry @20: 2,302 objectives, 2,303 bindings, 1,432 concepts, 2,081 of 2,634 rows (79%). All 413 Anatomy rows are now linked.
