@@ -1,3 +1,12 @@
+## NMC Paediatrics concept batch v1 — 2026-11-17T03:40Z
+
+- `docs/evidence/2026-11-17-nmc-paediatrics-concept-batch-v1.json` (spec `ops/nmc/specs/paediatrics_concepts_v1.py`): 174 concepts (104 new; 70 reused, e.g. Growth monitoring, Breastfeeding, Complementary feeding, IMNCI, Immunisation, Nephrotic syndrome, Rheumatic fever, Meningitis, Asthma, Thalassaemia), 254 objectives, all 252 recognised rows. PE6.4 (amendment notice) stays on the source-exception track.
+- The 129 rows that the 2026-11-13 source-scope reviews marked `scope-amendment-proposed` use wording that merges each draft task with that review's finding (basis `scoped-task-in-source-row`); no row keeps a draft the review found incomplete. This is AI-drafted wording, not faculty review.
+- No clash with 1,896 production names. Endpoint pin: commit `434638e`, SHA-256 `dc2f5d36…47e4`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Obstetrics & Gynaecology objectives bound and in registry (draft @15) — 2026-11-17T02:55Z
 
 - Owner accepted `nmc-obstetrics-gynaecology-concepts-v1-20261116` at 2026-11-17T02:48:13Z (72 receipts; pairs digest `f0bb705b…092f` matched). Receipt IDs in `ops/nmc/receipts/obgyn-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-obgyn-objective-bindings-v1.json` (103 concepts, 146 objectives).
