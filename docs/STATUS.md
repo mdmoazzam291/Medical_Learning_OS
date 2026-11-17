@@ -9,6 +9,9 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Cross-concept prerequisites: Surgery, Paediatrics, OBG
+- Added 137 Surgery, 134 Paediatrics and 100 OBG links (`ops/nmc/prerequisites/*.json`). Total 712 links (557 essential) across 479 concepts; acyclic, none over the 6-link review mark. Concepts already linked by an earlier subject keep their links. Unlinked remainders are structures, skills or programme topics without a real prerequisite. AI-drafted; not used by the app yet.
+
 ### 2026-11-18 — Cross-concept prerequisites: Medicine
 - `data/nmc-concept-prerequisites.json` (new, separate from the objective registry): 341 AI-drafted "understand A before B" links for Medicine (271 essential, 70 helpful), covering 215 concepts; 16 Medicine concepts have no real prerequisite (skills, ethics, imaging) and are left unlinked. Direct prerequisites only; no cap per concept, more than 6 flagged (none).
 - Validated by `src/domain/nmc-concept-prerequisites.js` (known concepts, no duplicates/self links, acyclic). Source list: `ops/nmc/prerequisites/medicine.json`; builder `ops/nmc/build-concept-prerequisites.js` adds subjects one at a time.
