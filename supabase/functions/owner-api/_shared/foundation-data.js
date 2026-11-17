@@ -1,7 +1,7 @@
 // Foundation registry inputs (~4.4 MB) are not bundled into owner-api. In the Edge runtime they are
 // fetched from GitHub at a pinned commit and checked against pinned SHA-256 digests (fail closed);
 // in Node tests they are read from the working tree, and tests assert the pins match those files.
-export const FOUNDATION_DATA_COMMIT='fa6171ee6c9408025687b778758f2856cf32603b';
+export const FOUNDATION_DATA_COMMIT='bbccf9c77bd2365d3d83320d8c7f02020e6816c9';
 export const FOUNDATION_DATA_FILES={
  supplement:{path:'docs/evidence/2026-11-12-nmc-unified-queue-reuse-supplement.json',sha256:'12977d6351427e8959804d0c3f242ec168c2abd83e977a30272868036d9add67'},
  relationships:{path:'docs/evidence/2026-11-12-nmc-shared-name-relationships.json',sha256:'27faee0dc36072540323df8d36c18c052aa091a7a3c0ccdf77d7ebc2c4ad041a'},
