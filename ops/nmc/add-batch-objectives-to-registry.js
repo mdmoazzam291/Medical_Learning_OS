@@ -54,6 +54,8 @@ for(const o of batch.objectives){
  have.add(o.objectiveVersionId);added++;
 }
 pack.draftVersion=draftVersion;
+// From @26, prerequisites and review state are computed over the whole registry: rerun the @26 script.
+if(pack.objectives.some(r=>'reviewState' in r))throw new Error('registry_@26_rerun_ops/nmc/apply-prerequisites-and-review.js_after_adding');
 validateFoundationDrafts(pack,catalogue,read('data/nmc-reference-overlay.json'));
 writeFileSync(PACK,JSON.stringify(pack,null,1)+'\n');
 console.log(JSON.stringify({added,skipped,objectives:pack.objectives.length,bindings:pack.sourceBindings.length}));

@@ -13,7 +13,7 @@ test('preview data is admin-only, valid and lists every registry objective',()=>
  assert.equal(data.items.length,pack.objectives.length);assert.equal(data.audience,'admin-only');assert.equal(data.learnerActivation,false);
  assert.equal(data.registryVersion,pack.draftVersion);
  const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
- for(const i of data.items){const r=byId.get(i.objectiveVersionId);assert.equal(i.objective,r.wording);assert.equal(i.task,r.objective.task);assert.equal(i.assessability,r.assessability);assert.ok(i.topicLabel);}
+ for(const i of data.items){const r=byId.get(i.objectiveVersionId);assert.equal(i.objective,r.wording);assert.equal(i.task,r.objective.task);assert.equal(i.assessability,r.assessability);assert.equal(i.reviewState,r.reviewState);assert.equal(i.prerequisiteCodes.length>0,r.objective.prerequisites.length>0);assert.ok(i.topicLabel);}
 });
 test('edge function pins the exact data checksum and requires Admin',()=>{
  const sha=fn.match(/DATA_SHA256 = "([0-9a-f]{64})"/)[1];

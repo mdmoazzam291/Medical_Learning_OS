@@ -26,7 +26,8 @@ export function previewPage(data,{subject='',search=''}={}){
  for(const i of items){
   const key=i.subjectId+'|'+(i.topicLabel||'');
   if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[]};byKey.set(key,t);topics.push(t);}
-  byKey.get(key).objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,pdfPage:i.pdfPage,mode:i.mode,task:i.task||null,assessability:i.assessability||null,objective:i.objective});
+  byKey.get(key).objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,pdfPage:i.pdfPage,mode:i.mode,task:i.task||null,assessability:i.assessability||null,
+   reviewState:i.reviewState||null,reviewFindings:i.reviewFindings||[],prerequisiteCodes:i.prerequisiteCodes||[],objective:i.objective});
  }
  return {contractId:PREVIEW_CONTRACT,audience:'admin-only',learnerActivation:false,status:data.status,sourceUrl:data.sourceUrl,subjects:data.subjects,total:data.items.length,matched:items.length,topics};
 }
