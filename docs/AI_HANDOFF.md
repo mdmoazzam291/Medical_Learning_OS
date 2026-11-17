@@ -1,3 +1,12 @@
+## Anatomy part A1 bound (registry @17); part A2 batch — 2026-11-17T08:00Z
+
+- Owner accepted `nmc-anatomy-concepts-part-a1-v1-20261116` at 07:48:34Z (62 receipts; pairs digest `dfb091b4…55c1` matched). Bindings `docs/evidence/2026-11-17-nmc-anatomy-a1-objective-bindings-v1.json` (70 concepts, 128 objectives).
+- Registry @17: 2,011 objectives, 2,012 bindings, 1,288 concepts, 1,799 of 2,634 rows (68%). The validator's objective cap was 2,000; raised to 10,000 to match the binding cap.
+- Part A2 `nmc-anatomy-concepts-part-a2-v1-20261116` (AN21–AN43): 85 concepts (65 new; 20 reused incl. A1's Ossification and Brachial plexus injuries), 133 objectives, all 128 rows. Names are a subset of part A's, already checked clean.
+- Endpoint pin: commit `b0ef00a`, SHA-256 `0575b05a…d371`.
+
+---
+
 ## Anatomy part A split after acceptance timeout — 2026-11-17T07:35Z
 
 - Owner attempts at 07:21–07:23Z returned 409: Postgres logged `canceling statement due to statement timeout` (authenticator role `statement_timeout=8s`). `concept_batch_accept_v1` saves and accepts each concept in turn and its cost grows with the accepted set (1,227 now); 127 new concepts no longer fit in 8 s (104 did at 1,123). Nothing was saved.
