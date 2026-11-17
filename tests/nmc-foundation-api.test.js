@@ -66,3 +66,10 @@ test('Admin preview resolves only packed accepted private IDs and preserves revi
  assert.equal(result.acceptedMappings,0);
  assert.equal(result.learnerActivation,false);
 });
+test('owner-api foundation data pins match the working-tree registry files',async()=>{
+ const {FOUNDATION_DATA_FILES,FOUNDATION_DATA_COMMIT}=await import('../supabase/functions/owner-api/_shared/foundation-data.js');
+ const {createHash}=await import('node:crypto');const {readFileSync}=await import('node:fs');
+ assert.match(FOUNDATION_DATA_COMMIT,/^[0-9a-f]{40}$/);
+ assert.equal(Object.keys(FOUNDATION_DATA_FILES).length,6);
+ for(const {path,sha256} of Object.values(FOUNDATION_DATA_FILES))assert.equal(createHash('sha256').update(readFileSync(new URL('../'+path,import.meta.url))).digest('hex'),sha256,path);
+});
