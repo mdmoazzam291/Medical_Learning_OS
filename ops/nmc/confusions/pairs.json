@@ -1,0 +1,867 @@
+[
+ {
+  "a": "Nephrotic syndrome",
+  "b": "Nephritic syndrome",
+  "discriminator": "Nephrotic: proteinuria >3.5 g/day with oedema; nephritic: haematuria, RBC casts, hypertension"
+ },
+ {
+  "a": "Inflammatory bowel disease",
+  "b": "Amoebiasis",
+  "discriminator": "IBD is chronic with relapses and no parasite; amoebiasis shows trophozoites in stool"
+ },
+ {
+  "a": "Diabetic ketoacidosis",
+  "b": "Hyperosmolar hyperglycaemic state",
+  "discriminator": "DKA has ketosis and acidosis; HHS has extreme hyperglycaemia and osmolality without significant ketosis"
+ },
+ {
+  "a": "Type 1 diabetes mellitus",
+  "b": "Type 2 diabetes mellitus",
+  "discriminator": "Type 1: autoimmune insulin deficiency, ketosis-prone; type 2: insulin resistance, often obese"
+ },
+ {
+  "a": "Chronic obstructive pulmonary disease",
+  "b": "Asthma",
+  "discriminator": "COPD: fixed or partly reversible obstruction in smokers; asthma: variable, reversible with bronchodilator"
+ },
+ {
+  "a": "Acute coronary syndrome",
+  "b": "Ischaemic heart disease",
+  "discriminator": "ACS is acute plaque rupture with rest pain or biomarker rise; stable IHD is predictable exertional angina"
+ },
+ {
+  "a": "Hypertensive emergencies",
+  "b": "Hypertension",
+  "discriminator": "Emergency means acute target-organ damage, not just a high number"
+ },
+ {
+  "a": "Shock",
+  "b": "Sepsis",
+  "discriminator": "Shock is circulatory failure of any cause; sepsis is infection with organ dysfunction"
+ },
+ {
+  "a": "Acute kidney injury",
+  "b": "Chronic kidney disease",
+  "discriminator": "AKI rises over hours to days and may reverse; CKD lasts over 3 months with small kidneys and anaemia"
+ },
+ {
+  "a": "Hyponatraemia",
+  "b": "Hyperkalaemia",
+  "discriminator": "Hyponatraemia causes neurological symptoms; hyperkalaemia causes cardiac rhythm changes"
+ },
+ {
+  "a": "Hyperkalaemia",
+  "b": "Hypokalaemia",
+  "discriminator": "High potassium: peaked T waves; low potassium: flat T waves and U waves"
+ },
+ {
+  "a": "Thyrotoxicosis",
+  "b": "Hypothyroidism",
+  "discriminator": "Thyrotoxicosis: low TSH, high T4; hypothyroidism: high TSH, low T4 in primary disease"
+ },
+ {
+  "a": "Microcytic anaemia",
+  "b": "Megaloblastic anaemia",
+  "discriminator": "Microcytic (low MCV) mostly iron deficiency; megaloblastic (high MCV) B12 or folate deficiency"
+ },
+ {
+  "a": "Sickle cell disease",
+  "b": "Thalassaemia",
+  "discriminator": "Sickle cell: HbS, vaso-occlusive crises; thalassaemia: reduced globin chains, microcytosis with high RBC count"
+ },
+ {
+  "a": "Hodgkin lymphoma",
+  "b": "Non-Hodgkin lymphoma",
+  "discriminator": "Hodgkin: Reed-Sternberg cells, contiguous spread; non-Hodgkin: no RS cells, non-contiguous spread"
+ },
+ {
+  "a": "Leukaemias",
+  "b": "Non-Hodgkin lymphoma",
+  "discriminator": "Leukaemia starts in marrow with blood involvement; lymphoma starts in lymph nodes"
+ },
+ {
+  "a": "Disseminated intravascular coagulation",
+  "b": "Bleeding disorders",
+  "discriminator": "DIC has consumed factors and platelets with raised D-dimer; other bleeding disorders lack consumption"
+ },
+ {
+  "a": "Immune thrombocytopenia",
+  "b": "Haemophilia",
+  "discriminator": "ITP: low platelets with mucosal bleeds; haemophilia: normal platelets, joint and muscle bleeds"
+ },
+ {
+  "a": "Necrosis",
+  "b": "Apoptosis",
+  "discriminator": "Necrosis is accidental cell death with inflammation; apoptosis is programmed with no inflammation"
+ },
+ {
+  "a": "Thrombosis",
+  "b": "Embolism",
+  "discriminator": "Thrombus forms in place; embolus travels and lodges elsewhere"
+ },
+ {
+  "a": "Ischaemia",
+  "b": "Infarction",
+  "discriminator": "Ischaemia is reduced blood supply; infarction is necrosis from it"
+ },
+ {
+  "a": "Inflammation",
+  "b": "Chronic inflammation",
+  "discriminator": "Acute: neutrophils, short duration; chronic: lymphocytes, macrophages, fibrosis"
+ },
+ {
+  "a": "Cellular adaptations",
+  "b": "Dysplasia",
+  "discriminator": "Adaptations are reversible changes in cell size or type; dysplasia is disordered growth that may precede cancer"
+ },
+ {
+  "a": "Neoplasia",
+  "b": "Dysplasia",
+  "discriminator": "Neoplasia is autonomous growth; dysplasia is a preneoplastic change"
+ },
+ {
+  "a": "Hypersensitivity reactions",
+  "b": "Autoimmunity",
+  "discriminator": "Hypersensitivity is an exaggerated response to external antigens; autoimmunity targets self antigens"
+ },
+ {
+  "a": "Humoral immunity",
+  "b": "Cell-mediated immunity",
+  "discriminator": "Humoral: antibodies against extracellular organisms; cell-mediated: T cells against intracellular organisms"
+ },
+ {
+  "a": "Rheumatic fever",
+  "b": "Rheumatic heart disease",
+  "discriminator": "Rheumatic fever is the acute illness; rheumatic heart disease is the chronic valve damage"
+ },
+ {
+  "a": "Rheumatic fever",
+  "b": "Infective endocarditis",
+  "discriminator": "Rheumatic fever is immune-mediated after strep throat; endocarditis is direct valve infection with positive cultures"
+ },
+ {
+  "a": "Pneumonia",
+  "b": "Pulmonary tuberculosis",
+  "discriminator": "Pneumonia is acute with lobar consolidation; TB is chronic with cavities, weight loss, night sweats"
+ },
+ {
+  "a": "Meningitis",
+  "b": "Encephalitis",
+  "discriminator": "Meningitis: neck stiffness, normal consciousness early; encephalitis: altered sensorium, seizures"
+ },
+ {
+  "a": "Enteric fever",
+  "b": "Rickettsial infections",
+  "discriminator": "Enteric fever: relative bradycardia, rose spots; rickettsial fever: eschar and rash"
+ },
+ {
+  "a": "Malaria",
+  "b": "Enteric fever",
+  "discriminator": "Malaria: periodic fever with smear positive; enteric fever: step-ladder fever with culture positive"
+ },
+ {
+  "a": "Dysentery",
+  "b": "Diarrhoea",
+  "discriminator": "Dysentery has blood and mucus with tenesmus; watery diarrhoea has none"
+ },
+ {
+  "a": "Clostridial infections",
+  "b": "Anaerobic infections",
+  "discriminator": "Clostridia are a specific anaerobic group; anaerobic infection is the broader category"
+ },
+ {
+  "a": "Humoral immunity",
+  "b": "Immunisation",
+  "discriminator": "Humoral immunity is the mechanism; immunisation is the intervention that uses it"
+ },
+ {
+  "a": "Candidiasis",
+  "b": "Aspergillosis",
+  "discriminator": "Candida: yeast with pseudohyphae; Aspergillus: septate hyphae with acute-angle branching"
+ },
+ {
+  "a": "Gram staining",
+  "b": "Ziehl-Neelsen staining",
+  "discriminator": "Gram stain classifies most bacteria; ZN stain detects acid-fast bacilli like M. tuberculosis"
+ },
+ {
+  "a": "Sterilisation",
+  "b": "Disinfection",
+  "discriminator": "Sterilisation kills all organisms including spores; disinfection kills most but not spores"
+ },
+ {
+  "a": "Syphilis",
+  "b": "Genital ulcer disease",
+  "discriminator": "Syphilis chancre is painless and indurated; other genital ulcers (chancroid, herpes) are painful"
+ },
+ {
+  "a": "Herpes simplex infection",
+  "b": "Varicella zoster infection",
+  "discriminator": "HSV: grouped vesicles, recurrent at the same site; VZV: dermatomal, unilateral, painful"
+ },
+ {
+  "a": "Psoriasis",
+  "b": "Eczema",
+  "discriminator": "Psoriasis: well-defined silvery plaques on extensors; eczema: ill-defined itchy patches on flexures"
+ },
+ {
+  "a": "Dermatophytosis",
+  "b": "Candidiasis",
+  "discriminator": "Dermatophytes affect keratin (skin, hair, nails); Candida affects moist mucosa and folds"
+ },
+ {
+  "a": "Vitiligo",
+  "b": "Leprosy",
+  "discriminator": "Vitiligo: depigmented with normal sensation; leprosy: hypopigmented with sensory loss"
+ },
+ {
+  "a": "Urticaria",
+  "b": "Cutaneous drug reactions",
+  "discriminator": "Urticaria is transient wheals; drug reactions range from rashes to SJS/TEN with a drug link"
+ },
+ {
+  "a": "Schizophrenia",
+  "b": "Bipolar disorder",
+  "discriminator": "Schizophrenia: persistent psychosis; bipolar: episodic mood changes with possible psychosis"
+ },
+ {
+  "a": "Depression",
+  "b": "Anxiety disorders",
+  "discriminator": "Depression: low mood and anhedonia; anxiety: worry and autonomic arousal"
+ },
+ {
+  "a": "Delirium",
+  "b": "Dementia",
+  "discriminator": "Delirium is acute and fluctuating with inattention; dementia is chronic and progressive"
+ },
+ {
+  "a": "Epilepsy",
+  "b": "Febrile seizures",
+  "discriminator": "Epilepsy is recurrent unprovoked seizures; febrile seizures are provoked by fever in young children"
+ },
+ {
+  "a": "Migraine",
+  "b": "Headache",
+  "discriminator": "Migraine is a specific primary headache with aura or photophobia; headache is the general symptom"
+ },
+ {
+  "a": "Stroke",
+  "b": "Head injury",
+  "discriminator": "Stroke is vascular; head injury is traumatic"
+ },
+ {
+  "a": "Upper and lower motor neuron lesions",
+  "b": "Movement disorders",
+  "discriminator": "UMN/LMN lesions cause weakness; movement disorders cause abnormal movements without weakness"
+ },
+ {
+  "a": "Cerebellum",
+  "b": "Basal ganglia",
+  "discriminator": "Cerebellar: ataxia, intention tremor; basal ganglia: rigidity, resting tremor, bradykinesia"
+ },
+ {
+  "a": "Myasthenia gravis",
+  "b": "Lambert-Eaton myasthenic syndrome",
+  "discriminator": "Myasthenia: weakness worsens with use; LEMS: strength improves with repeated effort"
+ },
+ {
+  "a": "Poliomyelitis",
+  "b": "Motor neuron disease",
+  "discriminator": "Polio: pure LMN, asymmetric, no sensory loss; MND: mixed UMN and LMN signs"
+ },
+ {
+  "a": "Syringomyelia",
+  "b": "Subacute combined degeneration",
+  "discriminator": "Syringomyelia: cape-like loss of pain and temperature; SCD: dorsal column and corticospinal loss from B12 deficiency"
+ },
+ {
+  "a": "Brown-Sequard syndrome",
+  "b": "Spinal cord transection patterns",
+  "discriminator": "Brown-Sequard is a hemisection pattern; transection patterns describe complete or other cord lesions"
+ },
+ {
+  "a": "Brachial plexus injuries",
+  "b": "Radial nerve injury",
+  "discriminator": "Brachial plexus injuries affect root patterns; radial nerve injury causes wrist drop alone"
+ },
+ {
+  "a": "Radial nerve injury",
+  "b": "Claw hand",
+  "discriminator": "Radial nerve injury gives wrist drop; claw hand follows ulnar or median-ulnar loss"
+ },
+ {
+  "a": "Carpal tunnel syndrome",
+  "b": "Claw hand",
+  "discriminator": "Carpal tunnel compresses the median nerve at the wrist; claw hand is intrinsic muscle palsy"
+ },
+ {
+  "a": "Axillary nerve injury",
+  "b": "Radial nerve injury",
+  "discriminator": "Axillary nerve: deltoid weakness, shoulder sensation; radial nerve: wrist drop"
+ },
+ {
+  "a": "Femoral neck fracture",
+  "b": "Intertrochanteric fracture",
+  "discriminator": "Neck fracture is intracapsular with avascular necrosis risk; intertrochanteric is extracapsular and heals well"
+ },
+ {
+  "a": "Joint dislocations",
+  "b": "Clavicle fracture",
+  "discriminator": "Dislocation is loss of joint congruity; fracture is a break in bone"
+ },
+ {
+  "a": "Osteomalacia and rickets",
+  "b": "Osteoporosis",
+  "discriminator": "Osteomalacia is poor mineralisation; osteoporosis is reduced normal bone mass"
+ },
+ {
+  "a": "Osteoarthritis",
+  "b": "Rheumatoid arthritis",
+  "discriminator": "Osteoarthritis: degenerative, worse with use; rheumatoid: inflammatory, morning stiffness, symmetric small joints"
+ },
+ {
+  "a": "Gout",
+  "b": "Septic arthritis",
+  "discriminator": "Gout: urate crystals, recurrent; septic arthritis: infected joint, positive culture, needs urgent drainage"
+ },
+ {
+  "a": "Osteomyelitis",
+  "b": "Bone tumours",
+  "discriminator": "Osteomyelitis is bone infection; bone tumours are neoplastic growths"
+ },
+ {
+  "a": "Varicose veins",
+  "b": "Deep vein thrombosis",
+  "discriminator": "Varicose veins are superficial and chronic; DVT is deep, acute, with risk of embolism"
+ },
+ {
+  "a": "Peripheral arterial disease",
+  "b": "Vasospastic disorders",
+  "discriminator": "PAD is fixed atherosclerotic narrowing; vasospastic disorders are reversible spasm"
+ },
+ {
+  "a": "Lymphoedema",
+  "b": "Lymphangitis",
+  "discriminator": "Lymphoedema is chronic non-pitting swelling; lymphangitis is acute infection with red streaks"
+ },
+ {
+  "a": "Acute scrotum",
+  "b": "Hydrocele",
+  "discriminator": "Acute scrotum is painful and urgent (torsion); hydrocele is painless and transilluminates"
+ },
+ {
+  "a": "Varicocele",
+  "b": "Hydrocele",
+  "discriminator": "Varicocele feels like a bag of worms; hydrocele transilluminates"
+ },
+ {
+  "a": "Benign prostatic hyperplasia",
+  "b": "Prostate cancer",
+  "discriminator": "BPH arises in the transition zone, smooth enlargement; prostate cancer in the peripheral zone, hard nodule"
+ },
+ {
+  "a": "Urinary retention",
+  "b": "Neurogenic bladder",
+  "discriminator": "Urinary retention is often obstructive; neurogenic bladder is a nerve control failure"
+ },
+ {
+  "a": "Urolithiasis",
+  "b": "Hydronephrosis",
+  "discriminator": "Urolithiasis is the stone; hydronephrosis is the dilatation it can cause"
+ },
+ {
+  "a": "Appendicitis",
+  "b": "Peritonitis",
+  "discriminator": "Appendicitis is localised; peritonitis is generalised peritoneal inflammation"
+ },
+ {
+  "a": "Pancreatitis",
+  "b": "Biliary tract disease",
+  "discriminator": "Pancreatitis: high lipase, epigastric pain to back; biliary disease: RUQ pain, cholestatic LFTs"
+ },
+ {
+  "a": "Cholecystitis",
+  "b": "Gallstones",
+  "discriminator": "Gallstones are the stones; cholecystitis is inflammation they cause"
+ },
+ {
+  "a": "Hernia",
+  "b": "Hydrocele",
+  "discriminator": "Hernia has a cough impulse and is reducible; hydrocele has neither and transilluminates"
+ },
+ {
+  "a": "Benign breast disease",
+  "b": "Breast cancer",
+  "discriminator": "Benign breast lumps are mobile and smooth; cancer is hard, fixed, irregular"
+ },
+ {
+  "a": "Goitre",
+  "b": "Thyroid neoplasms",
+  "discriminator": "Goitre is enlargement of any cause; thyroid neoplasm is a tumour within it"
+ },
+ {
+  "a": "Hyperparathyroidism",
+  "b": "Hypoparathyroidism",
+  "discriminator": "Hyperparathyroidism raises calcium; hypoparathyroidism lowers it with tetany"
+ },
+ {
+  "a": "Adrenal insufficiency",
+  "b": "Cushing syndrome",
+  "discriminator": "Adrenal insufficiency: low cortisol, hyperpigmentation; Cushing: excess cortisol, central obesity"
+ },
+ {
+  "a": "Antepartum haemorrhage",
+  "b": "Postpartum haemorrhage",
+  "discriminator": "Antepartum haemorrhage is before delivery; postpartum haemorrhage is after delivery"
+ },
+ {
+  "a": "Ectopic pregnancy",
+  "b": "Pregnancy of unknown location",
+  "discriminator": "Ectopic is confirmed outside the uterus; unknown location is not yet seen anywhere"
+ },
+ {
+  "a": "Hypertensive disorders of pregnancy",
+  "b": "Diabetes in pregnancy",
+  "discriminator": "Hypertensive disorders raise BP and proteinuria; diabetes in pregnancy raises glucose"
+ },
+ {
+  "a": "Amenorrhoea",
+  "b": "Abnormal uterine bleeding",
+  "discriminator": "Amenorrhoea is absent periods; abnormal uterine bleeding is irregular or heavy bleeding"
+ },
+ {
+  "a": "Polycystic ovary syndrome",
+  "b": "Hyperandrogenism",
+  "discriminator": "PCOS is the syndrome with anovulation; hyperandrogenism is one feature of many causes"
+ },
+ {
+  "a": "Leiomyoma",
+  "b": "Leiomyosarcoma",
+  "discriminator": "Leiomyoma is benign; leiomyosarcoma is the rare malignant counterpart"
+ },
+ {
+  "a": "Endometriosis",
+  "b": "Adenomyosis",
+  "discriminator": "Endometriosis is endometrium outside the uterus; adenomyosis is endometrium within the myometrium"
+ },
+ {
+  "a": "Endometrial carcinoma",
+  "b": "Endometrial hyperplasia",
+  "discriminator": "Hyperplasia is the precursor; carcinoma is invasive malignancy"
+ },
+ {
+  "a": "Preterm labour",
+  "b": "Prelabour rupture of membranes",
+  "discriminator": "Preterm labour has contractions before term; PROM is membrane rupture before labour"
+ },
+ {
+  "a": "Abnormal labour",
+  "b": "Malpresentation",
+  "discriminator": "Abnormal labour is poor progress; malpresentation is a non-vertex presentation"
+ },
+ {
+  "a": "Low birth weight",
+  "b": "Fetal growth restriction",
+  "discriminator": "Low birth weight is a weight under 2.5 kg; FGR is failure to reach growth potential"
+ },
+ {
+  "a": "Neonatal hyperbilirubinaemia",
+  "b": "Jaundice",
+  "discriminator": "Neonatal jaundice is mostly physiological in the first week; jaundice is the general sign"
+ },
+ {
+  "a": "Neonatal respiratory distress",
+  "b": "Birth asphyxia",
+  "discriminator": "Respiratory distress is the breathing problem; birth asphyxia is perinatal hypoxia"
+ },
+ {
+  "a": "Neonatal hypoglycaemia",
+  "b": "Neonatal hypocalcaemia",
+  "discriminator": "Neonatal hypoglycaemia is low glucose; hypocalcaemia is low calcium; both cause seizures"
+ },
+ {
+  "a": "Epiglottitis",
+  "b": "Croup",
+  "discriminator": "Epiglottitis: toxic, drooling, tripod posture; croup: barking cough, steeple sign"
+ },
+ {
+  "a": "Croup",
+  "b": "Foreign body aspiration",
+  "discriminator": "Croup is infective with fever; foreign body is sudden choking without fever"
+ },
+ {
+  "a": "Down syndrome",
+  "b": "Turner syndrome",
+  "discriminator": "Down syndrome: trisomy 21; Turner syndrome: 45,X with short stature"
+ },
+ {
+  "a": "Turner syndrome",
+  "b": "Klinefelter syndrome",
+  "discriminator": "Turner is 45,X in females; Klinefelter is 47,XXY in males"
+ },
+ {
+  "a": "Developmental milestones",
+  "b": "Developmental delay",
+  "discriminator": "Milestones are the normal markers; developmental delay is failure to reach them"
+ },
+ {
+  "a": "Attention deficit hyperactivity disorder",
+  "b": "Autism spectrum disorder",
+  "discriminator": "ADHD: inattention and hyperactivity; autism: social communication deficits and restricted interests"
+ },
+ {
+  "a": "Severe acute malnutrition",
+  "b": "Protein-energy malnutrition",
+  "discriminator": "SAM is the severe end of protein-energy malnutrition"
+ },
+ {
+  "a": "Vitamin A deficiency",
+  "b": "Vitamin C deficiency",
+  "discriminator": "Vitamin A deficiency causes night blindness; vitamin C deficiency causes scurvy"
+ },
+ {
+  "a": "Vitamin D disorders",
+  "b": "Osteomalacia and rickets",
+  "discriminator": "Vitamin D disorders are the cause; rickets/osteomalacia are the bone disease"
+ },
+ {
+  "a": "Vitamin B12 deficiency",
+  "b": "Folate deficiency",
+  "discriminator": "B12 deficiency adds neurological signs; folate deficiency does not"
+ },
+ {
+  "a": "Chronic otitis media",
+  "b": "Otitis media with effusion",
+  "discriminator": "Chronic otitis media has a perforation and discharge; otitis media with effusion has an intact drum and fluid"
+ },
+ {
+  "a": "Chronic otitis media",
+  "b": "Cholesteatoma",
+  "discriminator": "Safe CSOM is a central perforation; cholesteatoma is attic or marginal and erodes bone"
+ },
+ {
+  "a": "Meniere disease",
+  "b": "Vestibular schwannoma",
+  "discriminator": "Meniere: episodic vertigo, fluctuating hearing loss; vestibular schwannoma: progressive unilateral hearing loss"
+ },
+ {
+  "a": "Deafness",
+  "b": "Tinnitus",
+  "discriminator": "Deafness is hearing loss; tinnitus is a perceived sound"
+ },
+ {
+  "a": "Nasal polyps",
+  "b": "Juvenile nasopharyngeal angiofibroma",
+  "discriminator": "Nasal polyps are bilateral and painless; angiofibroma affects adolescent males with heavy epistaxis"
+ },
+ {
+  "a": "Tonsillitis",
+  "b": "Adenotonsillar disease",
+  "discriminator": "Tonsillitis is the acute infection; adenotonsillar disease includes chronic hypertrophy"
+ },
+ {
+  "a": "Benign laryngeal disorders",
+  "b": "Laryngeal cancer",
+  "discriminator": "Benign laryngeal lesions are on the cord without fixation; cancer causes progressive hoarseness and fixation"
+ },
+ {
+  "a": "Primary open-angle glaucoma",
+  "b": "Angle-closure glaucoma",
+  "discriminator": "Open-angle: chronic, painless field loss; angle-closure: acute painful red eye with halos"
+ },
+ {
+  "a": "Conjunctivitis",
+  "b": "Uveitis",
+  "discriminator": "Conjunctivitis: discharge, normal vision; uveitis: pain, photophobia, reduced vision, ciliary flush"
+ },
+ {
+  "a": "Infective keratitis",
+  "b": "Conjunctivitis",
+  "discriminator": "Keratitis causes pain and corneal staining; conjunctivitis spares the cornea"
+ },
+ {
+  "a": "Episcleritis",
+  "b": "Scleritis",
+  "discriminator": "Episcleritis is mild and blanches with phenylephrine; scleritis is painful and sight-threatening"
+ },
+ {
+  "a": "Hyphema",
+  "b": "Hypopyon",
+  "discriminator": "Hyphema is blood in the anterior chamber; hypopyon is pus"
+ },
+ {
+  "a": "Orbital cellulitis",
+  "b": "Cavernous sinus thrombosis",
+  "discriminator": "Orbital cellulitis is unilateral; cavernous sinus thrombosis becomes bilateral with cranial nerve palsies"
+ },
+ {
+  "a": "Ptosis",
+  "b": "Thyroid eye disease",
+  "discriminator": "Ptosis is a drooping lid; thyroid eye disease causes lid retraction and proptosis"
+ },
+ {
+  "a": "Strabismus",
+  "b": "Amblyopia",
+  "discriminator": "Strabismus is misalignment; amblyopia is reduced vision that can follow it"
+ },
+ {
+  "a": "Early post-mortem changes",
+  "b": "Late post-mortem changes",
+  "discriminator": "Early changes (algor, livor, rigor) occur in hours; late changes are decomposition"
+ },
+ {
+  "a": "Hanging",
+  "b": "Strangulation",
+  "discriminator": "Hanging: oblique ligature mark, rising to the knot; strangulation: horizontal, encircling mark"
+ },
+ {
+  "a": "Hanging",
+  "b": "Suffocation",
+  "discriminator": "Hanging compresses the neck by body weight; suffocation blocks the airway without neck pressure"
+ },
+ {
+  "a": "Firearms",
+  "b": "Firearm injuries",
+  "discriminator": "Firearms are the weapons; firearm injuries are the wounds they cause"
+ },
+ {
+  "a": "Mechanical injuries",
+  "b": "Hurt",
+  "discriminator": "Mechanical injuries are the wounds; hurt is their legal classification"
+ },
+ {
+  "a": "Manner of death",
+  "b": "Modes of death",
+  "discriminator": "Manner is natural, accidental, suicidal or homicidal; mode is the physiological route of death"
+ },
+ {
+  "a": "Carbon monoxide poisoning",
+  "b": "Cyanide poisoning",
+  "discriminator": "CO poisoning: cherry-red lividity, binds haemoglobin; cyanide: bitter almond odour, blocks cytochrome oxidase"
+ },
+ {
+  "a": "Heavy metal poisoning",
+  "b": "Non-metallic inorganic poisoning",
+  "discriminator": "Heavy metals (lead, arsenic, mercury) vs non-metallic inorganic poisons (phosphorus, iodine)"
+ },
+ {
+  "a": "Pesticide poisoning",
+  "b": "Drug poisoning",
+  "discriminator": "Organophosphate poisoning gives a cholinergic crisis; drug poisoning depends on the drug"
+ },
+ {
+  "a": "Medical testimony",
+  "b": "Dying declaration",
+  "discriminator": "Testimony is evidence given in court; a dying declaration is a statement made before death"
+ },
+ {
+  "a": "Medical negligence",
+  "b": "Informed consent",
+  "discriminator": "Negligence is a breach of duty causing harm; informed consent is the patient's permission"
+ },
+ {
+  "a": "Medical ethics",
+  "b": "Bioethics",
+  "discriminator": "Medical ethics guides practice; bioethics covers broader issues like research and technology"
+ },
+ {
+  "a": "Screening for disease",
+  "b": "Outbreak investigation",
+  "discriminator": "Screening tests healthy people for early disease; outbreak investigation responds to an excess of cases"
+ },
+ {
+  "a": "Epidemiological study designs",
+  "b": "Association and causation",
+  "discriminator": "Study designs are methods; association and causation is interpreting what they find"
+ },
+ {
+  "a": "Measures of morbidity and mortality",
+  "b": "Health indicators",
+  "discriminator": "Morbidity and mortality measures are the raw rates; indicators are selected summary measures"
+ },
+ {
+  "a": "Natural history of disease",
+  "b": "Levels of prevention",
+  "discriminator": "Natural history is how disease progresses; levels of prevention are where we intervene"
+ },
+ {
+  "a": "Health promotion",
+  "b": "Health education",
+  "discriminator": "Health promotion is the broad strategy; health education is one of its tools"
+ },
+ {
+  "a": "Primary health care",
+  "b": "Health care delivery system in India",
+  "discriminator": "Primary health care is the approach; the Indian delivery system is the structure"
+ },
+ {
+  "a": "Waterborne diseases",
+  "b": "Vector-borne diseases",
+  "discriminator": "Waterborne diseases spread by contaminated water; vector-borne by insect vectors"
+ },
+ {
+  "a": "Humoral immunity",
+  "b": "Herd immunity",
+  "discriminator": "Humoral immunity protects the individual; herd immunity protects the population"
+ },
+ {
+  "a": "Pharmacokinetics",
+  "b": "Pharmacodynamics",
+  "discriminator": "Pharmacokinetics is what the body does to the drug; pharmacodynamics is what the drug does to the body"
+ },
+ {
+  "a": "Adverse drug reactions",
+  "b": "Drug interactions",
+  "discriminator": "ADRs are harmful effects of a single drug; interactions arise between two or more drugs"
+ },
+ {
+  "a": "Adrenergic drugs",
+  "b": "Cholinergic drugs",
+  "discriminator": "Adrenergic drugs act on sympathetic receptors; cholinergic on parasympathetic"
+ },
+ {
+  "a": "Anticoagulants",
+  "b": "Antiplatelet drugs",
+  "discriminator": "Anticoagulants block the clotting cascade; antiplatelets block platelet aggregation"
+ },
+ {
+  "a": "Anticoagulants",
+  "b": "Fibrinolytics",
+  "discriminator": "Anticoagulants prevent new clots; fibrinolytics dissolve existing clots"
+ },
+ {
+  "a": "Opioid analgesics",
+  "b": "Non-opioid analgesics",
+  "discriminator": "Opioids act centrally on opioid receptors; non-opioids block prostaglandin synthesis"
+ },
+ {
+  "a": "Antidepressants",
+  "b": "Antipsychotics",
+  "discriminator": "Antidepressants treat mood; antipsychotics treat psychosis"
+ },
+ {
+  "a": "Sedative-hypnotics",
+  "b": "Anxiolytics",
+  "discriminator": "Sedative-hypnotics induce sleep; anxiolytics relieve anxiety"
+ },
+ {
+  "a": "Thyroid hormone replacement",
+  "b": "Antithyroid drugs",
+  "discriminator": "Thyroxine replaces deficient hormone; antithyroid drugs block excess synthesis"
+ },
+ {
+  "a": "Antibacterial drugs",
+  "b": "Antimicrobial chemotherapy",
+  "discriminator": "Antibacterials are the drugs; antimicrobial chemotherapy is the principles of their use"
+ },
+ {
+  "a": "Antimicrobial resistance",
+  "b": "Antimicrobial stewardship",
+  "discriminator": "Resistance is the problem; stewardship is the programme to limit it"
+ },
+ {
+  "a": "Juxtaglomerular apparatus",
+  "b": "Urine formation",
+  "discriminator": "The JG apparatus regulates renin; urine formation is filtration, reabsorption and secretion"
+ },
+ {
+  "a": "Urine concentration and dilution",
+  "b": "Renal regulation of fluid, electrolytes and acid-base",
+  "discriminator": "Concentration and dilution set urine osmolality; regulation covers electrolytes and acid-base"
+ },
+ {
+  "a": "Glycolysis",
+  "b": "Gluconeogenesis",
+  "discriminator": "Glycolysis breaks down glucose; gluconeogenesis makes new glucose"
+ },
+ {
+  "a": "Glycogen metabolism",
+  "b": "Gluconeogenesis",
+  "discriminator": "Glycogenolysis releases stored glucose quickly; gluconeogenesis makes it from non-carbohydrates"
+ },
+ {
+  "a": "Fatty acid oxidation",
+  "b": "Ketone bodies",
+  "discriminator": "Fatty acid oxidation produces acetyl-CoA; ketone bodies are made from excess acetyl-CoA"
+ },
+ {
+  "a": "Cholesterol metabolism",
+  "b": "Lipoproteins",
+  "discriminator": "Cholesterol is the molecule; lipoproteins are its transport particles"
+ },
+ {
+  "a": "Haem metabolism",
+  "b": "Bilirubin metabolism",
+  "discriminator": "Haem metabolism covers synthesis and breakdown; bilirubin metabolism is the excretion pathway"
+ },
+ {
+  "a": "Porphyrias",
+  "b": "Haemoglobinopathies",
+  "discriminator": "Porphyrias are defects in haem synthesis; haemoglobinopathies are defects in globin"
+ },
+ {
+  "a": "DNA replication",
+  "b": "Gene transcription",
+  "discriminator": "Replication copies DNA; transcription makes RNA from DNA"
+ },
+ {
+  "a": "Gene transcription",
+  "b": "Protein synthesis",
+  "discriminator": "Transcription makes mRNA; translation makes protein from mRNA"
+ },
+ {
+  "a": "Membrane potentials",
+  "b": "Nerve fibre properties",
+  "discriminator": "Membrane potentials are the electrical state; fibre properties describe how impulses travel"
+ },
+ {
+  "a": "Skeletal muscle contraction",
+  "b": "Smooth muscle contraction",
+  "discriminator": "Skeletal muscle: voluntary, troponin-regulated; smooth muscle: involuntary, calmodulin-regulated"
+ },
+ {
+  "a": "Cardiac cycle",
+  "b": "Electrocardiogram",
+  "discriminator": "The cardiac cycle is mechanical events; the ECG records electrical events"
+ },
+ {
+  "a": "Cardiac output",
+  "b": "Blood pressure",
+  "discriminator": "Cardiac output is flow; blood pressure is the pressure that drives it"
+ },
+ {
+  "a": "Hypoxia",
+  "b": "Cyanosis",
+  "discriminator": "Hypoxia is low tissue oxygen; cyanosis is the bluish sign that may or may not appear"
+ },
+ {
+  "a": "Asphyxia",
+  "b": "Drowning",
+  "discriminator": "Asphyxia is the general state; drowning is one cause"
+ },
+ {
+  "a": "Fetal circulation",
+  "b": "Development of the heart",
+  "discriminator": "Fetal circulation is how blood flows before birth; heart development is how the heart forms"
+ },
+ {
+  "a": "Gametogenesis",
+  "b": "Fertilisation",
+  "discriminator": "Gametogenesis makes gametes; fertilisation joins them"
+ },
+ {
+  "a": "Gastrulation",
+  "b": "Neurulation",
+  "discriminator": "Gastrulation forms three germ layers; neurulation forms the neural tube"
+ },
+ {
+  "a": "Chromosomes",
+  "b": "Modes of inheritance",
+  "discriminator": "Chromosomes are the structures; modes of inheritance are how traits pass on"
+ },
+ {
+  "a": "Amniocentesis",
+  "b": "Chorionic villus sampling",
+  "discriminator": "Amniocentesis samples amniotic fluid after 15 weeks; CVS samples placental villi at 10-13 weeks"
+ }
+]
