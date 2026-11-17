@@ -1,3 +1,11 @@
+## NMC Obstetrics & Gynaecology concept batch v1 — 2026-11-17T02:50Z
+
+- `docs/evidence/2026-11-17-nmc-obgyn-concept-batch-v1.json` (spec `ops/nmc/specs/obgyn_concepts_v1.py`): 103 concepts (72 new; 31 reused, e.g. Pregnancy, Abortion — whose accepted aliases already include medical termination — Contraception, Infertility, Leiomyoma, Menopause, PCPNDT Act, Informed consent), 146 objectives, all 142 rows. Subtype and ambiguous aliases removed (e.g. "PROM", "PID", "ARM"). No clash with 1,788 production names.
+- Endpoint pin: commit `31cbcf8`, SHA-256 `3a464235…98ee9`.
+- Next: merge, redeploy `nmc-admin-preview`, owner acceptance, bindings, registry.
+
+---
+
 ## NMC Surgery objectives bound and in registry (draft @14) — 2026-11-16T22:12Z
 
 - Owner accepted `nmc-surgery-concepts-v1-20261116` at 2026-11-16T22:07:02Z (52 receipts; pairs digest `ad4004b1…843b` matched). Receipt IDs in `ops/nmc/receipts/surgery-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-surgery-objective-bindings-v1.json` (102 concepts, 125 objectives).
