@@ -9,6 +9,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-17 — Registry @25: learning metadata; full Admin learner preview
+- `src/domain/nmc-learning-metadata.js` + `ops/nmc/apply-learning-metadata.js` (deterministic, AI-authored rules; evidence `docs/evidence/2026-11-17-nmc-learning-metadata-v1.json` lists every change). Objective IDs and wording unchanged.
+- Task: the 1,875 objectives tagged `mechanism` re-tagged to the question-intelligence vocabulary by the earliest-mentioned focus (747 remain mechanism; e.g. etiology 158, differential 155, interpretation 160, treatment-selection 75). New `taskFacets` lists every task an objective names (1,613 one, 833 two or more).
+- Context: population `children` (256, Paediatrics rows) and `women` (146, OG rows); jurisdiction `india` for Forensic and Community Medicine (317); others `not-specified`.
+- New `assessability`: in-app 2,012; in-app-partial 799 (shows-how or procedural); offline-only 54 (performs). Validator requires both fields from @25.
+- Admin learner preview rebuilt from the registry: all 2,865 objectives with task and assessability; a subject or search is required before listing; banner states AI-drafted, not faculty-reviewed.
+
 ### 2026-11-17 — Overlay-checked registry validation; history archived
 - `validateFoundationDrafts` and `foundationDraftPage` now require the reference overlay; each exception binding must match its overlay row (search alias or topic group for resolved codes/headings, official replacement for amendment rows); deleted rows never bind. Negative tests cover a missing overlay, a missing row, a wrong kind, a forged basis, a deleted row and a standard row claiming an exception basis. owner-api loads the overlay as a seventh pinned data file (pin commit `bbccf9c`); owner-api is not yet redeployed — the deployed v24 still serves the CI-validated @24 data and will be redeployed with registry @25.
 - PS 2.1* overlay note corrected: printed form kept; PS2.1 is a search-only alias; asterisk meaning unresolved.

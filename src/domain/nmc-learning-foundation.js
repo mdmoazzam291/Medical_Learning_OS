@@ -2,6 +2,8 @@
 // canonical IDs. Uses the established objective model; no active exam mappings.
 import {validatePreparationCurriculum} from './preparation-pathways.js';
 import {validateReferenceCatalogue,validateReferenceOverlay} from './nmc-reference-catalogue.js';
+import {TASKS} from './question-intelligence.js';
+import {ASSESSABILITY} from './nmc-learning-metadata.js';
 const bad=()=>{throw new TypeError('foundation_draft_invalid');};
 const exact=(o,keys)=>o&&typeof o==='object'&&!Array.isArray(o)&&Object.keys(o).sort().join('|')===keys.sort().join('|');
 const sha=s=>typeof s==='string'&&/^[a-f0-9]{64}$/.test(s);
@@ -24,12 +26,16 @@ export function validateFoundationDrafts(input,catalogue,overlay){
  if(!overlay)bad();
  let resolutions;try{resolutions=new Map(validateReferenceOverlay(overlay,c).rows.map(r=>[r.referenceId,r]));}catch{bad();}
  if(!exact(input,['schemaVersion','draftVersion','authoredCatalogVersion','sourceEdition','sourceSha256','clinicalApproval','sourceAlignmentApproved','learnerActivation','objectives','sourceBindings'])||
- input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2','mbbs-foundation:original-objectives@3','mbbs-foundation:original-objectives@4','mbbs-foundation:original-objectives@5','mbbs-foundation:original-objectives@6','mbbs-foundation:original-objectives@7','mbbs-foundation:original-objectives@8','mbbs-foundation:original-objectives@9','mbbs-foundation:original-objectives@10','mbbs-foundation:original-objectives@11','mbbs-foundation:original-objectives@12','mbbs-foundation:original-objectives@13','mbbs-foundation:original-objectives@14','mbbs-foundation:original-objectives@15','mbbs-foundation:original-objectives@16','mbbs-foundation:original-objectives@17','mbbs-foundation:original-objectives@18','mbbs-foundation:original-objectives@19','mbbs-foundation:original-objectives@20','mbbs-foundation:original-objectives@21','mbbs-foundation:original-objectives@22','mbbs-foundation:original-objectives@23','mbbs-foundation:original-objectives@24'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
+ input.schemaVersion!==1||!['mbbs-foundation:original-objectives@1','mbbs-foundation:original-objectives@2','mbbs-foundation:original-objectives@3','mbbs-foundation:original-objectives@4','mbbs-foundation:original-objectives@5','mbbs-foundation:original-objectives@6','mbbs-foundation:original-objectives@7','mbbs-foundation:original-objectives@8','mbbs-foundation:original-objectives@9','mbbs-foundation:original-objectives@10','mbbs-foundation:original-objectives@11','mbbs-foundation:original-objectives@12','mbbs-foundation:original-objectives@13','mbbs-foundation:original-objectives@14','mbbs-foundation:original-objectives@15','mbbs-foundation:original-objectives@16','mbbs-foundation:original-objectives@17','mbbs-foundation:original-objectives@18','mbbs-foundation:original-objectives@19','mbbs-foundation:original-objectives@20','mbbs-foundation:original-objectives@21','mbbs-foundation:original-objectives@22','mbbs-foundation:original-objectives@23','mbbs-foundation:original-objectives@24','mbbs-foundation:original-objectives@25'].includes(input.draftVersion)||!Number.isSafeInteger(input.authoredCatalogVersion)||input.authoredCatalogVersion<0||
  input.sourceEdition!==c.edition||input.sourceSha256!==c.sourceSha256||input.clinicalApproval!==false||input.sourceAlignmentApproved!==false||input.learnerActivation!==false||
  !Array.isArray(input.objectives)||input.objectives.length>10000||!Array.isArray(input.sourceBindings)||input.sourceBindings.length>10000)bad();
  const objectives=new Map();
  for(const row of input.objectives){
-  if(!exact(row,['objective','wording','authorship','status','canonicalIdentitySha256'])||!text(row.wording,12,500)||row.authorship!=='ai_generated_original'||row.status!=='draft'||!sha(row.canonicalIdentitySha256))bad();
+  // @25 adds learning metadata: assessability and taskFacets (question-intelligence task vocabulary).
+  const meta=input.draftVersion==='mbbs-foundation:original-objectives@25';
+  if(!exact(row,['objective','wording','authorship','status','canonicalIdentitySha256',...(meta?['assessability','taskFacets']:[])])||
+   (meta&&(!ASSESSABILITY.includes(row.assessability)||!Array.isArray(row.taskFacets)||row.taskFacets.length>TASKS.length||
+    row.taskFacets.some(t=>!TASKS.includes(t))||new Set(row.taskFacets).size!==row.taskFacets.length))||!text(row.wording,12,500)||row.authorship!=='ai_generated_original'||row.status!=='draft'||!sha(row.canonicalIdentitySha256))bad();
   if(!row.objective||objectives.has(row.objective.objectiveVersionId))bad();
   objectives.set(row.objective.objectiveVersionId,row);
  }
