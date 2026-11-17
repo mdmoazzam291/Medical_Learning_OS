@@ -1,3 +1,12 @@
+## Anatomy complete (registry @20); Medicine part A batch — 2026-11-17T09:10Z
+
+- Owner accepted `nmc-anatomy-concepts-part-b2-v1-20261116` at 08:54:26Z (44 receipts; pairs digest `6ae90b98…fbd4` matched). Registry @20: 2,302 objectives, 2,303 bindings, 1,432 concepts, 2,081 of 2,634 rows (79%). All 413 Anatomy rows are now linked.
+- Medicine part A `nmc-medicine-concepts-part-a-v1-20261116` (GM1–GM12; spec `ops/nmc/specs/medicine_a_concepts_v1.py`): 108 concepts (40 new; 68 reused), 254 objectives, all 252 rows. History/examination/differential/counselling rows link to the condition concept they serve. No Medicine row is held by a scope review or exception. No clash with 2,292 production names.
+- GM9.8, GM 14.1 and GM 14.2 are each printed twice with identical text (same page and description hash); the builder now links all identical duplicates of a code to one concept. Earlier batches rebuild byte-identically.
+- Endpoint pin: commit `fdcbd49`, SHA-256 `8b3ac130…ee34`.
+
+---
+
 ## Anatomy part B1 bound (registry @19); part B2 batch — 2026-11-17T08:35Z
 
 - Owner accepted `nmc-anatomy-concepts-part-b1-v1-20261116` at 08:25:26Z (35 receipts; pairs digest `84528ff7…087e` matched). Registry @19: 2,213 objectives, 2,214 bindings, 1,388 concepts, 1,995 of 2,634 rows (76%).
