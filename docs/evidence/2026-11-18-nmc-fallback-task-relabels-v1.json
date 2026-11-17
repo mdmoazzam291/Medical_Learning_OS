@@ -1,0 +1,961 @@
+{
+ "schemaVersion": 1,
+ "method": "AI-authored task corrections checked against the official NMC 2024 competency text; mechanism kept where the NMC row asks for it; IDs and wording unchanged; not faculty or clinical review.",
+ "reviewed": 146,
+ "keptMechanism": 27,
+ "relabelled": 119,
+ "changes": [
+  {
+   "objectiveVersionId": "lo:3b41ffd2c4b728da:mechanism:a38f621f@1",
+   "nmcCodes": [
+    "EN4.10"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:f1c7950aa34adcc5:mechanism:a45de2c1@1",
+   "nmcCodes": [
+    "EN4.10"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:ddde8b37a18f83c0:mechanism:9f1cc06d@1",
+   "nmcCodes": [
+    "EN4.11"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:8478b5726aa921df:mechanism:f6b258f0@1",
+   "nmcCodes": [
+    "EN4.44"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:e12d77f21a9cb0c1:mechanism:a83302f5@1",
+   "nmcCodes": [
+    "OP1.4"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:2bf1a715cfb1661d:mechanism:3fbedc02@1",
+   "nmcCodes": [
+    "OP2.5"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:c359dc1ca7d3d7d9:mechanism:088c2fbe@1",
+   "nmcCodes": [
+    "OP4.7"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:d8468ca7dd44a6d3:mechanism:c395f3c0@1",
+   "nmcCodes": [
+    "OP5.2"
+   ],
+   "before": "mechanism",
+   "after": "etiology"
+  },
+  {
+   "objectiveVersionId": "lo:364a6472a8d769e0:mechanism:d5601e2c@1",
+   "nmcCodes": [
+    "OP10.3"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:13ba7f2c534cd0d1:mechanism:3b8d8c81@1",
+   "nmcCodes": [
+    "OP10.5"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:70ddd8f62630abbb:mechanism:0da7b886@1",
+   "nmcCodes": [
+    "DR1.2"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:5f9ecc0814cfb512:mechanism:2dbe35eb@1",
+   "nmcCodes": [
+    "DR9.1"
+   ],
+   "before": "mechanism",
+   "after": "classification"
+  },
+  {
+   "objectiveVersionId": "lo:ec91a9710a2f37ff:mechanism:36070d6f@1",
+   "nmcCodes": [
+    "DR10.1"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:790424c3f93ece1b:mechanism:34a6a00e@1",
+   "nmcCodes": [
+    "DR11.2"
+   ],
+   "before": "mechanism",
+   "after": "drug-safety"
+  },
+  {
+   "objectiveVersionId": "lo:75f6aee1559fd19a:mechanism:07982e0b@1",
+   "nmcCodes": [
+    "DR15.3"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:b2501edad1eea989:mechanism:074ce7db@1",
+   "nmcCodes": [
+    "OR1.6"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:c82c86e35d0cd42a:mechanism:9322d85a@1",
+   "nmcCodes": [
+    "OR14.4"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:2a8b1da724b3023d:mechanism:7c396926@1",
+   "nmcCodes": [
+    "AS1.4"
+   ],
+   "before": "mechanism",
+   "after": "recall"
+  },
+  {
+   "objectiveVersionId": "lo:8679a5d13675c8e8:mechanism:1ae9d92f@1",
+   "nmcCodes": [
+    "AS4.3"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:8679a5d13675c8e8:mechanism:f37bafc2@1",
+   "nmcCodes": [
+    "AS4.4"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:73f922b661148691:mechanism:84ac8c0c@1",
+   "nmcCodes": [
+    "AS5.1"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:73f922b661148691:mechanism:c5f3e014@1",
+   "nmcCodes": [
+    "AS5.3"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:73f922b661148691:mechanism:e899738f@1",
+   "nmcCodes": [
+    "AS5.6"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:f1e370c962124609:mechanism:fa3ababa@1",
+   "nmcCodes": [
+    "AS7.2"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:82f29dcd1e17ba3f:mechanism:5f327872@1",
+   "nmcCodes": [
+    "AS7.4"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:55a4a31fbe8ee2b7:mechanism:a2151543@1",
+   "nmcCodes": [
+    "AS8.5"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:f868661f70df17be:mechanism:5988ae34@1",
+   "nmcCodes": [
+    "AS9.1"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:f868661f70df17be:mechanism:51939457@1",
+   "nmcCodes": [
+    "AS9.2"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:341733e1de2e3720:mechanism:a0534dc9@1",
+   "nmcCodes": [
+    "AS9.3"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:c11d868e09edae06:mechanism:6d07e8a3@1",
+   "nmcCodes": [
+    "AS10.1"
+   ],
+   "before": "mechanism",
+   "after": "complication"
+  },
+  {
+   "objectiveVersionId": "lo:e9d2670af591f5e7:mechanism:e9952920@1",
+   "nmcCodes": [
+    "AS11.1"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:326fc179c3ef9b29:mechanism:cf709b8a@1",
+   "nmcCodes": [
+    "RD3.2"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:e8d7cebbfa058221:mechanism:434bf9b5@1",
+   "nmcCodes": [
+    "RD3.4"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:c81d3add65066695:mechanism:d4b09dea@1",
+   "nmcCodes": [
+    "SU8.3"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:b2936db42c4ec9aa:mechanism:884761f3@1",
+   "nmcCodes": [
+    "SU11.1"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:dac00c621211687b:mechanism:af27c449@1",
+   "nmcCodes": [
+    "SU11.2"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:a6a297e3c7a91f5d:mechanism:52b9537a@1",
+   "nmcCodes": [
+    "SU11.5"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:ac06c5784b043281:mechanism:79e4184f@1",
+   "nmcCodes": [
+    "SU12.2"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:187abe16ea875c84:mechanism:a3ebf635@1",
+   "nmcCodes": [
+    "SU13.2"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:590be14c9a4952a3:mechanism:88e29a63@1",
+   "nmcCodes": [
+    "SU14.3"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:dbaaefbafffc838a:mechanism:3d2374bc@1",
+   "nmcCodes": [
+    "SU16.1"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:f07d7ac4620f55d5:mechanism:5913736f@1",
+   "nmcCodes": [
+    "SU17.1"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:ad6436ba1697e8f4:mechanism:c38663ec@1",
+   "nmcCodes": [
+    "SU21.1"
+   ],
+   "before": "mechanism",
+   "after": "anatomical-reasoning"
+  },
+  {
+   "objectiveVersionId": "lo:68e308978eab49a8:mechanism:516935b2@1",
+   "nmcCodes": [
+    "SU22.5"
+   ],
+   "before": "mechanism",
+   "after": "anatomical-reasoning"
+  },
+  {
+   "objectiveVersionId": "lo:a359c5d0fd727b22:mechanism:e4b9d0a3@1",
+   "nmcCodes": [
+    "SU26.1"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:cd6d597597109218:mechanism:f08cb51b@1",
+   "nmcCodes": [
+    "SU28.14"
+   ],
+   "before": "mechanism",
+   "after": "differential"
+  },
+  {
+   "objectiveVersionId": "lo:5d75deed15e7868c:mechanism:c6766e45@1",
+   "nmcCodes": [
+    "SU30.1"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:33fe1e3e4e8a69b7:mechanism:f57a6e92@1",
+   "nmcCodes": [
+    "OG1.3"
+   ],
+   "before": "mechanism",
+   "after": "recall"
+  },
+  {
+   "objectiveVersionId": "lo:86dc9ce90469cf51:mechanism:8ecfec64@1",
+   "nmcCodes": [
+    "OG1.5"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:4ba55c9f1de2d5bb:mechanism:64e4c463@1",
+   "nmcCodes": [
+    "OG2.1"
+   ],
+   "before": "mechanism",
+   "after": "anatomical-reasoning"
+  },
+  {
+   "objectiveVersionId": "lo:ecba7418e648f0bb:mechanism:bb64b05e@1",
+   "nmcCodes": [
+    "OG8.1"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:cf633edbed3685cd:mechanism:9e612af3@1",
+   "nmcCodes": [
+    "OG8.10"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:b63dff846e4b7d85:mechanism:00cb5ce6@1",
+   "nmcCodes": [
+    "OG18.3"
+   ],
+   "before": "mechanism",
+   "after": "diagnosis"
+  },
+  {
+   "objectiveVersionId": "lo:42ee0fc166e0d9b3:mechanism:3ec54aea@1",
+   "nmcCodes": [
+    "OG18.4"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:bef0d2549c736a83:mechanism:d2f2ba78@1",
+   "nmcCodes": [
+    "OG22.1"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:4fa96168d97d81fa:mechanism:d941f32a@1",
+   "nmcCodes": [
+    "OG26.1"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:f5d587179c869601:mechanism:4cf9da64@1",
+   "nmcCodes": [
+    "OG28.2"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:1726beafd1068bc5:mechanism:077cd516@1",
+   "nmcCodes": [
+    "OG28.3"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:227fa60ccb8842bc:mechanism:e129f5ed@1",
+   "nmcCodes": [
+    "OG28.4"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:1a1daaa244b5a278:mechanism:da36f5b2@1",
+   "nmcCodes": [
+    "PE3.4"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:028bf0f15e9c1c92:mechanism:185e9e0f@1",
+   "nmcCodes": [
+    "PE6.6"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:948c3485d89e1be0:mechanism:51778509@1",
+   "nmcCodes": [
+    "PE7.2"
+   ],
+   "before": "mechanism",
+   "after": "comparison"
+  },
+  {
+   "objectiveVersionId": "lo:5512c035d5b80e9a:mechanism:472e9d41@1",
+   "nmcCodes": [
+    "PE7.3"
+   ],
+   "before": "mechanism",
+   "after": "recall"
+  },
+  {
+   "objectiveVersionId": "lo:5512c035d5b80e9a:mechanism:36849a74@1",
+   "nmcCodes": [
+    "PE7.6"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:0d1866ac64f7efcd:mechanism:2c0ddb5e@1",
+   "nmcCodes": [
+    "PE8.2"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:b5a8d24240ffea71:mechanism:9a1db220@1",
+   "nmcCodes": [
+    "PE9.1"
+   ],
+   "before": "mechanism",
+   "after": "recall"
+  },
+  {
+   "objectiveVersionId": "lo:8e7554143fd1bc83:mechanism:176fb51d@1",
+   "nmcCodes": [
+    "PE9.3"
+   ],
+   "before": "mechanism",
+   "after": "quantitative-reasoning"
+  },
+  {
+   "objectiveVersionId": "lo:146f9f1a1e877c46:mechanism:e071e046@1",
+   "nmcCodes": [
+    "PE10.6"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:83738b855397f535:mechanism:d7ea333f@1",
+   "nmcCodes": [
+    "PE16.1"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:b104f0b014716f96:mechanism:3a1056f7@1",
+   "nmcCodes": [
+    "PE18.5"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:eb58d63c4c2eeb13:mechanism:7f1ba7ef@1",
+   "nmcCodes": [
+    "PE19.16"
+   ],
+   "before": "mechanism",
+   "after": "clinical-feature"
+  },
+  {
+   "objectiveVersionId": "lo:635916943fe67535:mechanism:713dc3a6@1",
+   "nmcCodes": [
+    "PE24.6"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:635916943fe67535:mechanism:a31a41cf@1",
+   "nmcCodes": [
+    "PE24.7"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:43254ac365c9a7a1:mechanism:589f8029@1",
+   "nmcCodes": [
+    "PE24.18"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:4f10acb3577a16b2:mechanism:d991cb4f@1",
+   "nmcCodes": [
+    "PE27.3"
+   ],
+   "before": "mechanism",
+   "after": "differential"
+  },
+  {
+   "objectiveVersionId": "lo:b31a22821c66b69c:mechanism:c8de150a@1",
+   "nmcCodes": [
+    "PE31.2"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:b31a22821c66b69c:mechanism:c3448509@1",
+   "nmcCodes": [
+    "PE31.8"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:aed350eead85b0f2:mechanism:317d0b31@1",
+   "nmcCodes": [
+    "GM1.6"
+   ],
+   "before": "mechanism",
+   "after": "etiology"
+  },
+  {
+   "objectiveVersionId": "lo:a5e61237a51df236:mechanism:9f0bdf75@1",
+   "nmcCodes": [
+    "GM2.20"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:a5e61237a51df236:mechanism:fbef2618@1",
+   "nmcCodes": [
+    "GM2.23"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:19d459ec3f9ff7ff:mechanism:92c03903@1",
+   "nmcCodes": [
+    "GM2.16"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:745be6adaf89a391:mechanism:bb383530@1",
+   "nmcCodes": [
+    "GM3.2"
+   ],
+   "before": "mechanism",
+   "after": "etiology"
+  },
+  {
+   "objectiveVersionId": "lo:745be6adaf89a391:mechanism:6e90ace5@1",
+   "nmcCodes": [
+    "GM3.17"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:9ada3a00d96b09b6:mechanism:d944960f@1",
+   "nmcCodes": [
+    "GM3.18"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:d3760b4ca64e1a02:mechanism:310bc474@1",
+   "nmcCodes": [
+    "GM3.19"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:cb884a8c58e0a87b:mechanism:15b97082@1",
+   "nmcCodes": [
+    "GM4.6"
+   ],
+   "before": "mechanism",
+   "after": "diagnosis"
+  },
+  {
+   "objectiveVersionId": "lo:456b5638540000ca:mechanism:7d25ef35@1",
+   "nmcCodes": [
+    "GM6.11"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:a8aae7dd8ec1066b:mechanism:9f79b091@1",
+   "nmcCodes": [
+    "GM7.15"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:ef01cd75583efc86:mechanism:9c56897f@1",
+   "nmcCodes": [
+    "GM8.13"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:196b7b0fc8cb6abd:mechanism:ff4803d9@1",
+   "nmcCodes": [
+    "GM9.15"
+   ],
+   "before": "mechanism",
+   "after": "drug-safety"
+  },
+  {
+   "objectiveVersionId": "lo:245bd59ac6ab83f1:mechanism:f45ac405@1",
+   "nmcCodes": [
+    "GM10.24"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:3d39b6d652e9521c:mechanism:42a3f794@1",
+   "nmcCodes": [
+    "GM10.22"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:17c8582d125d1c9b:mechanism:811c3eb2@1",
+   "nmcCodes": [
+    "GM11.8"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:a8d621f2d0b0482f:mechanism:770dfd9e@1",
+   "nmcCodes": [
+    "GM12.14"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:7c9325ba86ac41cd:mechanism:52397f18@1",
+   "nmcCodes": [
+    "GM13.9"
+   ],
+   "before": "mechanism",
+   "after": "procedural-skill"
+  },
+  {
+   "objectiveVersionId": "lo:441c8cfc43d83822:mechanism:ed693b78@1",
+   "nmcCodes": [
+    "GM13.19"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:2eaa1eaaf6b74de3:mechanism:4bebbeb4@1",
+   "nmcCodes": [
+    "GM13.14"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:b48106c10635a23c:mechanism:40e7b7e3@1",
+   "nmcCodes": [
+    "GM14.4"
+   ],
+   "before": "mechanism",
+   "after": "risk-factor"
+  },
+  {
+   "objectiveVersionId": "lo:b9cc8f0dd791a209:mechanism:870f3001@1",
+   "nmcCodes": [
+    "GM16.11"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:de8da54b39632249:mechanism:d49f50a0@1",
+   "nmcCodes": [
+    "GM17.7"
+   ],
+   "before": "mechanism",
+   "after": "investigation-selection"
+  },
+  {
+   "objectiveVersionId": "lo:dee99a3f3e7eb9f5:mechanism:89eee622@1",
+   "nmcCodes": [
+    "GM18.10"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:f15fac697d8d7c74:mechanism:8dea8d67@1",
+   "nmcCodes": [
+    "GM18.7"
+   ],
+   "before": "mechanism",
+   "after": "differential"
+  },
+  {
+   "objectiveVersionId": "lo:6e5db894f67be078:mechanism:da547e04@1",
+   "nmcCodes": [
+    "GM19.9"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:400e62b56ad2f19a:mechanism:00e34839@1",
+   "nmcCodes": [
+    "GM20.3"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:9ab44634dd53bc8a:mechanism:f9b0b8ac@1",
+   "nmcCodes": [
+    "GM21.3"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:19ea8af61b99e484:mechanism:3615ff1a@1",
+   "nmcCodes": [
+    "GM22.1"
+   ],
+   "before": "mechanism",
+   "after": "emergency-priority"
+  },
+  {
+   "objectiveVersionId": "lo:19ea8af61b99e484:mechanism:0a25c6e9@1",
+   "nmcCodes": [
+    "GM22.10"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:d97b679b1bee7afc:mechanism:95700f81@1",
+   "nmcCodes": [
+    "GM22.7"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:3b2bfc84cbf3ffc9:mechanism:1ac9edd3@1",
+   "nmcCodes": [
+    "GM25.19"
+   ],
+   "before": "mechanism",
+   "after": "risk-factor"
+  },
+  {
+   "objectiveVersionId": "lo:de16ed6972a99c48:mechanism:0c37d644@1",
+   "nmcCodes": [
+    "GM25.20"
+   ],
+   "before": "mechanism",
+   "after": "treatment-selection"
+  },
+  {
+   "objectiveVersionId": "lo:7277d00279656a63:mechanism:b62f18e9@1",
+   "nmcCodes": [
+    "GM25.21"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:6fa50d356e415b59:mechanism:33ee0cde@1",
+   "nmcCodes": [
+    "GM26.2"
+   ],
+   "before": "mechanism",
+   "after": "diagnosis"
+  },
+  {
+   "objectiveVersionId": "lo:17fbfa154c84bcab:mechanism:081c5a3c@1",
+   "nmcCodes": [
+    "GM28.23"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:f90ab1febd37af3e:mechanism:45dbd90d@1",
+   "nmcCodes": [
+    "GM28.7"
+   ],
+   "before": "mechanism",
+   "after": "etiology"
+  },
+  {
+   "objectiveVersionId": "lo:f2b7aedb5b71a0bb:mechanism:6db7c234@1",
+   "nmcCodes": [
+    "GM28.24"
+   ],
+   "before": "mechanism",
+   "after": "prevention-screening"
+  },
+  {
+   "objectiveVersionId": "lo:1bee047223f0f976:mechanism:5500688f@1",
+   "nmcCodes": [
+    "GM29.1"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:1bee047223f0f976:mechanism:1bba17b1@1",
+   "nmcCodes": [
+    "GM29.3"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:33f8620c4f76f34b:mechanism:2414aa94@1",
+   "nmcCodes": [
+    "GM29.2"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  },
+  {
+   "objectiveVersionId": "lo:18e5f5f6ad956759:mechanism:046820d8@1",
+   "nmcCodes": [
+    "GM29.5"
+   ],
+   "before": "mechanism",
+   "after": "ethics-communication-safety"
+  }
+ ]
+}
