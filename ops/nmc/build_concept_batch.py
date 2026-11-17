@@ -56,23 +56,25 @@ for c in spec.C:
     existing=spec.EXISTING.get(c['label'])
     links=[]
     for code,scope in c['links']:
-        rs=byCode[code]; assert len(rs)==1,code; r=rs[0]; rid=r['referenceId']
-        lv=level_code(r['level']); procedural=lv in('SH','P')
-        if r.get('identifierState')=='standard' and 'amendment-notice' in r.get('uncertainty',[]) and scope is not None: wordings=[(scope,'official-replacement')]
-        elif scope is not None: wordings=[(scope,'scoped-task-in-source-row')]
-        elif code in link_plan: wordings=[(w,'scoped-task-in-source-row') for w in link_plan[code]]
-        else:
-            w=review[rid]['finalValue']['draftTask'] if rid in review else draft[rid][0]
-            wordings=[(w,'literal-name-in-source-row')]
-        mode=('performance-and-knowledge' if procedural else 'knowledge')
-        if rid in review: mode=review[rid]['finalValue']['mode']
-        elif rid in draft and scope is None: mode=draft[rid][1]
-        task=c.get('task') or ('procedural-skill' if mode!='knowledge' and procedural else ('interpretation' if TESTS.search(c['label']) else 'mechanism'))
-        for i,(w,basis) in enumerate(wordings):
-            ov='lo:'+key.split(':')[1]+':'+task+':'+hashlib.sha256((rid+w).encode()).hexdigest()[:8]+'@1'
-            objectives.append({'objectiveVersionId':ov,'conceptKey':key,'existingConceptId':existing,'referenceId':rid,'code':code,'task':task,'depth':DEPTH[lv],'mode':mode,'wording':w,'basis':basis,
-              'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
-            links.append(code)
+        rs=byCode[code]; assert len(rs)==1 or len({x['descriptionSha256'] for x in rs})==1,code  # identical duplicate source rows share one link
+        for r in rs:
+          rid=r['referenceId']
+          lv=level_code(r['level']); procedural=lv in('SH','P')
+          if r.get('identifierState')=='standard' and 'amendment-notice' in r.get('uncertainty',[]) and scope is not None: wordings=[(scope,'official-replacement')]
+          elif scope is not None: wordings=[(scope,'scoped-task-in-source-row')]
+          elif code in link_plan: wordings=[(w,'scoped-task-in-source-row') for w in link_plan[code]]
+          else:
+              w=review[rid]['finalValue']['draftTask'] if rid in review else draft[rid][0]
+              wordings=[(w,'literal-name-in-source-row')]
+          mode=('performance-and-knowledge' if procedural else 'knowledge')
+          if rid in review: mode=review[rid]['finalValue']['mode']
+          elif rid in draft and scope is None: mode=draft[rid][1]
+          task=c.get('task') or ('procedural-skill' if mode!='knowledge' and procedural else ('interpretation' if TESTS.search(c['label']) else 'mechanism'))
+          for i,(w,basis) in enumerate(wordings):
+              ov='lo:'+key.split(':')[1]+':'+task+':'+hashlib.sha256((rid+w).encode()).hexdigest()[:8]+'@1'
+              objectives.append({'objectiveVersionId':ov,'conceptKey':key,'existingConceptId':existing,'referenceId':rid,'code':code,'task':task,'depth':DEPTH[lv],'mode':mode,'wording':w,'basis':basis,
+                'sourcePage':r['pdfPages'][0],'sourceBodySha256':rowsha.get(rid),'descriptionSha256':r['descriptionSha256'],'status':'draft','authorship':'ai_generated_original'})
+              links.append(code)
     subjects=([] if hasattr(spec,'SUBJECTS') else [SUBJECT])+[s for s in c['extraSubjects'] if s!=SUBJECT]
     expected=None
     if getattr(spec,'EVIDENCED_SUBJECTS_ONLY',False):
