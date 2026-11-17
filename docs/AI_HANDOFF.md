@@ -1,5 +1,6 @@
 ## owner-api: foundation data fetched at a pinned commit instead of bundled — 2026-11-17T10:20Z
 
+- 2026-11-17: owner-api foundation page hit the Edge resource limit (546) after the @22 registry deploy. `foundationDraftPage` now indexes source bindings by objective and reference once and caches identity digests per concept (local: ~520 ms → ~180 ms). Output unchanged.
 - `owner-api` bundled ~4.4 MB of registry JSON (draft pack 3.4 MB, reference catalogue 0.9 MB, four evidence files), which is why its redeploy kept being deferred and why Admin still showed the older pack.
 - New `supabase/functions/owner-api/_shared/foundation-data.js`: in the Edge runtime the six files are fetched from GitHub at commit `FOUNDATION_DATA_COMMIT` and checked against pinned SHA-256 digests (fail closed: 503 `foundation_drafts_unavailable`); in Node tests they are read from the working tree. Bundle drops to 24 files, ~148 KB. A new test asserts the pins match the working-tree files, so a registry change without a re-pin fails CI.
 - Data pinned to main after registry @22 (2,836 objectives, 2,613/2,634 rows).

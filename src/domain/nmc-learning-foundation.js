@@ -51,16 +51,24 @@ export async function foundationDraftPage(input,catalogue,catalog,filters={}){
  for(const c of catalog.concepts){if(!c||known.has(c.conceptId))bad();known.set(c.conceptId,c);}
  const refs=new Map(catalogue.references.map(r=>[r.referenceId,r])),topics=new Map(catalogue.topics.map(t=>[t.topicId,t]));
  const subjects=new Set(catalogue.references.map(r=>r.subjectId));if(f.subject&&!subjects.has(f.subject))bad();
+ // Index bindings once: per-row scans were O(objectives x bindings) and exceeded the Edge CPU limit.
+ const byObjective=new Map(),byReference=new Map();
+ for(const b of p.sourceBindings){
+  if(!byObjective.has(b.objectiveVersionId))byObjective.set(b.objectiveVersionId,[]);byObjective.get(b.objectiveVersionId).push(b);
+  if(!byReference.has(b.referenceId))byReference.set(b.referenceId,[]);byReference.get(b.referenceId).push(b.objectiveVersionId);
+ }
+ const digests=new Map();
+ const digestOf=async c=>{if(!digests.has(c.conceptId))digests.set(c.conceptId,await canonicalIdentityDigest(c));return digests.get(c.conceptId);};
  const objectives=[];
  for(const row of p.objectives){
   const live=known.get(row.objective.conceptId);
-  const identityState=!live?'missing':await canonicalIdentityDigest(live)===row.canonicalIdentitySha256?'current':'changed';
-  const sourceReferences=p.sourceBindings.filter(b=>b.objectiveVersionId===row.objective.objectiveVersionId).map(b=>({...b,code:refs.get(b.referenceId).observedCode,subjectId:refs.get(b.referenceId).subjectId}));
+  const identityState=!live?'missing':await digestOf(live)===row.canonicalIdentitySha256?'current':'changed';
+  const sourceReferences=(byObjective.get(row.objective.objectiveVersionId)||[]).map(b=>({...b,code:refs.get(b.referenceId).observedCode,subjectId:refs.get(b.referenceId).subjectId}));
   objectives.push({...row,canonicalLabel:live?.label||'Canonical identity unavailable',identityState,identityKind:!live?'missing':live.identityKind==='accepted-private'?'accepted-private':'catalogue',sourceReferences});
  }
  const q=f.search.toLowerCase().trim(),codeQuery=q.replace(/\s+/g,'');
  const requirements=catalogue.references.map(r=>({referenceId:r.referenceId,sourceEdition:p.sourceEdition,sourceSha256:p.sourceSha256,code:r.observedCode,pdfPage:r.pdfPage,subjectId:r.subjectId,topicLabel:topics.get(r.topicId)?.label||'Unresolved topic heading',identifierState:r.identifierState,amendmentNotice:r.amendmentNotice,
-  objectiveVersionIds:p.sourceBindings.filter(b=>b.referenceId===r.referenceId).map(b=>b.objectiveVersionId)}))
+  objectiveVersionIds:byReference.get(r.referenceId)||[]}))
   .filter(r=>(!f.subject||r.subjectId===f.subject)&&(!q||r.code.toLowerCase().replace(/\s+/g,'').includes(codeQuery)||r.topicLabel.toLowerCase().includes(q)));
  return {contractId:'admin-foundation-objective-drafts-v1',draftVersion:p.draftVersion,sourceEdition:p.sourceEdition,status:'draft-review-required',authoredCatalogVersion:p.authoredCatalogVersion,currentCatalogVersion:catalog.version,
   catalogVersionMatches:p.authoredCatalogVersion===catalog.version,identityBindingsCurrent:objectives.every(o=>o.identityState==='current'),
