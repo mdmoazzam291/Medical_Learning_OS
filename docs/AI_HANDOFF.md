@@ -1,3 +1,11 @@
+## Anatomy part B1 bound (registry @19); part B2 batch — 2026-11-17T08:35Z
+
+- Owner accepted `nmc-anatomy-concepts-part-b1-v1-20261116` at 08:25:26Z (35 receipts; pairs digest `84528ff7…087e` matched). Registry @19: 2,213 objectives, 2,214 bindings, 1,388 concepts, 1,995 of 2,634 rows (76%).
+- Part B2 `nmc-anatomy-concepts-part-b2-v1-20261116` (AN58–AN82): 59 concepts (44 new; 15 reused incl. B1's Cerebrospinal fluid), 89 objectives, all 86 rows. Names already checked with part B.
+- Endpoint pin: commit `9517095`, SHA-256 `624bdeb0…b047`. After B2, only Medicine remains.
+
+---
+
 ## Anatomy part A2 bound (registry @18); part B1 batch — 2026-11-17T08:20Z
 
 - Owner accepted `nmc-anatomy-concepts-part-a2-v1-20261116` at 08:09:12Z (65 receipts; pairs digest `f9942049…0656` matched). Registry @18: 2,144 objectives, 2,145 bindings, 1,353 concepts, 1,927 of 2,634 rows (73%).
