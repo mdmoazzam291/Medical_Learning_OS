@@ -1,0 +1,410 @@
+[
+ {
+  "prerequisite": "Pharmacology",
+  "concept": "Pharmacokinetics",
+  "strength": "helpful",
+  "reason": "Pharmacokinetics is a branch of pharmacology"
+ },
+ {
+  "prerequisite": "Pharmacology",
+  "concept": "Pharmacodynamics",
+  "strength": "helpful",
+  "reason": "Pharmacodynamics is a branch of pharmacology"
+ },
+ {
+  "prerequisite": "Pharmacokinetics",
+  "concept": "Routes of drug administration",
+  "strength": "helpful",
+  "reason": "Route determines absorption"
+ },
+ {
+  "prerequisite": "Drug formulations",
+  "concept": "Routes of drug administration",
+  "strength": "essential",
+  "reason": "Formulation matches route"
+ },
+ {
+  "prerequisite": "Pharmacodynamics",
+  "concept": "Drug combinations",
+  "strength": "essential",
+  "reason": "Combinations interact pharmacodynamically"
+ },
+ {
+  "prerequisite": "Pharmacokinetics",
+  "concept": "Prescribing in special populations",
+  "strength": "essential",
+  "reason": "Special populations alter pharmacokinetics"
+ },
+ {
+  "prerequisite": "Pharmacodynamics",
+  "concept": "Adverse drug reactions",
+  "strength": "essential",
+  "reason": "ADRs follow drug actions"
+ },
+ {
+  "prerequisite": "Adverse drug reactions",
+  "concept": "Pharmacovigilance",
+  "strength": "essential",
+  "reason": "Pharmacovigilance detects ADRs"
+ },
+ {
+  "prerequisite": "Pharmacokinetics",
+  "concept": "Drug interactions",
+  "strength": "essential",
+  "reason": "Many interactions are pharmacokinetic"
+ },
+ {
+  "prerequisite": "Pharmacodynamics",
+  "concept": "Drug interactions",
+  "strength": "essential",
+  "reason": "Some interactions are pharmacodynamic"
+ },
+ {
+  "prerequisite": "Peripheral nervous system",
+  "concept": "Adrenergic drugs",
+  "strength": "essential",
+  "reason": "Adrenergic drugs act on sympathetic receptors"
+ },
+ {
+  "prerequisite": "Peripheral nervous system",
+  "concept": "Cholinergic drugs",
+  "strength": "essential",
+  "reason": "Cholinergic drugs act on parasympathetic receptors"
+ },
+ {
+  "prerequisite": "Adrenergic drugs",
+  "concept": "Vasopressors and inotropes",
+  "strength": "essential",
+  "reason": "Vasopressors are adrenergic agonists"
+ },
+ {
+  "prerequisite": "Neuromuscular transmission",
+  "concept": "Skeletal muscle relaxants",
+  "strength": "essential",
+  "reason": "Relaxants act at the neuromuscular junction"
+ },
+ {
+  "prerequisite": "Nerve fibre properties",
+  "concept": "Local anaesthetics",
+  "strength": "essential",
+  "reason": "Local anaesthetics block nerve conduction"
+ },
+ {
+  "prerequisite": "Pharmacodynamics",
+  "concept": "Antihistamines",
+  "strength": "helpful",
+  "reason": "Antihistamines block H1 receptors"
+ },
+ {
+  "prerequisite": "Hyperuricaemia",
+  "concept": "Antigout drugs",
+  "strength": "essential",
+  "reason": "Antigout drugs lower uric acid"
+ },
+ {
+  "prerequisite": "Central nervous system",
+  "concept": "General anaesthetics",
+  "strength": "essential",
+  "reason": "Anaesthetics depress the CNS"
+ },
+ {
+  "prerequisite": "Neurotransmitters",
+  "concept": "Sedative-hypnotics",
+  "strength": "essential",
+  "reason": "Hypnotics enhance GABA"
+ },
+ {
+  "prerequisite": "Pain",
+  "concept": "Opioid analgesics",
+  "strength": "essential",
+  "reason": "Opioids act on pain pathways"
+ },
+ {
+  "prerequisite": "Neurotransmitters",
+  "concept": "Antidepressants",
+  "strength": "essential",
+  "reason": "Antidepressants raise monoamines"
+ },
+ {
+  "prerequisite": "Neurotransmitters",
+  "concept": "Antipsychotics",
+  "strength": "essential",
+  "reason": "Antipsychotics block dopamine"
+ },
+ {
+  "prerequisite": "Neurotransmitters",
+  "concept": "Anxiolytics",
+  "strength": "essential",
+  "reason": "Anxiolytics act on GABA and serotonin"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Anticoagulants",
+  "strength": "essential",
+  "reason": "Anticoagulants block coagulation"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Fibrinolytics",
+  "strength": "essential",
+  "reason": "Fibrinolytics dissolve clots"
+ },
+ {
+  "prerequisite": "Urine formation",
+  "concept": "Diuretics",
+  "strength": "essential",
+  "reason": "Diuretics act on tubular segments"
+ },
+ {
+  "prerequisite": "Juxtaglomerular apparatus",
+  "concept": "Renin-angiotensin system inhibitors",
+  "strength": "essential",
+  "reason": "RAS inhibitors block renin-angiotensin"
+ },
+ {
+  "prerequisite": "Blood pressure",
+  "concept": "Antihypertensive drugs",
+  "strength": "essential",
+  "reason": "Antihypertensives target BP determinants"
+ },
+ {
+  "prerequisite": "Coronary circulation",
+  "concept": "Antianginal drugs",
+  "strength": "essential",
+  "reason": "Antianginals improve supply-demand balance"
+ },
+ {
+  "prerequisite": "Cardiac arrhythmias",
+  "concept": "Antiarrhythmic drugs",
+  "strength": "essential",
+  "reason": "Antiarrhythmics target arrhythmia mechanisms"
+ },
+ {
+  "prerequisite": "Regulation of respiration",
+  "concept": "Antitussives",
+  "strength": "helpful",
+  "reason": "Antitussives act on the cough reflex"
+ },
+ {
+  "prerequisite": "Vomiting",
+  "concept": "Antiemetics",
+  "strength": "essential",
+  "reason": "Antiemetics act on the vomiting reflex"
+ },
+ {
+  "prerequisite": "Diarrhoea",
+  "concept": "Antidiarrhoeal drugs",
+  "strength": "essential",
+  "reason": "Antidiarrhoeals act on diarrhoea mechanisms"
+ },
+ {
+  "prerequisite": "Constipation",
+  "concept": "Laxatives",
+  "strength": "essential",
+  "reason": "Laxatives treat constipation"
+ },
+ {
+  "prerequisite": "Inflammatory bowel disease",
+  "concept": "Drugs for inflammatory bowel disease",
+  "strength": "essential",
+  "reason": "IBD drugs target IBD inflammation"
+ },
+ {
+  "prerequisite": "Osteoporosis",
+  "concept": "Antiosteoporotic drugs",
+  "strength": "essential",
+  "reason": "Antiosteoporotics treat osteoporosis"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Pituitary hormone drugs",
+  "strength": "essential",
+  "reason": "Pituitary drugs mimic or block its hormones"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Corticosteroids",
+  "strength": "essential",
+  "reason": "Corticosteroids mimic adrenal hormones"
+ },
+ {
+  "prerequisite": "Male reproductive system",
+  "concept": "Androgens",
+  "strength": "essential",
+  "reason": "Androgens mimic testicular hormones"
+ },
+ {
+  "prerequisite": "Male reproductive system",
+  "concept": "Drugs for erectile dysfunction",
+  "strength": "helpful",
+  "reason": "ED drugs act on erectile physiology"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Female sex hormones",
+  "strength": "essential",
+  "reason": "Sex hormones mimic cycle hormones"
+ },
+ {
+  "prerequisite": "Parturition",
+  "concept": "Uterotonics",
+  "strength": "essential",
+  "reason": "Uterotonics act on uterine contraction"
+ },
+ {
+  "prerequisite": "Parturition",
+  "concept": "Tocolytics",
+  "strength": "essential",
+  "reason": "Tocolytics relax the uterus"
+ },
+ {
+  "prerequisite": "Infertility",
+  "concept": "Drugs for infertility",
+  "strength": "essential",
+  "reason": "Infertility drugs treat infertility"
+ },
+ {
+  "prerequisite": "Leprosy",
+  "concept": "Antileprosy drugs",
+  "strength": "essential",
+  "reason": "Antileprosy drugs treat leprosy"
+ },
+ {
+  "prerequisite": "Lymphatic filariasis",
+  "concept": "Antifilarial drugs",
+  "strength": "essential",
+  "reason": "Antifilarials treat filariasis"
+ },
+ {
+  "prerequisite": "Antimicrobial chemotherapy",
+  "concept": "Antifungal drugs",
+  "strength": "helpful",
+  "reason": "Antifungals follow chemotherapy principles"
+ },
+ {
+  "prerequisite": "Antimicrobial chemotherapy",
+  "concept": "Anthelmintics",
+  "strength": "helpful",
+  "reason": "Anthelmintics follow chemotherapy principles"
+ },
+ {
+  "prerequisite": "Antimicrobial chemotherapy",
+  "concept": "Antiviral drugs",
+  "strength": "helpful",
+  "reason": "Antivirals follow chemotherapy principles"
+ },
+ {
+  "prerequisite": "Cell cycle",
+  "concept": "Anticancer drugs",
+  "strength": "essential",
+  "reason": "Anticancer drugs target the cell cycle"
+ },
+ {
+  "prerequisite": "Immune system",
+  "concept": "Immunomodulators",
+  "strength": "essential",
+  "reason": "Immunomodulators act on the immune system"
+ },
+ {
+  "prerequisite": "Heavy metal poisoning",
+  "concept": "Chelating agents",
+  "strength": "essential",
+  "reason": "Chelators treat heavy metal poisoning"
+ },
+ {
+  "prerequisite": "Skin",
+  "concept": "Dermatological drugs",
+  "strength": "helpful",
+  "reason": "Topical drugs act on skin layers"
+ },
+ {
+  "prerequisite": "Eyeball",
+  "concept": "Ocular drugs",
+  "strength": "helpful",
+  "reason": "Ocular drugs act on eye structures"
+ },
+ {
+  "prerequisite": "Essential medicines",
+  "concept": "Personal drug selection",
+  "strength": "helpful",
+  "reason": "Personal drug selection uses essential medicines"
+ },
+ {
+  "prerequisite": "Personal drug selection",
+  "concept": "Prescription writing",
+  "strength": "essential",
+  "reason": "Prescriptions apply drug selection"
+ },
+ {
+  "prerequisite": "Prescription writing",
+  "concept": "Legal and ethical aspects of prescribing",
+  "strength": "essential",
+  "reason": "Legal aspects govern prescribing"
+ },
+ {
+  "prerequisite": "Pharmacokinetics",
+  "concept": "Therapeutic drug monitoring",
+  "strength": "essential",
+  "reason": "TDM applies pharmacokinetics"
+ },
+ {
+  "prerequisite": "Gene mutations",
+  "concept": "Pharmacogenomics",
+  "strength": "essential",
+  "reason": "Pharmacogenomics follows genetic variation"
+ },
+ {
+  "prerequisite": "Drug development",
+  "concept": "Drug regulation",
+  "strength": "helpful",
+  "reason": "Regulation covers drug development"
+ },
+ {
+  "prerequisite": "Pharmacodynamics",
+  "concept": "Drug development",
+  "strength": "helpful",
+  "reason": "Development tests drug action"
+ },
+ {
+  "prerequisite": "Prescription writing",
+  "concept": "Medication counselling",
+  "strength": "helpful",
+  "reason": "Counselling explains the prescription"
+ },
+ {
+  "prerequisite": "Medication counselling",
+  "concept": "Medication adherence",
+  "strength": "essential",
+  "reason": "Counselling supports adherence"
+ },
+ {
+  "prerequisite": "Rational use of medicines",
+  "concept": "Essential medicines",
+  "strength": "helpful",
+  "reason": "Essential medicines support rational use"
+ },
+ {
+  "prerequisite": "Drug information",
+  "concept": "Drug promotion",
+  "strength": "helpful",
+  "reason": "Promotion is judged against drug information"
+ },
+ {
+  "prerequisite": "Antimicrobial resistance",
+  "concept": "Antimicrobial stewardship",
+  "strength": "essential",
+  "reason": "Stewardship counters resistance"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Disinfection",
+  "strength": "helpful",
+  "reason": "Disinfection breaks transmission"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Sexually transmitted infections",
+  "strength": "essential",
+  "reason": "STIs follow sexual transmission"
+ }
+]

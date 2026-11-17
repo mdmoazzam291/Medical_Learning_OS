@@ -1,0 +1,800 @@
+[
+ {
+  "prerequisite": "Cell",
+  "concept": "Homeostasis",
+  "strength": "essential",
+  "reason": "Homeostasis is maintained by cell functions"
+ },
+ {
+  "prerequisite": "Cell",
+  "concept": "Membrane transport",
+  "strength": "essential",
+  "reason": "Transport happens across cell membranes"
+ },
+ {
+  "prerequisite": "Cell membrane",
+  "concept": "Membrane transport",
+  "strength": "essential",
+  "reason": "Membrane structure determines transport"
+ },
+ {
+  "prerequisite": "Membrane transport",
+  "concept": "Membrane potentials",
+  "strength": "essential",
+  "reason": "Ion transport creates membrane potentials"
+ },
+ {
+  "prerequisite": "Membrane transport",
+  "concept": "Body fluid compartments",
+  "strength": "helpful",
+  "reason": "Transport sets compartment composition"
+ },
+ {
+  "prerequisite": "Blood composition",
+  "concept": "Plasma proteins",
+  "strength": "essential",
+  "reason": "Plasma proteins are a blood component"
+ },
+ {
+  "prerequisite": "Erythropoiesis",
+  "concept": "Haemoglobin",
+  "strength": "helpful",
+  "reason": "Haemoglobin is made during erythropoiesis"
+ },
+ {
+  "prerequisite": "Haematopoiesis",
+  "concept": "Erythropoiesis",
+  "strength": "essential",
+  "reason": "Erythropoiesis is part of haematopoiesis"
+ },
+ {
+  "prerequisite": "Erythropoiesis",
+  "concept": "Polycythaemia",
+  "strength": "essential",
+  "reason": "Polycythaemia is excess erythropoiesis"
+ },
+ {
+  "prerequisite": "Haematopoiesis",
+  "concept": "Leucocytes",
+  "strength": "essential",
+  "reason": "Leucocytes arise from haematopoiesis"
+ },
+ {
+  "prerequisite": "Immune system",
+  "concept": "Immunity",
+  "strength": "helpful",
+  "reason": "Immunity is the work of the immune system"
+ },
+ {
+  "prerequisite": "Haematopoiesis",
+  "concept": "Platelets",
+  "strength": "essential",
+  "reason": "Platelets arise from megakaryocytes"
+ },
+ {
+  "prerequisite": "Platelets",
+  "concept": "Haemostasis",
+  "strength": "essential",
+  "reason": "Platelets start haemostasis"
+ },
+ {
+  "prerequisite": "Blood composition",
+  "concept": "Red cell count",
+  "strength": "essential",
+  "reason": "Red cell count measures a blood component"
+ },
+ {
+  "prerequisite": "Leucocytes",
+  "concept": "Leucocyte counts",
+  "strength": "essential",
+  "reason": "Counts measure leucocyte types"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Bleeding and clotting times",
+  "strength": "essential",
+  "reason": "Bleeding and clotting times test haemostasis"
+ },
+ {
+  "prerequisite": "Red cell count",
+  "concept": "Red cell indices",
+  "strength": "essential",
+  "reason": "Indices are derived from red cell count"
+ },
+ {
+  "prerequisite": "Haematocrit",
+  "concept": "Red cell indices",
+  "strength": "essential",
+  "reason": "Indices are derived from haematocrit"
+ },
+ {
+  "prerequisite": "Plasma proteins",
+  "concept": "Erythrocyte sedimentation rate",
+  "strength": "helpful",
+  "reason": "ESR depends on plasma proteins"
+ },
+ {
+  "prerequisite": "Blood composition",
+  "concept": "Haematocrit",
+  "strength": "essential",
+  "reason": "Haematocrit is red cell volume fraction"
+ },
+ {
+  "prerequisite": "Erythropoiesis",
+  "concept": "Reticulocyte count",
+  "strength": "essential",
+  "reason": "Reticulocytes reflect erythropoiesis"
+ },
+ {
+  "prerequisite": "Platelets",
+  "concept": "Platelet count",
+  "strength": "essential",
+  "reason": "Platelet count measures platelets"
+ },
+ {
+  "prerequisite": "Neuron",
+  "concept": "Nerve fibre properties",
+  "strength": "essential",
+  "reason": "Fibre properties depend on neuron structure"
+ },
+ {
+  "prerequisite": "Membrane potentials",
+  "concept": "Nerve fibre properties",
+  "strength": "essential",
+  "reason": "Conduction depends on membrane potentials"
+ },
+ {
+  "prerequisite": "Synapse",
+  "concept": "Neuromuscular transmission",
+  "strength": "essential",
+  "reason": "The NMJ is a specialised synapse"
+ },
+ {
+  "prerequisite": "Neuromuscular transmission",
+  "concept": "Myasthenia gravis",
+  "strength": "essential",
+  "reason": "Myasthenia blocks neuromuscular transmission"
+ },
+ {
+  "prerequisite": "Neuromuscular transmission",
+  "concept": "Lambert-Eaton myasthenic syndrome",
+  "strength": "essential",
+  "reason": "LEMS blocks acetylcholine release"
+ },
+ {
+  "prerequisite": "Skeletal muscle contraction",
+  "concept": "Muscle fibre types",
+  "strength": "helpful",
+  "reason": "Fibre types differ in contraction"
+ },
+ {
+  "prerequisite": "Neuromuscular transmission",
+  "concept": "Skeletal muscle contraction",
+  "strength": "essential",
+  "reason": "Contraction starts with neuromuscular transmission"
+ },
+ {
+  "prerequisite": "Skeletal muscle contraction",
+  "concept": "Muscle work and metabolism",
+  "strength": "essential",
+  "reason": "Work and metabolism follow contraction"
+ },
+ {
+  "prerequisite": "Skeletal muscle contraction",
+  "concept": "Myopathies",
+  "strength": "helpful",
+  "reason": "Myopathies disrupt contraction"
+ },
+ {
+  "prerequisite": "Muscle work and metabolism",
+  "concept": "Ergography",
+  "strength": "essential",
+  "reason": "Ergography records muscle work and fatigue"
+ },
+ {
+  "prerequisite": "Skeletal muscle contraction",
+  "concept": "Amphibian nerve-muscle experiments",
+  "strength": "helpful",
+  "reason": "Experiments demonstrate contraction properties"
+ },
+ {
+  "prerequisite": "Membrane potentials",
+  "concept": "Smooth muscle contraction",
+  "strength": "helpful",
+  "reason": "Smooth muscle excitation follows membrane potentials"
+ },
+ {
+  "prerequisite": "Digestive system",
+  "concept": "Gastrointestinal hormones",
+  "strength": "essential",
+  "reason": "GI hormones regulate the digestive system"
+ },
+ {
+  "prerequisite": "Gastrointestinal hormones",
+  "concept": "Gastric secretion",
+  "strength": "essential",
+  "reason": "Gastrin regulates gastric secretion"
+ },
+ {
+  "prerequisite": "Gastrointestinal hormones",
+  "concept": "Pancreatic exocrine secretion",
+  "strength": "essential",
+  "reason": "Secretin and CCK regulate pancreatic secretion"
+ },
+ {
+  "prerequisite": "Digestive system",
+  "concept": "Salivary secretion",
+  "strength": "helpful",
+  "reason": "Salivary secretion starts digestion"
+ },
+ {
+  "prerequisite": "Gastric secretion",
+  "concept": "Digestion and absorption",
+  "strength": "helpful",
+  "reason": "Acid and pepsin start protein digestion"
+ },
+ {
+  "prerequisite": "Pancreatic exocrine secretion",
+  "concept": "Digestion and absorption",
+  "strength": "essential",
+  "reason": "Pancreatic enzymes drive digestion"
+ },
+ {
+  "prerequisite": "Smooth muscle contraction",
+  "concept": "Gastrointestinal motility",
+  "strength": "essential",
+  "reason": "Gut motility is smooth muscle contraction"
+ },
+ {
+  "prerequisite": "Bile",
+  "concept": "Gallbladder",
+  "strength": "helpful",
+  "reason": "The gallbladder stores and concentrates bile"
+ },
+ {
+  "prerequisite": "Liver",
+  "concept": "Bile",
+  "strength": "essential",
+  "reason": "Bile is secreted by the liver"
+ },
+ {
+  "prerequisite": "Liver",
+  "concept": "Liver function tests",
+  "strength": "essential",
+  "reason": "Tests reflect liver functions"
+ },
+ {
+  "prerequisite": "Gastric secretion",
+  "concept": "Peptic ulcer disease",
+  "strength": "essential",
+  "reason": "Ulcers follow imbalance of acid and defence"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Gastro-oesophageal reflux disease",
+  "strength": "essential",
+  "reason": "Reflux follows failure of sphincter motility"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Vomiting",
+  "strength": "helpful",
+  "reason": "Vomiting is a reflex motility event"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Constipation",
+  "strength": "essential",
+  "reason": "Constipation is slow colonic motility"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Adynamic ileus",
+  "strength": "essential",
+  "reason": "Ileus is loss of motility"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Hirschsprung disease",
+  "strength": "essential",
+  "reason": "Hirschsprung disease is absent colonic motility"
+ },
+ {
+  "prerequisite": "Cardiac muscle properties",
+  "concept": "Cardiac cycle",
+  "strength": "essential",
+  "reason": "The cycle follows cardiac muscle properties"
+ },
+ {
+  "prerequisite": "Cardiac conduction system",
+  "concept": "Cardiac cycle",
+  "strength": "essential",
+  "reason": "Electrical events trigger the cycle"
+ },
+ {
+  "prerequisite": "Membrane potentials",
+  "concept": "Cardiac muscle properties",
+  "strength": "essential",
+  "reason": "Cardiac excitability follows membrane potentials"
+ },
+ {
+  "prerequisite": "Heart",
+  "concept": "Cardiac muscle properties",
+  "strength": "helpful",
+  "reason": "Cardiac muscle structure explains properties"
+ },
+ {
+  "prerequisite": "Heart",
+  "concept": "Cardiac conduction system",
+  "strength": "helpful",
+  "reason": "The conduction system is part of the heart"
+ },
+ {
+  "prerequisite": "Cardiovascular regulation",
+  "concept": "Heart rate",
+  "strength": "essential",
+  "reason": "Heart rate is under cardiovascular regulation"
+ },
+ {
+  "prerequisite": "Heart rate",
+  "concept": "Cardiac output",
+  "strength": "essential",
+  "reason": "Cardiac output is heart rate times stroke volume"
+ },
+ {
+  "prerequisite": "Cardiac cycle",
+  "concept": "Cardiac output",
+  "strength": "essential",
+  "reason": "Stroke volume follows the cardiac cycle"
+ },
+ {
+  "prerequisite": "Haemodynamics",
+  "concept": "Regional circulations",
+  "strength": "essential",
+  "reason": "Regional flow follows haemodynamics"
+ },
+ {
+  "prerequisite": "Cardiovascular regulation",
+  "concept": "Syncope",
+  "strength": "essential",
+  "reason": "Syncope is failure of cardiovascular regulation"
+ },
+ {
+  "prerequisite": "Respiratory system",
+  "concept": "Mechanics of breathing",
+  "strength": "essential",
+  "reason": "Breathing mechanics follow respiratory system structure"
+ },
+ {
+  "prerequisite": "Mechanics of breathing",
+  "concept": "Pulmonary compliance and gas exchange",
+  "strength": "essential",
+  "reason": "Ventilation delivers air for gas exchange"
+ },
+ {
+  "prerequisite": "Pulmonary compliance and gas exchange",
+  "concept": "Transport of respiratory gases",
+  "strength": "essential",
+  "reason": "Gas transport follows exchange"
+ },
+ {
+  "prerequisite": "Haemoglobin",
+  "concept": "Transport of respiratory gases",
+  "strength": "essential",
+  "reason": "Haemoglobin carries oxygen"
+ },
+ {
+  "prerequisite": "Transport of respiratory gases",
+  "concept": "Regulation of respiration",
+  "strength": "helpful",
+  "reason": "Blood gases drive respiratory control"
+ },
+ {
+  "prerequisite": "Regulation of respiration",
+  "concept": "Dyspnoea",
+  "strength": "essential",
+  "reason": "Dyspnoea relates to respiratory drive"
+ },
+ {
+  "prerequisite": "Transport of respiratory gases",
+  "concept": "Hypoxia",
+  "strength": "essential",
+  "reason": "Hypoxia is inadequate oxygen delivery"
+ },
+ {
+  "prerequisite": "Hypoxia",
+  "concept": "Cyanosis",
+  "strength": "essential",
+  "reason": "Cyanosis is a sign of hypoxia"
+ },
+ {
+  "prerequisite": "Hypoxia",
+  "concept": "Asphyxia",
+  "strength": "essential",
+  "reason": "Asphyxia combines hypoxia and hypercapnia"
+ },
+ {
+  "prerequisite": "Regulation of respiration",
+  "concept": "Periodic breathing",
+  "strength": "essential",
+  "reason": "Periodic breathing is unstable respiratory control"
+ },
+ {
+  "prerequisite": "Hypoxia",
+  "concept": "High altitude",
+  "strength": "essential",
+  "reason": "Altitude causes hypoxic hypoxia"
+ },
+ {
+  "prerequisite": "Pulmonary compliance and gas exchange",
+  "concept": "Diving",
+  "strength": "helpful",
+  "reason": "Diving changes gas pressures"
+ },
+ {
+  "prerequisite": "Mechanics of breathing",
+  "concept": "Artificial respiration",
+  "strength": "essential",
+  "reason": "Artificial respiration replaces breathing mechanics"
+ },
+ {
+  "prerequisite": "Mechanics of breathing",
+  "concept": "Peak expiratory flow rate",
+  "strength": "essential",
+  "reason": "Peak flow reflects airway mechanics"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Juxtaglomerular apparatus",
+  "strength": "essential",
+  "reason": "The JG apparatus is part of the nephron"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Urine formation",
+  "strength": "essential",
+  "reason": "Urine formation follows nephron structure"
+ },
+ {
+  "prerequisite": "Urine formation",
+  "concept": "Urine concentration and dilution",
+  "strength": "essential",
+  "reason": "Concentration follows tubular handling"
+ },
+ {
+  "prerequisite": "Urine formation",
+  "concept": "Renal regulation of fluid, electrolytes and acid-base",
+  "strength": "essential",
+  "reason": "Regulation follows tubular handling"
+ },
+ {
+  "prerequisite": "Micturition",
+  "concept": "Cystometry",
+  "strength": "essential",
+  "reason": "Cystometry studies micturition"
+ },
+ {
+  "prerequisite": "Central nervous system",
+  "concept": "Micturition",
+  "strength": "helpful",
+  "reason": "Micturition is a spinal and brain reflex"
+ },
+ {
+  "prerequisite": "Endocrine system",
+  "concept": "Pituitary gland",
+  "strength": "helpful",
+  "reason": "The pituitary is the master endocrine gland"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Thyroid gland",
+  "strength": "essential",
+  "reason": "TSH controls the thyroid"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Adrenal gland",
+  "strength": "essential",
+  "reason": "ACTH controls the adrenal cortex"
+ },
+ {
+  "prerequisite": "Endocrine system",
+  "concept": "Calcium-regulating hormones",
+  "strength": "helpful",
+  "reason": "Calcium hormones are endocrine regulators"
+ },
+ {
+  "prerequisite": "Endocrine system",
+  "concept": "Endocrine pancreas",
+  "strength": "helpful",
+  "reason": "Islets are endocrine tissue"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Puberty",
+  "strength": "essential",
+  "reason": "Puberty starts with gonadotrophin release"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Male reproductive system",
+  "strength": "essential",
+  "reason": "Male function is under gonadotrophin control"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Female reproductive system",
+  "strength": "essential",
+  "reason": "Female function is under gonadotrophin control"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Pregnancy",
+  "strength": "essential",
+  "reason": "Pregnancy follows ovulation and fertilisation"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Parturition",
+  "strength": "essential",
+  "reason": "Parturition ends pregnancy"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Lactation",
+  "strength": "essential",
+  "reason": "Lactation is prepared during pregnancy"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Lactation",
+  "strength": "essential",
+  "reason": "Prolactin and oxytocin drive lactation"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Pregnancy tests",
+  "strength": "essential",
+  "reason": "Tests detect pregnancy hormones"
+ },
+ {
+  "prerequisite": "Infertility",
+  "concept": "In vitro fertilization",
+  "strength": "essential",
+  "reason": "IVF treats infertility"
+ },
+ {
+  "prerequisite": "Neuron",
+  "concept": "Central nervous system",
+  "strength": "helpful",
+  "reason": "The CNS is built of neurons"
+ },
+ {
+  "prerequisite": "Neuron",
+  "concept": "Peripheral nervous system",
+  "strength": "helpful",
+  "reason": "Peripheral nerves are neuron processes"
+ },
+ {
+  "prerequisite": "Synapse",
+  "concept": "Neurotransmitters",
+  "strength": "essential",
+  "reason": "Neurotransmitters act at synapses"
+ },
+ {
+  "prerequisite": "Neuron",
+  "concept": "Synapse",
+  "strength": "essential",
+  "reason": "Synapses connect neurons"
+ },
+ {
+  "prerequisite": "Synapse",
+  "concept": "Reflexes",
+  "strength": "essential",
+  "reason": "Reflexes are synaptic circuits"
+ },
+ {
+  "prerequisite": "Sensory receptors",
+  "concept": "Somatic sensation",
+  "strength": "essential",
+  "reason": "Somatic sensation starts at receptors"
+ },
+ {
+  "prerequisite": "Somatic sensation",
+  "concept": "Pain",
+  "strength": "essential",
+  "reason": "Pain is a somatic sensation"
+ },
+ {
+  "prerequisite": "Spinal cord pathways",
+  "concept": "Somatic sensation",
+  "strength": "essential",
+  "reason": "Sensations ascend in spinal pathways"
+ },
+ {
+  "prerequisite": "Spinal cord pathways",
+  "concept": "Upper and lower motor neuron lesions",
+  "strength": "essential",
+  "reason": "UMN and LMN lesions follow motor pathways"
+ },
+ {
+  "prerequisite": "Reflexes",
+  "concept": "Muscle tone and posture",
+  "strength": "essential",
+  "reason": "Tone depends on the stretch reflex"
+ },
+ {
+  "prerequisite": "Cerebellum",
+  "concept": "Muscle tone and posture",
+  "strength": "helpful",
+  "reason": "The cerebellum modulates tone and posture"
+ },
+ {
+  "prerequisite": "Basal ganglia",
+  "concept": "Muscle tone and posture",
+  "strength": "helpful",
+  "reason": "Basal ganglia modulate tone"
+ },
+ {
+  "prerequisite": "Somatic sensation",
+  "concept": "Thalamus",
+  "strength": "essential",
+  "reason": "The thalamus relays sensation"
+ },
+ {
+  "prerequisite": "Hypothalamus and limbic system",
+  "concept": "Thermoregulation",
+  "strength": "essential",
+  "reason": "Temperature is set in the hypothalamus"
+ },
+ {
+  "prerequisite": "Reticular activating system",
+  "concept": "Sleep",
+  "strength": "essential",
+  "reason": "Sleep follows reticular activating system activity"
+ },
+ {
+  "prerequisite": "Cerebral cortex",
+  "concept": "Electroencephalogram",
+  "strength": "essential",
+  "reason": "The EEG records cortical activity"
+ },
+ {
+  "prerequisite": "Hypothalamus and limbic system",
+  "concept": "Learning and memory",
+  "strength": "essential",
+  "reason": "Memory depends on limbic circuits"
+ },
+ {
+  "prerequisite": "Reflexes",
+  "concept": "Neurological examination",
+  "strength": "essential",
+  "reason": "Examination tests reflexes"
+ },
+ {
+  "prerequisite": "Upper and lower motor neuron lesions",
+  "concept": "Neurological examination",
+  "strength": "essential",
+  "reason": "Examination localises motor lesions"
+ },
+ {
+  "prerequisite": "Sensory receptors",
+  "concept": "Olfaction",
+  "strength": "essential",
+  "reason": "Smell uses chemoreceptors"
+ },
+ {
+  "prerequisite": "Sensory receptors",
+  "concept": "Taste",
+  "strength": "essential",
+  "reason": "Taste uses chemoreceptors"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Auditory pathway",
+  "strength": "helpful",
+  "reason": "The auditory pathway starts in the ear"
+ },
+ {
+  "prerequisite": "Auditory pathway",
+  "concept": "Hearing",
+  "strength": "essential",
+  "reason": "Hearing depends on the auditory pathway"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Vestibular apparatus",
+  "strength": "helpful",
+  "reason": "The vestibular apparatus is in the inner ear"
+ },
+ {
+  "prerequisite": "Eyeball",
+  "concept": "Visual pathway",
+  "strength": "helpful",
+  "reason": "The visual pathway starts at the retina"
+ },
+ {
+  "prerequisite": "Visual pathway",
+  "concept": "Pupillary light reflex",
+  "strength": "essential",
+  "reason": "The light reflex uses visual pathway fibres"
+ },
+ {
+  "prerequisite": "Eyeball",
+  "concept": "Optics of the eye",
+  "strength": "essential",
+  "reason": "Optics follow eyeball structure"
+ },
+ {
+  "prerequisite": "Visual pathway",
+  "concept": "Colour vision",
+  "strength": "helpful",
+  "reason": "Colour vision is coded in the visual pathway"
+ },
+ {
+  "prerequisite": "Thermoregulation",
+  "concept": "Adaptation to heat and cold",
+  "strength": "essential",
+  "reason": "Adaptation follows thermoregulation"
+ },
+ {
+  "prerequisite": "Cardiac output",
+  "concept": "Exercise",
+  "strength": "essential",
+  "reason": "Exercise raises cardiac output"
+ },
+ {
+  "prerequisite": "Exercise",
+  "concept": "Sedentary lifestyle",
+  "strength": "essential",
+  "reason": "Sedentary life is lack of exercise"
+ },
+ {
+  "prerequisite": "Obesity",
+  "concept": "Metabolic syndrome",
+  "strength": "essential",
+  "reason": "Obesity drives metabolic syndrome"
+ },
+ {
+  "prerequisite": "Growth and development",
+  "concept": "Infancy",
+  "strength": "essential",
+  "reason": "Infancy is a stage of growth and development"
+ },
+ {
+  "prerequisite": "Growth and development",
+  "concept": "Growth monitoring",
+  "strength": "essential",
+  "reason": "Monitoring tracks growth"
+ },
+ {
+  "prerequisite": "Central nervous system",
+  "concept": "Brain death",
+  "strength": "essential",
+  "reason": "Brain death is loss of brain function"
+ },
+ {
+  "prerequisite": "Gametogenesis",
+  "concept": "Sex determination and differentiation",
+  "strength": "essential",
+  "reason": "Sex is set at gametogenesis and fertilisation"
+ },
+ {
+  "prerequisite": "Male reproductive system",
+  "concept": "Effects of gonadectomy",
+  "strength": "essential",
+  "reason": "Gonadectomy removes gonadal hormones"
+ },
+ {
+  "prerequisite": "Spinal cord pathways",
+  "concept": "Brown-Sequard syndrome",
+  "strength": "essential",
+  "reason": "Brown-Sequard syndrome follows spinal pathway crossing"
+ },
+ {
+  "prerequisite": "Spinal cord pathways",
+  "concept": "Spinal cord transection patterns",
+  "strength": "essential",
+  "reason": "Transection patterns follow spinal pathways"
+ }
+]

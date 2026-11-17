@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Cross-concept prerequisites complete (all 19 subjects)
+- Added preclinical/paraclinical internal links: Physiology 133, Biochemistry 71, Pathology 105, Pharmacology 68, Microbiology 32, Anatomy 119 (incl. clinical anatomy and embryology chains). Total 1,600 links (1,234 essential); 1,269 of 1,544 concepts have at least one prerequisite. The remaining 275 are structures, laws, programmes or skills without a real prerequisite.
+- The cycle check caught one cross-batch contradiction (Antimicrobial resistance vs Antimicrobial chemotherapy); kept chemotherapy → resistance.
+- AI-drafted; not faculty-reviewed; not yet used by the app.
+
 ### 2026-11-18 — Cross-concept prerequisites: all clinical and paraclinical subjects
 - Added Community Medicine 67, Forensic Medicine 61, ENT 52, Ophthalmology 49, Orthopaedics 45, Dermatology 35, Psychiatry 15, Anaesthesia 19, Radiology 17 links. Total 1,072 links (817 essential) across 771 concepts; acyclic; none over the review mark. Remaining: links inside preclinical subjects (Anatomy, Physiology, Biochemistry) and leftover paraclinical internals. AI-drafted; not used by the app yet.
 
