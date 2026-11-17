@@ -14,14 +14,14 @@ async function fixture(){
  return {p,catalog:{version:p.authoredCatalogVersion,concepts}};
 }
 test('original objectives reuse the established objective shape, stable canonical identities and scoped source proposals',()=>{
- const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,2836);assert.equal(p.sourceBindings.length,2837);
- assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,2836);
- assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1528);
+ const p=validateFoundationDrafts(pack,catalogue);assert.equal(p.objectives.length,2865);assert.equal(p.sourceBindings.length,2866);
+ assert.equal(new Set(p.sourceBindings.map(r=>r.objectiveVersionId)).size,2865);
+ assert.equal(new Set(p.objectives.map(r=>r.objective.conceptId)).size,1544);
  assert.equal(registry.objectives.length,0);assert.equal(registry.mappings.length,0);
 });
 test('Admin projection tracks all source appearances, pending originals and explicit canonical identities',async()=>{
  const {p,catalog}=await fixture();const result=await foundationDraftPage(p,catalogue,catalog,{});
- assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,2836);assert.equal(result.totals.sourceLinkedReferences,2613);
+ assert.equal(result.totals.sourceReferences,2634);assert.equal(result.totals.objectiveDrafts,2865);assert.equal(result.totals.sourceLinkedReferences,2633);
  assert.equal(result.acceptedMappings,0);assert.equal(result.learnerActivation,false);assert.equal(result.coverageFraction,null);
  assert.equal(result.objectives.find(r=>r.sourceReferences.length===2).identityState,'current');
  assert.equal(result.totals.unboundObjectiveDrafts,0);
@@ -55,9 +55,9 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const bind=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-physiology-objective-bindings-v1.json',import.meta.url)));
  const byOv=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
- assert.equal(inReg.length,185);
+ assert.equal(inReg.length,187); // 185 + PY9.1 official-replacement pair (registry @23)
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@22');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@23');
 });
 test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
  const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));

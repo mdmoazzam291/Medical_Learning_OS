@@ -8,6 +8,15 @@
 
 ---
 
+## NMC foundation source accounting complete (registry @23) — 2026-11-17T12:15Z
+
+- Owner accepted `nmc-surgery-concepts-source-exceptions-v1-20261116` at 12:02:34Z (14 receipts; pairs digest `78e06a3e…825f` matched). Receipt IDs `ops/nmc/receipts/source-exceptions-v1-concept-ids.txt`; bindings `docs/evidence/2026-11-17-nmc-source-exceptions-objective-bindings-v1.json`.
+- Registry @23: +27 source-exception objectives and the 2 PY9.1 official-replacement objectives from the physiology v3 batch → 2,865 objectives, 2,866 bindings, 1,544 concepts, **2,633 of 2,634 NMC rows linked**; the remaining row is PS9.2, an official deletion. All draft; no clinical approval, learner activation or question import.
+- owner-api foundation data re-pinned to the registry commit; owner-api redeploy needed for Admin to show @23.
+- Remaining (not started): faculty review (129 Paediatrics AI-merged wordings first), acceptance RPC performance, COPD draft-concept reconciliation, subject-classification revisions for reused concepts.
+
+---
+
 ## NMC source-exception batch (last 20 rows) — 2026-11-17T11:45Z
 
 - Owner decisions (17:10 IST), recorded in `docs/evidence/2026-11-17-nmc-source-exception-owner-decisions.json`: accept the 7 search aliases; label SU24 'Pancreatic disorders' and SU27 'Vascular and lymphatic disorders' (overlay updated); rewrite the 7 mode holds as knowledge objectives at KH.
