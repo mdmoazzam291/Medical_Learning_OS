@@ -1,0 +1,806 @@
+[
+ {
+  "prerequisite": "Growth and development",
+  "concept": "Developmental milestones",
+  "strength": "essential",
+  "reason": "Milestones are the measurable markers of development"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Developmental delay",
+  "strength": "essential",
+  "reason": "Delay is judged against expected milestones"
+ },
+ {
+  "prerequisite": "Growth and development",
+  "concept": "Growth faltering",
+  "strength": "essential",
+  "reason": "Faltering is judged against normal growth"
+ },
+ {
+  "prerequisite": "Growth monitoring",
+  "concept": "Growth faltering",
+  "strength": "essential",
+  "reason": "Growth monitoring detects faltering"
+ },
+ {
+  "prerequisite": "Growth and development",
+  "concept": "Short stature",
+  "strength": "essential",
+  "reason": "Short stature is judged against growth norms"
+ },
+ {
+  "prerequisite": "Pituitary gland",
+  "concept": "Short stature",
+  "strength": "helpful",
+  "reason": "Growth hormone axis explains endocrine causes"
+ },
+ {
+  "prerequisite": "Puberty",
+  "concept": "Disorders of puberty",
+  "strength": "essential",
+  "reason": "Disorders of puberty depart from normal puberty"
+ },
+ {
+  "prerequisite": "Lactation",
+  "concept": "Breastfeeding",
+  "strength": "essential",
+  "reason": "Breastfeeding relies on lactation physiology"
+ },
+ {
+  "prerequisite": "Human milk",
+  "concept": "Breastfeeding",
+  "strength": "essential",
+  "reason": "Breast milk composition explains its advantages"
+ },
+ {
+  "prerequisite": "Breastfeeding",
+  "concept": "Complementary feeding",
+  "strength": "essential",
+  "reason": "Complementary feeding follows exclusive breastfeeding"
+ },
+ {
+  "prerequisite": "Nutrients",
+  "concept": "Complementary feeding",
+  "strength": "essential",
+  "reason": "Feeds must meet changing nutrient needs"
+ },
+ {
+  "prerequisite": "Human milk",
+  "concept": "Human milk banking",
+  "strength": "essential",
+  "reason": "Milk banking preserves human milk properties"
+ },
+ {
+  "prerequisite": "Breastfeeding",
+  "concept": "Baby-Friendly Hospital Initiative",
+  "strength": "essential",
+  "reason": "The initiative promotes breastfeeding practices"
+ },
+ {
+  "prerequisite": "Protein-energy malnutrition",
+  "concept": "Severe acute malnutrition",
+  "strength": "essential",
+  "reason": "SAM is the severe end of protein-energy malnutrition"
+ },
+ {
+  "prerequisite": "Nutritional assessment",
+  "concept": "Severe acute malnutrition",
+  "strength": "essential",
+  "reason": "SAM is identified by anthropometry"
+ },
+ {
+  "prerequisite": "Nutrients",
+  "concept": "Adolescent nutrition",
+  "strength": "helpful",
+  "reason": "Adolescent requirements rise with growth"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin A deficiency",
+  "strength": "essential",
+  "reason": "Vitamin A functions explain night blindness and xerophthalmia"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin D disorders",
+  "strength": "essential",
+  "reason": "Vitamin D disorders follow its metabolism"
+ },
+ {
+  "prerequisite": "Calcium metabolism",
+  "concept": "Vitamin D disorders",
+  "strength": "essential",
+  "reason": "Rickets is failure of calcium and phosphate mineralisation"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin E deficiency",
+  "strength": "essential",
+  "reason": "Deficiency features follow vitamin E functions"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin B complex deficiencies",
+  "strength": "essential",
+  "reason": "Deficiency features follow B-vitamin functions"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin C deficiency",
+  "strength": "essential",
+  "reason": "Scurvy follows vitamin C's role in collagen"
+ },
+ {
+  "prerequisite": "Calcium metabolism",
+  "concept": "Calcium and magnesium deficiency",
+  "strength": "essential",
+  "reason": "Deficiency features follow calcium and magnesium handling"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin K deficiency",
+  "strength": "essential",
+  "reason": "Vitamin K is needed for clotting factor synthesis"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Vitamin K deficiency",
+  "strength": "essential",
+  "reason": "Deficiency causes coagulation failure"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Vitamin B12 deficiency",
+  "strength": "essential",
+  "reason": "B12 functions explain deficiency"
+ },
+ {
+  "prerequisite": "Iron metabolism",
+  "concept": "Iron deficiency anaemia",
+  "strength": "essential",
+  "reason": "Iron deficiency follows iron metabolism"
+ },
+ {
+  "prerequisite": "Red cell indices",
+  "concept": "Iron deficiency anaemia",
+  "strength": "essential",
+  "reason": "Microcytic indices identify iron deficiency"
+ },
+ {
+  "prerequisite": "Vitamins",
+  "concept": "Folate deficiency",
+  "strength": "essential",
+  "reason": "Folate is needed for DNA synthesis"
+ },
+ {
+  "prerequisite": "Anaemia",
+  "concept": "Anaemia in children",
+  "strength": "essential",
+  "reason": "Childhood anaemia applies anaemia classification"
+ },
+ {
+  "prerequisite": "Iron deficiency anaemia",
+  "concept": "Anaemia in children",
+  "strength": "helpful",
+  "reason": "Iron deficiency is the commonest cause in children"
+ },
+ {
+  "prerequisite": "Haemoglobin",
+  "concept": "Haemolytic anaemia",
+  "strength": "essential",
+  "reason": "Haemolysis destroys red cells and releases haemoglobin"
+ },
+ {
+  "prerequisite": "Haemoglobinopathies",
+  "concept": "Haemoglobin electrophoresis",
+  "strength": "essential",
+  "reason": "Electrophoresis separates abnormal haemoglobins"
+ },
+ {
+  "prerequisite": "Blood composition",
+  "concept": "Peripheral blood smear",
+  "strength": "essential",
+  "reason": "Smear interpretation uses normal blood components"
+ },
+ {
+  "prerequisite": "Platelets",
+  "concept": "Immune thrombocytopenia",
+  "strength": "essential",
+  "reason": "ITP is immune destruction of platelets"
+ },
+ {
+  "prerequisite": "Autoimmunity",
+  "concept": "Immune thrombocytopenia",
+  "strength": "essential",
+  "reason": "ITP is autoimmune"
+ },
+ {
+  "prerequisite": "Haemostasis",
+  "concept": "Haemophilia",
+  "strength": "essential",
+  "reason": "Haemophilia is a clotting factor deficiency"
+ },
+ {
+  "prerequisite": "Modes of inheritance",
+  "concept": "Haemophilia",
+  "strength": "essential",
+  "reason": "Haemophilia is X-linked"
+ },
+ {
+  "prerequisite": "Leukaemias",
+  "concept": "Acute lymphoblastic leukaemia",
+  "strength": "essential",
+  "reason": "ALL is a type of leukaemia"
+ },
+ {
+  "prerequisite": "Non-Hodgkin lymphoma",
+  "concept": "Childhood lymphoma",
+  "strength": "helpful",
+  "reason": "Most childhood lymphomas are non-Hodgkin"
+ },
+ {
+  "prerequisite": "Spleen",
+  "concept": "Splenectomy",
+  "strength": "essential",
+  "reason": "Splenectomy removes splenic immune function"
+ },
+ {
+  "prerequisite": "Renal regulation of fluid, electrolytes and acid-base",
+  "concept": "Sodium and potassium disorders",
+  "strength": "essential",
+  "reason": "Sodium and potassium handling explain disorders"
+ },
+ {
+  "prerequisite": "Water and electrolyte balance",
+  "concept": "Sodium and potassium disorders",
+  "strength": "essential",
+  "reason": "Fluid balance explains dysnatraemias"
+ },
+ {
+  "prerequisite": "Diarrhoea",
+  "concept": "Acute gastroenteritis",
+  "strength": "essential",
+  "reason": "Gastroenteritis presents as acute diarrhoea"
+ },
+ {
+  "prerequisite": "Water and electrolyte balance",
+  "concept": "Acute gastroenteritis",
+  "strength": "essential",
+  "reason": "Dehydration follows fluid and electrolyte loss"
+ },
+ {
+  "prerequisite": "Digestion and absorption",
+  "concept": "Oral rehydration therapy",
+  "strength": "essential",
+  "reason": "ORS uses sodium-glucose co-transport"
+ },
+ {
+  "prerequisite": "Acute gastroenteritis",
+  "concept": "Oral rehydration therapy",
+  "strength": "essential",
+  "reason": "ORT treats gastroenteritis dehydration"
+ },
+ {
+  "prerequisite": "Viral hepatitis",
+  "concept": "Acute hepatitis",
+  "strength": "essential",
+  "reason": "Acute hepatitis in children is mostly viral"
+ },
+ {
+  "prerequisite": "Cirrhosis",
+  "concept": "Chronic liver disease",
+  "strength": "helpful",
+  "reason": "Chronic liver disease leads to cirrhosis"
+ },
+ {
+  "prerequisite": "Liver",
+  "concept": "Hepatic failure",
+  "strength": "essential",
+  "reason": "Hepatic failure is loss of liver function"
+ },
+ {
+  "prerequisite": "Digestion and absorption",
+  "concept": "Malabsorption syndrome",
+  "strength": "essential",
+  "reason": "Malabsorption is failure of digestion or absorption"
+ },
+ {
+  "prerequisite": "Rheumatic fever",
+  "concept": "Kawasaki disease",
+  "strength": "helpful",
+  "reason": "Kawasaki is a differential of rheumatic fever"
+ },
+ {
+  "prerequisite": "Autoimmunity",
+  "concept": "Paediatric rheumatological disorders",
+  "strength": "essential",
+  "reason": "Most are autoimmune disorders"
+ },
+ {
+  "prerequisite": "Paediatric rheumatological disorders",
+  "concept": "Juvenile idiopathic arthritis",
+  "strength": "essential",
+  "reason": "JIA is a paediatric rheumatological disorder"
+ },
+ {
+  "prerequisite": "Paediatric rheumatological disorders",
+  "concept": "IgA vasculitis",
+  "strength": "essential",
+  "reason": "IgA vasculitis is a paediatric vasculitis"
+ },
+ {
+  "prerequisite": "Autoimmunity",
+  "concept": "Systemic lupus erythematosus",
+  "strength": "essential",
+  "reason": "SLE is a systemic autoimmune disease"
+ },
+ {
+  "prerequisite": "Hypersensitivity reactions",
+  "concept": "Glomerulonephritis",
+  "strength": "essential",
+  "reason": "Glomerulonephritis is immune-complex mediated"
+ },
+ {
+  "prerequisite": "Blood pressure",
+  "concept": "Paediatric hypertension",
+  "strength": "essential",
+  "reason": "Paediatric BP is read against age norms"
+ },
+ {
+  "prerequisite": "Hypertension",
+  "concept": "Paediatric hypertension",
+  "strength": "helpful",
+  "reason": "Adult hypertension principles apply"
+ },
+ {
+  "prerequisite": "Renal tumours",
+  "concept": "Wilms tumour",
+  "strength": "helpful",
+  "reason": "Wilms tumour is a renal tumour"
+ },
+ {
+  "prerequisite": "Newborn assessment",
+  "concept": "Neonatal resuscitation",
+  "strength": "helpful",
+  "reason": "Assessment identifies babies needing resuscitation"
+ },
+ {
+  "prerequisite": "Basic life support",
+  "concept": "Neonatal resuscitation",
+  "strength": "essential",
+  "reason": "Neonatal resuscitation adapts basic life support"
+ },
+ {
+  "prerequisite": "Hypoxia",
+  "concept": "Birth asphyxia",
+  "strength": "essential",
+  "reason": "Birth asphyxia is perinatal hypoxia"
+ },
+ {
+  "prerequisite": "Birth asphyxia",
+  "concept": "Neonatal resuscitation",
+  "strength": "essential",
+  "reason": "Asphyxia is the main reason for resuscitation"
+ },
+ {
+  "prerequisite": "Pulmonary compliance and gas exchange",
+  "concept": "Neonatal respiratory distress",
+  "strength": "essential",
+  "reason": "Distress follows impaired gas exchange"
+ },
+ {
+  "prerequisite": "Development of the respiratory system",
+  "concept": "Neonatal respiratory distress",
+  "strength": "essential",
+  "reason": "Surfactant deficiency follows lung immaturity"
+ },
+ {
+  "prerequisite": "Thermoregulation",
+  "concept": "Neonatal hypothermia",
+  "strength": "essential",
+  "reason": "Neonatal hypothermia is immature thermoregulation"
+ },
+ {
+  "prerequisite": "Thermoregulation",
+  "concept": "Hypothermia in children",
+  "strength": "essential",
+  "reason": "Hypothermia is failure of thermoregulation"
+ },
+ {
+  "prerequisite": "Neonatal hypothermia",
+  "concept": "Kangaroo mother care",
+  "strength": "essential",
+  "reason": "Kangaroo care prevents neonatal hypothermia"
+ },
+ {
+  "prerequisite": "Low birth weight",
+  "concept": "Kangaroo mother care",
+  "strength": "essential",
+  "reason": "Kangaroo care supports low birth weight babies"
+ },
+ {
+  "prerequisite": "Endocrine pancreas",
+  "concept": "Neonatal hypoglycaemia",
+  "strength": "essential",
+  "reason": "Neonatal glucose control depends on insulin and stores"
+ },
+ {
+  "prerequisite": "Calcium-regulating hormones",
+  "concept": "Neonatal hypocalcaemia",
+  "strength": "essential",
+  "reason": "Neonatal calcium depends on parathyroid adaptation"
+ },
+ {
+  "prerequisite": "Neonatal hypoglycaemia",
+  "concept": "Neonatal seizures",
+  "strength": "helpful",
+  "reason": "Hypoglycaemia is a cause of neonatal seizures"
+ },
+ {
+  "prerequisite": "Neonatal hypocalcaemia",
+  "concept": "Neonatal seizures",
+  "strength": "helpful",
+  "reason": "Hypocalcaemia is a cause of neonatal seizures"
+ },
+ {
+  "prerequisite": "Host response to infection",
+  "concept": "Neonatal sepsis",
+  "strength": "essential",
+  "reason": "Neonatal sepsis follows immature host defence"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Perinatal infections",
+  "strength": "essential",
+  "reason": "Perinatal infections follow vertical transmission"
+ },
+ {
+  "prerequisite": "Bilirubin metabolism",
+  "concept": "Neonatal hyperbilirubinaemia",
+  "strength": "essential",
+  "reason": "Neonatal jaundice follows immature bilirubin handling"
+ },
+ {
+  "prerequisite": "Oxygen therapy",
+  "concept": "Oxygen toxicity",
+  "strength": "essential",
+  "reason": "Oxygen toxicity results from excess oxygen therapy"
+ },
+ {
+  "prerequisite": "Development of the gut",
+  "concept": "Neonatal surgical conditions",
+  "strength": "essential",
+  "reason": "Many neonatal surgical conditions are gut malformations"
+ },
+ {
+  "prerequisite": "Anaemia",
+  "concept": "Low birth weight",
+  "strength": "helpful",
+  "reason": "Low birth weight raises anaemia risk"
+ },
+ {
+  "prerequisite": "Fetal growth restriction",
+  "concept": "Low birth weight",
+  "strength": "essential",
+  "reason": "Growth restriction is a major cause of low birth weight"
+ },
+ {
+  "prerequisite": "Preterm labour",
+  "concept": "Low birth weight",
+  "strength": "essential",
+  "reason": "Preterm birth is a major cause of low birth weight"
+ },
+ {
+  "prerequisite": "Immunisation",
+  "concept": "Vaccine-preventable diseases",
+  "strength": "essential",
+  "reason": "Prevention relies on immunisation"
+ },
+ {
+  "prerequisite": "Vaccines",
+  "concept": "Vaccine-preventable diseases",
+  "strength": "essential",
+  "reason": "Vaccines target specific diseases"
+ },
+ {
+  "prerequisite": "Vaccines",
+  "concept": "Cold chain",
+  "strength": "essential",
+  "reason": "Cold chain keeps vaccines potent"
+ },
+ {
+  "prerequisite": "Vaccines",
+  "concept": "Adverse events following immunisation",
+  "strength": "essential",
+  "reason": "AEFIs are reactions to vaccines"
+ },
+ {
+  "prerequisite": "Vaccines",
+  "concept": "Vaccine administration",
+  "strength": "essential",
+  "reason": "Administration follows vaccine type and schedule"
+ },
+ {
+  "prerequisite": "Immunisation",
+  "concept": "Vaccine administration",
+  "strength": "essential",
+  "reason": "Schedules follow immunisation principles"
+ },
+ {
+  "prerequisite": "Vaccine-preventable diseases",
+  "concept": "Diphtheria, pertussis and tetanus",
+  "strength": "essential",
+  "reason": "These are vaccine-preventable diseases"
+ },
+ {
+  "prerequisite": "Infectious rashes",
+  "concept": "Viral exanthematous illnesses",
+  "strength": "essential",
+  "reason": "Exanthems are infectious rashes"
+ },
+ {
+  "prerequisite": "Pulmonary tuberculosis",
+  "concept": "Childhood tuberculosis",
+  "strength": "essential",
+  "reason": "Childhood TB is a form of tuberculosis"
+ },
+ {
+  "prerequisite": "Cell-mediated immunity",
+  "concept": "Childhood tuberculosis",
+  "strength": "essential",
+  "reason": "Children have immature cell-mediated defence"
+ },
+ {
+  "prerequisite": "Microorganisms",
+  "concept": "Parasitic infections in children",
+  "strength": "helpful",
+  "reason": "Life cycles explain parasite transmission"
+ },
+ {
+  "prerequisite": "Lower respiratory tract infections",
+  "concept": "Lower respiratory tract infections in children",
+  "strength": "essential",
+  "reason": "These are lower respiratory tract infections"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Epiglottitis",
+  "strength": "essential",
+  "reason": "Epiglottitis obstructs the supraglottic airway"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Croup",
+  "strength": "essential",
+  "reason": "Croup narrows the subglottic airway"
+ },
+ {
+  "prerequisite": "Trachea",
+  "concept": "Foreign body aspiration",
+  "strength": "essential",
+  "reason": "Aspirated bodies lodge by bronchial anatomy"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Stridor",
+  "strength": "essential",
+  "reason": "Stridor is noise from upper airway narrowing"
+ },
+ {
+  "prerequisite": "Respiratory system",
+  "concept": "Respiratory distress in children",
+  "strength": "essential",
+  "reason": "Distress reflects respiratory physiology"
+ },
+ {
+  "prerequisite": "Respiratory distress in children",
+  "concept": "Lower respiratory tract infections in children",
+  "strength": "helpful",
+  "reason": "Respiratory distress is the key sign"
+ },
+ {
+  "prerequisite": "Drugs for asthma and COPD",
+  "concept": "Nebulisation",
+  "strength": "essential",
+  "reason": "Nebulisation delivers inhaled drugs"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Acute suppurative otitis media",
+  "strength": "essential",
+  "reason": "Otitis media follows middle ear anatomy"
+ },
+ {
+  "prerequisite": "Hypersensitivity reactions",
+  "concept": "Allergic rhinitis",
+  "strength": "essential",
+  "reason": "Allergic rhinitis is a type I reaction"
+ },
+ {
+  "prerequisite": "Basic life support",
+  "concept": "Cardiopulmonary arrest",
+  "strength": "essential",
+  "reason": "Arrest management builds on basic life support"
+ },
+ {
+  "prerequisite": "Reticular activating system",
+  "concept": "Unconscious patient",
+  "strength": "essential",
+  "reason": "Consciousness depends on the reticular activating system"
+ },
+ {
+  "prerequisite": "Glasgow Coma Scale",
+  "concept": "Unconscious patient",
+  "strength": "essential",
+  "reason": "Depth of coma is graded by GCS"
+ },
+ {
+  "prerequisite": "Epilepsy",
+  "concept": "Febrile seizures",
+  "strength": "essential",
+  "reason": "Febrile seizures are a seizure type"
+ },
+ {
+  "prerequisite": "Fever",
+  "concept": "Febrile seizures",
+  "strength": "essential",
+  "reason": "Seizures are triggered by fever"
+ },
+ {
+  "prerequisite": "Cerebrospinal fluid",
+  "concept": "Hydrocephalus",
+  "strength": "essential",
+  "reason": "Hydrocephalus is CSF accumulation"
+ },
+ {
+  "prerequisite": "Stroke",
+  "concept": "Infantile hemiplegia",
+  "strength": "essential",
+  "reason": "Infantile hemiplegia is mostly vascular"
+ },
+ {
+  "prerequisite": "Upper and lower motor neuron lesions",
+  "concept": "Cerebral palsy",
+  "strength": "essential",
+  "reason": "Cerebral palsy shows upper motor neuron signs"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Cerebral palsy",
+  "strength": "helpful",
+  "reason": "Diagnosis rests on delayed milestones"
+ },
+ {
+  "prerequisite": "Neuromuscular transmission",
+  "concept": "Floppy infant",
+  "strength": "helpful",
+  "reason": "Neuromuscular junction disorders cause hypotonia"
+ },
+ {
+  "prerequisite": "Muscle tone and posture",
+  "concept": "Floppy infant",
+  "strength": "essential",
+  "reason": "Floppiness is loss of muscle tone"
+ },
+ {
+  "prerequisite": "Modes of inheritance",
+  "concept": "Duchenne muscular dystrophy",
+  "strength": "essential",
+  "reason": "Duchenne is X-linked recessive"
+ },
+ {
+  "prerequisite": "Skeletal muscle contraction",
+  "concept": "Duchenne muscular dystrophy",
+  "strength": "essential",
+  "reason": "Dystrophin loss disrupts muscle contraction"
+ },
+ {
+  "prerequisite": "Chromosomal disorders",
+  "concept": "Down syndrome",
+  "strength": "essential",
+  "reason": "Down syndrome is a chromosomal disorder"
+ },
+ {
+  "prerequisite": "Chromosomes",
+  "concept": "Karyotyping",
+  "strength": "essential",
+  "reason": "Karyotyping displays chromosomes"
+ },
+ {
+  "prerequisite": "Chromosomal disorders",
+  "concept": "Turner syndrome",
+  "strength": "essential",
+  "reason": "Turner syndrome is a chromosomal disorder"
+ },
+ {
+  "prerequisite": "Chromosomal disorders",
+  "concept": "Klinefelter syndrome",
+  "strength": "essential",
+  "reason": "Klinefelter syndrome is a chromosomal disorder"
+ },
+ {
+  "prerequisite": "Sex determination and differentiation",
+  "concept": "Disorders of sex development",
+  "strength": "essential",
+  "reason": "DSD are disorders of sex differentiation"
+ },
+ {
+  "prerequisite": "Developmental delay",
+  "concept": "Intellectual disability",
+  "strength": "essential",
+  "reason": "Intellectual disability is global developmental delay"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Autism spectrum disorder",
+  "strength": "helpful",
+  "reason": "Social and language delays signal autism"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Attention deficit hyperactivity disorder",
+  "strength": "helpful",
+  "reason": "ADHD is judged against developmental norms"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Enuresis",
+  "strength": "helpful",
+  "reason": "Bladder control is a developmental milestone"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Temper tantrums",
+  "strength": "helpful",
+  "reason": "Tantrums are judged against developmental stage"
+ },
+ {
+  "prerequisite": "Nutrients",
+  "concept": "Pica",
+  "strength": "helpful",
+  "reason": "Pica is linked to iron deficiency"
+ },
+ {
+  "prerequisite": "Protein-energy malnutrition",
+  "concept": "Eating disorders",
+  "strength": "helpful",
+  "reason": "Restriction leads to malnutrition"
+ },
+ {
+  "prerequisite": "Developmental milestones",
+  "concept": "Feeding problems in children",
+  "strength": "helpful",
+  "reason": "Feeding problems relate to developmental stage"
+ },
+ {
+  "prerequisite": "Puberty",
+  "concept": "Adolescent health",
+  "strength": "essential",
+  "reason": "Adolescent health centres on puberty"
+ },
+ {
+  "prerequisite": "Puberty",
+  "concept": "Adolescent sexuality",
+  "strength": "essential",
+  "reason": "Sexuality develops with puberty"
+ },
+ {
+  "prerequisite": "Abdominal examination",
+  "concept": "Abdominal pain in children",
+  "strength": "essential",
+  "reason": "Abdominal pain is assessed by examination"
+ },
+ {
+  "prerequisite": "Medical ethics",
+  "concept": "Breaking bad news",
+  "strength": "helpful",
+  "reason": "Breaking bad news applies ethical principles"
+ },
+ {
+  "prerequisite": "Medical ethics",
+  "concept": "Child abuse",
+  "strength": "helpful",
+  "reason": "Child protection applies ethics and law"
+ }
+]

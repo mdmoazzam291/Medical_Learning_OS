@@ -1,0 +1,602 @@
+[
+ {
+  "prerequisite": "Female reproductive system",
+  "concept": "Menstrual cycle",
+  "strength": "essential",
+  "reason": "The cycle depends on ovarian and uterine structure"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Amenorrhoea",
+  "strength": "essential",
+  "reason": "Amenorrhoea is absence of the normal cycle"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Abnormal uterine bleeding",
+  "strength": "essential",
+  "reason": "Abnormal bleeding departs from the normal cycle"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Contraception",
+  "strength": "essential",
+  "reason": "Hormonal contraception acts on the cycle"
+ },
+ {
+  "prerequisite": "Contraception",
+  "concept": "Intrauterine contraceptive device",
+  "strength": "essential",
+  "reason": "The IUCD is a contraceptive method"
+ },
+ {
+  "prerequisite": "Contraception",
+  "concept": "Female sterilisation",
+  "strength": "essential",
+  "reason": "Sterilisation is a permanent contraceptive method"
+ },
+ {
+  "prerequisite": "Pelvic viscera",
+  "concept": "Female sterilisation",
+  "strength": "helpful",
+  "reason": "Tubal ligation follows pelvic anatomy"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Infertility",
+  "strength": "essential",
+  "reason": "Ovulation and the cycle underlie fertility"
+ },
+ {
+  "prerequisite": "Infertility",
+  "concept": "Ovulation induction",
+  "strength": "essential",
+  "reason": "Ovulation induction treats anovulatory infertility"
+ },
+ {
+  "prerequisite": "Infertility",
+  "concept": "Assisted reproductive technology",
+  "strength": "essential",
+  "reason": "ART treats infertility"
+ },
+ {
+  "prerequisite": "Fertilisation",
+  "concept": "Assisted reproductive technology",
+  "strength": "essential",
+  "reason": "IVF reproduces fertilisation in vitro"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Polycystic ovary syndrome",
+  "strength": "essential",
+  "reason": "PCOS is chronic anovulation"
+ },
+ {
+  "prerequisite": "Hyperandrogenism",
+  "concept": "Polycystic ovary syndrome",
+  "strength": "essential",
+  "reason": "Hyperandrogenism is a defining feature of PCOS"
+ },
+ {
+  "prerequisite": "Androgens",
+  "concept": "Hyperandrogenism",
+  "strength": "essential",
+  "reason": "Excess androgens cause the features"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Menopause",
+  "strength": "essential",
+  "reason": "Menopause is the end of ovarian cycles"
+ },
+ {
+  "prerequisite": "Menopause",
+  "concept": "Postmenopausal bleeding",
+  "strength": "essential",
+  "reason": "Bleeding after menopause is abnormal"
+ },
+ {
+  "prerequisite": "Abnormal uterine bleeding",
+  "concept": "Postmenopausal bleeding",
+  "strength": "helpful",
+  "reason": "Abnormal bleeding patterns guide evaluation"
+ },
+ {
+  "prerequisite": "Pelvic floor",
+  "concept": "Pelvic organ prolapse",
+  "strength": "essential",
+  "reason": "Prolapse is pelvic floor failure"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Leiomyoma",
+  "strength": "helpful",
+  "reason": "Fibroids are benign smooth-muscle tumours"
+ },
+ {
+  "prerequisite": "Female sex hormones",
+  "concept": "Leiomyoma",
+  "strength": "helpful",
+  "reason": "Fibroids are oestrogen-dependent"
+ },
+ {
+  "prerequisite": "Endometrial hyperplasia",
+  "concept": "Endometrial carcinoma",
+  "strength": "essential",
+  "reason": "Endometrial hyperplasia precedes carcinoma"
+ },
+ {
+  "prerequisite": "Female sex hormones",
+  "concept": "Endometrial hyperplasia",
+  "strength": "essential",
+  "reason": "Unopposed oestrogen causes hyperplasia"
+ },
+ {
+  "prerequisite": "Menstrual cycle",
+  "concept": "Endometriosis",
+  "strength": "essential",
+  "reason": "Endometriosis tissue responds to the cycle"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Ovarian tumours",
+  "strength": "helpful",
+  "reason": "Ovarian tumours follow neoplasia principles"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Gestational trophoblastic disease",
+  "strength": "essential",
+  "reason": "GTD arises from placental trophoblast"
+ },
+ {
+  "prerequisite": "Oncogenic infections",
+  "concept": "Cervical cancer",
+  "strength": "essential",
+  "reason": "HPV causes cervical cancer"
+ },
+ {
+  "prerequisite": "Cervical cancer",
+  "concept": "Cervical cancer screening",
+  "strength": "essential",
+  "reason": "Screening targets the cervical precancer stage"
+ },
+ {
+  "prerequisite": "Cervical cancer screening",
+  "concept": "Pap smear",
+  "strength": "essential",
+  "reason": "The Pap smear is the screening test"
+ },
+ {
+  "prerequisite": "Diagnostic cytology",
+  "concept": "Pap smear",
+  "strength": "essential",
+  "reason": "Pap smears are read by cytology"
+ },
+ {
+  "prerequisite": "Reproductive tract infections",
+  "concept": "Pelvic inflammatory disease",
+  "strength": "essential",
+  "reason": "PID is ascending reproductive tract infection"
+ },
+ {
+  "prerequisite": "Pulmonary tuberculosis",
+  "concept": "Genital tuberculosis",
+  "strength": "essential",
+  "reason": "Genital TB is extrapulmonary tuberculosis"
+ },
+ {
+  "prerequisite": "Reproductive tract infections",
+  "concept": "Vaginal discharge",
+  "strength": "essential",
+  "reason": "Discharge is usually reproductive tract infection"
+ },
+ {
+  "prerequisite": "Fertilisation",
+  "concept": "Implantation",
+  "strength": "essential",
+  "reason": "Implantation follows fertilisation"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Diagnosis of pregnancy",
+  "strength": "essential",
+  "reason": "Diagnosis detects pregnancy hormones and changes"
+ },
+ {
+  "prerequisite": "Pregnancy tests",
+  "concept": "Diagnosis of pregnancy",
+  "strength": "essential",
+  "reason": "Pregnancy tests detect hCG"
+ },
+ {
+  "prerequisite": "Diagnosis of pregnancy",
+  "concept": "Antenatal care",
+  "strength": "essential",
+  "reason": "Antenatal care starts with confirming pregnancy"
+ },
+ {
+  "prerequisite": "Gestational age calculation",
+  "concept": "Antenatal care",
+  "strength": "essential",
+  "reason": "Care is scheduled by gestational age"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Antenatal care",
+  "strength": "essential",
+  "reason": "Antenatal care monitors physiological changes"
+ },
+ {
+  "prerequisite": "Obstetric history taking",
+  "concept": "Antenatal care",
+  "strength": "helpful",
+  "reason": "History taking identifies risks"
+ },
+ {
+  "prerequisite": "Obstetric examination",
+  "concept": "Antenatal care",
+  "strength": "essential",
+  "reason": "Examination tracks fetal growth and lie"
+ },
+ {
+  "prerequisite": "High-risk pregnancy",
+  "concept": "Antenatal care",
+  "strength": "helpful",
+  "reason": "Risk assessment shapes antenatal care"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Fetal growth restriction",
+  "strength": "essential",
+  "reason": "FGR reflects placental insufficiency"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Antepartum haemorrhage",
+  "strength": "essential",
+  "reason": "Placental position and separation cause APH"
+ },
+ {
+  "prerequisite": "Implantation",
+  "concept": "Ectopic pregnancy",
+  "strength": "essential",
+  "reason": "Ectopic pregnancy is implantation outside the uterus"
+ },
+ {
+  "prerequisite": "Ectopic pregnancy",
+  "concept": "Pregnancy of unknown location",
+  "strength": "essential",
+  "reason": "Unknown location must exclude ectopic pregnancy"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Hyperemesis gravidarum",
+  "strength": "helpful",
+  "reason": "hCG levels relate to hyperemesis"
+ },
+ {
+  "prerequisite": "Fertilisation",
+  "concept": "Multiple pregnancy",
+  "strength": "helpful",
+  "reason": "Twins arise from one or two fertilisations"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Multiple pregnancy",
+  "strength": "essential",
+  "reason": "Chorionicity determines twin risk"
+ },
+ {
+  "prerequisite": "Hypertension",
+  "concept": "Hypertensive disorders of pregnancy",
+  "strength": "essential",
+  "reason": "Pregnancy hypertension builds on BP physiology"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Hypertensive disorders of pregnancy",
+  "strength": "essential",
+  "reason": "Pre-eclampsia arises from abnormal placentation"
+ },
+ {
+  "prerequisite": "Anaemia",
+  "concept": "Anaemia in pregnancy",
+  "strength": "essential",
+  "reason": "Anaemia in pregnancy applies anaemia classification"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Anaemia in pregnancy",
+  "strength": "essential",
+  "reason": "Plasma volume expansion causes dilutional fall"
+ },
+ {
+  "prerequisite": "Diabetes mellitus",
+  "concept": "Diabetes in pregnancy",
+  "strength": "essential",
+  "reason": "Diabetes in pregnancy is a form of diabetes"
+ },
+ {
+  "prerequisite": "Pregnancy",
+  "concept": "Diabetes in pregnancy",
+  "strength": "essential",
+  "reason": "Pregnancy hormones cause insulin resistance"
+ },
+ {
+  "prerequisite": "Heart failure",
+  "concept": "Heart disease in pregnancy",
+  "strength": "helpful",
+  "reason": "Pregnancy load can precipitate heart failure"
+ },
+ {
+  "prerequisite": "Valvular heart disease",
+  "concept": "Heart disease in pregnancy",
+  "strength": "essential",
+  "reason": "Valve disease is the main heart disease in pregnancy"
+ },
+ {
+  "prerequisite": "Urinary tract infection",
+  "concept": "Urinary tract infection in pregnancy",
+  "strength": "essential",
+  "reason": "UTI in pregnancy is a urinary infection"
+ },
+ {
+  "prerequisite": "Liver disease",
+  "concept": "Liver disease in pregnancy",
+  "strength": "essential",
+  "reason": "Liver disorders follow liver disease principles"
+ },
+ {
+  "prerequisite": "Blood groups",
+  "concept": "Rh isoimmunisation",
+  "strength": "essential",
+  "reason": "Rh isoimmunisation follows Rh blood groups"
+ },
+ {
+  "prerequisite": "Humoral immunity",
+  "concept": "Rh isoimmunisation",
+  "strength": "essential",
+  "reason": "Maternal IgG crosses to the fetus"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Infections in pregnancy",
+  "strength": "helpful",
+  "reason": "Vertical transmission harms the fetus"
+ },
+ {
+  "prerequisite": "Fetal membranes",
+  "concept": "Prelabour rupture of membranes",
+  "strength": "essential",
+  "reason": "PROM is rupture of fetal membranes"
+ },
+ {
+  "prerequisite": "Maternal pelvis and fetal skull",
+  "concept": "Mechanism of labour",
+  "strength": "essential",
+  "reason": "Labour mechanism follows pelvis and fetal skull"
+ },
+ {
+  "prerequisite": "Bony pelvis",
+  "concept": "Maternal pelvis and fetal skull",
+  "strength": "essential",
+  "reason": "The maternal pelvis follows bony pelvis anatomy"
+ },
+ {
+  "prerequisite": "Mechanism of labour",
+  "concept": "Normal labour",
+  "strength": "essential",
+  "reason": "Normal labour follows the mechanism of labour"
+ },
+ {
+  "prerequisite": "Parturition",
+  "concept": "Normal labour",
+  "strength": "essential",
+  "reason": "Labour follows parturition physiology"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Abnormal labour",
+  "strength": "essential",
+  "reason": "Abnormal labour departs from normal progress"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Malpresentation",
+  "strength": "helpful",
+  "reason": "Malpresentation disrupts normal labour"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Preterm labour",
+  "strength": "helpful",
+  "reason": "Preterm labour is labour before term"
+ },
+ {
+  "prerequisite": "Gestational age calculation",
+  "concept": "Preterm labour",
+  "strength": "essential",
+  "reason": "Preterm is defined by gestational age"
+ },
+ {
+  "prerequisite": "Gestational age calculation",
+  "concept": "Post-term pregnancy",
+  "strength": "essential",
+  "reason": "Post-term is defined by gestational age"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Induction of labour",
+  "strength": "essential",
+  "reason": "Induction starts labour artificially"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Artificial rupture of membranes",
+  "strength": "helpful",
+  "reason": "ARM is used in labour management"
+ },
+ {
+  "prerequisite": "Perineum",
+  "concept": "Episiotomy",
+  "strength": "essential",
+  "reason": "Episiotomy cuts perineal structures"
+ },
+ {
+  "prerequisite": "Abnormal labour",
+  "concept": "Operative obstetrics",
+  "strength": "essential",
+  "reason": "Operative delivery treats abnormal labour"
+ },
+ {
+  "prerequisite": "Operative obstetrics",
+  "concept": "Caesarean section",
+  "strength": "helpful",
+  "reason": "Caesarean is the main operative delivery"
+ },
+ {
+  "prerequisite": "Caesarean section",
+  "concept": "Pregnancy after caesarean section",
+  "strength": "essential",
+  "reason": "Previous scar guides later delivery"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Postpartum haemorrhage",
+  "strength": "helpful",
+  "reason": "PPH follows failure of third-stage control"
+ },
+ {
+  "prerequisite": "Uterotonics",
+  "concept": "Postpartum haemorrhage",
+  "strength": "essential",
+  "reason": "Uterotonics prevent and treat PPH"
+ },
+ {
+  "prerequisite": "Normal labour",
+  "concept": "Uterine inversion",
+  "strength": "helpful",
+  "reason": "Inversion is a third-stage complication"
+ },
+ {
+  "prerequisite": "Parturition",
+  "concept": "Puerperium",
+  "strength": "essential",
+  "reason": "Puerperium follows parturition"
+ },
+ {
+  "prerequisite": "Lactation",
+  "concept": "Breast disorders during lactation",
+  "strength": "essential",
+  "reason": "Lactation disorders follow lactation physiology"
+ },
+ {
+  "prerequisite": "Postpartum haemorrhage",
+  "concept": "Obstetric emergencies",
+  "strength": "essential",
+  "reason": "PPH is the main obstetric emergency"
+ },
+ {
+  "prerequisite": "Antepartum haemorrhage",
+  "concept": "Obstetric emergencies",
+  "strength": "essential",
+  "reason": "APH is an obstetric emergency"
+ },
+ {
+  "prerequisite": "Hypertensive disorders of pregnancy",
+  "concept": "Obstetric emergencies",
+  "strength": "essential",
+  "reason": "Eclampsia is an obstetric emergency"
+ },
+ {
+  "prerequisite": "Placenta and fetal development",
+  "concept": "Intrauterine fetal death",
+  "strength": "helpful",
+  "reason": "Placental failure is a cause of fetal death"
+ },
+ {
+  "prerequisite": "Maternal mortality",
+  "concept": "Maternal and child health",
+  "strength": "helpful",
+  "reason": "Maternal mortality measures maternal health"
+ },
+ {
+  "prerequisite": "Vital statistics",
+  "concept": "Maternal mortality",
+  "strength": "essential",
+  "reason": "Maternal mortality is a vital statistic"
+ },
+ {
+  "prerequisite": "Vital statistics",
+  "concept": "Perinatal mortality",
+  "strength": "essential",
+  "reason": "Perinatal mortality is a vital statistic"
+ },
+ {
+  "prerequisite": "Fertilisation",
+  "concept": "Recurrent pregnancy loss",
+  "strength": "helpful",
+  "reason": "Chromosomal errors cause pregnancy loss"
+ },
+ {
+  "prerequisite": "Bony pelvis",
+  "concept": "Pelvic assessment",
+  "strength": "essential",
+  "reason": "Pelvic assessment uses bony pelvis anatomy"
+ },
+ {
+  "prerequisite": "Pelvic examination landmarks",
+  "concept": "Gynaecological history and examination",
+  "strength": "essential",
+  "reason": "Gynaecological examination uses pelvic landmarks"
+ },
+ {
+  "prerequisite": "Pelvic examination landmarks",
+  "concept": "Minor gynaecological procedures",
+  "strength": "helpful",
+  "reason": "Procedures rely on pelvic landmarks"
+ },
+ {
+  "prerequisite": "Pelvic viscera",
+  "concept": "Gynaecological surgery",
+  "strength": "essential",
+  "reason": "Gynaecological surgery relies on pelvic anatomy"
+ },
+ {
+  "prerequisite": "Pelvic viscera",
+  "concept": "Pelvic organ injuries",
+  "strength": "essential",
+  "reason": "Injuries follow pelvic organ relations"
+ },
+ {
+  "prerequisite": "Abnormal labour",
+  "concept": "Genital tract fistula",
+  "strength": "essential",
+  "reason": "Obstructed labour causes most fistulae"
+ },
+ {
+  "prerequisite": "Fertilisation",
+  "concept": "Abortion",
+  "strength": "helpful",
+  "reason": "Abortion law refers to pregnancy stages"
+ },
+ {
+  "prerequisite": "Gestational age calculation",
+  "concept": "Abortion",
+  "strength": "essential",
+  "reason": "Legal limits depend on gestational age"
+ },
+ {
+  "prerequisite": "Prenatal screening",
+  "concept": "PCPNDT Act",
+  "strength": "helpful",
+  "reason": "The Act regulates prenatal diagnosis"
+ },
+ {
+  "prerequisite": "Pelvic viscera",
+  "concept": "Urinary catheterisation",
+  "strength": "essential",
+  "reason": "Catheterisation follows urethral anatomy"
+ }
+]

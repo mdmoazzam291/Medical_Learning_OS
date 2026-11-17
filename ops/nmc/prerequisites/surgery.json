@@ -1,0 +1,824 @@
+[
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Wound healing",
+  "strength": "essential",
+  "reason": "Healing follows the inflammatory phase"
+ },
+ {
+  "prerequisite": "Wound healing",
+  "concept": "Wound care",
+  "strength": "essential",
+  "reason": "Wound care follows the phases of healing"
+ },
+ {
+  "prerequisite": "Wound healing",
+  "concept": "Sutures and knots",
+  "strength": "helpful",
+  "reason": "Healing time decides suture choice and removal"
+ },
+ {
+  "prerequisite": "Abdominal incisions",
+  "concept": "Surgical incisions and instruments",
+  "strength": "essential",
+  "reason": "Incisions are planned on abdominal wall anatomy"
+ },
+ {
+  "prerequisite": "Sterilisation",
+  "concept": "Aseptic technique",
+  "strength": "essential",
+  "reason": "Asepsis relies on sterilisation"
+ },
+ {
+  "prerequisite": "Disinfection",
+  "concept": "Aseptic technique",
+  "strength": "essential",
+  "reason": "Asepsis relies on disinfection"
+ },
+ {
+  "prerequisite": "Aseptic technique",
+  "concept": "Surgical infections",
+  "strength": "essential",
+  "reason": "Most surgical infections are prevented by asepsis"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Surgical infections",
+  "strength": "helpful",
+  "reason": "Surgical infections are inflammatory responses"
+ },
+ {
+  "prerequisite": "Fed-fast cycle",
+  "concept": "Metabolic response to injury",
+  "strength": "essential",
+  "reason": "The injury response shifts fed-fast metabolism to catabolism"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Metabolic response to injury",
+  "strength": "essential",
+  "reason": "Cortisol and catecholamines drive the stress response"
+ },
+ {
+  "prerequisite": "Body fluid compartments",
+  "concept": "Perioperative fluid therapy",
+  "strength": "essential",
+  "reason": "Fluid prescribing follows body fluid compartments"
+ },
+ {
+  "prerequisite": "Water and electrolyte balance",
+  "concept": "Perioperative fluid therapy",
+  "strength": "essential",
+  "reason": "Electrolyte balance guides fluid choice"
+ },
+ {
+  "prerequisite": "Investigations in surgical patients",
+  "concept": "Preoperative assessment",
+  "strength": "helpful",
+  "reason": "Pre-operative work-up uses surgical investigations"
+ },
+ {
+  "prerequisite": "Preoperative assessment",
+  "concept": "Perioperative care",
+  "strength": "essential",
+  "reason": "Perioperative care starts from pre-operative assessment"
+ },
+ {
+  "prerequisite": "Perioperative fluid therapy",
+  "concept": "Perioperative care",
+  "strength": "essential",
+  "reason": "Fluid management is central to perioperative care"
+ },
+ {
+  "prerequisite": "Protein-energy malnutrition",
+  "concept": "Malnutrition in surgical patients",
+  "strength": "essential",
+  "reason": "Surgical malnutrition is protein-energy malnutrition"
+ },
+ {
+  "prerequisite": "Metabolic response to injury",
+  "concept": "Malnutrition in surgical patients",
+  "strength": "essential",
+  "reason": "Catabolic stress worsens malnutrition"
+ },
+ {
+  "prerequisite": "Skin",
+  "concept": "Burns",
+  "strength": "essential",
+  "reason": "Burn depth is classified by skin layers"
+ },
+ {
+  "prerequisite": "Body fluid compartments",
+  "concept": "Burns",
+  "strength": "essential",
+  "reason": "Burn resuscitation replaces fluid shifts"
+ },
+ {
+  "prerequisite": "Metabolic response to injury",
+  "concept": "Burns",
+  "strength": "helpful",
+  "reason": "Major burns trigger a severe metabolic response"
+ },
+ {
+  "prerequisite": "Basic life support",
+  "concept": "Prehospital trauma care",
+  "strength": "essential",
+  "reason": "Trauma care starts with basic life support"
+ },
+ {
+  "prerequisite": "Airway management",
+  "concept": "Prehospital trauma care",
+  "strength": "essential",
+  "reason": "Airway control comes first in trauma care"
+ },
+ {
+  "prerequisite": "Skull",
+  "concept": "Head injury",
+  "strength": "essential",
+  "reason": "Skull anatomy explains fracture patterns"
+ },
+ {
+  "prerequisite": "Meninges",
+  "concept": "Head injury",
+  "strength": "essential",
+  "reason": "Meningeal layers explain extradural and subdural haematomas"
+ },
+ {
+  "prerequisite": "Glasgow Coma Scale",
+  "concept": "Head injury",
+  "strength": "essential",
+  "reason": "Head injury severity is graded by GCS"
+ },
+ {
+  "prerequisite": "Reticular activating system",
+  "concept": "Glasgow Coma Scale",
+  "strength": "helpful",
+  "reason": "Consciousness depends on the reticular activating system"
+ },
+ {
+  "prerequisite": "Thoracic wall",
+  "concept": "Chest trauma",
+  "strength": "essential",
+  "reason": "Chest wall anatomy explains rib and flail injuries"
+ },
+ {
+  "prerequisite": "Pleura",
+  "concept": "Chest trauma",
+  "strength": "essential",
+  "reason": "Pleural anatomy explains pneumothorax and haemothorax"
+ },
+ {
+  "prerequisite": "Mechanics of breathing",
+  "concept": "Chest trauma",
+  "strength": "helpful",
+  "reason": "Breathing mechanics explain respiratory compromise"
+ },
+ {
+  "prerequisite": "Wound healing",
+  "concept": "Soft tissue injuries",
+  "strength": "essential",
+  "reason": "Soft tissue repair follows wound healing"
+ },
+ {
+  "prerequisite": "Gangrene",
+  "concept": "Amputation",
+  "strength": "helpful",
+  "reason": "Gangrene is a main indication for amputation"
+ },
+ {
+  "prerequisite": "Peripheral arterial disease",
+  "concept": "Amputation",
+  "strength": "helpful",
+  "reason": "Peripheral arterial disease leads to most amputations"
+ },
+ {
+  "prerequisite": "Ischaemia",
+  "concept": "Gangrene",
+  "strength": "essential",
+  "reason": "Gangrene follows ischaemia"
+ },
+ {
+  "prerequisite": "Necrosis",
+  "concept": "Gangrene",
+  "strength": "essential",
+  "reason": "Gangrene is necrosis of tissue"
+ },
+ {
+  "prerequisite": "Skin histology",
+  "concept": "Skin tumours",
+  "strength": "essential",
+  "reason": "Skin tumours arise from specific skin layers"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Skin tumours",
+  "strength": "helpful",
+  "reason": "Tumour behaviour follows neoplasia principles"
+ },
+ {
+  "prerequisite": "Development of the head and neck",
+  "concept": "Cleft lip and palate",
+  "strength": "essential",
+  "reason": "Cleft lip and palate are failures of facial fusion"
+ },
+ {
+  "prerequisite": "Thyroid gland",
+  "concept": "Goitre",
+  "strength": "essential",
+  "reason": "Goitre is enlargement of the thyroid gland"
+ },
+ {
+  "prerequisite": "Thyroid function tests",
+  "concept": "Goitre",
+  "strength": "essential",
+  "reason": "Thyroid status guides goitre management"
+ },
+ {
+  "prerequisite": "Thyroid gland",
+  "concept": "Thyroid neoplasms",
+  "strength": "essential",
+  "reason": "Thyroid neoplasms arise from thyroid cell types"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Thyroid neoplasms",
+  "strength": "essential",
+  "reason": "Behaviour follows neoplasia principles"
+ },
+ {
+  "prerequisite": "Calcium-regulating hormones",
+  "concept": "Hypoparathyroidism",
+  "strength": "essential",
+  "reason": "Hypoparathyroidism is PTH deficiency"
+ },
+ {
+  "prerequisite": "Calcium metabolism",
+  "concept": "Hypoparathyroidism",
+  "strength": "essential",
+  "reason": "Low calcium explains features"
+ },
+ {
+  "prerequisite": "Adrenal gland",
+  "concept": "Adrenal tumours",
+  "strength": "essential",
+  "reason": "Adrenal tumours arise from cortex or medulla"
+ },
+ {
+  "prerequisite": "Breast",
+  "concept": "Breast examination",
+  "strength": "essential",
+  "reason": "Examination follows breast anatomy and drainage"
+ },
+ {
+  "prerequisite": "Breast",
+  "concept": "Benign breast disease",
+  "strength": "essential",
+  "reason": "Benign lesions arise from breast tissue components"
+ },
+ {
+  "prerequisite": "Breast",
+  "concept": "Breast cancer",
+  "strength": "essential",
+  "reason": "Spread follows breast lymphatic drainage"
+ },
+ {
+  "prerequisite": "Metastasis",
+  "concept": "Breast cancer",
+  "strength": "essential",
+  "reason": "Staging depends on metastatic spread"
+ },
+ {
+  "prerequisite": "Head and neck lymphatics",
+  "concept": "Head and neck cancer",
+  "strength": "essential",
+  "reason": "Neck node levels follow head and neck lymphatics"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Head and neck cancer",
+  "strength": "helpful",
+  "reason": "Behaviour follows neoplasia principles"
+ },
+ {
+  "prerequisite": "Parotid gland",
+  "concept": "Salivary gland disorders",
+  "strength": "essential",
+  "reason": "Parotid disease relates to gland anatomy"
+ },
+ {
+  "prerequisite": "Facial nerve",
+  "concept": "Salivary gland disorders",
+  "strength": "essential",
+  "reason": "The facial nerve runs through the parotid"
+ },
+ {
+  "prerequisite": "Oesophagus",
+  "concept": "Oesophageal disorders",
+  "strength": "essential",
+  "reason": "Oesophageal disorders relate to its anatomy and sphincters"
+ },
+ {
+  "prerequisite": "Barium swallow",
+  "concept": "Oesophageal disorders",
+  "strength": "helpful",
+  "reason": "Barium swallow shows oesophageal lesions"
+ },
+ {
+  "prerequisite": "Mediastinum",
+  "concept": "Mediastinal disorders",
+  "strength": "essential",
+  "reason": "Mediastinal masses are localised by compartment"
+ },
+ {
+  "prerequisite": "Anterior abdominal wall",
+  "concept": "Hernia",
+  "strength": "essential",
+  "reason": "Hernias occur at abdominal wall weaknesses"
+ },
+ {
+  "prerequisite": "Inguinal canal",
+  "concept": "Hernia",
+  "strength": "essential",
+  "reason": "Inguinal hernias follow the inguinal canal"
+ },
+ {
+  "prerequisite": "Peritoneum",
+  "concept": "Peritonitis",
+  "strength": "essential",
+  "reason": "Peritonitis spreads through peritoneal spaces"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Peritonitis",
+  "strength": "helpful",
+  "reason": "Peritonitis is peritoneal inflammation"
+ },
+ {
+  "prerequisite": "Abdominal viscera",
+  "concept": "Retroperitoneal and mesenteric lesions",
+  "strength": "helpful",
+  "reason": "Lesions are located by retroperitoneal anatomy"
+ },
+ {
+  "prerequisite": "Stomach",
+  "concept": "Surgical disorders of the stomach",
+  "strength": "essential",
+  "reason": "Gastric disorders relate to stomach anatomy"
+ },
+ {
+  "prerequisite": "Peptic ulcer disease",
+  "concept": "Surgical disorders of the stomach",
+  "strength": "essential",
+  "reason": "Peptic ulcer causes many surgical stomach disorders"
+ },
+ {
+  "prerequisite": "Gallbladder",
+  "concept": "Biliary tract disease",
+  "strength": "essential",
+  "reason": "Biliary disease relates to gallbladder anatomy"
+ },
+ {
+  "prerequisite": "Gallstones",
+  "concept": "Biliary tract disease",
+  "strength": "essential",
+  "reason": "Gallstones cause most biliary disease"
+ },
+ {
+  "prerequisite": "Small and large intestine",
+  "concept": "Surgical bowel disorders",
+  "strength": "essential",
+  "reason": "Bowel disorders relate to intestinal anatomy"
+ },
+ {
+  "prerequisite": "Gastrointestinal motility",
+  "concept": "Surgical bowel disorders",
+  "strength": "helpful",
+  "reason": "Motility explains obstruction and ileus"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Appendicitis",
+  "strength": "essential",
+  "reason": "Appendicitis is acute inflammation"
+ },
+ {
+  "prerequisite": "Abdominal viscera",
+  "concept": "Appendicitis",
+  "strength": "helpful",
+  "reason": "Appendix position explains pain variation"
+ },
+ {
+  "prerequisite": "Rectum and anal canal",
+  "concept": "Anorectal disorders",
+  "strength": "essential",
+  "reason": "Anorectal disorders follow anal canal anatomy"
+ },
+ {
+  "prerequisite": "Ischioanal fossa",
+  "concept": "Anorectal disorders",
+  "strength": "helpful",
+  "reason": "Abscesses spread through the ischioanal fossa"
+ },
+ {
+  "prerequisite": "Rectum and anal canal",
+  "concept": "Digital rectal examination",
+  "strength": "essential",
+  "reason": "DRE examines rectal anatomy"
+ },
+ {
+  "prerequisite": "Prostate",
+  "concept": "Digital rectal examination",
+  "strength": "essential",
+  "reason": "DRE assesses the prostate"
+ },
+ {
+  "prerequisite": "Surface anatomy of the abdomen",
+  "concept": "Abdominal examination",
+  "strength": "essential",
+  "reason": "Abdominal examination uses surface anatomy"
+ },
+ {
+  "prerequisite": "Pancreatic exocrine secretion",
+  "concept": "Pancreatitis",
+  "strength": "essential",
+  "reason": "Pancreatitis is premature enzyme activation"
+ },
+ {
+  "prerequisite": "Gallstones",
+  "concept": "Pancreatitis",
+  "strength": "essential",
+  "reason": "Gallstones are a leading cause of pancreatitis"
+ },
+ {
+  "prerequisite": "Endocrine pancreas",
+  "concept": "Pancreatic endocrine tumours",
+  "strength": "essential",
+  "reason": "These tumours arise from islet cells"
+ },
+ {
+  "prerequisite": "Calcium metabolism",
+  "concept": "Urolithiasis",
+  "strength": "essential",
+  "reason": "Calcium handling explains most stones"
+ },
+ {
+  "prerequisite": "Purine metabolism",
+  "concept": "Urolithiasis",
+  "strength": "helpful",
+  "reason": "Uric acid stones follow purine metabolism"
+ },
+ {
+  "prerequisite": "Urolithiasis",
+  "concept": "Hydronephrosis",
+  "strength": "helpful",
+  "reason": "Stones are a common cause of hydronephrosis"
+ },
+ {
+  "prerequisite": "Kidney",
+  "concept": "Renal tumours",
+  "strength": "helpful",
+  "reason": "Renal tumours arise from nephron cells"
+ },
+ {
+  "prerequisite": "Urogenital system histology",
+  "concept": "Urothelial carcinoma",
+  "strength": "essential",
+  "reason": "Urothelial tumours arise from transitional epithelium"
+ },
+ {
+  "prerequisite": "Urinalysis",
+  "concept": "Haematuria",
+  "strength": "essential",
+  "reason": "Haematuria is confirmed on urinalysis"
+ },
+ {
+  "prerequisite": "Development of the urinary system",
+  "concept": "Congenital urinary tract anomalies",
+  "strength": "essential",
+  "reason": "Anomalies follow urinary tract development"
+ },
+ {
+  "prerequisite": "Micturition",
+  "concept": "Urinary retention",
+  "strength": "essential",
+  "reason": "Retention is failure of micturition"
+ },
+ {
+  "prerequisite": "Benign prostatic hyperplasia",
+  "concept": "Urinary retention",
+  "strength": "essential",
+  "reason": "BPH is the commonest cause of retention"
+ },
+ {
+  "prerequisite": "Prostate",
+  "concept": "Benign prostatic hyperplasia",
+  "strength": "essential",
+  "reason": "BPH arises in the prostate transition zone"
+ },
+ {
+  "prerequisite": "Androgens",
+  "concept": "Benign prostatic hyperplasia",
+  "strength": "helpful",
+  "reason": "Androgens drive prostatic growth"
+ },
+ {
+  "prerequisite": "Prostate",
+  "concept": "Prostate cancer",
+  "strength": "essential",
+  "reason": "Prostate cancer arises in the peripheral zone"
+ },
+ {
+  "prerequisite": "Prostate",
+  "concept": "Prostatitis",
+  "strength": "essential",
+  "reason": "Prostatitis relates to prostate anatomy"
+ },
+ {
+  "prerequisite": "Urinary tract infection",
+  "concept": "Prostatitis",
+  "strength": "helpful",
+  "reason": "Bacterial prostatitis is a urinary infection"
+ },
+ {
+  "prerequisite": "Perineum",
+  "concept": "Urethral stricture",
+  "strength": "helpful",
+  "reason": "Strictures follow urethral course and injury"
+ },
+ {
+  "prerequisite": "Penis",
+  "concept": "Phimosis and paraphimosis",
+  "strength": "essential",
+  "reason": "Phimosis relates to foreskin anatomy"
+ },
+ {
+  "prerequisite": "Development of the reproductive system",
+  "concept": "Undescended testis",
+  "strength": "essential",
+  "reason": "Undescended testis is arrested testicular descent"
+ },
+ {
+  "prerequisite": "Testis and epididymis",
+  "concept": "Acute scrotum",
+  "strength": "essential",
+  "reason": "Torsion and epididymitis relate to testicular anatomy"
+ },
+ {
+  "prerequisite": "Testis and epididymis",
+  "concept": "Varicocele",
+  "strength": "helpful",
+  "reason": "Varicocele involves the testicular venous drainage"
+ },
+ {
+  "prerequisite": "Testis and epididymis",
+  "concept": "Hydrocele",
+  "strength": "essential",
+  "reason": "Hydrocele collects around the testis"
+ },
+ {
+  "prerequisite": "Development of the reproductive system",
+  "concept": "Hydrocele",
+  "strength": "helpful",
+  "reason": "Congenital hydrocele follows processus vaginalis"
+ },
+ {
+  "prerequisite": "Testis and epididymis",
+  "concept": "Testicular tumours",
+  "strength": "essential",
+  "reason": "Testicular tumours arise from germ and stromal cells"
+ },
+ {
+  "prerequisite": "Lymphatic system",
+  "concept": "Testicular tumours",
+  "strength": "helpful",
+  "reason": "Spread follows para-aortic lymphatic drainage"
+ },
+ {
+  "prerequisite": "Penis",
+  "concept": "Penile carcinoma",
+  "strength": "essential",
+  "reason": "Penile carcinoma relates to penile anatomy"
+ },
+ {
+  "prerequisite": "Lower limb venous system",
+  "concept": "Varicose veins",
+  "strength": "essential",
+  "reason": "Varicose veins are failure of the venous system"
+ },
+ {
+  "prerequisite": "Calf muscle pump",
+  "concept": "Varicose veins",
+  "strength": "essential",
+  "reason": "Calf pump failure causes venous hypertension"
+ },
+ {
+  "prerequisite": "Thrombosis",
+  "concept": "Deep vein thrombosis",
+  "strength": "essential",
+  "reason": "DVT is venous thrombosis"
+ },
+ {
+  "prerequisite": "Lower limb venous system",
+  "concept": "Deep vein thrombosis",
+  "strength": "essential",
+  "reason": "Deep veins of the leg are the usual site"
+ },
+ {
+  "prerequisite": "Atherosclerosis",
+  "concept": "Peripheral arterial disease",
+  "strength": "essential",
+  "reason": "Peripheral arterial disease is atherosclerotic"
+ },
+ {
+  "prerequisite": "Ischaemia",
+  "concept": "Peripheral arterial disease",
+  "strength": "essential",
+  "reason": "Symptoms are limb ischaemia"
+ },
+ {
+  "prerequisite": "Blood vessels",
+  "concept": "Peripheral vascular examination",
+  "strength": "helpful",
+  "reason": "Pulse sites follow vessel anatomy"
+ },
+ {
+  "prerequisite": "Cardiovascular regulation",
+  "concept": "Vasospastic disorders",
+  "strength": "helpful",
+  "reason": "Vasospasm is abnormal vascular regulation"
+ },
+ {
+  "prerequisite": "Lymphatic system",
+  "concept": "Lymphoedema",
+  "strength": "essential",
+  "reason": "Lymphoedema is failure of lymphatic drainage"
+ },
+ {
+  "prerequisite": "Lymphatic filariasis",
+  "concept": "Lymphoedema",
+  "strength": "helpful",
+  "reason": "Filariasis is a major cause in India"
+ },
+ {
+  "prerequisite": "Lymphatic system",
+  "concept": "Lymphangitis",
+  "strength": "essential",
+  "reason": "Lymphangitis spreads along lymphatics"
+ },
+ {
+  "prerequisite": "Skin and soft tissue infections",
+  "concept": "Lymphangitis",
+  "strength": "helpful",
+  "reason": "It follows skin and soft tissue infection"
+ },
+ {
+  "prerequisite": "Lymphatic system",
+  "concept": "Lymphatic system examination",
+  "strength": "essential",
+  "reason": "Node groups follow lymphatic drainage"
+ },
+ {
+  "prerequisite": "Lymphatic system",
+  "concept": "Lymphadenopathy",
+  "strength": "essential",
+  "reason": "Node enlargement follows drainage areas"
+ },
+ {
+  "prerequisite": "Inflammation",
+  "concept": "Lymphadenopathy",
+  "strength": "helpful",
+  "reason": "Reactive nodes are an inflammatory response"
+ },
+ {
+  "prerequisite": "Neoplasia",
+  "concept": "Surgical oncology",
+  "strength": "essential",
+  "reason": "Surgical oncology applies neoplasia principles"
+ },
+ {
+  "prerequisite": "Metastasis",
+  "concept": "Surgical oncology",
+  "strength": "essential",
+  "reason": "Resection and staging depend on spread"
+ },
+ {
+  "prerequisite": "Human leucocyte antigens",
+  "concept": "Organ transplantation",
+  "strength": "essential",
+  "reason": "Donor matching uses HLA typing"
+ },
+ {
+  "prerequisite": "Transplant rejection",
+  "concept": "Organ transplantation",
+  "strength": "essential",
+  "reason": "Graft survival depends on preventing rejection"
+ },
+ {
+  "prerequisite": "Brain death",
+  "concept": "Organ donation",
+  "strength": "essential",
+  "reason": "Deceased donation requires brain death certification"
+ },
+ {
+  "prerequisite": "Human leucocyte antigens",
+  "concept": "Transplant rejection",
+  "strength": "essential",
+  "reason": "Rejection is directed at mismatched HLA"
+ },
+ {
+  "prerequisite": "Preoperative assessment",
+  "concept": "Day-care surgery",
+  "strength": "helpful",
+  "reason": "Day-care selection depends on pre-operative assessment"
+ },
+ {
+  "prerequisite": "Pain",
+  "concept": "Pain management",
+  "strength": "essential",
+  "reason": "Pain management targets pain pathways"
+ },
+ {
+  "prerequisite": "Opioid analgesics",
+  "concept": "Pain management",
+  "strength": "essential",
+  "reason": "Opioids are core to severe pain control"
+ },
+ {
+  "prerequisite": "Non-opioid analgesics",
+  "concept": "Pain management",
+  "strength": "essential",
+  "reason": "Non-opioid analgesics form the base of the ladder"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Airway management",
+  "strength": "essential",
+  "reason": "Airway management relies on laryngeal anatomy"
+ },
+ {
+  "prerequisite": "Trachea",
+  "concept": "Airway management",
+  "strength": "helpful",
+  "reason": "Tracheal anatomy guides intubation and surgical airway"
+ },
+ {
+  "prerequisite": "General anaesthetics",
+  "concept": "Anaesthesiology",
+  "strength": "essential",
+  "reason": "Anaesthesia depends on anaesthetic drugs"
+ },
+ {
+  "prerequisite": "Medical ethics",
+  "concept": "Informed consent",
+  "strength": "essential",
+  "reason": "Informed consent applies autonomy"
+ },
+ {
+  "prerequisite": "Doctor-patient relationship",
+  "concept": "Prognosis counselling",
+  "strength": "helpful",
+  "reason": "Prognosis discussions rely on the relationship"
+ },
+ {
+  "prerequisite": "Ischaemic heart disease",
+  "concept": "Cardiac surgery",
+  "strength": "helpful",
+  "reason": "Coronary surgery treats ischaemic heart disease"
+ },
+ {
+  "prerequisite": "Heart",
+  "concept": "Cardiac surgery",
+  "strength": "helpful",
+  "reason": "Cardiac surgery relies on heart anatomy"
+ },
+ {
+  "prerequisite": "Research methodology",
+  "concept": "Clinical audit",
+  "strength": "helpful",
+  "reason": "Audit uses research methods"
+ },
+ {
+  "prerequisite": "Carcinogenesis",
+  "concept": "Lung carcinoma",
+  "strength": "essential",
+  "reason": "Lung cancer follows carcinogenesis by smoking"
+ },
+ {
+  "prerequisite": "Lungs",
+  "concept": "Lung carcinoma",
+  "strength": "helpful",
+  "reason": "Location relates to lung anatomy"
+ },
+ {
+  "prerequisite": "Aseptic technique",
+  "concept": "Minor surgical procedures",
+  "strength": "essential",
+  "reason": "Minor procedures require asepsis"
+ },
+ {
+  "prerequisite": "Local anaesthetics",
+  "concept": "Minor surgical procedures",
+  "strength": "essential",
+  "reason": "Most minor procedures use local anaesthesia"
+ }
+]

@@ -5,9 +5,60 @@
  "clinicalApproval": false,
  "learnerActivation": false,
  "subjectsAuthored": [
-  "medicine"
+  "medicine",
+  "obstetrics-gynaecology",
+  "pediatrics",
+  "surgery"
  ],
  "links": [
+  {
+   "prerequisiteConceptId": "C-b51540b1-9683-4b85-a9b9-6857cab89d69",
+   "conceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+   "prerequisiteLabel": "Surface anatomy of the abdomen",
+   "label": "Abdominal examination",
+   "strength": "essential",
+   "reason": "Abdominal examination uses surface anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+   "conceptId": "C-3e286aac-9394-4c56-a59a-8c6e7189cd3a",
+   "prerequisiteLabel": "Abdominal examination",
+   "label": "Abdominal pain in children",
+   "strength": "essential",
+   "reason": "Abdominal pain is assessed by examination"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-5c1fbc95-5437-4b44-b093-7f955613be9e",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Abnormal labour",
+   "strength": "essential",
+   "reason": "Abnormal labour departs from normal progress"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-ade6010f-83b5-48f2-99e2-4cb1ad31603c",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Abnormal uterine bleeding",
+   "strength": "essential",
+   "reason": "Abnormal bleeding departs from the normal cycle"
+  },
+  {
+   "prerequisiteConceptId": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "conceptId": "C-6633209a-7dc0-493a-86b2-1207ae99bb45",
+   "prerequisiteLabel": "Fertilisation",
+   "label": "Abortion",
+   "strength": "helpful",
+   "reason": "Abortion law refers to pregnancy stages"
+  },
+  {
+   "prerequisiteConceptId": "C-a0238b23-43eb-4e2a-acb4-3cf9a23983d0",
+   "conceptId": "C-6633209a-7dc0-493a-86b2-1207ae99bb45",
+   "prerequisiteLabel": "Gestational age calculation",
+   "label": "Abortion",
+   "strength": "essential",
+   "reason": "Legal limits depend on gestational age"
+  },
   {
    "prerequisiteConceptId": "C-d1641fbd-5e04-4dd1-8a89-6c36b330df89",
    "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
@@ -65,6 +116,30 @@
    "reason": "Acute febrile illness is approached through fever"
   },
   {
+   "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "conceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+   "prerequisiteLabel": "Diarrhoea",
+   "label": "Acute gastroenteritis",
+   "strength": "essential",
+   "reason": "Gastroenteritis presents as acute diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "conceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+   "prerequisiteLabel": "Water and electrolyte balance",
+   "label": "Acute gastroenteritis",
+   "strength": "essential",
+   "reason": "Dehydration follows fluid and electrolyte loss"
+  },
+  {
+   "prerequisiteConceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "conceptId": "C-7f3efd1d-ed5d-47a2-841e-6eaba54bd1a9",
+   "prerequisiteLabel": "Viral hepatitis",
+   "label": "Acute hepatitis",
+   "strength": "essential",
+   "reason": "Acute hepatitis in children is mostly viral"
+  },
+  {
    "prerequisiteConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
    "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
    "prerequisiteLabel": "Renal function tests",
@@ -79,6 +154,62 @@
    "label": "Acute kidney injury",
    "strength": "essential",
    "reason": "GFR and tubular function define prerenal, renal and postrenal AKI"
+  },
+  {
+   "prerequisiteConceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+   "conceptId": "C-c68b6fe1-0d9b-4c4b-8e69-4564a55362e3",
+   "prerequisiteLabel": "Leukaemias",
+   "label": "Acute lymphoblastic leukaemia",
+   "strength": "essential",
+   "reason": "ALL is a type of leukaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-d5770888-c5f5-41d5-a445-2f0b8e8718f2",
+   "conceptId": "C-52a899d3-e73b-4ea8-8d1f-b717923a344a",
+   "prerequisiteLabel": "Testis and epididymis",
+   "label": "Acute scrotum",
+   "strength": "essential",
+   "reason": "Torsion and epididymitis relate to testicular anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-3c0c9596-3f12-409d-a536-f4acee42e8f3",
+   "conceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+   "prerequisiteLabel": "Ear",
+   "label": "Acute suppurative otitis media",
+   "strength": "essential",
+   "reason": "Otitis media follows middle ear anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-180e5940-3d9d-4b19-a737-6ad67e4b1344",
+   "conceptId": "C-8f2b319c-ddf8-4c95-b5f9-7db1ec98eb2e",
+   "prerequisiteLabel": "Puberty",
+   "label": "Adolescent health",
+   "strength": "essential",
+   "reason": "Adolescent health centres on puberty"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-c1679740-e632-443f-8037-09bf6f66b54c",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Adolescent nutrition",
+   "strength": "helpful",
+   "reason": "Adolescent requirements rise with growth"
+  },
+  {
+   "prerequisiteConceptId": "C-180e5940-3d9d-4b19-a737-6ad67e4b1344",
+   "conceptId": "C-b912c307-88ae-4bf2-9663-3770c56e7e1d",
+   "prerequisiteLabel": "Puberty",
+   "label": "Adolescent sexuality",
+   "strength": "essential",
+   "reason": "Sexuality develops with puberty"
+  },
+  {
+   "prerequisiteConceptId": "C-292c0d76-eab3-4101-9b09-aacf9070290c",
+   "conceptId": "C-e1cb7a8d-57b9-47eb-aa45-6edd74aa1c25",
+   "prerequisiteLabel": "Adrenal gland",
+   "label": "Adrenal tumours",
+   "strength": "essential",
+   "reason": "Adrenal tumours arise from cortex or medulla"
   },
   {
    "prerequisiteConceptId": "C-2c1be0a7-9cb0-41d9-a067-151f4135a497",
@@ -105,12 +236,36 @@
    "reason": "Shockable rhythms guide advanced support"
   },
   {
+   "prerequisiteConceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "conceptId": "C-f49276ec-acf5-40fa-bd51-c4151119802c",
+   "prerequisiteLabel": "Vaccines",
+   "label": "Adverse events following immunisation",
+   "strength": "essential",
+   "reason": "AEFIs are reactions to vaccines"
+  },
+  {
    "prerequisiteConceptId": "C-3e8a2486-7993-46f8-8454-a4659156f0d5",
    "conceptId": "C-f3892c15-1ce1-452f-8e2e-b14e4c48dbae",
    "prerequisiteLabel": "Cellular ageing",
    "label": "Ageing",
    "strength": "helpful",
    "reason": "Cellular ageing underlies organ ageing"
+  },
+  {
+   "prerequisiteConceptId": "C-235bc332-ab2a-463a-955a-ce8a5c7e071e",
+   "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+   "prerequisiteLabel": "Larynx",
+   "label": "Airway management",
+   "strength": "essential",
+   "reason": "Airway management relies on laryngeal anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-03ec3ae9-0c63-47cf-8e80-b60b68647dc7",
+   "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+   "prerequisiteLabel": "Trachea",
+   "label": "Airway management",
+   "strength": "helpful",
+   "reason": "Tracheal anatomy guides intubation and surgical airway"
   },
   {
    "prerequisiteConceptId": "C-73157719-0c8d-44c3-b819-357c1d294850",
@@ -129,12 +284,44 @@
    "reason": "Fatty liver is the first stage of alcohol-related disease"
   },
   {
+   "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptId": "C-b9de459a-5d94-46e4-9f74-c57efa21eade",
+   "prerequisiteLabel": "Hypersensitivity reactions",
+   "label": "Allergic rhinitis",
+   "strength": "essential",
+   "reason": "Allergic rhinitis is a type I reaction"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-57abfde3-0b0f-4b9f-bf19-de7b4b2ae62d",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Amenorrhoea",
+   "strength": "essential",
+   "reason": "Amenorrhoea is absence of the normal cycle"
+  },
+  {
    "prerequisiteConceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
    "conceptId": "C-7c263735-46c3-4459-9eaf-6ac116616b51",
    "prerequisiteLabel": "Dysentery",
    "label": "Amoebiasis",
    "strength": "helpful",
    "reason": "Amoebic dysentery is a form of dysentery"
+  },
+  {
+   "prerequisiteConceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "conceptId": "C-5bc44284-6703-42d4-9045-6b0d250157bc",
+   "prerequisiteLabel": "Gangrene",
+   "label": "Amputation",
+   "strength": "helpful",
+   "reason": "Gangrene is a main indication for amputation"
+  },
+  {
+   "prerequisiteConceptId": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+   "conceptId": "C-5bc44284-6703-42d4-9045-6b0d250157bc",
+   "prerequisiteLabel": "Peripheral arterial disease",
+   "label": "Amputation",
+   "strength": "helpful",
+   "reason": "Peripheral arterial disease leads to most amputations"
   },
   {
    "prerequisiteConceptId": "C-03c4b5a6-3872-480a-9898-3eec8ee7f13d",
@@ -159,6 +346,118 @@
    "label": "Anaemia",
    "strength": "essential",
    "reason": "Red cell indices drive the morphological classification"
+  },
+  {
+   "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptId": "C-d74b3119-eea6-4e87-9b98-0b1be519d4ef",
+   "prerequisiteLabel": "Anaemia",
+   "label": "Anaemia in children",
+   "strength": "essential",
+   "reason": "Childhood anaemia applies anaemia classification"
+  },
+  {
+   "prerequisiteConceptId": "C-cf50b0f4-8f11-443c-9063-2a68cee76a3a",
+   "conceptId": "C-d74b3119-eea6-4e87-9b98-0b1be519d4ef",
+   "prerequisiteLabel": "Iron deficiency anaemia",
+   "label": "Anaemia in children",
+   "strength": "helpful",
+   "reason": "Iron deficiency is the commonest cause in children"
+  },
+  {
+   "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptId": "C-60f64ced-60a6-4029-9a3f-1b0fb38dbe28",
+   "prerequisiteLabel": "Anaemia",
+   "label": "Anaemia in pregnancy",
+   "strength": "essential",
+   "reason": "Anaemia in pregnancy applies anaemia classification"
+  },
+  {
+   "prerequisiteConceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "conceptId": "C-60f64ced-60a6-4029-9a3f-1b0fb38dbe28",
+   "prerequisiteLabel": "Pregnancy",
+   "label": "Anaemia in pregnancy",
+   "strength": "essential",
+   "reason": "Plasma volume expansion causes dilutional fall"
+  },
+  {
+   "prerequisiteConceptId": "C-363e5b94-17a7-4bd3-b1e1-523d3bbf25b0",
+   "conceptId": "C-79d0924a-e2a2-43d8-92a9-9a1e538dcc8f",
+   "prerequisiteLabel": "General anaesthetics",
+   "label": "Anaesthesiology",
+   "strength": "essential",
+   "reason": "Anaesthesia depends on anaesthetic drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-e17e4512-3603-4b50-b753-e575ae0afa93",
+   "conceptId": "C-6e6260e5-147e-4959-b78c-06316d5c2df5",
+   "prerequisiteLabel": "Ischioanal fossa",
+   "label": "Anorectal disorders",
+   "strength": "helpful",
+   "reason": "Abscesses spread through the ischioanal fossa"
+  },
+  {
+   "prerequisiteConceptId": "C-373285e3-270e-4044-9d4a-6072fdf80df0",
+   "conceptId": "C-6e6260e5-147e-4959-b78c-06316d5c2df5",
+   "prerequisiteLabel": "Rectum and anal canal",
+   "label": "Anorectal disorders",
+   "strength": "essential",
+   "reason": "Anorectal disorders follow anal canal anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-adb690b3-ae44-4712-a6e8-e993424f1a19",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "Diagnosis of pregnancy",
+   "label": "Antenatal care",
+   "strength": "essential",
+   "reason": "Antenatal care starts with confirming pregnancy"
+  },
+  {
+   "prerequisiteConceptId": "C-a0238b23-43eb-4e2a-acb4-3cf9a23983d0",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "Gestational age calculation",
+   "label": "Antenatal care",
+   "strength": "essential",
+   "reason": "Care is scheduled by gestational age"
+  },
+  {
+   "prerequisiteConceptId": "C-2181c7aa-a5a4-461f-b2a6-fdb5209c3916",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "High-risk pregnancy",
+   "label": "Antenatal care",
+   "strength": "helpful",
+   "reason": "Risk assessment shapes antenatal care"
+  },
+  {
+   "prerequisiteConceptId": "C-eca502ec-bedc-401f-a58e-331cf7beb395",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "Obstetric examination",
+   "label": "Antenatal care",
+   "strength": "essential",
+   "reason": "Examination tracks fetal growth and lie"
+  },
+  {
+   "prerequisiteConceptId": "C-30adbe86-8cfa-4e65-a912-76432a253168",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "Obstetric history taking",
+   "label": "Antenatal care",
+   "strength": "helpful",
+   "reason": "History taking identifies risks"
+  },
+  {
+   "prerequisiteConceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "conceptId": "C-59b3bb9e-f052-4b46-95e7-da13bbd43477",
+   "prerequisiteLabel": "Pregnancy",
+   "label": "Antenatal care",
+   "strength": "essential",
+   "reason": "Antenatal care monitors physiological changes"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-db80599c-eebb-40b3-82e5-80a4ccf746e1",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Antepartum haemorrhage",
+   "strength": "essential",
+   "reason": "Placental position and separation cause APH"
   },
   {
    "prerequisiteConceptId": "C-f7b02278-84e4-41d4-bc3a-81a92b30e634",
@@ -329,6 +628,22 @@
    "reason": "Antiulcer drugs block gastric acid secretion"
   },
   {
+   "prerequisiteConceptId": "C-bdaf7db6-8353-4b08-bf63-13b7f07d1723",
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "prerequisiteLabel": "Abdominal viscera",
+   "label": "Appendicitis",
+   "strength": "helpful",
+   "reason": "Appendix position explains pain variation"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Appendicitis",
+   "strength": "essential",
+   "reason": "Appendicitis is acute inflammation"
+  },
+  {
    "prerequisiteConceptId": "C-112efd5d-e0fe-4419-a453-b58e6a732977",
    "conceptId": "C-fcbf17b9-28dc-4fde-ae3e-707a3e4c3deb",
    "prerequisiteLabel": "Laboratory diagnosis of infection",
@@ -369,6 +684,14 @@
    "reason": "Synovial fluid analysis follows aspiration"
   },
   {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-b2c24b50-46c7-4cc0-8a80-e2cad87972d8",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Artificial rupture of membranes",
+   "strength": "helpful",
+   "reason": "ARM is used in labour management"
+  },
+  {
    "prerequisiteConceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
    "conceptId": "C-7603137c-3eed-43ac-b4ea-10c6c8840a1b",
    "prerequisiteLabel": "Oedema",
@@ -385,12 +708,44 @@
    "reason": "Ascites mostly follows portal hypertension"
   },
   {
+   "prerequisiteConceptId": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "conceptId": "C-270aacdc-f290-4fee-8067-ee9e2255dc3e",
+   "prerequisiteLabel": "Disinfection",
+   "label": "Aseptic technique",
+   "strength": "essential",
+   "reason": "Asepsis relies on disinfection"
+  },
+  {
+   "prerequisiteConceptId": "C-04b4d135-508d-4b4f-b4ea-41a779faed0a",
+   "conceptId": "C-270aacdc-f290-4fee-8067-ee9e2255dc3e",
+   "prerequisiteLabel": "Sterilisation",
+   "label": "Aseptic technique",
+   "strength": "essential",
+   "reason": "Asepsis relies on sterilisation"
+  },
+  {
    "prerequisiteConceptId": "C-f23f781b-b877-4d07-a186-c64cc03add52",
    "conceptId": "C-91f9f345-6cab-4f74-ae4b-3d20c03095f4",
    "prerequisiteLabel": "Immunodeficiency",
    "label": "Aspergillosis",
    "strength": "helpful",
    "reason": "Invasive aspergillosis follows immunodeficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "conceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+   "prerequisiteLabel": "Fertilisation",
+   "label": "Assisted reproductive technology",
+   "strength": "essential",
+   "reason": "IVF reproduces fertilisation in vitro"
+  },
+  {
+   "prerequisiteConceptId": "C-4ad0a6f8-98ab-4d55-b414-c09b76252dfa",
+   "conceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+   "prerequisiteLabel": "Infertility",
+   "label": "Assisted reproductive technology",
+   "strength": "essential",
+   "reason": "ART treats infertility"
   },
   {
    "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
@@ -425,6 +780,22 @@
    "reason": "LDL handling drives atheroma formation"
   },
   {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-f71132f4-db28-4d39-b94c-34a270098732",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Attention deficit hyperactivity disorder",
+   "strength": "helpful",
+   "reason": "ADHD is judged against developmental norms"
+  },
+  {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-82291e14-3448-418f-8838-e6b109945c40",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Autism spectrum disorder",
+   "strength": "helpful",
+   "reason": "Social and language delays signal autism"
+  },
+  {
    "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
    "conceptId": "C-1f764859-f85a-4c5c-b602-25aa0cf7fb7b",
    "prerequisiteLabel": "Autoimmunity",
@@ -457,6 +828,14 @@
    "reason": "Autoimmunity is a failure of immune tolerance"
   },
   {
+   "prerequisiteConceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "conceptId": "C-d28ab250-b549-405b-b937-d5da06b18501",
+   "prerequisiteLabel": "Breastfeeding",
+   "label": "Baby-Friendly Hospital Initiative",
+   "strength": "essential",
+   "reason": "The initiative promotes breastfeeding practices"
+  },
+  {
    "prerequisiteConceptId": "C-a10786ca-0ee7-46c0-b8cb-4197353c70fe",
    "conceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
    "prerequisiteLabel": "Artificial respiration",
@@ -481,12 +860,60 @@
    "reason": "BCG applies immunisation principles"
   },
   {
+   "prerequisiteConceptId": "C-c0a77490-b0e0-4c93-b1d5-22b424e8d0eb",
+   "conceptId": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+   "prerequisiteLabel": "Breast",
+   "label": "Benign breast disease",
+   "strength": "essential",
+   "reason": "Benign lesions arise from breast tissue components"
+  },
+  {
+   "prerequisiteConceptId": "C-83906d5b-cc4e-4431-806e-3f408d0dcf96",
+   "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "prerequisiteLabel": "Androgens",
+   "label": "Benign prostatic hyperplasia",
+   "strength": "helpful",
+   "reason": "Androgens drive prostatic growth"
+  },
+  {
+   "prerequisiteConceptId": "C-9e700d08-7a69-4274-bd26-58864d34e8dd",
+   "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "prerequisiteLabel": "Prostate",
+   "label": "Benign prostatic hyperplasia",
+   "strength": "essential",
+   "reason": "BPH arises in the prostate transition zone"
+  },
+  {
+   "prerequisiteConceptId": "C-c2832f1a-179d-4018-bef0-85afa8363b8d",
+   "conceptId": "C-0a74c76e-967b-4ff6-9c88-ab2f4bbdc5fb",
+   "prerequisiteLabel": "Gallbladder",
+   "label": "Biliary tract disease",
+   "strength": "essential",
+   "reason": "Biliary disease relates to gallbladder anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "conceptId": "C-0a74c76e-967b-4ff6-9c88-ab2f4bbdc5fb",
+   "prerequisiteLabel": "Gallstones",
+   "label": "Biliary tract disease",
+   "strength": "essential",
+   "reason": "Gallstones cause most biliary disease"
+  },
+  {
    "prerequisiteConceptId": "C-0af2d9fe-5f54-41dc-85fa-b118855a034f",
    "conceptId": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
    "prerequisiteLabel": "Haem metabolism",
    "label": "Bilirubin metabolism",
    "strength": "essential",
    "reason": "Bilirubin comes from haem breakdown"
+  },
+  {
+   "prerequisiteConceptId": "C-feed7858-a94a-459f-9ba4-386f99db6802",
+   "conceptId": "C-8a0b9a31-a7da-4fa0-84ef-fbe58706b622",
+   "prerequisiteLabel": "Hypoxia",
+   "label": "Birth asphyxia",
+   "strength": "essential",
+   "reason": "Birth asphyxia is perinatal hypoxia"
   },
   {
    "prerequisiteConceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
@@ -551,6 +978,102 @@
    "label": "Bone marrow examination",
    "strength": "essential",
    "reason": "Marrow findings are read against normal haematopoiesis"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-43a3023b-4f6b-4737-8cd4-504e8f2b7f32",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Breaking bad news",
+   "strength": "helpful",
+   "reason": "Breaking bad news applies ethical principles"
+  },
+  {
+   "prerequisiteConceptId": "C-c0a77490-b0e0-4c93-b1d5-22b424e8d0eb",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "prerequisiteLabel": "Breast",
+   "label": "Breast cancer",
+   "strength": "essential",
+   "reason": "Spread follows breast lymphatic drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "prerequisiteLabel": "Metastasis",
+   "label": "Breast cancer",
+   "strength": "essential",
+   "reason": "Staging depends on metastatic spread"
+  },
+  {
+   "prerequisiteConceptId": "C-84ffe2e8-0437-4264-9a5b-a048070bc0f3",
+   "conceptId": "C-22c2ed22-5f23-4381-af06-04b7da588091",
+   "prerequisiteLabel": "Lactation",
+   "label": "Breast disorders during lactation",
+   "strength": "essential",
+   "reason": "Lactation disorders follow lactation physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-c0a77490-b0e0-4c93-b1d5-22b424e8d0eb",
+   "conceptId": "C-7d883a41-11e1-4be3-9cc0-4953e42ca685",
+   "prerequisiteLabel": "Breast",
+   "label": "Breast examination",
+   "strength": "essential",
+   "reason": "Examination follows breast anatomy and drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-89d90141-5b19-4a1c-af5f-9ddae88eccf8",
+   "conceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "prerequisiteLabel": "Human milk",
+   "label": "Breastfeeding",
+   "strength": "essential",
+   "reason": "Breast milk composition explains its advantages"
+  },
+  {
+   "prerequisiteConceptId": "C-84ffe2e8-0437-4264-9a5b-a048070bc0f3",
+   "conceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "prerequisiteLabel": "Lactation",
+   "label": "Breastfeeding",
+   "strength": "essential",
+   "reason": "Breastfeeding relies on lactation physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-ca64414c-c0a3-40be-9aa0-846a1bff08f0",
+   "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+   "prerequisiteLabel": "Body fluid compartments",
+   "label": "Burns",
+   "strength": "essential",
+   "reason": "Burn resuscitation replaces fluid shifts"
+  },
+  {
+   "prerequisiteConceptId": "C-c4c088bd-97d4-4068-b5fa-6cc5726e3ae0",
+   "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+   "prerequisiteLabel": "Metabolic response to injury",
+   "label": "Burns",
+   "strength": "helpful",
+   "reason": "Major burns trigger a severe metabolic response"
+  },
+  {
+   "prerequisiteConceptId": "C-ca21cc38-85f4-4be9-92b5-1eff78ac6d02",
+   "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+   "prerequisiteLabel": "Skin",
+   "label": "Burns",
+   "strength": "essential",
+   "reason": "Burn depth is classified by skin layers"
+  },
+  {
+   "prerequisiteConceptId": "C-0ed4438e-c1ef-4c3d-bef8-fbf0fda5485b",
+   "conceptId": "C-62caaf83-c236-49f1-80f7-269540cea850",
+   "prerequisiteLabel": "Operative obstetrics",
+   "label": "Caesarean section",
+   "strength": "helpful",
+   "reason": "Caesarean is the main operative delivery"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-d80bcaa7-4b4e-4217-955c-60d1d6951125",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Calcium and magnesium deficiency",
+   "strength": "essential",
+   "reason": "Deficiency features follow calcium and magnesium handling"
   },
   {
    "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
@@ -681,6 +1204,30 @@
    "reason": "Rehabilitation follows ischaemic heart disease"
   },
   {
+   "prerequisiteConceptId": "C-63ed7978-7558-43e2-ad7c-c6de64135755",
+   "conceptId": "C-3b04059f-a944-440c-8a10-8a4f0f534325",
+   "prerequisiteLabel": "Heart",
+   "label": "Cardiac surgery",
+   "strength": "helpful",
+   "reason": "Cardiac surgery relies on heart anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "conceptId": "C-3b04059f-a944-440c-8a10-8a4f0f534325",
+   "prerequisiteLabel": "Ischaemic heart disease",
+   "label": "Cardiac surgery",
+   "strength": "helpful",
+   "reason": "Coronary surgery treats ischaemic heart disease"
+  },
+  {
+   "prerequisiteConceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "conceptId": "C-442eba27-65c5-421c-8eea-41c12b2fc784",
+   "prerequisiteLabel": "Basic life support",
+   "label": "Cardiopulmonary arrest",
+   "strength": "essential",
+   "reason": "Arrest management builds on basic life support"
+  },
+  {
    "prerequisiteConceptId": "C-7d7ee881-1f50-43e8-8bed-00d02d7e41a7",
    "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
    "prerequisiteLabel": "Arterial pulse",
@@ -705,12 +1252,100 @@
    "reason": "JVP assessment is part of the cardiovascular examination"
   },
   {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-4c4dd879-d463-4a2d-92ec-4ec8e8d81864",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Cerebral palsy",
+   "strength": "helpful",
+   "reason": "Diagnosis rests on delayed milestones"
+  },
+  {
+   "prerequisiteConceptId": "C-d0eba639-0935-4a0b-941b-0a4bf7f19632",
+   "conceptId": "C-4c4dd879-d463-4a2d-92ec-4ec8e8d81864",
+   "prerequisiteLabel": "Upper and lower motor neuron lesions",
+   "label": "Cerebral palsy",
+   "strength": "essential",
+   "reason": "Cerebral palsy shows upper motor neuron signs"
+  },
+  {
    "prerequisiteConceptId": "C-c2c4195a-db70-491d-a04f-96ec1ce12dce",
    "conceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
    "prerequisiteLabel": "Central nervous system",
    "label": "Cerebrospinal fluid",
    "strength": "helpful",
    "reason": "CSF physiology relates to the central nervous system"
+  },
+  {
+   "prerequisiteConceptId": "C-4b1b951d-5e5e-4a4b-8030-73bfaa70d384",
+   "conceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "prerequisiteLabel": "Oncogenic infections",
+   "label": "Cervical cancer",
+   "strength": "essential",
+   "reason": "HPV causes cervical cancer"
+  },
+  {
+   "prerequisiteConceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "conceptId": "C-01236beb-90e3-4eaf-94bf-bb8f9619ad67",
+   "prerequisiteLabel": "Cervical cancer",
+   "label": "Cervical cancer screening",
+   "strength": "essential",
+   "reason": "Screening targets the cervical precancer stage"
+  },
+  {
+   "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
+   "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+   "prerequisiteLabel": "Mechanics of breathing",
+   "label": "Chest trauma",
+   "strength": "helpful",
+   "reason": "Breathing mechanics explain respiratory compromise"
+  },
+  {
+   "prerequisiteConceptId": "C-d773b497-4ec6-486a-954e-39f0c2213271",
+   "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+   "prerequisiteLabel": "Pleura",
+   "label": "Chest trauma",
+   "strength": "essential",
+   "reason": "Pleural anatomy explains pneumothorax and haemothorax"
+  },
+  {
+   "prerequisiteConceptId": "C-a0cc437d-5da7-4ba1-92fa-49f988f98f37",
+   "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+   "prerequisiteLabel": "Thoracic wall",
+   "label": "Chest trauma",
+   "strength": "essential",
+   "reason": "Chest wall anatomy explains rib and flail injuries"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-0601180d-c252-4190-a5c7-fc09620d47eb",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Child abuse",
+   "strength": "helpful",
+   "reason": "Child protection applies ethics and law"
+  },
+  {
+   "prerequisiteConceptId": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+   "conceptId": "C-c8764b69-171a-442d-a2a5-e99a9c78d898",
+   "prerequisiteLabel": "Non-Hodgkin lymphoma",
+   "label": "Childhood lymphoma",
+   "strength": "helpful",
+   "reason": "Most childhood lymphomas are non-Hodgkin"
+  },
+  {
+   "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptId": "C-24c8a1fd-f627-4ba2-ae78-f7771fdb8f97",
+   "prerequisiteLabel": "Cell-mediated immunity",
+   "label": "Childhood tuberculosis",
+   "strength": "essential",
+   "reason": "Children have immature cell-mediated defence"
+  },
+  {
+   "prerequisiteConceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "conceptId": "C-24c8a1fd-f627-4ba2-ae78-f7771fdb8f97",
+   "prerequisiteLabel": "Pulmonary tuberculosis",
+   "label": "Childhood tuberculosis",
+   "strength": "essential",
+   "reason": "Childhood TB is a form of tuberculosis"
   },
   {
    "prerequisiteConceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
@@ -727,6 +1362,14 @@
    "label": "Chronic kidney disease",
    "strength": "essential",
    "reason": "Nephron loss explains CKD progression"
+  },
+  {
+   "prerequisiteConceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "conceptId": "C-d774d9b8-d05b-45e3-9dce-8348a170a9ce",
+   "prerequisiteLabel": "Cirrhosis",
+   "label": "Chronic liver disease",
+   "strength": "helpful",
+   "reason": "Chronic liver disease leads to cirrhosis"
   },
   {
    "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
@@ -769,12 +1412,52 @@
    "reason": "Fibrosis follows repair mechanisms"
   },
   {
+   "prerequisiteConceptId": "C-ac1d3493-f636-4fd3-bff1-da0cd49f1503",
+   "conceptId": "C-4d756b70-db7d-4ed1-ac5e-4d84a2c807f8",
+   "prerequisiteLabel": "Development of the head and neck",
+   "label": "Cleft lip and palate",
+   "strength": "essential",
+   "reason": "Cleft lip and palate are failures of facial fusion"
+  },
+  {
+   "prerequisiteConceptId": "C-b31b6030-aee1-4012-a979-e2c8a516490c",
+   "conceptId": "C-adfa2c26-f38f-4c49-b80e-2325cfb0874e",
+   "prerequisiteLabel": "Research methodology",
+   "label": "Clinical audit",
+   "strength": "helpful",
+   "reason": "Audit uses research methods"
+  },
+  {
    "prerequisiteConceptId": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
    "conceptId": "C-bac5c802-58e9-4f84-b89d-c70c2d29ba22",
    "prerequisiteLabel": "Anaerobic infections",
    "label": "Clostridial infections",
    "strength": "essential",
    "reason": "Clostridia are anaerobic organisms"
+  },
+  {
+   "prerequisiteConceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "conceptId": "C-060b6d74-b2b7-4bed-9f39-90588652d025",
+   "prerequisiteLabel": "Vaccines",
+   "label": "Cold chain",
+   "strength": "essential",
+   "reason": "Cold chain keeps vaccines potent"
+  },
+  {
+   "prerequisiteConceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "conceptId": "C-3e73e076-2bf0-421a-894d-0165b8f4c66c",
+   "prerequisiteLabel": "Breastfeeding",
+   "label": "Complementary feeding",
+   "strength": "essential",
+   "reason": "Complementary feeding follows exclusive breastfeeding"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-3e73e076-2bf0-421a-894d-0165b8f4c66c",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Complementary feeding",
+   "strength": "essential",
+   "reason": "Feeds must meet changing nutrient needs"
   },
   {
    "prerequisiteConceptId": "C-0c3953c0-b611-4ea0-a99b-f23f3da66c08",
@@ -793,6 +1476,14 @@
    "reason": "Cardiac development and structure explain congenital lesions"
   },
   {
+   "prerequisiteConceptId": "C-dd44e32d-495d-4393-aec5-ba9d9a75f0f0",
+   "conceptId": "C-2f4c8024-9b5a-48ea-8048-f786e8617a12",
+   "prerequisiteLabel": "Development of the urinary system",
+   "label": "Congenital urinary tract anomalies",
+   "strength": "essential",
+   "reason": "Anomalies follow urinary tract development"
+  },
+  {
    "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
    "conceptId": "C-87193dfe-37b8-44fb-bc8f-ade92e95074d",
    "prerequisiteLabel": "Autoimmunity",
@@ -807,6 +1498,14 @@
    "label": "Connective tissue disorders",
    "strength": "helpful",
    "reason": "Extracellular matrix explains tissue involvement"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Contraception",
+   "strength": "essential",
+   "reason": "Hormonal contraception acts on the cycle"
   },
   {
    "prerequisiteConceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
@@ -825,12 +1524,44 @@
    "reason": "Corrosive poisoning follows general poisoning management"
   },
   {
+   "prerequisiteConceptId": "C-235bc332-ab2a-463a-955a-ce8a5c7e071e",
+   "conceptId": "C-61e37073-b7c8-4b3a-8ce8-2d3f11457105",
+   "prerequisiteLabel": "Larynx",
+   "label": "Croup",
+   "strength": "essential",
+   "reason": "Croup narrows the subglottic airway"
+  },
+  {
    "prerequisiteConceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
    "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
    "prerequisiteLabel": "Microorganisms",
    "label": "Cysticercosis",
    "strength": "helpful",
    "reason": "The tapeworm life cycle explains cysticercosis"
+  },
+  {
+   "prerequisiteConceptId": "C-93fec1d5-8dfc-45f0-84e3-6736aebc104c",
+   "conceptId": "C-ca997162-454f-4c30-963e-c387d7e72b44",
+   "prerequisiteLabel": "Preoperative assessment",
+   "label": "Day-care surgery",
+   "strength": "helpful",
+   "reason": "Day-care selection depends on pre-operative assessment"
+  },
+  {
+   "prerequisiteConceptId": "C-e409cecb-01d2-4873-a2de-bba4d6e520b1",
+   "conceptId": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "prerequisiteLabel": "Lower limb venous system",
+   "label": "Deep vein thrombosis",
+   "strength": "essential",
+   "reason": "Deep veins of the leg are the usual site"
+  },
+  {
+   "prerequisiteConceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "conceptId": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "prerequisiteLabel": "Thrombosis",
+   "label": "Deep vein thrombosis",
+   "strength": "essential",
+   "reason": "DVT is venous thrombosis"
   },
   {
    "prerequisiteConceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
@@ -863,6 +1594,38 @@
    "label": "Depression",
    "strength": "essential",
    "reason": "Monoamines explain depression and its treatment"
+  },
+  {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-b3c08dab-01b8-42c3-9a29-581488a11e0e",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Developmental delay",
+   "strength": "essential",
+   "reason": "Delay is judged against expected milestones"
+  },
+  {
+   "prerequisiteConceptId": "C-79c17799-c571-4967-9df5-bf10744093cd",
+   "conceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "prerequisiteLabel": "Growth and development",
+   "label": "Developmental milestones",
+   "strength": "essential",
+   "reason": "Milestones are the measurable markers of development"
+  },
+  {
+   "prerequisiteConceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "conceptId": "C-2dac49aa-8431-4bc8-b4bf-1ca66c5cf67c",
+   "prerequisiteLabel": "Diabetes mellitus",
+   "label": "Diabetes in pregnancy",
+   "strength": "essential",
+   "reason": "Diabetes in pregnancy is a form of diabetes"
+  },
+  {
+   "prerequisiteConceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "conceptId": "C-2dac49aa-8431-4bc8-b4bf-1ca66c5cf67c",
+   "prerequisiteLabel": "Pregnancy",
+   "label": "Diabetes in pregnancy",
+   "strength": "essential",
+   "reason": "Pregnancy hormones cause insulin resistance"
   },
   {
    "prerequisiteConceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
@@ -929,6 +1692,22 @@
    "reason": "Ketogenesis without insulin is the core of DKA"
   },
   {
+   "prerequisiteConceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "conceptId": "C-adb690b3-ae44-4712-a6e8-e993424f1a19",
+   "prerequisiteLabel": "Pregnancy",
+   "label": "Diagnosis of pregnancy",
+   "strength": "essential",
+   "reason": "Diagnosis detects pregnancy hormones and changes"
+  },
+  {
+   "prerequisiteConceptId": "C-c015e520-7a50-41a7-bc3c-44149aec1d0b",
+   "conceptId": "C-adb690b3-ae44-4712-a6e8-e993424f1a19",
+   "prerequisiteLabel": "Pregnancy tests",
+   "label": "Diagnosis of pregnancy",
+   "strength": "essential",
+   "reason": "Pregnancy tests detect hCG"
+  },
+  {
    "prerequisiteConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
    "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
    "prerequisiteLabel": "Digestion and absorption",
@@ -959,6 +1738,54 @@
    "label": "Dietary counselling",
    "strength": "essential",
    "reason": "Counselling applies nutrient requirements"
+  },
+  {
+   "prerequisiteConceptId": "C-9e700d08-7a69-4274-bd26-58864d34e8dd",
+   "conceptId": "C-be01055a-b65d-47d1-a332-224289d4d165",
+   "prerequisiteLabel": "Prostate",
+   "label": "Digital rectal examination",
+   "strength": "essential",
+   "reason": "DRE assesses the prostate"
+  },
+  {
+   "prerequisiteConceptId": "C-373285e3-270e-4044-9d4a-6072fdf80df0",
+   "conceptId": "C-be01055a-b65d-47d1-a332-224289d4d165",
+   "prerequisiteLabel": "Rectum and anal canal",
+   "label": "Digital rectal examination",
+   "strength": "essential",
+   "reason": "DRE examines rectal anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-3a5f4265-b660-4ada-b4cc-3f1e74bc3ed9",
+   "conceptId": "C-e9819f54-b29c-41d7-8c38-19016ca7014c",
+   "prerequisiteLabel": "Vaccine-preventable diseases",
+   "label": "Diphtheria, pertussis and tetanus",
+   "strength": "essential",
+   "reason": "These are vaccine-preventable diseases"
+  },
+  {
+   "prerequisiteConceptId": "C-180e5940-3d9d-4b19-a737-6ad67e4b1344",
+   "conceptId": "C-b35f746a-93a1-4964-bf05-2dc25667c9c3",
+   "prerequisiteLabel": "Puberty",
+   "label": "Disorders of puberty",
+   "strength": "essential",
+   "reason": "Disorders of puberty depart from normal puberty"
+  },
+  {
+   "prerequisiteConceptId": "C-76e8205c-e111-46e6-bcd6-ada225b9873f",
+   "conceptId": "C-781b655e-108c-4971-bb18-6430a2134259",
+   "prerequisiteLabel": "Sex determination and differentiation",
+   "label": "Disorders of sex development",
+   "strength": "essential",
+   "reason": "DSD are disorders of sex differentiation"
+  },
+  {
+   "prerequisiteConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "conceptId": "C-ca2a24c4-9004-411b-9008-17dffd85707a",
+   "prerequisiteLabel": "Chromosomal disorders",
+   "label": "Down syndrome",
+   "strength": "essential",
+   "reason": "Down syndrome is a chromosomal disorder"
   },
   {
    "prerequisiteConceptId": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
@@ -1049,12 +1876,44 @@
    "reason": "Each heart-failure drug class targets a specific mechanism"
   },
   {
+   "prerequisiteConceptId": "C-48580e5f-d83b-4d62-ba41-bfc4e5ff6182",
+   "conceptId": "C-fbc4714c-cdb8-46da-b9b4-7725a3641be1",
+   "prerequisiteLabel": "Modes of inheritance",
+   "label": "Duchenne muscular dystrophy",
+   "strength": "essential",
+   "reason": "Duchenne is X-linked recessive"
+  },
+  {
+   "prerequisiteConceptId": "C-4e3724ca-8c00-422e-80bc-85dc0d72fb4a",
+   "conceptId": "C-fbc4714c-cdb8-46da-b9b4-7725a3641be1",
+   "prerequisiteLabel": "Skeletal muscle contraction",
+   "label": "Duchenne muscular dystrophy",
+   "strength": "essential",
+   "reason": "Dystrophin loss disrupts muscle contraction"
+  },
+  {
    "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
    "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
    "prerequisiteLabel": "Diarrhoea",
    "label": "Dysentery",
    "strength": "essential",
    "reason": "Dysentery is an invasive form of diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptId": "C-897a735e-25fb-4cfd-a769-0e7924af2eb7",
+   "prerequisiteLabel": "Protein-energy malnutrition",
+   "label": "Eating disorders",
+   "strength": "helpful",
+   "reason": "Restriction leads to malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-f15a4c44-bfa1-43fa-9859-483181c09d6e",
+   "conceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+   "prerequisiteLabel": "Implantation",
+   "label": "Ectopic pregnancy",
+   "strength": "essential",
+   "reason": "Ectopic pregnancy is implantation outside the uterus"
   },
   {
    "prerequisiteConceptId": "C-89898250-7d12-4e32-b496-9acf5ccf86d1",
@@ -1089,6 +1948,30 @@
    "reason": "End-of-life decisions apply core ethics"
   },
   {
+   "prerequisiteConceptId": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+   "conceptId": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+   "prerequisiteLabel": "Endometrial hyperplasia",
+   "label": "Endometrial carcinoma",
+   "strength": "essential",
+   "reason": "Endometrial hyperplasia precedes carcinoma"
+  },
+  {
+   "prerequisiteConceptId": "C-b3059aef-bb4d-4d60-83d4-f876f7627fb9",
+   "conceptId": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+   "prerequisiteLabel": "Female sex hormones",
+   "label": "Endometrial hyperplasia",
+   "strength": "essential",
+   "reason": "Unopposed oestrogen causes hyperplasia"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Endometriosis",
+   "strength": "essential",
+   "reason": "Endometriosis tissue responds to the cycle"
+  },
+  {
    "prerequisiteConceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
    "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
    "prerequisiteLabel": "Blood culture",
@@ -1103,6 +1986,14 @@
    "label": "Enteric fever",
    "strength": "helpful",
    "reason": "Faecal-oral transmission explains prevention"
+  },
+  {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-e8b26a90-d006-479b-b690-63cbe2f63a59",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Enuresis",
+   "strength": "helpful",
+   "reason": "Bladder control is a developmental milestone"
   },
   {
    "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
@@ -1121,6 +2012,14 @@
    "reason": "Neurotoxic venoms block neuromuscular transmission"
   },
   {
+   "prerequisiteConceptId": "C-235bc332-ab2a-463a-955a-ce8a5c7e071e",
+   "conceptId": "C-7babeef7-2657-4f54-8169-e9d4366c31eb",
+   "prerequisiteLabel": "Larynx",
+   "label": "Epiglottitis",
+   "strength": "essential",
+   "reason": "Epiglottitis obstructs the supraglottic airway"
+  },
+  {
    "prerequisiteConceptId": "C-25ea8448-3810-491e-a64f-4c2abef56c55",
    "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
    "prerequisiteLabel": "Electroencephalogram",
@@ -1135,6 +2034,14 @@
    "label": "Epilepsy",
    "strength": "essential",
    "reason": "Seizures arise from abnormal neuronal excitability"
+  },
+  {
+   "prerequisiteConceptId": "C-6be5ec5b-94d8-42b5-8989-e35a898c2860",
+   "conceptId": "C-fdc3f21f-1658-4ff6-ba58-5742f8ca0304",
+   "prerequisiteLabel": "Perineum",
+   "label": "Episiotomy",
+   "strength": "essential",
+   "reason": "Episiotomy cuts perineal structures"
   },
   {
    "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
@@ -1161,6 +2068,54 @@
    "reason": "Posture and tone control prevent falls"
   },
   {
+   "prerequisiteConceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "conceptId": "C-c9521a53-ddac-4da0-8441-9f6f16485e59",
+   "prerequisiteLabel": "Epilepsy",
+   "label": "Febrile seizures",
+   "strength": "essential",
+   "reason": "Febrile seizures are a seizure type"
+  },
+  {
+   "prerequisiteConceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "conceptId": "C-c9521a53-ddac-4da0-8441-9f6f16485e59",
+   "prerequisiteLabel": "Fever",
+   "label": "Febrile seizures",
+   "strength": "essential",
+   "reason": "Seizures are triggered by fever"
+  },
+  {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-2199d79c-5b39-4784-b66b-a02243505ef4",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Feeding problems in children",
+   "strength": "helpful",
+   "reason": "Feeding problems relate to developmental stage"
+  },
+  {
+   "prerequisiteConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "conceptId": "C-4a40b014-51e4-49e2-b5d7-d12f1f2cded9",
+   "prerequisiteLabel": "Contraception",
+   "label": "Female sterilisation",
+   "strength": "essential",
+   "reason": "Sterilisation is a permanent contraceptive method"
+  },
+  {
+   "prerequisiteConceptId": "C-25979f9e-dcb5-4c07-a918-58cbd9184761",
+   "conceptId": "C-4a40b014-51e4-49e2-b5d7-d12f1f2cded9",
+   "prerequisiteLabel": "Pelvic viscera",
+   "label": "Female sterilisation",
+   "strength": "helpful",
+   "reason": "Tubal ligation follows pelvic anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-7ccfe6eb-eae4-482c-8467-f90739a9ea02",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Fetal growth restriction",
+   "strength": "essential",
+   "reason": "FGR reflects placental insufficiency"
+  },
+  {
    "prerequisiteConceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
    "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
    "prerequisiteLabel": "Host response to infection",
@@ -1177,12 +2132,44 @@
    "reason": "Fever is a reset hypothalamic set point"
   },
   {
+   "prerequisiteConceptId": "C-5ea54622-1a66-48b8-b2c9-116b3f68ec08",
+   "conceptId": "C-2e36aa21-4bdd-4644-836f-bf45e048023a",
+   "prerequisiteLabel": "Muscle tone and posture",
+   "label": "Floppy infant",
+   "strength": "essential",
+   "reason": "Floppiness is loss of muscle tone"
+  },
+  {
+   "prerequisiteConceptId": "C-7b7954c5-9aa2-4611-a9b0-0d89c2299b84",
+   "conceptId": "C-2e36aa21-4bdd-4644-836f-bf45e048023a",
+   "prerequisiteLabel": "Neuromuscular transmission",
+   "label": "Floppy infant",
+   "strength": "helpful",
+   "reason": "Neuromuscular junction disorders cause hypotonia"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-be64c410-a805-43c2-b1cb-ad6fa28661a1",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Folate deficiency",
+   "strength": "essential",
+   "reason": "Folate is needed for DNA synthesis"
+  },
+  {
    "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
    "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
    "prerequisiteLabel": "Diarrhoea",
    "label": "Food poisoning",
    "strength": "essential",
    "reason": "Food poisoning presents as acute diarrhoea"
+  },
+  {
+   "prerequisiteConceptId": "C-03ec3ae9-0c63-47cf-8e80-b60b68647dc7",
+   "conceptId": "C-f188aa95-f5dc-420f-9702-2fa6e3a7e7ef",
+   "prerequisiteLabel": "Trachea",
+   "label": "Foreign body aspiration",
+   "strength": "essential",
+   "reason": "Aspirated bodies lodge by bronchial anatomy"
   },
   {
    "prerequisiteConceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
@@ -1209,6 +2196,22 @@
    "reason": "Cholesterol supersaturation of bile forms gallstones"
   },
   {
+   "prerequisiteConceptId": "C-8d9c97af-800d-41dd-b03c-981376c7f843",
+   "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "prerequisiteLabel": "Ischaemia",
+   "label": "Gangrene",
+   "strength": "essential",
+   "reason": "Gangrene follows ischaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-71864bae-cdf8-4db9-98c3-41d39f118fe4",
+   "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+   "prerequisiteLabel": "Necrosis",
+   "label": "Gangrene",
+   "strength": "essential",
+   "reason": "Gangrene is necrosis of tissue"
+  },
+  {
    "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
    "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
    "prerequisiteLabel": "Haemostasis",
@@ -1233,12 +2236,68 @@
    "reason": "Variceal bleeding comes from portal hypertension"
   },
   {
+   "prerequisiteConceptId": "C-5c1fbc95-5437-4b44-b093-7f955613be9e",
+   "conceptId": "C-4c538552-f911-4249-8d9a-dc9ba28a76f2",
+   "prerequisiteLabel": "Abnormal labour",
+   "label": "Genital tract fistula",
+   "strength": "essential",
+   "reason": "Obstructed labour causes most fistulae"
+  },
+  {
+   "prerequisiteConceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "conceptId": "C-b91a4584-0883-4205-beb4-5f0e25a3d12b",
+   "prerequisiteLabel": "Pulmonary tuberculosis",
+   "label": "Genital tuberculosis",
+   "strength": "essential",
+   "reason": "Genital TB is extrapulmonary tuberculosis"
+  },
+  {
    "prerequisiteConceptId": "C-f3892c15-1ce1-452f-8e2e-b14e4c48dbae",
    "conceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
    "prerequisiteLabel": "Ageing",
    "label": "Geriatric assessment",
    "strength": "essential",
    "reason": "Geriatric assessment applies changes of ageing"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-57699b57-3d51-4387-804f-8e67fd55d467",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Gestational trophoblastic disease",
+   "strength": "essential",
+   "reason": "GTD arises from placental trophoblast"
+  },
+  {
+   "prerequisiteConceptId": "C-84ccc19e-294c-42a4-a488-1538d721e95c",
+   "conceptId": "C-cab87017-0c65-440e-9a55-4bbbef9d7fb2",
+   "prerequisiteLabel": "Reticular activating system",
+   "label": "Glasgow Coma Scale",
+   "strength": "helpful",
+   "reason": "Consciousness depends on the reticular activating system"
+  },
+  {
+   "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+   "prerequisiteLabel": "Hypersensitivity reactions",
+   "label": "Glomerulonephritis",
+   "strength": "essential",
+   "reason": "Glomerulonephritis is immune-complex mediated"
+  },
+  {
+   "prerequisiteConceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+   "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "prerequisiteLabel": "Thyroid function tests",
+   "label": "Goitre",
+   "strength": "essential",
+   "reason": "Thyroid status guides goitre management"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Goitre",
+   "strength": "essential",
+   "reason": "Goitre is enlargement of the thyroid gland"
   },
   {
    "prerequisiteConceptId": "C-0febcd78-05d3-4bab-aa1d-cc34b4102e1a",
@@ -1273,6 +2332,38 @@
    "reason": "Gram stain identifies gram-negative bacilli"
   },
   {
+   "prerequisiteConceptId": "C-79c17799-c571-4967-9df5-bf10744093cd",
+   "conceptId": "C-a7a300f0-80f6-429b-b741-adce60640533",
+   "prerequisiteLabel": "Growth and development",
+   "label": "Growth faltering",
+   "strength": "essential",
+   "reason": "Faltering is judged against normal growth"
+  },
+  {
+   "prerequisiteConceptId": "C-7edcaa85-e0f9-4370-8d3b-a50ada347e6e",
+   "conceptId": "C-a7a300f0-80f6-429b-b741-adce60640533",
+   "prerequisiteLabel": "Growth monitoring",
+   "label": "Growth faltering",
+   "strength": "essential",
+   "reason": "Growth monitoring detects faltering"
+  },
+  {
+   "prerequisiteConceptId": "C-9a470e28-e6ae-4a04-8a15-d34b79bbea3f",
+   "conceptId": "C-bc89bbf2-88f1-40a0-82a4-f3d963c0beda",
+   "prerequisiteLabel": "Pelvic examination landmarks",
+   "label": "Gynaecological history and examination",
+   "strength": "essential",
+   "reason": "Gynaecological examination uses pelvic landmarks"
+  },
+  {
+   "prerequisiteConceptId": "C-25979f9e-dcb5-4c07-a918-58cbd9184761",
+   "conceptId": "C-a66f162a-6098-4bce-8964-abb328dd83b0",
+   "prerequisiteLabel": "Pelvic viscera",
+   "label": "Gynaecological surgery",
+   "strength": "essential",
+   "reason": "Gynaecological surgery relies on pelvic anatomy"
+  },
+  {
    "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
    "conceptId": "C-9903031a-6460-4557-9453-17e7751ca6d0",
    "prerequisiteLabel": "Anaemia",
@@ -1289,6 +2380,86 @@
    "reason": "Iron absorption and stores explain haematinic use"
   },
   {
+   "prerequisiteConceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+   "conceptId": "C-e8459978-fcc6-4d40-a2a2-ec84ca74eadd",
+   "prerequisiteLabel": "Urinalysis",
+   "label": "Haematuria",
+   "strength": "essential",
+   "reason": "Haematuria is confirmed on urinalysis"
+  },
+  {
+   "prerequisiteConceptId": "C-5ff4ca9e-3b48-4561-82ea-03190a410ab8",
+   "conceptId": "C-3957c781-24ba-47bd-85ec-37437f2663cf",
+   "prerequisiteLabel": "Haemoglobinopathies",
+   "label": "Haemoglobin electrophoresis",
+   "strength": "essential",
+   "reason": "Electrophoresis separates abnormal haemoglobins"
+  },
+  {
+   "prerequisiteConceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+   "prerequisiteLabel": "Haemoglobin",
+   "label": "Haemolytic anaemia",
+   "strength": "essential",
+   "reason": "Haemolysis destroys red cells and releases haemoglobin"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-43146256-39e4-435d-b08d-c21ee83ace18",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Haemophilia",
+   "strength": "essential",
+   "reason": "Haemophilia is a clotting factor deficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-48580e5f-d83b-4d62-ba41-bfc4e5ff6182",
+   "conceptId": "C-43146256-39e4-435d-b08d-c21ee83ace18",
+   "prerequisiteLabel": "Modes of inheritance",
+   "label": "Haemophilia",
+   "strength": "essential",
+   "reason": "Haemophilia is X-linked"
+  },
+  {
+   "prerequisiteConceptId": "C-24ef0435-97d5-4b1e-8c49-10b548d3a958",
+   "conceptId": "C-13c4bb18-d7c9-4cde-96b8-4c1122578357",
+   "prerequisiteLabel": "Head and neck lymphatics",
+   "label": "Head and neck cancer",
+   "strength": "essential",
+   "reason": "Neck node levels follow head and neck lymphatics"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-13c4bb18-d7c9-4cde-96b8-4c1122578357",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Head and neck cancer",
+   "strength": "helpful",
+   "reason": "Behaviour follows neoplasia principles"
+  },
+  {
+   "prerequisiteConceptId": "C-cab87017-0c65-440e-9a55-4bbbef9d7fb2",
+   "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+   "prerequisiteLabel": "Glasgow Coma Scale",
+   "label": "Head injury",
+   "strength": "essential",
+   "reason": "Head injury severity is graded by GCS"
+  },
+  {
+   "prerequisiteConceptId": "C-ff34797c-d343-4823-a640-78edffa8455d",
+   "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+   "prerequisiteLabel": "Meninges",
+   "label": "Head injury",
+   "strength": "essential",
+   "reason": "Meningeal layers explain extradural and subdural haematomas"
+  },
+  {
+   "prerequisiteConceptId": "C-51937992-ab9a-40d8-b02b-627d8549a752",
+   "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+   "prerequisiteLabel": "Skull",
+   "label": "Head injury",
+   "strength": "essential",
+   "reason": "Skull anatomy explains fracture patterns"
+  },
+  {
    "prerequisiteConceptId": "C-418a472f-5e3d-4b0d-81e1-6aba1ac19596",
    "conceptId": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
    "prerequisiteLabel": "Pain",
@@ -1303,6 +2474,22 @@
    "label": "Hearing loss in older adults",
    "strength": "essential",
    "reason": "Presbycusis is loss of hearing physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "conceptId": "C-a1339c04-f0c3-4d80-8f0e-c972433773c1",
+   "prerequisiteLabel": "Heart failure",
+   "label": "Heart disease in pregnancy",
+   "strength": "helpful",
+   "reason": "Pregnancy load can precipitate heart failure"
+  },
+  {
+   "prerequisiteConceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+   "conceptId": "C-a1339c04-f0c3-4d80-8f0e-c972433773c1",
+   "prerequisiteLabel": "Valvular heart disease",
+   "label": "Heart disease in pregnancy",
+   "strength": "essential",
+   "reason": "Valve disease is the main heart disease in pregnancy"
   },
   {
    "prerequisiteConceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
@@ -1361,6 +2548,30 @@
    "reason": "Gastric acid physiology explains H. pylori effects"
   },
   {
+   "prerequisiteConceptId": "C-6a665032-76c9-4b06-a1a8-4757dc0e4150",
+   "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+   "prerequisiteLabel": "Liver",
+   "label": "Hepatic failure",
+   "strength": "essential",
+   "reason": "Hepatic failure is loss of liver function"
+  },
+  {
+   "prerequisiteConceptId": "C-c41470e5-7e85-4c91-baa3-cc33761d4e96",
+   "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+   "prerequisiteLabel": "Anterior abdominal wall",
+   "label": "Hernia",
+   "strength": "essential",
+   "reason": "Hernias occur at abdominal wall weaknesses"
+  },
+  {
+   "prerequisiteConceptId": "C-1fa66cf4-ff7d-4dc8-9a59-0bae49617f81",
+   "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+   "prerequisiteLabel": "Inguinal canal",
+   "label": "Hernia",
+   "strength": "essential",
+   "reason": "Inguinal hernias follow the inguinal canal"
+  },
+  {
    "prerequisiteConceptId": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
    "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
    "prerequisiteLabel": "Cell-mediated immunity",
@@ -1409,6 +2620,54 @@
    "reason": "Host response is built on inflammation"
   },
   {
+   "prerequisiteConceptId": "C-89d90141-5b19-4a1c-af5f-9ddae88eccf8",
+   "conceptId": "C-f9549ab3-42a1-4cc6-bafe-4b3acfd2f265",
+   "prerequisiteLabel": "Human milk",
+   "label": "Human milk banking",
+   "strength": "essential",
+   "reason": "Milk banking preserves human milk properties"
+  },
+  {
+   "prerequisiteConceptId": "C-00deb4ab-6c75-45d4-ba09-4196de9072aa",
+   "conceptId": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+   "prerequisiteLabel": "Development of the reproductive system",
+   "label": "Hydrocele",
+   "strength": "helpful",
+   "reason": "Congenital hydrocele follows processus vaginalis"
+  },
+  {
+   "prerequisiteConceptId": "C-d5770888-c5f5-41d5-a445-2f0b8e8718f2",
+   "conceptId": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+   "prerequisiteLabel": "Testis and epididymis",
+   "label": "Hydrocele",
+   "strength": "essential",
+   "reason": "Hydrocele collects around the testis"
+  },
+  {
+   "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
+   "conceptId": "C-1b3b5ebe-8c3b-419c-8bd2-7083ee76d2a9",
+   "prerequisiteLabel": "Cerebrospinal fluid",
+   "label": "Hydrocephalus",
+   "strength": "essential",
+   "reason": "Hydrocephalus is CSF accumulation"
+  },
+  {
+   "prerequisiteConceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "conceptId": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+   "prerequisiteLabel": "Urolithiasis",
+   "label": "Hydronephrosis",
+   "strength": "helpful",
+   "reason": "Stones are a common cause of hydronephrosis"
+  },
+  {
+   "prerequisiteConceptId": "C-83906d5b-cc4e-4431-806e-3f408d0dcf96",
+   "conceptId": "C-50fb9630-22e1-43d4-9513-01dea0ca381e",
+   "prerequisiteLabel": "Androgens",
+   "label": "Hyperandrogenism",
+   "strength": "essential",
+   "reason": "Excess androgens cause the features"
+  },
+  {
    "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
    "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
    "prerequisiteLabel": "Calcium metabolism",
@@ -1423,6 +2682,14 @@
    "label": "Hypercalcaemia",
    "strength": "essential",
    "reason": "PTH and vitamin D drive most causes"
+  },
+  {
+   "prerequisiteConceptId": "C-a354e0e4-9638-44d8-876b-87ba9ecacf14",
+   "conceptId": "C-2f39b9a5-3ef7-4c66-9e26-26a866326a0b",
+   "prerequisiteLabel": "Pregnancy",
+   "label": "Hyperemesis gravidarum",
+   "strength": "helpful",
+   "reason": "hCG levels relate to hyperemesis"
   },
   {
    "prerequisiteConceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
@@ -1482,6 +2749,22 @@
   },
   {
    "prerequisiteConceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "conceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+   "prerequisiteLabel": "Hypertension",
+   "label": "Hypertensive disorders of pregnancy",
+   "strength": "essential",
+   "reason": "Pregnancy hypertension builds on BP physiology"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Hypertensive disorders of pregnancy",
+   "strength": "essential",
+   "reason": "Pre-eclampsia arises from abnormal placentation"
+  },
+  {
+   "prerequisiteConceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
    "conceptId": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
    "prerequisiteLabel": "Hypertension",
    "label": "Hypertensive emergencies",
@@ -1521,6 +2804,38 @@
    "reason": "ADH and free-water handling classify hyponatraemia"
   },
   {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-73c74a9d-378d-439a-b55a-c5684aad5761",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Hypoparathyroidism",
+   "strength": "essential",
+   "reason": "Low calcium explains features"
+  },
+  {
+   "prerequisiteConceptId": "C-c46f0873-5939-4a43-9f96-25066e60e6e7",
+   "conceptId": "C-73c74a9d-378d-439a-b55a-c5684aad5761",
+   "prerequisiteLabel": "Calcium-regulating hormones",
+   "label": "Hypoparathyroidism",
+   "strength": "essential",
+   "reason": "Hypoparathyroidism is PTH deficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-f822df0f-9571-4904-aa38-e5c690b180a2",
+   "conceptId": "C-3dc175e5-6551-4046-8c84-e925c3f26bd1",
+   "prerequisiteLabel": "Thermoregulation",
+   "label": "Hypothermia in children",
+   "strength": "essential",
+   "reason": "Hypothermia is failure of thermoregulation"
+  },
+  {
+   "prerequisiteConceptId": "C-0ce30872-a3c1-416f-82b4-e5621b33c97d",
+   "conceptId": "C-58b4e4b8-fee2-444d-aa7a-59dc7194d4f3",
+   "prerequisiteLabel": "Paediatric rheumatological disorders",
+   "label": "IgA vasculitis",
+   "strength": "essential",
+   "reason": "IgA vasculitis is a paediatric vasculitis"
+  },
+  {
    "prerequisiteConceptId": "C-41135e3e-7002-4f7f-b27a-b03f47d53276",
    "conceptId": "C-78990369-c4c9-4eba-98ca-1a64da2a42c5",
    "prerequisiteLabel": "Antiretroviral drugs",
@@ -1537,6 +2852,46 @@
    "reason": "IRIS unmasks opportunistic infections"
   },
   {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-531f85ce-a287-436a-9b7d-08d2103e285e",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Immune thrombocytopenia",
+   "strength": "essential",
+   "reason": "ITP is autoimmune"
+  },
+  {
+   "prerequisiteConceptId": "C-c1ec079a-b2b3-43f7-be0b-751dc99ecff5",
+   "conceptId": "C-531f85ce-a287-436a-9b7d-08d2103e285e",
+   "prerequisiteLabel": "Platelets",
+   "label": "Immune thrombocytopenia",
+   "strength": "essential",
+   "reason": "ITP is immune destruction of platelets"
+  },
+  {
+   "prerequisiteConceptId": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "conceptId": "C-f15a4c44-bfa1-43fa-9859-483181c09d6e",
+   "prerequisiteLabel": "Fertilisation",
+   "label": "Implantation",
+   "strength": "essential",
+   "reason": "Implantation follows fertilisation"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-0d71cf2d-0fd4-45aa-88c0-3db4aafb306e",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Induction of labour",
+   "strength": "essential",
+   "reason": "Induction starts labour artificially"
+  },
+  {
+   "prerequisiteConceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+   "conceptId": "C-01e7f7e4-3459-488f-bd6b-23a5c604e2b6",
+   "prerequisiteLabel": "Stroke",
+   "label": "Infantile hemiplegia",
+   "strength": "essential",
+   "reason": "Infantile hemiplegia is mostly vascular"
+  },
+  {
    "prerequisiteConceptId": "C-baa5bc2c-7da4-40b2-a467-fdce95892577",
    "conceptId": "C-c2726427-6f7f-4b28-9410-7a16a92063a4",
    "prerequisiteLabel": "Hand hygiene",
@@ -1551,6 +2906,14 @@
    "label": "Infection prevention and control",
    "strength": "essential",
    "reason": "Infection control interrupts transmission routes"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-ac2d8cc7-f8d7-4b98-b156-6176124aed8d",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Infections in pregnancy",
+   "strength": "helpful",
+   "reason": "Vertical transmission harms the fetus"
   },
   {
    "prerequisiteConceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
@@ -1585,6 +2948,14 @@
    "reason": "New murmurs signal valve involvement"
   },
   {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-4ad0a6f8-98ab-4d55-b414-c09b76252dfa",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Infertility",
+   "strength": "essential",
+   "reason": "Ovulation and the cycle underlie fertility"
+  },
+  {
    "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
    "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
    "prerequisiteLabel": "Autoimmunity",
@@ -1599,6 +2970,14 @@
    "label": "Inflammatory bowel disease",
    "strength": "essential",
    "reason": "IBD is chronic inflammation of the gut"
+  },
+  {
+   "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "conceptId": "C-326aa73a-ebb4-4be2-877f-a78be8715daa",
+   "prerequisiteLabel": "Medical ethics",
+   "label": "Informed consent",
+   "strength": "essential",
+   "reason": "Informed consent applies autonomy"
   },
   {
    "prerequisiteConceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
@@ -1625,12 +3004,52 @@
    "reason": "Subcutaneous route affects absorption"
   },
   {
+   "prerequisiteConceptId": "C-b3c08dab-01b8-42c3-9a29-581488a11e0e",
+   "conceptId": "C-92240784-4174-4eae-80ba-908a9c6a065b",
+   "prerequisiteLabel": "Developmental delay",
+   "label": "Intellectual disability",
+   "strength": "essential",
+   "reason": "Intellectual disability is global developmental delay"
+  },
+  {
    "prerequisiteConceptId": "C-c054491e-626a-4c25-9b82-0345c5f89cf3",
    "conceptId": "C-942cf2f3-98d2-4f3a-871a-b4ceee4a7be6",
    "prerequisiteLabel": "Routes of drug administration",
    "label": "Intramuscular injection",
    "strength": "essential",
    "reason": "IM injection is a route of administration"
+  },
+  {
+   "prerequisiteConceptId": "C-c9154160-3a41-4767-928b-eddc29a19061",
+   "conceptId": "C-73519f68-c3e5-4f6d-a85d-0beab7db0fb0",
+   "prerequisiteLabel": "Contraception",
+   "label": "Intrauterine contraceptive device",
+   "strength": "essential",
+   "reason": "The IUCD is a contraceptive method"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-986baddd-e0fb-4a00-9788-7574ece2bba3",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Intrauterine fetal death",
+   "strength": "helpful",
+   "reason": "Placental failure is a cause of fetal death"
+  },
+  {
+   "prerequisiteConceptId": "C-ccc56e83-719b-41db-8752-a697db197db9",
+   "conceptId": "C-cf50b0f4-8f11-443c-9063-2a68cee76a3a",
+   "prerequisiteLabel": "Iron metabolism",
+   "label": "Iron deficiency anaemia",
+   "strength": "essential",
+   "reason": "Iron deficiency follows iron metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-bc3f0fef-fb14-4b5e-b3f2-206d655df3c7",
+   "conceptId": "C-cf50b0f4-8f11-443c-9063-2a68cee76a3a",
+   "prerequisiteLabel": "Red cell indices",
+   "label": "Iron deficiency anaemia",
+   "strength": "essential",
+   "reason": "Microcytic indices identify iron deficiency"
   },
   {
    "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
@@ -1671,6 +3090,70 @@
    "label": "Jugular venous pressure",
    "strength": "essential",
    "reason": "JVP waves follow right heart cycle events"
+  },
+  {
+   "prerequisiteConceptId": "C-0ce30872-a3c1-416f-82b4-e5621b33c97d",
+   "conceptId": "C-d2178077-33b4-40a4-937e-db946b607247",
+   "prerequisiteLabel": "Paediatric rheumatological disorders",
+   "label": "Juvenile idiopathic arthritis",
+   "strength": "essential",
+   "reason": "JIA is a paediatric rheumatological disorder"
+  },
+  {
+   "prerequisiteConceptId": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+   "conceptId": "C-e33fc745-dda4-4472-8f65-fe6ddf6432ca",
+   "prerequisiteLabel": "Low birth weight",
+   "label": "Kangaroo mother care",
+   "strength": "essential",
+   "reason": "Kangaroo care supports low birth weight babies"
+  },
+  {
+   "prerequisiteConceptId": "C-da1befd5-c384-40a1-be6b-f9c6e42f1e23",
+   "conceptId": "C-e33fc745-dda4-4472-8f65-fe6ddf6432ca",
+   "prerequisiteLabel": "Neonatal hypothermia",
+   "label": "Kangaroo mother care",
+   "strength": "essential",
+   "reason": "Kangaroo care prevents neonatal hypothermia"
+  },
+  {
+   "prerequisiteConceptId": "C-21adf388-e68a-4aaa-acb1-e8c1ae8c03fe",
+   "conceptId": "C-0e6f39bf-a375-4247-be59-e882f8233bba",
+   "prerequisiteLabel": "Chromosomes",
+   "label": "Karyotyping",
+   "strength": "essential",
+   "reason": "Karyotyping displays chromosomes"
+  },
+  {
+   "prerequisiteConceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "conceptId": "C-c0945f63-a3ff-4214-ab28-749dfdb6d8df",
+   "prerequisiteLabel": "Rheumatic fever",
+   "label": "Kawasaki disease",
+   "strength": "helpful",
+   "reason": "Kawasaki is a differential of rheumatic fever"
+  },
+  {
+   "prerequisiteConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "conceptId": "C-7ccc41ef-40fe-4dca-87b6-196d1006b7d0",
+   "prerequisiteLabel": "Chromosomal disorders",
+   "label": "Klinefelter syndrome",
+   "strength": "essential",
+   "reason": "Klinefelter syndrome is a chromosomal disorder"
+  },
+  {
+   "prerequisiteConceptId": "C-b3059aef-bb4d-4d60-83d4-f876f7627fb9",
+   "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "prerequisiteLabel": "Female sex hormones",
+   "label": "Leiomyoma",
+   "strength": "helpful",
+   "reason": "Fibroids are oestrogen-dependent"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Leiomyoma",
+   "strength": "helpful",
+   "reason": "Fibroids are benign smooth-muscle tumours"
   },
   {
    "prerequisiteConceptId": "C-dc9c4da8-e738-49fa-8d84-f3da5bee75ea",
@@ -1721,6 +3204,14 @@
    "reason": "Liver disease is assessed with liver function tests"
   },
   {
+   "prerequisiteConceptId": "C-cf5ec55c-64e1-4482-88b8-38234f05bed7",
+   "conceptId": "C-e7ce9590-52ba-4c1a-ac50-b9ee9bc3121d",
+   "prerequisiteLabel": "Liver disease",
+   "label": "Liver disease in pregnancy",
+   "strength": "essential",
+   "reason": "Liver disorders follow liver disease principles"
+  },
+  {
    "prerequisiteConceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
    "conceptId": "C-a30d36a9-5747-4faa-b7ce-fbd82efc6b79",
    "prerequisiteLabel": "Cirrhosis",
@@ -1737,6 +3228,46 @@
    "reason": "Graft survival depends on preventing rejection"
   },
   {
+   "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "conceptId": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+   "prerequisiteLabel": "Anaemia",
+   "label": "Low birth weight",
+   "strength": "helpful",
+   "reason": "Low birth weight raises anaemia risk"
+  },
+  {
+   "prerequisiteConceptId": "C-7ccfe6eb-eae4-482c-8467-f90739a9ea02",
+   "conceptId": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+   "prerequisiteLabel": "Fetal growth restriction",
+   "label": "Low birth weight",
+   "strength": "essential",
+   "reason": "Growth restriction is a major cause of low birth weight"
+  },
+  {
+   "prerequisiteConceptId": "C-98c194e3-82d7-42ef-93d4-6b112eb45183",
+   "conceptId": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+   "prerequisiteLabel": "Preterm labour",
+   "label": "Low birth weight",
+   "strength": "essential",
+   "reason": "Preterm birth is a major cause of low birth weight"
+  },
+  {
+   "prerequisiteConceptId": "C-e90d0635-c3f9-4dff-b187-d582e03afc2a",
+   "conceptId": "C-ee106d43-3811-49c8-93d9-4f90764f80f9",
+   "prerequisiteLabel": "Lower respiratory tract infections",
+   "label": "Lower respiratory tract infections in children",
+   "strength": "essential",
+   "reason": "These are lower respiratory tract infections"
+  },
+  {
+   "prerequisiteConceptId": "C-b9885247-344f-4edc-88f4-8bc6236692ad",
+   "conceptId": "C-ee106d43-3811-49c8-93d9-4f90764f80f9",
+   "prerequisiteLabel": "Respiratory distress in children",
+   "label": "Lower respiratory tract infections in children",
+   "strength": "helpful",
+   "reason": "Respiratory distress is the key sign"
+  },
+  {
    "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
    "conceptId": "C-161aab86-3cc7-43f8-9fbc-d9c7c8ec12fe",
    "prerequisiteLabel": "Cerebrospinal fluid",
@@ -1745,12 +3276,92 @@
    "reason": "Lumbar puncture samples CSF"
   },
   {
+   "prerequisiteConceptId": "C-d712a2e2-e4f7-48fa-a0e5-4a78ed6b772d",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "prerequisiteLabel": "Carcinogenesis",
+   "label": "Lung carcinoma",
+   "strength": "essential",
+   "reason": "Lung cancer follows carcinogenesis by smoking"
+  },
+  {
+   "prerequisiteConceptId": "C-f187b3f8-53c5-4589-84d8-2f10b7294b1a",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "prerequisiteLabel": "Lungs",
+   "label": "Lung carcinoma",
+   "strength": "helpful",
+   "reason": "Location relates to lung anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Lymphadenopathy",
+   "strength": "helpful",
+   "reason": "Reactive nodes are an inflammatory response"
+  },
+  {
+   "prerequisiteConceptId": "C-b26a8d75-e8aa-4e4e-a459-361e8cbdf914",
+   "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+   "prerequisiteLabel": "Lymphatic system",
+   "label": "Lymphadenopathy",
+   "strength": "essential",
+   "reason": "Node enlargement follows drainage areas"
+  },
+  {
+   "prerequisiteConceptId": "C-b26a8d75-e8aa-4e4e-a459-361e8cbdf914",
+   "conceptId": "C-3f1c18af-8496-4543-852d-7d3612bb594c",
+   "prerequisiteLabel": "Lymphatic system",
+   "label": "Lymphangitis",
+   "strength": "essential",
+   "reason": "Lymphangitis spreads along lymphatics"
+  },
+  {
+   "prerequisiteConceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
+   "conceptId": "C-3f1c18af-8496-4543-852d-7d3612bb594c",
+   "prerequisiteLabel": "Skin and soft tissue infections",
+   "label": "Lymphangitis",
+   "strength": "helpful",
+   "reason": "It follows skin and soft tissue infection"
+  },
+  {
    "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
    "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
    "prerequisiteLabel": "Transmission of infection",
    "label": "Lymphatic filariasis",
    "strength": "helpful",
    "reason": "Vector transmission explains distribution"
+  },
+  {
+   "prerequisiteConceptId": "C-b26a8d75-e8aa-4e4e-a459-361e8cbdf914",
+   "conceptId": "C-b5a85456-1031-44de-bf40-aee67a6ab39b",
+   "prerequisiteLabel": "Lymphatic system",
+   "label": "Lymphatic system examination",
+   "strength": "essential",
+   "reason": "Node groups follow lymphatic drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "conceptId": "C-5d75462b-933f-4ade-8982-5804f31c0ce8",
+   "prerequisiteLabel": "Lymphatic filariasis",
+   "label": "Lymphoedema",
+   "strength": "helpful",
+   "reason": "Filariasis is a major cause in India"
+  },
+  {
+   "prerequisiteConceptId": "C-b26a8d75-e8aa-4e4e-a459-361e8cbdf914",
+   "conceptId": "C-5d75462b-933f-4ade-8982-5804f31c0ce8",
+   "prerequisiteLabel": "Lymphatic system",
+   "label": "Lymphoedema",
+   "strength": "essential",
+   "reason": "Lymphoedema is failure of lymphatic drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+   "prerequisiteLabel": "Digestion and absorption",
+   "label": "Malabsorption syndrome",
+   "strength": "essential",
+   "reason": "Malabsorption is failure of digestion or absorption"
   },
   {
    "prerequisiteConceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
@@ -1777,6 +3388,70 @@
    "reason": "Malnutrition in old age is protein-energy malnutrition"
   },
   {
+   "prerequisiteConceptId": "C-c4c088bd-97d4-4068-b5fa-6cc5726e3ae0",
+   "conceptId": "C-86f2d60e-b1e6-4d8a-bc89-ffca88c507c6",
+   "prerequisiteLabel": "Metabolic response to injury",
+   "label": "Malnutrition in surgical patients",
+   "strength": "essential",
+   "reason": "Catabolic stress worsens malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptId": "C-86f2d60e-b1e6-4d8a-bc89-ffca88c507c6",
+   "prerequisiteLabel": "Protein-energy malnutrition",
+   "label": "Malnutrition in surgical patients",
+   "strength": "essential",
+   "reason": "Surgical malnutrition is protein-energy malnutrition"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-8a01ca93-6fcd-4cf0-8275-6542ea794adf",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Malpresentation",
+   "strength": "helpful",
+   "reason": "Malpresentation disrupts normal labour"
+  },
+  {
+   "prerequisiteConceptId": "C-6b5f1f85-b35e-4aa0-bfee-d6d166b66d2c",
+   "conceptId": "C-285143d2-6b3a-490b-91c3-2da164eccf6f",
+   "prerequisiteLabel": "Maternal mortality",
+   "label": "Maternal and child health",
+   "strength": "helpful",
+   "reason": "Maternal mortality measures maternal health"
+  },
+  {
+   "prerequisiteConceptId": "C-8ffc7431-d905-4d03-a514-7c633d573f9b",
+   "conceptId": "C-6b5f1f85-b35e-4aa0-bfee-d6d166b66d2c",
+   "prerequisiteLabel": "Vital statistics",
+   "label": "Maternal mortality",
+   "strength": "essential",
+   "reason": "Maternal mortality is a vital statistic"
+  },
+  {
+   "prerequisiteConceptId": "C-665d60ae-4ada-4abb-9a5b-7a22a3270b5f",
+   "conceptId": "C-1c424d0b-7632-4d6d-a448-4895e4bb291e",
+   "prerequisiteLabel": "Bony pelvis",
+   "label": "Maternal pelvis and fetal skull",
+   "strength": "essential",
+   "reason": "The maternal pelvis follows bony pelvis anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-1c424d0b-7632-4d6d-a448-4895e4bb291e",
+   "conceptId": "C-0b5d49c4-c1e9-4f7f-b63d-1f7ed36e963c",
+   "prerequisiteLabel": "Maternal pelvis and fetal skull",
+   "label": "Mechanism of labour",
+   "strength": "essential",
+   "reason": "Labour mechanism follows pelvis and fetal skull"
+  },
+  {
+   "prerequisiteConceptId": "C-a3dd622c-af64-42b0-a225-ab4e4bcb2870",
+   "conceptId": "C-9df09708-8cb5-42cb-af3b-71120355fb95",
+   "prerequisiteLabel": "Mediastinum",
+   "label": "Mediastinal disorders",
+   "strength": "essential",
+   "reason": "Mediastinal masses are localised by compartment"
+  },
+  {
    "prerequisiteConceptId": "C-8127ea27-445e-40bc-98d0-09b86310d74b",
    "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
    "prerequisiteLabel": "Cerebrospinal fluid",
@@ -1791,6 +3466,38 @@
    "label": "Meningitis",
    "strength": "helpful",
    "reason": "Host response explains meningeal inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-c12dbb34-f5f4-44c0-a5c6-b808151f5b21",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Menopause",
+   "strength": "essential",
+   "reason": "Menopause is the end of ovarian cycles"
+  },
+  {
+   "prerequisiteConceptId": "C-5d8ce34a-437e-4345-a660-e57d966a7802",
+   "conceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "prerequisiteLabel": "Female reproductive system",
+   "label": "Menstrual cycle",
+   "strength": "essential",
+   "reason": "The cycle depends on ovarian and uterine structure"
+  },
+  {
+   "prerequisiteConceptId": "C-292c0d76-eab3-4101-9b09-aacf9070290c",
+   "conceptId": "C-c4c088bd-97d4-4068-b5fa-6cc5726e3ae0",
+   "prerequisiteLabel": "Adrenal gland",
+   "label": "Metabolic response to injury",
+   "strength": "essential",
+   "reason": "Cortisol and catecholamines drive the stress response"
+  },
+  {
+   "prerequisiteConceptId": "C-9735c557-c0e8-4578-875c-f76570728927",
+   "conceptId": "C-c4c088bd-97d4-4068-b5fa-6cc5726e3ae0",
+   "prerequisiteLabel": "Fed-fast cycle",
+   "label": "Metabolic response to injury",
+   "strength": "essential",
+   "reason": "The injury response shifts fed-fast metabolism to catabolism"
   },
   {
    "prerequisiteConceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
@@ -1825,6 +3532,30 @@
    "reason": "Migraine is a primary headache"
   },
   {
+   "prerequisiteConceptId": "C-9a470e28-e6ae-4a04-8a15-d34b79bbea3f",
+   "conceptId": "C-9f2a65b6-162e-4f49-b5df-282114c2a8ce",
+   "prerequisiteLabel": "Pelvic examination landmarks",
+   "label": "Minor gynaecological procedures",
+   "strength": "helpful",
+   "reason": "Procedures rely on pelvic landmarks"
+  },
+  {
+   "prerequisiteConceptId": "C-270aacdc-f290-4fee-8067-ee9e2255dc3e",
+   "conceptId": "C-5b470e71-c229-4af7-8339-63ee71aef0f2",
+   "prerequisiteLabel": "Aseptic technique",
+   "label": "Minor surgical procedures",
+   "strength": "essential",
+   "reason": "Minor procedures require asepsis"
+  },
+  {
+   "prerequisiteConceptId": "C-79f23c83-7a13-4fb6-bca4-3bf235d45e8b",
+   "conceptId": "C-5b470e71-c229-4af7-8339-63ee71aef0f2",
+   "prerequisiteLabel": "Local anaesthetics",
+   "label": "Minor surgical procedures",
+   "strength": "essential",
+   "reason": "Most minor procedures use local anaesthesia"
+  },
+  {
    "prerequisiteConceptId": "C-53be03df-148b-4626-accb-9fd60b65027b",
    "conceptId": "C-fee832a8-5696-4c5f-b7f0-b4ebb3cbe9ab",
    "prerequisiteLabel": "Gene mutations",
@@ -1855,6 +3586,22 @@
    "label": "Movement disorders",
    "strength": "helpful",
    "reason": "Cerebellar disorders cause ataxia"
+  },
+  {
+   "prerequisiteConceptId": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "conceptId": "C-f2d82a38-55a8-4cf2-affc-4234b05208dc",
+   "prerequisiteLabel": "Fertilisation",
+   "label": "Multiple pregnancy",
+   "strength": "helpful",
+   "reason": "Twins arise from one or two fertilisations"
+  },
+  {
+   "prerequisiteConceptId": "C-2fcaaea4-5909-48b7-8c9a-ab152b6449bf",
+   "conceptId": "C-f2d82a38-55a8-4cf2-affc-4234b05208dc",
+   "prerequisiteLabel": "Placenta and fetal development",
+   "label": "Multiple pregnancy",
+   "strength": "essential",
+   "reason": "Chorionicity determines twin risk"
   },
   {
    "prerequisiteConceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
@@ -1889,6 +3636,118 @@
    "reason": "Programmes target specific transmission routes"
   },
   {
+   "prerequisiteConceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "conceptId": "C-46443586-7f44-4bbf-801e-5a61dc459d7a",
+   "prerequisiteLabel": "Drugs for asthma and COPD",
+   "label": "Nebulisation",
+   "strength": "essential",
+   "reason": "Nebulisation delivers inhaled drugs"
+  },
+  {
+   "prerequisiteConceptId": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
+   "conceptId": "C-df4ffc84-48d8-4992-9ed3-3302bf9c78c3",
+   "prerequisiteLabel": "Bilirubin metabolism",
+   "label": "Neonatal hyperbilirubinaemia",
+   "strength": "essential",
+   "reason": "Neonatal jaundice follows immature bilirubin handling"
+  },
+  {
+   "prerequisiteConceptId": "C-c46f0873-5939-4a43-9f96-25066e60e6e7",
+   "conceptId": "C-1e337e9e-b5ff-4fe0-9d9f-87a3ca2ab62b",
+   "prerequisiteLabel": "Calcium-regulating hormones",
+   "label": "Neonatal hypocalcaemia",
+   "strength": "essential",
+   "reason": "Neonatal calcium depends on parathyroid adaptation"
+  },
+  {
+   "prerequisiteConceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
+   "conceptId": "C-cf41d55d-3ef8-40cd-9f34-94021930d198",
+   "prerequisiteLabel": "Endocrine pancreas",
+   "label": "Neonatal hypoglycaemia",
+   "strength": "essential",
+   "reason": "Neonatal glucose control depends on insulin and stores"
+  },
+  {
+   "prerequisiteConceptId": "C-f822df0f-9571-4904-aa38-e5c690b180a2",
+   "conceptId": "C-da1befd5-c384-40a1-be6b-f9c6e42f1e23",
+   "prerequisiteLabel": "Thermoregulation",
+   "label": "Neonatal hypothermia",
+   "strength": "essential",
+   "reason": "Neonatal hypothermia is immature thermoregulation"
+  },
+  {
+   "prerequisiteConceptId": "C-b738d281-903a-4af4-ad77-35d7af94e6df",
+   "conceptId": "C-938ad5db-20b2-4e32-9694-4d33cbfc3b9e",
+   "prerequisiteLabel": "Development of the respiratory system",
+   "label": "Neonatal respiratory distress",
+   "strength": "essential",
+   "reason": "Surfactant deficiency follows lung immaturity"
+  },
+  {
+   "prerequisiteConceptId": "C-e8fc50ee-ac3a-41d0-b47e-98b76289d60d",
+   "conceptId": "C-938ad5db-20b2-4e32-9694-4d33cbfc3b9e",
+   "prerequisiteLabel": "Pulmonary compliance and gas exchange",
+   "label": "Neonatal respiratory distress",
+   "strength": "essential",
+   "reason": "Distress follows impaired gas exchange"
+  },
+  {
+   "prerequisiteConceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "conceptId": "C-47b2af3c-1aab-4ad9-a4c4-71612f5c34a9",
+   "prerequisiteLabel": "Basic life support",
+   "label": "Neonatal resuscitation",
+   "strength": "essential",
+   "reason": "Neonatal resuscitation adapts basic life support"
+  },
+  {
+   "prerequisiteConceptId": "C-8a0b9a31-a7da-4fa0-84ef-fbe58706b622",
+   "conceptId": "C-47b2af3c-1aab-4ad9-a4c4-71612f5c34a9",
+   "prerequisiteLabel": "Birth asphyxia",
+   "label": "Neonatal resuscitation",
+   "strength": "essential",
+   "reason": "Asphyxia is the main reason for resuscitation"
+  },
+  {
+   "prerequisiteConceptId": "C-63860775-db4c-4785-96e9-fa1e3a91e4da",
+   "conceptId": "C-47b2af3c-1aab-4ad9-a4c4-71612f5c34a9",
+   "prerequisiteLabel": "Newborn assessment",
+   "label": "Neonatal resuscitation",
+   "strength": "helpful",
+   "reason": "Assessment identifies babies needing resuscitation"
+  },
+  {
+   "prerequisiteConceptId": "C-1e337e9e-b5ff-4fe0-9d9f-87a3ca2ab62b",
+   "conceptId": "C-397d9308-f607-492e-ab82-e70112aba6f4",
+   "prerequisiteLabel": "Neonatal hypocalcaemia",
+   "label": "Neonatal seizures",
+   "strength": "helpful",
+   "reason": "Hypocalcaemia is a cause of neonatal seizures"
+  },
+  {
+   "prerequisiteConceptId": "C-cf41d55d-3ef8-40cd-9f34-94021930d198",
+   "conceptId": "C-397d9308-f607-492e-ab82-e70112aba6f4",
+   "prerequisiteLabel": "Neonatal hypoglycaemia",
+   "label": "Neonatal seizures",
+   "strength": "helpful",
+   "reason": "Hypoglycaemia is a cause of neonatal seizures"
+  },
+  {
+   "prerequisiteConceptId": "C-e0f02828-d619-4703-b154-120f28014a3d",
+   "conceptId": "C-e63b3ddc-ce0a-45b4-b311-cc19e5733d45",
+   "prerequisiteLabel": "Host response to infection",
+   "label": "Neonatal sepsis",
+   "strength": "essential",
+   "reason": "Neonatal sepsis follows immature host defence"
+  },
+  {
+   "prerequisiteConceptId": "C-57fae53e-b4ae-47c2-8084-c056bc5db0c8",
+   "conceptId": "C-70dcb2f7-ff6c-47b0-aa31-2e14970d5342",
+   "prerequisiteLabel": "Development of the gut",
+   "label": "Neonatal surgical conditions",
+   "strength": "essential",
+   "reason": "Many neonatal surgical conditions are gut malformations"
+  },
+  {
    "prerequisiteConceptId": "C-c3961b49-71aa-43f6-b446-18115817793c",
    "conceptId": "C-ec957217-56cb-4b0b-8a05-d70de3ca0f95",
    "prerequisiteLabel": "Micturition",
@@ -1911,6 +3770,22 @@
    "label": "Newer diagnostic techniques in infection",
    "strength": "essential",
    "reason": "Newer techniques are nucleic-acid based"
+  },
+  {
+   "prerequisiteConceptId": "C-0b5d49c4-c1e9-4f7f-b63d-1f7ed36e963c",
+   "conceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "prerequisiteLabel": "Mechanism of labour",
+   "label": "Normal labour",
+   "strength": "essential",
+   "reason": "Normal labour follows the mechanism of labour"
+  },
+  {
+   "prerequisiteConceptId": "C-f324da9d-45fc-42f2-b54a-e2843363e211",
+   "conceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "prerequisiteLabel": "Parturition",
+   "label": "Normal labour",
+   "strength": "essential",
+   "reason": "Labour follows parturition physiology"
   },
   {
    "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
@@ -1961,6 +3836,30 @@
    "reason": "Treatment follows obesity causes"
   },
   {
+   "prerequisiteConceptId": "C-db80599c-eebb-40b3-82e5-80a4ccf746e1",
+   "conceptId": "C-55f34751-c21e-4b1e-8abc-67b229c39eb4",
+   "prerequisiteLabel": "Antepartum haemorrhage",
+   "label": "Obstetric emergencies",
+   "strength": "essential",
+   "reason": "APH is an obstetric emergency"
+  },
+  {
+   "prerequisiteConceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+   "conceptId": "C-55f34751-c21e-4b1e-8abc-67b229c39eb4",
+   "prerequisiteLabel": "Hypertensive disorders of pregnancy",
+   "label": "Obstetric emergencies",
+   "strength": "essential",
+   "reason": "Eclampsia is an obstetric emergency"
+  },
+  {
+   "prerequisiteConceptId": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+   "conceptId": "C-55f34751-c21e-4b1e-8abc-67b229c39eb4",
+   "prerequisiteLabel": "Postpartum haemorrhage",
+   "label": "Obstetric emergencies",
+   "strength": "essential",
+   "reason": "PPH is the main obstetric emergency"
+  },
+  {
    "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
    "conceptId": "C-e8c03208-4e55-4653-9cbc-e95ef07ebd79",
    "prerequisiteLabel": "Mechanics of breathing",
@@ -2001,6 +3900,30 @@
    "reason": "Prevention targets pneumoconioses"
   },
   {
+   "prerequisiteConceptId": "C-d3814be3-1da6-4a96-b4a9-e93a574a485e",
+   "conceptId": "C-c22016b3-792f-4d4e-b172-14ccb933f140",
+   "prerequisiteLabel": "Barium swallow",
+   "label": "Oesophageal disorders",
+   "strength": "helpful",
+   "reason": "Barium swallow shows oesophageal lesions"
+  },
+  {
+   "prerequisiteConceptId": "C-6329e2bb-7e91-4fb7-b224-b5aeaec9275f",
+   "conceptId": "C-c22016b3-792f-4d4e-b172-14ccb933f140",
+   "prerequisiteLabel": "Oesophagus",
+   "label": "Oesophageal disorders",
+   "strength": "essential",
+   "reason": "Oesophageal disorders relate to its anatomy and sphincters"
+  },
+  {
+   "prerequisiteConceptId": "C-5c1fbc95-5437-4b44-b093-7f955613be9e",
+   "conceptId": "C-0ed4438e-c1ef-4c3d-bef8-fbf0fda5485b",
+   "prerequisiteLabel": "Abnormal labour",
+   "label": "Operative obstetrics",
+   "strength": "essential",
+   "reason": "Operative delivery treats abnormal labour"
+  },
+  {
    "prerequisiteConceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
    "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
    "prerequisiteLabel": "HIV infection",
@@ -2015,6 +3938,46 @@
    "label": "Opportunistic infections",
    "strength": "essential",
    "reason": "Immunodeficiency permits opportunistic infections"
+  },
+  {
+   "prerequisiteConceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+   "conceptId": "C-42d068bc-0a32-488a-8bc0-2e8f8a369531",
+   "prerequisiteLabel": "Acute gastroenteritis",
+   "label": "Oral rehydration therapy",
+   "strength": "essential",
+   "reason": "ORT treats gastroenteritis dehydration"
+  },
+  {
+   "prerequisiteConceptId": "C-449f505c-2dc5-4801-ae07-72baebbb8077",
+   "conceptId": "C-42d068bc-0a32-488a-8bc0-2e8f8a369531",
+   "prerequisiteLabel": "Digestion and absorption",
+   "label": "Oral rehydration therapy",
+   "strength": "essential",
+   "reason": "ORS uses sodium-glucose co-transport"
+  },
+  {
+   "prerequisiteConceptId": "C-2c3ce0a2-1f22-4494-842a-86781bc44f56",
+   "conceptId": "C-cd19e19e-1bb5-4a34-a362-3ee005197890",
+   "prerequisiteLabel": "Brain death",
+   "label": "Organ donation",
+   "strength": "essential",
+   "reason": "Deceased donation requires brain death certification"
+  },
+  {
+   "prerequisiteConceptId": "C-2e458ba2-3abc-4f69-9dd9-7fd18eadb7cc",
+   "conceptId": "C-42f11a96-d74a-4b8a-bf8e-f556b6a13ca5",
+   "prerequisiteLabel": "Human leucocyte antigens",
+   "label": "Organ transplantation",
+   "strength": "essential",
+   "reason": "Donor matching uses HLA typing"
+  },
+  {
+   "prerequisiteConceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "conceptId": "C-42f11a96-d74a-4b8a-bf8e-f556b6a13ca5",
+   "prerequisiteLabel": "Transplant rejection",
+   "label": "Organ transplantation",
+   "strength": "essential",
+   "reason": "Graft survival depends on preventing rejection"
   },
   {
    "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
@@ -2033,6 +3996,22 @@
    "reason": "Hormonal control of bone explains osteoporosis"
   },
   {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Ovarian tumours",
+   "strength": "helpful",
+   "reason": "Ovarian tumours follow neoplasia principles"
+  },
+  {
+   "prerequisiteConceptId": "C-4ad0a6f8-98ab-4d55-b414-c09b76252dfa",
+   "conceptId": "C-a4db6f98-3964-42dd-b807-284a58abdc8e",
+   "prerequisiteLabel": "Infertility",
+   "label": "Ovulation induction",
+   "strength": "essential",
+   "reason": "Ovulation induction treats anovulatory infertility"
+  },
+  {
    "prerequisiteConceptId": "C-feed7858-a94a-459f-9ba4-386f99db6802",
    "conceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
    "prerequisiteLabel": "Hypoxia",
@@ -2047,6 +4026,62 @@
    "label": "Oxygen therapy",
    "strength": "essential",
    "reason": "Oxygen carriage explains when supplementation helps"
+  },
+  {
+   "prerequisiteConceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
+   "conceptId": "C-b9469d15-e5c7-4d32-8a14-84c65c82e2d6",
+   "prerequisiteLabel": "Oxygen therapy",
+   "label": "Oxygen toxicity",
+   "strength": "essential",
+   "reason": "Oxygen toxicity results from excess oxygen therapy"
+  },
+  {
+   "prerequisiteConceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "conceptId": "C-cb5344da-922d-4aa9-b09c-53826d1e46f0",
+   "prerequisiteLabel": "Blood pressure",
+   "label": "Paediatric hypertension",
+   "strength": "essential",
+   "reason": "Paediatric BP is read against age norms"
+  },
+  {
+   "prerequisiteConceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "conceptId": "C-cb5344da-922d-4aa9-b09c-53826d1e46f0",
+   "prerequisiteLabel": "Hypertension",
+   "label": "Paediatric hypertension",
+   "strength": "helpful",
+   "reason": "Adult hypertension principles apply"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-0ce30872-a3c1-416f-82b4-e5621b33c97d",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Paediatric rheumatological disorders",
+   "strength": "essential",
+   "reason": "Most are autoimmune disorders"
+  },
+  {
+   "prerequisiteConceptId": "C-d63eee28-ec75-45ce-9caf-26c14c6c4c95",
+   "conceptId": "C-a4396a40-9125-4f8a-8245-76d2c02a8581",
+   "prerequisiteLabel": "Non-opioid analgesics",
+   "label": "Pain management",
+   "strength": "essential",
+   "reason": "Non-opioid analgesics form the base of the ladder"
+  },
+  {
+   "prerequisiteConceptId": "C-6adbce4f-1611-4095-ac1c-36857807178c",
+   "conceptId": "C-a4396a40-9125-4f8a-8245-76d2c02a8581",
+   "prerequisiteLabel": "Opioid analgesics",
+   "label": "Pain management",
+   "strength": "essential",
+   "reason": "Opioids are core to severe pain control"
+  },
+  {
+   "prerequisiteConceptId": "C-418a472f-5e3d-4b0d-81e1-6aba1ac19596",
+   "conceptId": "C-a4396a40-9125-4f8a-8245-76d2c02a8581",
+   "prerequisiteLabel": "Pain",
+   "label": "Pain management",
+   "strength": "essential",
+   "reason": "Pain management targets pain pathways"
   },
   {
    "prerequisiteConceptId": "C-122f94f6-0a81-4724-aa29-58c606ebc6da",
@@ -2065,6 +4100,54 @@
    "reason": "Opioids are central to palliative symptom control"
   },
   {
+   "prerequisiteConceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
+   "conceptId": "C-299eda4c-3e59-4c29-a5b4-f10d92fcfd35",
+   "prerequisiteLabel": "Endocrine pancreas",
+   "label": "Pancreatic endocrine tumours",
+   "strength": "essential",
+   "reason": "These tumours arise from islet cells"
+  },
+  {
+   "prerequisiteConceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "conceptId": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+   "prerequisiteLabel": "Gallstones",
+   "label": "Pancreatitis",
+   "strength": "essential",
+   "reason": "Gallstones are a leading cause of pancreatitis"
+  },
+  {
+   "prerequisiteConceptId": "C-6edb7734-7e12-4fa7-915a-d3299dcd17bb",
+   "conceptId": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+   "prerequisiteLabel": "Pancreatic exocrine secretion",
+   "label": "Pancreatitis",
+   "strength": "essential",
+   "reason": "Pancreatitis is premature enzyme activation"
+  },
+  {
+   "prerequisiteConceptId": "C-01236beb-90e3-4eaf-94bf-bb8f9619ad67",
+   "conceptId": "C-5dfe0feb-f4a1-4c1b-839e-ef2fe5158e02",
+   "prerequisiteLabel": "Cervical cancer screening",
+   "label": "Pap smear",
+   "strength": "essential",
+   "reason": "The Pap smear is the screening test"
+  },
+  {
+   "prerequisiteConceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+   "conceptId": "C-5dfe0feb-f4a1-4c1b-839e-ef2fe5158e02",
+   "prerequisiteLabel": "Diagnostic cytology",
+   "label": "Pap smear",
+   "strength": "essential",
+   "reason": "Pap smears are read by cytology"
+  },
+  {
+   "prerequisiteConceptId": "C-7eb05f6c-d868-4204-8f1b-1230b7b7fd86",
+   "conceptId": "C-a4da733e-ec4d-40f4-95b2-7b4c26f9d5b3",
+   "prerequisiteLabel": "Microorganisms",
+   "label": "Parasitic infections in children",
+   "strength": "helpful",
+   "reason": "Life cycles explain parasite transmission"
+  },
+  {
    "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
    "conceptId": "C-641d0da2-96e6-46a4-a64d-74698ca83bdf",
    "prerequisiteLabel": "Medical ethics",
@@ -2081,6 +4164,14 @@
    "reason": "Adverse drug reactions are a major safety problem"
   },
   {
+   "prerequisiteConceptId": "C-7882e2fc-242b-4e96-84a2-3c604018bb23",
+   "conceptId": "C-1dcae429-60bd-4f94-8e54-79cec0fa8ca5",
+   "prerequisiteLabel": "Prenatal screening",
+   "label": "PCPNDT Act",
+   "strength": "helpful",
+   "reason": "The Act regulates prenatal diagnosis"
+  },
+  {
    "prerequisiteConceptId": "C-dcb8ba9a-aac2-417f-a4a4-e0239c15b057",
    "conceptId": "C-52282d04-3943-4795-b971-06541f4f8fea",
    "prerequisiteLabel": "Peak expiratory flow rate",
@@ -2089,12 +4180,148 @@
    "reason": "PEF measurement applies peak flow physiology"
   },
   {
+   "prerequisiteConceptId": "C-665d60ae-4ada-4abb-9a5b-7a22a3270b5f",
+   "conceptId": "C-e9ec57ec-b9aa-4b42-ac2d-7e2900ed31db",
+   "prerequisiteLabel": "Bony pelvis",
+   "label": "Pelvic assessment",
+   "strength": "essential",
+   "reason": "Pelvic assessment uses bony pelvis anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+   "conceptId": "C-f4197226-ea44-4b37-ab18-a6b64b9ea52d",
+   "prerequisiteLabel": "Reproductive tract infections",
+   "label": "Pelvic inflammatory disease",
+   "strength": "essential",
+   "reason": "PID is ascending reproductive tract infection"
+  },
+  {
+   "prerequisiteConceptId": "C-25979f9e-dcb5-4c07-a918-58cbd9184761",
+   "conceptId": "C-8ac890bd-4f28-484d-9e5c-5d4eea870b47",
+   "prerequisiteLabel": "Pelvic viscera",
+   "label": "Pelvic organ injuries",
+   "strength": "essential",
+   "reason": "Injuries follow pelvic organ relations"
+  },
+  {
+   "prerequisiteConceptId": "C-eafdfb7d-ab89-4d41-8588-78f634359d79",
+   "conceptId": "C-c5af2342-f45c-4764-abc5-6f0447008bdc",
+   "prerequisiteLabel": "Pelvic floor",
+   "label": "Pelvic organ prolapse",
+   "strength": "essential",
+   "reason": "Prolapse is pelvic floor failure"
+  },
+  {
+   "prerequisiteConceptId": "C-831df9dd-9aec-456c-8b6b-b14466db6654",
+   "conceptId": "C-771f5c27-8a38-4412-9b4c-d6f2f927a966",
+   "prerequisiteLabel": "Penis",
+   "label": "Penile carcinoma",
+   "strength": "essential",
+   "reason": "Penile carcinoma relates to penile anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
+   "conceptId": "C-d9b4b5a4-cc12-44bb-b504-413855b8fb0b",
+   "prerequisiteLabel": "Transmission of infection",
+   "label": "Perinatal infections",
+   "strength": "essential",
+   "reason": "Perinatal infections follow vertical transmission"
+  },
+  {
+   "prerequisiteConceptId": "C-8ffc7431-d905-4d03-a514-7c633d573f9b",
+   "conceptId": "C-d7f441c2-8a21-4d8b-bff1-ae47789b4313",
+   "prerequisiteLabel": "Vital statistics",
+   "label": "Perinatal mortality",
+   "strength": "essential",
+   "reason": "Perinatal mortality is a vital statistic"
+  },
+  {
+   "prerequisiteConceptId": "C-d2cea6d4-2adc-4577-afaf-e42d8f270f6c",
+   "conceptId": "C-97b94cce-538b-4f6a-a573-7cc945f91c80",
+   "prerequisiteLabel": "Perioperative fluid therapy",
+   "label": "Perioperative care",
+   "strength": "essential",
+   "reason": "Fluid management is central to perioperative care"
+  },
+  {
+   "prerequisiteConceptId": "C-93fec1d5-8dfc-45f0-84e3-6736aebc104c",
+   "conceptId": "C-97b94cce-538b-4f6a-a573-7cc945f91c80",
+   "prerequisiteLabel": "Preoperative assessment",
+   "label": "Perioperative care",
+   "strength": "essential",
+   "reason": "Perioperative care starts from pre-operative assessment"
+  },
+  {
    "prerequisiteConceptId": "C-ffb1478d-d2b7-485b-ac8d-29a1b534b763",
    "conceptId": "C-539c3df3-3732-4220-8663-ee8d0e1dc8a7",
    "prerequisiteLabel": "Geriatric assessment",
    "label": "Perioperative care of older adults",
    "strength": "essential",
    "reason": "Perioperative care uses geriatric assessment"
+  },
+  {
+   "prerequisiteConceptId": "C-ca64414c-c0a3-40be-9aa0-846a1bff08f0",
+   "conceptId": "C-d2cea6d4-2adc-4577-afaf-e42d8f270f6c",
+   "prerequisiteLabel": "Body fluid compartments",
+   "label": "Perioperative fluid therapy",
+   "strength": "essential",
+   "reason": "Fluid prescribing follows body fluid compartments"
+  },
+  {
+   "prerequisiteConceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "conceptId": "C-d2cea6d4-2adc-4577-afaf-e42d8f270f6c",
+   "prerequisiteLabel": "Water and electrolyte balance",
+   "label": "Perioperative fluid therapy",
+   "strength": "essential",
+   "reason": "Electrolyte balance guides fluid choice"
+  },
+  {
+   "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
+   "conceptId": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+   "prerequisiteLabel": "Atherosclerosis",
+   "label": "Peripheral arterial disease",
+   "strength": "essential",
+   "reason": "Peripheral arterial disease is atherosclerotic"
+  },
+  {
+   "prerequisiteConceptId": "C-8d9c97af-800d-41dd-b03c-981376c7f843",
+   "conceptId": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+   "prerequisiteLabel": "Ischaemia",
+   "label": "Peripheral arterial disease",
+   "strength": "essential",
+   "reason": "Symptoms are limb ischaemia"
+  },
+  {
+   "prerequisiteConceptId": "C-0c3953c0-b611-4ea0-a99b-f23f3da66c08",
+   "conceptId": "C-48f08949-45bc-48ac-99e4-7bde90ef3731",
+   "prerequisiteLabel": "Blood composition",
+   "label": "Peripheral blood smear",
+   "strength": "essential",
+   "reason": "Smear interpretation uses normal blood components"
+  },
+  {
+   "prerequisiteConceptId": "C-53fa36cb-621f-4a48-8ab1-a99a34915587",
+   "conceptId": "C-1c397fde-6c3f-4449-815a-90499237234b",
+   "prerequisiteLabel": "Blood vessels",
+   "label": "Peripheral vascular examination",
+   "strength": "helpful",
+   "reason": "Pulse sites follow vessel anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Peritonitis",
+   "strength": "helpful",
+   "reason": "Peritonitis is peritoneal inflammation"
+  },
+  {
+   "prerequisiteConceptId": "C-66424e48-1a18-419d-9cb9-d9ca896d0d06",
+   "conceptId": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+   "prerequisiteLabel": "Peritoneum",
+   "label": "Peritonitis",
+   "strength": "essential",
+   "reason": "Peritonitis spreads through peritoneal spaces"
   },
   {
    "prerequisiteConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
@@ -2119,6 +4346,22 @@
    "label": "Pesticide poisoning",
    "strength": "essential",
    "reason": "Pesticide poisoning follows general poisoning management"
+  },
+  {
+   "prerequisiteConceptId": "C-831df9dd-9aec-456c-8b6b-b14466db6654",
+   "conceptId": "C-c55fea74-b72a-48bf-a5dc-481de72fced7",
+   "prerequisiteLabel": "Penis",
+   "label": "Phimosis and paraphimosis",
+   "strength": "essential",
+   "reason": "Phimosis relates to foreskin anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
+   "conceptId": "C-81fb8f32-5ee3-4e60-99a0-6a0292389003",
+   "prerequisiteLabel": "Nutrients",
+   "label": "Pica",
+   "strength": "helpful",
+   "reason": "Pica is linked to iron deficiency"
   },
   {
    "prerequisiteConceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
@@ -2161,6 +4404,22 @@
    "reason": "Toxic dose and elimination follow pharmacokinetics"
   },
   {
+   "prerequisiteConceptId": "C-50fb9630-22e1-43d4-9513-01dea0ca381e",
+   "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+   "prerequisiteLabel": "Hyperandrogenism",
+   "label": "Polycystic ovary syndrome",
+   "strength": "essential",
+   "reason": "Hyperandrogenism is a defining feature of PCOS"
+  },
+  {
+   "prerequisiteConceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+   "prerequisiteLabel": "Menstrual cycle",
+   "label": "Polycystic ovary syndrome",
+   "strength": "essential",
+   "reason": "PCOS is chronic anovulation"
+  },
+  {
    "prerequisiteConceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
    "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
    "prerequisiteLabel": "Cirrhosis",
@@ -2177,12 +4436,148 @@
    "reason": "Resistance and flow explain portal pressure"
   },
   {
+   "prerequisiteConceptId": "C-a0238b23-43eb-4e2a-acb4-3cf9a23983d0",
+   "conceptId": "C-21db6247-4ce3-47a0-968a-5498cb298599",
+   "prerequisiteLabel": "Gestational age calculation",
+   "label": "Post-term pregnancy",
+   "strength": "essential",
+   "reason": "Post-term is defined by gestational age"
+  },
+  {
+   "prerequisiteConceptId": "C-ade6010f-83b5-48f2-99e2-4cb1ad31603c",
+   "conceptId": "C-bdda3977-1c3d-40d5-9d81-573aae48a428",
+   "prerequisiteLabel": "Abnormal uterine bleeding",
+   "label": "Postmenopausal bleeding",
+   "strength": "helpful",
+   "reason": "Abnormal bleeding patterns guide evaluation"
+  },
+  {
+   "prerequisiteConceptId": "C-c12dbb34-f5f4-44c0-a5c6-b808151f5b21",
+   "conceptId": "C-bdda3977-1c3d-40d5-9d81-573aae48a428",
+   "prerequisiteLabel": "Menopause",
+   "label": "Postmenopausal bleeding",
+   "strength": "essential",
+   "reason": "Bleeding after menopause is abnormal"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Postpartum haemorrhage",
+   "strength": "helpful",
+   "reason": "PPH follows failure of third-stage control"
+  },
+  {
+   "prerequisiteConceptId": "C-1e7f5438-1294-4fb8-a786-c67797e5bd07",
+   "conceptId": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+   "prerequisiteLabel": "Uterotonics",
+   "label": "Postpartum haemorrhage",
+   "strength": "essential",
+   "reason": "Uterotonics prevent and treat PPH"
+  },
+  {
+   "prerequisiteConceptId": "C-62caaf83-c236-49f1-80f7-269540cea850",
+   "conceptId": "C-12d317b3-a4db-4fe6-a94c-7ec4631fcb0c",
+   "prerequisiteLabel": "Caesarean section",
+   "label": "Pregnancy after caesarean section",
+   "strength": "essential",
+   "reason": "Previous scar guides later delivery"
+  },
+  {
+   "prerequisiteConceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+   "conceptId": "C-5fb9d279-c8b6-4531-8b00-24601537dba4",
+   "prerequisiteLabel": "Ectopic pregnancy",
+   "label": "Pregnancy of unknown location",
+   "strength": "essential",
+   "reason": "Unknown location must exclude ectopic pregnancy"
+  },
+  {
+   "prerequisiteConceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+   "conceptId": "C-badc2634-664d-41b5-833c-c9147008a0d9",
+   "prerequisiteLabel": "Airway management",
+   "label": "Prehospital trauma care",
+   "strength": "essential",
+   "reason": "Airway control comes first in trauma care"
+  },
+  {
+   "prerequisiteConceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "conceptId": "C-badc2634-664d-41b5-833c-c9147008a0d9",
+   "prerequisiteLabel": "Basic life support",
+   "label": "Prehospital trauma care",
+   "strength": "essential",
+   "reason": "Trauma care starts with basic life support"
+  },
+  {
+   "prerequisiteConceptId": "C-ea4b14e0-05de-4e68-8523-978d8ed2c2f9",
+   "conceptId": "C-b12fa7b8-93d4-4442-a1d7-0d439401b403",
+   "prerequisiteLabel": "Fetal membranes",
+   "label": "Prelabour rupture of membranes",
+   "strength": "essential",
+   "reason": "PROM is rupture of fetal membranes"
+  },
+  {
+   "prerequisiteConceptId": "C-e0f3d6aa-cd79-4f0d-8e5c-4f572d564b0a",
+   "conceptId": "C-93fec1d5-8dfc-45f0-84e3-6736aebc104c",
+   "prerequisiteLabel": "Investigations in surgical patients",
+   "label": "Preoperative assessment",
+   "strength": "helpful",
+   "reason": "Pre-operative work-up uses surgical investigations"
+  },
+  {
+   "prerequisiteConceptId": "C-a0238b23-43eb-4e2a-acb4-3cf9a23983d0",
+   "conceptId": "C-98c194e3-82d7-42ef-93d4-6b112eb45183",
+   "prerequisiteLabel": "Gestational age calculation",
+   "label": "Preterm labour",
+   "strength": "essential",
+   "reason": "Preterm is defined by gestational age"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-98c194e3-82d7-42ef-93d4-6b112eb45183",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Preterm labour",
+   "strength": "helpful",
+   "reason": "Preterm labour is labour before term"
+  },
+  {
    "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
    "conceptId": "C-4a75d8f7-6820-4399-a9c4-f4f76a231ee0",
    "prerequisiteLabel": "Medical ethics",
    "label": "Professional conduct",
    "strength": "helpful",
    "reason": "Professional conduct applies ethics"
+  },
+  {
+   "prerequisiteConceptId": "C-ea5c037c-f133-4ada-ae08-db878106c61c",
+   "conceptId": "C-c8c2d3e6-d532-4f05-91b0-0d75851773f7",
+   "prerequisiteLabel": "Doctor-patient relationship",
+   "label": "Prognosis counselling",
+   "strength": "helpful",
+   "reason": "Prognosis discussions rely on the relationship"
+  },
+  {
+   "prerequisiteConceptId": "C-9e700d08-7a69-4274-bd26-58864d34e8dd",
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "prerequisiteLabel": "Prostate",
+   "label": "Prostate cancer",
+   "strength": "essential",
+   "reason": "Prostate cancer arises in the peripheral zone"
+  },
+  {
+   "prerequisiteConceptId": "C-9e700d08-7a69-4274-bd26-58864d34e8dd",
+   "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+   "prerequisiteLabel": "Prostate",
+   "label": "Prostatitis",
+   "strength": "essential",
+   "reason": "Prostatitis relates to prostate anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+   "prerequisiteLabel": "Urinary tract infection",
+   "label": "Prostatitis",
+   "strength": "helpful",
+   "reason": "Bacterial prostatitis is a urinary infection"
   },
   {
    "prerequisiteConceptId": "C-ff23a7a1-056b-4bae-a15e-13ad0edf7867",
@@ -2215,6 +4610,14 @@
    "label": "Proteinuria",
    "strength": "essential",
    "reason": "Proteinuria reflects glomerular and tubular handling"
+  },
+  {
+   "prerequisiteConceptId": "C-f324da9d-45fc-42f2-b54a-e2843363e211",
+   "conceptId": "C-a60366ac-b27a-41c2-830a-8bad7102a2ed",
+   "prerequisiteLabel": "Parturition",
+   "label": "Puerperium",
+   "strength": "essential",
+   "reason": "Puerperium follows parturition"
   },
   {
    "prerequisiteConceptId": "C-622a38c1-e454-404e-af4d-7ee9762004dd",
@@ -2281,6 +4684,14 @@
    "reason": "Iodine uptake reflects thyroid hormone synthesis"
   },
   {
+   "prerequisiteConceptId": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "conceptId": "C-54bcfb84-07b8-436f-a223-4a541a3bb24f",
+   "prerequisiteLabel": "Fertilisation",
+   "label": "Recurrent pregnancy loss",
+   "strength": "helpful",
+   "reason": "Chromosomal errors cause pregnancy loss"
+  },
+  {
    "prerequisiteConceptId": "C-910dad41-a204-4bf3-a8a3-7b9d7a6db693",
    "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
    "prerequisiteLabel": "Blood urea",
@@ -2321,12 +4732,28 @@
    "reason": "Dialysis indications arise from CKD"
   },
   {
+   "prerequisiteConceptId": "C-d37242ef-2027-4d25-887e-86e2d875ab99",
+   "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "prerequisiteLabel": "Kidney",
+   "label": "Renal tumours",
+   "strength": "helpful",
+   "reason": "Renal tumours arise from nephron cells"
+  },
+  {
    "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
    "conceptId": "C-69a0ed0a-242e-46c1-b2fc-cc3f35f1f894",
    "prerequisiteLabel": "Medical ethics",
    "label": "Research ethics",
    "strength": "essential",
    "reason": "Research ethics extends core ethical principles"
+  },
+  {
+   "prerequisiteConceptId": "C-36967369-44ee-4847-a9ad-54e42615161d",
+   "conceptId": "C-b9885247-344f-4edc-88f4-8bc6236692ad",
+   "prerequisiteLabel": "Respiratory system",
+   "label": "Respiratory distress in children",
+   "strength": "essential",
+   "reason": "Distress reflects respiratory physiology"
   },
   {
    "prerequisiteConceptId": "C-36967369-44ee-4847-a9ad-54e42615161d",
@@ -2345,6 +4772,30 @@
    "reason": "Most present as upper respiratory infection"
   },
   {
+   "prerequisiteConceptId": "C-bdaf7db6-8353-4b08-bf63-13b7f07d1723",
+   "conceptId": "C-cf7076c6-fda2-4846-a24f-8ca1e57df87d",
+   "prerequisiteLabel": "Abdominal viscera",
+   "label": "Retroperitoneal and mesenteric lesions",
+   "strength": "helpful",
+   "reason": "Lesions are located by retroperitoneal anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "conceptId": "C-a5b9f2bb-46b3-409a-9e48-17853365c1d7",
+   "prerequisiteLabel": "Blood groups",
+   "label": "Rh isoimmunisation",
+   "strength": "essential",
+   "reason": "Rh isoimmunisation follows Rh blood groups"
+  },
+  {
+   "prerequisiteConceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "conceptId": "C-a5b9f2bb-46b3-409a-9e48-17853365c1d7",
+   "prerequisiteLabel": "Humoral immunity",
+   "label": "Rh isoimmunisation",
+   "strength": "essential",
+   "reason": "Maternal IgG crosses to the fetus"
+  },
+  {
    "prerequisiteConceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
    "conceptId": "C-a92460ef-29fd-4538-a84b-98c5dc3ea081",
    "prerequisiteLabel": "Rheumatic fever",
@@ -2359,6 +4810,22 @@
    "label": "Rickettsial infections",
    "strength": "essential",
    "reason": "Rickettsiae are vector-borne"
+  },
+  {
+   "prerequisiteConceptId": "C-05b8a337-f785-4656-b6bd-c362dbf358f6",
+   "conceptId": "C-99cf5538-5d14-4a36-8e8e-08667fa7ca31",
+   "prerequisiteLabel": "Facial nerve",
+   "label": "Salivary gland disorders",
+   "strength": "essential",
+   "reason": "The facial nerve runs through the parotid"
+  },
+  {
+   "prerequisiteConceptId": "C-fd405947-a01b-47fd-99c1-3f9fbf87359c",
+   "conceptId": "C-99cf5538-5d14-4a36-8e8e-08667fa7ca31",
+   "prerequisiteLabel": "Parotid gland",
+   "label": "Salivary gland disorders",
+   "strength": "essential",
+   "reason": "Parotid disease relates to gland anatomy"
   },
   {
    "prerequisiteConceptId": "C-7d3f8df6-c118-45d3-8bc3-9b71a057d9ec",
@@ -2393,6 +4860,22 @@
    "reason": "Septic shock is a form of shock"
   },
   {
+   "prerequisiteConceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+   "conceptId": "C-e2dc4c05-6bf0-449b-b0ff-460eb3a9d672",
+   "prerequisiteLabel": "Nutritional assessment",
+   "label": "Severe acute malnutrition",
+   "strength": "essential",
+   "reason": "SAM is identified by anthropometry"
+  },
+  {
+   "prerequisiteConceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptId": "C-e2dc4c05-6bf0-449b-b0ff-460eb3a9d672",
+   "prerequisiteLabel": "Protein-energy malnutrition",
+   "label": "Severe acute malnutrition",
+   "strength": "essential",
+   "reason": "SAM is the severe end of protein-energy malnutrition"
+  },
+  {
    "prerequisiteConceptId": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
    "conceptId": "C-66198612-2c00-4b4b-9020-429570efb0d9",
    "prerequisiteLabel": "Medical ethics",
@@ -2417,12 +4900,44 @@
    "reason": "Haemodynamics explain tissue hypoperfusion"
   },
   {
+   "prerequisiteConceptId": "C-79c17799-c571-4967-9df5-bf10744093cd",
+   "conceptId": "C-051af25a-42c4-4f9b-9bcb-ebb4a43a3c0c",
+   "prerequisiteLabel": "Growth and development",
+   "label": "Short stature",
+   "strength": "essential",
+   "reason": "Short stature is judged against growth norms"
+  },
+  {
+   "prerequisiteConceptId": "C-aab0f877-59bc-4753-a8df-a0457d082ab4",
+   "conceptId": "C-051af25a-42c4-4f9b-9bcb-ebb4a43a3c0c",
+   "prerequisiteLabel": "Pituitary gland",
+   "label": "Short stature",
+   "strength": "helpful",
+   "reason": "Growth hormone axis explains endocrine causes"
+  },
+  {
    "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
    "conceptId": "C-bbcd6379-fa2f-40c3-89b9-7954d7fff370",
    "prerequisiteLabel": "Inflammation",
    "label": "Skin and soft tissue infections",
    "strength": "helpful",
    "reason": "Cellulitis and abscess are inflammatory responses"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-e8b687c7-0fa7-4f31-a432-ecd0fb84f180",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Skin tumours",
+   "strength": "helpful",
+   "reason": "Tumour behaviour follows neoplasia principles"
+  },
+  {
+   "prerequisiteConceptId": "C-d7d9ffed-4ed0-4e03-8e1a-82a472889957",
+   "conceptId": "C-e8b687c7-0fa7-4f31-a432-ecd0fb84f180",
+   "prerequisiteLabel": "Skin histology",
+   "label": "Skin tumours",
+   "strength": "essential",
+   "reason": "Skin tumours arise from specific skin layers"
   },
   {
    "prerequisiteConceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
@@ -2457,6 +4972,30 @@
    "reason": "Neurotoxic venom blocks neuromuscular transmission"
   },
   {
+   "prerequisiteConceptId": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "conceptId": "C-8585b710-fb44-4dcc-818d-e4c8f4c39d35",
+   "prerequisiteLabel": "Renal regulation of fluid, electrolytes and acid-base",
+   "label": "Sodium and potassium disorders",
+   "strength": "essential",
+   "reason": "Sodium and potassium handling explain disorders"
+  },
+  {
+   "prerequisiteConceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+   "conceptId": "C-8585b710-fb44-4dcc-818d-e4c8f4c39d35",
+   "prerequisiteLabel": "Water and electrolyte balance",
+   "label": "Sodium and potassium disorders",
+   "strength": "essential",
+   "reason": "Fluid balance explains dysnatraemias"
+  },
+  {
+   "prerequisiteConceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "conceptId": "C-9e836600-05a3-4b68-934d-98e74f7952f7",
+   "prerequisiteLabel": "Wound healing",
+   "label": "Soft tissue injuries",
+   "strength": "essential",
+   "reason": "Soft tissue repair follows wound healing"
+  },
+  {
    "prerequisiteConceptId": "C-8d21954d-6d08-4cdc-8cad-472b2e0726a3",
    "conceptId": "C-88e3251e-1383-4271-acf2-78afd13f47d9",
    "prerequisiteLabel": "Cerebral cortex",
@@ -2465,12 +5004,28 @@
    "reason": "Speech disorders localise to cortical areas"
   },
   {
+   "prerequisiteConceptId": "C-b113f830-6d22-4711-aeea-ca4373927455",
+   "conceptId": "C-23f57add-a49a-4200-9f79-494a669c96e5",
+   "prerequisiteLabel": "Spleen",
+   "label": "Splenectomy",
+   "strength": "essential",
+   "reason": "Splenectomy removes splenic immune function"
+  },
+  {
    "prerequisiteConceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
    "conceptId": "C-8489203c-98b8-4874-b9c3-e6adb886d122",
    "prerequisiteLabel": "Epilepsy",
    "label": "Status epilepticus",
    "strength": "essential",
    "reason": "Status epilepticus is prolonged epileptic activity"
+  },
+  {
+   "prerequisiteConceptId": "C-235bc332-ab2a-463a-955a-ce8a5c7e071e",
+   "conceptId": "C-fddfc29b-c5d0-43ee-8e00-a10d056f1d60",
+   "prerequisiteLabel": "Larynx",
+   "label": "Stridor",
+   "strength": "essential",
+   "reason": "Stridor is noise from upper airway narrowing"
   },
   {
    "prerequisiteConceptId": "C-7279234f-5a32-4caf-add2-63b9f369b542",
@@ -2497,6 +5052,118 @@
    "reason": "Depression is the key risk factor for suicide"
   },
   {
+   "prerequisiteConceptId": "C-ccea7522-e731-417f-bc8e-b324b6328430",
+   "conceptId": "C-06badb58-3b46-4aff-afb7-ecc20bb1b19d",
+   "prerequisiteLabel": "Gastrointestinal motility",
+   "label": "Surgical bowel disorders",
+   "strength": "helpful",
+   "reason": "Motility explains obstruction and ileus"
+  },
+  {
+   "prerequisiteConceptId": "C-59002f81-ead4-4c67-be85-bb2309ed0a75",
+   "conceptId": "C-06badb58-3b46-4aff-afb7-ecc20bb1b19d",
+   "prerequisiteLabel": "Small and large intestine",
+   "label": "Surgical bowel disorders",
+   "strength": "essential",
+   "reason": "Bowel disorders relate to intestinal anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "conceptId": "C-2b4af640-c64d-4ea2-ad16-9a512561a22b",
+   "prerequisiteLabel": "Peptic ulcer disease",
+   "label": "Surgical disorders of the stomach",
+   "strength": "essential",
+   "reason": "Peptic ulcer causes many surgical stomach disorders"
+  },
+  {
+   "prerequisiteConceptId": "C-6f05287b-2c42-48fc-904a-a424746f1fd0",
+   "conceptId": "C-2b4af640-c64d-4ea2-ad16-9a512561a22b",
+   "prerequisiteLabel": "Stomach",
+   "label": "Surgical disorders of the stomach",
+   "strength": "essential",
+   "reason": "Gastric disorders relate to stomach anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-75ba25e0-4e7a-419f-9588-1fdb7c7b0043",
+   "conceptId": "C-34bbf479-06bb-4bfe-8230-26db78699784",
+   "prerequisiteLabel": "Abdominal incisions",
+   "label": "Surgical incisions and instruments",
+   "strength": "essential",
+   "reason": "Incisions are planned on abdominal wall anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-270aacdc-f290-4fee-8067-ee9e2255dc3e",
+   "conceptId": "C-4625e250-cc18-4ff8-bb6a-6b2881b9f072",
+   "prerequisiteLabel": "Aseptic technique",
+   "label": "Surgical infections",
+   "strength": "essential",
+   "reason": "Most surgical infections are prevented by asepsis"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-4625e250-cc18-4ff8-bb6a-6b2881b9f072",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Surgical infections",
+   "strength": "helpful",
+   "reason": "Surgical infections are inflammatory responses"
+  },
+  {
+   "prerequisiteConceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+   "conceptId": "C-2bf29e9f-9c38-43ca-91dc-5ee7258172e2",
+   "prerequisiteLabel": "Metastasis",
+   "label": "Surgical oncology",
+   "strength": "essential",
+   "reason": "Resection and staging depend on spread"
+  },
+  {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-2bf29e9f-9c38-43ca-91dc-5ee7258172e2",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Surgical oncology",
+   "strength": "essential",
+   "reason": "Surgical oncology applies neoplasia principles"
+  },
+  {
+   "prerequisiteConceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "conceptId": "C-40c7ce61-9244-47cf-b37a-e4ef0e2260c4",
+   "prerequisiteLabel": "Wound healing",
+   "label": "Sutures and knots",
+   "strength": "helpful",
+   "reason": "Healing time decides suture choice and removal"
+  },
+  {
+   "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+   "prerequisiteLabel": "Autoimmunity",
+   "label": "Systemic lupus erythematosus",
+   "strength": "essential",
+   "reason": "SLE is a systemic autoimmune disease"
+  },
+  {
+   "prerequisiteConceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "conceptId": "C-3610c718-f159-4133-906a-d3fcee617793",
+   "prerequisiteLabel": "Developmental milestones",
+   "label": "Temper tantrums",
+   "strength": "helpful",
+   "reason": "Tantrums are judged against developmental stage"
+  },
+  {
+   "prerequisiteConceptId": "C-b26a8d75-e8aa-4e4e-a459-361e8cbdf914",
+   "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+   "prerequisiteLabel": "Lymphatic system",
+   "label": "Testicular tumours",
+   "strength": "helpful",
+   "reason": "Spread follows para-aortic lymphatic drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-d5770888-c5f5-41d5-a445-2f0b8e8718f2",
+   "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+   "prerequisiteLabel": "Testis and epididymis",
+   "label": "Testicular tumours",
+   "strength": "essential",
+   "reason": "Testicular tumours arise from germ and stromal cells"
+  },
+  {
    "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
    "conceptId": "C-9784e465-87b3-4ecb-82f7-b317ca4461b3",
    "prerequisiteLabel": "Thyroid gland",
@@ -2521,6 +5188,22 @@
    "reason": "Thyroxine replaces deficient hormone"
   },
   {
+   "prerequisiteConceptId": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "prerequisiteLabel": "Neoplasia",
+   "label": "Thyroid neoplasms",
+   "strength": "essential",
+   "reason": "Behaviour follows neoplasia principles"
+  },
+  {
+   "prerequisiteConceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "prerequisiteLabel": "Thyroid gland",
+   "label": "Thyroid neoplasms",
+   "strength": "essential",
+   "reason": "Thyroid neoplasms arise from thyroid cell types"
+  },
+  {
    "prerequisiteConceptId": "C-a902737b-701c-4d23-927f-93112522c494",
    "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
    "prerequisiteLabel": "Thyroid function tests",
@@ -2537,6 +5220,14 @@
    "reason": "Thyroid hormone physiology explains features"
   },
   {
+   "prerequisiteConceptId": "C-2e458ba2-3abc-4f69-9dd9-7fd18eadb7cc",
+   "conceptId": "C-8a4b7395-0b9f-4511-a857-b6ddcf704121",
+   "prerequisiteLabel": "Human leucocyte antigens",
+   "label": "Transplant rejection",
+   "strength": "essential",
+   "reason": "Rejection is directed at mismatched HLA"
+  },
+  {
    "prerequisiteConceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
    "conceptId": "C-24b34065-a195-4554-8601-54894339184b",
    "prerequisiteLabel": "Hypersensitivity reactions",
@@ -2551,6 +5242,14 @@
    "label": "Tumour markers",
    "strength": "essential",
    "reason": "Tumour markers are products of neoplasms"
+  },
+  {
+   "prerequisiteConceptId": "C-6ba7e30c-15a5-48af-82ca-31454ac83794",
+   "conceptId": "C-bc65579e-a951-4c48-bcc0-cbe6cbb901ae",
+   "prerequisiteLabel": "Chromosomal disorders",
+   "label": "Turner syndrome",
+   "strength": "essential",
+   "reason": "Turner syndrome is a chromosomal disorder"
   },
   {
    "prerequisiteConceptId": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
@@ -2585,6 +5284,30 @@
    "reason": "Insulin resistance links metabolic syndrome and type 2"
   },
   {
+   "prerequisiteConceptId": "C-cab87017-0c65-440e-9a55-4bbbef9d7fb2",
+   "conceptId": "C-03be60df-afc8-448c-8e93-1ebf721556c1",
+   "prerequisiteLabel": "Glasgow Coma Scale",
+   "label": "Unconscious patient",
+   "strength": "essential",
+   "reason": "Depth of coma is graded by GCS"
+  },
+  {
+   "prerequisiteConceptId": "C-84ccc19e-294c-42a4-a488-1538d721e95c",
+   "conceptId": "C-03be60df-afc8-448c-8e93-1ebf721556c1",
+   "prerequisiteLabel": "Reticular activating system",
+   "label": "Unconscious patient",
+   "strength": "essential",
+   "reason": "Consciousness depends on the reticular activating system"
+  },
+  {
+   "prerequisiteConceptId": "C-00deb4ab-6c75-45d4-ba09-4196de9072aa",
+   "conceptId": "C-2aa7da9c-4113-49bd-a826-8782937f04e9",
+   "prerequisiteLabel": "Development of the reproductive system",
+   "label": "Undescended testis",
+   "strength": "essential",
+   "reason": "Undescended testis is arrested testicular descent"
+  },
+  {
    "prerequisiteConceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
    "conceptId": "C-2285772b-855a-448b-abbb-11122f2158a6",
    "prerequisiteLabel": "Chronic kidney disease",
@@ -2593,12 +5316,44 @@
    "reason": "Uraemia is the end-stage of CKD"
   },
   {
+   "prerequisiteConceptId": "C-6be5ec5b-94d8-42b5-8989-e35a898c2860",
+   "conceptId": "C-bc15fbe7-176f-4a72-901e-13d09232483e",
+   "prerequisiteLabel": "Perineum",
+   "label": "Urethral stricture",
+   "strength": "helpful",
+   "reason": "Strictures follow urethral course and injury"
+  },
+  {
    "prerequisiteConceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
    "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
    "prerequisiteLabel": "Urine formation",
    "label": "Urinalysis",
    "strength": "essential",
    "reason": "Urinalysis findings reflect urine formation"
+  },
+  {
+   "prerequisiteConceptId": "C-25979f9e-dcb5-4c07-a918-58cbd9184761",
+   "conceptId": "C-4fabbb9f-a122-4325-a1ba-3f223001e05d",
+   "prerequisiteLabel": "Pelvic viscera",
+   "label": "Urinary catheterisation",
+   "strength": "essential",
+   "reason": "Catheterisation follows urethral anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "conceptId": "C-c5a0323d-f6e6-4c6d-bdc9-f627b3daa224",
+   "prerequisiteLabel": "Benign prostatic hyperplasia",
+   "label": "Urinary retention",
+   "strength": "essential",
+   "reason": "BPH is the commonest cause of retention"
+  },
+  {
+   "prerequisiteConceptId": "C-c3961b49-71aa-43f6-b446-18115817793c",
+   "conceptId": "C-c5a0323d-f6e6-4c6d-bdc9-f627b3daa224",
+   "prerequisiteLabel": "Micturition",
+   "label": "Urinary retention",
+   "strength": "essential",
+   "reason": "Retention is failure of micturition"
   },
   {
    "prerequisiteConceptId": "C-30203f0e-f266-48f8-8bc3-cee5814a4b1b",
@@ -2617,6 +5372,78 @@
    "reason": "UTI is diagnosed from urinalysis"
   },
   {
+   "prerequisiteConceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "conceptId": "C-e7e1ecbe-1db3-43e1-b3fd-e2481fb7973c",
+   "prerequisiteLabel": "Urinary tract infection",
+   "label": "Urinary tract infection in pregnancy",
+   "strength": "essential",
+   "reason": "UTI in pregnancy is a urinary infection"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Urolithiasis",
+   "strength": "essential",
+   "reason": "Calcium handling explains most stones"
+  },
+  {
+   "prerequisiteConceptId": "C-22457423-7498-4bf8-a6de-3bb29f5bcc2d",
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "prerequisiteLabel": "Purine metabolism",
+   "label": "Urolithiasis",
+   "strength": "helpful",
+   "reason": "Uric acid stones follow purine metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-a5968db5-b68e-420e-97ae-0af25d2261cd",
+   "conceptId": "C-25fbab0b-e72e-4ea9-8797-4cda4a9a8dc9",
+   "prerequisiteLabel": "Urogenital system histology",
+   "label": "Urothelial carcinoma",
+   "strength": "essential",
+   "reason": "Urothelial tumours arise from transitional epithelium"
+  },
+  {
+   "prerequisiteConceptId": "C-537c829a-d84a-41b9-b20a-47f3c42c1332",
+   "conceptId": "C-5ba6cd00-be2b-44f7-97b6-b125a6297e26",
+   "prerequisiteLabel": "Normal labour",
+   "label": "Uterine inversion",
+   "strength": "helpful",
+   "reason": "Inversion is a third-stage complication"
+  },
+  {
+   "prerequisiteConceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptId": "C-9fae40eb-858c-4fe7-96b9-5bd3de84e72f",
+   "prerequisiteLabel": "Immunisation",
+   "label": "Vaccine administration",
+   "strength": "essential",
+   "reason": "Schedules follow immunisation principles"
+  },
+  {
+   "prerequisiteConceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "conceptId": "C-9fae40eb-858c-4fe7-96b9-5bd3de84e72f",
+   "prerequisiteLabel": "Vaccines",
+   "label": "Vaccine administration",
+   "strength": "essential",
+   "reason": "Administration follows vaccine type and schedule"
+  },
+  {
+   "prerequisiteConceptId": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptId": "C-3a5f4265-b660-4ada-b4cc-3f1e74bc3ed9",
+   "prerequisiteLabel": "Immunisation",
+   "label": "Vaccine-preventable diseases",
+   "strength": "essential",
+   "reason": "Prevention relies on immunisation"
+  },
+  {
+   "prerequisiteConceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "conceptId": "C-3a5f4265-b660-4ada-b4cc-3f1e74bc3ed9",
+   "prerequisiteLabel": "Vaccines",
+   "label": "Vaccine-preventable diseases",
+   "strength": "essential",
+   "reason": "Vaccines target specific diseases"
+  },
+  {
    "prerequisiteConceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
    "conceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
    "prerequisiteLabel": "Humoral immunity",
@@ -2631,6 +5458,14 @@
    "label": "Vaccines",
    "strength": "essential",
    "reason": "Vaccines apply immunisation principles"
+  },
+  {
+   "prerequisiteConceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+   "conceptId": "C-fade20c5-b671-4cca-87f9-8d2425152d0c",
+   "prerequisiteLabel": "Reproductive tract infections",
+   "label": "Vaginal discharge",
+   "strength": "essential",
+   "reason": "Discharge is usually reproductive tract infection"
   },
   {
    "prerequisiteConceptId": "C-b212077b-ee32-4512-96c3-041ad2c0ebdf",
@@ -2657,6 +5492,30 @@
    "reason": "Zoster is reactivation when cell-mediated immunity wanes"
   },
   {
+   "prerequisiteConceptId": "C-d5770888-c5f5-41d5-a445-2f0b8e8718f2",
+   "conceptId": "C-2e96f256-4cf7-4279-8d14-242404004c26",
+   "prerequisiteLabel": "Testis and epididymis",
+   "label": "Varicocele",
+   "strength": "helpful",
+   "reason": "Varicocele involves the testicular venous drainage"
+  },
+  {
+   "prerequisiteConceptId": "C-4a3f5f10-3207-43f8-a4e9-5890a148aff8",
+   "conceptId": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "prerequisiteLabel": "Calf muscle pump",
+   "label": "Varicose veins",
+   "strength": "essential",
+   "reason": "Calf pump failure causes venous hypertension"
+  },
+  {
+   "prerequisiteConceptId": "C-e409cecb-01d2-4873-a2de-bba4d6e520b1",
+   "conceptId": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "prerequisiteLabel": "Lower limb venous system",
+   "label": "Varicose veins",
+   "strength": "essential",
+   "reason": "Varicose veins are failure of the venous system"
+  },
+  {
    "prerequisiteConceptId": "C-43e98e73-2dc0-45d0-b324-e3be766d00f4",
    "conceptId": "C-1b5f6ccc-7ea4-4dd3-861c-0d796818395a",
    "prerequisiteLabel": "Atherosclerosis",
@@ -2679,6 +5538,22 @@
    "label": "Vasoactive drugs in variceal bleeding",
    "strength": "essential",
    "reason": "Vasoactive drugs lower portal pressure"
+  },
+  {
+   "prerequisiteConceptId": "C-7d3f8df6-c118-45d3-8bc3-9b71a057d9ec",
+   "conceptId": "C-ea0abc66-63f1-499d-a611-900b7866e80b",
+   "prerequisiteLabel": "Cardiovascular regulation",
+   "label": "Vasospastic disorders",
+   "strength": "helpful",
+   "reason": "Vasospasm is abnormal vascular regulation"
+  },
+  {
+   "prerequisiteConceptId": "C-daaca46b-f9c5-4b66-83ec-8f0e9c3b5871",
+   "conceptId": "C-bd270278-2b59-49d0-9db3-2e6152fdde90",
+   "prerequisiteLabel": "Infectious rashes",
+   "label": "Viral exanthematous illnesses",
+   "strength": "essential",
+   "reason": "Exanthems are infectious rashes"
   },
   {
    "prerequisiteConceptId": "C-6a665032-76c9-4b06-a1a8-4757dc0e4150",
@@ -2727,6 +5602,102 @@
    "label": "Visual impairment in older adults",
    "strength": "helpful",
    "reason": "Age-related vision loss affects optics and accommodation"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-76ac99ee-4fc6-49a1-afdf-873b2b13f43c",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin A deficiency",
+   "strength": "essential",
+   "reason": "Vitamin A functions explain night blindness and xerophthalmia"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-61bce4aa-dc64-4cf6-b74b-cf7c2add2548",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin B complex deficiencies",
+   "strength": "essential",
+   "reason": "Deficiency features follow B-vitamin functions"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin B12 deficiency",
+   "strength": "essential",
+   "reason": "B12 functions explain deficiency"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-303f7a79-0e07-4372-bef9-530a4986d0fc",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin C deficiency",
+   "strength": "essential",
+   "reason": "Scurvy follows vitamin C's role in collagen"
+  },
+  {
+   "prerequisiteConceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+   "conceptId": "C-cf6739be-1b08-4664-a0e2-99b40d5e8c03",
+   "prerequisiteLabel": "Calcium metabolism",
+   "label": "Vitamin D disorders",
+   "strength": "essential",
+   "reason": "Rickets is failure of calcium and phosphate mineralisation"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-cf6739be-1b08-4664-a0e2-99b40d5e8c03",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin D disorders",
+   "strength": "essential",
+   "reason": "Vitamin D disorders follow its metabolism"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-f2deb7c5-29e2-4cd2-bdf9-5b75e648e2e5",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin E deficiency",
+   "strength": "essential",
+   "reason": "Deficiency features follow vitamin E functions"
+  },
+  {
+   "prerequisiteConceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+   "prerequisiteLabel": "Haemostasis",
+   "label": "Vitamin K deficiency",
+   "strength": "essential",
+   "reason": "Deficiency causes coagulation failure"
+  },
+  {
+   "prerequisiteConceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+   "prerequisiteLabel": "Vitamins",
+   "label": "Vitamin K deficiency",
+   "strength": "essential",
+   "reason": "Vitamin K is needed for clotting factor synthesis"
+  },
+  {
+   "prerequisiteConceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+   "conceptId": "C-c7a6fee6-5530-4ad9-a788-393bf63ce884",
+   "prerequisiteLabel": "Renal tumours",
+   "label": "Wilms tumour",
+   "strength": "helpful",
+   "reason": "Wilms tumour is a renal tumour"
+  },
+  {
+   "prerequisiteConceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "conceptId": "C-ae462a0e-e3a5-4d12-beda-04d898c3a6cb",
+   "prerequisiteLabel": "Wound healing",
+   "label": "Wound care",
+   "strength": "essential",
+   "reason": "Wound care follows the phases of healing"
+  },
+  {
+   "prerequisiteConceptId": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "conceptId": "C-075d073b-8417-446e-af88-001e69a29178",
+   "prerequisiteLabel": "Inflammation",
+   "label": "Wound healing",
+   "strength": "essential",
+   "reason": "Healing follows the inflammatory phase"
   },
   {
    "prerequisiteConceptId": "C-60525ccd-c657-4e19-bdd1-6b852a860524",
