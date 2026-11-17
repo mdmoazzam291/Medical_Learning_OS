@@ -1,3 +1,12 @@
+## Anatomy part A split after acceptance timeout — 2026-11-17T07:35Z
+
+- Owner attempts at 07:21–07:23Z returned 409: Postgres logged `canceling statement due to statement timeout` (authenticator role `statement_timeout=8s`). `concept_batch_accept_v1` saves and accepts each concept in turn and its cost grows with the accepted set (1,227 now); 127 new concepts no longer fit in 8 s (104 did at 1,123). Nothing was saved.
+- Part A retired unaccepted; now part A1 `nmc-anatomy-concepts-part-a1-v1-20261116` (AN1–AN20: 70 concepts, 62 new, 128 objectives, 126 rows) via `ops/nmc/specs/anatomy_a1_concepts_v1.py`, which reuses the part A spec and drops out-of-scope links. Part A2 (AN21–AN43) will be built after A1 is accepted so it can reuse A1 identities (e.g. Ossification for AN26.6).
+- Rule from here: keep new concepts per batch at about 60–70 until the acceptance RPC is made faster (deferred: profile and index the per-concept checks).
+- Endpoint pin: commit `2fde64c`, SHA-256 `994d96d7…4312`.
+
+---
+
 ## Fix: Anatomy part A acceptance rejected (`concept_draft_invalid`) — 2026-11-17T07:15Z
 
 - Three owner acceptance attempts (07:03–07:07Z) returned 409 `concept_draft_invalid`: the Parotid gland document carried organ facet `salivary gland`, which fails the database facet pattern `^[a-z0-9]+(-[a-z0-9]+)*$`. The RPC is transactional, so nothing was saved.

@@ -7,8 +7,8 @@ import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput } fro
 const DATA_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/373e1f089f9a75f0cd0bbf2cd4bf7c4b39e34e4b/data/nmc-admin-learner-preview.json";
 const DATA_SHA256 = "f23158c802cc4a8713caa64b873494d1abb51a01177c1b3eb4b352c13ccad47b";
 
-const BATCH_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/3059a77d0cdab765872921a6a448be73d71a48a4/docs/evidence/2026-11-17-nmc-anatomy-a-concept-batch-v1.json";
-const BATCH_SHA256 = "b0f944683f11f7fdf3e019f7ba5c7440a32a4bf677a073d77c66eb59c95907fb";
+const BATCH_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/2fde64c40666afedfd6b8b7469377b3c2bd33e28/docs/evidence/2026-11-17-nmc-anatomy-a1-concept-batch-v1.json";
+const BATCH_SHA256 = "994d96d78dad51d705888988c4feb9fff8a0fc60ccf05f576ddb6c6e5b844312";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
