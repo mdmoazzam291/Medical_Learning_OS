@@ -131,3 +131,20 @@ test('every non-Physiology subject batch covers its recognised rows, reuses acce
   assert.equal(new Set(names).size,names.length,f);
  }
 });
+
+import {validateRevisionBatch,revisionAcceptInput,revisionSummary} from '../src/domain/nmc-concept-batch.js';
+test('subject-revision batches add subjects only and are never learner activations',()=>{
+ const r={conceptId:'C-'+'0'.repeat(32),previousIdentityDigest:'a'.repeat(64),label:'X',currentSubjects:['physiology'],addSubjects:['biochemistry'],evidenceCodes:['BI1.1']};
+ const b={schemaVersion:1,kind:'subject-revision',batchId:'nmc-subject-revisions-v1',learnerActivation:false,clinicalApproval:false,counts:{revisions:1,addedSubjects:1},revisions:[r]};
+ assert.equal(validateRevisionBatch(b),b);
+ for(const bad of [{...b,learnerActivation:true},{...b,revisions:[{...r,addSubjects:['physiology']}]},{...b,revisions:[{...r,addSubjects:[]}]},{...b,revisions:[r,r]}])assert.throws(()=>validateRevisionBatch(bad),/batch_invalid/);
+ const i=revisionAcceptInput(b,'b'.repeat(64),{requestId:'q',reviewNotes:'n'});
+ assert.deepEqual(i.items,[{conceptId:r.conceptId,previousIdentityDigest:r.previousIdentityDigest,addSubjects:['biochemistry']}]);
+ assert.deepEqual(revisionSummary(b).concepts[0].classification.subjects,['physiology','biochemistry']);
+});
+test('committed subject-revision batch is valid, digest-pinned and evidence-backed',async()=>{
+ const {readFileSync}=await import('node:fs');
+ const b=validateRevisionBatch(JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-concept-subject-revisions-batch-v1.json',import.meta.url),'utf8')));
+ assert.equal(b.revisions.length,328);assert.equal(b.counts.addedSubjects,462);
+ assert.ok(b.revisions.every(r=>r.evidenceCodes.length&&r.addSubjects.every(s=>!r.currentSubjects.includes(s))));
+});

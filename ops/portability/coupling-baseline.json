@@ -126,6 +126,9 @@
   "scripts/concept-batch-db-check.js": [
     "supabase"
   ],
+  "scripts/concept-subject-revision-db-check.js": [
+    "supabase"
+  ],
   "scripts/concept-drafts-db-check.js": [
     "supabase"
   ],
@@ -709,6 +712,9 @@
     "supabase"
   ],
   "supabase/migrations/20261116120000_admin_concept_batch_acceptance.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261117130000_admin_concept_subject_revisions.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [
