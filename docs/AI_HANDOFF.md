@@ -1,3 +1,11 @@
+## Anatomy part A2 bound (registry @18); part B1 batch — 2026-11-17T08:20Z
+
+- Owner accepted `nmc-anatomy-concepts-part-a2-v1-20261116` at 08:09:12Z (65 receipts; pairs digest `f9942049…0656` matched). Registry @18: 2,144 objectives, 2,145 bindings, 1,353 concepts, 1,927 of 2,634 rows (73%).
+- Part B spec `ops/nmc/specs/anatomy_b_concepts_v1.py` (AN44–AN82 except AN57, already registered): 102 concepts, 79 new, 158 objectives, all 154 rows; no clash with 2,192 production names. Accepted in two batches: B1 `nmc-anatomy-concepts-part-b1-v1-20261116` (AN44–AN56: 44 concepts, 35 new, 69 objectives, 68 rows), then B2 (AN58–AN82).
+- Endpoint pin: commit `5bf042e`, SHA-256 `18e51300…55c0`.
+
+---
+
 ## Anatomy part A1 bound (registry @17); part A2 batch — 2026-11-17T08:00Z
 
 - Owner accepted `nmc-anatomy-concepts-part-a1-v1-20261116` at 07:48:34Z (62 receipts; pairs digest `dfb091b4…55c1` matched). Bindings `docs/evidence/2026-11-17-nmc-anatomy-a1-objective-bindings-v1.json` (70 concepts, 128 objectives).
