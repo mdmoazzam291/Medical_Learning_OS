@@ -1,0 +1,314 @@
+[
+ {
+  "prerequisite": "Ear",
+  "concept": "Ear, nose and throat",
+  "strength": "helpful",
+  "reason": "ENT starts from ear anatomy"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Chronic otitis media",
+  "strength": "essential",
+  "reason": "Chronic otitis media relates to middle ear anatomy"
+ },
+ {
+  "prerequisite": "Acute suppurative otitis media",
+  "concept": "Chronic otitis media",
+  "strength": "essential",
+  "reason": "Chronic disease follows unresolved acute otitis media"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Otosclerosis",
+  "strength": "essential",
+  "reason": "Otosclerosis fixes the stapes footplate"
+ },
+ {
+  "prerequisite": "Hearing",
+  "concept": "Deafness",
+  "strength": "essential",
+  "reason": "Deafness is loss of hearing function"
+ },
+ {
+  "prerequisite": "Hearing",
+  "concept": "Hearing tests",
+  "strength": "essential",
+  "reason": "Hearing tests assess hearing physiology"
+ },
+ {
+  "prerequisite": "Hearing tests",
+  "concept": "Deafness",
+  "strength": "essential",
+  "reason": "Deafness is typed by hearing tests"
+ },
+ {
+  "prerequisite": "Palatine tonsil and soft palate",
+  "concept": "Adenotonsillar disease",
+  "strength": "essential",
+  "reason": "Adenotonsillar disease relates to Waldeyer's ring"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Otoscopy",
+  "strength": "essential",
+  "reason": "Otoscopy views ear anatomy"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Otalgia",
+  "strength": "helpful",
+  "reason": "Ear pain relates to ear anatomy and referred nerves"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "External ear disorders",
+  "strength": "essential",
+  "reason": "External ear disorders relate to its anatomy"
+ },
+ {
+  "prerequisite": "Eustachian tube dysfunction",
+  "concept": "Otitis media with effusion",
+  "strength": "essential",
+  "reason": "Effusion follows Eustachian tube dysfunction"
+ },
+ {
+  "prerequisite": "Chronic otitis media",
+  "concept": "Otorrhoea",
+  "strength": "helpful",
+  "reason": "Discharge is the key sign of chronic otitis media"
+ },
+ {
+  "prerequisite": "Chronic otitis media",
+  "concept": "Cholesteatoma",
+  "strength": "essential",
+  "reason": "Cholesteatoma arises in chronic otitis media"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Cerumen impaction",
+  "strength": "helpful",
+  "reason": "Wax impaction relates to canal anatomy"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Myringotomy",
+  "strength": "essential",
+  "reason": "Myringotomy incises the tympanic membrane"
+ },
+ {
+  "prerequisite": "Otitis media with effusion",
+  "concept": "Myringotomy",
+  "strength": "essential",
+  "reason": "Myringotomy treats middle ear effusion"
+ },
+ {
+  "prerequisite": "Chronic otitis media",
+  "concept": "Tympanoplasty",
+  "strength": "essential",
+  "reason": "Tympanoplasty repairs chronic otitis media damage"
+ },
+ {
+  "prerequisite": "Cholesteatoma",
+  "concept": "Mastoidectomy",
+  "strength": "essential",
+  "reason": "Mastoidectomy removes cholesteatoma"
+ },
+ {
+  "prerequisite": "Special sensory pathways",
+  "concept": "Vestibular schwannoma",
+  "strength": "helpful",
+  "reason": "Vestibular schwannoma affects the eighth nerve pathway"
+ },
+ {
+  "prerequisite": "Pharynx",
+  "concept": "Eustachian tube dysfunction",
+  "strength": "essential",
+  "reason": "The Eustachian tube opens into the nasopharynx"
+ },
+ {
+  "prerequisite": "Facial nerve",
+  "concept": "Facial nerve palsy",
+  "strength": "essential",
+  "reason": "Palsy follows facial nerve course"
+ },
+ {
+  "prerequisite": "Vestibular apparatus",
+  "concept": "Vertigo",
+  "strength": "essential",
+  "reason": "Vertigo arises from vestibular dysfunction"
+ },
+ {
+  "prerequisite": "Vestibular apparatus",
+  "concept": "Meniere disease",
+  "strength": "essential",
+  "reason": "Meniere disease is endolymphatic hydrops"
+ },
+ {
+  "prerequisite": "Hearing",
+  "concept": "Tinnitus",
+  "strength": "helpful",
+  "reason": "Tinnitus accompanies hearing loss"
+ },
+ {
+  "prerequisite": "Nasal cavity",
+  "concept": "Nasal obstruction",
+  "strength": "essential",
+  "reason": "Obstruction relates to nasal cavity anatomy"
+ },
+ {
+  "prerequisite": "Nasal cavity",
+  "concept": "Deviated nasal septum",
+  "strength": "essential",
+  "reason": "The septum divides the nasal cavity"
+ },
+ {
+  "prerequisite": "Palatine tonsil and soft palate",
+  "concept": "Adenoid hypertrophy",
+  "strength": "helpful",
+  "reason": "Adenoids are part of Waldeyer's ring"
+ },
+ {
+  "prerequisite": "Hypersensitivity reactions",
+  "concept": "Rhinitis",
+  "strength": "helpful",
+  "reason": "Allergic rhinitis is type I hypersensitivity"
+ },
+ {
+  "prerequisite": "Rhinitis",
+  "concept": "Nasal polyps",
+  "strength": "helpful",
+  "reason": "Chronic rhinitis predisposes to polyps"
+ },
+ {
+  "prerequisite": "Nasal cavity",
+  "concept": "Epistaxis",
+  "strength": "essential",
+  "reason": "Bleeding sites follow nasal blood supply"
+ },
+ {
+  "prerequisite": "Paranasal sinuses",
+  "concept": "Sinusitis",
+  "strength": "essential",
+  "reason": "Sinusitis follows sinus drainage"
+ },
+ {
+  "prerequisite": "Pharynx",
+  "concept": "Obstructive sleep apnoea",
+  "strength": "helpful",
+  "reason": "Collapse occurs at the pharyngeal airway"
+ },
+ {
+  "prerequisite": "Pharynx",
+  "concept": "Juvenile nasopharyngeal angiofibroma",
+  "strength": "essential",
+  "reason": "Angiofibroma arises in the nasopharynx"
+ },
+ {
+  "prerequisite": "Nasal cavity",
+  "concept": "Sinonasal and nasopharyngeal tumours",
+  "strength": "essential",
+  "reason": "Tumours arise in sinonasal anatomy"
+ },
+ {
+  "prerequisite": "Granulomatous inflammation",
+  "concept": "Granulomatous diseases of the nose",
+  "strength": "essential",
+  "reason": "These are granulomatous inflammations"
+ },
+ {
+  "prerequisite": "Deep cervical fascia",
+  "concept": "Deep neck space infections",
+  "strength": "essential",
+  "reason": "Infections spread through deep cervical fascial spaces"
+ },
+ {
+  "prerequisite": "Pharynx",
+  "concept": "Dysphagia",
+  "strength": "essential",
+  "reason": "Swallowing depends on pharyngeal function"
+ },
+ {
+  "prerequisite": "Palatine tonsil and soft palate",
+  "concept": "Tonsillitis",
+  "strength": "essential",
+  "reason": "Tonsillitis affects the palatine tonsil"
+ },
+ {
+  "prerequisite": "Tonsillitis",
+  "concept": "Tonsillectomy",
+  "strength": "essential",
+  "reason": "Recurrent tonsillitis is the main indication"
+ },
+ {
+  "prerequisite": "Adenoid hypertrophy",
+  "concept": "Adenoidectomy",
+  "strength": "essential",
+  "reason": "Adenoidectomy treats adenoid hypertrophy"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Hoarseness",
+  "strength": "essential",
+  "reason": "Hoarseness is vocal cord dysfunction"
+ },
+ {
+  "prerequisite": "Recurrent laryngeal nerve palsy",
+  "concept": "Hoarseness",
+  "strength": "helpful",
+  "reason": "Recurrent laryngeal palsy is a key cause"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Benign laryngeal disorders",
+  "strength": "essential",
+  "reason": "Lesions arise on laryngeal structures"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Laryngeal cancer",
+  "strength": "essential",
+  "reason": "Laryngeal cancer arises by laryngeal subsite"
+ },
+ {
+  "prerequisite": "Pharynx",
+  "concept": "Hypopharyngeal cancer",
+  "strength": "essential",
+  "reason": "Hypopharyngeal cancer arises in the pharynx"
+ },
+ {
+  "prerequisite": "Trachea",
+  "concept": "Tracheostomy",
+  "strength": "essential",
+  "reason": "Tracheostomy opens the trachea"
+ },
+ {
+  "prerequisite": "Larynx",
+  "concept": "Laryngoscopy",
+  "strength": "essential",
+  "reason": "Laryngoscopy views the larynx"
+ },
+ {
+  "prerequisite": "Nasal cavity",
+  "concept": "Nasal endoscopy",
+  "strength": "essential",
+  "reason": "Endoscopy views nasal cavity anatomy"
+ },
+ {
+  "prerequisite": "Ear",
+  "concept": "Otomicroscopy",
+  "strength": "essential",
+  "reason": "Otomicroscopy views ear anatomy"
+ },
+ {
+  "prerequisite": "Deafness",
+  "concept": "National Programme for Prevention and Control of Deafness",
+  "strength": "essential",
+  "reason": "The programme targets deafness"
+ },
+ {
+  "prerequisite": "Surface anatomy of the head and neck",
+  "concept": "Head and neck trauma",
+  "strength": "helpful",
+  "reason": "Injury patterns follow head and neck anatomy"
+ }
+]
