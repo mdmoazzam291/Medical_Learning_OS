@@ -1,0 +1,16 @@
+{
+ "schemaVersion": 1,
+ "decidedAt": "2026-11-17T11:40:00Z",
+ "decidedBy": "owner (in chat, Asia/Kolkata 17:10)",
+ "scope": "The 21 NMC source-exception rows (2,634 reference appearances; 2,613 already linked).",
+ "decisions": {
+  "searchAliases": {"decision": "accepted", "pairs": {"14.1": "BC14.1", "PA.29.1": "PA29.1", "MI 8.": "MI8.3", "FM2:12": "FM2.12", "PS 2.1*": "PS2.1", "OR2. 2.9": "OR2.9", "ASS.4": "AS5.4"}, "basis": "each candidate is the only gap between its official neighbours (2026-11-16 official check); printed text stays stored unchanged"},
+  "headingLabels": {"decision": "accepted", "SU24.1-SU24.3": "Surgery Topic 24 · Pancreatic disorders", "SU27.1-SU27.8": "Surgery Topic 27 · Vascular and lymphatic disorders"},
+  "modeHolds": {"decision": "rewrite as knowledge objectives at the printed KH level", "codes": ["SU24.3", "SU27.1", "SU27.4", "SU27.6", "SU27.7", "OR2.9", "AS5.4"], "note": "new objective versions in the source-exception concept batch; earlier draft tasks retained unchanged"},
+  "officialDispositions": {"PY9.1": "official replacement; objectives already bound by the physiology v3 batch", "PE6.4": "official replacement; replacement tasks bound by the source-exception batch", "PS9.2": "official deletion; no objective"}
+ },
+ "batch": "docs/evidence/2026-11-17-nmc-source-exceptions-concept-batch-v1.json",
+ "consistentWith": "docs/evidence/2026-11-16-nmc-owner-decisions.json (aliases, SU27 label, 7 mode corrections)",
+ "notClinicalReview": true,
+ "learnerActivation": false
+}

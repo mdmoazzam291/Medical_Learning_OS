@@ -2,7 +2,7 @@ import {escapeText as e} from './navigation-view.js';
 function requirementMarkup(r,objectives){
  const sourceIssue=r.identifierState==='unresolved'||r.amendmentNotice||r.topicLabel==='Unresolved topic heading';
  const versions=[...new Set(r.objectiveVersionIds)];
- const state=sourceIssue?'Source resolution needed':versions.length?'Draft objectives linked':'No linked objective in this pack';
+ const state=sourceIssue?(versions.length?'Source exception resolved · Draft objectives linked':'Source resolution needed'):versions.length?'Draft objectives linked':'No linked objective in this pack';
  const details=versions.length?'<ul>'+versions.map(id=>{
   const draft=objectives.get(id);
   if(!draft)return '<li>'+e(id)+' · Draft details unavailable</li>';
