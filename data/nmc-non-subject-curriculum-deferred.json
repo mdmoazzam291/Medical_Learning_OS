@@ -1,0 +1,68 @@
+{
+ "schemaVersion": 1,
+ "contractId": "nmc-non-subject-curriculum-deferred-v1",
+ "sourceEdition": "nmc-cbme-2024-09-12",
+ "status": "deferred-outside-foundation",
+ "decision": "ADR-138 (owner instruction 2026-11-18): kept separate from the NMC foundation registry; add any part later only by an explicit owner decision.",
+ "inFoundationRegistry": false,
+ "learnerActivation": false,
+ "clinicalApproval": false,
+ "evidence": {
+  "note": "Source-audit metadata (counts, page locators, no NMC wording) lives on a closed, retained branch. Retrieve with: git fetch origin <ref> && git show <sha>:<path>.",
+  "ref": "feat/nmc-support-cohort-reconciliation-20261103",
+  "sha": "5524c5a5d036aa6505396036ebe0665436ca4395",
+  "pullRequest": 406
+ },
+ "parts": [
+  {
+   "partId": "aetcom",
+   "label": "Attitude, Ethics and Communication (AETCOM)",
+   "auditedCounts": {"modules": 27, "numberedCompetencies": 54, "core": 39, "desirable": 15, "additionalListRowAppearances": 14},
+   "countCaveats": "Row 37 is listed as core and also in the desirable list; rows 16/17 overlap. The 14 additional rows map to existing numbered rows, not new ones.",
+   "examRelevance": "moderate",
+   "overlap": "Consent, confidentiality and negligence overlap Forensic Medicine rows already in the foundation.",
+   "recommendation": "First candidate to add if needed: ~54 objectives linked to existing concepts.",
+   "evidencePaths": ["docs/AETCOM_ENUMERATION.md", "docs/evidence/aetcom-2018-enumeration.json", "docs/evidence/aetcom-module-appendix-bridge.json", "docs/AETCOM_CANDIDATE_BRIDGE.md"]
+  },
+  {
+   "partId": "foundation-course",
+   "label": "Foundation Course (first month of MBBS)",
+   "auditedCounts": null,
+   "countCaveats": "Not enumerated in the audit; programme orientation, BLS/first aid, universal precautions, biomedical waste, computer/language/stress-management skills.",
+   "examRelevance": "very-low",
+   "overlap": "BLS and biomedical waste are covered by Medicine, Anaesthesia and Community Medicine rows.",
+   "recommendation": "Keep out.",
+   "evidencePaths": ["docs/FOUNDATION_SUPPLEMENT_ENUMERATION.md"]
+  },
+  {
+   "partId": "early-clinical-exposure",
+   "label": "Early Clinical Exposure (ECE)",
+   "auditedCounts": {"broadObjectives2024": 5, "deliveryElements": 3, "sampleModules": 6},
+   "countCaveats": "A teaching method linking first-year topics to patients; annexure examples are not new requirements.",
+   "examRelevance": "none-of-its-own",
+   "overlap": "Repackages topics already in subject rows.",
+   "recommendation": "Keep out.",
+   "evidencePaths": ["docs/ECE_SKILLS_SCOPE_CLASSIFICATION.md", "docs/evidence/ece-skills-scope-classification.json", "docs/evidence/2026-11-03-nmc-ece-example-verification.json"]
+  },
+  {
+   "partId": "pandemic-modules",
+   "label": "Pandemic management modules",
+   "auditedCounts": {"moduleTables": 17, "competencyRowAppearances": 47, "nestedSubcompetencies": 3},
+   "countCaveats": "47 row appearances are not 47 verified distinct competencies; modules 3.1-3.3 share a parent.",
+   "examRelevance": "low-to-moderate",
+   "overlap": "Outbreak investigation, infection control and sample handling overlap Community Medicine and Microbiology rows.",
+   "recommendation": "Keep out.",
+   "evidencePaths": ["docs/PANDEMIC_COMPETENCY_ENUMERATION.md", "docs/NMC_PANDEMIC_REGION_INVENTORY.md", "docs/evidence/2026-11-03-nmc-pandemic-region-verification.json"]
+  },
+  {
+   "partId": "electives-fap-logbook",
+   "label": "Electives, Family Adoption Programme and logbook",
+   "auditedCounts": {"fapPhaseTargets": 17, "fapCompetencyRows": 11, "electiveRequirementCategories": 4},
+   "countCaveats": "FAP counts overlap (targets/report headings/table rows); some FAP tables are images. Logbook is a record template, not a competency.",
+   "examRelevance": "none",
+   "overlap": "Community-health tasks overlap Community Medicine rows.",
+   "recommendation": "Keep out.",
+   "evidencePaths": ["docs/FAP_ELECTIVE_ENUMERATION.md", "docs/NMC_ELECTIVES_FAP_SOURCE_AUDIT.md", "docs/NMC_LOGBOOK_ASSESSMENT_CORE_AUDIT.md", "docs/evidence/fap-elective-requirements.json"]
+  }
+ ]
+}

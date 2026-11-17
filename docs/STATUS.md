@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — NMC foundation marked complete (subject-competency scope)
+- Owner decision (ADR-138): foundation complete for the 2,633 live subject competency rows; AI-drafted objectives, no faculty review, no learner material.
+- The five non-subject parts are kept separate in `data/nmc-non-subject-curriculum-deferred.json` (counts, overlap, recommendation, pointer to the retained audit branch `feat/nmc-support-cohort-reconciliation-20261103` @ `5524c5a`). AETCOM is the first candidate if ever needed.
+- Production: owner-api v27, nmc-admin-preview v28 on registry @27.
+
 ### 2026-11-18 — Registry @27: duplicate wordings resolved; identity re-pin script
 - The 8 @26 duplicate-wording findings are rewritten (GM9.8, GM14.1, GM14.2 split into their two skills; MI4.2/MI4.3 name their own condition). No IDs removed; all 2,865 objectives auto-checked. Evidence: `docs/evidence/2026-11-18-nmc-duplicate-wording-fixes-v1.json`, `...-prerequisites-and-review-v2.json`.
 - `ops/nmc/repin-identity-digests.js <export.json> --write <n>` re-pins registry digests to current identities after owner label/alias edits (SQL export query in the script header).
