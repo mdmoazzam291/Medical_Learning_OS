@@ -58,7 +58,7 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
  assert.equal(inReg.length,187); // 185 + PY9.1 official-replacement pair (registry @23)
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@24');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@25');
 });
 test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
  const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));
@@ -92,4 +92,23 @@ test('validator rejects exception bindings without the matching overlay resoluti
  const standard=structuredClone(pack);const s=standard.sourceBindings.findIndex(b=>refs.get(b.referenceId).identifierState==='standard'&&refs.get(b.referenceId).topicId&&!refs.get(b.referenceId).amendmentNotice);
  standard.sourceBindings[s].basis='source-exception-resolved';
  assert.throws(()=>validateFoundationDrafts(standard,catalogue,overlay),/foundation_draft_invalid/,'standard row cannot claim an exception basis');
+});
+test('registry @25 learning metadata is deterministic, uses the question task vocabulary and keeps IDs and wording',async()=>{
+ const {classifyTask,taskFacets,assessability,contextFor}=await import('../src/domain/nmc-learning-metadata.js');
+ const {TASKS}=await import('../src/domain/question-intelligence.js');
+ const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-learning-metadata-v1.json',import.meta.url)));
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@25');
+ for(const row of pack.objectives){
+  assert.ok(['in-app','in-app-partial','offline-only'].includes(row.assessability));
+  assert.ok(row.taskFacets.every(t=>TASKS.includes(t)));
+  assert.equal(row.assessability,assessability(row.objective));
+  assert.deepEqual(row.taskFacets,taskFacets(row.wording,row.objective.task));
+ }
+ const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
+ for(const c of ev.changes){const r=byId.get(c.objectiveVersionId);assert.ok(r,'change refers to a registry objective');assert.equal(r.objective.task,c.task);}
+ assert.equal(classifyTask('Explain the physiological mechanisms of anaemia and the principles of its management.'),'mechanism');
+ assert.equal(classifyTask('Compare drivers of emergence and re-emergence and propose surveillance.'),'prevention-screening');
+ assert.deepEqual(contextFor(['pediatrics']),{population:'children',jurisdiction:'not-specified'});
+ assert.deepEqual(contextFor(['forensic-medicine']),{population:'not-specified',jurisdiction:'india'});
+ assert.equal(assessability({depth:'performs',task:'procedural-skill'}),'offline-only');
 });

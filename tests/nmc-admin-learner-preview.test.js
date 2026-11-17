@@ -6,14 +6,13 @@ import {validatePreviewData,parsePreviewFilters,previewPage} from '../src/domain
 import {learnerPreviewMarkup} from '../web/nmc-admin-learner-preview.js';
 const raw=readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url));
 const data=JSON.parse(raw);
-const review=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-16-nmc-interim-ai-review.json',import.meta.url),'utf8'));
-const fn=readFileSync(new URL('../supabase/functions/nmc-admin-preview/index.ts',import.meta.url),'utf8');
-test('preview data is admin-only, valid and matches the interim review',()=>{
+const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url),'utf8'));
+test('preview data is admin-only, valid and lists every registry objective',()=>{
  validatePreviewData(data);
- assert.equal(data.items.length,170);assert.equal(data.audience,'admin-only');assert.equal(data.learnerActivation,false);
- const finals=new Map(review.rows.map(r=>[r.reviewedRevisionId,r.finalValue.draftTask]));
- for(const i of data.items){assert.equal(i.objective,finals.get(i.objectiveRevisionId));assert.ok(i.topicLabel);}
- assert.equal(review.clinicalErrorsFound,0);assert.equal(review.rows.filter(r=>r.outcome==='cleanup-applied').length,3);
+ assert.equal(data.items.length,pack.objectives.length);assert.equal(data.audience,'admin-only');assert.equal(data.learnerActivation,false);
+ assert.equal(data.registryVersion,pack.draftVersion);
+ const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
+ for(const i of data.items){const r=byId.get(i.objectiveVersionId);assert.equal(i.objective,r.wording);assert.equal(i.task,r.objective.task);assert.equal(i.assessability,r.assessability);assert.ok(i.topicLabel);}
 });
 test('edge function pins the exact data checksum and requires Admin',()=>{
  const sha=fn.match(/DATA_SHA256 = "([0-9a-f]{64})"/)[1];
@@ -24,18 +23,18 @@ test('edge function pins the exact data checksum and requires Admin',()=>{
 });
 test('filters and grouping',()=>{
  assert.throws(()=>parsePreviewFilters({subject:'x',bad:'1'}));
- const all=previewPage(data,parsePreviewFilters({}));assert.equal(all.matched,170);
- assert.equal(all.topics.reduce((n,t)=>n+t.objectives.length,0),170);
+ const all=previewPage(data,parsePreviewFilters({}));assert.equal(all.filterRequired,true);assert.equal(all.topics.length,0);assert.equal(all.total,data.items.length);
  const s=previewPage(data,parsePreviewFilters({subject:'surgery'}));
  assert.ok(s.topics.every(t=>t.subjectId==='surgery'));
  assert.ok(s.topics.some(t=>t.topicLabelKind==='editorial-grouping'));
+ assert.equal(s.matched,s.topics.reduce((n,t)=>n+t.objectives.length,0));
  assert.throws(()=>previewPage(data,{subject:'nope',search:''}));
- assert.equal(previewPage(data,parsePreviewFilters({search:'rabies'})).matched,1);
+ assert.ok(previewPage(data,parsePreviewFilters({search:'rabies'})).matched>=1);
 });
 test('markup shows the Admin-only banner and escapes content',()=>{
- const p=previewPage(data,{});
+ const p=previewPage(data,{subject:'surgery',search:''});
  const html=learnerPreviewMarkup(p,{});
- assert.match(html,/Admin preview only/);assert.match(html,/Learners cannot see this/);
+ assert.match(html,/Admin preview only/);assert.match(html,/Learners cannot see this/);assert.match(html,/not faculty-reviewed/);assert.match(learnerPreviewMarkup(previewPage(data,{}),{}),/Choose a subject or search/);
  const evil=learnerPreviewMarkup({...p,topics:[{subjectId:'x',topicLabel:'<img src=x>',objectives:[{objective:'<script>',mode:'knowledge',code:'A',pdfPage:1}]}]},{});
  assert.doesNotMatch(evil,/<script>|<img src=x>/);
 });

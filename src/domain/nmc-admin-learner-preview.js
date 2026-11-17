@@ -19,12 +19,14 @@ export function parsePreviewFilters(params){
 }
 export function previewPage(data,{subject='',search=''}={}){
  if(subject&&!data.subjects.some(s=>s.subjectId===subject))throw new Error('preview_filter_invalid');
+ // Listing all 2,865 objectives at once is too large for the screen: require a subject or a search.
+ if(!subject&&!search)return {contractId:PREVIEW_CONTRACT,audience:'admin-only',learnerActivation:false,status:data.status,sourceUrl:data.sourceUrl,subjects:data.subjects,total:data.items.length,matched:0,topics:[],filterRequired:true};
  const items=data.items.filter(i=>(!subject||i.subjectId===subject)&&(!search||[i.code,i.objective,i.topicLabel||''].some(v=>v.toLowerCase().includes(search))));
  const topics=[];const byKey=new Map();
  for(const i of items){
   const key=i.subjectId+'|'+(i.topicLabel||'');
   if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[]};byKey.set(key,t);topics.push(t);}
-  byKey.get(key).objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,pdfPage:i.pdfPage,mode:i.mode,objective:i.objective});
+  byKey.get(key).objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,pdfPage:i.pdfPage,mode:i.mode,task:i.task||null,assessability:i.assessability||null,objective:i.objective});
  }
  return {contractId:PREVIEW_CONTRACT,audience:'admin-only',learnerActivation:false,status:data.status,sourceUrl:data.sourceUrl,subjects:data.subjects,total:data.items.length,matched:items.length,topics};
 }

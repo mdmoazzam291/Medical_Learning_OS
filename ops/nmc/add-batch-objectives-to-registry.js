@@ -6,6 +6,7 @@
 // Identity digests use the accepted document (label, aliases, evidenced subjects).
 import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
 import {canonicalIdentityDigest,validateFoundationDrafts} from '../../src/domain/nmc-learning-foundation.js';
+import {classifyTask,taskFacets,assessability,contextFor} from '../../src/domain/nmc-learning-metadata.js';
 const [batchPath,bindPath,draftVersion]=process.argv.slice(2);
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const PACK='data/nmc-learning-foundation-drafts.json';
@@ -43,6 +44,11 @@ for(const o of batch.objectives){
  pack.objectives.push({objective:{objectiveId:o.objectiveVersionId.replace(/@\d+$/,''),objectiveVersionId:o.objectiveVersionId,conceptId:cid,task:o.task,depth:o.depth,
   context:{jurisdiction:'not-specified',population:'not-specified',setting:'medical-education'},prerequisites:[]},
   wording:o.wording,authorship:'ai_generated_original',status:'draft',canonicalIdentitySha256:digest});
+ // Registries from @25 carry learning metadata on every row (see src/domain/nmc-learning-metadata.js).
+ if(pack.objectives.some(r=>'assessability' in r)){const row=pack.objectives.at(-1),ob=row.objective;
+  if(ob.task==='mechanism')ob.task=classifyTask(row.wording);
+  const sid=catalogue.references.find(r=>r.referenceId===o.referenceId)?.subjectId;Object.assign(ob.context,contextFor(sid?[sid]:[]));
+  row.assessability=assessability(ob);row.taskFacets=taskFacets(row.wording,ob.task);}
  pack.sourceBindings.push({referenceId:o.referenceId,objectiveVersionId:o.objectiveVersionId,status:'proposed',basis:basisFor(r,o),sourcePage:o.sourcePage,
   rowBBox:bbox.get(o.referenceId)??null,sourceBodySha256:sourceSha(o),namedConcept:d.label});
  have.add(o.objectiveVersionId);added++;
