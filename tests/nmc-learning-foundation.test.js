@@ -58,7 +58,7 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
  assert.equal(inReg.length,187); // 185 + PY9.1 official-replacement pair (registry @23)
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@26');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@27');
 });
 test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
  const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));
@@ -95,7 +95,7 @@ test('validator rejects exception bindings without the matching overlay resoluti
 });
 test('registry @26 prerequisites are same-concept, lower-level and acyclic; review state is automated only',async()=>{
  const {TASK_TIER,sameConceptPrerequisites,reviewFindings}=await import('../src/domain/nmc-learning-metadata.js');
- const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-prerequisites-and-review-v1.json',import.meta.url)));
+ const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-18-nmc-prerequisites-and-review-v2.json',import.meta.url)));
  const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
  let edges=0;
  for(const row of pack.objectives)for(const q of row.objective.prerequisites){edges++;const p=byId.get(q);
@@ -121,7 +121,7 @@ test('registry @25 learning metadata is deterministic, uses the question task vo
  const {classifyTask,taskFacets,assessability,contextFor}=await import('../src/domain/nmc-learning-metadata.js');
  const {TASKS}=await import('../src/domain/question-intelligence.js');
  const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-learning-metadata-v1.json',import.meta.url)));
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@26');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@27');
  for(const row of pack.objectives){
   assert.ok(['in-app','in-app-partial','offline-only'].includes(row.assessability));
   assert.ok(row.taskFacets.every(t=>TASKS.includes(t)));
@@ -129,10 +129,18 @@ test('registry @25 learning metadata is deterministic, uses the question task vo
   assert.deepEqual(row.taskFacets,taskFacets(row.wording,row.objective.task));
  }
  const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
- for(const c of ev.changes){const r=byId.get(c.objectiveVersionId);assert.ok(r,'change refers to a registry objective');assert.equal(r.objective.task,c.task);}
+ const {FIXES}=await import('../ops/nmc/fix-duplicate-wordings.js');
+ for(const c of ev.changes){const r=byId.get(c.objectiveVersionId);assert.ok(r,'change refers to a registry objective');if(!FIXES[c.objectiveVersionId])assert.equal(r.objective.task,c.task);}
  assert.equal(classifyTask('Explain the physiological mechanisms of anaemia and the principles of its management.'),'mechanism');
  assert.equal(classifyTask('Compare drivers of emergence and re-emergence and propose surveillance.'),'prevention-screening');
  assert.deepEqual(contextFor(['pediatrics']),{population:'children',jurisdiction:'not-specified'});
  assert.deepEqual(contextFor(['forensic-medicine']),{population:'not-specified',jurisdiction:'india'});
  assert.equal(assessability({depth:'performs',task:'procedural-skill'}),'offline-only');
+});
+test('registry @27 resolves every duplicate wording without removing objectives',async()=>{
+ const {FIXES}=await import('../ops/nmc/fix-duplicate-wordings.js');
+ const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
+ assert.equal(pack.objectives.length,2865);
+ for(const [id,f] of Object.entries(FIXES)){const r=byId.get(id);assert.ok(r,id);assert.equal(r.wording,f.wording);assert.equal(r.objective.task,f.task);assert.equal(r.reviewState,'auto-checked');}
+ assert.equal(pack.objectives.filter(r=>r.reviewState==='needs-attention').length,0);
 });

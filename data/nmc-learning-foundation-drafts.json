@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "draftVersion": "mbbs-foundation:original-objectives@26",
+ "draftVersion": "mbbs-foundation:original-objectives@27",
  "authoredCatalogVersion": 448,
  "sourceEdition": "nmc-cbme-2024-09-12",
  "sourceSha256": "aa601690b9e92b74f7412973a70969539e93210b41829018f052059bbf5ae23c",
@@ -15185,7 +15185,7 @@
      "lo:179949f7f7265d90:mechanism:0bfd691d@1"
     ]
    },
-   "wording": "Compare representative agents by epidemiology, morphology, mechanisms, presentation and diagnostic tests.",
+   "wording": "Compare the major diarrhoeal pathogens by epidemiology, morphology, pathogenic mechanism, presentation and diagnostic tests.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "8b60bdadc9904272811230359dcc3ab5e18e03dc223805044ad66f9e50e02d87",
@@ -15196,10 +15196,8 @@
     "investigation-selection",
     "mechanism"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
@@ -15215,7 +15213,7 @@
     },
     "prerequisites": []
    },
-   "wording": "Compare representative agents by epidemiology, morphology, mechanisms, presentation and diagnostic tests.",
+   "wording": "Compare the major dysentery-causing pathogens by epidemiology, morphology, pathogenic mechanism, presentation and diagnostic tests.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "a5eec64eabd6c0a0236d923b699b7187fb6fc9e8a53cb344a919f26489e8756d",
@@ -15226,10 +15224,8 @@
     "investigation-selection",
     "mechanism"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
@@ -61962,7 +61958,7 @@
     "objectiveId": "lo:62a56e9bdcc582d4:mechanism:c1db96b9",
     "objectiveVersionId": "lo:62a56e9bdcc582d4:mechanism:c1db96b9@1",
     "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
-    "task": "interpretation",
+    "task": "investigation-selection",
     "depth": "knows-how",
     "context": {
      "jurisdiction": "not-specified",
@@ -61973,18 +61969,17 @@
      "lo:79f92060651bcd4c:interpretation:a6628f96@1"
     ]
    },
-   "wording": "Explain indications for aspiration and biopsy and interpret representative results.",
+   "wording": "Explain the indications and contraindications for bone marrow aspiration and trephine biopsy.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "b1093b267f4e94237d89f5ded59e659490e6d47ee49025b5420253514d48bf50",
    "assessability": "in-app",
    "taskFacets": [
-    "interpretation"
+    "drug-safety",
+    "investigation-selection"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
@@ -62002,7 +61997,7 @@
      "lo:79f92060651bcd4c:interpretation:a6628f96@1"
     ]
    },
-   "wording": "Explain indications for aspiration and biopsy and interpret representative results.",
+   "wording": "Interpret representative bone marrow aspirate and trephine biopsy reports.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "b1093b267f4e94237d89f5ded59e659490e6d47ee49025b5420253514d48bf50",
@@ -62010,10 +62005,8 @@
    "taskFacets": [
     "interpretation"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
@@ -66835,7 +66828,7 @@
      "lo:43e8c686154358a0:mechanism:4d5b9db3@1"
     ]
    },
-   "wording": "Define and measure obesity in the Indian population context.",
+   "wording": "Define obesity and its grades using the cut-offs recommended for Indian adults.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "ecb41cf1f2ff4f408f4d74196f5c1182749014c4b2f9025ce51f03e88aece18f",
@@ -66843,17 +66836,15 @@
    "taskFacets": [
     "recall"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
     "objectiveId": "lo:b48106c10635a23c:mechanism:fe33ba01",
     "objectiveVersionId": "lo:b48106c10635a23c:mechanism:fe33ba01@1",
     "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
-    "task": "recall",
+    "task": "quantitative-reasoning",
     "depth": "knows-how",
     "context": {
      "jurisdiction": "not-specified",
@@ -66864,25 +66855,23 @@
      "lo:43e8c686154358a0:mechanism:4d5b9db3@1"
     ]
    },
-   "wording": "Define and measure obesity in the Indian population context.",
+   "wording": "Measure and calculate BMI, waist circumference and waist-to-hip ratio in an adult and classify the result.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "ecb41cf1f2ff4f408f4d74196f5c1182749014c4b2f9025ce51f03e88aece18f",
    "assessability": "in-app",
    "taskFacets": [
-    "recall"
+    "quantitative-reasoning"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
     "objectiveId": "lo:b48106c10635a23c:mechanism:cc8bb38d",
     "objectiveVersionId": "lo:b48106c10635a23c:mechanism:cc8bb38d@1",
     "conceptId": "C-a40ab47d-0b34-4094-b1c2-502f268421c5",
-    "task": "etiology",
+    "task": "risk-factor",
     "depth": "knows-how",
     "context": {
      "jurisdiction": "not-specified",
@@ -66893,18 +66882,16 @@
      "lo:43e8c686154358a0:mechanism:4d5b9db3@1"
     ]
    },
-   "wording": "Compare modifiable and nonmodifiable risks and identify clues to secondary causes.",
+   "wording": "Compare modifiable and non-modifiable risk factors for obesity.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "ecb41cf1f2ff4f408f4d74196f5c1182749014c4b2f9025ce51f03e88aece18f",
    "assessability": "in-app",
    "taskFacets": [
-    "etiology"
+    "risk-factor"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
@@ -66922,7 +66909,7 @@
      "lo:43e8c686154358a0:mechanism:4d5b9db3@1"
     ]
    },
-   "wording": "Compare modifiable and nonmodifiable risks and identify clues to secondary causes.",
+   "wording": "Identify clinical clues that suggest a secondary cause of obesity.",
    "authorship": "ai_generated_original",
    "status": "draft",
    "canonicalIdentitySha256": "ecb41cf1f2ff4f408f4d74196f5c1182749014c4b2f9025ce51f03e88aece18f",
@@ -66930,10 +66917,8 @@
    "taskFacets": [
     "etiology"
    ],
-   "reviewState": "needs-attention",
-   "reviewFindings": [
-    "duplicate-wording"
-   ]
+   "reviewState": "auto-checked",
+   "reviewFindings": []
   },
   {
    "objective": {
