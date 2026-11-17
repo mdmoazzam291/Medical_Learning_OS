@@ -144,3 +144,9 @@ test('registry @27 resolves every duplicate wording without removing objectives'
  for(const [id,f] of Object.entries(FIXES)){const r=byId.get(id);assert.ok(r,id);assert.equal(r.wording,f.wording);assert.equal(r.objective.task,f.task);assert.equal(r.reviewState,'auto-checked');}
  assert.equal(pack.objectives.filter(r=>r.reviewState==='needs-attention').length,0);
 });
+test('non-subject curriculum parts are recorded separately and are not in the foundation registry',async()=>{
+ const d=JSON.parse(readFileSync(new URL('../data/nmc-non-subject-curriculum-deferred.json',import.meta.url)));
+ assert.equal(d.status,'deferred-outside-foundation');assert.equal(d.inFoundationRegistry,false);assert.equal(d.learnerActivation,false);
+ assert.deepEqual(d.parts.map(p=>p.partId),['aetcom','foundation-course','early-clinical-exposure','pandemic-modules','electives-fap-logbook']);
+ assert.equal(d.sourceEdition,pack.sourceEdition);
+});
