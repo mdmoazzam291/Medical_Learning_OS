@@ -123,7 +123,7 @@ test('every non-Physiology subject batch covers its recognised rows, reuses acce
   const b=validateBatch(JSON.parse(readFileSync(new URL(f,dir))));
   assert.equal(b.learnerActivation,false,f);assert.equal(b.clinicalApproval,false,f);
   const subjects=b.subjectIds||[b.subjectId];
-  const rows=cat.references.filter(r=>subjects.includes(r.subjectId)&&r.identifierState==='standard'&&!r.amendmentNotice&&!(b.heldCodes||[]).includes(r.observedCode)).map(r=>r.referenceId).sort();
+  const rows=cat.references.filter(r=>subjects.includes(r.subjectId)&&r.identifierState==='standard'&&!r.amendmentNotice&&!(b.heldCodes||[]).includes(r.observedCode)&&(!b.scopeCodes||b.scopeCodes.includes(r.observedCode))).map(r=>r.referenceId).sort();
   assert.deepEqual([...new Set(b.objectives.map(o=>o.referenceId))].sort(),rows,f);
   for(const c of b.concepts){const cs=c.document.classification.subjects;assert.ok(cs.length>=1&&cs.every(x=>subjects.includes(x)),f+' '+c.document.label);if(c.existingConceptId)assert.ok(accepted.has(c.existingConceptId),f+' '+c.document.label);}
   const names=b.concepts.filter(c=>!c.existingConceptId).flatMap(c=>[c.document.label,...c.document.aliases].map(x=>x.toLowerCase()));

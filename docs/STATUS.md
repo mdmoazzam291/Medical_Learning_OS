@@ -1,3 +1,11 @@
+## NMC Anatomy concept batch part A v1 (AN1–AN43) — 2026-11-17T07:00Z
+
+- `docs/evidence/2026-11-17-nmc-anatomy-a-concept-batch-v1.json` (spec `ops/nmc/specs/anatomy_a_concepts_v1.py`): 153 concepts (127 new; 26 reused, e.g. Breast, Heart, Coronary circulation, Thyroid gland, Neuron, Synapse, Cataract, Facial nerve palsy), 261 objectives, all 254 rows AN1–AN43. No Anatomy row in scope was held by a source-scope review.
+- Split batches now carry `scopeCodes`; the coverage test checks exactly that scope. Part B (AN44–AN82) follows; AN57.1–57.5 are already in the registry and stay out of part B.
+- No clash with 2,036 production names. Endpoint pin: commit `e8033bf`, SHA-256 `ef91e0cb…c531`.
+
+---
+
 ## NMC Paediatrics objectives bound and in registry (draft @16) — 2026-11-17T06:20Z
 
 - Owner accepted `nmc-pediatrics-concepts-v1-20261116` at 2026-11-17T06:14:34Z (104 receipts; pairs digest `36e16d2c…e0db` matched). Receipt IDs in `ops/nmc/receipts/paediatrics-v1-concept-ids.txt`; bindings in `docs/evidence/2026-11-17-nmc-paediatrics-objective-bindings-v1.json` (174 concepts, 254 objectives).
