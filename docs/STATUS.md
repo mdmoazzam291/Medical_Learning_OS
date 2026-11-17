@@ -14,7 +14,8 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Acceptance speed: name-conflict check was ~320 ms per item at 1,543 identities (nested scan). New trigger-maintained `content_concept_identity_names` index (unique per name; reads current identities). Local check: 200-item batch over 302 identities in 373 ms.
 - Owner edit path: `concept_identity_edit_v1` (label/aliases; append-only, digest-guarded, learner-visible refused) and `foundation_objective_revision_v1` (wording; registry = revision 0). owner-api `POST /concept-identity-edits` and `/foundation-objective-edits`; Admin foundation panel has Edit wording / Edit concept name. Owner edits are not faculty review.
 - GM28.18: draft "COPD exacerbation management" is a narrower unaccepted proposal, not a duplicate; no change (ADR-137).
-- Verification: `npm test` 1,714 pass; `npm run check`; `scripts/concept-identity-edits-db-check.js` on local PostgreSQL 16.
+- Verification: `npm test` 1,714 pass; `npm run check`; `scripts/concept-identity-edits-db-check.js` on local PostgreSQL 16; PRs #471/#472 merged with all four checks green.
+- Production: both migrations applied; name index backfilled (2,447 names); conflict check 6 ms in production (was ~320 ms). owner-api v26 and nmc-admin-preview v27 deployed. Not yet exercised with an authenticated Admin request from this session.
 
 ### 2026-11-17 — Deploys, open-PR inventory, product principles
 - Deployed owner-api v25 (registry @25, overlay-checked validation) and nmc-admin-preview v26 (@25 Admin learner preview). PR #468 merged after all four checks passed.
