@@ -4,8 +4,8 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 import { validatePreviewData, parsePreviewFilters, previewPage } from "../../../src/domain/nmc-admin-learner-preview.js";
 import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput, validateRevisionBatch, revisionSummary, revisionAcceptInput } from "../../../src/domain/nmc-concept-batch.js";
 
-const DATA_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/1841c3a289c9d85e2e91d838d5d1323d9b3e4f5c/data/nmc-admin-learner-preview.json";
-const DATA_SHA256 = "686e8c1ccd644db51dbc06521887e7765b374449ebefbb27dc50ef8534b586d3";
+const DATA_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/11ba70fbf537394dcb641294645bd38c4d612927/data/nmc-admin-learner-preview.json";
+const DATA_SHA256 = "c22cea2768aabb406167823d877bd0a4770b76ed84e2c72324417803af67dfa2";
 
 const BATCH_URL = "https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/235dd578377582fe2a9111d101db2704233151ee/docs/evidence/2026-11-17-nmc-concept-subject-revisions-batch-v1.json";
 const BATCH_SHA256 = "1172a375ab96c47ca238b971b2b1340bb54b4890ae3d90e447af20bba78a8d5d";
