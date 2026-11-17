@@ -15,11 +15,21 @@ async function sha256Hex(bytes){
  const d=new Uint8Array(await crypto.subtle.digest('SHA-256',bytes));
  return Array.from(d).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
+// Pinned commit + SHA-256 make the mirror choice irrelevant to integrity; each attempt is time-boxed.
+const MIRRORS=[
+ path=>'https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/'+FOUNDATION_DATA_COMMIT+'/'+path,
+ path=>'https://cdn.jsdelivr.net/gh/mdmoazzam291/Medical_Learning_OS@'+FOUNDATION_DATA_COMMIT+'/'+path
+];
 async function readBytes(path){
  if(typeof Deno!=='undefined'){
-  const res=await fetch('https://raw.githubusercontent.com/mdmoazzam291/Medical_Learning_OS/'+FOUNDATION_DATA_COMMIT+'/'+path,{headers:{'User-Agent':'medical-learning-os-owner-api'}});
-  if(!res.ok)throw new Error('foundation_data_unavailable');
-  return new Uint8Array(await res.arrayBuffer());
+  for(const url of MIRRORS.map(m=>m(path))){
+   try{
+    const res=await fetch(url,{headers:{'User-Agent':'medical-learning-os-owner-api'},signal:AbortSignal.timeout(12000)});
+    if(res.ok)return new Uint8Array(await res.arrayBuffer());
+    console.error(JSON.stringify({event:'foundation_data_fetch',status:res.status,host:new URL(url).host}));
+   }catch(error){console.error(JSON.stringify({event:'foundation_data_fetch',error:String(error?.name||error),host:new URL(url).host}));}
+  }
+  throw new Error('foundation_data_unavailable');
  }
  const {readFile}=await import('node:fs/promises');
  const {fileURLToPath}=await import('node:url');
@@ -27,12 +37,12 @@ async function readBytes(path){
 }
 export async function loadFoundationData(){
  if(cached)return cached;
- const out={};
- for(const [key,{path,sha256}] of Object.entries(FOUNDATION_DATA_FILES)){
+ const entries=await Promise.all(Object.entries(FOUNDATION_DATA_FILES).map(async([key,{path,sha256}])=>{
   const bytes=await readBytes(path);
   if(await sha256Hex(bytes)!==sha256)throw new Error('foundation_data_checksum_mismatch');
-  out[key]=JSON.parse(new TextDecoder().decode(bytes));
- }
+  return [key,JSON.parse(new TextDecoder().decode(bytes))];
+ }));
+ const out=Object.fromEntries(entries);
  cached=out;
  return out;
 }
