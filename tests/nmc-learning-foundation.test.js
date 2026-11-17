@@ -162,3 +162,13 @@ test('cross-concept prerequisites: known concepts, no self links or duplicates, 
   d=>{d.links.push({...l,prerequisiteConceptId:l.conceptId,conceptId:l.prerequisiteConceptId});}])
   {const d=structuredClone(doc);mutate(d);assert.throws(()=>validateConceptPrerequisites(d,ids));}
 });
+test('confusion pairs: known concepts, unordered pairs unique, no self pairs, AI-draft only',async()=>{
+ const {validateConceptConfusions}=await import('../src/domain/nmc-concept-confusions.js');
+ const doc=JSON.parse(readFileSync(new URL('../data/nmc-concept-confusions.json',import.meta.url)));
+ const ids=[...new Set(pack.objectives.map(r=>r.objective.conceptId))];
+ validateConceptConfusions(doc,ids);assert.ok(doc.pairs.length>150);
+ const p=doc.pairs[0];
+ for(const mutate of [d=>{d.pairs.push({...p,conceptIdA:p.conceptIdB,conceptIdB:p.conceptIdA});},d=>{d.pairs[0].conceptIdB=d.pairs[0].conceptIdA;},
+  d=>{d.pairs[0].discriminator='short';},d=>{d.status='faculty-reviewed';},d=>{d.pairs[0].conceptIdA='C-missing';}])
+  {const d=structuredClone(doc);mutate(d);assert.throws(()=>validateConceptConfusions(d,ids));}
+});

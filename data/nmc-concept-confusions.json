@@ -1,0 +1,1220 @@
+{
+ "schemaVersion": 1,
+ "contractId": "nmc-concept-confusions-v1",
+ "status": "ai-draft",
+ "clinicalApproval": false,
+ "learnerActivation": false,
+ "pairs": [
+  {
+   "conceptIdA": "C-5c1fbc95-5437-4b44-b093-7f955613be9e",
+   "conceptIdB": "C-8a01ca93-6fcd-4cf0-8275-6542ea794adf",
+   "labelA": "Abnormal labour",
+   "labelB": "Malpresentation",
+   "discriminator": "Abnormal labour is poor progress; malpresentation is a non-vertex presentation"
+  },
+  {
+   "conceptIdA": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "conceptIdB": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+   "labelA": "Acute coronary syndrome",
+   "labelB": "Ischaemic heart disease",
+   "discriminator": "ACS is acute plaque rupture with rest pain or biomarker rise; stable IHD is predictable exertional angina"
+  },
+  {
+   "conceptIdA": "C-52a899d3-e73b-4ea8-8d1f-b717923a344a",
+   "conceptIdB": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+   "labelA": "Acute scrotum",
+   "labelB": "Hydrocele",
+   "discriminator": "Acute scrotum is painful and urgent (torsion); hydrocele is painless and transilluminates"
+  },
+  {
+   "conceptIdA": "C-61fd7412-45bb-4ee4-a2ae-e697ee1be125",
+   "conceptIdB": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+   "labelA": "Adenotonsillar disease",
+   "labelB": "Tonsillitis",
+   "discriminator": "Tonsillitis is the acute infection; adenotonsillar disease includes chronic hypertrophy"
+  },
+  {
+   "conceptIdA": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+   "conceptIdB": "C-720774b8-d18d-429a-891e-028c93fff261",
+   "labelA": "Adrenal insufficiency",
+   "labelB": "Cushing syndrome",
+   "discriminator": "Adrenal insufficiency: low cortisol, hyperpigmentation; Cushing: excess cortisol, central obesity"
+  },
+  {
+   "conceptIdA": "C-9f377fb9-6722-4fbd-a2fe-0952bbe02e97",
+   "conceptIdB": "C-a29d3636-7d8e-432d-bfcd-d0ff097513b6",
+   "labelA": "Adrenergic drugs",
+   "labelB": "Cholinergic drugs",
+   "discriminator": "Adrenergic drugs act on sympathetic receptors; cholinergic on parasympathetic"
+  },
+  {
+   "conceptIdA": "C-57abfde3-0b0f-4b9f-bf19-de7b4b2ae62d",
+   "conceptIdB": "C-ade6010f-83b5-48f2-99e2-4cb1ad31603c",
+   "labelA": "Amenorrhoea",
+   "labelB": "Abnormal uterine bleeding",
+   "discriminator": "Amenorrhoea is absent periods; abnormal uterine bleeding is irregular or heavy bleeding"
+  },
+  {
+   "conceptIdA": "C-7c263735-46c3-4459-9eaf-6ac116616b51",
+   "conceptIdB": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "labelA": "Amoebiasis",
+   "labelB": "Inflammatory bowel disease",
+   "discriminator": "IBD is chronic with relapses and no parasite; amoebiasis shows trophozoites in stool"
+  },
+  {
+   "conceptIdA": "C-12d55849-db85-4217-8a6a-94b8ed93e4ac",
+   "conceptIdB": "C-bac5c802-58e9-4f84-b89d-c70c2d29ba22",
+   "labelA": "Anaerobic infections",
+   "labelB": "Clostridial infections",
+   "discriminator": "Clostridia are a specific anaerobic group; anaerobic infection is the broader category"
+  },
+  {
+   "conceptIdA": "C-53364b95-5b15-4ca3-afd4-5cd4c4cbbbf6",
+   "conceptIdB": "C-adc4e960-cf1f-47f8-9b58-4053b3d08360",
+   "labelA": "Angle-closure glaucoma",
+   "labelB": "Primary open-angle glaucoma",
+   "discriminator": "Open-angle: chronic, painless field loss; angle-closure: acute painful red eye with halos"
+  },
+  {
+   "conceptIdA": "C-69e0866e-37f9-4114-bce9-7c044daaff1e",
+   "conceptIdB": "C-bf9ec559-4815-49d2-9267-345c88d0e828",
+   "labelA": "Anticoagulants",
+   "labelB": "Antiplatelet drugs",
+   "discriminator": "Anticoagulants block the clotting cascade; antiplatelets block platelet aggregation"
+  },
+  {
+   "conceptIdA": "C-69e0866e-37f9-4114-bce9-7c044daaff1e",
+   "conceptIdB": "C-eee145b1-0b18-4481-8df5-ce3e245b2465",
+   "labelA": "Anticoagulants",
+   "labelB": "Fibrinolytics",
+   "discriminator": "Anticoagulants prevent new clots; fibrinolytics dissolve existing clots"
+  },
+  {
+   "conceptIdA": "C-064c2d8c-4b88-4130-83d9-acc225d6d75e",
+   "conceptIdB": "C-3cef0dbe-e719-451b-ba08-badf7f335c68",
+   "labelA": "Antidepressants",
+   "labelB": "Antipsychotics",
+   "discriminator": "Antidepressants treat mood; antipsychotics treat psychosis"
+  },
+  {
+   "conceptIdA": "C-f7b02278-84e4-41d4-bc3a-81a92b30e634",
+   "conceptIdB": "C-ffb2c2c6-ad9c-4361-8b73-f4aed539d128",
+   "labelA": "Antimicrobial chemotherapy",
+   "labelB": "Antibacterial drugs",
+   "discriminator": "Antibacterials are the drugs; antimicrobial chemotherapy is the principles of their use"
+  },
+  {
+   "conceptIdA": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "conceptIdB": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "labelA": "Antimicrobial stewardship",
+   "labelB": "Antimicrobial resistance",
+   "discriminator": "Resistance is the problem; stewardship is the programme to limit it"
+  },
+  {
+   "conceptIdA": "C-355d06e9-82f7-4cce-8fd2-0c6fe2d2aff9",
+   "conceptIdB": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+   "labelA": "Anxiety disorders",
+   "labelB": "Depression",
+   "discriminator": "Depression: low mood and anhedonia; anxiety: worry and autonomic arousal"
+  },
+  {
+   "conceptIdA": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "conceptIdB": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+   "labelA": "Appendicitis",
+   "labelB": "Peritonitis",
+   "discriminator": "Appendicitis is localised; peritonitis is generalised peritoneal inflammation"
+  },
+  {
+   "conceptIdA": "C-8f559e73-cf2d-453c-bf28-1553c0c03a3c",
+   "conceptIdB": "C-ebf836f2-9336-47b4-869f-40ea6b0bdbaa",
+   "labelA": "Asphyxia",
+   "labelB": "Drowning",
+   "discriminator": "Asphyxia is the general state; drowning is one cause"
+  },
+  {
+   "conceptIdA": "C-672d30ab-d0e4-438d-a0ed-293b0ade7416",
+   "conceptIdB": "C-c34fd895-dd08-4a64-9bba-6cfa70f16cea",
+   "labelA": "Association and causation",
+   "labelB": "Epidemiological study designs",
+   "discriminator": "Study designs are methods; association and causation is interpreting what they find"
+  },
+  {
+   "conceptIdA": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "conceptIdB": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "labelA": "Asthma",
+   "labelB": "Chronic obstructive pulmonary disease",
+   "discriminator": "COPD: fixed or partly reversible obstruction in smokers; asthma: variable, reversible with bronchodilator"
+  },
+  {
+   "conceptIdA": "C-82291e14-3448-418f-8838-e6b109945c40",
+   "conceptIdB": "C-f71132f4-db28-4d39-b94c-34a270098732",
+   "labelA": "Autism spectrum disorder",
+   "labelB": "Attention deficit hyperactivity disorder",
+   "discriminator": "ADHD: inattention and hyperactivity; autism: social communication deficits and restricted interests"
+  },
+  {
+   "conceptIdA": "C-41341914-b17e-44cd-a7be-71a1c0e5451c",
+   "conceptIdB": "C-8356e8b3-5554-4f45-bf18-d6ebce7e0b01",
+   "labelA": "Axillary nerve injury",
+   "labelB": "Radial nerve injury",
+   "discriminator": "Axillary nerve: deltoid weakness, shoulder sensation; radial nerve: wrist drop"
+  },
+  {
+   "conceptIdA": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+   "conceptIdB": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+   "labelA": "Basal ganglia",
+   "labelB": "Cerebellum",
+   "discriminator": "Cerebellar: ataxia, intention tremor; basal ganglia: rigidity, resting tremor, bradykinesia"
+  },
+  {
+   "conceptIdA": "C-0a74c76e-967b-4ff6-9c88-ab2f4bbdc5fb",
+   "conceptIdB": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+   "labelA": "Biliary tract disease",
+   "labelB": "Pancreatitis",
+   "discriminator": "Pancreatitis: high lipase, epigastric pain to back; biliary disease: RUQ pain, cholestatic LFTs"
+  },
+  {
+   "conceptIdA": "C-3787f6cd-5226-40cb-b0d1-4b1136e86d09",
+   "conceptIdB": "C-f0dac750-64ff-4f93-9acc-19231bb22d29",
+   "labelA": "Bioethics",
+   "labelB": "Medical ethics",
+   "discriminator": "Medical ethics guides practice; bioethics covers broader issues like research and technology"
+  },
+  {
+   "conceptIdA": "C-8a0b9a31-a7da-4fa0-84ef-fbe58706b622",
+   "conceptIdB": "C-938ad5db-20b2-4e32-9694-4d33cbfc3b9e",
+   "labelA": "Birth asphyxia",
+   "labelB": "Neonatal respiratory distress",
+   "discriminator": "Respiratory distress is the breathing problem; birth asphyxia is perinatal hypoxia"
+  },
+  {
+   "conceptIdA": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+   "conceptIdB": "C-e2a2f2a9-3c19-416c-91fa-006652db36eb",
+   "labelA": "Bleeding disorders",
+   "labelB": "Disseminated intravascular coagulation",
+   "discriminator": "DIC has consumed factors and platelets with raised D-dimer; other bleeding disorders lack consumption"
+  },
+  {
+   "conceptIdA": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "conceptIdB": "C-457f7157-a44b-4e0a-a20f-5f6fd960f77f",
+   "labelA": "Blood pressure",
+   "labelB": "Cardiac output",
+   "discriminator": "Cardiac output is flow; blood pressure is the pressure that drives it"
+  },
+  {
+   "conceptIdA": "C-1d5d355a-37c6-4e30-91e2-bc318881dc78",
+   "conceptIdB": "C-8356e8b3-5554-4f45-bf18-d6ebce7e0b01",
+   "labelA": "Brachial plexus injuries",
+   "labelB": "Radial nerve injury",
+   "discriminator": "Brachial plexus injuries affect root patterns; radial nerve injury causes wrist drop alone"
+  },
+  {
+   "conceptIdA": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "conceptIdB": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+   "labelA": "Breast cancer",
+   "labelB": "Benign breast disease",
+   "discriminator": "Benign breast lumps are mobile and smooth; cancer is hard, fixed, irregular"
+  },
+  {
+   "conceptIdA": "C-101d60e987915f6fa8175c469a265f79",
+   "conceptIdB": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+   "labelA": "Brown-Sequard syndrome",
+   "labelB": "Spinal cord transection patterns",
+   "discriminator": "Brown-Sequard is a hemisection pattern; transection patterns describe complete or other cord lesions"
+  },
+  {
+   "conceptIdA": "C-01ff39f1-c7c1-4cb5-a545-c09d4f4678ef",
+   "conceptIdB": "C-91f9f345-6cab-4f74-ae4b-3d20c03095f4",
+   "labelA": "Candidiasis",
+   "labelB": "Aspergillosis",
+   "discriminator": "Candida: yeast with pseudohyphae; Aspergillus: septate hyphae with acute-angle branching"
+  },
+  {
+   "conceptIdA": "C-01ff39f1-c7c1-4cb5-a545-c09d4f4678ef",
+   "conceptIdB": "C-5a91a491-726e-4311-96d3-23519ae3e3cc",
+   "labelA": "Candidiasis",
+   "labelB": "Dermatophytosis",
+   "discriminator": "Dermatophytes affect keratin (skin, hair, nails); Candida affects moist mucosa and folds"
+  },
+  {
+   "conceptIdA": "C-54d21267-13f4-47bb-9aa0-4038a4f292cc",
+   "conceptIdB": "C-64e51ea3-c0cc-4569-81e3-a560cb6316e3",
+   "labelA": "Carbon monoxide poisoning",
+   "labelB": "Cyanide poisoning",
+   "discriminator": "CO poisoning: cherry-red lividity, binds haemoglobin; cyanide: bitter almond odour, blocks cytochrome oxidase"
+  },
+  {
+   "conceptIdA": "C-474dd5f0-9fbf-48fe-98b0-682d2308efe6",
+   "conceptIdB": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "labelA": "Cell-mediated immunity",
+   "labelB": "Humoral immunity",
+   "discriminator": "Humoral: antibodies against extracellular organisms; cell-mediated: T cells against intracellular organisms"
+  },
+  {
+   "conceptIdA": "C-4883bd77-21ad-47be-a3db-55d5e7d8bcf9",
+   "conceptIdB": "C-e088e8a3-6399-4769-b46b-772c9f02164d",
+   "labelA": "Cellular adaptations",
+   "labelB": "Dysplasia",
+   "discriminator": "Adaptations are reversible changes in cell size or type; dysplasia is disordered growth that may precede cancer"
+  },
+  {
+   "conceptIdA": "C-64846678-af73-4840-9803-98f42c607844",
+   "conceptIdB": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+   "labelA": "Cholesterol metabolism",
+   "labelB": "Lipoproteins",
+   "discriminator": "Cholesterol is the molecule; lipoproteins are its transport particles"
+  },
+  {
+   "conceptIdA": "C-382fb46e-54d5-4c3e-8b6f-b6eca6fdd1cc",
+   "conceptIdB": "C-7456b630-a13c-4a56-9fe5-7b1c8b4b4363",
+   "labelA": "Chorionic villus sampling",
+   "labelB": "Amniocentesis",
+   "discriminator": "Amniocentesis samples amniotic fluid after 15 weeks; CVS samples placental villi at 10-13 weeks"
+  },
+  {
+   "conceptIdA": "C-21adf388-e68a-4aaa-acb1-e8c1ae8c03fe",
+   "conceptIdB": "C-48580e5f-d83b-4d62-ba41-bfc4e5ff6182",
+   "labelA": "Chromosomes",
+   "labelB": "Modes of inheritance",
+   "discriminator": "Chromosomes are the structures; modes of inheritance are how traits pass on"
+  },
+  {
+   "conceptIdA": "C-3f041abe-d4b3-4932-89e0-7a03811f2c1e",
+   "conceptIdB": "C-a0e8d5ad-070d-47cb-af9e-ce57edd776d7",
+   "labelA": "Chronic inflammation",
+   "labelB": "Inflammation",
+   "discriminator": "Acute: neutrophils, short duration; chronic: lymphocytes, macrophages, fibrosis"
+  },
+  {
+   "conceptIdA": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "conceptIdB": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "labelA": "Chronic kidney disease",
+   "labelB": "Acute kidney injury",
+   "discriminator": "AKI rises over hours to days and may reverse; CKD lasts over 3 months with small kidneys and anaemia"
+  },
+  {
+   "conceptIdA": "C-c1b60707-887d-496b-9342-66741142d4a9",
+   "conceptIdB": "C-c8006b05-90e8-449c-991d-5477d4f989e5",
+   "labelA": "Chronic otitis media",
+   "labelB": "Cholesteatoma",
+   "discriminator": "Safe CSOM is a central perforation; cholesteatoma is attic or marginal and erodes bone"
+  },
+  {
+   "conceptIdA": "C-00be1afd-c0b0-40ed-9a5d-9bd8dea7b90e",
+   "conceptIdB": "C-86f59c61-3a77-4dd6-a8a4-1b89d22b3351",
+   "labelA": "Claw hand",
+   "labelB": "Carpal tunnel syndrome",
+   "discriminator": "Carpal tunnel compresses the median nerve at the wrist; claw hand is intrinsic muscle palsy"
+  },
+  {
+   "conceptIdA": "C-00be1afd-c0b0-40ed-9a5d-9bd8dea7b90e",
+   "conceptIdB": "C-8356e8b3-5554-4f45-bf18-d6ebce7e0b01",
+   "labelA": "Claw hand",
+   "labelB": "Radial nerve injury",
+   "discriminator": "Radial nerve injury gives wrist drop; claw hand follows ulnar or median-ulnar loss"
+  },
+  {
+   "conceptIdA": "C-61e37073-b7c8-4b3a-8ce8-2d3f11457105",
+   "conceptIdB": "C-7babeef7-2657-4f54-8169-e9d4366c31eb",
+   "labelA": "Croup",
+   "labelB": "Epiglottitis",
+   "discriminator": "Epiglottitis: toxic, drooling, tripod posture; croup: barking cough, steeple sign"
+  },
+  {
+   "conceptIdA": "C-61e37073-b7c8-4b3a-8ce8-2d3f11457105",
+   "conceptIdB": "C-f188aa95-f5dc-420f-9702-2fa6e3a7e7ef",
+   "labelA": "Croup",
+   "labelB": "Foreign body aspiration",
+   "discriminator": "Croup is infective with fever; foreign body is sudden choking without fever"
+  },
+  {
+   "conceptIdA": "C-bc7b56d9-c7e9-41db-91c0-c309c21c8962",
+   "conceptIdB": "C-d67cf453-933e-405e-9c52-db9928fd5b2a",
+   "labelA": "Cutaneous drug reactions",
+   "labelB": "Urticaria",
+   "discriminator": "Urticaria is transient wheals; drug reactions range from rashes to SJS/TEN with a drug link"
+  },
+  {
+   "conceptIdA": "C-62be3e4a-84c1-4b05-a716-e686e8fd7530",
+   "conceptIdB": "C-feed7858-a94a-459f-9ba4-386f99db6802",
+   "labelA": "Cyanosis",
+   "labelB": "Hypoxia",
+   "discriminator": "Hypoxia is low tissue oxygen; cyanosis is the bluish sign that may or may not appear"
+  },
+  {
+   "conceptIdA": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "conceptIdB": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "labelA": "Delirium",
+   "labelB": "Dementia",
+   "discriminator": "Delirium is acute and fluctuating with inattention; dementia is chronic and progressive"
+  },
+  {
+   "conceptIdA": "C-b3c08dab-01b8-42c3-9a29-581488a11e0e",
+   "conceptIdB": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "labelA": "Developmental delay",
+   "labelB": "Developmental milestones",
+   "discriminator": "Milestones are the normal markers; developmental delay is failure to reach them"
+  },
+  {
+   "conceptIdA": "C-2dac49aa-8431-4bc8-b4bf-1ca66c5cf67c",
+   "conceptIdB": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+   "labelA": "Diabetes in pregnancy",
+   "labelB": "Hypertensive disorders of pregnancy",
+   "discriminator": "Hypertensive disorders raise BP and proteinuria; diabetes in pregnancy raises glucose"
+  },
+  {
+   "conceptIdA": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "conceptIdB": "C-bfe650cd-53c5-414d-9a81-746b8aefaf87",
+   "labelA": "Diabetic ketoacidosis",
+   "labelB": "Hyperosmolar hyperglycaemic state",
+   "discriminator": "DKA has ketosis and acidosis; HHS has extreme hyperglycaemia and osmolality without significant ketosis"
+  },
+  {
+   "conceptIdA": "C-04af74ac-029f-4e02-8001-3d9a5b2b4a6b",
+   "conceptIdB": "C-68e89d78-e1f9-47ef-9694-8d80f533dbc2",
+   "labelA": "DNA replication",
+   "labelB": "Gene transcription",
+   "discriminator": "Replication copies DNA; transcription makes RNA from DNA"
+  },
+  {
+   "conceptIdA": "C-5588b060-3f00-4892-b811-238ed5fa4277",
+   "conceptIdB": "C-7a863f48-1343-4bae-aeba-db737a190eba",
+   "labelA": "Drug interactions",
+   "labelB": "Adverse drug reactions",
+   "discriminator": "ADRs are harmful effects of a single drug; interactions arise between two or more drugs"
+  },
+  {
+   "conceptIdA": "C-88759b1f-7794-4c15-9f74-f93edb81f081",
+   "conceptIdB": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+   "labelA": "Drug poisoning",
+   "labelB": "Pesticide poisoning",
+   "discriminator": "Organophosphate poisoning gives a cholinergic crisis; drug poisoning depends on the drug"
+  },
+  {
+   "conceptIdA": "C-6a7db250-9ced-4c7e-a08c-d88d3eb98b0c",
+   "conceptIdB": "C-a5b3b40e-a67d-4937-8e0e-8f4b153b1b3b",
+   "labelA": "Dying declaration",
+   "labelB": "Medical testimony",
+   "discriminator": "Testimony is evidence given in court; a dying declaration is a statement made before death"
+  },
+  {
+   "conceptIdA": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "conceptIdB": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+   "labelA": "Dysentery",
+   "labelB": "Diarrhoea",
+   "discriminator": "Dysentery has blood and mucus with tenesmus; watery diarrhoea has none"
+  },
+  {
+   "conceptIdA": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+   "conceptIdB": "C-5fb9d279-c8b6-4531-8b00-24601537dba4",
+   "labelA": "Ectopic pregnancy",
+   "labelB": "Pregnancy of unknown location",
+   "discriminator": "Ectopic is confirmed outside the uterus; unknown location is not yet seen anywhere"
+  },
+  {
+   "conceptIdA": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "conceptIdB": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "labelA": "Electrocardiogram",
+   "labelB": "Cardiac cycle",
+   "discriminator": "The cardiac cycle is mechanical events; the ECG records electrical events"
+  },
+  {
+   "conceptIdA": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "conceptIdB": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "labelA": "Encephalitis",
+   "labelB": "Meningitis",
+   "discriminator": "Meningitis: neck stiffness, normal consciousness early; encephalitis: altered sensorium, seizures"
+  },
+  {
+   "conceptIdA": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+   "conceptIdB": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+   "labelA": "Endometrial hyperplasia",
+   "labelB": "Endometrial carcinoma",
+   "discriminator": "Hyperplasia is the precursor; carcinoma is invasive malignancy"
+  },
+  {
+   "conceptIdA": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+   "conceptIdB": "C-e64a2d68-36ab-47bb-bb3f-23b09c67a423",
+   "labelA": "Endometriosis",
+   "labelB": "Adenomyosis",
+   "discriminator": "Endometriosis is endometrium outside the uterus; adenomyosis is endometrium within the myometrium"
+  },
+  {
+   "conceptIdA": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "conceptIdB": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "labelA": "Enteric fever",
+   "labelB": "Malaria",
+   "discriminator": "Malaria: periodic fever with smear positive; enteric fever: step-ladder fever with culture positive"
+  },
+  {
+   "conceptIdA": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "conceptIdB": "C-26ad2051-3860-4384-a3cf-891744e428a0",
+   "labelA": "Enteric fever",
+   "labelB": "Rickettsial infections",
+   "discriminator": "Enteric fever: relative bradycardia, rose spots; rickettsial fever: eschar and rash"
+  },
+  {
+   "conceptIdA": "C-c9521a53-ddac-4da0-8441-9f6f16485e59",
+   "conceptIdB": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+   "labelA": "Febrile seizures",
+   "labelB": "Epilepsy",
+   "discriminator": "Epilepsy is recurrent unprovoked seizures; febrile seizures are provoked by fever in young children"
+  },
+  {
+   "conceptIdA": "C-49310e63-15a2-406b-8dff-1a85a57a4b2d",
+   "conceptIdB": "C-aa86c456-dc25-4816-b038-29f8f0d73067",
+   "labelA": "Fetal circulation",
+   "labelB": "Development of the heart",
+   "discriminator": "Fetal circulation is how blood flows before birth; heart development is how the heart forms"
+  },
+  {
+   "conceptIdA": "C-48f2df26-7d81-4912-9f30-506332716d53",
+   "conceptIdB": "C-565294d9-41a5-4bc5-9bc9-2f80062520a8",
+   "labelA": "Firearms",
+   "labelB": "Firearm injuries",
+   "discriminator": "Firearms are the weapons; firearm injuries are the wounds they cause"
+  },
+  {
+   "conceptIdA": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+   "conceptIdB": "C-f8435738-4b3c-4563-b93b-f45a72a85ea3",
+   "labelA": "Gallstones",
+   "labelB": "Cholecystitis",
+   "discriminator": "Gallstones are the stones; cholecystitis is inflammation they cause"
+  },
+  {
+   "conceptIdA": "C-4cf208e3-a75b-497c-a3b5-f1ad7db46583",
+   "conceptIdB": "C-d8e102a9-9d3b-41a6-adea-72106e89f16e",
+   "labelA": "Gametogenesis",
+   "labelB": "Fertilisation",
+   "discriminator": "Gametogenesis makes gametes; fertilisation joins them"
+  },
+  {
+   "conceptIdA": "C-411faf96-f5db-4b60-b7a4-7b4b534802fc",
+   "conceptIdB": "C-44d5a8cf-6409-4261-870d-e90cd685ad7d",
+   "labelA": "Gastrulation",
+   "labelB": "Neurulation",
+   "discriminator": "Gastrulation forms three germ layers; neurulation forms the neural tube"
+  },
+  {
+   "conceptIdA": "C-68e89d78-e1f9-47ef-9694-8d80f533dbc2",
+   "conceptIdB": "C-f8cb4da8-45cf-467d-b7b8-e93ceefeb8af",
+   "labelA": "Gene transcription",
+   "labelB": "Protein synthesis",
+   "discriminator": "Transcription makes mRNA; translation makes protein from mRNA"
+  },
+  {
+   "conceptIdA": "C-3b9f08e3-68f7-4b43-a44d-ad6556fcd5f7",
+   "conceptIdB": "C-d21ea49e-9254-42dd-9913-9a18e1960b4e",
+   "labelA": "Gluconeogenesis",
+   "labelB": "Glycolysis",
+   "discriminator": "Glycolysis breaks down glucose; gluconeogenesis makes new glucose"
+  },
+  {
+   "conceptIdA": "C-24259d33-e9ba-467b-a81d-60a744b384f5",
+   "conceptIdB": "C-3b9f08e3-68f7-4b43-a44d-ad6556fcd5f7",
+   "labelA": "Glycogen metabolism",
+   "labelB": "Gluconeogenesis",
+   "discriminator": "Glycogenolysis releases stored glucose quickly; gluconeogenesis makes it from non-carbohydrates"
+  },
+  {
+   "conceptIdA": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+   "conceptIdB": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+   "labelA": "Goitre",
+   "labelB": "Thyroid neoplasms",
+   "discriminator": "Goitre is enlargement of any cause; thyroid neoplasm is a tumour within it"
+  },
+  {
+   "conceptIdA": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "conceptIdB": "C-d5c68e78-a0d8-41cb-a3e1-862f0f186feb",
+   "labelA": "Gout",
+   "labelB": "Septic arthritis",
+   "discriminator": "Gout: urate crystals, recurrent; septic arthritis: infected joint, positive culture, needs urgent drainage"
+  },
+  {
+   "conceptIdA": "C-622d7c7a-02d1-4c1a-ae13-08f0da754019",
+   "conceptIdB": "C-913bbb8a-299f-4e1c-af4e-963cfb63c95f",
+   "labelA": "Gram staining",
+   "labelB": "Ziehl-Neelsen staining",
+   "discriminator": "Gram stain classifies most bacteria; ZN stain detects acid-fast bacilli like M. tuberculosis"
+  },
+  {
+   "conceptIdA": "C-0af2d9fe-5f54-41dc-85fa-b118855a034f",
+   "conceptIdB": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
+   "labelA": "Haem metabolism",
+   "labelB": "Bilirubin metabolism",
+   "discriminator": "Haem metabolism covers synthesis and breakdown; bilirubin metabolism is the excretion pathway"
+  },
+  {
+   "conceptIdA": "C-5ff4ca9e-3b48-4561-82ea-03190a410ab8",
+   "conceptIdB": "C-e69fda87-9758-41eb-8b06-ecd5767fef9e",
+   "labelA": "Haemoglobinopathies",
+   "labelB": "Porphyrias",
+   "discriminator": "Porphyrias are defects in haem synthesis; haemoglobinopathies are defects in globin"
+  },
+  {
+   "conceptIdA": "C-43146256-39e4-435d-b08d-c21ee83ace18",
+   "conceptIdB": "C-531f85ce-a287-436a-9b7d-08d2103e285e",
+   "labelA": "Haemophilia",
+   "labelB": "Immune thrombocytopenia",
+   "discriminator": "ITP: low platelets with mucosal bleeds; haemophilia: normal platelets, joint and muscle bleeds"
+  },
+  {
+   "conceptIdA": "C-54b5005b-a152-496b-a905-6c02871bfe24",
+   "conceptIdB": "C-d0c7c53e-7889-4dd3-8212-9a99ba7bd24f",
+   "labelA": "Health care delivery system in India",
+   "labelB": "Primary health care",
+   "discriminator": "Primary health care is the approach; the Indian delivery system is the structure"
+  },
+  {
+   "conceptIdA": "C-01d09be7-fece-401c-a52e-c977334ef696",
+   "conceptIdB": "C-520a2f7a-54ae-4579-99c9-a2e261d152e7",
+   "labelA": "Health education",
+   "labelB": "Health promotion",
+   "discriminator": "Health promotion is the broad strategy; health education is one of its tools"
+  },
+  {
+   "conceptIdA": "C-01baff8e-b4ca-4cb5-9c0a-102574fbdcb2",
+   "conceptIdB": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "labelA": "Herd immunity",
+   "labelB": "Humoral immunity",
+   "discriminator": "Humoral immunity protects the individual; herd immunity protects the population"
+  },
+  {
+   "conceptIdA": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+   "conceptIdB": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+   "labelA": "Hydrocele",
+   "labelB": "Hernia",
+   "discriminator": "Hernia has a cough impulse and is reducible; hydrocele has neither and transilluminates"
+  },
+  {
+   "conceptIdA": "C-50fb9630-22e1-43d4-9513-01dea0ca381e",
+   "conceptIdB": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+   "labelA": "Hyperandrogenism",
+   "labelB": "Polycystic ovary syndrome",
+   "discriminator": "PCOS is the syndrome with anovulation; hyperandrogenism is one feature of many causes"
+  },
+  {
+   "conceptIdA": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+   "conceptIdB": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+   "labelA": "Hyperkalaemia",
+   "labelB": "Hypokalaemia",
+   "discriminator": "High potassium: peaked T waves; low potassium: flat T waves and U waves"
+  },
+  {
+   "conceptIdA": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+   "conceptIdB": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+   "labelA": "Hyperkalaemia",
+   "labelB": "Hyponatraemia",
+   "discriminator": "Hyponatraemia causes neurological symptoms; hyperkalaemia causes cardiac rhythm changes"
+  },
+  {
+   "conceptIdA": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "conceptIdB": "C-cfbebd88-b509-4118-a1a6-3faa3fd8b39b",
+   "labelA": "Hypersensitivity reactions",
+   "labelB": "Autoimmunity",
+   "discriminator": "Hypersensitivity is an exaggerated response to external antigens; autoimmunity targets self antigens"
+  },
+  {
+   "conceptIdA": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "conceptIdB": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
+   "labelA": "Hypertension",
+   "labelB": "Hypertensive emergencies",
+   "discriminator": "Emergency means acute target-organ damage, not just a high number"
+  },
+  {
+   "conceptIdA": "C-1fa80a85-641c-463a-9b12-6df0914caf11",
+   "conceptIdB": "C-21cdd062-531c-4656-86a8-344f37529866",
+   "labelA": "Hyphema",
+   "labelB": "Hypopyon",
+   "discriminator": "Hyphema is blood in the anterior chamber; hypopyon is pus"
+  },
+  {
+   "conceptIdA": "C-73c74a9d-378d-439a-b55a-c5684aad5761",
+   "conceptIdB": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+   "labelA": "Hypoparathyroidism",
+   "labelB": "Hyperparathyroidism",
+   "discriminator": "Hyperparathyroidism raises calcium; hypoparathyroidism lowers it with tetany"
+  },
+  {
+   "conceptIdA": "C-b276a56d-46dd-46da-8d36-d996257c01af",
+   "conceptIdB": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
+   "labelA": "Immunisation",
+   "labelB": "Humoral immunity",
+   "discriminator": "Humoral immunity is the mechanism; immunisation is the intervention that uses it"
+  },
+  {
+   "conceptIdA": "C-797b3b93-443d-4175-acfe-765a45a748b3",
+   "conceptIdB": "C-8d9c97af-800d-41dd-b03c-981376c7f843",
+   "labelA": "Infarction",
+   "labelB": "Ischaemia",
+   "discriminator": "Ischaemia is reduced blood supply; infarction is necrosis from it"
+  },
+  {
+   "conceptIdA": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "conceptIdB": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "labelA": "Infective endocarditis",
+   "labelB": "Rheumatic fever",
+   "discriminator": "Rheumatic fever is immune-mediated after strep throat; endocarditis is direct valve infection with positive cultures"
+  },
+  {
+   "conceptIdA": "C-1990d774-d706-473d-af3d-52a1407ebfe8",
+   "conceptIdB": "C-c188ee66-655d-486d-a536-92cd5194e323",
+   "labelA": "Infective keratitis",
+   "labelB": "Conjunctivitis",
+   "discriminator": "Keratitis causes pain and corneal staining; conjunctivitis spares the cornea"
+  },
+  {
+   "conceptIdA": "C-326aa73a-ebb4-4be2-877f-a78be8715daa",
+   "conceptIdB": "C-c4e18b92-e173-4b1e-bb80-b5e33ac65df1",
+   "labelA": "Informed consent",
+   "labelB": "Medical negligence",
+   "discriminator": "Negligence is a breach of duty causing harm; informed consent is the patient's permission"
+  },
+  {
+   "conceptIdA": "C-414a2d1f-adbe-4540-b761-22d560408034",
+   "conceptIdB": "C-9583a4d9-e46d-4ddf-b6b3-1daa832f0268",
+   "labelA": "Intertrochanteric fracture",
+   "labelB": "Femoral neck fracture",
+   "discriminator": "Neck fracture is intracapsular with avascular necrosis risk; intertrochanteric is extracapsular and heals well"
+  },
+  {
+   "conceptIdA": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "conceptIdB": "C-df4ffc84-48d8-4992-9ed3-3302bf9c78c3",
+   "labelA": "Jaundice",
+   "labelB": "Neonatal hyperbilirubinaemia",
+   "discriminator": "Neonatal jaundice is mostly physiological in the first week; jaundice is the general sign"
+  },
+  {
+   "conceptIdA": "C-880a6014-4afb-495a-84c9-5e83fd098057",
+   "conceptIdB": "C-bf727f1b-3d16-4f9d-ae28-21279715c4fb",
+   "labelA": "Joint dislocations",
+   "labelB": "Clavicle fracture",
+   "discriminator": "Dislocation is loss of joint congruity; fracture is a break in bone"
+  },
+  {
+   "conceptIdA": "C-03341387-7db4-4f37-9cfd-a1c773351c03",
+   "conceptIdB": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "labelA": "Juxtaglomerular apparatus",
+   "labelB": "Urine formation",
+   "discriminator": "The JG apparatus regulates renin; urine formation is filtration, reabsorption and secretion"
+  },
+  {
+   "conceptIdA": "C-0b6ee5d6-f59f-48f8-a360-6136be98bcb4",
+   "conceptIdB": "C-16aaa6e4-6403-4061-98f0-79122599af60",
+   "labelA": "Ketone bodies",
+   "labelB": "Fatty acid oxidation",
+   "discriminator": "Fatty acid oxidation produces acetyl-CoA; ketone bodies are made from excess acetyl-CoA"
+  },
+  {
+   "conceptIdA": "C-7ccc41ef-40fe-4dca-87b6-196d1006b7d0",
+   "conceptIdB": "C-bc65579e-a951-4c48-bcc0-cbe6cbb901ae",
+   "labelA": "Klinefelter syndrome",
+   "labelB": "Turner syndrome",
+   "discriminator": "Turner is 45,X in females; Klinefelter is 47,XXY in males"
+  },
+  {
+   "conceptIdA": "C-24ee858c-4ac4-43fa-9580-80266d446523",
+   "conceptIdB": "C-efa2a787-eab4-4ad9-9fec-c39aadd57b85",
+   "labelA": "Laryngeal cancer",
+   "labelB": "Benign laryngeal disorders",
+   "discriminator": "Benign laryngeal lesions are on the cord without fixation; cancer causes progressive hoarseness and fixation"
+  },
+  {
+   "conceptIdA": "C-e39b0038-0498-4221-a80f-29b813772d12",
+   "conceptIdB": "C-f0d0877c-5091-40e0-9bfa-dfb68b9b5ff4",
+   "labelA": "Late post-mortem changes",
+   "labelB": "Early post-mortem changes",
+   "discriminator": "Early changes (algor, livor, rigor) occur in hours; late changes are decomposition"
+  },
+  {
+   "conceptIdA": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+   "conceptIdB": "C-c95c9340-f9c7-48cb-8792-31142b9b9c45",
+   "labelA": "Leiomyoma",
+   "labelB": "Leiomyosarcoma",
+   "discriminator": "Leiomyoma is benign; leiomyosarcoma is the rare malignant counterpart"
+  },
+  {
+   "conceptIdA": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "conceptIdB": "C-f663f964-1690-40c8-b7f6-fbbbe1dbf8a2",
+   "labelA": "Leprosy",
+   "labelB": "Vitiligo",
+   "discriminator": "Vitiligo: depigmented with normal sensation; leprosy: hypopigmented with sensory loss"
+  },
+  {
+   "conceptIdA": "C-7af3910f-7112-41d9-aa93-96e2d61870a8",
+   "conceptIdB": "C-7c0aba97-8df1-4f8a-98d9-bd0dc6ccdcc1",
+   "labelA": "Levels of prevention",
+   "labelB": "Natural history of disease",
+   "discriminator": "Natural history is how disease progresses; levels of prevention are where we intervene"
+  },
+  {
+   "conceptIdA": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+   "conceptIdB": "C-7ccfe6eb-eae4-482c-8467-f90739a9ea02",
+   "labelA": "Low birth weight",
+   "labelB": "Fetal growth restriction",
+   "discriminator": "Low birth weight is a weight under 2.5 kg; FGR is failure to reach growth potential"
+  },
+  {
+   "conceptIdA": "C-3f1c18af-8496-4543-852d-7d3612bb594c",
+   "conceptIdB": "C-5d75462b-933f-4ade-8982-5804f31c0ce8",
+   "labelA": "Lymphangitis",
+   "labelB": "Lymphoedema",
+   "discriminator": "Lymphoedema is chronic non-pitting swelling; lymphangitis is acute infection with red streaks"
+  },
+  {
+   "conceptIdA": "C-2d5b4b53-d06e-4e59-978d-96e13e04dd79",
+   "conceptIdB": "C-39fa9d8b-cfe2-4def-8133-6735f11cab8d",
+   "labelA": "Measures of morbidity and mortality",
+   "labelB": "Health indicators",
+   "discriminator": "Morbidity and mortality measures are the raw rates; indicators are selected summary measures"
+  },
+  {
+   "conceptIdA": "C-3753cbbb-4d97-43ff-bd88-a556e02ce37a",
+   "conceptIdB": "C-d9b584bd-a025-48cd-903c-ed723c260345",
+   "labelA": "Mechanical injuries",
+   "labelB": "Hurt",
+   "discriminator": "Mechanical injuries are the wounds; hurt is their legal classification"
+  },
+  {
+   "conceptIdA": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+   "conceptIdB": "C-87971129-9398-4d82-bc97-18782af8b182",
+   "labelA": "Megaloblastic anaemia",
+   "labelB": "Microcytic anaemia",
+   "discriminator": "Microcytic (low MCV) mostly iron deficiency; megaloblastic (high MCV) B12 or folate deficiency"
+  },
+  {
+   "conceptIdA": "C-7dd8c746-542b-4e78-a03d-5a88a7c45db0",
+   "conceptIdB": "C-89fa60e2-e1fb-437d-b315-bc021a820698",
+   "labelA": "Meniere disease",
+   "labelB": "Vestibular schwannoma",
+   "discriminator": "Meniere: episodic vertigo, fluctuating hearing loss; vestibular schwannoma: progressive unilateral hearing loss"
+  },
+  {
+   "conceptIdA": "C-d30c0b31-242f-4221-89c8-50bfa358eaef",
+   "conceptIdB": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
+   "labelA": "Migraine",
+   "labelB": "Headache",
+   "discriminator": "Migraine is a specific primary headache with aura or photophobia; headache is the general symptom"
+  },
+  {
+   "conceptIdA": "C-388594ff-a643-4bcd-ad57-d7c484240430",
+   "conceptIdB": "C-f38c94ad-46ab-439d-a78d-083d2afc2bad",
+   "labelA": "Modes of death",
+   "labelB": "Manner of death",
+   "discriminator": "Manner is natural, accidental, suicidal or homicidal; mode is the physiological route of death"
+  },
+  {
+   "conceptIdA": "C-09b479ba-d318-4c69-8d1b-062fc187e503",
+   "conceptIdB": "C-1b73cb40-2310-41e9-a2f8-61387d0a323f",
+   "labelA": "Motor neuron disease",
+   "labelB": "Poliomyelitis",
+   "discriminator": "Polio: pure LMN, asymmetric, no sensory loss; MND: mixed UMN and LMN signs"
+  },
+  {
+   "conceptIdA": "C-8dc7199c-ddf7-410e-9334-3b50b6775ed2",
+   "conceptIdB": "C-d0eba639-0935-4a0b-941b-0a4bf7f19632",
+   "labelA": "Movement disorders",
+   "labelB": "Upper and lower motor neuron lesions",
+   "discriminator": "UMN/LMN lesions cause weakness; movement disorders cause abnormal movements without weakness"
+  },
+  {
+   "conceptIdA": "C-6ca33c69-e47b-492d-abfa-c7ec2d5c8def",
+   "conceptIdB": "C-870bb91c-4e42-4fda-b1a9-a2eb3bc1fac6",
+   "labelA": "Myasthenia gravis",
+   "labelB": "Lambert-Eaton myasthenic syndrome",
+   "discriminator": "Myasthenia: weakness worsens with use; LEMS: strength improves with repeated effort"
+  },
+  {
+   "conceptIdA": "C-a5569915-99d0-415d-bd42-7fbac357a5c0",
+   "conceptIdB": "C-f5b95b05-9e19-40ea-8952-c25583e0881a",
+   "labelA": "Nasal polyps",
+   "labelB": "Juvenile nasopharyngeal angiofibroma",
+   "discriminator": "Nasal polyps are bilateral and painless; angiofibroma affects adolescent males with heavy epistaxis"
+  },
+  {
+   "conceptIdA": "C-71864bae-cdf8-4db9-98c3-41d39f118fe4",
+   "conceptIdB": "C-d481b63b-7010-4f22-bbad-58b10f6b5611",
+   "labelA": "Necrosis",
+   "labelB": "Apoptosis",
+   "discriminator": "Necrosis is accidental cell death with inflammation; apoptosis is programmed with no inflammation"
+  },
+  {
+   "conceptIdA": "C-1e337e9e-b5ff-4fe0-9d9f-87a3ca2ab62b",
+   "conceptIdB": "C-cf41d55d-3ef8-40cd-9f34-94021930d198",
+   "labelA": "Neonatal hypocalcaemia",
+   "labelB": "Neonatal hypoglycaemia",
+   "discriminator": "Neonatal hypoglycaemia is low glucose; hypocalcaemia is low calcium; both cause seizures"
+  },
+  {
+   "conceptIdA": "C-24fdad08-2b66-4cf3-82b9-1e87530cc057",
+   "conceptIdB": "C-e088e8a3-6399-4769-b46b-772c9f02164d",
+   "labelA": "Neoplasia",
+   "labelB": "Dysplasia",
+   "discriminator": "Neoplasia is autonomous growth; dysplasia is a preneoplastic change"
+  },
+  {
+   "conceptIdA": "C-8e0516ea-1827-4580-b0d2-ba4f3d0d10eb",
+   "conceptIdB": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+   "labelA": "Nephritic syndrome",
+   "labelB": "Nephrotic syndrome",
+   "discriminator": "Nephrotic: proteinuria >3.5 g/day with oedema; nephritic: haematuria, RBC casts, hypertension"
+  },
+  {
+   "conceptIdA": "C-0020b6ef-64e7-4472-8b4b-093ff43f4680",
+   "conceptIdB": "C-5563d4f1-94e1-4c3d-b152-27611448ddd3",
+   "labelA": "Nerve fibre properties",
+   "labelB": "Membrane potentials",
+   "discriminator": "Membrane potentials are the electrical state; fibre properties describe how impulses travel"
+  },
+  {
+   "conceptIdA": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+   "conceptIdB": "C-889146b1-253c-4f55-bab9-e533214615fe",
+   "labelA": "Non-Hodgkin lymphoma",
+   "labelB": "Hodgkin lymphoma",
+   "discriminator": "Hodgkin: Reed-Sternberg cells, contiguous spread; non-Hodgkin: no RS cells, non-contiguous spread"
+  },
+  {
+   "conceptIdA": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+   "conceptIdB": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+   "labelA": "Non-Hodgkin lymphoma",
+   "labelB": "Leukaemias",
+   "discriminator": "Leukaemia starts in marrow with blood involvement; lymphoma starts in lymph nodes"
+  },
+  {
+   "conceptIdA": "C-216ac910-0805-4b0d-9225-103786970489",
+   "conceptIdB": "C-8187563c-be23-4561-92c2-9dea40572607",
+   "labelA": "Non-metallic inorganic poisoning",
+   "labelB": "Heavy metal poisoning",
+   "discriminator": "Heavy metals (lead, arsenic, mercury) vs non-metallic inorganic poisons (phosphorus, iodine)"
+  },
+  {
+   "conceptIdA": "C-6adbce4f-1611-4095-ac1c-36857807178c",
+   "conceptIdB": "C-d63eee28-ec75-45ce-9caf-26c14c6c4c95",
+   "labelA": "Opioid analgesics",
+   "labelB": "Non-opioid analgesics",
+   "discriminator": "Opioids act centrally on opioid receptors; non-opioids block prostaglandin synthesis"
+  },
+  {
+   "conceptIdA": "C-28f4a182-4d4b-43c2-937e-62ff7aeda191",
+   "conceptIdB": "C-a7d985a9-f7ad-4247-86d8-267e1fed9e23",
+   "labelA": "Orbital cellulitis",
+   "labelB": "Cavernous sinus thrombosis",
+   "discriminator": "Orbital cellulitis is unilateral; cavernous sinus thrombosis becomes bilateral with cranial nerve palsies"
+  },
+  {
+   "conceptIdA": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+   "conceptIdB": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+   "labelA": "Osteomyelitis",
+   "labelB": "Bone tumours",
+   "discriminator": "Osteomyelitis is bone infection; bone tumours are neoplastic growths"
+  },
+  {
+   "conceptIdA": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "conceptIdB": "C-f8b97413-97eb-4323-9c70-b9785634d3e6",
+   "labelA": "Osteoporosis",
+   "labelB": "Osteomalacia and rickets",
+   "discriminator": "Osteomalacia is poor mineralisation; osteoporosis is reduced normal bone mass"
+  },
+  {
+   "conceptIdA": "C-3cc1e893-966c-4ae7-8abd-245c38a8cbb0",
+   "conceptIdB": "C-c1b60707-887d-496b-9342-66741142d4a9",
+   "labelA": "Otitis media with effusion",
+   "labelB": "Chronic otitis media",
+   "discriminator": "Chronic otitis media has a perforation and discharge; otitis media with effusion has an intact drum and fluid"
+  },
+  {
+   "conceptIdA": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+   "conceptIdB": "C-ea0abc66-63f1-499d-a611-900b7866e80b",
+   "labelA": "Peripheral arterial disease",
+   "labelB": "Vasospastic disorders",
+   "discriminator": "PAD is fixed atherosclerotic narrowing; vasospastic disorders are reversible spasm"
+  },
+  {
+   "conceptIdA": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
+   "conceptIdB": "C-54340ace-104e-49c5-874b-5a00c1502754",
+   "labelA": "Pharmacokinetics",
+   "labelB": "Pharmacodynamics",
+   "discriminator": "Pharmacokinetics is what the body does to the drug; pharmacodynamics is what the drug does to the body"
+  },
+  {
+   "conceptIdA": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "conceptIdB": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "labelA": "Pneumonia",
+   "labelB": "Pulmonary tuberculosis",
+   "discriminator": "Pneumonia is acute with lobar consolidation; TB is chronic with cavities, weight loss, night sweats"
+  },
+  {
+   "conceptIdA": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+   "conceptIdB": "C-db80599c-eebb-40b3-82e5-80a4ccf746e1",
+   "labelA": "Postpartum haemorrhage",
+   "labelB": "Antepartum haemorrhage",
+   "discriminator": "Antepartum haemorrhage is before delivery; postpartum haemorrhage is after delivery"
+  },
+  {
+   "conceptIdA": "C-98c194e3-82d7-42ef-93d4-6b112eb45183",
+   "conceptIdB": "C-b12fa7b8-93d4-4442-a1d7-0d439401b403",
+   "labelA": "Preterm labour",
+   "labelB": "Prelabour rupture of membranes",
+   "discriminator": "Preterm labour has contractions before term; PROM is membrane rupture before labour"
+  },
+  {
+   "conceptIdA": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "conceptIdB": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+   "labelA": "Prostate cancer",
+   "labelB": "Benign prostatic hyperplasia",
+   "discriminator": "BPH arises in the transition zone, smooth enlargement; prostate cancer in the peripheral zone, hard nodule"
+  },
+  {
+   "conceptIdA": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "conceptIdB": "C-e2dc4c05-6bf0-449b-b0ff-460eb3a9d672",
+   "labelA": "Protein-energy malnutrition",
+   "labelB": "Severe acute malnutrition",
+   "discriminator": "SAM is the severe end of protein-energy malnutrition"
+  },
+  {
+   "conceptIdA": "C-6cb3f44e-c0da-4140-8bcc-a094964e6d57",
+   "conceptIdB": "C-b655e407-3bc0-405e-9de2-0618fe19b422",
+   "labelA": "Psoriasis",
+   "labelB": "Eczema",
+   "discriminator": "Psoriasis: well-defined silvery plaques on extensors; eczema: ill-defined itchy patches on flexures"
+  },
+  {
+   "conceptIdA": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "conceptIdB": "C-9918b646-21a3-466d-a289-5d28564adf54",
+   "labelA": "Renal regulation of fluid, electrolytes and acid-base",
+   "labelB": "Urine concentration and dilution",
+   "discriminator": "Concentration and dilution set urine osmolality; regulation covers electrolytes and acid-base"
+  },
+  {
+   "conceptIdA": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+   "conceptIdB": "C-a92460ef-29fd-4538-a84b-98c5dc3ea081",
+   "labelA": "Rheumatic fever",
+   "labelB": "Rheumatic heart disease",
+   "discriminator": "Rheumatic fever is the acute illness; rheumatic heart disease is the chronic valve damage"
+  },
+  {
+   "conceptIdA": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+   "conceptIdB": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "labelA": "Rheumatoid arthritis",
+   "labelB": "Osteoarthritis",
+   "discriminator": "Osteoarthritis: degenerative, worse with use; rheumatoid: inflammatory, morning stiffness, symmetric small joints"
+  },
+  {
+   "conceptIdA": "C-1aa39154-2c33-4727-9aeb-2280f7fa6fb8",
+   "conceptIdB": "C-3b8bff0a-01de-4992-8d36-6aa6557fe861",
+   "labelA": "Schizophrenia",
+   "labelB": "Bipolar disorder",
+   "discriminator": "Schizophrenia: persistent psychosis; bipolar: episodic mood changes with possible psychosis"
+  },
+  {
+   "conceptIdA": "C-59be10cb-d8b9-4c02-a570-a0189ed247ce",
+   "conceptIdB": "C-8ec15908-e1f0-48bd-adfc-ce34d607fb20",
+   "labelA": "Scleritis",
+   "labelB": "Episcleritis",
+   "discriminator": "Episcleritis is mild and blanches with phenylephrine; scleritis is painful and sight-threatening"
+  },
+  {
+   "conceptIdA": "C-12faa4d0-d453-4401-be67-fa5b77b94a7a",
+   "conceptIdB": "C-4a019dd1-b4bc-4088-ab57-9126308b40d6",
+   "labelA": "Screening for disease",
+   "labelB": "Outbreak investigation",
+   "discriminator": "Screening tests healthy people for early disease; outbreak investigation responds to an excess of cases"
+  },
+  {
+   "conceptIdA": "C-50d758b1-d082-4338-b3ab-345b1bde78d6",
+   "conceptIdB": "C-ce8207ee-0446-487a-a215-6c027a839a48",
+   "labelA": "Sedative-hypnotics",
+   "labelB": "Anxiolytics",
+   "discriminator": "Sedative-hypnotics induce sleep; anxiolytics relieve anxiety"
+  },
+  {
+   "conceptIdA": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "conceptIdB": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+   "labelA": "Shock",
+   "labelB": "Sepsis",
+   "discriminator": "Shock is circulatory failure of any cause; sepsis is infection with organ dysfunction"
+  },
+  {
+   "conceptIdA": "C-4fd0e908-9570-47a2-ae69-42f7da6aeab6",
+   "conceptIdB": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+   "labelA": "Sickle cell disease",
+   "labelB": "Thalassaemia",
+   "discriminator": "Sickle cell: HbS, vaso-occlusive crises; thalassaemia: reduced globin chains, microcytosis with high RBC count"
+  },
+  {
+   "conceptIdA": "C-14ba308b-8288-430d-940b-1a2bedd07907",
+   "conceptIdB": "C-4e3724ca-8c00-422e-80bc-85dc0d72fb4a",
+   "labelA": "Smooth muscle contraction",
+   "labelB": "Skeletal muscle contraction",
+   "discriminator": "Skeletal muscle: voluntary, troponin-regulated; smooth muscle: involuntary, calmodulin-regulated"
+  },
+  {
+   "conceptIdA": "C-04b4d135-508d-4b4f-b4ea-41a779faed0a",
+   "conceptIdB": "C-27e75789-c530-4be9-a10a-2d4076e274bc",
+   "labelA": "Sterilisation",
+   "labelB": "Disinfection",
+   "discriminator": "Sterilisation kills all organisms including spores; disinfection kills most but not spores"
+  },
+  {
+   "conceptIdA": "C-19ef01e7-291d-4b65-b08e-a50dbe778648",
+   "conceptIdB": "C-37ece2da-9af1-47ba-959c-586c657d804e",
+   "labelA": "Strabismus",
+   "labelB": "Amblyopia",
+   "discriminator": "Strabismus is misalignment; amblyopia is reduced vision that can follow it"
+  },
+  {
+   "conceptIdA": "C-2091d32f-2f7a-4753-8e69-cdcde5ccab32",
+   "conceptIdB": "C-ad493a49-9f74-41cd-9bae-7bd46af6c275",
+   "labelA": "Strangulation",
+   "labelB": "Hanging",
+   "discriminator": "Hanging: oblique ligature mark, rising to the knot; strangulation: horizontal, encircling mark"
+  },
+  {
+   "conceptIdA": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+   "conceptIdB": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+   "labelA": "Stroke",
+   "labelB": "Head injury",
+   "discriminator": "Stroke is vascular; head injury is traumatic"
+  },
+  {
+   "conceptIdA": "C-9d4750a6-e312-473a-a5fd-455b5f67c8ac",
+   "conceptIdB": "C-ad493a49-9f74-41cd-9bae-7bd46af6c275",
+   "labelA": "Suffocation",
+   "labelB": "Hanging",
+   "discriminator": "Hanging compresses the neck by body weight; suffocation blocks the airway without neck pressure"
+  },
+  {
+   "conceptIdA": "C-6844e9bb-2fe2-4105-ba76-d52157abc7b7",
+   "conceptIdB": "C-fab005ef-0010-4d4c-83fe-e44f5781754b",
+   "labelA": "Syphilis",
+   "labelB": "Genital ulcer disease",
+   "discriminator": "Syphilis chancre is painless and indurated; other genital ulcers (chancroid, herpes) are painful"
+  },
+  {
+   "conceptIdA": "C-cd73c008-c42d-4822-849a-60d222e2433e",
+   "conceptIdB": "C-f476b8cc-e04c-425d-88b3-7657e9a22c39",
+   "labelA": "Syringomyelia",
+   "labelB": "Subacute combined degeneration",
+   "discriminator": "Syringomyelia: cape-like loss of pain and temperature; SCD: dorsal column and corticospinal loss from B12 deficiency"
+  },
+  {
+   "conceptIdA": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "conceptIdB": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+   "labelA": "Thrombosis",
+   "labelB": "Embolism",
+   "discriminator": "Thrombus forms in place; embolus travels and lodges elsewhere"
+  },
+  {
+   "conceptIdA": "C-30126cea-cc16-4087-8bf6-5700546150f3",
+   "conceptIdB": "C-c989876f-57a6-4045-b026-7c6000db486c",
+   "labelA": "Thyroid eye disease",
+   "labelB": "Ptosis",
+   "discriminator": "Ptosis is a drooping lid; thyroid eye disease causes lid retraction and proptosis"
+  },
+  {
+   "conceptIdA": "C-66e37b7d-9f84-425c-81ae-bea625066ad1",
+   "conceptIdB": "C-8736617a-09b7-40a0-b98e-58cf2db36829",
+   "labelA": "Thyroid hormone replacement",
+   "labelB": "Antithyroid drugs",
+   "discriminator": "Thyroxine replaces deficient hormone; antithyroid drugs block excess synthesis"
+  },
+  {
+   "conceptIdA": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "conceptIdB": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "labelA": "Thyrotoxicosis",
+   "labelB": "Hypothyroidism",
+   "discriminator": "Thyrotoxicosis: low TSH, high T4; hypothyroidism: high TSH, low T4 in primary disease"
+  },
+  {
+   "conceptIdA": "C-72abe936-b1b2-42ba-8ab0-9dda0f19ca3f",
+   "conceptIdB": "C-aec2f495-99a8-4ae0-bc5c-6840d441c59a",
+   "labelA": "Tinnitus",
+   "labelB": "Deafness",
+   "discriminator": "Deafness is hearing loss; tinnitus is a perceived sound"
+  },
+  {
+   "conceptIdA": "C-bc65579e-a951-4c48-bcc0-cbe6cbb901ae",
+   "conceptIdB": "C-ca2a24c4-9004-411b-9008-17dffd85707a",
+   "labelA": "Turner syndrome",
+   "labelB": "Down syndrome",
+   "discriminator": "Down syndrome: trisomy 21; Turner syndrome: 45,X with short stature"
+  },
+  {
+   "conceptIdA": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+   "conceptIdB": "C-e3cc839d-3593-48f5-8b4c-e132c3d54518",
+   "labelA": "Type 1 diabetes mellitus",
+   "labelB": "Type 2 diabetes mellitus",
+   "discriminator": "Type 1: autoimmune insulin deficiency, ketosis-prone; type 2: insulin resistance, often obese"
+  },
+  {
+   "conceptIdA": "C-c5a0323d-f6e6-4c6d-bdc9-f627b3daa224",
+   "conceptIdB": "C-ec957217-56cb-4b0b-8a05-d70de3ca0f95",
+   "labelA": "Urinary retention",
+   "labelB": "Neurogenic bladder",
+   "discriminator": "Urinary retention is often obstructive; neurogenic bladder is a nerve control failure"
+  },
+  {
+   "conceptIdA": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "conceptIdB": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+   "labelA": "Urolithiasis",
+   "labelB": "Hydronephrosis",
+   "discriminator": "Urolithiasis is the stone; hydronephrosis is the dilatation it can cause"
+  },
+  {
+   "conceptIdA": "C-28462a96-ae0c-4f3a-9bb6-dd7172490ce9",
+   "conceptIdB": "C-c188ee66-655d-486d-a536-92cd5194e323",
+   "labelA": "Uveitis",
+   "labelB": "Conjunctivitis",
+   "discriminator": "Conjunctivitis: discharge, normal vision; uveitis: pain, photophobia, reduced vision, ciliary flush"
+  },
+  {
+   "conceptIdA": "C-ac029c61-2593-4449-8be7-cecd7bbd4c76",
+   "conceptIdB": "C-fa4ae732-e4f8-4e0b-892c-84c50fbd3fea",
+   "labelA": "Varicella zoster infection",
+   "labelB": "Herpes simplex infection",
+   "discriminator": "HSV: grouped vesicles, recurrent at the same site; VZV: dermatomal, unilateral, painful"
+  },
+  {
+   "conceptIdA": "C-2e96f256-4cf7-4279-8d14-242404004c26",
+   "conceptIdB": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+   "labelA": "Varicocele",
+   "labelB": "Hydrocele",
+   "discriminator": "Varicocele feels like a bag of worms; hydrocele transilluminates"
+  },
+  {
+   "conceptIdA": "C-e00716b0-86e8-400f-88ca-909de854625f",
+   "conceptIdB": "C-f01f28ba-14f3-4c4a-b4c6-1f1c7efc612a",
+   "labelA": "Varicose veins",
+   "labelB": "Deep vein thrombosis",
+   "discriminator": "Varicose veins are superficial and chronic; DVT is deep, acute, with risk of embolism"
+  },
+  {
+   "conceptIdA": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+   "conceptIdB": "C-be64c410-a805-43c2-b1cb-ad6fa28661a1",
+   "labelA": "Vitamin B12 deficiency",
+   "labelB": "Folate deficiency",
+   "discriminator": "B12 deficiency adds neurological signs; folate deficiency does not"
+  },
+  {
+   "conceptIdA": "C-303f7a79-0e07-4372-bef9-530a4986d0fc",
+   "conceptIdB": "C-76ac99ee-4fc6-49a1-afdf-873b2b13f43c",
+   "labelA": "Vitamin C deficiency",
+   "labelB": "Vitamin A deficiency",
+   "discriminator": "Vitamin A deficiency causes night blindness; vitamin C deficiency causes scurvy"
+  },
+  {
+   "conceptIdA": "C-cf6739be-1b08-4664-a0e2-99b40d5e8c03",
+   "conceptIdB": "C-f8b97413-97eb-4323-9c70-b9785634d3e6",
+   "labelA": "Vitamin D disorders",
+   "labelB": "Osteomalacia and rickets",
+   "discriminator": "Vitamin D disorders are the cause; rickets/osteomalacia are the bone disease"
+  },
+  {
+   "conceptIdA": "C-22eac532-4f1e-4b3b-a984-2b1fba448ed5",
+   "conceptIdB": "C-915d1ae7-f863-4538-a0a1-d5c2c507dfdc",
+   "labelA": "Waterborne diseases",
+   "labelB": "Vector-borne diseases",
+   "discriminator": "Waterborne diseases spread by contaminated water; vector-borne by insect vectors"
+  }
+ ]
+}

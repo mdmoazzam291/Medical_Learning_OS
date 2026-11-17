@@ -9,6 +9,10 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Confusion pairs ("commonly confused with")
+- `data/nmc-concept-confusions.json` (new): 173 AI-drafted undirected pairs across 324 concepts, each with the key discriminator (e.g. nephrotic vs nephritic, DKA vs HHS, open- vs angle-closure glaucoma, hanging vs strangulation). Validated by `src/domain/nmc-concept-confusions.js`; source `ops/nmc/confusions/pairs.json`; builder `ops/nmc/build-concept-confusions.js`.
+- Purpose: misconception detection (a wrong answer that picks the confused concept) and compare cards. Not faculty-reviewed; not yet used by the app.
+
 ### 2026-11-18 — Cross-concept prerequisites complete (all 19 subjects)
 - Added preclinical/paraclinical internal links: Physiology 133, Biochemistry 71, Pathology 105, Pharmacology 68, Microbiology 32, Anatomy 119 (incl. clinical anatomy and embryology chains). Total 1,600 links (1,234 essential); 1,269 of 1,544 concepts have at least one prerequisite. The remaining 275 are structures, laws, programmes or skills without a real prerequisite.
 - The cycle check caught one cross-batch contradiction (Antimicrobial resistance vs Antimicrobial chemotherapy); kept chemotherapy → resistance.
