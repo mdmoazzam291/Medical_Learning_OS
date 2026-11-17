@@ -18,12 +18,12 @@ Checked: 2026-11-17T20:25Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Production: owner-api v27 (registry @27 pinned by commit `3c65f32` + SHA-256; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v28 (@27 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
 ## Known gaps
-- Cross-concept prerequisites: Medicine, Surgery, Paediatrics and OBG done (712 links, `data/nmc-concept-prerequisites.json`); other 15 subjects pending, one at a time via `ops/nmc/build-concept-prerequisites.js`. Not yet used by the app.
+- Cross-concept prerequisites: all clinical/paraclinical subjects done (1,072 links, `data/nmc-concept-prerequisites.json`); preclinical internal links pending, one at a time via `ops/nmc/build-concept-prerequisites.js`. Not yet used by the app.
 - After an owner identity edit, linked objectives show "changed" until re-pinned with `ops/nmc/repin-identity-digests.js`.
 - Source-exception batch metadata says `subjectId: surgery` although it spans nine subjects (accepted file is checksum-pinned; reports should use `subjectIds`).
 - PARSE branches `docs/parse-brand-identity-20261008` and `feat/parse-preview-brand-20261013` await manual deletion by the owner.
 
 ## Next actions
-1. Next subject of cross-concept prerequisites (suggested: Community Medicine, Forensic Medicine, ENT, Ophthalmology, Orthopaedics, Dermatology, Psychiatry, Anaesthesia, Radiology, then preclinical internal links).
+1. Next subject of cross-concept prerequisites (preclinical internal links: Anatomy, Physiology, Biochemistry, then Pathology/Pharmacology/Microbiology internals).
 2. Owner: delete the two PARSE branches on GitHub.
 Product rules: `docs/PRODUCT_PRINCIPLES.md`.

@@ -1,0 +1,404 @@
+[
+ {
+  "prerequisite": "Concept of health",
+  "concept": "Disease causation",
+  "strength": "essential",
+  "reason": "Causation models build on the concept of health"
+ },
+ {
+  "prerequisite": "Disease causation",
+  "concept": "Natural history of disease",
+  "strength": "essential",
+  "reason": "Natural history follows disease causation"
+ },
+ {
+  "prerequisite": "Natural history of disease",
+  "concept": "Levels of prevention",
+  "strength": "essential",
+  "reason": "Levels of prevention map onto the natural history"
+ },
+ {
+  "prerequisite": "Levels of prevention",
+  "concept": "Health promotion",
+  "strength": "essential",
+  "reason": "Health promotion is primordial and primary prevention"
+ },
+ {
+  "prerequisite": "Social determinants of health",
+  "concept": "Disease causation",
+  "strength": "helpful",
+  "reason": "Social determinants are causes of disease"
+ },
+ {
+  "prerequisite": "Epidemiology",
+  "concept": "Measures of morbidity and mortality",
+  "strength": "essential",
+  "reason": "Morbidity and mortality measures are epidemiological tools"
+ },
+ {
+  "prerequisite": "Epidemiology",
+  "concept": "Epidemiological study designs",
+  "strength": "essential",
+  "reason": "Study designs apply epidemiological principles"
+ },
+ {
+  "prerequisite": "Epidemiological study designs",
+  "concept": "Association and causation",
+  "strength": "essential",
+  "reason": "Causal inference relies on study design"
+ },
+ {
+  "prerequisite": "Biostatistics",
+  "concept": "Tests of significance",
+  "strength": "essential",
+  "reason": "Significance tests apply biostatistics"
+ },
+ {
+  "prerequisite": "Sampling methods",
+  "concept": "Tests of significance",
+  "strength": "helpful",
+  "reason": "Valid inference depends on sampling"
+ },
+ {
+  "prerequisite": "Research methodology",
+  "concept": "Sampling methods",
+  "strength": "essential",
+  "reason": "Sampling is part of research methodology"
+ },
+ {
+  "prerequisite": "Epidemiological study designs",
+  "concept": "Critical appraisal",
+  "strength": "essential",
+  "reason": "Appraisal judges study design and bias"
+ },
+ {
+  "prerequisite": "Tests of significance",
+  "concept": "Critical appraisal",
+  "strength": "essential",
+  "reason": "Appraisal interprets statistical results"
+ },
+ {
+  "prerequisite": "Natural history of disease",
+  "concept": "Screening for disease",
+  "strength": "essential",
+  "reason": "Screening targets the presymptomatic stage"
+ },
+ {
+  "prerequisite": "Measures of morbidity and mortality",
+  "concept": "Screening for disease",
+  "strength": "helpful",
+  "reason": "Screening value depends on prevalence"
+ },
+ {
+  "prerequisite": "Epidemiology",
+  "concept": "Outbreak investigation",
+  "strength": "essential",
+  "reason": "Outbreak investigation applies epidemiology"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Outbreak investigation",
+  "strength": "essential",
+  "reason": "Investigation traces transmission"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Communicable disease control",
+  "strength": "essential",
+  "reason": "Control measures break transmission"
+ },
+ {
+  "prerequisite": "Immunisation",
+  "concept": "Communicable disease control",
+  "strength": "essential",
+  "reason": "Immunisation is a key control measure"
+ },
+ {
+  "prerequisite": "Levels of prevention",
+  "concept": "Non-communicable diseases",
+  "strength": "essential",
+  "reason": "NCD control applies levels of prevention"
+ },
+ {
+  "prerequisite": "Measures of morbidity and mortality",
+  "concept": "Health indicators",
+  "strength": "essential",
+  "reason": "Health indicators use morbidity and mortality measures"
+ },
+ {
+  "prerequisite": "Demography",
+  "concept": "Vital statistics",
+  "strength": "essential",
+  "reason": "Vital statistics describe population events"
+ },
+ {
+  "prerequisite": "Demography",
+  "concept": "Sex ratio",
+  "strength": "helpful",
+  "reason": "Sex ratio is a demographic measure"
+ },
+ {
+  "prerequisite": "Demography",
+  "concept": "Population stabilisation",
+  "strength": "essential",
+  "reason": "Stabilisation is a demographic goal"
+ },
+ {
+  "prerequisite": "Population stabilisation",
+  "concept": "National Population Policy",
+  "strength": "essential",
+  "reason": "The policy aims at population stabilisation"
+ },
+ {
+  "prerequisite": "Health indicators",
+  "concept": "Health information systems",
+  "strength": "essential",
+  "reason": "Information systems collect health indicators"
+ },
+ {
+  "prerequisite": "Vital statistics",
+  "concept": "Health information systems",
+  "strength": "helpful",
+  "reason": "Vital registration feeds information systems"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Waterborne diseases",
+  "strength": "essential",
+  "reason": "Waterborne diseases follow faecal-oral transmission"
+ },
+ {
+  "prerequisite": "Water purification",
+  "concept": "Waterborne diseases",
+  "strength": "essential",
+  "reason": "Water purification prevents waterborne disease"
+ },
+ {
+  "prerequisite": "Environmental health",
+  "concept": "Water purification",
+  "strength": "helpful",
+  "reason": "Purification is part of environmental health"
+ },
+ {
+  "prerequisite": "Environmental health",
+  "concept": "Excreta and refuse disposal",
+  "strength": "helpful",
+  "reason": "Disposal is part of environmental health"
+ },
+ {
+  "prerequisite": "Environmental health",
+  "concept": "Housing standards",
+  "strength": "helpful",
+  "reason": "Housing is part of environmental health"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Vector-borne diseases",
+  "strength": "essential",
+  "reason": "Vector-borne diseases follow vector transmission"
+ },
+ {
+  "prerequisite": "Medical entomology",
+  "concept": "Vector-borne diseases",
+  "strength": "essential",
+  "reason": "Vector biology explains these diseases"
+ },
+ {
+  "prerequisite": "Medical entomology",
+  "concept": "Insecticides and rodenticides",
+  "strength": "essential",
+  "reason": "Insecticides target specific vectors"
+ },
+ {
+  "prerequisite": "Nutrients",
+  "concept": "Nutrition surveillance",
+  "strength": "essential",
+  "reason": "Surveillance tracks nutrient status"
+ },
+ {
+  "prerequisite": "Micronutrient deficiencies",
+  "concept": "Food fortification",
+  "strength": "essential",
+  "reason": "Fortification targets micronutrient deficiencies"
+ },
+ {
+  "prerequisite": "Transmission of infection",
+  "concept": "Food hygiene",
+  "strength": "helpful",
+  "reason": "Food hygiene prevents foodborne transmission"
+ },
+ {
+  "prerequisite": "Health communication",
+  "concept": "Health education",
+  "strength": "essential",
+  "reason": "Health education applies health communication"
+ },
+ {
+  "prerequisite": "Health promotion",
+  "concept": "Health education",
+  "strength": "helpful",
+  "reason": "Education is a health promotion tool"
+ },
+ {
+  "prerequisite": "Health programme evaluation",
+  "concept": "Health planning",
+  "strength": "helpful",
+  "reason": "Planning uses programme evaluation"
+ },
+ {
+  "prerequisite": "Health indicators",
+  "concept": "Health programme evaluation",
+  "strength": "essential",
+  "reason": "Evaluation uses health indicators"
+ },
+ {
+  "prerequisite": "Primary health care",
+  "concept": "Health care delivery system in India",
+  "strength": "essential",
+  "reason": "India's system is built on primary health care"
+ },
+ {
+  "prerequisite": "Health care delivery system in India",
+  "concept": "Integrated Management of Neonatal and Childhood Illness",
+  "strength": "helpful",
+  "reason": "IMNCI runs within the delivery system"
+ },
+ {
+  "prerequisite": "Natural history of disease",
+  "concept": "High-risk approach",
+  "strength": "helpful",
+  "reason": "The high-risk approach targets early stages"
+ },
+ {
+  "prerequisite": "High-risk approach",
+  "concept": "Safe motherhood",
+  "strength": "essential",
+  "reason": "Safe motherhood applies the high-risk approach"
+ },
+ {
+  "prerequisite": "Child survival",
+  "concept": "Integrated Management of Neonatal and Childhood Illness",
+  "strength": "essential",
+  "reason": "IMNCI is a child survival strategy"
+ },
+ {
+  "prerequisite": "Safe motherhood",
+  "concept": "Reproductive and child health programme",
+  "strength": "essential",
+  "reason": "RCH includes safe motherhood"
+ },
+ {
+  "prerequisite": "Child survival",
+  "concept": "Reproductive and child health programme",
+  "strength": "essential",
+  "reason": "RCH includes child survival"
+ },
+ {
+  "prerequisite": "Occupational hazards",
+  "concept": "Occupational diseases",
+  "strength": "essential",
+  "reason": "Occupational diseases follow workplace hazards"
+ },
+ {
+  "prerequisite": "Occupational hazards",
+  "concept": "Ergonomics",
+  "strength": "helpful",
+  "reason": "Ergonomics reduces workplace hazards"
+ },
+ {
+  "prerequisite": "Occupational hazards",
+  "concept": "Occupational health services",
+  "strength": "essential",
+  "reason": "Services target occupational hazards"
+ },
+ {
+  "prerequisite": "Occupational hazards",
+  "concept": "Occupational health of healthcare workers",
+  "strength": "essential",
+  "reason": "Healthcare workers face specific hazards"
+ },
+ {
+  "prerequisite": "Occupational health services",
+  "concept": "Employees State Insurance",
+  "strength": "helpful",
+  "reason": "ESI provides occupational health cover"
+ },
+ {
+  "prerequisite": "Ageing",
+  "concept": "Health problems of the elderly",
+  "strength": "essential",
+  "reason": "Elderly health problems follow ageing"
+ },
+ {
+  "prerequisite": "Health problems of the elderly",
+  "concept": "Geriatric health services",
+  "strength": "essential",
+  "reason": "Services target elderly health problems"
+ },
+ {
+  "prerequisite": "Geriatric health services",
+  "concept": "National Programme for Health Care of the Elderly",
+  "strength": "essential",
+  "reason": "The programme organises geriatric services"
+ },
+ {
+  "prerequisite": "Mental disorders",
+  "concept": "Mental health",
+  "strength": "essential",
+  "reason": "Mental health covers mental disorders"
+ },
+ {
+  "prerequisite": "Mental health",
+  "concept": "National Mental Health Programme",
+  "strength": "essential",
+  "reason": "The programme delivers mental health care"
+ },
+ {
+  "prerequisite": "Sources of epidemiological data",
+  "concept": "Community diagnosis",
+  "strength": "essential",
+  "reason": "Community diagnosis uses epidemiological data"
+ },
+ {
+  "prerequisite": "Health economics",
+  "concept": "Health management techniques",
+  "strength": "helpful",
+  "reason": "Management techniques use health economics"
+ },
+ {
+  "prerequisite": "Public health",
+  "concept": "Public health law",
+  "strength": "helpful",
+  "reason": "Public health law supports public health action"
+ },
+ {
+  "prerequisite": "International health agencies",
+  "concept": "International health",
+  "strength": "essential",
+  "reason": "International health works through its agencies"
+ },
+ {
+  "prerequisite": "Essential medicines",
+  "concept": "Counterfeit medicines",
+  "strength": "helpful",
+  "reason": "Counterfeits threaten essential medicines"
+ },
+ {
+  "prerequisite": "Health-care seeking behaviour",
+  "concept": "Clinico-social assessment",
+  "strength": "helpful",
+  "reason": "Clinico-social assessment includes care seeking"
+ },
+ {
+  "prerequisite": "Social determinants of health",
+  "concept": "Family health assessment",
+  "strength": "helpful",
+  "reason": "Family assessment covers social determinants"
+ },
+ {
+  "prerequisite": "Concept of health",
+  "concept": "Public health",
+  "strength": "essential",
+  "reason": "Public health builds on the concept of health"
+ }
+]

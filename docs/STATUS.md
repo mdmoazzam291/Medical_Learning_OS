@@ -9,6 +9,9 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Cross-concept prerequisites: all clinical and paraclinical subjects
+- Added Community Medicine 67, Forensic Medicine 61, ENT 52, Ophthalmology 49, Orthopaedics 45, Dermatology 35, Psychiatry 15, Anaesthesia 19, Radiology 17 links. Total 1,072 links (817 essential) across 771 concepts; acyclic; none over the review mark. Remaining: links inside preclinical subjects (Anatomy, Physiology, Biochemistry) and leftover paraclinical internals. AI-drafted; not used by the app yet.
+
 ### 2026-11-18 — Cross-concept prerequisites: Surgery, Paediatrics, OBG
 - Added 137 Surgery, 134 Paediatrics and 100 OBG links (`ops/nmc/prerequisites/*.json`). Total 712 links (557 essential) across 479 concepts; acyclic, none over the 6-link review mark. Concepts already linked by an earlier subject keep their links. Unlinked remainders are structures, skills or programme topics without a real prerequisite. AI-drafted; not used by the app yet.
 
