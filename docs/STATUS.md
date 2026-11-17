@@ -8,6 +8,16 @@
 
 ---
 
+## NMC source-exception batch (last 20 rows) — 2026-11-17T11:45Z
+
+- Owner decisions (17:10 IST), recorded in `docs/evidence/2026-11-17-nmc-source-exception-owner-decisions.json`: accept the 7 search aliases; label SU24 'Pancreatic disorders' and SU27 'Vascular and lymphatic disorders' (overlay updated); rewrite the 7 mode holds as knowledge objectives at KH.
+- Batch `nmc-surgery-concepts-source-exceptions-v1-20261116` (spec `ops/nmc/specs/source_exceptions_concepts_v1.py`): 25 concepts (14 new, 11 reused), 27 objectives, 19 rows (17 editorial exceptions + PE6.4 replacement tasks). PY9.1 is already bound by the physiology v3 batch; PS9.2 is a deletion. No clash with production names.
+- Registry rules: exception rows bind only via basis `source-exception-resolved` (overlay search-alias or topic-group) or `official-replacement` (row box may be null; row hash from source metadata); deleted rows never bind. Test asserts every exception binding rests on an overlay row. Admin shows 'Source exception resolved'.
+- Endpoint pin: commit `9e013b7`, SHA-256 `f6fdf245…51d8`.
+- Next: owner acceptance; then bind, add this batch and PY9.1 (physiology v3 bindings) to the registry @23, re-pin owner-api data and redeploy.
+
+---
+
 ## NMC foundation: all subject batches accepted and bound (registry @22) — 2026-11-17T09:45Z
 
 - Owner accepted `nmc-medicine-concepts-part-b-v1-20261116` at 09:36:13Z (56 receipts; pairs digest `f6d28e72…c70c` matched). Registry @22: 2,836 objectives, 2,837 bindings, 1,528 concepts, **2,613 of 2,634 NMC rows linked (99.2%)**. All draft; no clinical approval, learner activation or question import.

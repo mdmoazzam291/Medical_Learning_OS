@@ -1,3 +1,13 @@
+## NMC source-exception batch (last 20 rows) — 2026-11-17T11:45Z
+
+- Owner decisions (17:10 IST), recorded in `docs/evidence/2026-11-17-nmc-source-exception-owner-decisions.json`: accept the 7 search aliases; label SU24 'Pancreatic disorders' and SU27 'Vascular and lymphatic disorders' (overlay updated); rewrite the 7 mode holds as knowledge objectives at KH.
+- Batch `nmc-surgery-concepts-source-exceptions-v1-20261116` (spec `ops/nmc/specs/source_exceptions_concepts_v1.py`): 25 concepts (14 new, 11 reused), 27 objectives, 19 rows (17 editorial exceptions + PE6.4 replacement tasks). PY9.1 is already bound by the physiology v3 batch; PS9.2 is a deletion. No clash with production names.
+- Registry rules: exception rows bind only via basis `source-exception-resolved` (overlay search-alias or topic-group) or `official-replacement` (row box may be null; row hash from source metadata); deleted rows never bind. Test asserts every exception binding rests on an overlay row. Admin shows 'Source exception resolved'.
+- Endpoint pin: commit `9e013b7`, SHA-256 `f6fdf245…51d8`.
+- Next: owner acceptance; then bind, add this batch and PY9.1 (physiology v3 bindings) to the registry @23, re-pin owner-api data and redeploy.
+
+---
+
 ## owner-api: foundation data fetched at a pinned commit instead of bundled — 2026-11-17T10:20Z
 
 - 2026-11-17: Root cause of foundation page stall: the private-identity lookup sent ~1,500 IDs in one PostgREST GET (520, retried until the 150 s wall limit). Now chunked by 150; data fetch gets a 12 s timeout, a jsDelivr fallback (same pinned commit + SHA-256) and stage logging.
