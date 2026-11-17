@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-17 — Deploys, open-PR inventory, product principles
+- Deployed owner-api v25 (registry @25, overlay-checked validation) and nmc-admin-preview v26 (@25 Admin learner preview). PR #468 merged after all four checks passed.
+- `docs/PR_INVENTORY-2026-11-17.md`: 76 open PRs grouped for owner approval; none closed.
+- `docs/PRODUCT_PRINCIPLES.md`: durable design rules (exam yield ≠ forgetting, competence vs session state, no early RL/bandits, measure transfer, no learning-style labels).
+
 ### 2026-11-17 — Registry @25: learning metadata; full Admin learner preview
 - `src/domain/nmc-learning-metadata.js` + `ops/nmc/apply-learning-metadata.js` (deterministic, AI-authored rules; evidence `docs/evidence/2026-11-17-nmc-learning-metadata-v1.json` lists every change). Objective IDs and wording unchanged.
 - Task: the 1,875 objectives tagged `mechanism` re-tagged to the question-intelligence vocabulary by the earliest-mentioned focus (747 remain mechanism; e.g. etiology 158, differential 155, interpretation 160, treatment-selection 75). New `taskFacets` lists every task an objective names (1,613 one, 833 two or more).
