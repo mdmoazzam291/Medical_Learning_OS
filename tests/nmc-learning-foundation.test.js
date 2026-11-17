@@ -58,7 +58,7 @@ test('Physiology batch v3 objectives sit in the registry on receipt-bound concep
  const inReg=bind.objectives.filter(o=>byOv.has(o.objectiveVersionId));
  assert.equal(inReg.length,187); // 185 + PY9.1 official-replacement pair (registry @23)
  for(const o of inReg){const r=byOv.get(o.objectiveVersionId);assert.equal(r.objective.conceptId,o.conceptId);assert.ok(['knows','knows-how','shows-how','performs'].includes(r.objective.depth));}
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@25');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@26');
 });
 test('source-exception bindings rest on an overlay resolution and deleted rows never bind',()=>{
  const pack=JSON.parse(readFileSync(new URL('../data/nmc-learning-foundation-drafts.json',import.meta.url)));
@@ -93,11 +93,35 @@ test('validator rejects exception bindings without the matching overlay resoluti
  standard.sourceBindings[s].basis='source-exception-resolved';
  assert.throws(()=>validateFoundationDrafts(standard,catalogue,overlay),/foundation_draft_invalid/,'standard row cannot claim an exception basis');
 });
+test('registry @26 prerequisites are same-concept, lower-level and acyclic; review state is automated only',async()=>{
+ const {TASK_TIER,sameConceptPrerequisites,reviewFindings}=await import('../src/domain/nmc-learning-metadata.js');
+ const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-prerequisites-and-review-v1.json',import.meta.url)));
+ const byId=new Map(pack.objectives.map(r=>[r.objective.objectiveVersionId,r]));
+ let edges=0;
+ for(const row of pack.objectives)for(const q of row.objective.prerequisites){edges++;const p=byId.get(q);
+  assert.equal(p.objective.conceptId,row.objective.conceptId,'prerequisite shares the concept');
+  assert.ok(TASK_TIER[p.objective.task]<=TASK_TIER[row.objective.task],'never a higher task tier');}
+ assert.equal(edges,ev.counts.edges);assert.ok(edges>1000);
+ for(const row of pack.objectives)assert.equal(row.reviewState,row.reviewFindings.length?'needs-attention':'auto-checked');
+ const rows=[{id:'a',conceptId:'C',task:'treatment-selection',phase:3,wording:'Select first-line therapy.'},{id:'b',conceptId:'C',task:'mechanism',phase:1,wording:'Explain the mechanism.'},
+  {id:'c',conceptId:'C',task:'diagnosis',phase:3,wording:'Diagnose it.'},{id:'d',conceptId:'D',task:'recall',phase:1,wording:'Define it.'}];
+ const p=sameConceptPrerequisites(rows);
+ assert.deepEqual(p.get('a'),['c']);assert.deepEqual(p.get('c'),['b']);assert.deepEqual(p.get('b'),[]);assert.deepEqual(p.get('d'),[]);
+ const f=reviewFindings([{id:'x',conceptId:'C',wording:'Explain renal clearance.',bound:true},{id:'y',conceptId:'D',wording:'Explain renal clearance.',bound:false},{id:'z',conceptId:'D',wording:'Understand the kidney.',bound:true}]);
+ assert.deepEqual(f.get('x'),['duplicate-wording']);assert.deepEqual(f.get('y'),['duplicate-wording','no-source-binding']);assert.ok(f.get('z').includes('non-measurable-verb'));
+ const bad=structuredClone(pack);bad.objectives[0].reviewState='needs-attention';bad.objectives[0].reviewFindings=[];
+ assert.throws(()=>validateFoundationDrafts(bad,catalogue,overlay),/foundation_draft_invalid/,'state must match findings');
+ const faculty=structuredClone(pack);faculty.objectives[0].reviewState='faculty-reviewed';
+ assert.throws(()=>validateFoundationDrafts(faculty,catalogue,overlay),/foundation_draft_invalid/,'no human review state can be claimed');
+ const cyc=structuredClone(pack);const [r1,r2]=cyc.objectives.filter(r=>r.objective.prerequisites.length).slice(0,1).map(r=>[r,cyc.objectives.find(x=>x.objective.objectiveVersionId===r.objective.prerequisites[0])])[0];
+ r2.objective.prerequisites=[r1.objective.objectiveVersionId];
+ assert.throws(()=>validateFoundationDrafts(cyc,catalogue,overlay),/./,'cycles are rejected');
+});
 test('registry @25 learning metadata is deterministic, uses the question task vocabulary and keeps IDs and wording',async()=>{
  const {classifyTask,taskFacets,assessability,contextFor}=await import('../src/domain/nmc-learning-metadata.js');
  const {TASKS}=await import('../src/domain/question-intelligence.js');
  const ev=JSON.parse(readFileSync(new URL('../docs/evidence/2026-11-17-nmc-learning-metadata-v1.json',import.meta.url)));
- assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@25');
+ assert.equal(pack.draftVersion,'mbbs-foundation:original-objectives@26');
  for(const row of pack.objectives){
   assert.ok(['in-app','in-app-partial','offline-only'].includes(row.assessability));
   assert.ok(row.taskFacets.every(t=>TASKS.includes(t)));
