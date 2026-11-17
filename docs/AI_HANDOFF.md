@@ -1,3 +1,11 @@
+## Fix: Anatomy part A acceptance rejected (`concept_draft_invalid`) — 2026-11-17T07:15Z
+
+- Three owner acceptance attempts (07:03–07:07Z) returned 409 `concept_draft_invalid`: the Parotid gland document carried organ facet `salivary gland`, which fails the database facet pattern `^[a-z0-9]+(-[a-z0-9]+)*$`. The RPC is transactional, so nothing was saved.
+- Fixed to `salivary-gland`; the batch test now checks facet format and uniqueness for every batch. Only the Parotid gland document changed; batch ID unchanged.
+- Endpoint re-pinned: commit `3059a77`, SHA-256 `b0f94468…07fb`.
+
+---
+
 ## NMC Anatomy concept batch part A v1 (AN1–AN43) — 2026-11-17T07:00Z
 
 - `docs/evidence/2026-11-17-nmc-anatomy-a-concept-batch-v1.json` (spec `ops/nmc/specs/anatomy_a_concepts_v1.py`): 153 concepts (127 new; 26 reused, e.g. Breast, Heart, Coronary circulation, Thyroid gland, Neuron, Synapse, Cataract, Facial nerve palsy), 261 objectives, all 254 rows AN1–AN43. No Anatomy row in scope was held by a source-scope review.
