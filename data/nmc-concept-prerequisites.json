@@ -47,7 +47,7 @@
    "conceptId": "C-3e286aac-9394-4c56-a59a-8c6e7189cd3a",
    "prerequisiteLabel": "Abdominal examination",
    "label": "Abdominal pain in children",
-   "strength": "essential",
+   "strength": "helpful",
    "reason": "Abdominal pain is assessed by examination"
   },
   {
@@ -5795,14 +5795,6 @@
    "reason": "Humerus fractures follow its anatomy"
   },
   {
-   "prerequisiteConceptId": "C-8356e8b3-5554-4f45-bf18-d6ebce7e0b01",
-   "conceptId": "C-0ffa3a6d-40e3-4ef4-8f85-cdca17b8dbb1",
-   "prerequisiteLabel": "Radial nerve injury",
-   "label": "Humerus fractures",
-   "strength": "essential",
-   "reason": "Shaft fractures risk the radial nerve"
-  },
-  {
    "prerequisiteConceptId": "C-11745acf-4db4-4c0d-b998-59a94bbedd13",
    "conceptId": "C-e7ba1170-ad03-451e-b2bc-dafbc6f3ee18",
    "prerequisiteLabel": "Immune system",
@@ -10337,6 +10329,14 @@
    "label": "Radial nerve injury",
    "strength": "essential",
    "reason": "Radial nerve injury follows arm anatomy"
+  },
+  {
+   "prerequisiteConceptId": "C-0ffa3a6d-40e3-4ef4-8f85-cdca17b8dbb1",
+   "conceptId": "C-8356e8b3-5554-4f45-bf18-d6ebce7e0b01",
+   "prerequisiteLabel": "Humerus fractures",
+   "label": "Radial nerve injury",
+   "strength": "helpful",
+   "reason": "Humeral shaft fractures are a common cause of radial nerve injury"
   },
   {
    "prerequisiteConceptId": "C-0a89ba89-8676-4976-b7cc-90588a915e38",
