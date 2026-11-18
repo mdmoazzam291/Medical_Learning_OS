@@ -86,7 +86,7 @@ function readinessCard({ label, readiness, error, testing }) {
   const required = Number(readiness.requiredUniqueQuestions ?? 0);
   const shortage = Number(readiness.shortage ?? Math.max(0, required - count));
   const caveat = testing
-    ? 'Test questions only. These questions are not part of the live exam practice set.'
+    ? 'Engineering lane only. AI-test-reviewed items remain non-production content.'
     : 'Only reviewed and published questions are included.';
   const action = ready
     ? '<button class="primary" data-action="' + (testing ? 'start-test' : 'start-production') + '" ' + (state.busy ? 'disabled' : '') + '>Start ' + (testing ? 'internal test mock' : 'full mock') + ' →</button>'
