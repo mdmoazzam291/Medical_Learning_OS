@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-18T03:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-18T04:05Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -22,7 +22,8 @@ Checked: 2026-11-18T03:35Z. Full history up to this date: [archive/AI_HANDOFF-th
 - PR #483 (draft). First CI run found one real issue (account page phone-illustration tab bar overlapping its button at tablet widths); fixed. Baseline empty.
 - CI green on `984f8b6` (Workers Builds, check, browser, webkit; axe: 17 pages x 4 viewports, 0 violations). PR marked ready.
 - 2026-11-18 follow-up on the same branch/PR: signed-in learner pass (13 pages) and WebKit run added; see STATUS.
-- Next action: confirm CI (browser + webkit) on the new head; fix or record any findings; then owner merges PR #483. Later: populated Today workspace fixture; admin pages.
+- Signed-in pass found one issue (phone menu Label in Name, both engines); fixed in `web/navigation-view.js`.
+- Next action: confirm CI (browser + webkit) green on the fix head; then owner merges PR #483. Later: populated Today workspace fixture; admin pages.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.

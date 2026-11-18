@@ -91,7 +91,7 @@ try {
       if (page.viewportSize().width <= 700) {
         // Authorization can replace the learner shell with the Admin shell after
         // layout readiness. Resolve the current control when it becomes actionable.
-        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: /^(Admin tools|Expand navigation)$/ }).click();
+        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: /^(Admin tools|.+: expand navigation)$/ }).click();
         return;
       }
       if (await page.locator('#mlos-workspace-menu').isVisible()) return;
@@ -101,7 +101,7 @@ try {
       await trigger.click();
       await page.locator('#mlos-workspace-menu').waitFor({ state: 'visible' });
     };
-    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? 'Admin tools' : 'Collapse navigation', exact: true }).click(); } else await page.keyboard.press('Escape'); };
+    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? /^Admin tools$/ : /^.+: collapse navigation$/ }).click(); } else await page.keyboard.press('Escape'); };
     // Phone pin buttons are temporarily hidden by design. Seed/toggle the existing
     // persisted preference in the test harness; real pin clicks remain tested above 700px.
     const togglePinForNavigationTest = async key => {

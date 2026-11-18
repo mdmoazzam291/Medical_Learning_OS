@@ -15,6 +15,8 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Runs in Chromium (browser job) and WebKit (macOS webkit job, iPad-closest engine). Per-engine JSON reports are uploaded with the screenshot artifacts.
 - Coupling baseline: added the reviewed test-only `supabase` marker for this script (synthetic session key and stubbed API origin, same pattern as the library/vault checks; no SDK or real calls).
 - Limits: the Today workspace renders its "Workspace unavailable" fallback under the generic fixtures (still audited, but not its populated state); admin pages are not audited.
+- First run (Chromium and WebKit agreed): one serious finding on every signed-in page at phone width — WCAG 2.5.3 Label in Name. The phone menu button shows the current master (e.g. "Study") but was named "Expand navigation", so voice-control commands using the visible word failed. Fixed in `web/navigation-view.js`: the phone button is now named "<Master>: expand/collapse navigation"; the desktop rail keeps "Expand/Collapse navigation". Updated `tests/navigation-view.test.js` and the phone selectors in `scripts/navigation-browser-check.js`.
+- Verified locally: `npm test` (1,724 pass), `npm run check`, navigation browser check (172 nested leaves, touch, history, pins) and the two-pass audit plumbing.
 
 ### 2026-11-18 — Automated accessibility audit (axe-core, WCAG 2.2 A/AA)
 - New `scripts/accessibility-browser-check.js`: audits 17 learner-facing/public pages at phone (390), tablet portrait (820), tablet landscape (1180) and desktop (1440) with axe-core 4.14.1 in the Chromium CI job. External requests blocked; `bypassCSP` is used only so the test can inject axe (production CSP unchanged).
