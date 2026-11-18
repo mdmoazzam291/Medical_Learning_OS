@@ -74,7 +74,7 @@ function accountHarness({ consent = inactive, retentionError = null, progressErr
   let html = '';
   const reported = [];
   const context = vm.createContext({
-    console, Promise,
+    console, Promise, setTimeout, clearTimeout,
     auth: { currentUser: () => expired ? null : user, getSession: async () => expired ? null : { user }, preparationProfile: async () => null },
     cloud: {
       progress: async () => { if (progressError) throw progressError; return { attempts: 12, correct: 8 }; },
