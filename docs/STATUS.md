@@ -9,16 +9,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
-### 2026-11-18 — Learner UX follow-ups in review (PR #486)
-- Branch `fix/learner-ux-followups`; PR [#486](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/486), based on merged PR #485.
-- Account: simplify optional memory-check study language; remove Supabase/internal implementation terms from learner-facing copy.
-- Preparation goals: profile loading now runs independently from progress/questions/consent reads, with a 12-second timeout and retry state. Save remains disabled while the current saved profile is unconfirmed, preventing an accidental overwrite after a failed read.
-- Navigation: Account-menu Profile and Account & Security destinations are retained. Existing navigation tests establish Profile as the canonical account entry; removing it was incorrect. The reported duplicate Account navigation needs a separate reproduction before changing shared navigation.
-- Notifications: move the toast below the shared header and constrain its height so it does not cover lower-page actions.
-- Exam: use learner-facing readiness labels and generic recovery guidance instead of internal lane terminology/raw readiness codes.
-- Verification state: implementation is on an open PR; local execution was not available in this session. GitHub Foundation checks run #3411 failed. Root causes identified: `withTimeout` was outside the source slice used by two VM tests; VM test contexts lacked timer APIs; existing tests still asserted the previous Account-menu, guest sign-in, exam test-lane and preparation-study copy. Chromium/WebKit jobs were cancelled after the check job failed, not because those browser suites reported independent failures. Cloudflare preview build/deployment for the previous commit succeeded, but the revised head needs a fresh run and preview. Do not merge until all required checks and preview review pass.
-- Deferred: shared client-side navigation/app shell and edge cold-start investigation remain a separate architectural task; this PR does not claim to solve them.
-
+### 2026-11-19 — Learner UX follow-ups merged (PR #486)
+- PR [#486](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/486) was squash-merged into `main` as `e4f6ce7c37fefab3492630196139f68b3e4631d6` on 2026-11-18 18:43 UTC. The PR head was `8f8728b0365263fbdfcedc8751b27987f94492fd`.
+- Post-merge GitHub Actions workflow [#3427](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/44372765762) completed successfully on the merge commit: `check`, `browser` (Chromium), and `webkit` all passed.
+- Included: learner-facing memory-check and sign-in/recovery copy; preparation-goal profile loading timeout/retry and save guard; restored Profile and Account & Security destinations; notification placement; learner-facing Exam Mode readiness and recovery copy; updated browser assertions.
+- Navigation: the reported duplicate Account navigation is **not yet reproduced**. Current source renders Profile, Preferences, Plans, Account & Security, and Sign out in the signed-in account menu; Profile and Account & Security are distinct destinations/anchors within the account experience. Existing unit/browser checks verify expected menu entries, but do not establish the user's reported duplicate. Do not remove either destination or change shared navigation without a concrete page, viewport, auth state, and reproduction sequence.
+- Cloudflare PR preview build/deployment was reported successful before merge. This session verified the GitHub post-merge workflow; it did not independently perform a visual inspection of the live production site.
+- Deferred separately: shared client-side navigation/app shell and instrumented edge cold-start improvements. Do not fold these into the Account navigation investigation.
 
 ### 2026-11-18 — Learner loading: fewer requests, no false consent error
 - Investigated owner's phone recording (12:37–12:44 IST) against production function logs: no learner call failed. Slowness = 5–6 API calls per page load (0.3–2 s each, ~2 s on cold start), CORS preflights, full page reload on every section switch, and a duplicate `review-api/me` per page.
