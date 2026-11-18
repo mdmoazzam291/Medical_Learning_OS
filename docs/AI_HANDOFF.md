@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-18T02:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-18T02:58Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -20,7 +20,8 @@ Checked: 2026-11-18T02:35Z. Full history up to this date: [archive/AI_HANDOFF-th
 ## Active task — accessibility audit (2026-11-18)
 - Branch `feat/accessibility-axe-check` (owner-requested via Claude chat). Adds axe-core WCAG 2.2 A/AA audit to the Chromium CI job; see STATUS 2026-11-18.
 - PR #483 (draft). First CI run found one real issue (account page phone-illustration tab bar overlapping its button at tablet widths); fixed. Baseline empty.
-- Next action: confirm CI green on the fix commit, then mark PR ready for owner merge; later extend the audit to signed-in states (reuse mocked sessions from `scripts/browser-check.js`) and WebKit.
+- CI green on `984f8b6` (Workers Builds, check, browser, webkit; axe: 17 pages x 4 viewports, 0 violations). PR marked ready.
+- Next action: owner merges PR #483; later extend the audit to signed-in states (reuse mocked sessions from `scripts/browser-check.js`) and WebKit.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
