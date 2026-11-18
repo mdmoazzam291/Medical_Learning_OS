@@ -99,7 +99,7 @@ test('inactive pilot keeps loaded metrics visible without failure warnings or op
   assert.match(h.html(), /<strong>12<\/strong><span>Recorded attempts/);
   assert.match(h.html(), /<strong>8<\/strong><span>Correct/);
   assert.match(h.html(), /<strong>3<\/strong><span>Published questions/);
-  assert.match(h.html(), /Retention feasibility: inactive/);
+  assert.match(h.html(), /Memory check study: not active/);
   assert.doesNotMatch(h.html(), /Some account data could not be refreshed|Consent status is unavailable|retention-optin-form|withdraw-retention/);
   assert.deepEqual(h.reported, []);
 });
@@ -108,7 +108,7 @@ test('genuine retention failures keep successful metrics and report unavailable 
   const h = accountHarness({ retentionError: Object.assign(new Error('offline'), { status: 503 }) }); await h.load();
   assert.match(h.html(), /<strong>12<\/strong><span>Recorded attempts/);
   assert.match(h.html(), /Some account data could not be refreshed/);
-  assert.match(h.html(), /Consent status is unavailable/);
+  assert.match(h.html(), /We couldn’t check whether this study is available/);
   assert.doesNotMatch(h.html(), /retention-optin-form|withdraw-retention/);
   assert.deepEqual(h.reported, ['load_retention_consent']);
 });
