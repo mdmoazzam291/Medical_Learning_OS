@@ -206,9 +206,9 @@ async function loadCloud({ forceRefresh = false } = {}) {
     if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
     preparationState = { ...preparationState, loading:false, error:null, profile };
     render();
-  }, () => {
+  }, (error) => {
     if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
-    preparationState = { ...preparationState, loading:false, error:'preparation_unavailable' };
+    preparationState = { ...preparationState, loading:false, error:error?.code || 'preparation_unavailable' };
     render();
   });
 
