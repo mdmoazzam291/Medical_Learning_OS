@@ -43,15 +43,6 @@ function resumePendingOAuthConsent() {
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
 
-function withTimeout(promise, timeoutMs, code) {
-  let timer;
-  return Promise.race([
-    promise,
-    new Promise((_, reject) => {
-      timer = setTimeout(() => reject(Object.assign(new Error(code), { code })), timeoutMs);
-    })
-  ]).finally(() => clearTimeout(timer));
-}
 function finishSignIn() {
   if (resumePendingOAuthConsent()) { learnerReturn.clear(); return; }
   const destination = learnerReturn.destination(location.search);
@@ -75,7 +66,7 @@ function signedOutState() {
 function signedOut() {
   const redirectTo = new URL('/web/account.html', window.location.origin).href;
   const googleUrl = auth.oauthAuthorizeUrl('google', { redirectTo });
-  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Sign in to Medretica.</h1><p>Your authenticated identity connects Study Now, reviewed medical questions, exams and NeuralVault across sessions.</p></div><span class="badge">BETA</span></div><section class="panel"><span class="eyebrow">ONE EMAIL · ONE LEARNER ACCOUNT</span><h2>Use Google or a password. Your learner history stays attached to the same verified email.</h2><p>If Google and email/password use the same verified email address, both sign-in methods connect to the same learner account.</p></section><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form><p class="auth-divider"><span>forgot password?</span></p><form id="recovery-request-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><button class="text-button" type="submit">Send password reset link</button></form></section><section class="panel"><h2>Create learner account</h2><p>New email? Create it with a password. Already used Google with this email? Continue with Google first, then add password sign-in from Account. This avoids creating or guessing a second account.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel" id="sign-in-methods"><span class="eyebrow">SECURITY</span><h2>Admin authority is never carried by learner-facing credentials or browser metadata.</h2><p>Content approval is checked server-side against the single beta content-admin account. Learner accounts can study, annotate and report issues, but cannot approve or publish content.</p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/">← Back to app</a><div class="page-heading"><div><span class="eyebrow">ACCOUNT</span><h1>Sign in to Medretica.</h1><p>Your authenticated identity connects Study Now, reviewed medical questions, exams and NeuralVault across sessions.</p></div><span class="badge">BETA</span></div><section class="panel"><span class="eyebrow">ONE EMAIL · ONE LEARNER ACCOUNT</span><h2>Use Google or a password. Your learner history stays attached to the same verified email.</h2><p>If Google and email/password use the same verified email address, Supabase links them to one user instead of creating a second learner profile.</p></section><div class="two-column"><section class="panel"><h2>Sign in</h2><a class="primary action-link oauth-google" href="${escape(googleUrl)}">Continue with Google</a><p class="auth-divider"><span>or use email</span></p><form id="signin-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Sign in with email</button></form><p class="auth-divider"><span>forgot password?</span></p><form id="recovery-request-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><button class="text-button" type="submit">Send password reset link</button></form></section><section class="panel"><h2>Create learner account</h2><p>New email? Create it with a password. Already used Google with this email? Continue with Google first, then add password sign-in from Account. This avoids creating or guessing a second account.</p><form id="signup-form"><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="secondary" type="submit">Create email account</button></form></section></div><section class="panel" id="sign-in-methods"><span class="eyebrow">SECURITY</span><h2>Admin authority is never carried by learner-facing credentials or browser metadata.</h2><p>Content approval is checked server-side against the single beta content-admin account. Learner accounts can study, annotate and report issues, but cannot approve or publish content.</p></section></main>`;
 }
 
 function retentionPilotPanel() {
@@ -170,6 +161,15 @@ async function loadReviewerAccess(generation, learnerId) {
 }
 
 async function loadCloud({ forceRefresh = false } = {}) {
+  const withTimeout = (promise, timeoutMs, code) => {
+    let timer;
+    return Promise.race([
+      promise,
+      new Promise((_, reject) => {
+        timer = setTimeout(() => reject(Object.assign(new Error(code), { code })), timeoutMs);
+      })
+    ]).finally(() => clearTimeout(timer));
+  };
   const generation = ++accountLoadGeneration;
   let session;
   try {
