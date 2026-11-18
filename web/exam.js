@@ -99,7 +99,7 @@ function homeView() {
     ? '<section class="panel"><p>Checking exam practice availability…</p></section>'
     : '';
   const error = state.error
-    ? '<section class="panel"><h2>Exam practice is unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
+    ? '<section class="panel"><h2>Exam practice is unavailable</h2><p>We couldn’t load your exam practice data. Check your connection and try again.</p><button class="secondary" data-action="reload">Retry</button></section>'
     : '';
   const production = readinessCard({
     label: 'FULL EXAM PRACTICE',
