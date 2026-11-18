@@ -9,6 +9,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Accessibility audit extended to signed-in learner states and WebKit
+- `scripts/accessibility-browser-check.js` now runs two passes per engine: 17 signed-out pages plus 13 signed-in learner pages (Home/Study Now, Account, Study, Today, Library and concept notes, NeuralVault list and a concept with its canonical note, Exam, Retention, Review, NMC catalogue, Plans) at four viewports = 120 audits.
+- Signed-in pass uses a synthetic non-admin session and synthetic GET fixtures (reusing `tests/fixtures/preparation-fixture.js`); any non-GET request or page script error fails the run. Other external origins are blocked.
+- Runs in Chromium (browser job) and WebKit (macOS webkit job, iPad-closest engine). Per-engine JSON reports are uploaded with the screenshot artifacts.
+- Coupling baseline: added the reviewed test-only `supabase` marker for this script (synthetic session key and stubbed API origin, same pattern as the library/vault checks; no SDK or real calls).
+- Limits: the Today workspace renders its "Workspace unavailable" fallback under the generic fixtures (still audited, but not its populated state); admin pages are not audited.
+
 ### 2026-11-18 — Automated accessibility audit (axe-core, WCAG 2.2 A/AA)
 - New `scripts/accessibility-browser-check.js`: audits 17 learner-facing/public pages at phone (390), tablet portrait (820), tablet landscape (1180) and desktop (1440) with axe-core 4.14.1 in the Chromium CI job. External requests blocked; `bypassCSP` is used only so the test can inject axe (production CSP unchanged).
 - Gate (`scripts/accessibility-gate.js`, tests in `tests/accessibility-gate.test.js`): serious/critical violations fail CI unless recorded with a reason in `ops/accessibility/baseline.json` (empty; never auto-refresh). Moderate/minor are advisory. JSON report is uploaded with the screenshots artifact.
