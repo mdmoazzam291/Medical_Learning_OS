@@ -18,7 +18,7 @@ test('public policy bundle provides readable unauthenticated pages without priva
       assert.match(html, /<main\b/);
       assert.match(html, /<h1\b/);
       assert.match(html, /Medretica/);
-      assert.deepEqual([...html.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/gi)].map(x => x[0]), ['<script type="module" src="/web/navigation.js"></script>']);
+      assert.deepEqual([...html.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/gi)].map(x => x[0]), ['<script src="/web/appearance-boot.js"></script>', '<script type="module" src="/web/navigation.js"></script>']);
       assert.doesNotMatch(html, /<form\b|OWNER INPUT|PLACEHOLDER|TODO|waiting for approval/i);
       for (const match of html.matchAll(/(?:href|src)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
         const pathname = new URL(match[1], 'https://medretica.invalid').pathname;

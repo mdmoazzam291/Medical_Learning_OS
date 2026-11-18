@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Fix palette flash (sage → lavender) on every page load
+- Owner-reported (phone screen recording): pages flashed the default sage palette before switching to the saved lavender. Cause: `web/navigation.js` (a deferred module) set `data-palette`/`data-appearance`/`data-surface-style` only after first paint.
+- Fix: new classic `web/appearance-boot.js` loaded first in `<head>` of all 21 navigation pages applies the saved `mlos-navigation-v1` theme, palette and surface style before first paint (same validation/defaults as `validatePreferences`). Added to the static allowlist in `scripts/public-surface.js`.
+- Verified: browser probe showed first-paint palette was unset (default sage) before the fix and the saved lavender/dark after it on Home, Study, Exam, Library and Account; new `tests/appearance-boot.test.js`; full `npm test` (1,727 pass), `npm run check`, brand (48 cases), public-policies and navigation browser checks. Updated the policy-page script expectation and the reviewed sign-in HTML hash for this intentional change.
+
 ### 2026-11-18 — Accessibility audit extended to signed-in learner states and WebKit
 - `scripts/accessibility-browser-check.js` now runs two passes per engine: 17 signed-out pages plus 13 signed-in learner pages (Home/Study Now, Account, Study, Today, Library and concept notes, NeuralVault list and a concept with its canonical note, Exam, Retention, Review, NMC catalogue, Plans) at four viewports = 120 audits.
 - Signed-in pass uses a synthetic non-admin session and synthetic GET fixtures (reusing `tests/fixtures/preparation-fixture.js`); any non-GET request or page script error fails the run. Other external origins are blocked.
