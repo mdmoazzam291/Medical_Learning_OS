@@ -13,10 +13,10 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Branch `fix/learner-ux-followups`; PR [#486](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/486), based on merged PR #485.
 - Account: simplify optional memory-check study language; remove Supabase/internal implementation terms from learner-facing copy.
 - Preparation goals: profile loading now runs independently from progress/questions/consent reads, with a 12-second timeout and retry state. Save remains disabled while the current saved profile is unconfirmed, preventing an accidental overwrite after a failed read.
-- Navigation: remove the redundant Profile destination from the Account menu; retain Preferences, Plans and Sign-in & security.
+- Navigation: Account-menu Profile and Account & Security destinations are retained. Existing navigation tests establish Profile as the canonical account entry; removing it was incorrect. The reported duplicate Account navigation needs a separate reproduction before changing shared navigation.
 - Notifications: move the toast below the shared header and constrain its height so it does not cover lower-page actions.
 - Exam: use learner-facing readiness labels and generic recovery guidance instead of internal lane terminology/raw readiness codes.
-- Verification state: implementation is on an open PR; local execution was not available in this session. GitHub Foundation checks run #3410 is in progress; `npm run check` and `npm run build:pages` have passed, while `npm test`, Chromium, and WebKit checks are still running. Cloudflare preview evidence is not yet visible. Do not merge until all required checks and preview review pass.
+- Verification state: implementation is on an open PR; local execution was not available in this session. GitHub Foundation checks run #3411 failed. Root causes identified: `withTimeout` was outside the source slice used by two VM tests; VM test contexts lacked timer APIs; existing tests still asserted the previous Account-menu, guest sign-in, exam test-lane and preparation-study copy. Chromium/WebKit jobs were cancelled after the check job failed, not because those browser suites reported independent failures. Cloudflare preview build/deployment for the previous commit succeeded, but the revised head needs a fresh run and preview. Do not merge until all required checks and preview review pass.
 - Deferred: shared client-side navigation/app shell and edge cold-start investigation remain a separate architectural task; this PR does not claim to solve them.
 
 
