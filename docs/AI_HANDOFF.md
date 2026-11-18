@@ -19,7 +19,7 @@ Checked: 2026-11-18T09:05Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 ## Active task — learner UX follow-ups (2026-11-18)
 - PR #485 (learner loading requests / false consent error) merged as `f0f852c`; PR #484 (palette flash) remains merged as `5336bbb`.
-- PR #486 is open on branch `fix/learner-ux-followups`. It addresses learner-facing Account/Exam wording, notification placement, duplicate Account-menu destination, and preparation-goal loading/save safety. See the 2026-11-18 PR #486 entry in STATUS.
+- PR #486 is open on branch `fix/learner-ux-followups`. It addresses learner-facing Account/Exam wording, notification placement, and preparation-goal loading/save safety. Recheck found that removing the Account-menu Profile link was incorrect because existing navigation tests establish it as the canonical account entry; Profile and Account & Security were restored. The reported duplicate Account navigation needs a separate reproduction before changing shared navigation. See the 2026-11-18 PR #486 entry in STATUS.
 - Do not merge until required GitHub checks and Cloudflare preview are green and the Account, Exam, navigation, and notification states have been reviewed. This session did not run the project locally.
 - Remaining separate architecture work: shared app shell/client-side navigation and measured edge cold-start improvements. Design and instrument before implementing; preserve auth boundaries, deep links, browser history, page-specific state, accessibility, and locked exam-session behavior.
 
