@@ -42,6 +42,7 @@ function resumePendingOAuthConsent() {
 }
 
 function announce(message) { notice.textContent = message; notice.hidden = false; }
+
 function finishSignIn() {
   if (resumePendingOAuthConsent()) { learnerReturn.clear(); return; }
   const destination = learnerReturn.destination(location.search);
@@ -71,14 +72,14 @@ function signedOut() {
 function retentionPilotPanel() {
   const consent = state.retentionConsent;
   if (!consent && state.loading && !state.projectionErrors.retention) {
-    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted" role="status">Checking pilot status…</p></section>';
+    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL MEMORY CHECK STUDY</span><h2>Optional memory check</h2><p class="muted" role="status">Checking study availability…</p></section>';
   }
   if (!consent || state.projectionErrors.retention) {
-    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted">Consent status is unavailable right now. No probe can be scheduled from this screen.</p><button class="text-button" data-action="refresh">Retry account data</button></section>';
+    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL MEMORY CHECK STUDY</span><h2>Memory check study</h2><p class="muted">We couldn’t check whether this study is available. No memory check can be scheduled right now.</p><button class="text-button" data-action="refresh">Retry account data</button></section>';
   }
 
   if (consent.availability === 'inactive') {
-    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility: inactive</h2><p>The optional retention pilot is inactive. You can continue studying normally.</p></section>';
+    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL MEMORY CHECK STUDY</span><h2>Memory check study: not active</h2><p>This optional study is not active. You can continue studying as usual.</p></section>';
   }
 
   const protocol = consent.protocol || {};
@@ -90,15 +91,15 @@ function retentionPilotPanel() {
   const current = consent.optedIn === true;
 
   if (current) {
-    return `<section class="panel"><div class="section-heading"><div><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility: opted in</h2></div><span class="badge">OPTED IN</span></div><p>The preregistered feasibility protocol may later offer a different published question around day ${targetDays} (accepted window: day ${windowStart}–${windowEnd}) after eligible learning evidence.</p><p>Limits: at most ${maxWeekly} probe assignment per learner in any 7 days and at most ${maxTotal} assignments across this feasibility protocol. Probe work may not displace due revision or mistake-repair work.</p><p class="muted">Opt-in does not activate scheduling, change your score, or change mastery estimates. You can withdraw from future assignments.</p><button class="secondary" data-action="withdraw-retention" ${state.retentionSaving ? 'disabled' : ''}>${state.retentionSaving ? 'Saving…' : 'Withdraw from future retention probes'}</button></section>`;
+    return `<section class="panel"><div class="section-heading"><div><span class="eyebrow" id="research">OPTIONAL MEMORY CHECK STUDY</span><h2>Memory check study: joined</h2></div><span class="badge">OPTED IN</span></div><p>If you join, you may receive a different published question around day ${targetDays} (day ${windowStart}–${windowEnd}), after eligible study activity.</p><p>Limits: up to ${maxWeekly} check-ins per learner every 7 days and ${maxTotal} check-ins in total. These check-ins will never replace revision that is due or work on questions you got wrong.</p><p class="muted">Joining does not change your score or your learning progress estimates. You can leave the study at any time; this stops future check-ins.</p><button class="secondary" data-action="withdraw-retention" ${state.retentionSaving ? 'disabled' : ''}>${state.retentionSaving ? 'Saving…' : 'Leave the memory check study'}</button></section>`;
   }
 
-  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Help test whether learning survives delay.</h2></div><span class="badge">OPTIONAL</span></div><p>If you opt in, the preregistered feasibility protocol may later offer a different published question around day ${targetDays} (accepted window: day ${windowStart}–${windowEnd}) after eligible learning evidence.</p><p>Limits: at most ${maxWeekly} probe assignment per learner in any 7 days and at most ${maxTotal} assignments across this feasibility protocol. Probe work may not displace due revision or mistake-repair work.</p><p class="muted">This is an infrastructure feasibility pilot, not a mastery score or treatment-effect study. Opting in does not activate a probe by itself, and you may withdraw from future assignments.</p><form id="retention-optin-form"><label class="review-attestation"><input type="checkbox" name="attested" required> I choose to opt in to this optional retention-feasibility pilot under the protocol described above.</label><button class="secondary" type="submit" ${state.retentionSaving ? 'disabled' : ''}>${state.retentionSaving ? 'Saving…' : 'Opt in to retention feasibility'}</button></form></section>`;
+  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow" id="research">OPTIONAL MEMORY CHECK STUDY</span><h2>Help test whether learning survives delay.</h2></div><span class="badge">OPTIONAL</span></div><p>If you join, the study may later offer a different published question around day ${targetDays} (accepted window: day ${windowStart}–${windowEnd}) after eligible learning evidence.</p><p>Limits: up to ${maxWeekly} check-ins per learner every 7 days and ${maxTotal} check-ins in total. These check-ins will never replace revision that is due or work on questions you got wrong.</p><p class="muted">This study checks whether you remember material after a delay. It does not affect your score. Opting in does not activate a question by itself, and you may withdraw from future assignments.</p><form id="retention-optin-form"><label class="review-attestation"><input type="checkbox" name="attested" required> I choose to opt in to this optional memory check study under the protocol described above.</label><button class="secondary" type="submit" ${state.retentionSaving ? 'disabled' : ''}>${state.retentionSaving ? 'Saving…' : 'Opt in to memory check study'}</button></form></section>`;
 }
 
 function recoveryPasswordPanel() {
   if (!state.recoveryMode) return '';
-  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">PASSWORD RECOVERY</span><h2>Choose a new password for this learner account.</h2></div><span class="badge">RECOVERY SESSION</span></div><p>This changes the password sign-in method only. Your Supabase user ID and all Medretica history stay unchanged.</p><form id="recovery-password-form"><label>New password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><label>Confirm password<input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="primary" type="submit">Set new password</button></form></section>`;
+  return `<section class="panel"><div class="section-heading"><div><span class="eyebrow">PASSWORD RECOVERY</span><h2>Choose a new password for this learner account.</h2></div><span class="badge">RECOVERY SESSION</span></div><p>This changes the password sign-in method only. Your account and all Medretica history stay unchanged.</p><form id="recovery-password-form"><label>New password<input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><label>Confirm password<input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required></label><button class="primary" type="submit">Set new password</button></form></section>`;
 }
 
 function signInMethodsPanel() {
@@ -120,10 +121,10 @@ function signInMethodsPanel() {
   }
 
   if (hasPassword && !hasGoogle) {
-    return `<section class="panel" id="sign-in-methods"><div class="section-heading"><div><span class="eyebrow">SIGN-IN METHODS</span><h2>Email + password is connected.</h2></div><div>${badges}</div></div><p>If you later choose Continue with Google using this same verified email, Supabase automatically links Google to this same learner account. No learner data needs to be copied or merged.</p></section>`;
+    return `<section class="panel" id="sign-in-methods"><div class="section-heading"><div><span class="eyebrow">SIGN-IN METHODS</span><h2>Email + password is connected.</h2></div><div>${badges}</div></div><p>If you later choose Continue with Google using this same verified email, it connects to this same learner account. Your learning history stays together.</p></section>`;
   }
 
-  return `<section class="panel" id="sign-in-methods"><span class="eyebrow">SIGN-IN METHODS</span><h2>Identity details are refreshing.</h2><p>Your learner data remains bound to your authenticated Supabase user ID.</p></section>`;
+  return `<section class="panel" id="sign-in-methods"><span class="eyebrow">SIGN-IN METHODS</span><h2>Identity details are refreshing.</h2><p>Your learning history remains securely linked to this account.</p></section>`;
 }
 
 function signedIn() {
@@ -160,6 +161,15 @@ async function loadReviewerAccess(generation, learnerId) {
 }
 
 async function loadCloud({ forceRefresh = false } = {}) {
+  const withTimeout = (promise, timeoutMs, code) => {
+    let timer;
+    return Promise.race([
+      promise,
+      new Promise((_, reject) => {
+        timer = setTimeout(() => reject(Object.assign(new Error(code), { code })), timeoutMs);
+      })
+    ]).finally(() => clearTimeout(timer));
+  };
   const generation = ++accountLoadGeneration;
   let session;
   try {
@@ -191,14 +201,23 @@ async function loadCloud({ forceRefresh = false } = {}) {
     }
   }
 
-  const [progressResult, questionsResult, retentionResult, preparationResult] = await Promise.allSettled([
+  const preparationRead = withTimeout(auth.preparationProfile(), 12000, 'preparation_profile_timeout');
+  preparationRead.then(profile => {
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
+    preparationState = { ...preparationState, loading:false, error:null, profile };
+    render();
+  }, (error) => {
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
+    preparationState = { ...preparationState, loading:false, error:error?.code || 'preparation_unavailable' };
+    render();
+  });
+
+  const [progressResult, questionsResult, retentionResult] = await Promise.allSettled([
     cloud.progress(),
     cloud.questions('all'),
-    cloud.retentionProbeConsent(),
-    auth.preparationProfile()
+    cloud.retentionProbeConsent()
   ]);
   if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
-  preparationState = { ...preparationState, loading:false, error:preparationResult.status === 'rejected' ? 'preparation_unavailable' : null, profile:preparationResult.status === 'fulfilled' ? preparationResult.value : preparationState.profile };
   const projectionErrors = {
     progress: projectionError(progressResult),
     questions: projectionError(questionsResult),
@@ -254,7 +273,7 @@ root.addEventListener('click', event => {
           attested: true
         });
         state = { ...state, retentionSaving: false, retentionConsent: await cloud.retentionProbeConsent(), projectionErrors: { ...state.projectionErrors, retention: null } };
-        announce('Withdrawn. Future retention-probe assignments remain disabled for this learner unless you opt in again.');
+        announce('Withdrawn. Future memory check questions remain disabled for this learner unless you opt in again.');
       } catch (error) {
         reportUnexpected(error, 'withdraw_retention_probe');
         state = { ...state, retentionSaving: false };

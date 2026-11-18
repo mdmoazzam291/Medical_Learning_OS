@@ -78,7 +78,7 @@ function signedOutView() {
 
 function readinessCard({ label, readiness, error, testing }) {
   if (error) {
-    return '<section class="panel exam-readiness-card"><span class="eyebrow">' + escape(label) + '</span><h2>Readiness unavailable.</h2><p>' + escape(error) + '</p></section>';
+    return '<section class="panel exam-readiness-card"><span class="eyebrow">' + escape(label) + '</span><h2>We couldn’t check exam readiness.</h2><p>Please try again. If the problem continues, contact support.</p></section>';
   }
   if (!readiness) return '';
   const ready = readiness.ready === true;
@@ -87,7 +87,7 @@ function readinessCard({ label, readiness, error, testing }) {
   const shortage = Number(readiness.shortage ?? Math.max(0, required - count));
   const caveat = testing
     ? 'Engineering lane only. AI-test-reviewed items remain non-production content.'
-    : 'Production lane uses human-reviewed published questions only.';
+    : 'Only reviewed and published questions are included.';
   const action = ready
     ? '<button class="primary" data-action="' + (testing ? 'start-test' : 'start-production') + '" ' + (state.busy ? 'disabled' : '') + '>Start ' + (testing ? 'internal test mock' : 'full mock') + ' →</button>'
     : '<button class="secondary" disabled>' + shortage + ' more eligible question' + (shortage === 1 ? '' : 's') + ' required</button>';
@@ -96,26 +96,26 @@ function readinessCard({ label, readiness, error, testing }) {
 
 function homeView() {
   const loading = state.loading
-    ? '<section class="panel"><p>Checking simulator state…</p></section>'
+    ? '<section class="panel"><p>Checking exam practice availability…</p></section>'
     : '';
   const error = state.error
-    ? '<section class="panel"><h2>Exam Mode unavailable</h2><p>' + escape(state.error) + '</p><button class="secondary" data-action="reload">Retry</button></section>'
+    ? '<section class="panel"><h2>Exam practice is unavailable</h2><p>We couldn’t load your exam practice data. Check your connection and try again.</p><button class="secondary" data-action="reload">Retry</button></section>'
     : '';
   const production = readinessCard({
-    label: 'PRODUCTION FULL MOCK',
+    label: 'FULL EXAM PRACTICE',
     readiness: state.productionReadiness,
     error: state.productionReadinessError,
     testing: false
   });
   const internal = state.internalTestAllowed || state.testReadinessError
     ? readinessCard({
-        label: 'INTERNAL ENGINEERING MOCK',
+        label: 'TEST PRACTICE',
         readiness: state.testReadiness,
         error: state.testReadinessError,
         testing: true
       })
     : '';
-  return '<main id="main" class="exam-page"><a class="text-button" href="/web/medical.html">← Medical study</a><div class="page-heading"><div><span class="eyebrow">EXAM MODE</span><h1>Rule-faithful, locked-section simulation.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · server timers, immutable exam events, no early section advance.</p></div><span class="badge">M08</span></div>' + loading + error + '<div class="exam-readiness-grid">' + production + internal + '</div><section class="panel"><h2>Before you start</h2><p>NEET-PG 2026 ruleset: 180 questions, five locked sections, 42 minutes per section. Time does not carry forward and closed sections cannot be reopened.</p><p class="muted">The server, not this browser timer, decides section closure and final scoring.</p></section></main>';
+  return '<main id="main" class="exam-page"><a class="text-button" href="/web/medical.html">← Medical study</a><div class="page-heading"><div><span class="eyebrow">EXAM MODE</span><h1>Practice the exam with timed, locked sections.</h1><p>' + escape(state.user?.email || 'Authenticated learner') + ' · Timed sections follow the exam rules. You cannot return to a section after it closes.</p></div><span class="badge">M08</span></div>' + loading + error + '<div class="exam-readiness-grid">' + production + internal + '</div><section class="panel"><h2>Before you start</h2><p>NEET-PG 2026 ruleset: 180 questions, five locked sections, 42 minutes per section. Time does not carry forward and closed sections cannot be reopened.</p><p class="muted">The official timer controls when each section closes and calculates your final score.</p></section></main>';
 }
 
 function currentQuestion() {

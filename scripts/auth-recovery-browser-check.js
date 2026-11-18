@@ -76,7 +76,8 @@ try {
     await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
     await page.goto(origin + '/web/account.html');
     await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
-    await page.getByText('Consent status is unavailable right now.', { exact: false }).waitFor();
+    await page.getByRole('heading', { name: 'Memory check study', exact: true }).waitFor();
+    await page.getByText('We couldn’t check whether this study is available.', { exact: false }).waitFor();
     assert.match(await page.locator('.metrics').innerText(), /12\s*Recorded attempts/);
     await page.goto(origin);
     await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();

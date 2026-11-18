@@ -53,11 +53,11 @@ test('Study Now deep links are consumed once and scrubbed from the URL', () => {
 
 
 test('learner account exposes explicit optional retention opt-in without activation authority', () => {
-  assert.match(account, /OPTIONAL LEARNING-MEASUREMENT PILOT/);
+  assert.match(account, /OPTIONAL MEMORY CHECK STUDY/);
   assert.match(account, /retention-optin-form/);
-  assert.match(account, /Opt in to retention feasibility/);
-  assert.match(account, /Withdraw from future retention probes/);
-  assert.match(account, /Opt-in does not activate scheduling/);
+  assert.match(account, /Opt in to memory check study/);
+  assert.match(account, /Leave the memory check study/);
+  assert.match(account, /Opting in does not activate a question by itself/);
   assert.match(account, /cloud\.setRetentionProbeConsent/);
   assert.match(account, /decision: 'opt_in'/);
   assert.match(account, /decision: 'withdraw'/);
@@ -71,7 +71,7 @@ test('account treats Google and password as methods on one verified-email learne
   assert.match(account, /One learner account, two ways in/);
   assert.match(account, /Add password sign-in to this Google account/);
   assert.match(account, /auth\.setPassword/);
-  assert.match(account, /No learner data needs to be copied or merged/);
+  assert.match(account, /it connects to this same learner account\. Your learning history stays together/);
   assert.doesNotMatch(account, /merge learner accounts|copy learner history/i);
 });
 
@@ -83,7 +83,7 @@ test('password recovery returns to the same learner identity instead of creating
   assert.match(account, /recovery-password-form/);
   assert.match(account, /callback\.type === 'recovery'/);
   assert.match(account, /auth\.setPassword/);
-  assert.match(account, /Supabase user ID and all Medretica history stay unchanged/);
+  assert.match(account, /Your account and all Medretica history stay unchanged/);
   assert.doesNotMatch(account, /create.*recovery.*account/i);
 });
 

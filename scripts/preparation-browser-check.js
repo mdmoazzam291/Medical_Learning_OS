@@ -63,13 +63,13 @@ try{
     await context.route(cloudConfig.projectUrl+'/**',routeApi);
     const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
     await page.goto(origin+'/web/account.html');
-    await page.getByRole('button',{name:'Save preparation goals',exact:true}).waitFor({state:'visible'});
-    await page.getByRole('heading',{name:'Retention feasibility: inactive',exact:true}).waitFor();
+    await page.getByRole('button',{name:'Save goals',exact:true}).waitFor({state:'visible'});
+    await page.getByRole('heading',{name:'Memory check study: not active',exact:true}).waitFor();
     assert.deepEqual(await page.locator('.metrics strong').allTextContents(),['7','4','0']);
     assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),0);
     assert.equal(await page.locator('#retention-optin-form').count(),0);
     retentionMode='failure';await page.getByRole('button',{name:'Refresh session',exact:true}).click();
-    await page.getByText(/Consent status is unavailable right now/).waitFor();
+    await page.getByText(/We couldn’t check whether this study is available/).waitFor();
     assert.deepEqual(await page.locator('.metrics strong').allTextContents(),['7','4','0']);
     assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),1);
     assert.equal(await page.locator('#retention-optin-form').count(),0);
@@ -77,16 +77,16 @@ try{
     await page.locator('#retention-optin-form').waitFor();
     assert.equal(await page.getByText(/Some account data could not be refreshed/).count(),0);
     retentionMode='inactive';await page.reload();
-    await page.getByRole('heading',{name:'Retention feasibility: inactive',exact:true}).waitFor();
+    await page.getByRole('heading',{name:'Memory check study: not active',exact:true}).waitFor();
     assert.equal(await page.locator('#retention-optin-form').count(),0);
     await page.locator('#preparation-profile-form select[name="preparationGoal"]').selectOption('both');
     await page.locator('#preparation-profile-form select[name="primaryGoal"]').selectOption('ini-cet');
-    await page.getByRole('button',{name:'Save preparation goals',exact:true}).click();
+    await page.getByRole('button',{name:'Save goals',exact:true}).click();
     await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).waitFor();
     assert.deepEqual(saved,{...profile,primaryPathwayId:'ini-cet'});assert.equal(updates,1);
     await page.reload();await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).waitFor();
     assert.equal(await page.locator('[name="primaryGoal"]').inputValue(),'ini-cet');
-    failSave=true;await page.locator('[name="preparationGoal"]').selectOption('neet-pg');await page.getByRole('button',{name:'Save preparation goals',exact:true}).click();
+    failSave=true;await page.locator('[name="preparationGoal"]').selectOption('neet-pg');await page.getByRole('button',{name:'Save goals',exact:true}).click();
     await page.getByRole('button',{name:'Retry goals',exact:true}).waitFor();assert.equal(saved.pathwayIds.length,2);failSave=false;
     await page.getByRole('button',{name:'Retry goals',exact:true}).click();await page.getByText('Saved goals: NEET-PG + INI-CET.',{exact:true}).waitFor();
     // A different tab can replace this browser's authenticated identity.

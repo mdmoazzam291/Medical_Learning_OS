@@ -261,7 +261,7 @@ try {
     });
 
     await page.goto(origin + '/web/exam.html');
-    await page.getByRole('heading', { name:'Rule-faithful, locked-section simulation.' }).waitFor();
+    await page.getByRole('heading', { name:'Practice the exam with timed, locked sections.' }).waitFor();
     await page.getByRole('heading', { name:'6 / 180 questions ready' }).waitFor();
     await page.getByRole('heading', { name:'180 / 180 questions ready' }).waitFor();
     await noHorizontalOverflow(page, name + ' home');
@@ -324,7 +324,7 @@ try {
     }
 
     await page.getByRole('button', { name:'Back to Exam Mode' }).click();
-    await page.getByRole('heading', { name:'Rule-faithful, locked-section simulation.' }).waitFor();
+    await page.getByRole('heading', { name:'Practice the exam with timed, locked sections.' }).waitFor();
     page.once('dialog', dialog => dialog.accept());
     await page.getByRole('button', { name:/Start internal test mock/ }).click();
     await page.getByText('QUESTION 1 OF 36', { exact:true }).waitFor();

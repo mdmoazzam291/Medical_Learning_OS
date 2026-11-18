@@ -17,9 +17,11 @@ Checked: 2026-11-18T09:05Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v27 still live on registry @27 (commit `3c65f32`); the repo pins @28 (`dfc2abb`) and the redeploy is pending — next owner-api deploy picks it up + SHA-256; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — learner loading fixes (2026-11-18)
-- Branch `fix/learner-loading-states` (owner-requested via Claude chat). PR #484 (palette flash) merged as `5336bbb`.
-- See STATUS 2026-11-18. Next action: CI green, owner merges. Remaining from the owner's recording: learner-facing jargon (Account, Exam), toast overlapping content, disabled Save goals button, duplicate Account nav; structural: cold starts + full-page navigation.
+## Active task — learner UX follow-ups (2026-11-18)
+- PR #485 (learner loading requests / false consent error) merged as `f0f852c`; PR #484 (palette flash) remains merged as `5336bbb`.
+- PR #486 is open on branch `fix/learner-ux-followups`. It addresses learner-facing Account/Exam wording, notification placement, and preparation-goal loading/save safety. Recheck found that removing the Account-menu Profile link was incorrect because existing navigation tests establish it as the canonical account entry; Profile and Account & Security were restored. The reported duplicate Account navigation needs a separate reproduction before changing shared navigation. See the 2026-11-18 PR #486 entry in STATUS.
+- Do not merge until required GitHub checks and Cloudflare preview are green and the Account, Exam, navigation, and notification states have been reviewed. This session did not run the project locally.
+- Remaining separate architecture work: shared app shell/client-side navigation and measured edge cold-start improvements. Design and instrument before implementing; preserve auth boundaries, deep links, browser history, page-specific state, accessibility, and locked exam-session behavior.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.

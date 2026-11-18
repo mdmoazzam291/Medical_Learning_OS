@@ -16,7 +16,7 @@ test('account projections fail independently instead of collapsing the learner r
 
 test('retention projection failure disables research-pilot actions without disabling account navigation', () => {
   assert.match(account, /!consent \|\| state\.projectionErrors\.retention/);
-  assert.match(account, /No probe can be scheduled from this screen/);
+  assert.match(account, /No memory check can be scheduled right now/);
   assert.match(account, /state\.projectionErrors\.retention\) return/);
   assert.match(account, /href="\/web\/medical\.html">Study →/);
   assert.match(account, /href="\/web\/exam\.html">Exams →/);
