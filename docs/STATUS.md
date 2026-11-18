@@ -16,7 +16,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Navigation: remove the redundant Profile destination from the Account menu; retain Preferences, Plans and Sign-in & security.
 - Notifications: move the toast below the shared header and constrain its height so it does not cover lower-page actions.
 - Exam: use learner-facing readiness labels and generic recovery guidance instead of internal lane terminology/raw readiness codes.
-- Verification state: implementation is on an open PR; local execution was not available in this session and CI/preview evidence is not yet visible. Do not merge until required checks and preview review pass.
+- Verification state: implementation is on an open PR; local execution was not available in this session. GitHub Foundation checks run #3410 is in progress; `npm run check` and `npm run build:pages` have passed, while `npm test`, Chromium, and WebKit checks are still running. Cloudflare preview evidence is not yet visible. Do not merge until all required checks and preview review pass.
 - Deferred: shared client-side navigation/app shell and edge cold-start investigation remain a separate architectural task; this PR does not claim to solve them.
 
 
