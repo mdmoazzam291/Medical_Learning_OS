@@ -360,7 +360,7 @@ try {
   await page.goto(origin + '/web/account.html');
   await page.getByRole('heading', { name: 'Your Medretica account.' }).waitFor();
   await page.getByRole('heading', { name: 'One learner account, two ways in.' }).waitFor();
-  await page.getByRole('button', { name: 'Opt in to retention feasibility' }).waitFor();
+  await page.getByRole('button', { name: 'Opt in to memory check study' }).waitFor();
   await page.getByRole('link', { name: 'Open Admin Console' }).waitFor();
 
   await page.goto(origin);
