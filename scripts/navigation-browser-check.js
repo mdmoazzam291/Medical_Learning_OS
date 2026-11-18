@@ -404,7 +404,7 @@ try {
     assert.equal(await page.locator('#mlos-local-nav a[aria-current]').innerText(), 'Study Now');
     await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).waitFor({ state: 'attached' });
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Exams', exact: true }));
-    await page.getByRole('heading', { name: 'Rule-faithful, locked-section simulation.', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Practice the exam with timed, locked sections.', exact: true }).waitFor();
     await activate(mainNav.getByRole('link', { includeHidden: true, name: 'Home', exact: true }));
     await page.getByRole('heading', { name: 'What should you study next?', exact: true }).waitFor();
     await page.getByRole('button', { name: '5 min', exact: true }).click();
