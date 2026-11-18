@@ -201,14 +201,23 @@ async function loadCloud({ forceRefresh = false } = {}) {
     }
   }
 
-  const [progressResult, questionsResult, retentionResult, preparationResult] = await Promise.allSettled([
+  const preparationRead = withTimeout(auth.preparationProfile(), 12000, 'preparation_profile_timeout');
+  preparationRead.then(profile => {
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
+    preparationState = { ...preparationState, loading:false, error:null, profile };
+    render();
+  }, () => {
+    if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
+    preparationState = { ...preparationState, loading:false, error:'preparation_unavailable' };
+    render();
+  });
+
+  const [progressResult, questionsResult, retentionResult] = await Promise.allSettled([
     cloud.progress(),
     cloud.questions('all'),
-    cloud.retentionProbeConsent(),
-    withTimeout(auth.preparationProfile(), 12000, 'preparation_profile_timeout')
+    cloud.retentionProbeConsent()
   ]);
   if (generation !== accountLoadGeneration || auth.currentUser()?.id !== session.user.id || state.user?.id !== session.user.id) return;
-  preparationState = { ...preparationState, loading:false, error:preparationResult.status === 'rejected' ? 'preparation_unavailable' : null, profile:preparationResult.status === 'fulfilled' ? preparationResult.value : preparationState.profile };
   const projectionErrors = {
     progress: projectionError(progressResult),
     questions: projectionError(questionsResult),
