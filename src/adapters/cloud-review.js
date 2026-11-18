@@ -11,6 +11,11 @@ function cleanBase(url) {
   return url.replace(/\/$/, '');
 }
 
+// Concurrent /me requests for the same session (shared navigation + page script)
+// share one in-flight call. Nothing is cached after it settles, so role changes
+// apply on the next request.
+const inFlightMe = new Map();
+
 export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = fetch }) {
   const base = cleanBase(projectUrl);
   if (typeof publishableKey !== 'string' || !publishableKey.startsWith('sb_publishable_')) throw new Error('invalid_publishable_key');
@@ -44,7 +49,16 @@ export function createCloudReview({ projectUrl, publishableKey, auth, fetchFn = 
   }
 
   return {
-    me() { return request('/me'); },
+    async me() {
+      const session = await auth.getSession();
+      const key = `${base}|${session?.accessToken ?? ''}`;
+      let pending = inFlightMe.get(key);
+      if (!pending) {
+        pending = request('/me').finally(() => inFlightMe.delete(key));
+        inFlightMe.set(key, pending);
+      }
+      return structuredClone(await pending);
+    },
     pipelineStatus() { return request('/pipeline-status'); },
     queue(reviewKind) { return request(`/queue?kind=${encodeURIComponent(reviewKind)}`); },
     noteQueue(reviewKind) { return request(`/note-queue?kind=${encodeURIComponent(reviewKind)}`); },

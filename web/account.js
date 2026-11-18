@@ -70,6 +70,9 @@ function signedOut() {
 
 function retentionPilotPanel() {
   const consent = state.retentionConsent;
+  if (!consent && state.loading && !state.projectionErrors.retention) {
+    return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted" role="status">Checking pilot status…</p></section>';
+  }
   if (!consent || state.projectionErrors.retention) {
     return '<section class="panel"><span class="eyebrow" id="research">OPTIONAL LEARNING-MEASUREMENT PILOT</span><h2>Retention feasibility</h2><p class="muted">Consent status is unavailable right now. No probe can be scheduled from this screen.</p><button class="text-button" data-action="refresh">Retry account data</button></section>';
   }

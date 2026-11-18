@@ -272,15 +272,21 @@ async function loadReadiness() {
   let testReadinessError = null;
   let internalTestAllowed = false;
 
-  try {
-    productionReadiness = await cloud.examSimulatorReadiness(RULE_SET_ID);
-  } catch (error) {
+  // Both readiness checks are independent; run them in parallel to shorten loading.
+  const [production, internal] = await Promise.allSettled([
+    cloud.examSimulatorReadiness(RULE_SET_ID),
+    cloud.examSimulatorTestReadiness(RULE_SET_ID)
+  ]);
+  if (production.status === 'fulfilled') productionReadiness = production.value;
+  else {
+    const error = production.reason;
     reportUnexpected(error, 'production_readiness');
     productionReadinessError = error.code || error.message || 'production_readiness_unavailable';
   }
 
   try {
-    testReadiness = await cloud.examSimulatorTestReadiness(RULE_SET_ID);
+    if (internal.status === 'rejected') throw internal.reason;
+    testReadiness = internal.value;
     internalTestAllowed = true;
   } catch (error) {
     if (Number(error?.status) === 403 && error?.code === 'internal_exam_test_forbidden') {

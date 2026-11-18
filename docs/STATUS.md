@@ -9,6 +9,14 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Learner loading: fewer requests, no false consent error
+- Investigated owner's phone recording (12:37–12:44 IST) against production function logs: no learner call failed. Slowness = 5–6 API calls per page load (0.3–2 s each, ~2 s on cold start), CORS preflights, full page reload on every section switch, and a duplicate `review-api/me` per page.
+- `src/adapters/cloud-review.js`: concurrent `me()` calls for the same session share one in-flight request (no caching after it settles; separate sessions never share). Removes one request per page load. Tests in `tests/cloud-review.test.js`.
+- `web/account.js`: the retention card showed "Consent status is unavailable… Retry account data" while the consent call was still loading; it now shows "Checking pilot status…" and keeps the error only for real failures.
+- `web/exam.js`: production and internal-test readiness checks now run in parallel (the internal check's 403 for non-testers is expected and still handled as "not allowed").
+- Not changed: CORS max-age is already 86400 s (Safari caps preflight caching). Remaining latency comes from edge-function cold starts and full-page navigation; a shared app shell/client-side navigation would be the structural fix.
+- Verified: `npm test` (1,729 pass), `npm run check`; exam, main browser, navigation and auth-recovery browser checks pass.
+
 ### 2026-11-18 — Fix palette flash (sage → lavender) on every page load
 - Owner-reported (phone screen recording): pages flashed the default sage palette before switching to the saved lavender. Cause: `web/navigation.js` (a deferred module) set `data-palette`/`data-appearance`/`data-surface-style` only after first paint.
 - Fix: new classic `web/appearance-boot.js` loaded first in `<head>` of all 21 navigation pages applies the saved `mlos-navigation-v1` theme, palette and surface style before first paint (same validation/defaults as `validatePreferences`). Added to the static allowlist in `scripts/public-surface.js`.
