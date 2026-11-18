@@ -71,7 +71,7 @@ test('account treats Google and password as methods on one verified-email learne
   assert.match(account, /One learner account, two ways in/);
   assert.match(account, /Add password sign-in to this Google account/);
   assert.match(account, /auth\.setPassword/);
-  assert.match(account, /No learner data needs to be copied or merged/);
+  assert.match(account, /it connects to this same learner account\. Your learning history stays together/);
   assert.doesNotMatch(account, /merge learner accounts|copy learner history/i);
 });
 
