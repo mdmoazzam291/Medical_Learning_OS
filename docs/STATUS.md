@@ -9,6 +9,23 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Accessibility audit extended to signed-in learner states and WebKit
+- `scripts/accessibility-browser-check.js` now runs two passes per engine: 17 signed-out pages plus 13 signed-in learner pages (Home/Study Now, Account, Study, Today, Library and concept notes, NeuralVault list and a concept with its canonical note, Exam, Retention, Review, NMC catalogue, Plans) at four viewports = 120 audits.
+- Signed-in pass uses a synthetic non-admin session and synthetic GET fixtures (reusing `tests/fixtures/preparation-fixture.js`); any non-GET request or page script error fails the run. Other external origins are blocked.
+- Runs in Chromium (browser job) and WebKit (macOS webkit job, iPad-closest engine). Per-engine JSON reports are uploaded with the screenshot artifacts.
+- Coupling baseline: added the reviewed test-only `supabase` marker for this script (synthetic session key and stubbed API origin, same pattern as the library/vault checks; no SDK or real calls).
+- Limits: the Today workspace renders its "Workspace unavailable" fallback under the generic fixtures (still audited, but not its populated state); admin pages are not audited.
+- First run (Chromium and WebKit agreed): one serious finding on every signed-in page at phone width — WCAG 2.5.3 Label in Name. The phone menu button shows the current master (e.g. "Study") but was named "Expand navigation", so voice-control commands using the visible word failed. Fixed in `web/navigation-view.js`: the phone button is now named "<Master>: expand/collapse navigation"; the desktop rail keeps "Expand/Collapse navigation". Updated `tests/navigation-view.test.js` and the phone selectors in `scripts/navigation-browser-check.js`.
+- Verified locally: `npm test` (1,724 pass), `npm run check`, navigation browser check (172 nested leaves, touch, history, pins) and the two-pass audit plumbing.
+- CI: audit passes in Chromium and WebKit (120 audits each, 0 violations). The Chromium job hit its 15-minute limit on one run (install step took 6.5 min; audit adds ~1.5 min to an ~11-minute job), so its timeout is raised to 20 minutes.
+
+### 2026-11-18 — Automated accessibility audit (axe-core, WCAG 2.2 A/AA)
+- New `scripts/accessibility-browser-check.js`: audits 17 learner-facing/public pages at phone (390), tablet portrait (820), tablet landscape (1180) and desktop (1440) with axe-core 4.14.1 in the Chromium CI job. External requests blocked; `bypassCSP` is used only so the test can inject axe (production CSP unchanged).
+- Gate (`scripts/accessibility-gate.js`, tests in `tests/accessibility-gate.test.js`): serious/critical violations fail CI unless recorded with a reason in `ops/accessibility/baseline.json` (empty; never auto-refresh). Moderate/minor are advisory. JSON report is uploaded with the screenshots artifact.
+- Scope limits: signed-out/public render states only; signed-in learner states, admin pages and WebKit are not yet audited. axe catches roughly a third to half of WCAG issues; it does not replace manual review.
+- First CI run (axe 4.14.1, 68 audits): no moderate/minor findings; one serious `color-contrast` failure on `/web/account.html` at tablet portrait and landscape. Root cause was a layout bug: at <=1220px the shrunken phone illustration's tab bar overlapped the dark "Start today's plan" button, putting muted text on dark green. Fixed in `web/account-landing.css`: the tab bar now has its own opaque background and divider, and the illustration's spacing is tightened at <=1220px so the full mock screen fits. Desktop unchanged. The sign-in content guard hash (`tests/fixtures/signin-content-baseline.json`) was updated for this intentional, reviewed CSS change.
+- Verified locally: full `npm test` (1,724 pass) and `npm run check`; brand, public-policies, public-home and auth-recovery browser checks pass; tablet/desktop screenshots inspected. Baseline remains empty.
+
 ### 2026-11-18 — Confusion pairs ("commonly confused with")
 - `data/nmc-concept-confusions.json` (new): 173 AI-drafted undirected pairs across 324 concepts, each with the key discriminator (e.g. nephrotic vs nephritic, DKA vs HHS, open- vs angle-closure glaucoma, hanging vs strangulation). Validated by `src/domain/nmc-concept-confusions.js`; source `ops/nmc/confusions/pairs.json`; builder `ops/nmc/build-concept-confusions.js`.
 - Purpose: misconception detection (a wrong answer that picks the confused concept) and compare cards. Not faculty-reviewed; not yet used by the app.

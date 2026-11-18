@@ -7,7 +7,7 @@ test('phone navigation uses one workspace menu and hides the closed sidebar', ()
   const html = markup({ phone: true, master: 'study', prefs: { expanded: false }, isAdmin: true });
   const header = html.split('</header>')[0];
   assert.match(header, /class="mlos-mobile-menu"/);
-  assert.match(header, /aria-label="Expand navigation"/);
+  assert.match(header, /aria-label="Study: expand navigation"/);
   assert.match(header, /<span>Study<\/span>/);
   assert.doesNotMatch(header.split('class="mlos-account"')[0], /data-master=/);
   assert.match(html, /<aside[^>]* hidden/);
@@ -18,7 +18,7 @@ test('phone navigation uses one workspace menu and hides the closed sidebar', ()
   assert.doesNotMatch(markup({ phone: true, prefs: {} }), /data-master="admin"/);
   const opened = markup({ phone: true, master: 'study', prefs: { expanded: true } });
   assert.doesNotMatch(opened, /<aside[^>]* hidden/);
-  assert.match(opened, /aria-label="Collapse navigation"/);
+  assert.match(opened, /aria-label="Study: collapse navigation"/);
   assert.match(opened, /More study tools/);
 });
 test('the wide header keeps four learner masters and an authorized Admin destination', () => {
@@ -48,7 +48,7 @@ test('rail controls expose click flyouts and pin shortcuts retain their original
   const html = markup({ phone: true, master: 'study', section: 'build', prefs: { pins: ['library:subjects'] } });
   assert.match(html, /data-flyout="library:subjects"/);
   assert.match(html, /aria-label="Pinned shortcuts"/);
-  assert.match(html, /aria-label="Expand navigation"/);
+  assert.match(html, /aria-label="Study: expand navigation"/);
 });
 test('collapsed Admin rail identifies the selected group without disclosing admin tools to learners', () => {
   const active = markup({ phone: true, master: 'admin', section: 'content', prefs: { expanded: false }, isAdmin: true });
