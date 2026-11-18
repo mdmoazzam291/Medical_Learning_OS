@@ -9,6 +9,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-18 — Automated accessibility audit (axe-core, WCAG 2.2 A/AA)
+- New `scripts/accessibility-browser-check.js`: audits 17 learner-facing/public pages at phone (390), tablet portrait (820), tablet landscape (1180) and desktop (1440) with axe-core 4.14.1 in the Chromium CI job. External requests blocked; `bypassCSP` is used only so the test can inject axe (production CSP unchanged).
+- Gate (`scripts/accessibility-gate.js`, tests in `tests/accessibility-gate.test.js`): serious/critical violations fail CI unless recorded with a reason in `ops/accessibility/baseline.json` (empty; never auto-refresh). Moderate/minor are advisory. JSON report is uploaded with the screenshots artifact.
+- Scope limits: signed-out/public render states only; signed-in learner states, admin pages and WebKit are not yet audited. axe catches roughly a third to half of WCAG issues; it does not replace manual review.
+- Verified locally: unit tests, full `npm test` (1,724 pass) and `npm run check` pass; browser plumbing verified with a stub axe (68 page/viewport audits, failure path exits 1). Real axe results come from the first CI run (registry access to axe-core unavailable in the authoring environment).
+
 ### 2026-11-18 — Confusion pairs ("commonly confused with")
 - `data/nmc-concept-confusions.json` (new): 173 AI-drafted undirected pairs across 324 concepts, each with the key discriminator (e.g. nephrotic vs nephritic, DKA vs HHS, open- vs angle-closure glaucoma, hanging vs strangulation). Validated by `src/domain/nmc-concept-confusions.js`; source `ops/nmc/confusions/pairs.json`; builder `ops/nmc/build-concept-confusions.js`.
 - Purpose: misconception detection (a wrong answer that picks the confused concept) and compare cards. Not faculty-reviewed; not yet used by the app.

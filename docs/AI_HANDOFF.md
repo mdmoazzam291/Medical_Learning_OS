@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-17T20:25Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-18T02:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -16,6 +16,10 @@ Checked: 2026-11-17T20:25Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Source exceptions: printed codes are stored unchanged; resolutions live in `data/nmc-reference-overlay.json` (7 search aliases, 2 heading groups, 2 official replacements, 1 deletion). `validateFoundationDrafts(pack, catalogue, overlay)` requires the overlay and checks every exception binding against its overlay row. PS 2.1*: alias PS2.1 accepted for search only; the asterisk's meaning is unresolved.
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v27 still live on registry @27 (commit `3c65f32`); the repo pins @28 (`dfc2abb`) and the redeploy is pending — next owner-api deploy picks it up + SHA-256; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
+
+## Active task — accessibility audit (2026-11-18)
+- Branch `feat/accessibility-axe-check` (owner-requested via Claude chat). Adds axe-core WCAG 2.2 A/AA audit to the Chromium CI job; see STATUS 2026-11-18.
+- Next action: read the first CI run; fix genuine serious/critical violations in `web/` or record reviewed debt with reasons in `ops/accessibility/baseline.json`; then extend to signed-in states (reuse mocked sessions from `scripts/browser-check.js`) and WebKit.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
