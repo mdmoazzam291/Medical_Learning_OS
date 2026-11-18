@@ -306,3 +306,39 @@ test('admin pair validation never sends validator identity from the browser', as
   assert.equal(body.attestationVersion, 'transfer-pair-human-validation-v1');
   assert.equal(body.attested, true);
 });
+
+test('concurrent me() calls for one session share a single request without caching afterwards', async () => {
+  let fetches = 0;
+  let release;
+  const gate = new Promise(resolve => { release = resolve; });
+  const fetchFn = async () => {
+    fetches += 1;
+    await gate;
+    return new Response(JSON.stringify({ isAdmin: false, reviewKinds: [] }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  };
+  const options = { projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co', publishableKey: 'sb_publishable_test', fetchFn };
+  const navigationClient = createCloudReview({ ...options, auth: fakeAuth({ accessToken: 'shared-jwt' }) });
+  const pageClient = createCloudReview({ ...options, auth: fakeAuth({ accessToken: 'shared-jwt' }) });
+  const first = navigationClient.me();
+  const second = pageClient.me();
+  await new Promise(resolve => setTimeout(resolve, 0));
+  release();
+  const [a, b] = await Promise.all([first, second]);
+  assert.equal(fetches, 1);
+  assert.deepEqual(a, { isAdmin: false, reviewKinds: [] });
+  a.isAdmin = true;
+  assert.equal(b.isAdmin, false, 'each caller receives its own copy');
+  await pageClient.me();
+  assert.equal(fetches, 2, 'a later call fetches fresh access');
+});
+
+test('me() calls for different sessions are not shared', async () => {
+  let fetches = 0;
+  const fetchFn = async () => { fetches += 1; return new Response('{"isAdmin":false}', { status: 200 }); };
+  const options = { projectUrl: 'https://iyapppmeieqhflnzslao.supabase.co', publishableKey: 'sb_publishable_test', fetchFn };
+  await Promise.all([
+    createCloudReview({ ...options, auth: fakeAuth({ accessToken: 'learner-a' }) }).me(),
+    createCloudReview({ ...options, auth: fakeAuth({ accessToken: 'learner-b' }) }).me()
+  ]);
+  assert.equal(fetches, 2);
+});

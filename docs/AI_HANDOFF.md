@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-18T08:25Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-18T09:05Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -17,9 +17,9 @@ Checked: 2026-11-18T08:25Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v27 still live on registry @27 (commit `3c65f32`); the repo pins @28 (`dfc2abb`) and the redeploy is pending — next owner-api deploy picks it up + SHA-256; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — palette flash fix (2026-11-18)
-- Branch `fix/theme-flash-before-paint` (owner-reported via Claude chat). Accessibility audit PR #483 merged to main as `334769f`.
-- See STATUS 2026-11-18. Next action: CI green, then owner merges. Follow-ups from the same screen recording (not started): long "Loading…" states on every section, failing retention-consent call on Account, learner-facing jargon, toast overlapping content, disabled Save goals button, duplicate Account nav.
+## Active task — learner loading fixes (2026-11-18)
+- Branch `fix/learner-loading-states` (owner-requested via Claude chat). PR #484 (palette flash) merged as `5336bbb`.
+- See STATUS 2026-11-18. Next action: CI green, owner merges. Remaining from the owner's recording: learner-facing jargon (Account, Exam), toast overlapping content, disabled Save goals button, duplicate Account nav; structural: cold starts + full-page navigation.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
