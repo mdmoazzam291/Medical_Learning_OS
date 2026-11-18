@@ -139,7 +139,8 @@ jobs:
     # Playwright 1.56.1 does not support the Ubuntu 26.04 image used by ubuntu-latest.
     # Pin to a supported LTS runner until the browser verification stack is upgraded.
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    # ~11 min on main plus ~1.5 min accessibility audit; tool installs vary 2-7 min.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
