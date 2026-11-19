@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validatePreviewData,parsePreviewFilters,previewPage} from '../src/domain/nmc-admin-learner-preview.js';
-import {learnerPreviewMarkup} from '../web/nmc-admin-learner-preview.js';
+import {learnerPreviewMarkup,conceptLayerMarkup} from '../web/nmc-admin-learner-preview.js';
 const raw=readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url));
 const data=JSON.parse(raw);
 const fn=readFileSync(new URL('../supabase/functions/nmc-admin-preview/index.ts',import.meta.url),'utf8');
@@ -38,4 +38,17 @@ test('markup shows the Admin-only banner and escapes content',()=>{
  assert.match(html,/Admin preview only/);assert.match(html,/Learners cannot see this/);assert.match(html,/not faculty-reviewed/);assert.match(learnerPreviewMarkup(previewPage(data,{}),{}),/Choose a subject or search/);
  const evil=learnerPreviewMarkup({...p,topics:[{subjectId:'x',topicLabel:'<img src=x>',objectives:[{objective:'<script>',mode:'knowledge',code:'A',pdfPage:1}]}]},{});
  assert.doesNotMatch(evil,/<script>|<img src=x>/);
+});
+test('preview shows AI-draft concept layers once per concept per topic, escaped',()=>{
+ const data=JSON.parse(readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url)));
+ validatePreviewData(data);
+ const p=previewPage(data,parsePreviewFilters({search:'rabies'}));
+ const layer=p.topics.flatMap(t=>t.concepts).find(c=>c.label==='Rabies');
+ assert.ok(layer&&layer.misconceptions.length>=1);
+ for(const t of p.topics)assert.equal(new Set(t.concepts.map(c=>c.conceptId)).size,t.concepts.length);
+ const html=learnerPreviewMarkup(p,{});
+ assert.match(html,/Concept links and misconceptions/);assert.match(html,/Common misconceptions/);assert.match(html,/check against current guidelines/);
+ const evil=conceptLayerMarkup({label:'<b>x',after:[{label:'<i>',strength:'essential',reason:'<s>'}],confusedWith:[],misconceptions:[{misconception:'<script>',correction:'<x>',kind:'reversed',guidelineSensitive:false}],presentations:[]});
+ assert.doesNotMatch(evil,/<script>|<b>x|<i>/);
+ assert.throws(()=>validatePreviewData({...data,concepts:[]}),/preview_data_invalid/);
 });
