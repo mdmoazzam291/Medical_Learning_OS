@@ -10,6 +10,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-20 — NMC preview: conventional 19-subject view with textbook-style integration
+- Owner request (02:31 IST): browse like conventional books — a subject's topics, each with the other subjects that teach the same thing.
+- Browse by Subject now opens on a 19-subject index in NMC document/phase order (Phase 1 Anatomy, Physiology, Biochemistry → Phase III Part II), each card with topics, concepts, objectives and concepts shared with other subjects. Each topic in a subject shows an **"Also taught in …"** box: per shared concept, the other subjects' objectives (expandable, with NMC code links), labelled "Linked by shared concept (AI-mapped), not NMC's own integration list" — the 2024 metadata holds no integration table. Admin console and the Admin-only learner-page panel both get it.
+- Domain: `previewPage` adds `subjectIndex` (no-filter Subject view) and `topics[].integration`; `NMC_SUBJECT_ORDER` is tested against `data/nmc-competency-source-metadata.json`. Preview data unchanged (@28, same checksum). **nmc-admin-preview must be redeployed** for the server part; web pages deploy from `main`.
+- Verification: `npm test` 1,760/1,760; `npm run check` passed; local Playwright/Chrome at 390/820/1180/1440 px: index (Anatomy first) → Anatomy → integration box → expand → concept → Back to Anatomy; no overflow/console errors; earlier overlay scenarios re-run green.
+
 ### 2026-11-20 — NMC foundation panel on learner pages, Admin account only
 - Owner request (00:35 IST): show the NMC foundation in the Admin account's own Library / NMC topics / Vault, not to other learners (option 1 of three; recall cards and single-account publication not chosen).
 - New `web/nmc-admin-overlay.js` (+ boot, CSS): a collapsed "NMC foundation · Admin preview (AI draft)" panel in Library and NMC topics (full subject/concept browser) and Vault (opens on the selected concept). Rendered only after the server confirms Admin (`review.me()`, same check as the Admin menu); data from the Admin-gated `nmc-admin-preview` (403 for others), loaded only when the panel is opened. No publication, no study/question or catalogue writes; `learnerActivation:false` unchanged. Study Now/Exams unchanged (NMC has no questions).

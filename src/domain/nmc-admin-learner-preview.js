@@ -45,21 +45,45 @@ function conceptPage(data,{subject,search,concept}){
   .sort((a,b)=>a.label.localeCompare(b.label)||a.conceptId.localeCompare(b.conceptId));
  return {...head(data),view:'concept',totalConcepts:index.size,matched:concepts.length,concepts};
 }
+// Conventional MBBS order: subjects as they appear in the NMC CBME 2024 document, with their phase (checked against data/nmc-competency-source-metadata.json by tests).
+export const NMC_SUBJECT_ORDER=[['anatomy','Phase 1'],['physiology','Phase 1'],['biochemistry','Phase 1'],['pharmacology','Phase 2'],['pathology','Phase 2'],['microbiology','Phase 2'],
+ ['forensic-medicine','Phase III Part I'],['community-medicine','Phase III Part I'],['medicine','Phase III Part II'],['pediatrics','Phase III Part II'],['psychiatry','Phase III Part II'],['dermatology','Phase III Part II'],
+ ['surgery','Phase III Part II'],['ophthalmology','Phase III Part I'],['ent','Phase III Part I'],['obstetrics-gynaecology','Phase III Part II'],['orthopaedics','Phase III Part II'],['anaesthesia','Phase III Part II'],['radiology','Phase III Part II']];
+const PHASE_RANK={'Phase 1':1,'Phase 2':2,'Phase III Part I':3,'Phase III Part II':4};
+function subjectIndex(data){
+ const stats=new Map(data.subjects.map(s=>[s.subjectId,{subjectId:s.subjectId,label:s.label,objectives:0,concepts:new Set(),shared:new Set(),topics:new Set()}]));
+ const conceptSubjects=new Map();
+ for(const i of data.items){if(!conceptSubjects.has(i.conceptId))conceptSubjects.set(i.conceptId,new Set());conceptSubjects.get(i.conceptId).add(i.subjectId);}
+ for(const i of data.items){const s=stats.get(i.subjectId);if(!s)continue;s.objectives++;s.concepts.add(i.conceptId);s.topics.add(i.topicLabel||'');if(conceptSubjects.get(i.conceptId).size>1)s.shared.add(i.conceptId);}
+ const order=new Map(NMC_SUBJECT_ORDER.map(([id,phase],n)=>[id,{n,phase}]));
+ return [...stats.values()].map(s=>({subjectId:s.subjectId,label:s.label,phase:order.get(s.subjectId)?.phase||null,objectives:s.objectives,concepts:s.concepts.size,topics:s.topics.size,sharedConcepts:s.shared.size}))
+  .sort((a,b)=>(PHASE_RANK[a.phase]||9)-(PHASE_RANK[b.phase]||9)||(order.get(a.subjectId)?.n??99)-(order.get(b.subjectId)?.n??99));
+}
 const conceptCount=data=>new Set(data.items.map(i=>i.conceptId)).size;
 export function previewPage(data,{subject='',search='',view='subject',concept=''}={}){
  if(subject&&!data.subjects.some(s=>s.subjectId===subject))throw new Error('preview_filter_invalid');
  if(view==='concept')return conceptPage(data,{subject,search,concept});
- // Listing all 2,865 objectives at once is too large for the screen: require a subject or a search.
- if(!subject&&!search)return {...head(data),view:'subject',matched:0,topics:[],filterRequired:true};
+ // Listing all 2,865 objectives at once is too large for the screen: show the subject index instead.
+ if(!subject&&!search)return {...head(data),view:'subject',matched:0,topics:[],filterRequired:true,subjectIndex:subjectIndex(data)};
+ const byConcept=new Map();
+ for(const i of data.items)if(i.conceptId){if(!byConcept.has(i.conceptId))byConcept.set(i.conceptId,[]);byConcept.get(i.conceptId).push(i);}
+ const subjectOrder=new Map(data.subjects.map((s,n)=>[s.subjectId,n]));
+ // Integration: other subjects linked to the same canonical concept (AI-mapped bindings, not NMC's own integration table).
+ const connectedFor=(conceptId,subjectId)=>{
+  const bySubject=new Map();
+  for(const o of byConcept.get(conceptId)||[])if(o.subjectId!==subjectId){if(!bySubject.has(o.subjectId))bySubject.set(o.subjectId,[]);bySubject.get(o.subjectId).push({code:o.code,objective:o.objective,mode:o.mode,pdfPage:o.pdfPage,topicLabel:o.topicLabel||null});}
+  return [...bySubject].sort(([a],[b])=>subjectOrder.get(a)-subjectOrder.get(b)).map(([subjectId,objectives])=>({subjectId,objectives}));
+ };
  const items=data.items.filter(i=>(!subject||i.subjectId===subject)&&(!search||[i.code,i.objective,i.topicLabel||'',i.conceptLabel||''].some(v=>v.toLowerCase().includes(search))));
  const topics=[];const byKey=new Map();
  for(const i of items){
   const key=i.subjectId+'|'+(i.topicLabel||'');
-  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[],concepts:[]};byKey.set(key,t);topics.push(t);}
+  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[],concepts:[],integration:[]};byKey.set(key,t);topics.push(t);}
   const t=byKey.get(key),layer=i.conceptId&&data.concepts?.[i.conceptId];
   // AI-draft concept layers (prerequisites, confusions, misconceptions, presentations), once per concept per topic.
   if(layer&&!t.concepts.some(c=>c.conceptId===i.conceptId))t.concepts.push(layerView(data,i.conceptId,i.conceptLabel));
   t.objectives.push({...objectiveView(i),conceptId:i.conceptId||null});
+  if(i.conceptId&&!t.integration.some(c=>c.conceptId===i.conceptId)){const connected=connectedFor(i.conceptId,i.subjectId);if(connected.length)t.integration.push({conceptId:i.conceptId,label:i.conceptLabel||'',connected});}
  }
  return {...head(data),view:'subject',matched:items.length,topics};
 }

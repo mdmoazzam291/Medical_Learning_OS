@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {validatePreviewData,parsePreviewFilters,previewPage} from '../src/domain/nmc-admin-learner-preview.js';
+import {validatePreviewData,parsePreviewFilters,previewPage,NMC_SUBJECT_ORDER} from '../src/domain/nmc-admin-learner-preview.js';
 import {learnerPreviewMarkup,conceptLayerMarkup,validPreviewResult} from '../web/nmc-admin-learner-preview.js';
 const raw=readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url));
 const data=JSON.parse(raw);
@@ -35,7 +35,7 @@ test('filters and grouping',()=>{
 test('markup shows the Admin-only banner and escapes content',()=>{
  const p=previewPage(data,{subject:'surgery',search:''});
  const html=learnerPreviewMarkup(p,{});
- assert.match(html,/Admin preview only/);assert.match(html,/Learners cannot see this/);assert.match(html,/not faculty-reviewed/);assert.match(learnerPreviewMarkup(previewPage(data,{}),{}),/Choose a subject or search/);
+ assert.match(html,/Admin preview only/);assert.match(html,/Learners cannot see this/);assert.match(html,/not faculty-reviewed/);assert.match(learnerPreviewMarkup(previewPage(data,{}),{}),/Open a subject to see its topics/);
  const evil=learnerPreviewMarkup({...p,topics:[{subjectId:'x',topicLabel:'<img src=x>',objectives:[{objective:'<script>',mode:'knowledge',code:'A',pdfPage:1}]}]},{});
  assert.doesNotMatch(evil,/<script>|<img src=x>/);
 });
@@ -97,4 +97,33 @@ test('concept markup keeps the Admin banner, escapes content and offers a way ba
  const evil=learnerPreviewMarkup({...index,concepts:[{conceptId:'C-x"><script>',label:'<img src=x>',subjectIds:['<b>'],objectiveCount:1}]},{});
  assert.doesNotMatch(evil,/<script>|<img src=x>|<b>/);
  assert.equal(validPreviewResult({...index,learnerActivation:true}),false);
+});
+test('subject view starts from a 19-subject index and shows textbook-style integration per topic',()=>{
+ const idx=previewPage(data,parsePreviewFilters({}));
+ assert.equal(idx.subjectIndex.length,data.subjects.length);
+ assert.equal(idx.subjectIndex.reduce((n,s)=>n+s.objectives,0),data.items.length);
+ assert.match(learnerPreviewMarkup(idx,{}),/data-preview-subject="anatomy"/);
+ for(const s of data.subjects){
+  const p=previewPage(data,parsePreviewFilters({subject:s.subjectId}));
+  for(const t of p.topics)for(const c of t.integration){
+   const others=new Set(data.items.filter(i=>i.conceptId===c.conceptId&&i.subjectId!==s.subjectId).map(i=>i.subjectId));
+   assert.deepEqual(new Set(c.connected.map(x=>x.subjectId)),others);
+   assert.ok(!c.connected.some(x=>x.subjectId===s.subjectId));
+   assert.equal(c.connected.reduce((n,x)=>n+x.objectives.length,0),data.items.filter(i=>i.conceptId===c.conceptId&&i.subjectId!==s.subjectId).length);
+  }
+ }
+ const anatomy=previewPage(data,parsePreviewFilters({subject:'anatomy'}));
+ const html=learnerPreviewMarkup(anatomy,{subject:'anatomy'});
+ assert.match(html,/Also taught in/);assert.match(html,/not NMC's own integration list/);
+ const solo=data.items.filter(i=>!data.items.some(j=>j.conceptId===i.conceptId&&j.subjectId!==i.subjectId));
+ assert.ok(solo.length>0);
+});
+test('subject index follows the NMC document order and phases',()=>{
+ const meta=JSON.parse(readFileSync(new URL('../data/nmc-competency-source-metadata.json',import.meta.url),'utf8'));
+ const seen=[];for(const r of meta.rows)if(!seen.some(([id])=>id===r.subjectId))seen.push([r.subjectId,r.phase]);
+ assert.deepEqual(NMC_SUBJECT_ORDER,seen);
+ const idx=previewPage(data,parsePreviewFilters({})).subjectIndex;
+ assert.deepEqual(idx.slice(0,3).map(s=>s.subjectId),['anatomy','physiology','biochemistry']);
+ const rank={'Phase 1':1,'Phase 2':2,'Phase III Part I':3,'Phase III Part II':4};
+ assert.ok(idx.every((s,n)=>n===0||rank[idx[n-1].phase]<=rank[s.phase]));
 });
