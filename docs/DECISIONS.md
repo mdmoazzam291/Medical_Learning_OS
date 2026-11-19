@@ -1719,3 +1719,9 @@ Owner instruction (2026-11-18 01:47 IST): mark the foundation complete and keep 
 - **Systems (item 3):** already present on 1,531 of 1,543 accepted identities. Gap: the vocabulary has no skin or mental-health system (dermatology sits under general, psychiatry under nervous). Fixing it needs a classification-revision path for identities; deferred.
 - **Status:** `ai-draft`, `clinicalApproval:false`, `learnerActivation:false`; not faculty or clinical review. Not consumed by any edge function yet, so no redeploy.
 
+
+## ADR-140 — Edge functions may be deployed by a manual GitHub workflow (19 November 2026)
+- **Context:** the only deploy route was the Supabase MCP connector, which requires the agent to paste every file's full text. That worked for review-api (70 KB) but is error-prone for study-api (125 KB plus 7 shared files); a single copy error would reach production before the byte comparison could catch it.
+- **Decision (owner, 2026-11-19 14:37 IST, option 1):** add `.github/workflows/deploy-supabase-function.yml`, a manually triggered workflow that deploys one named function from `main` with the Supabase CLI, after `npm test` and `npm run check`. It requires typing the function name twice, runs in the `production` GitHub environment, and writes the deployed commit and version to the job summary. It only lists functions that do their own authentication (`--no-verify-jwt`). One-off functions (`*-once`, `internal-qa-bootstrap`) are excluded.
+- **Credentials:** repository secret `SUPABASE_ACCESS_TOKEN` and variable `SUPABASE_PROJECT_REF`, added by the owner in GitHub settings; never committed. The owner can add required reviewers to the `production` environment for a second confirmation.
+- **Unchanged:** deploying still needs explicit owner instruction; the MCP connector remains allowed for small functions; no automatic deploy on merge.
