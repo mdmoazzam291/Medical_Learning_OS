@@ -20,6 +20,8 @@ import { buildServerScoredVisualDetectionEvent } from "./_shared/visual-detectio
 import { buildSessionSummary } from "./_shared/session-summary.js";
 import { readLearnerNavigation } from "./_shared/learner-navigation.js";
 import { readLearnerAttemptReview } from "./_shared/attempt-review.js";
+import { quotaBucketForRoute } from "../../../src/domain/access-protection.js";
+import { embedWatermark, watermarkCode } from "../../../src/domain/content-watermark.js";
 
 type Json = Record<string, unknown>;
 
@@ -313,11 +315,31 @@ Deno.serve(async (req: Request) => {
     const learnerId = authData.user.id;
     const internalExamTester = authData.user.app_metadata?.medical_learning_os_internal_tester === true;
 
+    // Per-learner request quota (ADR-143). Started only after the token is verified,
+    // so a forged token cannot spend another learner's quota; runs alongside the
+    // runtime-access read. Fails open on a database error (logged) to avoid an outage.
+    const quotaBucket = quotaBucketForRoute(req.method, routePath(new URL(req.url)));
+    const quota = quotaBucket
+      ? admin.rpc("learner_request_quota_v1", { p_user: learnerId, p_bucket: quotaBucket }).then(
+          (result: any) => result, () => ({ error: { code: "quota_rpc_failed" } }))
+      : null;
     const runtimeAccess = claimedId === learnerId && earlyRuntimeAccess
       ? await earlyRuntimeAccess
       : await checkRuntimeAccess(admin, token, learnerId);
     if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
     if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
+    if (quota) {
+      const { data: quotaResult, error: quotaError } = await quota;
+      if (quotaError) console.error(JSON.stringify({ event: "learner_quota_unavailable", bucket: quotaBucket }));
+      else if (quotaResult?.allowed === false) {
+        const retryAfter = Math.max(1, Math.min(86400, Number(quotaResult.retryAfterSeconds) || 60));
+        return new Response(JSON.stringify({ error: "rate_limited", bucket: quotaBucket, retryAfterSeconds: retryAfter, throttled: quotaResult.throttled === true }), {
+          status: 429,
+          headers: { ...corsHeaders(req), "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff", "Retry-After": String(retryAfter) }
+        });
+      }
+    }
+    const watermarkSalt = Deno.env.get("MLOS_WATERMARK_SALT") || "medretica-watermark-v1";
     const requireExamRunAccess = (row: any) => {
       if (row?.state?.assembly?.testingOnly === true && !internalExamTester) {
         fail(403, "internal_exam_test_forbidden");
@@ -1017,6 +1039,8 @@ Deno.serve(async (req: Request) => {
         question: {
           ...learnerQuestion(q),
           ...(presentation ? {stem:presentation.stem, options:presentation.options, representation:presentation.representation, variantId:presentation.variantId, variantVersion:presentation.variantVersion, sourceQuestionId:q.questionId, sourceQuestionVersionId:q.questionVersionId} : {representation:"original"}),
+          // Invisible per-learner trace mark (ADR-143); visible text is unchanged.
+          stem: embedWatermark(presentation ? presentation.stem : q.stem, await watermarkCode(learnerId, watermarkSalt)),
           media: mediaPrompt.media,
           visualInteraction: mediaPrompt.visualInteraction
         },

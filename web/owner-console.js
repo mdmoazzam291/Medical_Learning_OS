@@ -116,7 +116,7 @@ function learnerSearchResults(learners) {
 }
 
 function actionForm(action, title, confirmation, extra = '') {
-  return `<form class="owner-action-form" data-action="${escape(action)}"><h4>${escape(title)}</h4>${extra}<label>Reason<textarea name="reason" minlength="10" maxlength="1000" required placeholder="Why is this change necessary?"></textarea></label><label>Type <strong>${escape(confirmation)}</strong> to confirm<input name="confirmation" autocomplete="off" required></label><button class="${action === 'suspend' || action === 'revoke_beta' ? 'secondary' : 'primary'}" type="submit">${escape(title)}</button></form>`;
+  return `<form class="owner-action-form" data-action="${escape(action)}"><h4>${escape(title)}</h4>${extra}<label>Reason<textarea name="reason" minlength="10" maxlength="1000" required placeholder="Why is this change necessary?"></textarea></label><label>Type <strong>${escape(confirmation)}</strong> to confirm<input name="confirmation" autocomplete="off" required></label><button class="${action === 'suspend' || action === 'revoke_beta' || action === 'throttle' ? 'secondary' : 'primary'}" type="submit">${escape(title)}</button></form>`;
 }
 
 function learnerDetailMarkup(payload) {
@@ -125,9 +125,10 @@ function learnerDetailMarkup(payload) {
   const ownerProtected = learner.isAdmin === true;
   const betaExtra = '<label>Beta access until<input name="betaAccessUntil" type="datetime-local" required></label>';
   const suspendExtra = '<label>Suspension duration<select name="suspensionHours" required><option value="24">24 hours</option><option value="168">7 days</option><option value="720">30 days</option><option value="8760">1 year</option></select></label>';
+  const throttleExtra = '<label>Throttle for<select name="throttleHours" required><option value="24">24 hours</option><option value="168">7 days</option><option value="720">30 days</option></select></label><label>New limit<select name="throttleFactor" required><option value="5">1/5 of normal</option><option value="10" selected>1/10 of normal</option><option value="50">1/50 of normal</option></select></label>';
   const actions = ownerProtected
-    ? '<div class="review-packet"><strong>Owner account protected</strong><p class="muted">The singleton owner cannot be beta-mutated, suspended, or restored through learner administration.</p></div>'
-    : `<div class="owner-action-grid">${actionForm('grant_beta','Grant beta access','GRANT BETA',betaExtra)}${actionForm('revoke_beta','Revoke beta access','REVOKE BETA')}${actionForm('suspend','Suspend account','SUSPEND',suspendExtra)}${actionForm('restore','Restore account','RESTORE')}</div>`;
+    ? '<div class="review-packet"><strong>Owner account protected</strong><p class="muted">The singleton owner cannot be beta-mutated, suspended, restored or throttled through learner administration.</p></div>'
+    : `<div class="owner-action-grid">${actionForm('grant_beta','Grant beta access','GRANT BETA',betaExtra)}${actionForm('revoke_beta','Revoke beta access','REVOKE BETA')}${actionForm('suspend','Suspend account','SUSPEND',suspendExtra)}${actionForm('restore','Restore account','RESTORE')}${actionForm('throttle','Throttle requests','THROTTLE',throttleExtra)}${actionForm('unthrottle','Remove throttle','UNTHROTTLE')}</div>`;
   const history = audit.length
     ? `<div class="owner-audit-list">${audit.map(event => `<article><div><strong>${escape(event.action || '')}</strong><span>${escape(dateTime(event.createdAt))}</span></div><p>${escape(event.reason || '')}</p></article>`).join('')}</div>`
     : '<p class="muted">No owner administration events for this learner.</p>';
@@ -528,7 +529,8 @@ app?.addEventListener('submit', event => {
         confirmation: String(data.get('confirmation') || ''),
         requestId: crypto.randomUUID(),
         betaAccessUntil,
-        suspensionHours: action === 'suspend' ? Number(data.get('suspensionHours')) : null
+        suspensionHours: action === 'suspend' ? Number(data.get('suspensionHours')) : null,
+        ...(action === 'throttle' ? { throttleHours: Number(data.get('throttleHours')), throttleFactor: Number(data.get('throttleFactor')) } : {})
       });
       announce('Learner administration action recorded with an immutable audit receipt.');
       await showLearner(learnerId);

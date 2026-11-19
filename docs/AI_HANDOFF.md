@@ -44,6 +44,11 @@ Checked: 2026-11-19T17:30Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Not yet verified: the code prompt on a second device, and the Learner journey block with the owner signed in.
 - Rollback: re-create `learner_runtime_access_v1` from migration `20261003153000`.
 
+## Active task — learner access protection (2026-11-20, Claude)
+- Branch `feat/access-protection`, ADR-143. Release order after merge: apply migration `20261120090000` (Supabase MCP) → deploy study-api (quotas + trace mark) → deploy owner-api (signals, throttle, trace). Pages degrade to "unavailable" until then.
+- Rollback: deploy previous study-api (quota call fails open if the function is dropped, but remove the call to save the round trip).
+- Owner: optionally set `MLOS_WATERMARK_SALT` secret before the first deploy (changing it later breaks tracing of earlier copies); turn on Cloudflare "Block AI bots".
+
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 webkit limit; #488 API preconnect + measurements; #489 review-api parallel auth (v32, verified with signed-in traffic); #493/#495 manual deploy workflow (ADR-140); #494 study-api parallel auth.
 - study-api v55 deployed by the workflow at 10:29 UTC, files verified identical to `main`. Verified with the owner's signed-in visit (all 200; first page 0.46–0.58 s vs 1.9–2.1 s before; warm 0.18–0.29 s; warm `/me` 0.17 s). Rollback if needed = revert PR, then run the workflow. Next candidates: learner-experiment-api `/status` (1.05 s on first visit, still sequential), then re-measure medians over a few days.
