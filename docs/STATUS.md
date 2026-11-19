@@ -2,6 +2,9 @@
 
 Current state and recent entries. Entries up to 2026-11-17 are archived in [archive/STATUS-through-2026-11-17.md](archive/STATUS-through-2026-11-17.md) (unchanged). Add new entries at the top of "Recent".
 
+## 2026-11-19 — webkit CI time limit
+- Main run on `b319576` failed: webkit was cancelled at 15 minutes (check and browser passed). Cause: PR #483 added the accessibility audit to both browser jobs but raised only Chromium's limit. Webkit limit raised to 25 minutes on `fix/webkit-ci-timeout`.
+
 ## Current state — 2026-11-17
 - NMC foundation source accounting complete: registry @24, 2,865 draft objectives on 1,544 concepts, 2,633/2,634 NMC rows linked (PS9.2 deleted officially). No clinical or faculty review (owner skipped it); no learner activation; no question import.
 - Concepts: 1,543 accepted private identities; subject revisions supported and applied to 328 concepts.
