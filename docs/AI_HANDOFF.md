@@ -51,10 +51,11 @@ Checked: 2026-11-19T19:40Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Not yet verified: the code prompt on a second device, and the Learner journey block with the owner signed in.
 - Rollback: re-create `learner_runtime_access_v1` from migration `20261003153000`.
 
-## Active task — learner access protection (2026-11-20, Claude)
-- Branch `feat/access-protection`, ADR-143. Release order after merge: apply migration `20261120090000` (Supabase MCP) → deploy study-api (quotas + trace mark) → deploy owner-api (signals, throttle, trace). Pages degrade to "unavailable" until then.
-- Rollback: deploy previous study-api (quota call fails open if the function is dropped, but remove the call to save the round trip).
-- Owner: optionally set `MLOS_WATERMARK_SALT` secret before the first deploy (changing it later breaks tracing of earlier copies); turn on Cloudflare "Block AI bots".
+## Completed — learner access protection (2026-11-20, Claude)
+- PR #504 merged as `0eb7f2b` (ADR-143). Migration `20261120090000` applied 19:25 UTC (quota RPC and signals verified in a rolled-back transaction). Deployed from `0eb7f2b` by the ADR-140 workflow (owner go-ahead 00:55 IST): study-api (run 44598343109; quotas + trace mark) and owner-api (run 44598563442; signals, throttle, trace). Both boot.
+- Not yet verified: a real 429 notice, a throttle round-trip, and a trace of real marked text (no published learner questions yet).
+- Owner: `MLOS_WATERMARK_SALT` was not confirmed set before deploy, so marks use the repo default; setting it later changes all future marks. Turn on Cloudflare "Block AI bots".
+- Rollback: revert #504 and redeploy study-api/owner-api; quota call fails open if its function is missing.
 
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 webkit limit; #488 API preconnect + measurements; #489 review-api parallel auth (v32, verified with signed-in traffic); #493/#495 manual deploy workflow (ADR-140); #494 study-api parallel auth.

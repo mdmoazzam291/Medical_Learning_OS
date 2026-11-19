@@ -19,7 +19,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ### 2026-11-20 — Learner access protection (ADR-143)
 - Per-learner request quotas (study-api), Throttle/Unthrottle actions, Access Signals panel + Action Inbox item, invisible trace mark on session question stems with an admin trace tool, AI-crawler robots.txt, Terms update.
-- Verified: npm test 1,755 pass; npm run check pass. Not yet: migration `20261120090000`, study-api and owner-api deploys, live signed-in check.
+- Verified: npm test 1,755 pass; npm run check pass. Migration applied and study-api/owner-api deployed 2026-11-20 (~19:30 UTC). Not yet: live signed-in check.
 
 ### 2026-11-19 — NMC Admin learner preview: concept-wise browsing; full-coverage audit
 - Admin learner preview (`nmc-admin-preview`) now browses two ways, per the subject-wise/concept-wise decision: **Subject** (unchanged; search now also matches concept names, and each objective's concept name opens that concept) and **Concept (across subjects)**: an index of all 1,544 concepts (filter by subject or name/exact NMC code) and a concept page listing only the subjects that link to it, objectives grouped by subject with topic, and the AI-draft concept layers. Read-only; `learnerActivation:false` and the Admin-only banner on every view.
