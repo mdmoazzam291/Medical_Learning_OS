@@ -37,7 +37,7 @@ test('medical overview reads revision due state without making it mastery', asyn
   const source = await readFile(new URL('../web/medical.js', import.meta.url), 'utf8');
   assert.match(source, /cloud\.due\(15\)/);
   assert.match(source, /load_revision_due/);
-  assert.match(source, /Scheduling state is not a mastery score/);
+  assert.match(source, /Due reviews show what to revisit, not how well you know it/);
   assert.match(source, /The medical QBank still works/);
 });
 
@@ -98,7 +98,7 @@ test('medical overview shows full-mock capacity without overstating blueprint fi
   assert.match(source, /cloud\.examSimulatorReadiness\('neet-pg:2026@1'\)/);
   assert.match(source, /unique reviewed questions ready/);
   assert.match(source, /more distinct published questions are required/);
-  assert.match(source, /does not claim exam-blueprint fidelity/);
+  assert.match(source, /may not match the real exam’s subject mix/);
   assert.match(source, /The QBank and Study Now remain available/);
   assert.doesNotMatch(source, /Start full mock/);
 });

@@ -50,7 +50,7 @@ function signedOutView() {
 }
 
 function noneView() {
-  return `<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Account</a><div class="page-heading"><div><span class="eyebrow">OPTIONAL RETENTION CHECK</span><h1>No retention check is waiting now.</h1><p>Study Now and due revision remain the priority. This page does not create an assignment by being opened.</p></div><span class="badge">NO ACTION</span></div><section class="panel"><h2>Nothing to do here.</h2><p>If a preregistered optional check becomes eligible later, it can appear here only after the existing consent, timing, content and workload gates pass.</p><p><a class="primary action-link" href="/">Study Now →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a></p></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Account</a><div class="page-heading"><div><span class="eyebrow">OPTIONAL RETENTION CHECK</span><h1>No retention check is waiting now.</h1><p>Study Now and due reviews come first.</p></div><span class="badge">NO ACTION</span></div><section class="panel"><h2>Nothing to do here.</h2><p>If you join the optional memory check, a short follow-up question may appear here later.</p><p><a class="primary action-link" href="/">Study Now →</a> <a class="secondary action-link" href="/web/medical.html">Study →</a></p></section></main>`;
 }
 
 function blockedView() {

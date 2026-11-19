@@ -20,7 +20,8 @@ test('recent activity labels concise practice and escapes source IDs', () => {
 });
 test('a revision view exposes its actual due items and no automatically starting form', () => {
   const html = render('revision', { dueCount: 1, items: [{ question: { stem: 'Reviewed prompt', questionVersionId: 'q1@1' }, schedule: { dueAt: '2026-10-01T00:00:00Z' } }] });
-  assert.match(html, /Reviewed prompt/); assert.match(html, /Open recommended revision/); assert.doesNotMatch(html, /<form/);
+  assert.match(html, /Reviewed prompt/); assert.match(html, /Start due reviews/); assert.doesNotMatch(html, /<form/);
+  assert.doesNotMatch(render('revision', { dueCount: 0, items: [] }), /Start due reviews/);
 });
 
 test('Preferences exposes independent surface style without obsolete sidebar choices', () => {

@@ -91,7 +91,7 @@ function readinessCard({ label, readiness, error, testing }) {
   const action = ready
     ? '<button class="primary" data-action="' + (testing ? 'start-test' : 'start-production') + '" ' + (state.busy ? 'disabled' : '') + '>Start ' + (testing ? 'internal test mock' : 'full mock') + ' →</button>'
     : '<button class="secondary" disabled>' + shortage + ' more eligible question' + (shortage === 1 ? '' : 's') + ' required</button>';
-  return '<section class="panel exam-readiness-card"><span class="eyebrow">' + escape(label) + '</span><h2>' + count + ' / ' + required + ' questions ready</h2><p>' + (ready ? 'Capacity gate passed.' : 'Capacity gate has not passed.') + '</p><p class="muted">' + escape(caveat) + '</p>' + action + '</section>';
+  return '<section class="panel exam-readiness-card"><span class="eyebrow">' + escape(label) + '</span><h2>' + count + ' / ' + required + ' questions ready</h2><p>' + (ready ? 'Enough questions are ready.' : 'Not enough reviewed questions yet for a full mock.') + '</p><p class="muted">' + escape(caveat) + '</p>' + action + '</section>';
 }
 
 function homeView() {

@@ -9,6 +9,14 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — Learner UX honesty pass and source-rights correction
+- Audit (local app, phone size, fed the real production learner state via `content_library_snapshot_v1` for a test learner): no crashes or overflow; learners see 0 concepts, 0 questions, 0 notes.
+- Home and Study now say "Questions and notes are being prepared" with links to the NMC curriculum and exam goals, instead of "Your scheduled reviews are up to date". Dead-end links hidden when empty (Start due reviews, past-paper browse).
+- Plain-language rewrite of internal phrases (capacity gate, mastery inference, server-generated autopsy, preregistered gates, blueprint fidelity). Tests keep the same no-mastery/no-fidelity guarantees with new wording.
+- Library on phones hides the repeated intro and generic welcome on section pages.
+- Production data fix (migration `20261119120000_correct_catalog_source_rights`, applied): recall compilation `SRC-be6ce72162b7a18d92bf` public_domain → unknown; AHA aortic slide set and GeneReviews OTC → citation_only. US federal sources unchanged.
+- Verified: npm test 1,735 pass; npm run check pass; study-entry, ux-journey, exam, retention, library and main browser checks pass locally.
+
 ### 2026-11-19 — study-api: auth and runtime-access checks run in parallel (not deployed)
 - Same pattern as review-api v32: `learner_runtime_access_v1` starts alongside `getUser` using the token's unverified `sub`; its result is used only if `getUser` returns the same user id. Route reads are unchanged.
 - Live study-api v54 was checked file-by-file against `main` before this change (identical, including `data/preparation-curriculum.js` and `src/domain/preparation-pathways.js`).

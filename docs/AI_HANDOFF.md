@@ -32,6 +32,10 @@ Checked: 2026-11-19T09:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. Owner chose the GitHub deploy route (ADR-140): branch `ci/supabase-function-deploy` adds the workflow. Owner must add secret `SUPABASE_ACCESS_TOKEN` and variable `SUPABASE_PROJECT_REF` (= `iyapppmeieqhflnzslao`) before first use; then do the study-api change and deploy it with the workflow.
 - Not started: local JWT verification (check signing-key type first).
 
+## Completed — learner UX honesty pass (2026-11-19)
+- Branch `fix/learner-ux-honesty`: honest empty states, plain learner copy, compact phone Library header; catalogue source rights corrected in production (migration applied). See STATUS 2026-11-19.
+- Live-site access: allowed domains now include medretica.com, *.medretica.com, *.medicalos.workers.dev and the Supabase host. Never type learner passwords into production; audit signed-in screens via real data fed to a local copy, or via the owner's signed-in Chrome.
+
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
 - Cross-concept prerequisites: complete for all 19 subjects (1,600 links, 1,269 concepts; `data/nmc-concept-prerequisites.json`), one at a time via `ops/nmc/build-concept-prerequisites.js`. Not yet used by the app.
