@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T17:30Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T19:40Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -15,12 +15,19 @@ Checked: 2026-11-19T17:30Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Registry `data/nmc-learning-foundation-drafts.json` @28: 2,865 objectives (1,532 same-concept prerequisite links; reviewState auto-checked/needs-attention), 2,866 bindings, 1,544 concepts; 2,633 of 2,634 NMC rows linked; @28 corrected 119 fallback 'mechanism' task labels after checking each against its NMC text (27 kept where the NMC row asks for mechanism/physiology/pathogenesis; decisions in `ops/nmc/fallback-task-relabels.json`, objective IDs still contain the old ':mechanism:' segment by design); prerequisite links 1,600 and confusion pairs 170 after the 2026-11-18 quality audit; clinical presentations (`data/nmc-clinical-presentations.json`, 66 → 517 concepts) and misconceptions (`data/nmc-concept-misconceptions.json`, 244, built from `ops/nmc/misconceptions/*.json`) per ADR-139, shown in the Admin learner preview (rebuilt by `ops/nmc/build-admin-learner-preview.js` after any layer change, then repin nmc-admin-preview); high-yield tiers deferred until PYQ data; PS9.2 is an official deletion and never binds.
 - Source exceptions: printed codes are stored unchanged; resolutions live in `data/nmc-reference-overlay.json` (7 search aliases, 2 heading groups, 2 official replacements, 1 deletion). `validateFoundationDrafts(pack, catalogue, overlay)` requires the overlay and checks every exception binding against its overlay row. PS 2.1*: alias PS2.1 accepted for search only; the asterisk's meaning is unresolved.
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
-- Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
+- Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — NMC Admin learner preview: concept-wise browsing (2026-11-19, Claude)
-- Branch `feat/nmc-preview-concept-browse` (base `ad3c6e7`, code commit `ba29ff1`), PR [#502](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/502); see STATUS 2026-11-19. Changes: `src/domain/nmc-admin-learner-preview.js` (`view=concept`, `concept=<id>` filters), `web/nmc-admin-learner-preview.js`, `web/content-coverage.css`, tests.
-- Verified locally (tests, check, real-browser run at four sizes). Not yet: CI, merge, redeploy of nmc-admin-preview via the ADR-140 workflow, check with the owner's signed-in session.
-- Exact next action: wait for Workers Builds, check, browser, webkit → owner merges → run `deploy-supabase-function.yml` for `nmc-admin-preview` → owner opens Admin → learner preview → Browse by: Concept.
+## Active task — NMC panel on Admin's learner pages (2026-11-20, Claude)
+- Branch `feat/nmc-admin-overlay-learner-pages` (base: PR #503 branch head `e1eabab`, which is `main` + handoff); see STATUS 2026-11-20. Includes #503's handoff change; close #503 when this merges.
+- Verified locally (tests, check, browser behaviour runs). Not yet: CI, merge, production check with the owner's session.
+- Owner preference: ask before deploying content changes; target Admin + learner `mdmoazzam291@gmail.com` (same account). Merging this deploys web pages only (Cloudflare from `main`).
+- Exact next action: wait for Workers Builds, check, browser, webkit → ask owner → merge → owner opens Library / NMC topics / Vault → "NMC foundation · Admin preview".
+
+## Completed — NMC Admin learner preview: concept-wise browsing (2026-11-19, Claude)
+- PR [#502](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/502) (all four checks green) squash-merged as `4e6a8eb` on owner go-ahead 23:51 IST. Deployed by the ADR-140 workflow (run 44587154069, tests+check passed in the run): **nmc-admin-preview v32**; unauthenticated → 401. Web pages from `main` live on medretica.com (Workers Builds success; served `web/nmc-admin-learner-preview.js` contains the concept view).
+- Audience: Admin only. The owner's learner account `mdmoazzam291@gmail.com` is the same user as the Admin account (id `9bf8f11a…`, isAdmin true), so "Admin + one learner" = that one account. No learner publication; `learnerActivation:false` unchanged.
+- Owner standing preference (2026-11-19): for any content development/modification, ask each time before deploying; target = Admin + that one learner, not all learners.
+- Not yet verified: the concept view with the owner's signed-in session on production.
 - Left in place on purpose: 4 unaccepted private concept drafts (see STATUS); Brown-Séquard learner concept.
 
 ## Completed task — learner UX follow-ups (2026-11-19)

@@ -10,6 +10,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-20 — NMC foundation panel on learner pages, Admin account only
+- Owner request (00:35 IST): show the NMC foundation in the Admin account's own Library / NMC topics / Vault, not to other learners (option 1 of three; recall cards and single-account publication not chosen).
+- New `web/nmc-admin-overlay.js` (+ boot, CSS): a collapsed "NMC foundation · Admin preview (AI draft)" panel in Library and NMC topics (full subject/concept browser) and Vault (opens on the selected concept). Rendered only after the server confirms Admin (`review.me()`, same check as the Admin menu); data from the Admin-gated `nmc-admin-preview` (403 for others), loaded only when the panel is opened. No publication, no study/question or catalogue writes; `learnerActivation:false` unchanged. Study Now/Exams unchanged (NMC has no questions).
+- `mountLearnerPreview` gains optional `initial` (auto-load; on focus/pageshow reload only if the signed-in user changed, hide on sign-out). Admin console behaviour unchanged. Coupling baseline: `web/nmc-admin-overlay-boot.js` uses the existing Supabase auth adapter (reviewed).
+- Verification: `npm test` 1,754/1,754; `npm run check` passed. Local Playwright/Chrome: signed-out → no access check, nothing shown; non-admin → one access check, no preview request, nothing shown; Admin at 390/820/1180/1440 px → closed panel, no load until opened, concept index → HIV infection, focus keeps the page, sign-out hides data, no overflow/console errors; Vault → selected concept, switching concept remounts; real library/nmc-catalogue/vault pages as a guest → slot hidden, no errors. Admin console preview re-checked at four sizes.
+- Not yet: CI, merge, production check with the owner's session. Deploy = web pages only (Cloudflare from `main`); no edge-function or database change.
+
 ### 2026-11-20 — Learner access protection (ADR-143)
 - Per-learner request quotas (study-api), Throttle/Unthrottle actions, Access Signals panel + Action Inbox item, invisible trace mark on session question stems with an admin trace tool, AI-crawler robots.txt, Terms update.
 - Verified: npm test 1,755 pass; npm run check pass. Not yet: migration `20261120090000`, study-api and owner-api deploys, live signed-in check.
