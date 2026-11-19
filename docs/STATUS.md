@@ -9,6 +9,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — review-api: auth checks run in parallel (deployed v32)
+- `review-api` now starts `getUser`, `learner_runtime_access_v1` and (for `GET /me`) `content_admin_status_v1` at the same time, using the token's unverified `sub` only to start reads. Results are used only after `getUser` verifies the token and returns the same user id; otherwise the old sequential path runs. The early admin-status query is wrapped in `Promise.resolve` so the lazy Supabase query runs once.
+- Trade-off: a request with a forged or expired token now also triggers one cheap runtime-access read (and, for `/me`, one admin-status read) before being rejected with 401.
+- Deployed via Supabase MCP as review-api v32 at 2026-11-19 07:12 UTC (previous v31 matched `main` exactly). Deployed files verified byte-identical to the repo. Not yet verified with signed-in traffic: the workspace cannot reach the API, and no requests had arrived when checked. Rollback: redeploy `supabase/functions/review-api/` from `origin/main` before this branch.
+- Expected effect: `/me` drops from about three sequential round-trips (median ~0.5 s) to roughly the auth-server call alone. Re-measure with the STATUS 2026-11-19 log queries.
+
 ### 2026-11-19 — API preconnect; server latency measured
 - Pages now open the API connection early (`web/api-preconnect.js`, loaded right after `appearance-boot.js` on all 21 pages; one reviewed `supabase` coupling entry; test pins it to `cloudConfig.projectUrl`). Verified in Chromium on exam, account and privacy pages with no console errors.
 - Measured from existing production logs (last 24 h, no new learner data collected): learner function boot time averages about 35 ms (max about 220 ms), so cold starts are not the main cost. Every authenticated request first calls `/auth/v1/user` (median 398 ms, p90 823 ms), then `learner_runtime_access_v1` (median 116 ms, p90 578 ms), then its own query, all in sequence. Slowest routes: `review-api/me` (median 491 ms, p90 1,421 ms), `study-api/progress`, `/questions`, `/revision/due`, `/exam-simulator/readiness` (medians 570–680 ms, p90 about 1.5 s).
