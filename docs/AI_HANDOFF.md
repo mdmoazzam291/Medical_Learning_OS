@@ -18,9 +18,9 @@ Checked: 2026-11-19T17:30Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
 ## Active task — NMC Admin learner preview: concept-wise browsing (2026-11-19, Claude)
-- Branch `feat/nmc-preview-concept-browse` (base `ad3c6e7`); see STATUS 2026-11-19. Changes: `src/domain/nmc-admin-learner-preview.js` (`view=concept`, `concept=<id>` filters), `web/nmc-admin-learner-preview.js`, `web/content-coverage.css`, tests.
+- Branch `feat/nmc-preview-concept-browse` (base `ad3c6e7`, code commit `ba29ff1`), PR [#502](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/502); see STATUS 2026-11-19. Changes: `src/domain/nmc-admin-learner-preview.js` (`view=concept`, `concept=<id>` filters), `web/nmc-admin-learner-preview.js`, `web/content-coverage.css`, tests.
 - Verified locally (tests, check, real-browser run at four sizes). Not yet: CI, merge, redeploy of nmc-admin-preview via the ADR-140 workflow, check with the owner's signed-in session.
-- Exact next action: open PR → wait for Workers Builds, check, browser, webkit → owner merges → run `deploy-supabase-function.yml` for `nmc-admin-preview` → owner opens Admin → learner preview → Browse by: Concept.
+- Exact next action: wait for Workers Builds, check, browser, webkit → owner merges → run `deploy-supabase-function.yml` for `nmc-admin-preview` → owner opens Admin → learner preview → Browse by: Concept.
 - Left in place on purpose: 4 unaccepted private concept drafts (see STATUS); Brown-Séquard learner concept.
 
 ## Completed task — learner UX follow-ups (2026-11-19)
