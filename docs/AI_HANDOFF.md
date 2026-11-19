@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T07:20Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T08:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -29,7 +29,7 @@ Checked: 2026-11-19T07:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 (webkit limit, `10fb45e`), #488 (API preconnect + measurements, `bab07a9`).
-- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** (owner approved 2026-11-19 12:35 IST) but not yet verified with signed-in traffic. Next: check `function_edge_logs` for review-api v32 status codes/latency after the owner loads the app; if any 5xx, redeploy v31 code from `origin/main`. Then apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time.
+- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. study-api is 125 KB plus 7 shared files; inline MCP deploys of that size are error-prone, so a CLI/CI deploy route needs an owner decision first.
 - Not started: local JWT verification (check signing-key type first).
 
 ## Known gaps
