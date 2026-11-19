@@ -9,10 +9,10 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
-### 2026-11-19 — study-api: auth and runtime-access checks run in parallel (deployed v55)
+### 2026-11-19 — study-api: auth and runtime-access checks run in parallel (deployed v55, verified)
 - Same pattern as review-api v32: `learner_runtime_access_v1` starts alongside `getUser` using the token's unverified `sub`; its result is used only if `getUser` returns the same user id. Route reads are unchanged.
 - Live study-api v54 was checked file-by-file against `main` before this change (identical, including `data/preparation-curriculum.js` and `src/domain/preparation-pathways.js`).
-- Merged as #494 (`5afe257`); deployed by the ADR-140 workflow (run 44506033130, commit `b4ad40f`) as study-api v55 at 10:29 UTC. All 11 deployed files verified byte-identical to `main` (including `data/` and `src/` imports). No study-api traffic yet when checked; production behaviour and timings not yet verified.
+- Merged as #494 (`5afe257`); deployed by the ADR-140 workflow (run 44506033130, commit `b4ad40f`) as study-api v55 at 10:29 UTC. All 11 deployed files verified byte-identical to `main` (including `data/` and `src/` imports). Verified with the owner's signed-in visit at 10:39 UTC: every review-api v32 and study-api v55 request returned 200 (no 5xx). First page: progress/questions/revision/readiness 455–581 ms (were 1.9–2.1 s in the morning's first visit); second page: 182–292 ms; warm `/me` 174 ms (median 491 ms before). Single visit, so treat as indicative, not a measured median.
 ### 2026-11-19 — Manual GitHub workflow for edge-function deploys (ADR-140)
 - Added `.github/workflows/deploy-supabase-function.yml`: owner-triggered, `main` only, confirmation by retyping the function name, tests and checks first, `production` environment, deployed commit and version in the job summary. Owner added the secret and variable (scoped token: this project only, Edge Functions read-write, Project Settings read, 90-day expiry ≈ 17 Feb 2027). First run (44503071142, study-api) stopped safely at the CLI's confirmation prompt with nothing changed; `--yes` added.
 
