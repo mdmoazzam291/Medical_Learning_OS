@@ -1,5 +1,6 @@
 import curriculum from '../../data/preparation-curriculum.js';
 import { validatePreparationProfile } from '../domain/preparation-pathways.js';
+import { tokenAssuranceLevel } from '../domain/admin-assurance.js';
 const SESSION_KEY = 'mlos-supabase-auth-v1';
 
 export class AuthError extends Error {
@@ -386,6 +387,50 @@ export function createSupabaseAuth({ projectUrl, publishableKey, storage = creat
       } finally {
         write(null);
       }
+    },
+    // Two-factor (TOTP) for admin accounts. GoTrue endpoints; no SDK.
+    async mfaStatus() {
+      const session = await authenticatedSession();
+      const data = await api('/auth/v1/user', { method: 'GET', accessToken: session.accessToken });
+      const user = data?.user ?? data;
+      const factors = (Array.isArray(user?.factors) ? user.factors : []).map(factor => ({
+        id: String(factor.id || ''),
+        status: factor.status === 'verified' ? 'verified' : 'unverified',
+        factor_type: String(factor.factor_type || ''),
+        friendlyName: typeof factor.friendly_name === 'string' ? factor.friendly_name : null,
+        createdAt: factor.created_at || null
+      })).filter(factor => factor.id);
+      return { aal: tokenAssuranceLevel(session.accessToken), factors };
+    },
+    async mfaEnrollTotp(friendlyName) {
+      const session = await authenticatedSession();
+      const name = String(friendlyName || '').trim().slice(0, 60) || 'Authenticator';
+      const data = await api('/auth/v1/factors', { accessToken: session.accessToken, body: { factor_type: 'totp', friendly_name: name, issuer: 'Medretica' } });
+      if (!data?.id || !data?.totp?.uri) throw new AuthError(502, 'invalid_mfa_enroll_response');
+      return { factorId: data.id, uri: String(data.totp.uri), secret: String(data.totp.secret || ''), qrCode: typeof data.totp.qr_code === 'string' ? data.totp.qr_code : null };
+    },
+    async mfaVerify(factorId, code) {
+      const id = String(factorId || '');
+      if (!/^[0-9a-f-]{36}$/i.test(id)) throw new AuthError(400, 'invalid_mfa_factor');
+      const digits = String(code || '').replace(/\s+/g, '');
+      if (!/^\d{6}$/.test(digits)) throw new AuthError(400, 'invalid_mfa_code');
+      const session = await authenticatedSession();
+      const challenge = await api(`/auth/v1/factors/${id}/challenge`, { accessToken: session.accessToken, body: {} });
+      if (!challenge?.id) throw new AuthError(502, 'invalid_mfa_challenge_response');
+      const data = await api(`/auth/v1/factors/${id}/verify`, { accessToken: session.accessToken, body: { challenge_id: challenge.id, code: digits } });
+      const upgraded = normalizeSession(data);
+      if (!upgraded || tokenAssuranceLevel(upgraded.accessToken) !== 'aal2') throw new AuthError(502, 'mfa_session_not_upgraded');
+      if (!upgraded.user) upgraded.user = session.user;
+      if (upgraded.user?.id !== session.user?.id) throw new AuthError(409, 'mfa_identity_mismatch');
+      write(upgraded);
+      return upgraded;
+    },
+    async mfaUnenroll(factorId) {
+      const id = String(factorId || '');
+      if (!/^[0-9a-f-]{36}$/i.test(id)) throw new AuthError(400, 'invalid_mfa_factor');
+      const session = await authenticatedSession();
+      await api(`/auth/v1/factors/${id}`, { method: 'DELETE', accessToken: session.accessToken });
+      return { removed: true };
     },
     clear() { write(null); },
     currentUser() { return read()?.user || null; }

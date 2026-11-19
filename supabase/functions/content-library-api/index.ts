@@ -15,5 +15,6 @@ Deno.serve(createLibraryHandler({
   admin,
   getUser: async (token: string) => { const { data, error } = await userClient.auth.getUser(token); return error ? null : data.user; },
   runtimeAccess: (token: string, userId: string) => checkRuntimeAccess(admin, token, userId),
+  adminMfaStrict: (Deno.env.get("MLOS_ADMIN_MFA_STRICT") ?? "").trim().toLowerCase() === "true",
   allowedOrigins: ["http://127.0.0.1:3000", "http://localhost:3000", "https://medical-learning-os-preview.onrender.com", "https://medical-learning-os-web.medicalos.workers.dev", ...(Deno.env.get("MLOS_ALLOWED_ORIGINS") ?? "").split(",").map(x => x.trim()).filter(Boolean)]
 }));

@@ -2,6 +2,7 @@ import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
+import { adminAssuranceDecision, verifiedTotpFactors } from '/src/domain/admin-assurance.js';
 
 const root = document.querySelector('#admin-app');
 const notice = document.querySelector('#notice');
@@ -18,7 +19,9 @@ let state = {
   researchGate: null,
   loading: false,
   submitting: false,
-  error: null
+  error: null,
+  // Two-factor state: null (unknown) | { mode: 'ok'|'recommend'|'challenge'|'enroll', aal, factors, enrollment }
+  mfa: null
 };
 
 function announce(message) {
@@ -183,6 +186,50 @@ function restricted() {
   return '<main id="main" class="account-page"><a class="text-button" href="/">← App</a><div class="page-heading"><div><span class="eyebrow">ADMIN CONSOLE</span><h1>Admin access only.</h1><p>This authenticated account is a learner account and has no content approval authority.</p></div></div><section class="panel"><a class="secondary action-link" href="/web/account.html">Account →</a></section></main>';
 }
 
+function mfaChallengeScreen() {
+  const factors = verifiedTotpFactors(state.mfa?.factors);
+  const options = factors.map((factor, index) => '<option value="' + escape(factor.id) + '"' + (index === 0 ? ' selected' : '') + '>' + escape(factor.friendlyName || 'Authenticator ' + (index + 1)) + '</option>').join('');
+  return '<main id="main" class="account-page"><a class="text-button" href="/">← App</a><div class="page-heading"><div><span class="eyebrow">ADMIN CONSOLE · TWO-FACTOR</span><h1>Enter your authenticator code.</h1><p>This admin account is protected by two-factor sign-in. Owner tools stay locked until the 6-digit code is verified.</p></div></div>' +
+    '<section class="panel"><form class="admin-mfa-verify-form" autocomplete="off">' +
+    (factors.length > 1 ? '<label>Device<select name="factorId">' + options + '</select></label>' : '<input type="hidden" name="factorId" value="' + escape(factors[0]?.id || '') + '">') +
+    '<label>6-digit code<input name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,7}" maxlength="7" required autofocus></label>' +
+    '<button class="primary" type="submit"' + (state.submitting ? ' disabled' : '') + '>Verify and open admin</button></form>' +
+    '<p class="muted">Lost the device? Use another enrolled device, or remove the factor from the Supabase dashboard (Authentication → Users) and enrol again.</p></section></main>';
+}
+
+function mfaEnrollScreen() {
+  const enrollment = state.mfa?.enrollment;
+  if (!enrollment) {
+    return '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">ADMIN SECURITY</span><h1>Set up two-factor sign-in.</h1><p>Use an authenticator app on your phone (iPhone Passwords, Google Authenticator, Microsoft Authenticator or similar). After setup, every admin sign-in will ask for a 6-digit code.</p></div></div>' +
+      '<section class="panel"><form class="admin-mfa-enroll-start" autocomplete="off"><label>Device name<input name="friendlyName" maxlength="60" value="iPhone" required></label>' +
+      '<div class="review-actions"><button class="primary" type="submit"' + (state.submitting ? ' disabled' : '') + '>Create setup code</button> <button class="secondary" type="button" data-action="mfa-cancel">Not now</button></div></form></section></main>';
+  }
+  return '<main id="main" class="account-page"><div class="page-heading"><div><span class="eyebrow">ADMIN SECURITY · STEP 2 OF 2</span><h1>Add Medretica to your authenticator.</h1><p>On this iPhone or iPad, tap the setup link. Otherwise type the setup key into the authenticator app by hand. (No QR image is shown: the site security policy blocks inline images.)</p></div></div>' +
+    '<section class="panel"><p><a class="primary action-link" href="' + escape(enrollment.uri) + '">Open in authenticator app</a></p>' +
+    '<p>Setup key: <code class="admin-mfa-secret">' + escape(enrollment.secret) + '</code></p>' +
+    '<form class="admin-mfa-enroll-verify" autocomplete="off"><input type="hidden" name="factorId" value="' + escape(enrollment.factorId) + '">' +
+    '<label>Enter the 6-digit code the app now shows<input name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,7}" maxlength="7" required></label>' +
+    '<div class="review-actions"><button class="primary" type="submit"' + (state.submitting ? ' disabled' : '') + '>Verify and turn on two-factor</button> <button class="secondary" type="button" data-action="mfa-cancel">Cancel setup</button></div></form>' +
+    '<p class="muted">Tip: after this works, add a second device (for example your iPad) from Admin Security so losing one phone does not lock you out.</p></section></main>';
+}
+
+function mfaBanner() {
+  if (state.mfa?.mode !== 'recommend') return '';
+  return '<section class="panel" id="admin-mfa-banner" role="status"><div class="section-heading"><div><span class="eyebrow">SECURITY · RECOMMENDED</span><h2>Turn on two-factor sign-in for this admin account.</h2><p>Right now a password alone opens learner suspensions, feature gates and content tools.</p></div><button class="primary" type="button" data-action="mfa-setup">Set up two-factor</button></div></section>';
+}
+
+function securityPanel() {
+  const factors = Array.isArray(state.mfa?.factors) ? state.mfa.factors : [];
+  const verified = verifiedTotpFactors(factors);
+  const rows = verified.length
+    ? '<ul>' + verified.map(factor => '<li><strong>' + escape(factor.friendlyName || 'Authenticator') + '</strong> · added ' + escape(factor.createdAt ? new Date(factor.createdAt).toLocaleDateString() : 'unknown date') +
+        (verified.length > 1 ? ' <button class="text-button" type="button" data-action="mfa-remove" data-factor-id="' + escape(factor.id) + '">Remove</button>' : '') + '</li>').join('') + '</ul>'
+    : '<p>No two-factor device is enrolled.</p>';
+  const status = state.mfa === null ? 'Not verified' : verified.length ? (state.mfa.aal === 'aal2' ? 'On · this session verified' : 'On') : 'Off';
+  return '<section class="panel" id="admin-security"><div class="section-heading"><div><span class="eyebrow">ADMIN SECURITY</span><h2>Two-factor sign-in: ' + escape(status) + '</h2><p>Enforced on the server for every admin API once a device is enrolled. The last device cannot be removed here, so you cannot lock yourself out by accident.</p></div>' +
+    '<button class="secondary" type="button" data-action="mfa-setup">' + (verified.length ? 'Add another device' : 'Set up two-factor') + '</button></div>' + rows + '</section>';
+}
+
 function researchWorkspace() {
   const pairPanels = state.pairs.length
     ? state.pairs.map(pairPanel).join('')
@@ -193,17 +240,25 @@ function researchWorkspace() {
   return (!state.loading && !state.error ? researchGatePanel() : '') + loading + error + (!state.loading && !state.error ? pairPanels : '');
 }
 function adminHome() {
-  return '<div class="shell"><div class="workspace"><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1 tabindex="-1">Overview</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">OWNER ONLY</span></div><section id="admin-workspace-status" class="panel" role="status" hidden></section><div data-admin-panel="research" hidden>' + researchWorkspace() + '</div></main></div></div>';
+  return '<div class="shell"><div class="workspace"><main id="main" tabindex="-1"><div class="page-heading"><div><span class="eyebrow">SINGLE CONTENT ADMIN</span><h1 tabindex="-1">Overview</h1><p>' + escape(state.user?.email || 'Authenticated admin') + ' · gates: ' + state.reviewKinds.map(escape).join(', ') + '</p></div><span class="badge">OWNER ONLY</span></div>' + mfaBanner() + '<section id="admin-workspace-status" class="panel" role="status" hidden></section><div data-admin-panel="research" hidden>' + researchWorkspace() + '</div><div data-admin-panel="security" hidden>' + securityPanel() + '</div></main></div></div>';
 }
 
 function render() {
   globalThis.mlosNavigationAdmin = Boolean(state.user && state.isAdmin === true);
   globalThis.dispatchEvent?.(new CustomEvent('mlos:access', { detail: { isAdmin: globalThis.mlosNavigationAdmin } }));
   if (!state.user) root.innerHTML = signedOut();
+  else if (state.mfa?.mode === 'challenge') root.innerHTML = mfaChallengeScreen();
   else if (!state.isAdmin) root.innerHTML = state.loading ? '<main id="main" class="account-page"><h1>Verifying Admin access…</h1><p>Owner controls remain unavailable until the server confirms access.</p></main>' : state.accessUnavailable ? '<main id="main" class="account-page"><h1>Admin access unavailable</h1><p>Server access verification could not be completed. Owner controls remain unavailable.</p><button class="secondary" data-action="reload">Retry</button></main>' : restricted();
+  else if (state.mfa?.mode === 'enroll') root.innerHTML = mfaEnrollScreen();
   else {
     const research = root.querySelector?.('[data-admin-panel="research"]');
-    if (research) research.innerHTML = researchWorkspace();
+    if (research) {
+      research.innerHTML = researchWorkspace();
+      const security = root.querySelector?.('[data-admin-panel="security"]');
+      if (security && security !== research) security.innerHTML = securityPanel();
+      const banner = root.querySelector?.('#admin-mfa-banner');
+      if (banner && banner !== research && state.mfa?.mode !== 'recommend') banner.remove();
+    }
     else root.innerHTML = adminHome();
   }
   globalThis.dispatchEvent?.(new CustomEvent('mlos:admin-ready'));
@@ -212,7 +267,7 @@ function render() {
 async function loadAdmin() {
   const loading = ++adminLoad;
   if (!state.user) { render(); return; }
-  state = { ...state, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null, loading: true, error: null, accessUnavailable: false };
+  state = { ...state, isAdmin: false, reviewKinds: [], pairs: [], researchGate: null, loading: true, error: null, accessUnavailable: false, mfa: null };
   render();
   try {
     const session = await auth.getSession();
@@ -229,6 +284,21 @@ async function loadAdmin() {
       render();
       return;
     }
+    // Two-factor gate. The server enforces the same rule; this only avoids
+    // rendering owner tools that would all fail with admin_mfa_required.
+    let mfaStatus = null;
+    try { mfaStatus = await auth.mfaStatus(); }
+    catch (error) { reportUnexpected(error, 'mfa_status'); }
+    if (loading !== adminLoad) return;
+    if (mfaStatus) {
+      const decision = adminAssuranceDecision({ aal: mfaStatus.aal, factors: mfaStatus.factors });
+      if (!decision.allowed) {
+        state = { ...state, user: auth.currentUser() || session.user, loading: false, isAdmin: false, mfa: { mode: 'challenge', aal: mfaStatus.aal, factors: mfaStatus.factors } };
+        render();
+        return;
+      }
+      state = { ...state, mfa: { mode: decision.enrollmentRecommended ? 'recommend' : 'ok', aal: mfaStatus.aal, factors: mfaStatus.factors } };
+    } else state = { ...state, mfa: null };
     state = { ...state, isAdmin: true, reviewKinds: Array.isArray(me.reviewKinds) ? me.reviewKinds : [] };
     render();
     const result = await review.transferPairs();
@@ -261,9 +331,66 @@ root.addEventListener('click', event => {
   if (!target) return;
   event.preventDefault();
   if (target.dataset.action === 'reload') loadAdmin();
+  if (target.dataset.action === 'mfa-setup') { state = { ...state, mfa: { ...(state.mfa || {}), mode: 'enroll', enrollment: null } }; render(); }
+  if (target.dataset.action === 'mfa-cancel') {
+    const pending = state.mfa?.enrollment?.factorId;
+    (async () => {
+      if (pending) { try { await auth.mfaUnenroll(pending); } catch (error) { reportUnexpected(error, 'mfa_cancel_unenroll'); } }
+      await loadAdmin();
+    })();
+  }
+  if (target.dataset.action === 'mfa-remove') {
+    const factorId = target.dataset.factorId;
+    if (!factorId || !globalThis.confirm?.('Remove this two-factor device? Your other enrolled device will still be required.')) return;
+    (async () => {
+      try { await auth.mfaUnenroll(factorId); announce('Two-factor device removed.'); }
+      catch (error) { reportUnexpected(error, 'mfa_remove'); announce('Device was not removed: ' + (error.code || 'mfa_remove_failed') + '.'); }
+      await loadAdmin();
+    })();
+  }
 });
 
+function mfaSubmit(event) {
+  const verify = event.target.closest('.admin-mfa-verify-form, .admin-mfa-enroll-verify');
+  const start = event.target.closest('.admin-mfa-enroll-start');
+  if (!verify && !start) return false;
+  event.preventDefault();
+  if (state.submitting) return true;
+  const data = new FormData(verify || start);
+  state.submitting = true;
+  render();
+  (async () => {
+    try {
+      if (start) {
+        // Stale unverified factors block a new enrolment; they grant nothing, so remove them first.
+        for (const factor of (state.mfa?.factors || []).filter(item => item.status !== 'verified')) {
+          try { await auth.mfaUnenroll(factor.id); } catch (error) { reportUnexpected(error, 'mfa_clear_unverified'); }
+        }
+        const name = String(data.get('friendlyName') || 'Authenticator').trim() + ' · ' + new Date().toISOString().slice(0, 10);
+        const enrollment = await auth.mfaEnrollTotp(name);
+        state = { ...state, submitting: false, mfa: { ...(state.mfa || {}), mode: 'enroll', enrollment } };
+        render();
+        return;
+      }
+      await auth.mfaVerify(String(data.get('factorId') || ''), String(data.get('code') || ''));
+      state.submitting = false;
+      await loadAdmin();
+      announce(verify.classList.contains('admin-mfa-enroll-verify') ? 'Two-factor sign-in is on for this admin account.' : 'Code verified.');
+    } catch (error) {
+      if (Number(error?.status || 0) >= 500 || !error?.status) reportUnexpected(error, start ? 'mfa_enroll' : 'mfa_verify');
+      state.submitting = false;
+      render();
+      const code = error?.code || error?.message || 'mfa_failed';
+      announce(['invalid_mfa_code', 'mfa_verification_failed', 'invalid_credentials'].includes(code) || Number(error?.status) === 422
+        ? 'That code did not work. Wait for a fresh code and try again.'
+        : 'Two-factor step failed: ' + code + '.');
+    }
+  })();
+  return true;
+}
+
 root.addEventListener('submit', event => {
+  if (mfaSubmit(event)) return;
   const authorizationForm = event.target.closest('.activation-authorization-form, .activation-revoke-form');
   if (authorizationForm) {
     event.preventDefault();
