@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T09:20Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T10:40Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -28,9 +28,10 @@ Checked: 2026-11-19T09:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 
 ## Active task — loading speed (2026-11-19)
-- Merged: #487 (webkit limit, `10fb45e`), #488 (API preconnect + measurements, `bab07a9`).
-- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. Owner chose the GitHub deploy route (ADR-140): branch `ci/supabase-function-deploy` adds the workflow. Owner must add secret `SUPABASE_ACCESS_TOKEN` and variable `SUPABASE_PROJECT_REF` (= `iyapppmeieqhflnzslao`) before first use; then do the study-api change and deploy it with the workflow.
-- Not started: local JWT verification (check signing-key type first).
+- Merged: #487 webkit limit; #488 API preconnect + measurements; #489 review-api parallel auth (v32, verified with signed-in traffic); #493/#495 manual deploy workflow (ADR-140); #494 study-api parallel auth.
+- study-api v55 deployed by the workflow at 10:29 UTC, files verified identical to `main`. **Not yet verified with traffic.** Next: after the owner uses the app, check `function_edge_logs` for study-api v55 5xx (rollback = run the workflow on the previous commit's code via a revert PR) and compare progress/questions/revision/readiness timings with STATUS 2026-11-19; also measure warm review-api `/me`.
+- Deploy token: scoped to this project (Edge Functions read-write, Project Settings read), expires about 17 Feb 2027; owner renews it.
+- Not started: local JWT verification (check signing-key type first); other functions (owner-api, content-library-api, learner-experiment-api, retention-probe-api) still sequential.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
