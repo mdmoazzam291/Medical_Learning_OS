@@ -1,0 +1,246 @@
+[
+ {
+  "c": "Antibacterial drugs",
+  "m": "Antibiotics help viral upper respiratory infections by preventing secondary infection.",
+  "fix": "Routine antibiotics do not prevent complications in viral URTI and drive resistance and side effects.",
+  "k": "management"
+ },
+ {
+  "c": "Antimicrobial resistance",
+  "m": "Resistance develops because the patient's body becomes used to the antibiotic.",
+  "fix": "Bacteria, not patients, become resistant through selection and gene transfer driven by antibiotic exposure.",
+  "k": "mechanism"
+ },
+ {
+  "c": "Antimicrobial stewardship",
+  "m": "Broader-spectrum antibiotics are always safer.",
+  "fix": "Use the narrowest effective agent; de-escalate once culture results are known.",
+  "k": "management"
+ },
+ {
+  "c": "Antitubercular drugs",
+  "m": "Isoniazid-related neuropathy is prevented by vitamin B12.",
+  "fix": "Pyridoxine (vitamin B6) prevents isoniazid peripheral neuropathy.",
+  "k": "fact"
+ },
+ {
+  "c": "Anticoagulants",
+  "m": "Heparin and warfarin are monitored with the same test.",
+  "fix": "Unfractionated heparin is monitored with aPTT; warfarin with PT/INR.",
+  "k": "confusion"
+ },
+ {
+  "c": "Antiplatelet drugs",
+  "m": "Aspirin works by dissolving existing clots.",
+  "fix": "Aspirin irreversibly inhibits platelet COX-1 to prevent new clot formation; fibrinolytics dissolve clots.",
+  "k": "confusion"
+ },
+ {
+  "c": "Fibrinolytics",
+  "m": "Thrombolysis is useful at any time after a stroke.",
+  "fix": "Benefit is strictly time-dependent within a narrow window, and haemorrhage must be excluded first.",
+  "k": "timing",
+  "gs": true
+ },
+ {
+  "c": "Diuretics",
+  "m": "Loop and thiazide diuretics have the same effect on calcium.",
+  "fix": "Loop diuretics increase calcium excretion; thiazides reduce it.",
+  "k": "confusion"
+ },
+ {
+  "c": "Renin-angiotensin system inhibitors",
+  "m": "ACE inhibitors and ARBs should be combined for extra kidney protection.",
+  "fix": "Dual blockade increases hyperkalaemia and kidney injury without added benefit.",
+  "k": "management"
+ },
+ {
+  "c": "Antihypertensive drugs",
+  "m": "Beta-blockers are first-line for all hypertension.",
+  "fix": "First-line choice depends on age, ethnicity and comorbidity; beta-blockers are not first-line for uncomplicated hypertension.",
+  "k": "management",
+  "gs": true
+ },
+ {
+  "c": "Drugs used in heart failure",
+  "m": "Digoxin improves survival in heart failure.",
+  "fix": "Digoxin reduces symptoms and admissions but not mortality; ACE inhibitors or ARNI, beta-blockers, MRAs and SGLT2 inhibitors improve survival.",
+  "k": "evidence",
+  "gs": true
+ },
+ {
+  "c": "Antidiabetic drugs",
+  "m": "Metformin commonly causes hypoglycaemia.",
+  "fix": "Metformin alone rarely causes hypoglycaemia; sulfonylureas and insulin do.",
+  "k": "confusion"
+ },
+ {
+  "c": "Corticosteroids",
+  "m": "Inhaled steroids give quick relief in an asthma attack.",
+  "fix": "Inhaled steroids control inflammation over time; short-acting beta-agonists give quick relief.",
+  "k": "confusion"
+ },
+ {
+  "c": "Drugs for asthma and COPD",
+  "m": "A short-acting reliever alone is adequate long-term treatment for persistent asthma.",
+  "fix": "Persistent asthma needs inhaled corticosteroid-based controller therapy.",
+  "k": "management",
+  "gs": true
+ },
+ {
+  "c": "Opioid analgesics",
+  "m": "Patients with cancer pain on opioids quickly become addicted.",
+  "fix": "Addiction is uncommon when opioids are used appropriately for cancer pain; tolerance and dependence are different from addiction.",
+  "k": "confusion"
+ },
+ {
+  "c": "Non-opioid analgesics",
+  "m": "Paracetamol is safe in any dose because it is available over the counter.",
+  "fix": "Overdose causes hepatotoxicity; N-acetylcysteine is the antidote.",
+  "k": "safety"
+ },
+ {
+  "c": "Pharmacokinetics",
+  "m": "Doubling the dose doubles the duration of drug action.",
+  "fix": "With first-order kinetics, doubling the dose prolongs action by about one half-life only.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Drug interactions",
+  "m": "Enzyme inducers increase the effect of drugs metabolised by that enzyme.",
+  "fix": "Inducers speed metabolism and reduce effect (e.g. rifampicin with oral contraceptives); inhibitors increase it.",
+  "k": "reversed"
+ },
+ {
+  "c": "Prescribing in special populations",
+  "m": "Most drugs are safe in pregnancy if they are safe in adults.",
+  "fix": "Teratogenicity and altered pharmacokinetics mean drugs need specific pregnancy safety data.",
+  "k": "overgeneralisation"
+ },
+ {
+  "c": "Antiseizure medicines",
+  "m": "Valproate is the preferred antiseizure medicine in women of childbearing age.",
+  "fix": "Valproate is highly teratogenic; avoid it in women who may become pregnant unless no alternative exists.",
+  "k": "safety"
+ },
+ {
+  "c": "Antipsychotics",
+  "m": "Atypical antipsychotics have no important side effects.",
+  "fix": "They cause weight gain, diabetes and dyslipidaemia; metabolic monitoring is needed.",
+  "k": "safety"
+ },
+ {
+  "c": "Antidepressants",
+  "m": "Antidepressants work fully within the first few days.",
+  "fix": "Mood benefit usually takes 2–6 weeks; side effects appear earlier.",
+  "k": "timing"
+ },
+ {
+  "c": "Vaccines",
+  "m": "Live vaccines are safe in all immunocompromised patients.",
+  "fix": "Live vaccines are generally contraindicated in significant immunosuppression and pregnancy.",
+  "k": "safety"
+ },
+ {
+  "c": "Adverse drug reactions",
+  "m": "An adverse drug reaction means the drug was given incorrectly.",
+  "fix": "ADRs can occur with correct use at normal doses; they should still be reported to pharmacovigilance.",
+  "k": "concept"
+ },
+ {
+  "c": "Gram staining",
+  "m": "Gram-positive bacteria stain pink.",
+  "fix": "Gram-positive organisms retain crystal violet and stain purple; Gram-negative ones stain pink with the counterstain.",
+  "k": "reversed"
+ },
+ {
+  "c": "Ziehl-Neelsen staining",
+  "m": "Ziehl-Neelsen stain is used for all bacteria.",
+  "fix": "It detects acid-fast organisms such as mycobacteria, which resist decolourisation with acid-alcohol.",
+  "k": "concept"
+ },
+ {
+  "c": "Blood culture",
+  "m": "Blood cultures can be taken after starting antibiotics without loss of yield.",
+  "fix": "Antibiotics reduce culture yield; take cultures before the first dose whenever possible.",
+  "k": "sequence"
+ },
+ {
+  "c": "Sterilisation",
+  "m": "Disinfection and sterilisation mean the same thing.",
+  "fix": "Sterilisation kills all microbes including spores; disinfection reduces pathogens but may not kill spores.",
+  "k": "confusion"
+ },
+ {
+  "c": "Hand hygiene",
+  "m": "Wearing gloves removes the need for hand hygiene.",
+  "fix": "Hand hygiene is needed before and after glove use; gloves can be contaminated or have micro-defects.",
+  "k": "practice"
+ },
+ {
+  "c": "Herd immunity",
+  "m": "Herd immunity protects everyone once a few people are vaccinated.",
+  "fix": "Herd immunity requires coverage above a threshold that depends on the disease's transmissibility.",
+  "k": "threshold"
+ },
+ {
+  "c": "Urinary tract infection",
+  "m": "Bacteria in the urine always need antibiotics.",
+  "fix": "Asymptomatic bacteriuria is usually not treated, except in pregnancy and before urological procedures.",
+  "k": "management"
+ },
+ {
+  "c": "Helicobacter pylori infection",
+  "m": "A urea breath test is reliable while the patient is on proton pump inhibitors.",
+  "fix": "PPIs and recent antibiotics cause false negatives; stop them before testing.",
+  "k": "investigation"
+ },
+ {
+  "c": "Opportunistic infections",
+  "m": "Opportunistic infections occur only in HIV infection.",
+  "fix": "They occur in any significant immunosuppression, including chemotherapy, transplantation and long-term steroids.",
+  "k": "overgeneralisation"
+ },
+ {
+  "c": "HIV infection",
+  "m": "A negative HIV antibody test soon after exposure excludes infection.",
+  "fix": "Tests can be negative in the window period; repeat testing is needed after exposure.",
+  "k": "timing"
+ },
+ {
+  "c": "Serological tests",
+  "m": "A positive IgG antibody indicates current infection.",
+  "fix": "IgM suggests recent infection; IgG usually indicates past infection or immunity unless titres rise.",
+  "k": "confusion"
+ },
+ {
+  "c": "Dysentery",
+  "m": "All bloody diarrhoea is amoebic.",
+  "fix": "Shigella is the commonest cause of bloody diarrhoea in children; stool examination guides treatment.",
+  "k": "cause"
+ },
+ {
+  "c": "Hookworm infection",
+  "m": "Hookworm infection spreads mainly through contaminated food.",
+  "fix": "Larvae penetrate the skin, usually through bare feet on contaminated soil.",
+  "k": "transmission"
+ },
+ {
+  "c": "Lymphatic filariasis",
+  "m": "Filariasis is spread by Anopheles mosquitoes only in India.",
+  "fix": "In India, Culex quinquefasciatus is the main vector of Wuchereria bancrofti.",
+  "k": "fact"
+ },
+ {
+  "c": "Encephalitis",
+  "m": "Encephalitis and meningitis present identically.",
+  "fix": "Encephalitis causes altered behaviour, consciousness and seizures early; meningitis is dominated by meningeal signs.",
+  "k": "confusion"
+ },
+ {
+  "c": "Pyrexia of unknown origin",
+  "m": "Any fever without an obvious source is a PUO.",
+  "fix": "PUO requires prolonged fever (classically >3 weeks) undiagnosed despite a defined period of investigation.",
+  "k": "definition"
+ }
+]

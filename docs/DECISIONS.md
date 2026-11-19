@@ -1709,3 +1709,13 @@ Owner instruction "Do remaining nmc gaps" (2026-11-17 22:59 IST), with faculty r
 Owner instruction (2026-11-18 01:47 IST): mark the foundation complete and keep the five non-subject curriculum parts separate so any of them can be added later on requirement.
 - **Complete:** the NMC foundation covers the subject competency rows of NMC CBME 2024 (2,633 of 2,634 rows linked; PS9.2 is an official deletion). Objectives remain AI-authored drafts without faculty review; this completion is mapping/authoring completion, not clinical validation, learner material or learner publication.
 - **Separate:** AETCOM, Foundation Course, Early Clinical Exposure, pandemic modules, and Electives/Family Adoption/logbook are recorded in `data/nmc-non-subject-curriculum-deferred.json` with audited counts, overlap notes and pointers to the retained audit branch. They are not in the foundation registry, and adding any part needs an explicit owner decision and a new registry version.
+
+## ADR-139 — NMC foundation: clinical presentation layer and misconception library (19 November 2026)
+- **Context:** the foundation had objectives, prerequisites and confusion pairs, but nothing for case-based reasoning or mistake modelling. Exam-weighting (high-yield tiers) is deferred until PYQ topic-frequency data exists, so it is not guessed now.
+- **Decision:** two separate, AI-drafted layers keyed by canonical concept IDs, not stored in concept identities:
+  - `data/nmc-clinical-presentations.json` (`nmc-clinical-presentations-v1`): 66 presentations (chest pain, jaundice, sick newborn...) linking 517 concepts as `cause` or `approach`. Not an exhaustive differential.
+  - `data/nmc-concept-misconceptions.json` (`nmc-concept-misconceptions-v1`): 244 high-yield wrong beliefs, at most 3 per concept, each with a correction, one of 10 error kinds (confusion, reversed, overgeneralisation, mechanism, test-interpretation, management, sequence-timing, missed-red-flag, reasoning, factual) and a `guidelineSensitive` flag (15 set). IDs are `mc:` + hash of concept and wording.
+- **Uses:** distractor design and mistake classification (mistake model), targeted remediation, presentation-wise revision and case questions, Study Now grouping.
+- **Systems (item 3):** already present on 1,531 of 1,543 accepted identities. Gap: the vocabulary has no skin or mental-health system (dermatology sits under general, psychiatry under nervous). Fixing it needs a classification-revision path for identities; deferred.
+- **Status:** `ai-draft`, `clinicalApproval:false`, `learnerActivation:false`; not faculty or clinical review. Not consumed by any edge function yet, so no redeploy.
+

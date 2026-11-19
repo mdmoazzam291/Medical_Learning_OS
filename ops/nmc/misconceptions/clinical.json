@@ -1,0 +1,524 @@
+[
+ {
+  "c": "Ectopic pregnancy",
+  "m": "A normal-looking uterus on ultrasound with a positive pregnancy test excludes ectopic pregnancy.",
+  "fix": "An empty uterus with a positive test is a pregnancy of unknown location and ectopic must be actively excluded with serial beta-hCG and scans.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Postpartum haemorrhage",
+  "m": "Most postpartum haemorrhage is due to retained placenta.",
+  "fix": "Uterine atony is the commonest cause (the 4 Ts: tone, trauma, tissue, thrombin).",
+  "k": "cause"
+ },
+ {
+  "c": "Hypertensive disorders of pregnancy",
+  "m": "Pre-eclampsia always resolves the moment the baby is delivered.",
+  "fix": "Eclampsia and severe features can occur postpartum, usually within the first days; monitoring continues after delivery.",
+  "k": "timing"
+ },
+ {
+  "c": "Antepartum haemorrhage",
+  "m": "A vaginal examination is the first step in painless bleeding late in pregnancy.",
+  "fix": "Placenta praevia must be excluded by ultrasound before any digital vaginal examination.",
+  "k": "sequence"
+ },
+ {
+  "c": "Anaemia in pregnancy",
+  "m": "Haemoglobin falls in pregnancy only because of iron deficiency.",
+  "fix": "Physiological haemodilution lowers haemoglobin; iron deficiency is common but pregnancy has its own cut-offs.",
+  "k": "mechanism"
+ },
+ {
+  "c": "Diabetes in pregnancy",
+  "m": "Oral antidiabetic drugs are always contraindicated in pregnancy.",
+  "fix": "Insulin is standard, but metformin is used in selected cases of gestational diabetes.",
+  "k": "overgeneralisation",
+  "gs": true
+ },
+ {
+  "c": "Rh isoimmunisation",
+  "m": "Anti-D is needed for Rh-positive mothers.",
+  "fix": "Anti-D prophylaxis is for unsensitised Rh-negative mothers carrying a possibly Rh-positive fetus.",
+  "k": "reversed"
+ },
+ {
+  "c": "Preterm labour",
+  "m": "Tocolytics should be continued until term to prevent preterm birth.",
+  "fix": "Tocolysis is short-term, mainly to allow antenatal corticosteroids and transfer; it does not prolong pregnancy to term.",
+  "k": "management"
+ },
+ {
+  "c": "Polycystic ovary syndrome",
+  "m": "Polycystic ovaries on ultrasound alone diagnose PCOS.",
+  "fix": "Diagnosis needs two of three (Rotterdam): oligo-anovulation, hyperandrogenism, polycystic ovaries, after excluding other causes.",
+  "k": "criteria"
+ },
+ {
+  "c": "Abnormal uterine bleeding",
+  "m": "Heavy menstrual bleeding in a woman over 45 can be treated as hormonal without evaluation.",
+  "fix": "Endometrial sampling is needed to exclude hyperplasia or cancer in older women or those with risk factors.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Postmenopausal bleeding",
+  "m": "A small amount of postmenopausal bleeding is normal.",
+  "fix": "Any postmenopausal bleeding needs evaluation to exclude endometrial cancer.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Intrauterine contraceptive device",
+  "m": "An IUCD works mainly by causing abortion.",
+  "fix": "Copper IUCDs act mainly by preventing fertilisation through spermicidal effects.",
+  "k": "mechanism"
+ },
+ {
+  "c": "Neonatal hyperbilirubinaemia",
+  "m": "Jaundice in the first 24 hours of life is physiological.",
+  "fix": "Jaundice within 24 hours is always pathological, often haemolytic, and needs urgent evaluation.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Neonatal sepsis",
+  "m": "A newborn with sepsis will usually have a high fever.",
+  "fix": "Neonatal sepsis often presents with hypothermia, poor feeding, lethargy or apnoea rather than fever.",
+  "k": "recognition"
+ },
+ {
+  "c": "Febrile seizures",
+  "m": "Febrile seizures mean the child has epilepsy.",
+  "fix": "Simple febrile seizures carry only a small added risk of epilepsy and do not need long-term antiseizure medicines.",
+  "k": "overgeneralisation"
+ },
+ {
+  "c": "Acute gastroenteritis",
+  "m": "Children with diarrhoea should stop feeding to rest the gut.",
+  "fix": "Continue breastfeeding and feeding; give ORS and zinc.",
+  "k": "management"
+ },
+ {
+  "c": "Oral rehydration therapy",
+  "m": "ORS stops diarrhoea.",
+  "fix": "ORS replaces losses and prevents dehydration; it does not reduce stool output (zinc shortens the illness).",
+  "k": "mechanism"
+ },
+ {
+  "c": "Severe acute malnutrition",
+  "m": "Children with severe acute malnutrition should be given high-calorie feeds at once.",
+  "fix": "Start cautiously with F-75 in the stabilisation phase to avoid refeeding problems, then progress to F-100 or RUTF.",
+  "k": "sequence",
+  "gs": true
+ },
+ {
+  "c": "Epiglottitis",
+  "m": "The throat of a child with suspected epiglottitis should be examined with a tongue depressor.",
+  "fix": "Examining the throat can precipitate complete airway obstruction; keep the child calm and secure the airway in a controlled setting.",
+  "k": "safety"
+ },
+ {
+  "c": "Foreign body aspiration",
+  "m": "A normal chest X-ray excludes foreign body aspiration.",
+  "fix": "Most aspirated objects are radiolucent; history is key and bronchoscopy is diagnostic.",
+  "k": "investigation"
+ },
+ {
+  "c": "Kawasaki disease",
+  "m": "Kawasaki disease is a self-limiting rash illness without serious consequences.",
+  "fix": "Untreated, it can cause coronary artery aneurysms; IVIG within 10 days reduces this risk.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Developmental milestones",
+  "m": "Preterm infants should meet milestones at the same chronological age as term infants.",
+  "fix": "Use corrected age for preterm infants until about two years.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Type 1 diabetes mellitus",
+  "m": "Type 1 diabetes occurs only in children.",
+  "fix": "Type 1 diabetes can begin at any age, including adulthood.",
+  "k": "overgeneralisation"
+ },
+ {
+  "c": "Diabetic ketoacidosis",
+  "m": "Children in DKA need rapid large fluid boluses.",
+  "fix": "Fluids are given more cautiously in children because of the risk of cerebral oedema.",
+  "k": "management",
+  "gs": true
+ },
+ {
+  "c": "Vaccine-preventable diseases",
+  "m": "A mild fever or cold is a reason to delay vaccination.",
+  "fix": "Minor illness is not a contraindication; only moderate or severe acute illness justifies deferral.",
+  "k": "contraindication"
+ },
+ {
+  "c": "Adverse events following immunisation",
+  "m": "Any illness after vaccination was caused by the vaccine.",
+  "fix": "Temporal association is not causation; AEFIs are investigated and classified before attributing cause.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Hernia",
+  "m": "An inguinal hernia that reduces easily never needs surgery.",
+  "fix": "Inguinal hernias carry a risk of incarceration and strangulation; repair is usually advised, especially in children.",
+  "k": "management"
+ },
+ {
+  "c": "Acute scrotum",
+  "m": "Testicular torsion should be confirmed with ultrasound before surgery.",
+  "fix": "Suspected torsion needs urgent surgical exploration; imaging must not delay it.",
+  "k": "sequence"
+ },
+ {
+  "c": "Head injury",
+  "m": "A lucid interval means the head injury is not serious.",
+  "fix": "A lucid interval is typical of extradural haematoma, which can deteriorate rapidly.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Burns",
+  "m": "Ice and butter should be applied to burns.",
+  "fix": "Cool with running tap water for about 20 minutes; ice and home remedies worsen injury.",
+  "k": "first-aid"
+ },
+ {
+  "c": "Chest trauma",
+  "m": "Tension pneumothorax should be confirmed by chest X-ray before treatment.",
+  "fix": "Tension pneumothorax is a clinical diagnosis needing immediate decompression.",
+  "k": "sequence"
+ },
+ {
+  "c": "Peripheral arterial disease",
+  "m": "Leg pain on walking is usually due to arthritis.",
+  "fix": "Calf pain on walking relieved by rest suggests intermittent claudication; check pulses and ankle-brachial index.",
+  "k": "recognition"
+ },
+ {
+  "c": "Varicocele",
+  "m": "A varicocele that does not empty on lying down is harmless.",
+  "fix": "A non-reducing or new right-sided varicocele can indicate retroperitoneal or renal pathology.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Undescended testis",
+  "m": "Undescended testis can wait until puberty for treatment.",
+  "fix": "Orchidopexy is advised early (around 6–18 months) to protect fertility and allow cancer surveillance.",
+  "k": "timing"
+ },
+ {
+  "c": "Wound care",
+  "m": "Antiseptics should be applied repeatedly to all clean wounds.",
+  "fix": "Repeated strong antiseptics can damage healing tissue; clean with saline and keep the wound moist and covered.",
+  "k": "management"
+ },
+ {
+  "c": "Open fractures",
+  "m": "Antibiotics in open fractures can wait until surgery.",
+  "fix": "Give antibiotics and tetanus cover as early as possible; delay increases infection.",
+  "k": "timing"
+ },
+ {
+  "c": "Fracture complications",
+  "m": "Compartment syndrome can be excluded if distal pulses are present.",
+  "fix": "Pulses are often preserved; pain out of proportion and pain on passive stretch are early signs.",
+  "k": "red-flag"
+ },
+ {
+  "c": "Osteoporosis",
+  "m": "Osteoporosis causes bone pain before fractures occur.",
+  "fix": "Osteoporosis is silent until a fracture; diagnosis is by bone density.",
+  "k": "recognition"
+ },
+ {
+  "c": "Spinal injuries",
+  "m": "An alert patient who moves all limbs cannot have an unstable spinal injury.",
+  "fix": "Unstable injuries can exist without deficits; immobilise until cleared clinically or by imaging.",
+  "k": "safety"
+ },
+ {
+  "c": "Epistaxis",
+  "m": "Tilt the head back to stop a nosebleed.",
+  "fix": "Lean forward and pinch the soft part of the nose; tilting back makes blood run into the airway and stomach.",
+  "k": "first-aid"
+ },
+ {
+  "c": "Cerumen impaction",
+  "m": "Earwax should be cleaned regularly with cotton buds.",
+  "fix": "Wax is protective and self-clearing; cotton buds push it deeper and can injure the canal.",
+  "k": "practice"
+ },
+ {
+  "c": "Acute suppurative otitis media",
+  "m": "Every case of acute otitis media needs antibiotics immediately.",
+  "fix": "Many cases resolve spontaneously; watchful waiting is reasonable in selected older children without severe features.",
+  "k": "management",
+  "gs": true
+ },
+ {
+  "c": "Cholesteatoma",
+  "m": "Cholesteatoma is a benign condition that can be managed with drops.",
+  "fix": "Cholesteatoma is locally destructive and needs surgery to prevent intracranial and other complications.",
+  "k": "management"
+ },
+ {
+  "c": "Facial nerve palsy",
+  "m": "Facial weakness that spares the forehead is Bell palsy.",
+  "fix": "Forehead sparing suggests an upper motor neuron lesion such as stroke; Bell palsy involves the forehead.",
+  "k": "reversed"
+ },
+ {
+  "c": "Stridor",
+  "m": "Stridor and wheeze come from the same part of the airway.",
+  "fix": "Stridor arises from the larynx or upper airway; wheeze from narrowed lower airways.",
+  "k": "confusion"
+ },
+ {
+  "c": "Red eye",
+  "m": "Topical steroids are a safe first treatment for any red eye.",
+  "fix": "Steroids can worsen herpetic and fungal keratitis and cause glaucoma; diagnose first.",
+  "k": "safety"
+ },
+ {
+  "c": "Angle-closure glaucoma",
+  "m": "Dilating drops are safe in a patient with an acute painful red eye and halos.",
+  "fix": "Mydriatics can precipitate or worsen angle closure; this presentation needs urgent pressure lowering.",
+  "k": "safety"
+ },
+ {
+  "c": "Primary open-angle glaucoma",
+  "m": "Glaucoma always causes eye pain.",
+  "fix": "Open-angle glaucoma is painless and silent until advanced visual field loss.",
+  "k": "recognition"
+ },
+ {
+  "c": "Cataract",
+  "m": "A cataract must be 'ripe' before surgery.",
+  "fix": "Surgery is done when vision affects daily life; waiting for maturity is outdated.",
+  "k": "outdated"
+ },
+ {
+  "c": "Diabetic retinopathy",
+  "m": "Good vision means there is no diabetic retinopathy.",
+  "fix": "Sight-threatening retinopathy can be present with normal acuity; regular fundus screening is needed.",
+  "k": "recognition"
+ },
+ {
+  "c": "Amblyopia",
+  "m": "A lazy eye can be treated at any age with equal success.",
+  "fix": "Amblyopia responds best in early childhood within the visual development period.",
+  "k": "timing"
+ },
+ {
+  "c": "Ocular trauma",
+  "m": "Chemical eye injury should first be examined to identify the chemical.",
+  "fix": "Immediate copious irrigation comes first; identification and examination follow.",
+  "k": "sequence"
+ },
+ {
+  "c": "Psoriasis",
+  "m": "Psoriasis is contagious.",
+  "fix": "Psoriasis is an immune-mediated disease and is not infectious.",
+  "k": "stigma"
+ },
+ {
+  "c": "Vitiligo",
+  "m": "Vitiligo is a form of leprosy.",
+  "fix": "Vitiligo is autoimmune depigmentation with normal sensation; leprosy patches are hypopigmented with sensory loss.",
+  "k": "confusion"
+ },
+ {
+  "c": "Scabies",
+  "m": "Only the person with the itch needs scabies treatment.",
+  "fix": "All close contacts are treated at the same time, and clothes and bedding are washed, to prevent reinfestation.",
+  "k": "management"
+ },
+ {
+  "c": "Dermatophytosis",
+  "m": "Topical steroid-antifungal combinations are good treatment for ringworm.",
+  "fix": "Steroid combinations worsen and disguise tinea and contribute to chronic, resistant infection.",
+  "k": "safety"
+ },
+ {
+  "c": "Urticaria",
+  "m": "Hives always mean an allergy to food.",
+  "fix": "Most chronic urticaria is idiopathic or autoimmune; acute cases also follow infections and drugs.",
+  "k": "cause"
+ },
+ {
+  "c": "Syphilis",
+  "m": "Syphilis is cured once the primary ulcer heals.",
+  "fix": "The chancre heals without treatment while infection progresses to secondary and later stages.",
+  "k": "natural-history"
+ },
+ {
+  "c": "Depression",
+  "m": "Asking about suicide may put the idea into a patient's mind.",
+  "fix": "Asking directly about suicidal thoughts does not increase risk and is essential for assessment.",
+  "k": "practice"
+ },
+ {
+  "c": "Schizophrenia",
+  "m": "Schizophrenia means having a split personality.",
+  "fix": "Schizophrenia is a psychotic disorder; split or multiple personality refers to dissociative identity disorder.",
+  "k": "confusion"
+ },
+ {
+  "c": "Bipolar disorder",
+  "m": "Antidepressants alone are good treatment for bipolar depression.",
+  "fix": "Antidepressant monotherapy can trigger mania; mood stabilisers are central.",
+  "k": "management"
+ },
+ {
+  "c": "Anxiety disorders",
+  "m": "Benzodiazepines are the best long-term treatment for anxiety disorders.",
+  "fix": "SSRIs and psychological therapy are first-line; benzodiazepines cause dependence and are for short-term use.",
+  "k": "management"
+ },
+ {
+  "c": "Electroconvulsive therapy",
+  "m": "ECT is outdated and causes permanent brain damage.",
+  "fix": "ECT under anaesthesia is safe and highly effective for severe depression and catatonia; memory effects are usually temporary.",
+  "k": "stigma"
+ },
+ {
+  "c": "Airway management",
+  "m": "Pulse oximetry confirms correct endotracheal tube placement.",
+  "fix": "Capnography (end-tidal CO2) confirms tracheal placement; saturation falls late.",
+  "k": "investigation"
+ },
+ {
+  "c": "Preoperative assessment",
+  "m": "All patients must stop all medicines before surgery.",
+  "fix": "Many drugs (e.g. beta-blockers, most antihypertensives) continue; some (anticoagulants, certain antidiabetics) are adjusted.",
+  "k": "management"
+ },
+ {
+  "c": "Regional anaesthesia",
+  "m": "Spinal and epidural anaesthesia are the same.",
+  "fix": "Spinal is injected into the subarachnoid space with rapid dense block; epidural is outside the dura, slower, and can be titrated by catheter.",
+  "k": "confusion"
+ },
+ {
+  "c": "Basic life support",
+  "m": "Check the pulse for a full minute before starting CPR.",
+  "fix": "Pulse checks should take no more than 10 seconds; start compressions if unresponsive without normal breathing.",
+  "k": "sequence",
+  "gs": true
+ },
+ {
+  "c": "Advanced life support",
+  "m": "Asystole should be treated with defibrillation.",
+  "fix": "Asystole and PEA are non-shockable; give CPR and adrenaline and treat reversible causes.",
+  "k": "management"
+ },
+ {
+  "c": "Oxygen therapy",
+  "m": "More oxygen is always better for a breathless patient.",
+  "fix": "Titrate to target saturations; hyperoxia harms some patients, including those with hypercapnia and preterm infants.",
+  "k": "management"
+ },
+ {
+  "c": "Palliative care",
+  "m": "Palliative care is only for the last days of life.",
+  "fix": "Palliative care can begin at diagnosis of serious illness alongside curative treatment.",
+  "k": "timing"
+ },
+ {
+  "c": "Imaging safety",
+  "m": "MRI uses ionising radiation.",
+  "fix": "MRI uses magnetic fields and radio waves; CT and X-ray use ionising radiation.",
+  "k": "confusion"
+ },
+ {
+  "c": "Radiation protection",
+  "m": "Lead aprons make radiation exposure harmless at any distance or time.",
+  "fix": "Protection relies on time, distance and shielding together.",
+  "k": "concept"
+ },
+ {
+  "c": "Informed consent",
+  "m": "A signed consent form alone proves valid informed consent.",
+  "fix": "Valid consent needs capacity, adequate information, voluntariness and understanding; the form only documents it.",
+  "k": "concept"
+ },
+ {
+  "c": "Medical negligence",
+  "m": "Any bad outcome after treatment is medical negligence.",
+  "fix": "Negligence requires a duty of care, a breach of the standard of care, and harm caused by that breach.",
+  "k": "criteria"
+ },
+ {
+  "c": "Dying declaration",
+  "m": "A dying declaration is invalid unless recorded by a magistrate.",
+  "fix": "A magistrate is preferred, but a doctor or others can record it if needed; the declarant must be of sound mind.",
+  "k": "law",
+  "gs": true
+ },
+ {
+  "c": "Time since death",
+  "m": "Rigor mortis appears first in the legs.",
+  "fix": "Rigor typically appears first in the small muscles, such as the eyelids and jaw, and proceeds downward.",
+  "k": "reversed"
+ },
+ {
+  "c": "Hanging",
+  "m": "The ligature mark in hanging is horizontal and complete.",
+  "fix": "In hanging the mark is usually oblique and incomplete; a horizontal complete mark suggests strangulation.",
+  "k": "confusion"
+ },
+ {
+  "c": "Pesticide poisoning",
+  "m": "Atropine should be stopped as soon as pupils dilate in organophosphate poisoning.",
+  "fix": "Atropinisation is titrated to drying of secretions and adequate heart rate and BP, not pupil size.",
+  "k": "management"
+ },
+ {
+  "c": "Screening for disease",
+  "m": "A test with high sensitivity is best for confirming a diagnosis.",
+  "fix": "High sensitivity helps rule out disease (SnNout); high specificity helps rule it in (SpPin).",
+  "k": "reversed"
+ },
+ {
+  "c": "Epidemiological study designs",
+  "m": "Case-control studies measure incidence directly.",
+  "fix": "Case-control studies estimate odds ratios; cohort studies measure incidence and relative risk.",
+  "k": "confusion"
+ },
+ {
+  "c": "Association and causation",
+  "m": "A statistically significant association proves causation.",
+  "fix": "Causation needs consideration of bias, confounding, temporality and criteria such as Bradford Hill.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Tests of significance",
+  "m": "A p-value below 0.05 means the result is clinically important.",
+  "fix": "Statistical significance does not measure effect size or clinical importance; confidence intervals help.",
+  "k": "reasoning"
+ },
+ {
+  "c": "Levels of prevention",
+  "m": "Screening is primary prevention.",
+  "fix": "Screening is secondary prevention (early detection); primary prevention stops disease occurring.",
+  "k": "classification"
+ },
+ {
+  "c": "Breastfeeding",
+  "m": "Babies need water in addition to breast milk in hot weather in the first six months.",
+  "fix": "Exclusive breastfeeding meets all water needs in the first six months.",
+  "k": "practice"
+ },
+ {
+  "c": "Cold chain",
+  "m": "Freezing is safe for all vaccines.",
+  "fix": "Freeze-sensitive vaccines (e.g. pentavalent, hepatitis B, TT) are damaged by freezing; the shake test detects this.",
+  "k": "practice"
+ },
+ {
+  "c": "Measures of morbidity and mortality",
+  "m": "Prevalence and incidence mean the same thing.",
+  "fix": "Incidence counts new cases over time; prevalence counts all existing cases at a point or period.",
+  "k": "confusion"
+ }
+]

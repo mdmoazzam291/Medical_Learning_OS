@@ -1,0 +1,2205 @@
+{
+ "schemaVersion": 1,
+ "contractId": "nmc-concept-misconceptions-v1",
+ "status": "ai-draft",
+ "clinicalApproval": false,
+ "learnerActivation": false,
+ "misconceptions": [
+  {
+   "misconceptionId": "mc:678c98eb2c36e6c9",
+   "conceptId": "C-ade6010f-83b5-48f2-99e2-4cb1ad31603c",
+   "label": "Abnormal uterine bleeding",
+   "misconception": "Heavy menstrual bleeding in a woman over 45 can be treated as hormonal without evaluation.",
+   "correction": "Endometrial sampling is needed to exclude hyperplasia or cancer in older women or those with risk factors.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:16d1266a36e03096",
+   "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+   "label": "Acid-base disorders",
+   "misconception": "A normal pH excludes an acid-base disorder.",
+   "correction": "Mixed disorders or full compensation can give a normal pH; check bicarbonate, PaCO2 and anion gap.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ed5ff0d8a82dd9bc",
+   "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+   "label": "Acute coronary syndrome",
+   "misconception": "A normal first ECG rules out acute coronary syndrome.",
+   "correction": "Up to half of early ECGs are non-diagnostic; repeat ECGs and serial troponins are needed before ruling it out.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5abaab1a0eac1109",
+   "conceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+   "label": "Acute gastroenteritis",
+   "misconception": "Children with diarrhoea should stop feeding to rest the gut.",
+   "correction": "Continue breastfeeding and feeding; give ORS and zinc.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5a1171d5d1869079",
+   "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+   "label": "Acute kidney injury",
+   "misconception": "Serum creatinine rises immediately after kidney injury.",
+   "correction": "Creatinine lags behind injury by 24–48 hours; urine output and trends matter early.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:586f59d7711cc4c0",
+   "conceptId": "C-52a899d3-e73b-4ea8-8d1f-b717923a344a",
+   "label": "Acute scrotum",
+   "misconception": "Testicular torsion should be confirmed with ultrasound before surgery.",
+   "correction": "Suspected torsion needs urgent surgical exploration; imaging must not delay it.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:db69478c9c365c47",
+   "conceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+   "label": "Acute suppurative otitis media",
+   "misconception": "Every case of acute otitis media needs antibiotics immediately.",
+   "correction": "Many cases resolve spontaneously; watchful waiting is reasonable in selected older children without severe features.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:27a54a4a7d4d3ffa",
+   "conceptId": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+   "label": "Adrenal insufficiency",
+   "misconception": "Steroids can be stopped suddenly after long-term use.",
+   "correction": "Long-term steroids suppress the axis; abrupt withdrawal can cause adrenal crisis, so taper.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:883e96f03ea6b85e",
+   "conceptId": "C-15805602-d17d-4221-a430-90f6903af241",
+   "label": "Advanced life support",
+   "misconception": "Asystole should be treated with defibrillation.",
+   "correction": "Asystole and PEA are non-shockable; give CPR and adrenaline and treat reversible causes.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e9529dfa7eee9dd8",
+   "conceptId": "C-7a863f48-1343-4bae-aeba-db737a190eba",
+   "label": "Adverse drug reactions",
+   "misconception": "An adverse drug reaction means the drug was given incorrectly.",
+   "correction": "ADRs can occur with correct use at normal doses; they should still be reported to pharmacovigilance.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:3cef70847edc5892",
+   "conceptId": "C-f49276ec-acf5-40fa-bd51-c4151119802c",
+   "label": "Adverse events following immunisation",
+   "misconception": "Any illness after vaccination was caused by the vaccine.",
+   "correction": "Temporal association is not causation; AEFIs are investigated and classified before attributing cause.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:278b0edff44e0f2e",
+   "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+   "label": "Airway management",
+   "misconception": "Pulse oximetry confirms correct endotracheal tube placement.",
+   "correction": "Capnography (end-tidal CO2) confirms tracheal placement; saturation falls late.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:dd6946ddb781d2d0",
+   "conceptId": "C-37ece2da-9af1-47ba-959c-586c657d804e",
+   "label": "Amblyopia",
+   "misconception": "A lazy eye can be treated at any age with equal success.",
+   "correction": "Amblyopia responds best in early childhood within the visual development period.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:bd9f7db6b2be3c77",
+   "conceptId": "C-aa6f9f14-a19a-47d8-b9a5-5ee7b8045425",
+   "label": "Amyloidosis",
+   "misconception": "Amyloid is a single protein that causes one disease.",
+   "correction": "Amyloid is a misfolded beta-pleated structure formed by different proteins (AL, AA, ATTR), each with different causes.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7aa66ce9a98c9c2c",
+   "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+   "label": "Anaemia",
+   "misconception": "All anaemia in women is iron deficiency and can be treated with iron without tests.",
+   "correction": "Red cell indices and iron studies are needed; thalassaemia trait and B12 or folate deficiency need different management.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:15f9265022a205d3",
+   "conceptId": "C-60f64ced-60a6-4029-9a3f-1b0fb38dbe28",
+   "label": "Anaemia in pregnancy",
+   "misconception": "Haemoglobin falls in pregnancy only because of iron deficiency.",
+   "correction": "Physiological haemodilution lowers haemoglobin; iron deficiency is common but pregnancy has its own cut-offs.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ecad4deef715944b",
+   "conceptId": "C-53364b95-5b15-4ca3-afd4-5cd4c4cbbbf6",
+   "label": "Angle-closure glaucoma",
+   "misconception": "Dilating drops are safe in a patient with an acute painful red eye and halos.",
+   "correction": "Mydriatics can precipitate or worsen angle closure; this presentation needs urgent pressure lowering.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ee8dfce46b64675d",
+   "conceptId": "C-db80599c-eebb-40b3-82e5-80a4ccf746e1",
+   "label": "Antepartum haemorrhage",
+   "misconception": "A vaginal examination is the first step in painless bleeding late in pregnancy.",
+   "correction": "Placenta praevia must be excluded by ultrasound before any digital vaginal examination.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1e0e59a148f80ff5",
+   "conceptId": "C-ffb2c2c6-ad9c-4361-8b73-f4aed539d128",
+   "label": "Antibacterial drugs",
+   "misconception": "Antibiotics help viral upper respiratory infections by preventing secondary infection.",
+   "correction": "Routine antibiotics do not prevent complications in viral URTI and drive resistance and side effects.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1452db01c976ecc8",
+   "conceptId": "C-69e0866e-37f9-4114-bce9-7c044daaff1e",
+   "label": "Anticoagulants",
+   "misconception": "Heparin and warfarin are monitored with the same test.",
+   "correction": "Unfractionated heparin is monitored with aPTT; warfarin with PT/INR.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b960f4000acdab80",
+   "conceptId": "C-064c2d8c-4b88-4130-83d9-acc225d6d75e",
+   "label": "Antidepressants",
+   "misconception": "Antidepressants work fully within the first few days.",
+   "correction": "Mood benefit usually takes 2–6 weeks; side effects appear earlier.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:40122af1606d8bc7",
+   "conceptId": "C-9f4831ef-b337-41c7-b36b-94904f3e8507",
+   "label": "Antidiabetic drugs",
+   "misconception": "Metformin commonly causes hypoglycaemia.",
+   "correction": "Metformin alone rarely causes hypoglycaemia; sulfonylureas and insulin do.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9e87d3723c44328f",
+   "conceptId": "C-df898f26-1ed0-4f36-8edf-b85c37f85639",
+   "label": "Antihypertensive drugs",
+   "misconception": "Beta-blockers are first-line for all hypertension.",
+   "correction": "First-line choice depends on age, ethnicity and comorbidity; beta-blockers are not first-line for uncomplicated hypertension.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:02c38f25908b43fd",
+   "conceptId": "C-9e9630b9-83e1-4e4a-a9b7-39724d447a25",
+   "label": "Antimicrobial resistance",
+   "misconception": "Resistance develops because the patient's body becomes used to the antibiotic.",
+   "correction": "Bacteria, not patients, become resistant through selection and gene transfer driven by antibiotic exposure.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:70cd8ba0736e229b",
+   "conceptId": "C-6ba1b7a7-db11-4966-9a12-d26810aed6a2",
+   "label": "Antimicrobial stewardship",
+   "misconception": "Broader-spectrum antibiotics are always safer.",
+   "correction": "Use the narrowest effective agent; de-escalate once culture results are known.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:22e7c1257f46f302",
+   "conceptId": "C-bf9ec559-4815-49d2-9267-345c88d0e828",
+   "label": "Antiplatelet drugs",
+   "misconception": "Aspirin works by dissolving existing clots.",
+   "correction": "Aspirin irreversibly inhibits platelet COX-1 to prevent new clot formation; fibrinolytics dissolve clots.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1fba91bfca2722fc",
+   "conceptId": "C-3cef0dbe-e719-451b-ba08-badf7f335c68",
+   "label": "Antipsychotics",
+   "misconception": "Atypical antipsychotics have no important side effects.",
+   "correction": "They cause weight gain, diabetes and dyslipidaemia; metabolic monitoring is needed.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2dca13911e4fef6c",
+   "conceptId": "C-b67d7951-c6aa-4807-84a8-b760d6bc42a6",
+   "label": "Antiseizure medicines",
+   "misconception": "Valproate is the preferred antiseizure medicine in women of childbearing age.",
+   "correction": "Valproate is highly teratogenic; avoid it in women who may become pregnant unless no alternative exists.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:6c8ec84fb6e5d29c",
+   "conceptId": "C-7ed39c9c-7be2-4fbc-ba60-7d0406d7e628",
+   "label": "Antitubercular drugs",
+   "misconception": "Isoniazid-related neuropathy is prevented by vitamin B12.",
+   "correction": "Pyridoxine (vitamin B6) prevents isoniazid peripheral neuropathy.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:95a32ad90be93d26",
+   "conceptId": "C-355d06e9-82f7-4cce-8fd2-0c6fe2d2aff9",
+   "label": "Anxiety disorders",
+   "misconception": "Benzodiazepines are the best long-term treatment for anxiety disorders.",
+   "correction": "SSRIs and psychological therapy are first-line; benzodiazepines cause dependence and are for short-term use.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:fead79f494ed3c94",
+   "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+   "label": "Appendicitis",
+   "misconception": "Appendicitis always starts with pain in the right iliac fossa.",
+   "correction": "Pain classically starts periumbilical and migrates; retrocaecal and pelvic positions and pregnancy change the picture.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:97ca47f32edc9cb7",
+   "conceptId": "C-672d30ab-d0e4-438d-a0ed-293b0ade7416",
+   "label": "Association and causation",
+   "misconception": "A statistically significant association proves causation.",
+   "correction": "Causation needs consideration of bias, confounding, temporality and criteria such as Bradford Hill.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1fb1e36af59eb1dc",
+   "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+   "label": "Asthma",
+   "misconception": "Wheeze is always present in a severe asthma attack.",
+   "correction": "A silent chest signals life-threatening asthma with minimal air movement.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:523f985d70ae7689",
+   "conceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+   "label": "Basic life support",
+   "misconception": "Check the pulse for a full minute before starting CPR.",
+   "correction": "Pulse checks should take no more than 10 seconds; start compressions if unresponsive without normal breathing.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:1232742a3a8ca602",
+   "conceptId": "C-3b8bff0a-01de-4992-8d36-6aa6557fe861",
+   "label": "Bipolar disorder",
+   "misconception": "Antidepressants alone are good treatment for bipolar depression.",
+   "correction": "Antidepressant monotherapy can trigger mania; mood stabilisers are central.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:44c864ff90fa07ed",
+   "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+   "label": "Blood culture",
+   "misconception": "Blood cultures can be taken after starting antibiotics without loss of yield.",
+   "correction": "Antibiotics reduce culture yield; take cultures before the first dose whenever possible.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0749e2403c22ac0b",
+   "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+   "label": "Blood gas analysis",
+   "misconception": "Compensation fully corrects pH in chronic acid-base disorders.",
+   "correction": "Compensation is usually incomplete; overcorrection suggests a second primary disorder.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:23dbc024d7e125b6",
+   "conceptId": "C-c9c35a54-59e2-43be-9f9d-edbdfa2c00cf",
+   "label": "Blood groups",
+   "misconception": "A person with blood group O can receive blood from any group.",
+   "correction": "Group O individuals have anti-A and anti-B antibodies; group O is the universal red cell donor, AB the universal recipient.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:eb136dbb79488ec4",
+   "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+   "label": "Blood pressure",
+   "misconception": "Mean arterial pressure is the average of systolic and diastolic pressure.",
+   "correction": "Because diastole lasts longer, MAP is approximately diastolic plus one-third of pulse pressure.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f293887dbd377ec5",
+   "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+   "label": "Breast cancer",
+   "misconception": "A painless breast lump is less worrying than a painful one.",
+   "correction": "Most breast cancers are painless; any new lump needs triple assessment.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:34ce85857fdf7a8a",
+   "conceptId": "C-889f7d1c-a026-4db9-a3ba-9288f7e69729",
+   "label": "Breastfeeding",
+   "misconception": "Babies need water in addition to breast milk in hot weather in the first six months.",
+   "correction": "Exclusive breastfeeding meets all water needs in the first six months.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e8c3e19cf7a4d09c",
+   "conceptId": "C-ef34e52c-78a6-4a52-b48e-91fe40779b62",
+   "label": "Bronchiectasis",
+   "misconception": "Bronchiectasis is diagnosed reliably on chest X-ray.",
+   "correction": "High-resolution CT is the diagnostic test; plain films are often normal or non-specific.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:14ef78cd2bca5efc",
+   "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+   "label": "Burns",
+   "misconception": "Ice and butter should be applied to burns.",
+   "correction": "Cool with running tap water for about 20 minutes; ice and home remedies worsen injury.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ebaf163aa3e2e047",
+   "conceptId": "C-6989415c-edfe-472f-8fee-045935b6b0d4",
+   "label": "Cardiac biomarkers",
+   "misconception": "Troponin rises within minutes of myocardial injury, so a single early value is enough.",
+   "correction": "Troponin takes about 3–6 hours to rise with conventional assays; serial testing is needed, and it also rises in non-ischaemic injury.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a079bd288214d7eb",
+   "conceptId": "C-fc93dae3-42da-4f07-8724-2452e48571e5",
+   "label": "Cardiac cycle",
+   "misconception": "The first heart sound is caused by closure of the aortic and pulmonary valves.",
+   "correction": "S1 is mitral and tricuspid closure at the start of systole; S2 is aortic and pulmonary closure.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ab0500c934ed768b",
+   "conceptId": "C-457f7157-a44b-4e0a-a20f-5f6fd960f77f",
+   "label": "Cardiac output",
+   "misconception": "Increasing heart rate always increases cardiac output.",
+   "correction": "At very high rates diastolic filling time falls, so stroke volume and cardiac output can drop.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5a085286dc1617bf",
+   "conceptId": "C-c7b5c09f-1c2f-487f-b9c9-81fc54048b53",
+   "label": "Cataract",
+   "misconception": "A cataract must be 'ripe' before surgery.",
+   "correction": "Surgery is done when vision affects daily life; waiting for maturity is outdated.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:cf691f33a1cf1008",
+   "conceptId": "C-7fcd5537-88eb-4aa6-89cb-35691e5ed87e",
+   "label": "Cerumen impaction",
+   "misconception": "Earwax should be cleaned regularly with cotton buds.",
+   "correction": "Wax is protective and self-clearing; cotton buds push it deeper and can injure the canal.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c6ed209efa053e5b",
+   "conceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+   "label": "Cervical cancer",
+   "misconception": "Cervical cancer screening is only needed after symptoms appear.",
+   "correction": "Screening detects pre-invasive disease in asymptomatic women; HPV infection is the necessary cause.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2186cd84ec427d39",
+   "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+   "label": "Chest trauma",
+   "misconception": "Tension pneumothorax should be confirmed by chest X-ray before treatment.",
+   "correction": "Tension pneumothorax is a clinical diagnosis needing immediate decompression.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:748e53191315ab04",
+   "conceptId": "C-c8006b05-90e8-449c-991d-5477d4f989e5",
+   "label": "Cholesteatoma",
+   "misconception": "Cholesteatoma is a benign condition that can be managed with drops.",
+   "correction": "Cholesteatoma is locally destructive and needs surgery to prevent intracranial and other complications.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ad1c741745dc1ef7",
+   "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+   "label": "Chronic kidney disease",
+   "misconception": "Small kidneys are required to diagnose chronic kidney disease.",
+   "correction": "Kidneys may be normal-sized or large in diabetic nephropathy, amyloidosis and polycystic disease.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:dff0655648377f15",
+   "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+   "label": "Chronic obstructive pulmonary disease",
+   "misconception": "Oxygen should be given to reach 100% saturation in COPD exacerbation.",
+   "correction": "In patients at risk of hypercapnia, target saturations of about 88–92% to avoid worsening CO2 retention.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:4640660e1bba8db3",
+   "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+   "label": "Cirrhosis",
+   "misconception": "Cirrhosis is caused only by alcohol.",
+   "correction": "Viral hepatitis B and C, fatty liver disease, autoimmune and metabolic diseases are major causes.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:37263fc04321ff4b",
+   "conceptId": "C-060b6d74-b2b7-4bed-9f39-90588652d025",
+   "label": "Cold chain",
+   "misconception": "Freezing is safe for all vaccines.",
+   "correction": "Freeze-sensitive vaccines (e.g. pentavalent, hepatitis B, TT) are damaged by freezing; the shake test detects this.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:aa0e8604cfa27d39",
+   "conceptId": "C-8eb3ea18-003a-4759-a2b8-1ce487911f5c",
+   "label": "Colorectal carcinoma",
+   "misconception": "Rectal bleeding in an older adult can be attributed to haemorrhoids without further tests.",
+   "correction": "New rectal bleeding or a change in bowel habit in older adults needs evaluation for colorectal cancer.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b880f29c5124b501",
+   "conceptId": "C-1bc73f65-023a-474d-b44b-5e4a2c732bbc",
+   "label": "Corticosteroids",
+   "misconception": "Inhaled steroids give quick relief in an asthma attack.",
+   "correction": "Inhaled steroids control inflammation over time; short-acting beta-agonists give quick relief.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5634ccff70618200",
+   "conceptId": "C-f9020a47-80f0-47d0-807c-5c19f7b274c9",
+   "label": "COVID-19",
+   "misconception": "Antibiotics treat COVID-19 pneumonia.",
+   "correction": "COVID-19 is viral; antibiotics are for documented or strongly suspected bacterial co-infection only.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:379935700b6ed059",
+   "conceptId": "C-720774b8-d18d-429a-891e-028c93fff261",
+   "label": "Cushing syndrome",
+   "misconception": "The commonest cause of Cushing syndrome is a pituitary adenoma.",
+   "correction": "Exogenous glucocorticoid use is the commonest cause; Cushing disease is the commonest endogenous cause.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:786b1d7791f00af4",
+   "conceptId": "C-62be3e4a-84c1-4b05-a716-e686e8fd7530",
+   "label": "Cyanosis",
+   "misconception": "Cyanosis is a reliable sign of hypoxia in anaemic patients.",
+   "correction": "Cyanosis needs about 5 g/dL of deoxygenated haemoglobin, so severe anaemia can mask hypoxia.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a44c5a7fe23d047c",
+   "conceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+   "label": "Delirium",
+   "misconception": "Delirium in older adults is usually hyperactive and obvious.",
+   "correction": "Hypoactive delirium is common and easily missed as depression or tiredness; screen actively.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2f288e4cc14fceaf",
+   "conceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+   "label": "Dementia",
+   "misconception": "Memory loss in older people is a normal part of ageing.",
+   "correction": "Progressive memory loss that affects daily function is not normal ageing and needs evaluation for dementia and reversible causes.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9d37d51b43577040",
+   "conceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+   "label": "Depression",
+   "misconception": "Asking about suicide may put the idea into a patient's mind.",
+   "correction": "Asking directly about suicidal thoughts does not increase risk and is essential for assessment.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c1362aa3d15eb8c5",
+   "conceptId": "C-5a91a491-726e-4311-96d3-23519ae3e3cc",
+   "label": "Dermatophytosis",
+   "misconception": "Topical steroid-antifungal combinations are good treatment for ringworm.",
+   "correction": "Steroid combinations worsen and disguise tinea and contribute to chronic, resistant infection.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0b01b14178039cea",
+   "conceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+   "label": "Developmental milestones",
+   "misconception": "Preterm infants should meet milestones at the same chronological age as term infants.",
+   "correction": "Use corrected age for preterm infants until about two years.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8a5cf179cd00f81b",
+   "conceptId": "C-2dac49aa-8431-4bc8-b4bf-1ca66c5cf67c",
+   "label": "Diabetes in pregnancy",
+   "misconception": "Oral antidiabetic drugs are always contraindicated in pregnancy.",
+   "correction": "Insulin is standard, but metformin is used in selected cases of gestational diabetes.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:d3f1e7cb3fccc78b",
+   "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+   "label": "Diabetes mellitus",
+   "misconception": "Glucose in the urine is a reliable test for diagnosing diabetes.",
+   "correction": "Glycosuria depends on the renal threshold; diagnosis uses plasma glucose or HbA1c.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5c70128791288384",
+   "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+   "label": "Diabetic emergencies",
+   "misconception": "In diabetic ketoacidosis insulin should be started before checking potassium.",
+   "correction": "Check potassium first; insulin drives potassium into cells and can cause dangerous hypokalaemia if it is already low.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:62a87726aac30d90",
+   "conceptId": "C-4aa71889-5f56-4cc6-a71e-87e36e517ded",
+   "label": "Diabetic ketoacidosis",
+   "misconception": "Children in DKA need rapid large fluid boluses.",
+   "correction": "Fluids are given more cautiously in children because of the risk of cerebral oedema.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:3deb97a5aef42c4f",
+   "conceptId": "C-a5110e62-bd5c-42fd-b8bf-b59741f34c81",
+   "label": "Diabetic retinopathy",
+   "misconception": "Good vision means there is no diabetic retinopathy.",
+   "correction": "Sight-threatening retinopathy can be present with normal acuity; regular fundus screening is needed.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:bd2fa7baccf9e3cc",
+   "conceptId": "C-e2a2f2a9-3c19-416c-91fa-006652db36eb",
+   "label": "Disseminated intravascular coagulation",
+   "misconception": "DIC is only a bleeding disorder.",
+   "correction": "DIC involves widespread microthrombi and consumption of factors and platelets; organ damage from thrombosis is common.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8b6c756bc868fad9",
+   "conceptId": "C-1d5f7785-ac05-49b9-a2cf-ed5513db25bf",
+   "label": "Diuretics",
+   "misconception": "Loop and thiazide diuretics have the same effect on calcium.",
+   "correction": "Loop diuretics increase calcium excretion; thiazides reduce it.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:3355ec9aca6388bf",
+   "conceptId": "C-5588b060-3f00-4892-b811-238ed5fa4277",
+   "label": "Drug interactions",
+   "misconception": "Enzyme inducers increase the effect of drugs metabolised by that enzyme.",
+   "correction": "Inducers speed metabolism and reduce effect (e.g. rifampicin with oral contraceptives); inhibitors increase it.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:828a7a1234698273",
+   "conceptId": "C-5b1314a3-8a4e-4891-9cca-c09018963bb5",
+   "label": "Drug-resistant tuberculosis",
+   "misconception": "Adding a single new drug to a failing TB regimen is a reasonable step.",
+   "correction": "Adding one drug to a failing regimen promotes further resistance; regimens are changed on the basis of drug-susceptibility testing.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:69f835c5be04fe0f",
+   "conceptId": "C-8ce2dc1d-fe58-4fd5-baa8-c6ab09e4c0cb",
+   "label": "Drugs for asthma and COPD",
+   "misconception": "A short-acting reliever alone is adequate long-term treatment for persistent asthma.",
+   "correction": "Persistent asthma needs inhaled corticosteroid-based controller therapy.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:e8803f912514d573",
+   "conceptId": "C-0e6e7454-ae68-4099-93a9-4aa91bf68104",
+   "label": "Drugs used in heart failure",
+   "misconception": "Digoxin improves survival in heart failure.",
+   "correction": "Digoxin reduces symptoms and admissions but not mortality; ACE inhibitors or ARNI, beta-blockers, MRAs and SGLT2 inhibitors improve survival.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:e1e0c8de5085bfd4",
+   "conceptId": "C-6a7db250-9ced-4c7e-a08c-d88d3eb98b0c",
+   "label": "Dying declaration",
+   "misconception": "A dying declaration is invalid unless recorded by a magistrate.",
+   "correction": "A magistrate is preferred, but a doctor or others can record it if needed; the declarant must be of sound mind.",
+   "kind": "factual",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:d7a7c4aaaf0cc952",
+   "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+   "label": "Dysentery",
+   "misconception": "All bloody diarrhoea is amoebic.",
+   "correction": "Shigella is the commonest cause of bloody diarrhoea in children; stool examination guides treatment.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:218ddc8a2d9dd887",
+   "conceptId": "C-e088e8a3-6399-4769-b46b-772c9f02164d",
+   "label": "Dysplasia",
+   "misconception": "Dysplasia is the same as cancer.",
+   "correction": "Dysplasia is disordered growth that may regress; it becomes invasive cancer only after the basement membrane is breached.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2b16075c54dba170",
+   "conceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+   "label": "Ectopic pregnancy",
+   "misconception": "A normal-looking uterus on ultrasound with a positive pregnancy test excludes ectopic pregnancy.",
+   "correction": "An empty uterus with a positive test is a pregnancy of unknown location and ectopic must be actively excluded with serial beta-hCG and scans.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:31093d69f3773b7c",
+   "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+   "label": "Electrocardiogram",
+   "misconception": "The T wave represents atrial repolarisation.",
+   "correction": "The T wave is ventricular repolarisation; atrial repolarisation is hidden in the QRS complex.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:85ab36d60bad9b35",
+   "conceptId": "C-1b425423-e7c5-4d20-8a5b-68d00b170d96",
+   "label": "Electroconvulsive therapy",
+   "misconception": "ECT is outdated and causes permanent brain damage.",
+   "correction": "ECT under anaesthesia is safe and highly effective for severe depression and catatonia; memory effects are usually temporary.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:536c1e7edd1230d8",
+   "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+   "label": "Embolism",
+   "misconception": "Pulmonary embolism always causes chest pain and haemoptysis.",
+   "correction": "Unexplained breathlessness and tachycardia are the commonest features; the classic triad is often absent.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e16dc77955a25d51",
+   "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+   "label": "Encephalitis",
+   "misconception": "Encephalitis and meningitis present identically.",
+   "correction": "Encephalitis causes altered behaviour, consciousness and seizures early; meningitis is dominated by meningeal signs.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4807e5d5eea93546",
+   "conceptId": "C-ffd0cfe1-f995-4a60-b23c-54553de833ed",
+   "label": "Endocrine pancreas",
+   "misconception": "Glucagon and insulin are secreted by the same cells.",
+   "correction": "Insulin comes from beta cells and glucagon from alpha cells of the islets.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f890c1c3216e5450",
+   "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+   "label": "Enteric fever",
+   "misconception": "The Widal test in the first week reliably confirms typhoid.",
+   "correction": "Blood culture is the test of choice in the first week; Widal has poor sensitivity and specificity, especially in endemic areas.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:54c81d0f18cdc13b",
+   "conceptId": "C-9ea6d9f5-6081-4273-a172-401044548b73",
+   "label": "Envenomation",
+   "misconception": "A tourniquet and incision help a snakebite victim.",
+   "correction": "Tourniquets, incision and suction are harmful; immobilise the limb and transfer for antivenom.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ccafe32c7e405e9a",
+   "conceptId": "C-20ea021e-eb76-4588-9628-b67afc8af74c",
+   "label": "Enzyme kinetics",
+   "misconception": "A competitive inhibitor lowers Vmax.",
+   "correction": "Competitive inhibitors raise Km without changing Vmax; non-competitive inhibitors lower Vmax.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:21f22a86eb3adb84",
+   "conceptId": "C-c34fd895-dd08-4a64-9bba-6cfa70f16cea",
+   "label": "Epidemiological study designs",
+   "misconception": "Case-control studies measure incidence directly.",
+   "correction": "Case-control studies estimate odds ratios; cohort studies measure incidence and relative risk.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0b5e3f7af0547860",
+   "conceptId": "C-7babeef7-2657-4f54-8169-e9d4366c31eb",
+   "label": "Epiglottitis",
+   "misconception": "The throat of a child with suspected epiglottitis should be examined with a tongue depressor.",
+   "correction": "Examining the throat can precipitate complete airway obstruction; keep the child calm and secure the airway in a controlled setting.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:d559c0ade12de4c9",
+   "conceptId": "C-40ad3dfd-1429-48e5-ace8-bf0cbc824225",
+   "label": "Epistaxis",
+   "misconception": "Tilt the head back to stop a nosebleed.",
+   "correction": "Lean forward and pinch the soft part of the nose; tilting back makes blood run into the airway and stomach.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:981ae8951491258e",
+   "conceptId": "C-f0218df1-d3ae-4ae4-afd1-2c2cd3a6224b",
+   "label": "Facial nerve palsy",
+   "misconception": "Facial weakness that spares the forehead is Bell palsy.",
+   "correction": "Forehead sparing suggests an upper motor neuron lesion such as stroke; Bell palsy involves the forehead.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a0eeb39e06a9b94a",
+   "conceptId": "C-c9521a53-ddac-4da0-8441-9f6f16485e59",
+   "label": "Febrile seizures",
+   "misconception": "Febrile seizures mean the child has epilepsy.",
+   "correction": "Simple febrile seizures carry only a small added risk of epilepsy and do not need long-term antiseizure medicines.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f40777825100e71d",
+   "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+   "label": "Fever",
+   "misconception": "Fever should always be suppressed with antipyretics.",
+   "correction": "Antipyretics are for comfort; the cause matters more, and fever height does not reliably indicate severity.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a8c39b68d18a54d2",
+   "conceptId": "C-eee145b1-0b18-4481-8df5-ce3e245b2465",
+   "label": "Fibrinolytics",
+   "misconception": "Thrombolysis is useful at any time after a stroke.",
+   "correction": "Benefit is strictly time-dependent within a narrow window, and haemorrhage must be excluded first.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:4ceeb991f7961392",
+   "conceptId": "C-f188aa95-f5dc-420f-9702-2fa6e3a7e7ef",
+   "label": "Foreign body aspiration",
+   "misconception": "A normal chest X-ray excludes foreign body aspiration.",
+   "correction": "Most aspirated objects are radiolucent; history is key and bronchoscopy is diagnostic.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9b9880e321759600",
+   "conceptId": "C-7a9306f4-e84b-4cb8-a46e-513538cc3643",
+   "label": "Fracture complications",
+   "misconception": "Compartment syndrome can be excluded if distal pulses are present.",
+   "correction": "Pulses are often preserved; pain out of proportion and pain on passive stretch are early signs.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8fd843a06a8618c1",
+   "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+   "label": "Gastrointestinal bleeding",
+   "misconception": "Melaena always means bleeding from the upper GI tract.",
+   "correction": "Melaena usually indicates a source proximal to the ligament of Treitz, but small-bowel or right-colon bleeding with slow transit can also cause it.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7dfd95e0eb55f487",
+   "conceptId": "C-3eab92b2-84cd-4d25-bfab-9f23a344b58f",
+   "label": "Glycated haemoglobin",
+   "misconception": "HbA1c reflects blood glucose over the previous week.",
+   "correction": "HbA1c reflects average glucose over about 2–3 months, and is unreliable in haemolysis and haemoglobinopathies.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:057e980accb473f8",
+   "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+   "label": "Gout",
+   "misconception": "A normal serum uric acid during an attack excludes gout.",
+   "correction": "Uric acid can be normal during an acute attack; joint aspiration showing urate crystals is diagnostic.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:6b84715de5d22e11",
+   "conceptId": "C-622d7c7a-02d1-4c1a-ae13-08f0da754019",
+   "label": "Gram staining",
+   "misconception": "Gram-positive bacteria stain pink.",
+   "correction": "Gram-positive organisms retain crystal violet and stain purple; Gram-negative ones stain pink with the counterstain.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9349e757318d84f1",
+   "conceptId": "C-1a7961d9-b80b-49b0-b722-b994800d357c",
+   "label": "Haemodynamics",
+   "misconception": "Halving the radius of a vessel halves the flow through it.",
+   "correction": "By Poiseuille's law flow varies with the fourth power of radius, so halving the radius cuts flow about sixteen-fold.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:da4c2066f12305f8",
+   "conceptId": "C-45e8e6a5-1c59-4062-a2f9-c2bd293b273c",
+   "label": "Haemoglobin",
+   "misconception": "A right shift of the oxygen dissociation curve means haemoglobin holds oxygen more tightly.",
+   "correction": "A right shift (raised CO2, H+, temperature, 2,3-BPG) lowers affinity and releases more oxygen to tissues.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b746246c8b8015f1",
+   "conceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+   "label": "Haemostasis",
+   "misconception": "Bleeding time tests the coagulation factors.",
+   "correction": "Bleeding time reflects platelet function and vessel response; PT and aPTT test coagulation factors.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:021ba142388c39d7",
+   "conceptId": "C-baa5bc2c-7da4-40b2-a467-fdce95892577",
+   "label": "Hand hygiene",
+   "misconception": "Wearing gloves removes the need for hand hygiene.",
+   "correction": "Hand hygiene is needed before and after glove use; gloves can be contaminated or have micro-defects.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0e0f8a6fb94ebfce",
+   "conceptId": "C-ad493a49-9f74-41cd-9bae-7bd46af6c275",
+   "label": "Hanging",
+   "misconception": "The ligature mark in hanging is horizontal and complete.",
+   "correction": "In hanging the mark is usually oblique and incomplete; a horizontal complete mark suggests strangulation.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9593fe581086f613",
+   "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+   "label": "Head injury",
+   "misconception": "A lucid interval means the head injury is not serious.",
+   "correction": "A lucid interval is typical of extradural haematoma, which can deteriorate rapidly.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:d98e45df54d06fc4",
+   "conceptId": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
+   "label": "Headache",
+   "misconception": "A sudden severe headache that settles with analgesics is unlikely to be serious.",
+   "correction": "Thunderclap headache needs evaluation for subarachnoid haemorrhage regardless of response to analgesia.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a142c9d54441386e",
+   "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+   "label": "Heart failure",
+   "misconception": "Heart failure always means a low ejection fraction.",
+   "correction": "About half of patients have preserved ejection fraction (HFpEF), with diastolic dysfunction as the main problem.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:cd86868f6741af1a",
+   "conceptId": "C-6c240ee1-1316-4f68-a4ce-d11e0f061f88",
+   "label": "Helicobacter pylori infection",
+   "misconception": "A urea breath test is reliable while the patient is on proton pump inhibitors.",
+   "correction": "PPIs and recent antibiotics cause false negatives; stop them before testing.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:14a56de46a943d0e",
+   "conceptId": "C-01baff8e-b4ca-4cb5-9c0a-102574fbdcb2",
+   "label": "Herd immunity",
+   "misconception": "Herd immunity protects everyone once a few people are vaccinated.",
+   "correction": "Herd immunity requires coverage above a threshold that depends on the disease's transmissibility.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1863e755ad9853fe",
+   "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+   "label": "Hernia",
+   "misconception": "An inguinal hernia that reduces easily never needs surgery.",
+   "correction": "Inguinal hernias carry a risk of incarceration and strangulation; repair is usually advised, especially in children.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:951e0a7ce53112a3",
+   "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+   "label": "HIV infection",
+   "misconception": "A negative HIV antibody test soon after exposure excludes infection.",
+   "correction": "Tests can be negative in the window period; repeat testing is needed after exposure.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7950051369f3072a",
+   "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+   "label": "Hodgkin lymphoma",
+   "misconception": "Painful lymph nodes are typical of lymphoma.",
+   "correction": "Lymphoma nodes are typically painless and rubbery; pain is more typical of infection (alcohol-induced pain is a rare exception).",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:957c9087e490b34e",
+   "conceptId": "C-921778b5-e1de-4439-9c14-1d3166587fb9",
+   "label": "Hookworm infection",
+   "misconception": "Hookworm infection spreads mainly through contaminated food.",
+   "correction": "Larvae penetrate the skin, usually through bare feet on contaminated soil.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1d56c2f9e8ff5578",
+   "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
+   "label": "Hypercalcaemia",
+   "misconception": "Most hypercalcaemia in hospital patients is due to primary hyperparathyroidism.",
+   "correction": "Primary hyperparathyroidism is commonest in outpatients; malignancy is the leading cause in hospitalised patients.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:592b837f45be8e47",
+   "conceptId": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+   "label": "Hyperkalaemia",
+   "misconception": "Calcium gluconate lowers serum potassium in hyperkalaemia.",
+   "correction": "Calcium only stabilises the cardiac membrane; insulin-glucose and beta-agonists shift potassium into cells, and binders or dialysis remove it.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f0d0b9bbb83d16ce",
+   "conceptId": "C-bfe650cd-53c5-414d-9a81-746b8aefaf87",
+   "label": "Hyperosmolar hyperglycaemic state",
+   "misconception": "Hyperosmolar hyperglycaemic state is just a milder form of diabetic ketoacidosis.",
+   "correction": "It has higher mortality, marked dehydration and hyperosmolality with little ketosis, and needs slower, fluid-led correction.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:6377045253528c3a",
+   "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+   "label": "Hypersensitivity reactions",
+   "misconception": "Anaphylaxis is a type IV hypersensitivity reaction.",
+   "correction": "Anaphylaxis is a type I IgE-mediated immediate reaction; type IV is delayed and T-cell mediated.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:47af81974cb621c8",
+   "conceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+   "label": "Hypertension",
+   "misconception": "Hypertension causes headache, so a patient without symptoms is unlikely to be hypertensive.",
+   "correction": "Hypertension is usually asymptomatic until organ damage occurs; it is detected by measurement, not symptoms.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:787375e852a48470",
+   "conceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+   "label": "Hypertensive disorders of pregnancy",
+   "misconception": "Pre-eclampsia always resolves the moment the baby is delivered.",
+   "correction": "Eclampsia and severe features can occur postpartum, usually within the first days; monitoring continues after delivery.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:3a0ff57f70525989",
+   "conceptId": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
+   "label": "Hypertensive emergencies",
+   "misconception": "Blood pressure in a hypertensive emergency should be brought to normal as fast as possible.",
+   "correction": "Lower mean arterial pressure by no more than about 25% in the first hour; rapid normalisation risks cerebral, coronary and renal ischaemia.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:2c6d760f68dd3dca",
+   "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+   "label": "Hypoglycaemia",
+   "misconception": "A conscious patient with hypoglycaemia needs intravenous dextrose.",
+   "correction": "If the patient can swallow, oral fast-acting glucose is first-line; IV dextrose or glucagon is for those who cannot.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4f879a29c3c0280b",
+   "conceptId": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+   "label": "Hypokalaemia",
+   "misconception": "Potassium replacement will correct hypokalaemia even if magnesium is low.",
+   "correction": "Hypomagnesaemia causes ongoing renal potassium loss; magnesium must be corrected for potassium to normalise.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:759819fe4542bea9",
+   "conceptId": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+   "label": "Hyponatraemia",
+   "misconception": "All hyponatraemia should be treated with normal saline.",
+   "correction": "Treatment depends on volume status: saline for hypovolaemia but fluid restriction for SIADH; correct chronic hyponatraemia slowly to avoid osmotic demyelination.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:31308adf224c04da",
+   "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+   "label": "Hypothyroidism",
+   "misconception": "Thyroxine should be started at full dose in all patients.",
+   "correction": "Older adults and those with heart disease start low and titrate slowly to avoid precipitating ischaemia.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a5d8f6b467552e8d",
+   "conceptId": "C-feed7858-a94a-459f-9ba4-386f99db6802",
+   "label": "Hypoxia",
+   "misconception": "Carbon monoxide poisoning lowers the measured arterial PaO2.",
+   "correction": "PaO2 is often normal; CO blocks oxygen carriage by haemoglobin, so pulse oximetry and PaO2 can mislead.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:be010d2c40711f62",
+   "conceptId": "C-f3204ace-ef68-4106-9f9b-c555ec96c6fb",
+   "label": "Imaging safety",
+   "misconception": "MRI uses ionising radiation.",
+   "correction": "MRI uses magnetic fields and radio waves; CT and X-ray use ionising radiation.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4ff7899207b69c0d",
+   "conceptId": "C-531f85ce-a287-436a-9b7d-08d2103e285e",
+   "label": "Immune thrombocytopenia",
+   "misconception": "Every child with immune thrombocytopenia needs platelet transfusion.",
+   "correction": "Most childhood ITP resolves spontaneously; transfusion is for life-threatening bleeding only, because platelets are rapidly destroyed.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:55f2754319dc590d",
+   "conceptId": "C-4d04bcf9-456a-4ca7-9834-c8b3765677bf",
+   "label": "Inborn errors of amino acid metabolism",
+   "misconception": "Phenylketonuria is treated by removing phenylalanine completely from the diet.",
+   "correction": "Phenylalanine is essential; it is restricted, not eliminated, and tyrosine becomes essential.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:fa215af3d8933512",
+   "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+   "label": "Infective endocarditis",
+   "misconception": "A negative single blood culture excludes infective endocarditis.",
+   "correction": "At least three sets from separate sites are needed before antibiotics; culture-negative endocarditis also exists.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:07cb3c7b513e4bf1",
+   "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+   "label": "Inflammatory bowel disease",
+   "misconception": "Crohn disease and ulcerative colitis both affect only the colon.",
+   "correction": "Crohn disease can affect any part of the GI tract with skip lesions; ulcerative colitis is continuous from the rectum.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:da610394124fc034",
+   "conceptId": "C-326aa73a-ebb4-4be2-877f-a78be8715daa",
+   "label": "Informed consent",
+   "misconception": "A signed consent form alone proves valid informed consent.",
+   "correction": "Valid consent needs capacity, adequate information, voluntariness and understanding; the form only documents it.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:54def46d82f2e2ac",
+   "conceptId": "C-73519f68-c3e5-4f6d-a85d-0beab7db0fb0",
+   "label": "Intrauterine contraceptive device",
+   "misconception": "An IUCD works mainly by causing abortion.",
+   "correction": "Copper IUCDs act mainly by preventing fertilisation through spermicidal effects.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f1abc3b859486623",
+   "conceptId": "C-cf50b0f4-8f11-443c-9063-2a68cee76a3a",
+   "label": "Iron deficiency anaemia",
+   "misconception": "A normal serum ferritin excludes iron deficiency in an inflamed patient.",
+   "correction": "Ferritin is an acute-phase reactant; it may be normal or high despite iron deficiency in inflammation.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1942dc564947b769",
+   "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+   "label": "Jaundice",
+   "misconception": "Jaundice with dark urine means haemolysis.",
+   "correction": "Dark urine reflects conjugated bilirubin (hepatic or obstructive); haemolytic jaundice is acholuric.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:905d91de50feeef4",
+   "conceptId": "C-c0945f63-a3ff-4214-ab28-749dfdb6d8df",
+   "label": "Kawasaki disease",
+   "misconception": "Kawasaki disease is a self-limiting rash illness without serious consequences.",
+   "correction": "Untreated, it can cause coronary artery aneurysms; IVIG within 10 days reduces this risk.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:fc27474e0b55c69d",
+   "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+   "label": "Leprosy",
+   "misconception": "Leprosy is highly contagious through brief skin contact.",
+   "correction": "Transmission needs prolonged close contact, mainly via nasal droplets; most people are naturally resistant and treated patients are non-infectious.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ddfadffefcbd3f48",
+   "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+   "label": "Leukaemias",
+   "misconception": "A normal white cell count excludes leukaemia.",
+   "correction": "Leukaemia can present with a low or normal count; the blood film and bone marrow are diagnostic.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:454b5211fc0c55f7",
+   "conceptId": "C-7af3910f-7112-41d9-aa93-96e2d61870a8",
+   "label": "Levels of prevention",
+   "misconception": "Screening is primary prevention.",
+   "correction": "Screening is secondary prevention (early detection); primary prevention stops disease occurring.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9ab52261639e9fd5",
+   "conceptId": "C-bd6f2630-3461-4e98-b6db-6474e07ceb55",
+   "label": "Lipoproteins",
+   "misconception": "HDL carries cholesterol from the liver to tissues.",
+   "correction": "HDL mediates reverse cholesterol transport from tissues to the liver; LDL delivers cholesterol to tissues.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4fef68001f9a0137",
+   "conceptId": "C-cf5ec55c-64e1-4482-88b8-38234f05bed7",
+   "label": "Liver disease",
+   "misconception": "Normal transaminases exclude significant liver disease.",
+   "correction": "Transaminases may be normal in compensated cirrhosis; synthetic function (albumin, INR) and imaging matter more.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e3b6d5a21f99d0b6",
+   "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+   "label": "Lung carcinoma",
+   "misconception": "Lung cancer occurs only in smokers.",
+   "correction": "Smoking is the main risk, but adenocarcinoma occurs in never-smokers, and occupational exposures also contribute.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c5e156edc1ecd6f9",
+   "conceptId": "C-ac2adcac-4b0f-4a98-8a25-f80f0086542c",
+   "label": "Lymphatic filariasis",
+   "misconception": "Filariasis is spread by Anopheles mosquitoes only in India.",
+   "correction": "In India, Culex quinquefasciatus is the main vector of Wuchereria bancrofti.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b6b3ea5310f90207",
+   "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+   "label": "Malaria",
+   "misconception": "A single negative smear rules out malaria.",
+   "correction": "Repeat smears or rapid tests at intervals are needed when clinical suspicion persists.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:af2691271daabbe2",
+   "conceptId": "C-2d5b4b53-d06e-4e59-978d-96e13e04dd79",
+   "label": "Measures of morbidity and mortality",
+   "misconception": "Prevalence and incidence mean the same thing.",
+   "correction": "Incidence counts new cases over time; prevalence counts all existing cases at a point or period.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:3d3365ea33edb60f",
+   "conceptId": "C-c4e18b92-e173-4b1e-bb80-b5e33ac65df1",
+   "label": "Medical negligence",
+   "misconception": "Any bad outcome after treatment is medical negligence.",
+   "correction": "Negligence requires a duty of care, a breach of the standard of care, and harm caused by that breach.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:66be5e32fe97f12c",
+   "conceptId": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+   "label": "Megaloblastic anaemia",
+   "misconception": "Folic acid alone is safe treatment for any macrocytic anaemia.",
+   "correction": "Folate alone in B12 deficiency can worsen neurological damage; check and replace B12 first.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5f599ab8178de2e6",
+   "conceptId": "C-5563d4f1-94e1-4c3d-b152-27611448ddd3",
+   "label": "Membrane potentials",
+   "misconception": "The resting membrane potential is mainly due to sodium.",
+   "correction": "It is mainly due to potassium leak through open K+ channels, maintained by the Na+/K+ pump.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:bae3c2857bd888d8",
+   "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+   "label": "Meningitis",
+   "misconception": "Lumbar puncture must always be done before antibiotics in suspected meningitis.",
+   "correction": "Antibiotics should not be delayed; if LP is delayed (e.g. for CT), take blood cultures and give antibiotics first.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4d1eb131bd44043e",
+   "conceptId": "C-ce20e759-cb42-4a66-b69d-011be60032ad",
+   "label": "Menstrual cycle",
+   "misconception": "Ovulation occurs on day 14 in every woman.",
+   "correction": "The luteal phase is relatively fixed (about 14 days); ovulation timing varies with cycle length.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ea5a2aabd4e328ca",
+   "conceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+   "label": "Metastasis",
+   "misconception": "Carcinomas mainly spread through the blood and sarcomas through lymphatics.",
+   "correction": "Carcinomas typically spread first by lymphatics and sarcomas by blood (with exceptions such as RCC, HCC, follicular thyroid).",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5c10a0ce85d87320",
+   "conceptId": "C-5858970e-8f4c-49c5-b2fb-11ff63101317",
+   "label": "Multiple myeloma",
+   "misconception": "Myeloma lesions are reliably detected by a bone scan.",
+   "correction": "Lytic myeloma lesions often do not show on isotope bone scan; a skeletal survey, CT or MRI is used.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:dce3b24688e12d0b",
+   "conceptId": "C-6ca33c69-e47b-492d-abfa-c7ec2d5c8def",
+   "label": "Myasthenia gravis",
+   "misconception": "Weakness in myasthenia gravis is worst in the morning.",
+   "correction": "Weakness worsens with activity and later in the day (fatigability).",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:d86a8c0793c20909",
+   "conceptId": "C-71864bae-cdf8-4db9-98c3-41d39f118fe4",
+   "label": "Necrosis",
+   "misconception": "Apoptosis and necrosis both cause inflammation.",
+   "correction": "Necrosis provokes inflammation; apoptosis is programmed cell death with intact membranes and little inflammation.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:60d7651fcce2fd1c",
+   "conceptId": "C-df4ffc84-48d8-4992-9ed3-3302bf9c78c3",
+   "label": "Neonatal hyperbilirubinaemia",
+   "misconception": "Jaundice in the first 24 hours of life is physiological.",
+   "correction": "Jaundice within 24 hours is always pathological, often haemolytic, and needs urgent evaluation.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:64662437488205cf",
+   "conceptId": "C-e63b3ddc-ce0a-45b4-b311-cc19e5733d45",
+   "label": "Neonatal sepsis",
+   "misconception": "A newborn with sepsis will usually have a high fever.",
+   "correction": "Neonatal sepsis often presents with hypothermia, poor feeding, lethargy or apnoea rather than fever.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f8f599431668d538",
+   "conceptId": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+   "label": "Nephrotic syndrome",
+   "misconception": "Nephrotic syndrome causes visible blood in the urine.",
+   "correction": "Nephrotic syndrome features heavy proteinuria, hypoalbuminaemia and oedema; haematuria and hypertension point to nephritic syndrome.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:408f3ae947414f1b",
+   "conceptId": "C-7b7954c5-9aa2-4611-a9b0-0d89c2299b84",
+   "label": "Neuromuscular transmission",
+   "misconception": "Curare blocks acetylcholine release.",
+   "correction": "Curare competitively blocks nicotinic receptors at the end-plate; botulinum toxin blocks acetylcholine release.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e03a030e570b3431",
+   "conceptId": "C-d63eee28-ec75-45ce-9caf-26c14c6c4c95",
+   "label": "Non-opioid analgesics",
+   "misconception": "Paracetamol is safe in any dose because it is available over the counter.",
+   "correction": "Overdose causes hepatotoxicity; N-acetylcysteine is the antidote.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7d829d47a3fc807d",
+   "conceptId": "C-7e981623-edd5-4e99-a9db-1f9ac85c52ad",
+   "label": "Ocular trauma",
+   "misconception": "Chemical eye injury should first be examined to identify the chemical.",
+   "correction": "Immediate copious irrigation comes first; identification and examination follow.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2b673402faaac6cb",
+   "conceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+   "label": "Oedema",
+   "misconception": "All oedema should be treated with diuretics.",
+   "correction": "Treat the cause; diuretics may harm in hypovolaemia, and lymphoedema or venous oedema responds poorly.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8afc457ceed233a3",
+   "conceptId": "C-6c0987a8-7ff8-4461-b5e2-ec900ace9fc4",
+   "label": "Open fractures",
+   "misconception": "Antibiotics in open fractures can wait until surgery.",
+   "correction": "Give antibiotics and tetanus cover as early as possible; delay increases infection.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8939e8e586efaa1a",
+   "conceptId": "C-6adbce4f-1611-4095-ac1c-36857807178c",
+   "label": "Opioid analgesics",
+   "misconception": "Patients with cancer pain on opioids quickly become addicted.",
+   "correction": "Addiction is uncommon when opioids are used appropriately for cancer pain; tolerance and dependence are different from addiction.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2f6921b8f9012741",
+   "conceptId": "C-59a2747d-bf5a-4bbd-bdcc-0bc7c37910e2",
+   "label": "Opportunistic infections",
+   "misconception": "Opportunistic infections occur only in HIV infection.",
+   "correction": "They occur in any significant immunosuppression, including chemotherapy, transplantation and long-term steroids.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7b551938ed6316e1",
+   "conceptId": "C-42d068bc-0a32-488a-8bc0-2e8f8a369531",
+   "label": "Oral rehydration therapy",
+   "misconception": "ORS stops diarrhoea.",
+   "correction": "ORS replaces losses and prevents dehydration; it does not reduce stool output (zinc shortens the illness).",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:84003544c4d8c309",
+   "conceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+   "label": "Osteoarthritis",
+   "misconception": "Osteoarthritis is an inflammatory arthritis with prolonged morning stiffness.",
+   "correction": "Osteoarthritis is degenerative, with brief (<30 min) stiffness; prolonged stiffness suggests inflammatory arthritis.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b31b0a90e40e815e",
+   "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+   "label": "Osteoporosis",
+   "misconception": "Osteoporosis causes bone pain before fractures occur.",
+   "correction": "Osteoporosis is silent until a fracture; diagnosis is by bone density.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:06cbe652e3c510c5",
+   "conceptId": "C-07c074b3-34d3-4e07-84b1-49fb2ff7775f",
+   "label": "Oxygen therapy",
+   "misconception": "More oxygen is always better for a breathless patient.",
+   "correction": "Titrate to target saturations; hyperoxia harms some patients, including those with hypercapnia and preterm infants.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0ce74274970e3f3b",
+   "conceptId": "C-36599f5a-30b5-4167-b9b3-c144b3f79f50",
+   "label": "Palliative care",
+   "misconception": "Palliative care is only for the last days of life.",
+   "correction": "Palliative care can begin at diagnosis of serious illness alongside curative treatment.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:d40aa90b94744383",
+   "conceptId": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+   "label": "Pancreatitis",
+   "misconception": "The height of serum amylase or lipase indicates the severity of pancreatitis.",
+   "correction": "Enzyme levels support diagnosis but do not predict severity; clinical scores and organ failure do.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:718ff7bd1862c8a0",
+   "conceptId": "C-3a785599-aaa4-4e59-bb4c-b4caa3ff14c2",
+   "label": "Paraneoplastic syndromes",
+   "misconception": "Paraneoplastic syndromes are caused by direct spread of the tumour.",
+   "correction": "They are caused by hormones, cytokines or antibodies produced by or against the tumour, at sites remote from it.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:bc6362b0d6a92739",
+   "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+   "label": "Peptic ulcer disease",
+   "misconception": "Stress and spicy food are the main causes of peptic ulcers.",
+   "correction": "Helicobacter pylori and NSAIDs are the main causes.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:65e0f7aaf8144e4c",
+   "conceptId": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+   "label": "Peripheral arterial disease",
+   "misconception": "Leg pain on walking is usually due to arthritis.",
+   "correction": "Calf pain on walking relieved by rest suggests intermittent claudication; check pulses and ankle-brachial index.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:011949f66f4f1081",
+   "conceptId": "C-378f2d4b-13eb-4334-a983-f46baf5cfe40",
+   "label": "Peripheral nerve injury",
+   "misconception": "Loss of sensation and loss of power always occur together after nerve injury.",
+   "correction": "Pure motor, pure sensory or mixed deficits depend on the nerve and level injured.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:726331e16aff4d25",
+   "conceptId": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+   "label": "Pesticide poisoning",
+   "misconception": "Atropine should be stopped as soon as pupils dilate in organophosphate poisoning.",
+   "correction": "Atropinisation is titrated to drying of secretions and adequate heart rate and BP, not pupil size.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1e3d5d9390465a2e",
+   "conceptId": "C-5001a553-0e21-4cc9-9041-7c595e5fcb06",
+   "label": "Pharmacokinetics",
+   "misconception": "Doubling the dose doubles the duration of drug action.",
+   "correction": "With first-order kinetics, doubling the dose prolongs action by about one half-life only.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ff40d14b9dcaf748",
+   "conceptId": "C-e10f4fda-02a2-41af-8ea8-19033d6654bc",
+   "label": "Pleural fluid analysis",
+   "misconception": "An exudate is diagnosed only by high pleural protein.",
+   "correction": "Light's criteria use protein and LDH ratios and pleural LDH; any one criterion classifies the fluid as an exudate.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e915691c9b8e7c35",
+   "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+   "label": "Pneumonia",
+   "misconception": "A normal chest examination rules out pneumonia.",
+   "correction": "Examination is insensitive; a chest X-ray is needed when pneumonia is suspected.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f0f4bb30b9011d61",
+   "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+   "label": "Polycystic ovary syndrome",
+   "misconception": "Polycystic ovaries on ultrasound alone diagnose PCOS.",
+   "correction": "Diagnosis needs two of three (Rotterdam): oligo-anovulation, hyperandrogenism, polycystic ovaries, after excluding other causes.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e78c1d439110ba18",
+   "conceptId": "C-c96995ff-a113-4d60-ae5c-e7b137770eac",
+   "label": "Polymerase chain reaction",
+   "misconception": "A positive PCR always means live, active infection.",
+   "correction": "PCR detects nucleic acid, which can persist after the organism is dead or the infection is cleared.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:a15bba5fb7675417",
+   "conceptId": "C-e69fda87-9758-41eb-8b06-ecd5767fef9e",
+   "label": "Porphyrias",
+   "misconception": "All porphyrias cause skin photosensitivity.",
+   "correction": "Acute intermittent porphyria causes neurovisceral attacks without photosensitivity.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:372e61df87d2beb9",
+   "conceptId": "C-bdda3977-1c3d-40d5-9d81-573aae48a428",
+   "label": "Postmenopausal bleeding",
+   "misconception": "A small amount of postmenopausal bleeding is normal.",
+   "correction": "Any postmenopausal bleeding needs evaluation to exclude endometrial cancer.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e512127346e87fb2",
+   "conceptId": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+   "label": "Postpartum haemorrhage",
+   "misconception": "Most postpartum haemorrhage is due to retained placenta.",
+   "correction": "Uterine atony is the commonest cause (the 4 Ts: tone, trauma, tissue, thrombin).",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:97d9b8ce5dce1e88",
+   "conceptId": "C-93fec1d5-8dfc-45f0-84e3-6736aebc104c",
+   "label": "Preoperative assessment",
+   "misconception": "All patients must stop all medicines before surgery.",
+   "correction": "Many drugs (e.g. beta-blockers, most antihypertensives) continue; some (anticoagulants, certain antidiabetics) are adjusted.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:39d771f7ca6f3edc",
+   "conceptId": "C-42536d31-90a5-4e46-82c7-f7cad7cb4986",
+   "label": "Prescribing in special populations",
+   "misconception": "Most drugs are safe in pregnancy if they are safe in adults.",
+   "correction": "Teratogenicity and altered pharmacokinetics mean drugs need specific pregnancy safety data.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:0be56775553a5f52",
+   "conceptId": "C-98c194e3-82d7-42ef-93d4-6b112eb45183",
+   "label": "Preterm labour",
+   "misconception": "Tocolytics should be continued until term to prevent preterm birth.",
+   "correction": "Tocolysis is short-term, mainly to allow antenatal corticosteroids and transfer; it does not prolong pregnancy to term.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:609f98f29210c9ce",
+   "conceptId": "C-adc4e960-cf1f-47f8-9b58-4053b3d08360",
+   "label": "Primary open-angle glaucoma",
+   "misconception": "Glaucoma always causes eye pain.",
+   "correction": "Open-angle glaucoma is painless and silent until advanced visual field loss.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:4412f1f0f902a2a5",
+   "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+   "label": "Prostate cancer",
+   "misconception": "A normal PSA excludes prostate cancer.",
+   "correction": "PSA has limited sensitivity and specificity; examination and further tests are needed when suspicion exists.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:14af3dd130d4937d",
+   "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+   "label": "Protein-energy malnutrition",
+   "misconception": "Kwashiorkor and marasmus are both defined by severe wasting.",
+   "correction": "Oedema is the hallmark of kwashiorkor; marasmus is severe wasting without oedema.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:9952fbfeba65e008",
+   "conceptId": "C-6cb3f44e-c0da-4140-8bcc-a094964e6d57",
+   "label": "Psoriasis",
+   "misconception": "Psoriasis is contagious.",
+   "correction": "Psoriasis is an immune-mediated disease and is not infectious.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f263d0f0267e70c3",
+   "conceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+   "label": "Pulmonary function tests",
+   "misconception": "A reduced FEV1 always means obstructive lung disease.",
+   "correction": "FEV1 falls in both patterns; the FEV1/FVC ratio is low in obstruction and normal or high in restriction.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:76312804f0a2d8ae",
+   "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+   "label": "Pulmonary tuberculosis",
+   "misconception": "A negative sputum smear excludes pulmonary tuberculosis.",
+   "correction": "Smear has limited sensitivity; nucleic acid amplification tests (e.g. CBNAAT) and culture are more sensitive.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:44ad39a72bf708fc",
+   "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+   "label": "Pyrexia of unknown origin",
+   "misconception": "Any fever without an obvious source is a PUO.",
+   "correction": "PUO requires prolonged fever (classically >3 weeks) undiagnosed despite a defined period of investigation.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7cb4f2af3491b5a4",
+   "conceptId": "C-435e32ca-e801-4ceb-9741-d6e3ee85ceda",
+   "label": "Rabies",
+   "misconception": "Rabies post-exposure prophylaxis can be skipped if the animal looks healthy.",
+   "correction": "Category II–III exposures need prophylaxis started immediately; observation of a dog or cat can only stop it later.",
+   "kind": "management",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:e4b4c03676b82f77",
+   "conceptId": "C-2cbaf2e4-a9f6-44f7-9b9e-03879aef096b",
+   "label": "Radiation protection",
+   "misconception": "Lead aprons make radiation exposure harmless at any distance or time.",
+   "correction": "Protection relies on time, distance and shielding together.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:37af3d1b7de75e30",
+   "conceptId": "C-2971f30b-863a-4518-86cb-aeb7ee687a0b",
+   "label": "Red eye",
+   "misconception": "Topical steroids are a safe first treatment for any red eye.",
+   "correction": "Steroids can worsen herpetic and fungal keratitis and cause glaucoma; diagnose first.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:7cfacacf66cb3ad6",
+   "conceptId": "C-325ccfa8-97bc-4139-b9dc-6c25703fca32",
+   "label": "Regional anaesthesia",
+   "misconception": "Spinal and epidural anaesthesia are the same.",
+   "correction": "Spinal is injected into the subarachnoid space with rapid dense block; epidural is outside the dura, slower, and can be titrated by catheter.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:2a8335a310bd77c8",
+   "conceptId": "C-4b98f715-4056-4195-a4f9-a8c2c9341b7b",
+   "label": "Regulation of respiration",
+   "misconception": "Low oxygen is the main normal drive to breathe.",
+   "correction": "Arterial CO2 (via central chemoreceptors) is the main normal drive; hypoxic drive matters mainly in hypoxaemia.",
+   "kind": "mechanism",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c548676e16c1e8cb",
+   "conceptId": "C-59d3b8ab-2a28-40b2-b49b-83288bd1bb1f",
+   "label": "Renal regulation of fluid, electrolytes and acid-base",
+   "misconception": "Aldosterone acts mainly to retain water.",
+   "correction": "Aldosterone increases sodium reabsorption and potassium and H+ secretion; ADH mainly regulates water.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:8c8e7ae3d7f0d393",
+   "conceptId": "C-a7c84b72-a9bd-42ca-b850-a2acc2d12ab0",
+   "label": "Renin-angiotensin system inhibitors",
+   "misconception": "ACE inhibitors and ARBs should be combined for extra kidney protection.",
+   "correction": "Dual blockade increases hyperkalaemia and kidney injury without added benefit.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:3040ac9b1b504c0a",
+   "conceptId": "C-a5b9f2bb-46b3-409a-9e48-17853365c1d7",
+   "label": "Rh isoimmunisation",
+   "misconception": "Anti-D is needed for Rh-positive mothers.",
+   "correction": "Anti-D prophylaxis is for unsensitised Rh-negative mothers carrying a possibly Rh-positive fetus.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1a3f253d46d43943",
+   "conceptId": "C-a92460ef-29fd-4538-a84b-98c5dc3ea081",
+   "label": "Rheumatic heart disease",
+   "misconception": "The aortic valve is the valve most commonly affected in rheumatic heart disease.",
+   "correction": "The mitral valve is most commonly involved, followed by the aortic valve.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:615a9aaca1747eed",
+   "conceptId": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+   "label": "Rheumatoid arthritis",
+   "misconception": "A negative rheumatoid factor excludes rheumatoid arthritis.",
+   "correction": "Up to a third of patients are seronegative; anti-CCP is more specific and diagnosis is clinical.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1da4b3fa36445872",
+   "conceptId": "C-eca130b5-2bf8-4f85-8511-8d7fa509c8a8",
+   "label": "Scabies",
+   "misconception": "Only the person with the itch needs scabies treatment.",
+   "correction": "All close contacts are treated at the same time, and clothes and bedding are washed, to prevent reinfestation.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c1f684ab4efd7cad",
+   "conceptId": "C-1aa39154-2c33-4727-9aeb-2280f7fa6fb8",
+   "label": "Schizophrenia",
+   "misconception": "Schizophrenia means having a split personality.",
+   "correction": "Schizophrenia is a psychotic disorder; split or multiple personality refers to dissociative identity disorder.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c0f99fb95c427568",
+   "conceptId": "C-12faa4d0-d453-4401-be67-fa5b77b94a7a",
+   "label": "Screening for disease",
+   "misconception": "A test with high sensitivity is best for confirming a diagnosis.",
+   "correction": "High sensitivity helps rule out disease (SnNout); high specificity helps rule it in (SpPin).",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:16f97a692ce87bd6",
+   "conceptId": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+   "label": "Sepsis",
+   "misconception": "Sepsis requires a fever.",
+   "correction": "Older, immunosuppressed and very ill patients may be normothermic or hypothermic; hypothermia is a poor prognostic sign.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b16d6c17d6a9bf67",
+   "conceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+   "label": "Serological tests",
+   "misconception": "A positive IgG antibody indicates current infection.",
+   "correction": "IgM suggests recent infection; IgG usually indicates past infection or immunity unless titres rise.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ff8df197fbc91105",
+   "conceptId": "C-e2dc4c05-6bf0-449b-b0ff-460eb3a9d672",
+   "label": "Severe acute malnutrition",
+   "misconception": "Children with severe acute malnutrition should be given high-calorie feeds at once.",
+   "correction": "Start cautiously with F-75 in the stabilisation phase to avoid refeeding problems, then progress to F-100 or RUTF.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": true
+  },
+  {
+   "misconceptionId": "mc:6dfcae57989d3b53",
+   "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+   "label": "Shock",
+   "misconception": "Normal blood pressure excludes shock.",
+   "correction": "Compensated shock maintains BP; tachycardia, raised lactate, poor perfusion and low urine output appear first.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:708b6e1be13d2e73",
+   "conceptId": "C-4fd0e908-9570-47a2-ae69-42f7da6aeab6",
+   "label": "Sickle cell disease",
+   "misconception": "Sickle cell trait carriers commonly have painful crises.",
+   "correction": "Trait is usually asymptomatic; crises occur in homozygous sickle cell disease.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f23b2ee1ac319267",
+   "conceptId": "C-0ac37d8b-721c-4599-acfa-2f33f4217889",
+   "label": "Spinal injuries",
+   "misconception": "An alert patient who moves all limbs cannot have an unstable spinal injury.",
+   "correction": "Unstable injuries can exist without deficits; immobilise until cleared clinically or by imaging.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:cb1645a42128c2ea",
+   "conceptId": "C-04b4d135-508d-4b4f-b4ea-41a779faed0a",
+   "label": "Sterilisation",
+   "misconception": "Disinfection and sterilisation mean the same thing.",
+   "correction": "Sterilisation kills all microbes including spores; disinfection reduces pathogens but may not kill spores.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:59b8cc620f7383ed",
+   "conceptId": "C-fddfc29b-c5d0-43ee-8e00-a10d056f1d60",
+   "label": "Stridor",
+   "misconception": "Stridor and wheeze come from the same part of the airway.",
+   "correction": "Stridor arises from the larynx or upper airway; wheeze from narrowed lower airways.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:07e0403a43802e43",
+   "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+   "label": "Stroke",
+   "misconception": "A normal early CT scan rules out ischaemic stroke.",
+   "correction": "Early CT is often normal in ischaemic stroke; its main early role is to exclude haemorrhage before thrombolysis.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:86e57129b273f3c6",
+   "conceptId": "C-3f367c07-a6e6-49d7-b4c8-0935f66969a6",
+   "label": "Syncope",
+   "misconception": "Syncope with jerking movements is always a seizure.",
+   "correction": "Brief myoclonic jerks are common in syncope; rapid recovery without prolonged confusion favours syncope.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:411fa305ed0b4913",
+   "conceptId": "C-6844e9bb-2fe2-4105-ba76-d52157abc7b7",
+   "label": "Syphilis",
+   "misconception": "Syphilis is cured once the primary ulcer heals.",
+   "correction": "The chancre heals without treatment while infection progresses to secondary and later stages.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:02ff399407e46d08",
+   "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+   "label": "Systemic lupus erythematosus",
+   "misconception": "A positive ANA test confirms lupus.",
+   "correction": "ANA is sensitive but not specific; healthy people can be positive. Anti-dsDNA and anti-Sm are more specific.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c329d471d7cf6c48",
+   "conceptId": "C-d829c736-55a1-42cb-b2d9-484fb49c91dd",
+   "label": "Tests of significance",
+   "misconception": "A p-value below 0.05 means the result is clinically important.",
+   "correction": "Statistical significance does not measure effect size or clinical importance; confidence intervals help.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5ba2a4ae6fe52d61",
+   "conceptId": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+   "label": "Thalassaemia",
+   "misconception": "Thalassaemia trait needs iron supplements because the cells are microcytic.",
+   "correction": "Iron stores are normal in trait; unnecessary iron risks overload. Distinguish it from iron deficiency with iron studies and HbA2.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:52f4485047332c98",
+   "conceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+   "label": "Thrombosis",
+   "misconception": "A normal D-dimer excludes DVT in any patient.",
+   "correction": "D-dimer only helps exclude DVT when pre-test probability is low; high-probability patients need imaging.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c77a6a48a6642a75",
+   "conceptId": "C-9784e465-87b3-4ecb-82f7-b317ca4461b3",
+   "label": "Thyroid disorders",
+   "misconception": "A normal TSH excludes all thyroid disease.",
+   "correction": "TSH can be misleading in pituitary disease, recent treatment change and non-thyroidal illness; free T4 is needed in those settings.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ab99566c8204d7a9",
+   "conceptId": "C-c38e21df-0b56-408b-9824-7079a7949a9f",
+   "label": "Thyroid gland",
+   "misconception": "T4 is the main active thyroid hormone in tissues.",
+   "correction": "T4 is mainly a prohormone; it is converted to the more active T3 in peripheral tissues.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:b40ffdd5049d1a0c",
+   "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+   "label": "Thyrotoxicosis",
+   "misconception": "All thyrotoxicosis is Graves disease and needs antithyroid drugs.",
+   "correction": "Thyroiditis causes transient thyrotoxicosis from release of stored hormone; antithyroid drugs do not help it.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1e65e9e6835dde5a",
+   "conceptId": "C-ad2c312e-a5f2-426b-9d9e-0f27fa423be4",
+   "label": "Time since death",
+   "misconception": "Rigor mortis appears first in the legs.",
+   "correction": "Rigor typically appears first in the small muscles, such as the eyelids and jaw, and proceeds downward.",
+   "kind": "reversed",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:f010a4c5ac2e38bd",
+   "conceptId": "C-2d6dbc72-6158-415b-8587-1313de6e841f",
+   "label": "Transport of respiratory gases",
+   "misconception": "Most carbon dioxide is carried in blood bound to haemoglobin.",
+   "correction": "Most CO2 (about 70%) is carried as bicarbonate; smaller amounts are carbamino compounds and dissolved gas.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5ff26cfe92220983",
+   "conceptId": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+   "label": "Type 1 diabetes mellitus",
+   "misconception": "Type 1 diabetes occurs only in children.",
+   "correction": "Type 1 diabetes can begin at any age, including adulthood.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:72f79f866d739897",
+   "conceptId": "C-e3cc839d-3593-48f5-8b4c-e132c3d54518",
+   "label": "Type 2 diabetes mellitus",
+   "misconception": "Type 2 diabetes never needs insulin.",
+   "correction": "Many patients need insulin as beta-cell function declines, or during illness, surgery or pregnancy.",
+   "kind": "overgeneralisation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:cdd1ddcec2bc06de",
+   "conceptId": "C-2aa7da9c-4113-49bd-a826-8782937f04e9",
+   "label": "Undescended testis",
+   "misconception": "Undescended testis can wait until puberty for treatment.",
+   "correction": "Orchidopexy is advised early (around 6–18 months) to protect fertility and allow cancer surveillance.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:55f9d88472efc2e0",
+   "conceptId": "C-d0eba639-0935-4a0b-941b-0a4bf7f19632",
+   "label": "Upper and lower motor neuron lesions",
+   "misconception": "Acute upper motor neuron lesions always cause spasticity and brisk reflexes.",
+   "correction": "In the acute phase (spinal or cerebral shock) tone and reflexes may be reduced before UMN signs appear.",
+   "kind": "sequence-timing",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:ba0c6789c07c043b",
+   "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+   "label": "Urinary tract infection",
+   "misconception": "Bacteria in the urine always need antibiotics.",
+   "correction": "Asymptomatic bacteriuria is usually not treated, except in pregnancy and before urological procedures.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:51c6504c33cf9099",
+   "conceptId": "C-2ee83d3f-981d-42f3-a3f9-59187e9c0041",
+   "label": "Urine formation",
+   "misconception": "Most filtered water is reabsorbed in the collecting duct.",
+   "correction": "About two-thirds is reabsorbed in the proximal tubule; the collecting duct fine-tunes reabsorption under ADH.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:e3188e6aa745fc6a",
+   "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+   "label": "Urolithiasis",
+   "misconception": "All kidney stones are visible on plain X-ray.",
+   "correction": "Uric acid stones are radiolucent; non-contrast CT is the most sensitive test.",
+   "kind": "test-interpretation",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:76955499759d96e0",
+   "conceptId": "C-d67cf453-933e-405e-9c52-db9928fd5b2a",
+   "label": "Urticaria",
+   "misconception": "Hives always mean an allergy to food.",
+   "correction": "Most chronic urticaria is idiopathic or autoimmune; acute cases also follow infections and drugs.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:d688799c9c849e2e",
+   "conceptId": "C-3a5f4265-b660-4ada-b4cc-3f1e74bc3ed9",
+   "label": "Vaccine-preventable diseases",
+   "misconception": "A mild fever or cold is a reason to delay vaccination.",
+   "correction": "Minor illness is not a contraindication; only moderate or severe acute illness justifies deferral.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:dc02508eb070c68c",
+   "conceptId": "C-75bdc185-c64f-4f8d-9548-e6ee9e4412ab",
+   "label": "Vaccines",
+   "misconception": "Live vaccines are safe in all immunocompromised patients.",
+   "correction": "Live vaccines are generally contraindicated in significant immunosuppression and pregnancy.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:1e3e65a824f121a4",
+   "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+   "label": "Valvular heart disease",
+   "misconception": "The loudness of a murmur reflects the severity of the valve lesion.",
+   "correction": "Loudness correlates poorly with severity; in severe aortic stenosis the murmur may soften as cardiac output falls.",
+   "kind": "reasoning",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:62944b2b6c844f04",
+   "conceptId": "C-2e96f256-4cf7-4279-8d14-242404004c26",
+   "label": "Varicocele",
+   "misconception": "A varicocele that does not empty on lying down is harmless.",
+   "correction": "A non-reducing or new right-sided varicocele can indicate retroperitoneal or renal pathology.",
+   "kind": "missed-red-flag",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:189ad1e66171f338",
+   "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+   "label": "Viral hepatitis",
+   "misconception": "Hepatitis A commonly becomes chronic.",
+   "correction": "Hepatitis A and E do not usually cause chronic infection; hepatitis B and C do.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:5bcbabf11508b459",
+   "conceptId": "C-3b1bb622-41f0-4cef-83f3-6020dff8c1ce",
+   "label": "Vitamins",
+   "misconception": "Large doses of fat-soluble vitamins are harmless because excess is excreted.",
+   "correction": "Fat-soluble vitamins (A, D, E, K) accumulate and can cause toxicity.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:95b3512a4c87e5a9",
+   "conceptId": "C-f663f964-1690-40c8-b7f6-fbbbe1dbf8a2",
+   "label": "Vitiligo",
+   "misconception": "Vitiligo is a form of leprosy.",
+   "correction": "Vitiligo is autoimmune depigmentation with normal sensation; leprosy patches are hypopigmented with sensory loss.",
+   "kind": "confusion",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:6e2a349229f700ae",
+   "conceptId": "C-ae462a0e-e3a5-4d12-beda-04d898c3a6cb",
+   "label": "Wound care",
+   "misconception": "Antiseptics should be applied repeatedly to all clean wounds.",
+   "correction": "Repeated strong antiseptics can damage healing tissue; clean with saline and keep the wound moist and covered.",
+   "kind": "management",
+   "guidelineSensitive": false
+  },
+  {
+   "misconceptionId": "mc:c81032a4a3a47c90",
+   "conceptId": "C-913bbb8a-299f-4e1c-af4e-963cfb63c95f",
+   "label": "Ziehl-Neelsen staining",
+   "misconception": "Ziehl-Neelsen stain is used for all bacteria.",
+   "correction": "It detects acid-fast organisms such as mycobacteria, which resist decolourisation with acid-alcohol.",
+   "kind": "factual",
+   "guidelineSensitive": false
+  }
+ ]
+}
