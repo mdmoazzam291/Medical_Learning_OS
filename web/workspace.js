@@ -40,7 +40,7 @@ async function load(offset = activityOffset()) {
     else if (section === 'rules') { data = await cloud.examSimulatorReadiness('neet-pg:2026@1'); try { const target = localStorage.getItem('mlos-personal-target-v1'); if (/^\d{4}-\d{2}-\d{2}$/.test(target || '') && Number.isFinite(Date.parse(target))) data.targetDate = target; } catch { /* Optional date. */ } }
     else throw new Error('Open the selected main workspace to continue.');
     render();
-  } catch (error) { root.innerHTML = '<section class="panel"><h2>Workspace unavailable</h2><p>' + e(error.message) + '</p><button data-retry>Retry workspace</button><a href="/web/account.html">Account</a></section>'; }
+  } catch (error) { root.innerHTML = '<section class="panel"><h2>This section could not be loaded.</h2><p>Your saved work is unaffected. Check your connection and try again.</p><p class="muted"><small>Reference: ' + e(error.message || 'unavailable') + '</small></p><button data-retry>Retry workspace</button><a href="/web/account.html">Account</a></section>'; }
   finally { loading = false; }
 }
 root.addEventListener('click', async event => {

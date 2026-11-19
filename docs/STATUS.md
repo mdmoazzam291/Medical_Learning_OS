@@ -17,6 +17,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Same visit, study-api v54 (unchanged, sequential): progress/questions/revision 1.9–2.1 s, with `getUser` ~0.59 s then runtime access ~1.0 s before route work. A warm study-api request in the same visit took 217 ms (getUser 21 ms, runtime access 51 ms), so first calls on new connections dominate.
 - Expected effect: `/me` drops from about three sequential round-trips (median ~0.5 s) to roughly the auth-server call alone. Re-measure with the STATUS 2026-11-19 log queries.
 
+### 2026-11-19 — NMC foundation: presentations and misconceptions (ADR-139)
+- Admin learner preview now shows these layers per concept (builds on, confused with, misconceptions, presentations) in each topic.
+- Clinical presentation layer: 66 presentations → 517 concepts (759 links, cause/approach). Misconception library: 244 high-yield wrong beliefs with corrections and error kinds (15 guideline-sensitive). Both AI drafts, Admin-only data, no redeploy needed.
+- System tags already on 1,531/1,543 identities; skin and mental-health systems missing from the vocabulary (deferred). High-yield tiers wait for PYQ data.
+
 ### 2026-11-19 — API preconnect; server latency measured
 - Pages now open the API connection early (`web/api-preconnect.js`, loaded right after `appearance-boot.js` on all 21 pages; one reviewed `supabase` coupling entry; test pins it to `cloudConfig.projectUrl`). Verified in Chromium on exam, account and privacy pages with no console errors.
 - Measured from existing production logs (last 24 h, no new learner data collected): learner function boot time averages about 35 ms (max about 220 ms), so cold starts are not the main cost. Every authenticated request first calls `/auth/v1/user` (median 398 ms, p90 823 ms), then `learner_runtime_access_v1` (median 116 ms, p90 578 ms), then its own query, all in sequence. Slowest routes: `review-api/me` (median 491 ms, p90 1,421 ms), `study-api/progress`, `/questions`, `/revision/due`, `/exam-simulator/readiness` (medians 570–680 ms, p90 about 1.5 s).
@@ -87,7 +92,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 ### 2026-11-18 — NMC foundation marked complete (subject-competency scope)
 - Owner decision (ADR-138): foundation complete for the 2,633 live subject competency rows; AI-drafted objectives, no faculty review, no learner material.
 - The five non-subject parts are kept separate in `data/nmc-non-subject-curriculum-deferred.json` (counts, overlap, recommendation, pointer to the retained audit branch `feat/nmc-support-cohort-reconciliation-20261103` @ `5524c5a`). AETCOM is the first candidate if ever needed.
-- Production: nmc-admin-preview v29 on registry @28; owner-api v27 still on @27 (repo pins @28; redeploy pending, deferred to save usage).
+- Production: nmc-admin-preview v30 on registry @28 with concept layers; owner-api v27 still on @27 (repo pins @28; redeploy pending, deferred to save usage).
 
 ### 2026-11-18 — Registry @28: quality-audit fixes
 - Seeded audit (60 objectives, 60 prerequisite links, 20 confusion pairs): wording and NMC row matches sound; one systematic issue — 146 clinical-phase objectives carried the classifier's fallback 'mechanism' label.

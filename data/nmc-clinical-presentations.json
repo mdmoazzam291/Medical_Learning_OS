@@ -1,0 +1,4200 @@
+{
+ "schemaVersion": 1,
+ "contractId": "nmc-clinical-presentations-v1",
+ "status": "ai-draft",
+ "clinicalApproval": false,
+ "learnerActivation": false,
+ "presentations": [
+  {
+   "presentationId": "chest-pain",
+   "label": "Chest pain",
+   "links": [
+    {
+     "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+     "label": "Acute coronary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a2adf544-5ee4-4719-a0ee-f8ab62dc4f46",
+     "label": "Ischaemic heart disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a3aa9ce0-b811-463a-98cc-9f5cfd298bc0",
+     "label": "Pericardial disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+     "label": "Embolism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+     "label": "Pneumonia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ae7c6b07-0af8-4f50-a722-2e23859ecc1b",
+     "label": "Gastro-oesophageal reflux disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+     "label": "Chest trauma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0f44af7e-c463-4ede-955b-848e906eeb15",
+     "label": "Aneurysms",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+     "label": "Peptic ulcer disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+     "label": "Electrocardiogram",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-6989415c-edfe-472f-8fee-045935b6b0d4",
+     "label": "Cardiac biomarkers",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-e25470c0-0a39-4a70-b0c8-6897c45944f3",
+     "label": "Cardiovascular examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-8407fce4-70c0-4a7e-9d6f-6d2e79498510",
+     "label": "Imaging in medical emergencies",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "breathlessness",
+   "label": "Breathlessness",
+   "links": [
+    {
+     "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+     "label": "Heart failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+     "label": "Asthma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+     "label": "Chronic obstructive pulmonary disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+     "label": "Pneumonia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+     "label": "Embolism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+     "label": "Anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+     "label": "Valvular heart disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-941a4acb-68ed-4949-ade0-95fbce629ff3",
+     "label": "Pneumoconioses",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a3aa9ce0-b811-463a-98cc-9f5cfd298bc0",
+     "label": "Pericardial disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f6438899-f640-4897-969b-f093ff5846a5",
+     "label": "Acid-base disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-38db4a97-67c0-49b8-b5a1-820218d56a13",
+     "label": "Dyspnoea",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-af4cf87c-3d76-4f50-b900-67a26c0266ef",
+     "label": "Respiratory examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-6566e396-f80f-4db9-b07e-4e9d0f602047",
+     "label": "Pulmonary function tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+     "label": "Blood gas analysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+     "label": "Radiograph interpretation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-52282d04-3943-4795-b971-06541f4f8fea",
+     "label": "Peak expiratory flow measurement",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "palpitations",
+   "label": "Palpitations",
+   "links": [
+    {
+     "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+     "label": "Cardiac arrhythmias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+     "label": "Thyrotoxicosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+     "label": "Anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-355d06e9-82f7-4cce-8fd2-0c6fe2d2aff9",
+     "label": "Anxiety disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+     "label": "Hypoglycaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+     "label": "Valvular heart disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+     "label": "Electrocardiogram",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d7ee881-1f50-43e8-8bed-00d02d7e41a7",
+     "label": "Arterial pulse",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+     "label": "Thyroid function tests",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "syncope",
+   "label": "Syncope and transient loss of consciousness",
+   "links": [
+    {
+     "conceptId": "C-3f367c07-a6e6-49d7-b4c8-0935f66969a6",
+     "label": "Syncope",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+     "label": "Cardiac arrhythmias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-190d84e5-ee04-470a-8008-a0f15465e00e",
+     "label": "Valvular heart disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+     "label": "Hypoglycaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+     "label": "Epilepsy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-82c5b134-be22-485b-ab5b-e8dc76c6f40d",
+     "label": "Haemorrhage",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+     "label": "Electrocardiogram",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+     "label": "Blood pressure",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "shock",
+   "label": "Shock and hypotension",
+   "links": [
+    {
+     "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+     "label": "Shock",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+     "label": "Sepsis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-82c5b134-be22-485b-ab5b-e8dc76c6f40d",
+     "label": "Haemorrhage",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+     "label": "Acute coronary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+     "label": "Hypersensitivity reactions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+     "label": "Adrenal insufficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+     "label": "Embolism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a3aa9ce0-b811-463a-98cc-9f5cfd298bc0",
+     "label": "Pericardial disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-49f7b18a-4fe5-4c4d-a614-309cb9ae448f",
+     "label": "Vasopressors and inotropes",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-d2cea6d4-2adc-4577-afaf-e42d8f270f6c",
+     "label": "Perioperative fluid therapy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-76c5bfa3-dd7d-4d84-a358-6798ac3229b3",
+     "label": "Vascular access",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9a9ed63b-22c0-40fb-a77f-7c2a85b87172",
+     "label": "Blood gas analysis",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "oedema",
+   "label": "Swelling of legs (oedema)",
+   "links": [
+    {
+     "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+     "label": "Heart failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+     "label": "Nephrotic syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+     "label": "Cirrhosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+     "label": "Thrombosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5d75462b-933f-4ade-8982-5804f31c0ce8",
+     "label": "Lymphoedema",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-57cd5641-239a-4526-91a8-e92d09dc5d1f",
+     "label": "Protein-energy malnutrition",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e409cecb-01d2-4873-a2de-bba4d6e520b1",
+     "label": "Lower limb venous system",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9031664e-3387-4b66-bbff-77de566ac960",
+     "label": "Oedema",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+     "label": "Urinalysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+     "label": "Liver function tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-1c397fde-6c3f-4449-815a-90499237234b",
+     "label": "Peripheral vascular examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "hypertension",
+   "label": "Raised blood pressure",
+   "links": [
+    {
+     "conceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+     "label": "Hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+     "label": "Chronic kidney disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d5ffca62-6d06-44b2-bcaa-ce69d2824a02",
+     "label": "Renal vascular disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-720774b8-d18d-429a-891e-028c93fff261",
+     "label": "Cushing syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e1cb7a8d-57b9-47eb-aa45-6edd74aa1c25",
+     "label": "Adrenal tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+     "label": "Hypertensive disorders of pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cb5344da-922d-4aa9-b09c-53826d1e46f0",
+     "label": "Paediatric hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+     "label": "Glomerulonephritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ffb3fde-5c55-4370-a77e-41af5bb020f1",
+     "label": "Blood pressure",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
+     "label": "Hypertensive emergencies",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-df898f26-1ed0-4f36-8edf-b85c37f85639",
+     "label": "Antihypertensive drugs",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "cough",
+   "label": "Cough and haemoptysis",
+   "links": [
+    {
+     "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+     "label": "Pulmonary tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+     "label": "Pneumonia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6ecca386-f9b5-47d4-9411-6a4944ffdaa9",
+     "label": "Lung carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ef34e52c-78a6-4a52-b48e-91fe40779b62",
+     "label": "Bronchiectasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+     "label": "Asthma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+     "label": "Chronic obstructive pulmonary disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f7b33a40-242e-4222-9044-ef1ce4514014",
+     "label": "Upper respiratory tract infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+     "label": "Heart failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4e4f9863-564d-410a-9753-f1e711549c79",
+     "label": "Lung abscess",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ae7c6b07-0af8-4f50-a722-2e23859ecc1b",
+     "label": "Gastro-oesophageal reflux disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-af4cf87c-3d76-4f50-b900-67a26c0266ef",
+     "label": "Respiratory examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-913bbb8a-299f-4e1c-af4e-963cfb63c95f",
+     "label": "Ziehl-Neelsen staining",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+     "label": "Radiograph interpretation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-fdb57c8b-32b4-48d1-b208-8458dab4881d",
+     "label": "Antitussives",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "wheeze-stridor",
+   "label": "Noisy breathing (wheeze, stridor)",
+   "links": [
+    {
+     "conceptId": "C-3609b2f3-7bec-48e7-8aad-a8a923fe35ae",
+     "label": "Asthma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-61e37073-b7c8-4b3a-8ce8-2d3f11457105",
+     "label": "Croup",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7babeef7-2657-4f54-8169-e9d4366c31eb",
+     "label": "Epiglottitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f188aa95-f5dc-420f-9702-2fa6e3a7e7ef",
+     "label": "Foreign body aspiration",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-efa2a787-eab4-4ad9-9fec-c39aadd57b85",
+     "label": "Benign laryngeal disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-24ee858c-4ac4-43fa-9580-80266d446523",
+     "label": "Laryngeal cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c7c918ab-cefe-435f-8e16-0a0b1dbb5fdc",
+     "label": "Hypersensitivity reactions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-df3b64fe-954e-438e-ad98-7904e96433d7",
+     "label": "Chronic obstructive pulmonary disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fddfc29b-c5d0-43ee-8e00-a10d056f1d60",
+     "label": "Stridor",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+     "label": "Airway management",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-dfcea804-bae6-47a9-b0fd-b6f7bdfc22f6",
+     "label": "Laryngoscopy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-ff8e4132-7a62-4817-9127-f0278c825a73",
+     "label": "Tracheostomy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-46443586-7f44-4bbf-801e-5a61dc459d7a",
+     "label": "Nebulisation",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "fever",
+   "label": "Fever",
+   "links": [
+    {
+     "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+     "label": "Malaria",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+     "label": "Enteric fever",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-26ad2051-3860-4384-a3cf-891744e428a0",
+     "label": "Rickettsial infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7d9262c8-6ed0-4783-8179-473a7fd7c959",
+     "label": "Arboviral infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+     "label": "Pulmonary tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+     "label": "Urinary tract infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-610bc030-3ae1-4bb2-9ad6-2980b096993d",
+     "label": "Pneumonia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e0218f90-9eb4-4e29-8379-e612d1248a7f",
+     "label": "Sepsis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+     "label": "Infective endocarditis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-694d9491-1f79-472b-89a7-1d3b75f0af44",
+     "label": "Visceral abscesses",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+     "label": "Leukaemias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+     "label": "Hodgkin lymphoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-11843e14-bf02-4e26-82e6-a48b10948d33",
+     "label": "Acute febrile illness",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-8b0209fa-abb5-41e4-87be-e65f85f7c1d9",
+     "label": "Fever",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-096cb473-0344-4683-a418-f217f3a01cb3",
+     "label": "Blood culture",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-48f08949-45bc-48ac-99e4-7bde90ef3731",
+     "label": "Peripheral blood smear",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-e2c86e59-d626-4d30-818d-86cacb6b2546",
+     "label": "Pyrexia of unknown origin",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-fcbf17b9-28dc-4fde-ae3e-707a3e4c3deb",
+     "label": "Approach to infectious disease",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "fever-rash",
+   "label": "Fever with rash",
+   "links": [
+    {
+     "conceptId": "C-bd270278-2b59-49d0-9db3-2e6152fdde90",
+     "label": "Viral exanthematous illnesses",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ac029c61-2593-4449-8be7-cecd7bbd4c76",
+     "label": "Varicella zoster infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7d9262c8-6ed0-4783-8179-473a7fd7c959",
+     "label": "Arboviral infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-26ad2051-3860-4384-a3cf-891744e428a0",
+     "label": "Rickettsial infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c0945f63-a3ff-4214-ab28-749dfdb6d8df",
+     "label": "Kawasaki disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc7b56d9-c7e9-41db-91c0-c309c21c8962",
+     "label": "Cutaneous drug reactions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+     "label": "Infective endocarditis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6844e9bb-2fe2-4105-ba76-d52157abc7b7",
+     "label": "Syphilis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-58b4e4b8-fee2-444d-aa7a-59dc7194d4f3",
+     "label": "IgA vasculitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-daaca46b-f9c5-4b66-83ec-8f0e9c3b5871",
+     "label": "Infectious rashes",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-979da4ed-0f86-4781-af21-cd4d0abf3114",
+     "label": "Serological tests",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "jaundice",
+   "label": "Jaundice",
+   "links": [
+    {
+     "conceptId": "C-9c9de011-3521-424b-9bcf-822de0afabca",
+     "label": "Viral hepatitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+     "label": "Haemolytic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0a74c76e-967b-4ff6-9c88-ab2f4bbdc5fb",
+     "label": "Biliary tract disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0983ef6c-f771-4d85-a1ba-611229c4fb27",
+     "label": "Gallstones",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-920002b2-ec36-46f5-b8f1-de69afb7e4ff",
+     "label": "Pancreatic carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-67aab62b-586a-465d-a79f-9cdd8e23e136",
+     "label": "Alcohol-related liver disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2af88479-506f-4699-8308-15e50f7fe9f0",
+     "label": "Drug-induced liver injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+     "label": "Cirrhosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-df4ffc84-48d8-4992-9ed3-3302bf9c78c3",
+     "label": "Neonatal hyperbilirubinaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e7ce9590-52ba-4c1a-ac50-b9ee9bc3121d",
+     "label": "Liver disease in pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+     "label": "Malaria",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-20fd4723-19f0-480c-a675-6370bab9ecd2",
+     "label": "Jaundice",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-f2a087e7-ebe4-4452-86fa-16980d64e9c6",
+     "label": "Bilirubin metabolism",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-dc3a65b9-2f5f-4092-8e31-d3027a9ef2d1",
+     "label": "Liver function tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-a42d78fc-61cb-45bc-b51a-31b3fdc7da40",
+     "label": "Hepatobiliary imaging",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "abdominal-pain",
+   "label": "Acute abdominal pain",
+   "links": [
+    {
+     "conceptId": "C-749e5c60-ad07-4688-82a0-0f1e17fc9f68",
+     "label": "Appendicitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f8435738-4b3c-4563-b93b-f45a72a85ea3",
+     "label": "Cholecystitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+     "label": "Pancreatitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+     "label": "Peptic ulcer disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+     "label": "Peritonitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-06badb58-3b46-4aff-afb7-ecc20bb1b19d",
+     "label": "Surgical bowel disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+     "label": "Urolithiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+     "label": "Ectopic pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f4197226-ea44-4b37-ab18-a6b64b9ea52d",
+     "label": "Pelvic inflammatory disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+     "label": "Diabetic emergencies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+     "label": "Acute coronary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3e286aac-9394-4c56-a59a-8c6e7189cd3a",
+     "label": "Abdominal pain in children",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+     "label": "Abdominal examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-62c5f824-8046-44a7-b510-cb8a423a6e5e",
+     "label": "Imaging in surgical conditions",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-c015e520-7a50-41a7-bc3c-44149aec1d0b",
+     "label": "Pregnancy tests",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "gi-bleeding",
+   "label": "Vomiting blood or blood in stool",
+   "links": [
+    {
+     "conceptId": "C-8dbaba9c-a8ee-41a8-a38c-850886708ca1",
+     "label": "Gastrointestinal bleeding",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-63a4b041-8208-4455-9245-1e97572e0da5",
+     "label": "Peptic ulcer disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+     "label": "Portal hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8eb3ea18-003a-4759-a2b8-1ce487911f5c",
+     "label": "Colorectal carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6e6260e5-147e-4959-b78c-06316d5c2df5",
+     "label": "Anorectal disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+     "label": "Inflammatory bowel disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a2c5f67e-9ece-4727-8cb4-22290d987c79",
+     "label": "Gastric carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+     "label": "Bleeding disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0e9f1b43-7745-4947-ab25-7a7669bc5853",
+     "label": "Upper gastrointestinal endoscopy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-83735e09-6c87-48a8-b12b-8dac3b111b3c",
+     "label": "Vasoactive drugs in variceal bleeding",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-be01055a-b65d-47d1-a332-224289d4d165",
+     "label": "Digital rectal examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-10026240-f836-4ea1-aa9c-8c105461dc5d",
+     "label": "Blood transfusion",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "diarrhoea",
+   "label": "Diarrhoea",
+   "links": [
+    {
+     "conceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+     "label": "Acute gastroenteritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1abeccd0-3a1a-4bac-9f63-20378c92cea8",
+     "label": "Dysentery",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7c263735-46c3-4459-9eaf-6ac116616b51",
+     "label": "Amoebiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+     "label": "Food poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d336f144-533b-42e0-b774-1eca34b08427",
+     "label": "Inflammatory bowel disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+     "label": "Malabsorption syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3c0dc59a-c2de-4ce2-bde2-5550508bb952",
+     "label": "Intestinal tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+     "label": "Thyrotoxicosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+     "label": "HIV infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e735a8bd-0002-4258-b4aa-aacebef784e0",
+     "label": "Diarrhoea",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-d6a286de-c653-433b-a4e7-681f2f53c77c",
+     "label": "Stool examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-42d068bc-0a32-488a-8bc0-2e8f8a369531",
+     "label": "Oral rehydration therapy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-ccdd9fd2-f95c-472f-8d1f-ac88c4382634",
+     "label": "Infectious diarrhoea treatment",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "vomiting",
+   "label": "Vomiting",
+   "links": [
+    {
+     "conceptId": "C-fa66af34-0735-4f3a-9e64-45a2461c02f2",
+     "label": "Acute gastroenteritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-06badb58-3b46-4aff-afb7-ecc20bb1b19d",
+     "label": "Surgical bowel disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2f39b9a5-3ef7-4c66-9e26-26a866326a0b",
+     "label": "Hyperemesis gravidarum",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+     "label": "Diabetic emergencies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+     "label": "Head injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2285772b-855a-448b-abbb-11122f2158a6",
+     "label": "Uraemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3765282a-6aec-47a4-8c6e-13a26744fea6",
+     "label": "Food poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fea1949-fab7-4691-b979-613af3f720a6",
+     "label": "Pancreatitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7613683b-bae8-463e-98f6-76a6a5b18254",
+     "label": "Vomiting",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-78b7ca2c-828d-44a3-9b95-963ce69cbac9",
+     "label": "Antiemetics",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+     "label": "Water and electrolyte balance",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "dysphagia",
+   "label": "Difficulty swallowing",
+   "links": [
+    {
+     "conceptId": "C-8c315904-a03a-4698-98c8-8d45ce28727f",
+     "label": "Oesophageal cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c22016b3-792f-4d4e-b172-14ccb933f140",
+     "label": "Oesophageal disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ae7c6b07-0af8-4f50-a722-2e23859ecc1b",
+     "label": "Gastro-oesophageal reflux disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a6b6689a-f123-4022-bc44-85d05934b194",
+     "label": "Hypopharyngeal cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6ca33c69-e47b-492d-abfa-c7ec2d5c8def",
+     "label": "Myasthenia gravis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+     "label": "Goitre",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-77774270-ca74-417b-b81a-ca25d12db6f5",
+     "label": "Deep neck space infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d59938d3-6315-4e2b-8f02-4467fc0125a9",
+     "label": "Dysphagia",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-0e9f1b43-7745-4947-ab25-7a7669bc5853",
+     "label": "Upper gastrointestinal endoscopy",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "abdominal-distension",
+   "label": "Abdominal distension and ascites",
+   "links": [
+    {
+     "conceptId": "C-d62a498f-4352-4463-87dd-ff0384745136",
+     "label": "Cirrhosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+     "label": "Portal hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6078a16c-e191-4b0b-bc71-cb40cf9ffc5d",
+     "label": "Heart failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bf496c22-d5a9-44f1-a162-43090f64c385",
+     "label": "Nephrotic syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-de92ea28-cd9b-4d83-8f57-7d6d07727aac",
+     "label": "Ovarian tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e6af1f55-f7e1-4af8-a15c-0a4cbb85f8e4",
+     "label": "Peritonitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-06badb58-3b46-4aff-afb7-ecc20bb1b19d",
+     "label": "Surgical bowel disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-70218f60-ad88-4c49-bcbf-615213aefb85",
+     "label": "Adynamic ileus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7603137c-3eed-43ac-b4ea-10c6c8840a1b",
+     "label": "Ascitic fluid analysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+     "label": "Abdominal examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b4e7fdb8-a2b4-407a-87d6-85c7ca76eef4",
+     "label": "Body fluid analysis",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "altered-sensorium",
+   "label": "Altered consciousness",
+   "links": [
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+     "label": "Encephalitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+     "label": "Head injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+     "label": "Hypoglycaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c61061f8-0086-40ad-91c1-55c360d64de8",
+     "label": "Diabetic emergencies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+     "label": "Hyponatraemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+     "label": "Hepatic failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2285772b-855a-448b-abbb-11122f2158a6",
+     "label": "Uraemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+     "label": "Poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8489203c-98b8-4874-b9c3-e6adb886d122",
+     "label": "Status epilepticus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+     "label": "Delirium",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4aa529b9-53e9-4dc2-9a58-651c3ed22aaf",
+     "label": "Alcohol intoxication",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3d1fdbd5-c82c-4f15-bc6d-a20b3b3fe372",
+     "label": "Heat stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-03be60df-afc8-448c-8e93-1ebf721556c1",
+     "label": "Unconscious patient",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-cab87017-0c65-440e-9a55-4bbbef9d7fb2",
+     "label": "Glasgow Coma Scale",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-161aab86-3cc7-43f8-9fbc-d9c7c8ec12fe",
+     "label": "Lumbar puncture",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "headache",
+   "label": "Headache",
+   "links": [
+    {
+     "conceptId": "C-d30c0b31-242f-4221-89c8-50bfa358eaef",
+     "label": "Migraine",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bbb27833-d844-4aeb-bc2a-7a5d636b0a21",
+     "label": "Central nervous system tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-97c0fd5a-a81b-4822-bcb3-9dbd29cd5be6",
+     "label": "Hypertensive emergencies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4d256d05-6009-4931-987d-07482915fe2c",
+     "label": "Sinusitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-53364b95-5b15-4ca3-afd4-5cd4c4cbbbf6",
+     "label": "Angle-closure glaucoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7808faaf-0983-4818-8541-2aadeb68067e",
+     "label": "Refractive errors",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a7d985a9-f7ad-4247-86d8-267e1fed9e23",
+     "label": "Cavernous sinus thrombosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e5d282b2-3af3-4f6f-abdb-9cc523a71729",
+     "label": "Headache",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-6d4ba61c-21e1-4fd1-a72d-91ef5132445a",
+     "label": "Headache of ocular origin",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-781c301e-9438-42ff-9206-cd669624be8b",
+     "label": "Antimigraine drugs",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "seizures",
+   "label": "Seizures",
+   "links": [
+    {
+     "conceptId": "C-ee0ea208-aa94-443b-926d-ec2beadd6197",
+     "label": "Epilepsy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c9521a53-ddac-4da0-8441-9f6f16485e59",
+     "label": "Febrile seizures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-397d9308-f607-492e-ab82-e70112aba6f4",
+     "label": "Neonatal seizures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d3a58ec9-6e85-4a3a-9333-30c09cd6a2f9",
+     "label": "Hypoglycaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+     "label": "Hyponatraemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d76a7ddf-2be1-4ab2-a618-90a5d39a8305",
+     "label": "Meningitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+     "label": "Encephalitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bbd9ca4b-bd56-44ee-b7b0-44b592d6432d",
+     "label": "Cysticercosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d2ebc996-04b4-4ae5-833b-a7cf7302d358",
+     "label": "Hypertensive disorders of pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bbb27833-d844-4aeb-bc2a-7a5d636b0a21",
+     "label": "Central nervous system tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8489203c-98b8-4874-b9c3-e6adb886d122",
+     "label": "Status epilepticus",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-25ea8448-3810-491e-a64f-4c2abef56c55",
+     "label": "Electroencephalogram",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b67d7951-c6aa-4807-84a8-b760d6bc42a6",
+     "label": "Antiseizure medicines",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "weakness-limbs",
+   "label": "Weakness of limbs",
+   "links": [
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ac37d8b-721c-4599-acfa-2f33f4217889",
+     "label": "Spinal injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-378f2d4b-13eb-4334-a983-f46baf5cfe40",
+     "label": "Peripheral nerve injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6ca33c69-e47b-492d-abfa-c7ec2d5c8def",
+     "label": "Myasthenia gravis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a9de6123-0e32-4c0f-a7e9-7cfa960fe990",
+     "label": "Myopathies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fbc4714c-cdb8-46da-b9b4-7725a3641be1",
+     "label": "Duchenne muscular dystrophy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+     "label": "Hypokalaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-870bb91c-4e42-4fda-b1a9-a2eb3bc1fac6",
+     "label": "Lambert-Eaton myasthenic syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-01e7f7e4-3459-488f-bd6b-23a5c604e2b6",
+     "label": "Infantile hemiplegia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-17856fda-d455-4286-bfa6-72621fd2b845",
+     "label": "Post-polio residual paralysis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d0eba639-0935-4a0b-941b-0a4bf7f19632",
+     "label": "Upper and lower motor neuron lesions",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-05cc6894-df16-4d96-8aad-ce59fa918a20",
+     "label": "Reflexes",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-eb49cd44-f6b5-4a65-903a-65bebcefc7e3",
+     "label": "Spinal cord transection patterns",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "movement-tremor",
+   "label": "Abnormal movements and tremor",
+   "links": [
+    {
+     "conceptId": "C-8dc7199c-ddf7-410e-9334-3b50b6775ed2",
+     "label": "Movement disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e13191ba-ef00-4bb8-b47b-c1c3124a6a27",
+     "label": "Basal ganglia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+     "label": "Thyrotoxicosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f03b0ec8-e968-41a1-9ce1-8e784f3bd7b4",
+     "label": "Cerebellum",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-92b73b00-2308-414d-97b3-fd8ac70e3cd6",
+     "label": "Delirium tremens",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+     "label": "Hepatic failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-79f2cfe4-f1e2-4f7e-b122-b300a6fb1266",
+     "label": "Antiparkinsonian drugs",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "vertigo",
+   "label": "Dizziness and vertigo",
+   "links": [
+    {
+     "conceptId": "C-d11fb730-f65a-4e45-8b97-92d9c575c525",
+     "label": "Vertigo",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7dd8c746-542b-4e78-a03d-5a88a7c45db0",
+     "label": "Meniere disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-89fa60e2-e1fb-437d-b315-bc021a820698",
+     "label": "Vestibular schwannoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3f367c07-a6e6-49d7-b4c8-0935f66969a6",
+     "label": "Syncope",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+     "label": "Cardiac arrhythmias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+     "label": "Anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-76580695-f2ad-4551-aa49-f5cb5b5e9069",
+     "label": "Vestibular apparatus",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-5ca18823-333c-4675-8a90-0aa4df1915d7",
+     "label": "ENT examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "hearing-loss",
+   "label": "Hearing loss",
+   "links": [
+    {
+     "conceptId": "C-c1b60707-887d-496b-9342-66741142d4a9",
+     "label": "Chronic otitis media",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3cc1e893-966c-4ae7-8abd-245c38a8cbb0",
+     "label": "Otitis media with effusion",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-718cdeb8-5950-44f6-a7c7-a22afa308186",
+     "label": "Otosclerosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fcd5537-88eb-4aa6-89cb-35691e5ed87e",
+     "label": "Cerumen impaction",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7dd8c746-542b-4e78-a03d-5a88a7c45db0",
+     "label": "Meniere disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-89fa60e2-e1fb-437d-b315-bc021a820698",
+     "label": "Vestibular schwannoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-33728a6c-5a00-4158-ae2e-7d369a50c72b",
+     "label": "Hearing loss in older adults",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c8006b05-90e8-449c-991d-5477d4f989e5",
+     "label": "Cholesteatoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ee33f220-23a6-4972-89c7-698bf92cad30",
+     "label": "Hearing tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-cd936f60-e179-447a-9339-943556589f14",
+     "label": "Otoscopy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-aec2f495-99a8-4ae0-bc5c-6840d441c59a",
+     "label": "Deafness",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "ear-discharge-pain",
+   "label": "Ear pain or discharge",
+   "links": [
+    {
+     "conceptId": "C-27ebe127-1aa4-4513-be55-50277fbc6c14",
+     "label": "Acute suppurative otitis media",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c1b60707-887d-496b-9342-66741142d4a9",
+     "label": "Chronic otitis media",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c8006b05-90e8-449c-991d-5477d4f989e5",
+     "label": "Cholesteatoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-20d93ec9-615b-4c88-8e91-7f824bc8ecbf",
+     "label": "External ear disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+     "label": "Tonsillitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2dfe6d91-c7bd-4b2a-9122-4275de8d18ee",
+     "label": "Eustachian tube dysfunction",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f7e59d26-1270-4fdd-b611-90e62ce04a32",
+     "label": "Otalgia",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7f97ef31-0573-43c8-81b2-6a4ed8c86354",
+     "label": "Otorrhoea",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-cd936f60-e179-447a-9339-943556589f14",
+     "label": "Otoscopy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7f0d2460-1497-4bcb-a924-6671604c6e1e",
+     "label": "Otomicroscopy",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "nasal-obstruction",
+   "label": "Blocked or bleeding nose",
+   "links": [
+    {
+     "conceptId": "C-b9de459a-5d94-46e4-9f74-c57efa21eade",
+     "label": "Allergic rhinitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-20111495-c38e-4acf-9cc4-b4c878f2161d",
+     "label": "Deviated nasal septum",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a5569915-99d0-415d-bd42-7fbac357a5c0",
+     "label": "Nasal polyps",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-dcad2f0f-fc1e-46b4-aaa1-638a8489dd75",
+     "label": "Adenoid hypertrophy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4d256d05-6009-4931-987d-07482915fe2c",
+     "label": "Sinusitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f5b95b05-9e19-40ea-8952-c25583e0881a",
+     "label": "Juvenile nasopharyngeal angiofibroma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-025b5e00-ccc6-4e43-b3d4-a426bc6bca69",
+     "label": "Sinonasal and nasopharyngeal tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ed5d8da-f611-416e-a6a6-e6528924da3b",
+     "label": "Hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+     "label": "Bleeding disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fcc02bee-10aa-4909-a4e7-21aa890d80f5",
+     "label": "Nasal obstruction",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-40ad3dfd-1429-48e5-ace8-bf0cbc824225",
+     "label": "Epistaxis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9f4f588d-eb3f-4abc-8c43-0e3942de8dc2",
+     "label": "Nasal endoscopy",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "sore-throat-hoarseness",
+   "label": "Sore throat and hoarseness",
+   "links": [
+    {
+     "conceptId": "C-d280c033-b01b-45b2-a9d0-5eaf156ee59e",
+     "label": "Tonsillitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e9819f54-b29c-41d7-8c38-19016ca7014c",
+     "label": "Diphtheria, pertussis and tetanus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-77774270-ca74-417b-b81a-ca25d12db6f5",
+     "label": "Deep neck space infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-efa2a787-eab4-4ad9-9fec-c39aadd57b85",
+     "label": "Benign laryngeal disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-24ee858c-4ac4-43fa-9580-80266d446523",
+     "label": "Laryngeal cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ae7c6b07-0af8-4f50-a722-2e23859ecc1b",
+     "label": "Gastro-oesophageal reflux disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-81fa9f57-f7ca-43a1-a5b2-f9390c213fc1",
+     "label": "Hoarseness",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-dfcea804-bae6-47a9-b0fd-b6f7bdfc22f6",
+     "label": "Laryngoscopy",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "neck-swelling",
+   "label": "Neck swelling",
+   "links": [
+    {
+     "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+     "label": "Goitre",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-b2ad8873-b3f0-4cb2-ad2f-d9ee1dd855b7",
+     "label": "Thyroid neoplasms",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4e7057d4-521b-42b3-abf8-a0afa84ab75f",
+     "label": "Tuberculous lymphadenitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+     "label": "Hodgkin lymphoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-13c4bb18-d7c9-4cde-96b8-4c1122578357",
+     "label": "Head and neck cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-99cf5538-5d14-4a36-8e8e-08667fa7ca31",
+     "label": "Salivary gland disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-77774270-ca74-417b-b81a-ca25d12db6f5",
+     "label": "Deep neck space infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2c9b6aa2-d1ba-42d1-90a5-e539f91dddaa",
+     "label": "Examination of a swelling",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b5a85456-1031-44de-bf40-aee67a6ab39b",
+     "label": "Lymphatic system examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-a902737b-701c-4d23-927f-93112522c494",
+     "label": "Thyroid function tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+     "label": "Diagnostic cytology",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "lymphadenopathy",
+   "label": "Enlarged lymph nodes",
+   "links": [
+    {
+     "conceptId": "C-4e7057d4-521b-42b3-abf8-a0afa84ab75f",
+     "label": "Tuberculous lymphadenitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+     "label": "Hodgkin lymphoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4ea0b975-83e9-4495-b9c6-6a9429e7abf9",
+     "label": "Non-Hodgkin lymphoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+     "label": "Leukaemias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+     "label": "HIV infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+     "label": "Metastasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+     "label": "Sexually transmitted infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3f1c18af-8496-4543-852d-7d3612bb594c",
+     "label": "Lymphangitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+     "label": "Lymphadenopathy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b5a85456-1031-44de-bf40-aee67a6ab39b",
+     "label": "Lymphatic system examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+     "label": "Diagnostic cytology",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "red-eye",
+   "label": "Red eye",
+   "links": [
+    {
+     "conceptId": "C-c188ee66-655d-486d-a536-92cd5194e323",
+     "label": "Conjunctivitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4b628ded-320e-4924-89aa-50f057289b62",
+     "label": "Allergic conjunctivitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1990d774-d706-473d-af3d-52a1407ebfe8",
+     "label": "Infective keratitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-28462a96-ae0c-4f3a-9bb6-dd7172490ce9",
+     "label": "Uveitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-53364b95-5b15-4ca3-afd4-5cd4c4cbbbf6",
+     "label": "Angle-closure glaucoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-59be10cb-d8b9-4c02-a570-a0189ed247ce",
+     "label": "Scleritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8ec15908-e1f0-48bd-adfc-ce34d607fb20",
+     "label": "Episcleritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7e981623-edd5-4e99-a9db-1f9ac85c52ad",
+     "label": "Ocular trauma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0bfae371-4f0c-42e9-9d6b-cc1ffb12ccfb",
+     "label": "Ocular foreign body",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2971f30b-863a-4518-86cb-aeb7ee687a0b",
+     "label": "Red eye",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-38277f84-7f4d-4d24-874b-2b7c2391e9b6",
+     "label": "Visual acuity testing",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "visual-loss",
+   "label": "Loss of vision",
+   "links": [
+    {
+     "conceptId": "C-c7b5c09f-1c2f-487f-b9c9-81fc54048b53",
+     "label": "Cataract",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-adc4e960-cf1f-47f8-9b58-4053b3d08360",
+     "label": "Primary open-angle glaucoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-53364b95-5b15-4ca3-afd4-5cd4c4cbbbf6",
+     "label": "Angle-closure glaucoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a5110e62-bd5c-42fd-b8bf-b59741f34c81",
+     "label": "Diabetic retinopathy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f97c8419-1017-4459-a2c1-67eae7d11a48",
+     "label": "Retinal vascular occlusion",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-79dacefc-7a83-43af-bd77-f6ba20623116",
+     "label": "Retinal disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ce186b57-f196-45f8-8817-46f4803fda63",
+     "label": "Optic nerve disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7808faaf-0983-4818-8541-2aadeb68067e",
+     "label": "Refractive errors",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-76ac99ee-4fc6-49a1-afdf-873b2b13f43c",
+     "label": "Vitamin A deficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-37ece2da-9af1-47ba-959c-586c657d804e",
+     "label": "Amblyopia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ce0a12-8c55-4ebf-9b85-e0c372e81c1c",
+     "label": "Stroke",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-38277f84-7f4d-4d24-874b-2b7c2391e9b6",
+     "label": "Visual acuity testing",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-6c97b89b-143d-4e40-a3d5-d74b8fe74f17",
+     "label": "Ophthalmoscopy",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-d1bdb2bd-5b7e-4ce1-b054-18b3993da4ba",
+     "label": "Visual pathway",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-09591aa4-ac7f-4d55-ba3d-b00d76e5517c",
+     "label": "Blindness",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "proptosis",
+   "label": "Bulging eye",
+   "links": [
+    {
+     "conceptId": "C-30126cea-cc16-4087-8bf6-5700546150f3",
+     "label": "Thyroid eye disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-28f4a182-4d4b-43c2-937e-62ff7aeda191",
+     "label": "Orbital cellulitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2f4d1eac-dbc9-40b0-8807-f4f93d3c2811",
+     "label": "Orbital tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a7d985a9-f7ad-4247-86d8-267e1fed9e23",
+     "label": "Cavernous sinus thrombosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a43faeaf-e054-499a-b8b4-56bb2419d6de",
+     "label": "Retinoblastoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6b238d00-0692-4d55-9b82-7413fa9283c0",
+     "label": "Proptosis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-96b6a8bc-a412-4eb1-9b96-c97c8f672369",
+     "label": "Extraocular movements",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "anaemia",
+   "label": "Pallor and anaemia",
+   "links": [
+    {
+     "conceptId": "C-cf50b0f4-8f11-443c-9063-2a68cee76a3a",
+     "label": "Iron deficiency anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-26a9c011-7145-48db-8e9b-6796b02a293e",
+     "label": "Megaloblastic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3c9a286a-e3c6-49ae-830a-28aae7a6fe3d",
+     "label": "Vitamin B12 deficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-be64c410-a805-43c2-b1cb-ad6fa28661a1",
+     "label": "Folate deficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+     "label": "Haemolytic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+     "label": "Thalassaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4fd0e908-9570-47a2-ae69-42f7da6aeab6",
+     "label": "Sickle cell disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-61803e8b-3ed1-4577-934d-a662481abb19",
+     "label": "Aplastic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+     "label": "Chronic kidney disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-921778b5-e1de-4439-9c14-1d3166587fb9",
+     "label": "Hookworm infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+     "label": "Leukaemias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-60f64ced-60a6-4029-9a3f-1b0fb38dbe28",
+     "label": "Anaemia in pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f9d4f7fe-fe76-41cd-843f-4c9b9efd6bcb",
+     "label": "Anaemia",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-e19204e5-1971-4b5c-9ea3-682f09f9fd6c",
+     "label": "Complete blood count",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-bc3f0fef-fb14-4b5e-b3f2-206d655df3c7",
+     "label": "Red cell indices",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-48f08949-45bc-48ac-99e4-7bde90ef3731",
+     "label": "Peripheral blood smear",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-95efe1b5-2b8c-4be2-90f5-db97d3d407b8",
+     "label": "Reticulocyte count",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-23325ea5-3420-4a6d-a4fe-51d382310430",
+     "label": "Bone marrow examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9903031a-6460-4557-9453-17e7751ca6d0",
+     "label": "Haematinics",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "bleeding",
+   "label": "Bleeding and bruising",
+   "links": [
+    {
+     "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+     "label": "Bleeding disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-43146256-39e4-435d-b08d-c21ee83ace18",
+     "label": "Haemophilia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-531f85ce-a287-436a-9b7d-08d2103e285e",
+     "label": "Immune thrombocytopenia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e2a2f2a9-3c19-416c-91fa-006652db36eb",
+     "label": "Disseminated intravascular coagulation",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-86f53a81-cacc-4079-b6ff-45024b6572c1",
+     "label": "Vitamin K deficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+     "label": "Leukaemias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-61803e8b-3ed1-4577-934d-a662481abb19",
+     "label": "Aplastic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+     "label": "Hepatic failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-69e0866e-37f9-4114-bce9-7c044daaff1e",
+     "label": "Anticoagulants",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-16f20594-c425-40c5-9129-092cc2c23445",
+     "label": "Bleeding and clotting times",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-8c142f01-76b6-4d04-9817-45d08402148f",
+     "label": "Platelet count",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-492420e5-53bc-42ab-859f-2cf3ad020663",
+     "label": "Haemostasis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-82939e95-7c9f-4668-8f79-d55a253cd9cd",
+     "label": "Blood products",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "splenomegaly",
+   "label": "Enlarged spleen",
+   "links": [
+    {
+     "conceptId": "C-eb68b0c6-88ff-4df8-9d4e-c8f96b44ea4a",
+     "label": "Malaria",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f6228a56-6335-4d0d-93ac-e6f9c6b0e49d",
+     "label": "Visceral leishmaniasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cf526b28-cbf5-4b3b-afab-86e08df9a1fa",
+     "label": "Portal hypertension",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-37323faf-f87d-493e-9bf7-29bb20e371d4",
+     "label": "Haemolytic anaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8a55037e-fc4f-41db-8687-3eac945f3fd2",
+     "label": "Thalassaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771fc8b0-c9d2-4f39-a752-d3db1890ac0e",
+     "label": "Leukaemias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-889146b1-253c-4f55-bab9-e533214615fe",
+     "label": "Hodgkin lymphoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1a08f716-bf2d-48db-999f-34880ad7c945",
+     "label": "Enteric fever",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1f5000e4-df91-45e6-884f-a30a628f4f14",
+     "label": "Infective endocarditis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-418b4d78-df71-4fa8-8728-67881a0af21d",
+     "label": "Splenomegaly",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-f56328e5-1f4d-4fe8-a4ab-8b12da5c0586",
+     "label": "Abdominal examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-48f08949-45bc-48ac-99e4-7bde90ef3731",
+     "label": "Peripheral blood smear",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "weight-loss",
+   "label": "Unintended weight loss",
+   "links": [
+    {
+     "conceptId": "C-a3b77de9-1005-465d-98ac-0b47d0fc7b45",
+     "label": "Pulmonary tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3ec81eff-d64a-4682-a816-351afa99165d",
+     "label": "Diabetes mellitus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-84146fd0-ba01-4b49-85c9-5fa1074c28f3",
+     "label": "Thyrotoxicosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-67c5fb8a-ff54-4768-b21e-a27cbc81600b",
+     "label": "HIV infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+     "label": "Malabsorption syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-367dcd38-7f3a-4d77-b555-aa7e732f8c48",
+     "label": "Cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+     "label": "Depression",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-897a735e-25fb-4cfd-a769-0e7924af2eb7",
+     "label": "Eating disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1a55e556-8b26-45a3-8cd3-9dd28e27846c",
+     "label": "Malnutrition in older adults",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+     "label": "Nutritional assessment",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7fb577db-e2ee-4c57-9676-5fd791b607db",
+     "label": "Cancer screening",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "polyuria-thirst",
+   "label": "Excess urination and thirst",
+   "links": [
+    {
+     "conceptId": "C-e3cc839d-3593-48f5-8b4c-e132c3d54518",
+     "label": "Type 2 diabetes mellitus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1e41dd80-9c5f-4a21-ab33-de06f6bfdcc3",
+     "label": "Type 1 diabetes mellitus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
+     "label": "Hypercalcaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+     "label": "Hypokalaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-aab0f877-59bc-4753-a8df-a0457d082ab4",
+     "label": "Pituitary gland",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+     "label": "Chronic kidney disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7ce2f2c2-f895-4182-bf0b-e8ddd9ac1e6e",
+     "label": "Glycaemic tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9918b646-21a3-466d-a289-5d28564adf54",
+     "label": "Urine concentration and dilution",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b859d7e0-26c8-4749-98c5-f71150630284",
+     "label": "Capillary blood glucose monitoring",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "haematuria",
+   "label": "Blood in urine",
+   "links": [
+    {
+     "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+     "label": "Urolithiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+     "label": "Glomerulonephritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-b8ec9c01-860e-41a0-afe5-f27e6069ddf3",
+     "label": "IgA nephropathy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-25fbab0b-e72e-4ea9-8797-4cda4a9a8dc9",
+     "label": "Urothelial carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6b7a631e-2c14-4a67-8416-de0340110b8f",
+     "label": "Renal tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+     "label": "Urinary tract infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+     "label": "Benign prostatic hyperplasia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+     "label": "Bleeding disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8e0516ea-1827-4580-b0d2-ba4f3d0d10eb",
+     "label": "Nephritic syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e8459978-fcc6-4d40-a2a2-ec84ca74eadd",
+     "label": "Haematuria",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+     "label": "Urinalysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+     "label": "Renal function tests",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "reduced-urine",
+   "label": "Reduced urine output",
+   "links": [
+    {
+     "conceptId": "C-aa764f32-7cdb-43db-937a-afc973bef7b5",
+     "label": "Acute kidney injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a81bd3f8-3423-479f-877b-71a2a85b4109",
+     "label": "Acute tubular necrosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-39ffe670-839b-4691-9aa9-186bcc20a865",
+     "label": "Shock",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c5a0323d-f6e6-4c6d-bdc9-f627b3daa224",
+     "label": "Urinary retention",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+     "label": "Benign prostatic hyperplasia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9850c4d1-fd03-499a-962f-f752122218f5",
+     "label": "Glomerulonephritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-959f320b-c435-4062-83e3-ce819420bb2b",
+     "label": "Hydronephrosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-077e9a68-45db-4e70-a30c-7eae5136ebca",
+     "label": "Renal function tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-58920ee2-35c2-4e13-aa9c-fbc7fe401270",
+     "label": "Serum creatinine",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-4fabbb9f-a122-4325-a1ba-3f223001e05d",
+     "label": "Urinary catheterisation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-c4485002-96cb-4b84-ba24-e954f8773335",
+     "label": "Renal replacement therapy",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "urinary-symptoms",
+   "label": "Painful or difficult urination",
+   "links": [
+    {
+     "conceptId": "C-4ea2bdcb-27f5-4fbd-a9fd-6d3c9b48b35e",
+     "label": "Urinary tract infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-33fdc035-3fe5-4bfa-ac5e-a16232b0a05d",
+     "label": "Benign prostatic hyperplasia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8718226b-b54e-47d9-ac1f-d0affa041b78",
+     "label": "Prostatitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc15fbe7-176f-4a72-901e-13d09232483e",
+     "label": "Urethral stricture",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-74e6fa67-aef5-44aa-8030-0d36cc0c9e13",
+     "label": "Urethritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+     "label": "Urolithiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ef05790-7561-42b1-ae9e-b3e8c687996c",
+     "label": "Prostate cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c55fea74-b72a-48bf-a5dc-481de72fced7",
+     "label": "Phimosis and paraphimosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-63575197-eae1-440f-8641-8072a9193423",
+     "label": "Urinalysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-c5a0323d-f6e6-4c6d-bdc9-f627b3daa224",
+     "label": "Urinary retention",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-be01055a-b65d-47d1-a332-224289d4d165",
+     "label": "Digital rectal examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "scrotal-swelling",
+   "label": "Scrotal pain or swelling",
+   "links": [
+    {
+     "conceptId": "C-52a899d3-e73b-4ea8-8d1f-b717923a344a",
+     "label": "Acute scrotum",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+     "label": "Hydrocele",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2e96f256-4cf7-4279-8d14-242404004c26",
+     "label": "Varicocele",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+     "label": "Hernia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5c0b29fc-c025-4b70-8f4e-e704fb4f3cb8",
+     "label": "Testicular tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2aa7da9c-4113-49bd-a826-8782937f04e9",
+     "label": "Undescended testis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2c9b6aa2-d1ba-42d1-90a5-e539f91dddaa",
+     "label": "Examination of a swelling",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "joint-pain",
+   "label": "Joint pain and swelling",
+   "links": [
+    {
+     "conceptId": "C-24c185be-b0f4-4db0-81ab-ce1b72004da9",
+     "label": "Rheumatoid arthritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ea76fcfe-9f1b-4789-950c-573fe5b5daaa",
+     "label": "Osteoarthritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3765b7a0-acee-4132-bd5e-9c421e1172f3",
+     "label": "Gout",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d5c68e78-a0d8-41cb-a3e1-862f0f186feb",
+     "label": "Septic arthritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d2178077-33b4-40a4-937e-db946b607247",
+     "label": "Juvenile idiopathic arthritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e0f1e127-87dc-41c9-aa90-9de3d29a9535",
+     "label": "Systemic lupus erythematosus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-804459af-a405-45e6-ab32-c4af65eda2d4",
+     "label": "Rheumatic fever",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3ac07a19-0df6-46b7-90ed-3ce05e4fae26",
+     "label": "Inflammatory arthritis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-43146256-39e4-435d-b08d-c21ee83ace18",
+     "label": "Haemophilia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e292e57f-d65c-4566-a5c2-495471456b0a",
+     "label": "Osteoarticular tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1b4ae16c-2d58-4580-a42f-bc8b58a1382c",
+     "label": "Joint pain",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-433afda4-08ac-4eb3-9595-d6357ba2ba0a",
+     "label": "Arthrocentesis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-1f764859-f85a-4c5c-b602-25aa0cf7fb7b",
+     "label": "Autoimmune serology",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "back-pain",
+   "label": "Back pain",
+   "links": [
+    {
+     "conceptId": "C-418f8aa7-d1b1-4dc8-a388-c1caf2488727",
+     "label": "Degenerative spine disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e292e57f-d65c-4566-a5c2-495471456b0a",
+     "label": "Osteoarticular tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+     "label": "Osteoporosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5858970e-8f4c-49c5-b2fb-11ff63101317",
+     "label": "Multiple myeloma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e26bd6aa-887c-4c99-a77d-9e21a5c9a367",
+     "label": "Metastasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ac37d8b-721c-4599-acfa-2f33f4217889",
+     "label": "Spinal injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-04790641-1de4-484e-8545-58a3b6c1e935",
+     "label": "Urolithiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0f44af7e-c463-4ede-955b-848e906eeb15",
+     "label": "Aneurysms",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-89f36bd5-8751-4b13-ab0c-fa2043d604d8",
+     "label": "Neurological examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+     "label": "Radiograph interpretation",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "limb-injury",
+   "label": "Limb injury and fracture",
+   "links": [
+    {
+     "conceptId": "C-60214ec4-a241-4b8e-bd4b-29c35fd67ed6",
+     "label": "Distal radius fracture",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bf727f1b-3d16-4f9d-ae28-21279715c4fb",
+     "label": "Clavicle fracture",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ffa3a6d-40e3-4ef4-8f85-cdca17b8dbb1",
+     "label": "Humerus fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-414a2d1f-adbe-4540-b761-22d560408034",
+     "label": "Intertrochanteric fracture",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7e1af8e4-b7d2-46f8-89c6-8e157ce278d9",
+     "label": "Femoral shaft fracture",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-77e8f20b-fbc8-4686-9cb9-95a439eee066",
+     "label": "Ankle fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6c0987a8-7ff8-4461-b5e2-ec900ace9fc4",
+     "label": "Open fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-880a6014-4afb-495a-84c9-5e83fd098057",
+     "label": "Joint dislocations",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d9bce6bc-dd43-48ec-aecf-d0c9aaeb678f",
+     "label": "Paediatric fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a3496933-6297-4a61-aa3f-702d93cf6f88",
+     "label": "Fragility fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-57ad77ec-1f03-4f0a-b685-cb2dd5f14b8d",
+     "label": "Casting and splinting",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7a9306f4-e84b-4cb8-a46e-513538cc3643",
+     "label": "Fracture complications",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+     "label": "Radiograph interpretation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-de0a9e2e-724c-4853-a3fd-50f56665fa9a",
+     "label": "Polytrauma resuscitation",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "bone-pain-deformity",
+   "label": "Bone pain and deformity",
+   "links": [
+    {
+     "conceptId": "C-f8b97413-97eb-4323-9c70-b9785634d3e6",
+     "label": "Osteomalacia and rickets",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c19708a9-9e9d-46c6-b034-fd836a03fb8e",
+     "label": "Osteoporosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-47b9d310-9b50-41e1-ab41-be38c372826e",
+     "label": "Paget disease of bone",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ddae26a4-ac4e-4b40-a5fd-80fe35f59efa",
+     "label": "Bone tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-281b5474-4826-4fbc-9f9c-78c4f4a0eb73",
+     "label": "Osteomyelitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a9eb50ff-7d9d-49d9-8e92-3da460090513",
+     "label": "Hyperparathyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d402514d-bdeb-49be-bdb8-6ced2c389f10",
+     "label": "Musculoskeletal deformities",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4c4dd879-d463-4a2d-92ec-4ec8e8d81864",
+     "label": "Cerebral palsy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c6b3ff27-58d5-43cc-aecc-a3e4768cf7f5",
+     "label": "Calcium metabolism",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7d8b5e8d-f62b-4279-a4bd-55355f5b60a8",
+     "label": "Radiograph interpretation",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "trauma",
+   "label": "Major trauma",
+   "links": [
+    {
+     "conceptId": "C-e2164a0f-f3dc-4f29-82a0-a8e442fb24c0",
+     "label": "Head injury",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-43de67ac-9e13-4f99-987d-4b7446444f74",
+     "label": "Chest trauma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0ac37d8b-721c-4599-acfa-2f33f4217889",
+     "label": "Spinal injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d2227274-5cc0-4fbb-9367-ba4bb70b718e",
+     "label": "Pelvic fractures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-82c5b134-be22-485b-ab5b-e8dc76c6f40d",
+     "label": "Haemorrhage",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7b2b2165-444d-4854-8cba-250951be4696",
+     "label": "Head and neck trauma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-428b7857-b499-492c-b58c-245b05446e03",
+     "label": "Blast injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-77d538f1-c30c-4cc7-83e6-f9034e8421fb",
+     "label": "Transport injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-badc2634-664d-41b5-833c-c9147008a0d9",
+     "label": "Prehospital trauma care",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-de0a9e2e-724c-4853-a3fd-50f56665fa9a",
+     "label": "Polytrauma resuscitation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-cab87017-0c65-440e-9a55-4bbbef9d7fb2",
+     "label": "Glasgow Coma Scale",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-631d3d1e-fb07-4737-882b-eb04c235c283",
+     "label": "Airway management",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-540e45f6-2929-440e-9134-2bb0c399e61b",
+     "label": "Trauma systems",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "lump-breast",
+   "label": "Breast lump",
+   "links": [
+    {
+     "conceptId": "C-35f01536-a3a1-4948-9077-5835c4bbd68b",
+     "label": "Breast cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-69d02c77-82f2-448c-9a4e-ba6344e28a42",
+     "label": "Benign breast disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f0d1a5bb-55b7-4018-bbb8-672127c9300d",
+     "label": "Phyllodes tumour",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-22c2ed22-5f23-4381-af06-04b7da588091",
+     "label": "Breast disorders during lactation",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1e3b1c83-ed17-45c5-8b2f-c8397f8badd0",
+     "label": "Gynaecomastia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7d883a41-11e1-4be3-9cc0-4953e42ca685",
+     "label": "Breast examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-848b377f-38f9-4651-bca4-a1428da20c86",
+     "label": "Breast imaging",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-2cd2d342-db3d-424f-81b5-9156471f519f",
+     "label": "Diagnostic cytology",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "lump-swelling",
+   "label": "Lump or swelling elsewhere",
+   "links": [
+    {
+     "conceptId": "C-e62bf46a-72e7-476e-b4a3-f371e81f5663",
+     "label": "Hernia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-12e519a0-3460-467d-8dae-d09902adffd6",
+     "label": "Soft tissue tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e8b687c7-0fa7-4f31-a432-ecd0fb84f180",
+     "label": "Skin tumours",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5d0d416e-3b30-441c-9290-d4ffb1e65ea1",
+     "label": "Lymphadenopathy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-056f2314-90cc-4172-b4fa-ac177f4722e1",
+     "label": "Goitre",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-badab649-9c8d-43b9-b46c-8efb8d94aba9",
+     "label": "Hydrocele",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2c9b6aa2-d1ba-42d1-90a5-e539f91dddaa",
+     "label": "Examination of a swelling",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "leg-pain-ulcer",
+   "label": "Leg pain, ulcer or gangrene",
+   "links": [
+    {
+     "conceptId": "C-a36053ab-123f-4607-b2ac-732f191adbec",
+     "label": "Peripheral arterial disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e409cecb-01d2-4873-a2de-bba4d6e520b1",
+     "label": "Lower limb venous system",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d97f896c-f21b-4823-ba62-8cf0cc6a2f88",
+     "label": "Diabetic complications",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8df81be3-aa74-4e43-90ca-694f1c33efdc",
+     "label": "Gangrene",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4468ae1c-c203-4120-a221-4f1c26b1d1c4",
+     "label": "Thrombosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ea0abc66-63f1-499d-a611-900b7866e80b",
+     "label": "Vasospastic disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+     "label": "Leprosy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1c397fde-6c3f-4449-815a-90499237234b",
+     "label": "Peripheral vascular examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-ae462a0e-e3a5-4d12-beda-04d898c3a6cb",
+     "label": "Wound care",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "abnormal-uterine-bleeding",
+   "label": "Abnormal vaginal bleeding",
+   "links": [
+    {
+     "conceptId": "C-ade6010f-83b5-48f2-99e2-4cb1ad31603c",
+     "label": "Abnormal uterine bleeding",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-26a1135f-6398-4a62-8d1c-0e159c8f40db",
+     "label": "Leiomyoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6f6341f3-d9ba-456f-bd00-b4467473cc5f",
+     "label": "Endometrial hyperplasia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-edfdfde2-0e99-46fe-9148-f07402ccb6b0",
+     "label": "Endometrial carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e66b9721-0dd1-45c7-b80b-bd6e2be988cf",
+     "label": "Cervical cancer",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+     "label": "Polycystic ovary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bdda3977-1c3d-40d5-9d81-573aae48a428",
+     "label": "Postmenopausal bleeding",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+     "label": "Ectopic pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d939f733-cac5-46a8-acac-f4eb8f63a146",
+     "label": "Bleeding disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc89bbf2-88f1-40a0-82a4-f3d963c0beda",
+     "label": "Gynaecological history and examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-0c0cd235-5830-448b-b177-9d8e73ef5add",
+     "label": "Obstetric and gynaecological imaging",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-5dfe0feb-f4a1-4c1b-839e-ef2fe5158e02",
+     "label": "Pap smear",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "amenorrhoea",
+   "label": "Missed or absent periods",
+   "links": [
+    {
+     "conceptId": "C-57abfde3-0b0f-4b9f-bf19-de7b4b2ae62d",
+     "label": "Amenorrhoea",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-adb690b3-ae44-4712-a6e8-e993424f1a19",
+     "label": "Diagnosis of pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+     "label": "Polycystic ovary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc65579e-a951-4c48-bcc0-cbe6cbb901ae",
+     "label": "Turner syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-b35f746a-93a1-4964-bf05-2dc25667c9c3",
+     "label": "Disorders of puberty",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-897a735e-25fb-4cfd-a769-0e7924af2eb7",
+     "label": "Eating disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c12dbb34-f5f4-44c0-a5c6-b808151f5b21",
+     "label": "Menopause",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c015e520-7a50-41a7-bc3c-44149aec1d0b",
+     "label": "Pregnancy tests",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-b543f92a-6e6b-4ec8-b337-7bd8212c10e6",
+     "label": "Reproductive hormone tests",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "bleeding-pregnancy",
+   "label": "Bleeding in pregnancy",
+   "links": [
+    {
+     "conceptId": "C-5b6c3164-3368-4737-8205-16983e1d6897",
+     "label": "Ectopic pregnancy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-db80599c-eebb-40b3-82e5-80a4ccf746e1",
+     "label": "Antepartum haemorrhage",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-57699b57-3d51-4387-804f-8e67fd55d467",
+     "label": "Gestational trophoblastic disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-54bcfb84-07b8-436f-a223-4a541a3bb24f",
+     "label": "Recurrent pregnancy loss",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5fb9d279-c8b6-4531-8b00-24601537dba4",
+     "label": "Pregnancy of unknown location",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bfb70d8f-3420-4c3a-b700-459e6d6ffb5d",
+     "label": "Postpartum haemorrhage",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5ba6cd00-be2b-44f7-97b6-b125a6297e26",
+     "label": "Uterine inversion",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-eca502ec-bedc-401f-a58e-331cf7beb395",
+     "label": "Obstetric examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-0c0cd235-5830-448b-b177-9d8e73ef5add",
+     "label": "Obstetric and gynaecological imaging",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-55f34751-c21e-4b1e-8abc-67b229c39eb4",
+     "label": "Obstetric emergencies",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "vaginal-discharge",
+   "label": "Vaginal discharge and genital ulcer",
+   "links": [
+    {
+     "conceptId": "C-fade20c5-b671-4cca-87f9-8d2425152d0c",
+     "label": "Vaginal discharge",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f4197226-ea44-4b37-ab18-a6b64b9ea52d",
+     "label": "Pelvic inflammatory disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e1391fe0-5764-43d2-9024-8b38da8ac463",
+     "label": "Cervicitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-01ff39f1-c7c1-4cb5-a545-c09d4f4678ef",
+     "label": "Candidiasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6844e9bb-2fe2-4105-ba76-d52157abc7b7",
+     "label": "Syphilis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fab005ef-0010-4d4c-83fe-e44f5781754b",
+     "label": "Genital ulcer disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fa4ae732-e4f8-4e0b-892c-84c50fbd3fea",
+     "label": "Herpes simplex infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3d784695-c4bf-43bd-be5d-9afeb338d9eb",
+     "label": "Lymphogranuloma venereum and donovanosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-44b483d9-c7f0-42c0-9482-ebca0067ca7c",
+     "label": "Sexually transmitted infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ab9b4c32-1369-4516-862e-759920fd7f84",
+     "label": "Reproductive tract infections",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-bc89bbf2-88f1-40a0-82a4-f3d963c0beda",
+     "label": "Gynaecological history and examination",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "infertility",
+   "label": "Inability to conceive",
+   "links": [
+    {
+     "conceptId": "C-4ad0a6f8-98ab-4d55-b414-c09b76252dfa",
+     "label": "Infertility",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6e590d86-b57e-4f9c-9a25-f04299f78925",
+     "label": "Polycystic ovary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f4197226-ea44-4b37-ab18-a6b64b9ea52d",
+     "label": "Pelvic inflammatory disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-b91a4584-0883-4205-beb4-5f0e25a3d12b",
+     "label": "Genital tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cf8a6389-ac3e-480f-9781-aff248b6ac34",
+     "label": "Endometriosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c003ee8d-5293-4c91-8bb6-4f2785b07f36",
+     "label": "Semen analysis",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-a4db6f98-3964-42dd-b807-284a58abdc8e",
+     "label": "Ovulation induction",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9538144a-fd36-4247-97c8-b1c7faa16833",
+     "label": "Assisted reproductive technology",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "rash-itch",
+   "label": "Itchy skin rash",
+   "links": [
+    {
+     "conceptId": "C-b655e407-3bc0-405e-9de2-0618fe19b422",
+     "label": "Eczema",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-eca130b5-2bf8-4f85-8511-8d7fa509c8a8",
+     "label": "Scabies",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5a91a491-726e-4311-96d3-23519ae3e3cc",
+     "label": "Dermatophytosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d67cf453-933e-405e-9c52-db9928fd5b2a",
+     "label": "Urticaria",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-950d7593-ddad-464b-8595-9f08f36cbaa9",
+     "label": "Pediculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9196231c-2ded-46d0-af1a-6ffa04230551",
+     "label": "Lichen planus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc7b56d9-c7e9-41db-91c0-c309c21c8962",
+     "label": "Cutaneous drug reactions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6cb3f44e-c0da-4140-8bcc-a094964e6d57",
+     "label": "Psoriasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-56d99fc4-1ff5-4e65-bafa-af8af0e88c56",
+     "label": "KOH mount",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-5363915e-8afb-4c2e-a13b-ba89430d27a0",
+     "label": "Dermatological drugs",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-295a3ce4-ad08-4890-ab1a-4976368cb59c",
+     "label": "Antihistamines",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "skin-patch",
+   "label": "Skin patch or pigment change",
+   "links": [
+    {
+     "conceptId": "C-2de1b44e-ee2b-4ef4-a97d-5b4232a00d3b",
+     "label": "Leprosy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f663f964-1690-40c8-b7f6-fbbbe1dbf8a2",
+     "label": "Vitiligo",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5a91a491-726e-4311-96d3-23519ae3e3cc",
+     "label": "Dermatophytosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-964469fa-f469-4f00-ba7b-38073718a582",
+     "label": "Melanoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-89287843-4842-49b8-8520-13bd18b82de6",
+     "label": "Melanocytic naevi",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9815a56b-753b-4549-9dd6-9e647c7e2a83",
+     "label": "Basal cell carcinoma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6cb3f44e-c0da-4140-8bcc-a094964e6d57",
+     "label": "Psoriasis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-045f1b24-9f83-477b-923f-a0a4003097b8",
+     "label": "Slit-skin smear",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "blisters",
+   "label": "Blisters and peeling skin",
+   "links": [
+    {
+     "conceptId": "C-da0fb8c1-a0cf-4adf-9dee-3a0d34c6d16e",
+     "label": "Autoimmune blistering diseases",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc7b56d9-c7e9-41db-91c0-c309c21c8962",
+     "label": "Cutaneous drug reactions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ac029c61-2593-4449-8be7-cecd7bbd4c76",
+     "label": "Varicella zoster infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fa4ae732-e4f8-4e0b-892c-84c50fbd3fea",
+     "label": "Herpes simplex infection",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c6124cc5-939e-4ec1-a086-07a009bf821b",
+     "label": "Burns",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5b1f0245-44c3-4244-b90f-3a27629ca0b4",
+     "label": "Erythroderma",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ae462a0e-e3a5-4d12-beda-04d898c3a6cb",
+     "label": "Wound care",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "neonate-unwell",
+   "label": "Sick newborn",
+   "links": [
+    {
+     "conceptId": "C-e63b3ddc-ce0a-45b4-b311-cc19e5733d45",
+     "label": "Neonatal sepsis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-938ad5db-20b2-4e32-9694-4d33cbfc3b9e",
+     "label": "Neonatal respiratory distress",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-cf41d55d-3ef8-40cd-9f34-94021930d198",
+     "label": "Neonatal hypoglycaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-da1befd5-c384-40a1-be6b-f9c6e42f1e23",
+     "label": "Neonatal hypothermia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-df4ffc84-48d8-4992-9ed3-3302bf9c78c3",
+     "label": "Neonatal hyperbilirubinaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8a0b9a31-a7da-4fa0-84ef-fbe58706b622",
+     "label": "Birth asphyxia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-397d9308-f607-492e-ab82-e70112aba6f4",
+     "label": "Neonatal seizures",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1e337e9e-b5ff-4fe0-9d9f-87a3ca2ab62b",
+     "label": "Neonatal hypocalcaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-70dcb2f7-ff6c-47b0-aa31-2e14970d5342",
+     "label": "Neonatal surgical conditions",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d9b4b5a4-cc12-44bb-b504-413855b8fb0b",
+     "label": "Perinatal infections",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-63860775-db4c-4785-96e9-fa1e3a91e4da",
+     "label": "Newborn assessment",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-47b2af3c-1aab-4ad9-a4c4-71612f5c34a9",
+     "label": "Neonatal resuscitation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-e33fc745-dda4-4472-8f65-fe6ddf6432ca",
+     "label": "Kangaroo mother care",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-15547761-07b4-45a5-8c1c-0ffad386bfec",
+     "label": "Low birth weight",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "child-poor-growth",
+   "label": "Poor growth in a child",
+   "links": [
+    {
+     "conceptId": "C-e2dc4c05-6bf0-449b-b0ff-460eb3a9d672",
+     "label": "Severe acute malnutrition",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-a7a300f0-80f6-429b-b741-adce60640533",
+     "label": "Growth faltering",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-051af25a-42c4-4f9b-9bcb-ebb4a43a3c0c",
+     "label": "Short stature",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+     "label": "Chronic kidney disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4177d66a-abe2-438e-8141-51893c164d49",
+     "label": "Malabsorption syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-24c8a1fd-f627-4ba2-ae78-f7771fdb8f97",
+     "label": "Childhood tuberculosis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-b74384a2-9237-49c2-ac61-3be155aacb1d",
+     "label": "Congenital heart disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-bc65579e-a951-4c48-bcc0-cbe6cbb901ae",
+     "label": "Turner syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-79c17799-c571-4967-9df5-bf10744093cd",
+     "label": "Growth and development",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-7edcaa85-e0f9-4370-8d3b-a50ada347e6e",
+     "label": "Growth monitoring",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-119e6563-e123-4370-8dac-c0e4acdfac97",
+     "label": "Nutritional assessment",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "child-delay",
+   "label": "Delayed development",
+   "links": [
+    {
+     "conceptId": "C-b3c08dab-01b8-42c3-9a29-581488a11e0e",
+     "label": "Developmental delay",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-4c4dd879-d463-4a2d-92ec-4ec8e8d81864",
+     "label": "Cerebral palsy",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-82291e14-3448-418f-8838-e6b109945c40",
+     "label": "Autism spectrum disorder",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-92240784-4174-4eae-80ba-908a9c6a065b",
+     "label": "Intellectual disability",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ca2a24c4-9004-411b-9008-17dffd85707a",
+     "label": "Down syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1b3b5ebe-8c3b-419c-8bd2-7083ee76d2a9",
+     "label": "Hydrocephalus",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2e36aa21-4bdd-4644-836f-bf45e048023a",
+     "label": "Floppy infant",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-c7f60e8c-10e0-401e-804b-0403d783a2c7",
+     "label": "Developmental milestones",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "low-mood",
+   "label": "Low mood and anxiety",
+   "links": [
+    {
+     "conceptId": "C-7eac8e66-d06a-4371-bc58-a7c761430d9d",
+     "label": "Depression",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-355d06e9-82f7-4cce-8fd2-0c6fe2d2aff9",
+     "label": "Anxiety disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3b8bff0a-01de-4992-8d36-6aa6557fe861",
+     "label": "Bipolar disorder",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9fc6dab6-a807-4638-a0b5-5299935ad63a",
+     "label": "Stress-related disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f45674f5-0546-4f85-9cec-de79f3ddadd6",
+     "label": "Hypothyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6345395e-86f2-4328-b1af-55cbc71c535d",
+     "label": "Substance use disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-97c53124-736d-4462-a9e6-def521e1cb36",
+     "label": "Mental status examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-3f6e8874-d6ed-4366-b09c-453da2231f7e",
+     "label": "Psychiatric history taking",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-2621d874-6f3e-48eb-8134-d1e7671299fb",
+     "label": "Suicide risk assessment",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "psychosis-confusion",
+   "label": "Abnormal behaviour or confusion",
+   "links": [
+    {
+     "conceptId": "C-1aa39154-2c33-4727-9aeb-2280f7fa6fb8",
+     "label": "Schizophrenia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3b8bff0a-01de-4992-8d36-6aa6557fe861",
+     "label": "Bipolar disorder",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6c15b72e-9078-4a50-8103-8cd7da321578",
+     "label": "Delirium",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7932594e-e1b7-42ab-afb0-2c62a1f7b990",
+     "label": "Dementia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-92b73b00-2308-414d-97b3-fd8ac70e3cd6",
+     "label": "Delirium tremens",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-6345395e-86f2-4328-b1af-55cbc71c535d",
+     "label": "Substance use disorders",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-d51c9e5d-56b0-4a1a-ac51-455fca47bceb",
+     "label": "Encephalitis",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7fdca741-fd73-4517-922f-6d03de4c7423",
+     "label": "Hepatic failure",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-97c53124-736d-4462-a9e6-def521e1cb36",
+     "label": "Mental status examination",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-3f6e8874-d6ed-4366-b09c-453da2231f7e",
+     "label": "Psychiatric history taking",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9889af75-607d-480c-9c36-12e49f6a7205",
+     "label": "Mental Healthcare Act",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "poisoning",
+   "label": "Suspected poisoning or bite",
+   "links": [
+    {
+     "conceptId": "C-8dc435de-9076-43a4-8088-a99ade47edea",
+     "label": "Pesticide poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-88759b1f-7794-4c15-9f74-f93edb81f081",
+     "label": "Drug poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-e981e4a8-f583-4fc1-a808-f525b254df3f",
+     "label": "Corrosive poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f939afc2-5d09-43ea-8b50-2489c159b284",
+     "label": "Methanol poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-54d21267-13f4-47bb-9aa0-4038a4f292cc",
+     "label": "Carbon monoxide poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-f42d7efc-54dd-4dee-b592-c0746d7af247",
+     "label": "Snakebite",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2cfaedc1-57da-433e-b8f2-5933441f58c3",
+     "label": "Scorpion sting",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-fb4fdb84-4663-4244-96da-2570cf2c6595",
+     "label": "Plant poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-02a78a4d-09c2-4660-a67c-39182cd47ab4",
+     "label": "Hydrocarbon poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-8187563c-be23-4561-92c2-9dea40572607",
+     "label": "Heavy metal poisoning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-64d4948e-35f0-451f-bbd4-8d18bbac4383",
+     "label": "Poisoning",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-39f28b6e-b8b2-42f7-bddc-2465a2c391d2",
+     "label": "Toxicological screening",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-9ea6d9f5-6081-4273-a172-401044548b73",
+     "label": "Envenomation",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-e3b8dc75-9dc1-494c-a48e-e972f7be94d6",
+     "label": "Chelating agents",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "electrolyte",
+   "label": "Abnormal sodium, potassium or calcium",
+   "links": [
+    {
+     "conceptId": "C-ef0401f3-04a7-4bea-992b-dbb8c6caed2e",
+     "label": "Hyponatraemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+     "label": "Hyperkalaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-9966c484-fc7d-4a32-a1bf-df6e115061d2",
+     "label": "Hypokalaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5519f54b-6417-4b8c-b148-88d67c1c5bea",
+     "label": "Hypercalcaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-73c74a9d-378d-439a-b55a-c5684aad5761",
+     "label": "Hypoparathyroidism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-069f1d4b-b6f0-470c-89f1-214ceca655a8",
+     "label": "Adrenal insufficiency",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-0463c9cd-47e7-40f5-9e9b-4289d71f83a2",
+     "label": "Chronic kidney disease",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-1d5f7785-ac05-49b9-a2cf-ed5513db25bf",
+     "label": "Diuretics",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-20722c22-625a-4437-8ed7-f6360aa1210a",
+     "label": "Water and electrolyte balance",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-8585b710-fb44-4dcc-818d-e4c8f4c39d35",
+     "label": "Sodium and potassium disorders",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-c0ffa978-1ab2-4ef0-82e7-97ce978f79a9",
+     "label": "Electrocardiogram",
+     "role": "approach"
+    }
+   ]
+  },
+  {
+   "presentationId": "cardiac-arrest",
+   "label": "Collapse and cardiac arrest",
+   "links": [
+    {
+     "conceptId": "C-fffbcdbb-0734-4cc8-a5b5-c58ee538982f",
+     "label": "Cardiac arrhythmias",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-771388ed-1836-429a-aee7-99d52e9594d5",
+     "label": "Acute coronary syndrome",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-3bc32ba4-cb3f-45bd-98b9-8d99b9b7ba7d",
+     "label": "Hyperkalaemia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-feed7858-a94a-459f-9ba4-386f99db6802",
+     "label": "Hypoxia",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-7548bf71-830d-4b81-93ef-64923a4a69a7",
+     "label": "Embolism",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-ebf836f2-9336-47b4-869f-40ea6b0bdbaa",
+     "label": "Drowning",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-2886927c-6368-4a62-bee4-4fcdbc78e96b",
+     "label": "Electrical injuries",
+     "role": "cause"
+    },
+    {
+     "conceptId": "C-5e4feff5-7ba5-4dd9-89eb-0f1f8c48c5a8",
+     "label": "Basic life support",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-15805602-d17d-4221-a430-90f6903af241",
+     "label": "Advanced life support",
+     "role": "approach"
+    },
+    {
+     "conceptId": "C-442eba27-65c5-421c-8eea-41c12b2fc784",
+     "label": "Cardiopulmonary arrest",
+     "role": "approach"
+    }
+   ]
+  }
+ ]
+}

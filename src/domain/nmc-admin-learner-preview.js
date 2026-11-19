@@ -4,6 +4,7 @@ const MODES=new Set(['knowledge','performance-and-knowledge']);
 export function validatePreviewData(data){
  if(!data||data.contractId!==PREVIEW_CONTRACT||data.audience!=='admin-only'||data.learnerActivation!==false)throw new Error('preview_data_invalid');
  if(!Array.isArray(data.items)||!Array.isArray(data.subjects))throw new Error('preview_data_invalid');
+ if(data.concepts!==undefined&&(!data.concepts||typeof data.concepts!=='object'||Array.isArray(data.concepts)))throw new Error('preview_data_invalid');
  const ids=new Set();
  for(const i of data.items){
   if(typeof i.objectiveRevisionId!=='string'||!/^nmc-objrev:[0-9a-f]{16}$/.test(i.objectiveRevisionId)||ids.has(i.objectiveRevisionId))throw new Error('preview_data_invalid');
@@ -25,8 +26,12 @@ export function previewPage(data,{subject='',search=''}={}){
  const topics=[];const byKey=new Map();
  for(const i of items){
   const key=i.subjectId+'|'+(i.topicLabel||'');
-  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[]};byKey.set(key,t);topics.push(t);}
-  byKey.get(key).objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,pdfPage:i.pdfPage,mode:i.mode,task:i.task||null,assessability:i.assessability||null,
+  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[],concepts:[]};byKey.set(key,t);topics.push(t);}
+  const t=byKey.get(key),layer=i.conceptId&&data.concepts?.[i.conceptId];
+  // AI-draft concept layers (prerequisites, confusions, misconceptions, presentations), once per concept per topic.
+  if(layer&&!t.concepts.some(c=>c.conceptId===i.conceptId))t.concepts.push({conceptId:i.conceptId,label:i.conceptLabel||'',
+   after:layer.after||[],confusedWith:layer.confusedWith||[],misconceptions:layer.misconceptions||[],presentations:layer.presentations||[]});
+  t.objectives.push({objectiveRevisionId:i.objectiveRevisionId,code:i.code,conceptLabel:i.conceptLabel||null,pdfPage:i.pdfPage,mode:i.mode,task:i.task||null,assessability:i.assessability||null,
    reviewState:i.reviewState||null,reviewFindings:i.reviewFindings||[],prerequisiteCodes:i.prerequisiteCodes||[],objective:i.objective});
  }
  return {contractId:PREVIEW_CONTRACT,audience:'admin-only',learnerActivation:false,status:data.status,sourceUrl:data.sourceUrl,subjects:data.subjects,total:data.items.length,matched:items.length,topics};

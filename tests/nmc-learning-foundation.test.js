@@ -182,3 +182,37 @@ test('confusion pairs: known concepts, unordered pairs unique, no self pairs, AI
   d=>{d.pairs[0].discriminator='short';},d=>{d.status='faculty-reviewed';},d=>{d.pairs[0].conceptIdA='C-missing';}])
   {const d=structuredClone(doc);mutate(d);assert.throws(()=>validateConceptConfusions(d,ids));}
 });
+test('clinical presentations: known concepts, unique IDs, each has causes, AI-draft only',async()=>{
+ const {validateClinicalPresentations,presentationsForConcept}=await import('../src/domain/nmc-clinical-presentations.js');
+ const doc=JSON.parse(readFileSync(new URL('../data/nmc-clinical-presentations.json',import.meta.url)));
+ const ids=[...new Set(pack.objectives.map(r=>r.objective.conceptId))];
+ validateClinicalPresentations(doc,ids);
+ assert.equal(doc.presentations.length,66);
+ assert.equal(doc.clinicalApproval,false);assert.equal(doc.learnerActivation,false);
+ const jaundice=doc.presentations.find(p=>p.presentationId==='jaundice');
+ const hep=jaundice.links.find(l=>l.label==='Viral hepatitis');
+ assert.equal(hep.role,'cause');
+ assert.ok(presentationsForConcept(doc,hep.conceptId).some(p=>p.presentationId==='jaundice'));
+ const broken=structuredClone(doc);broken.presentations[0].links=broken.presentations[0].links.map(l=>({...l,role:'approach'}));
+ assert.throws(()=>validateClinicalPresentations(broken,ids),/clinical_presentations_invalid/);
+ const unknown=structuredClone(doc);unknown.presentations[0].links[0].conceptId='C-unknown';
+ assert.throws(()=>validateClinicalPresentations(unknown,ids),/clinical_presentations_invalid/);
+});
+test('misconceptions: known concepts, stable hashed IDs, bounded per concept, AI-draft only',async()=>{
+ const {validateConceptMisconceptions,MISCONCEPTION_KINDS}=await import('../src/domain/nmc-concept-misconceptions.js');
+ const {createHash}=await import('node:crypto');
+ const doc=JSON.parse(readFileSync(new URL('../data/nmc-concept-misconceptions.json',import.meta.url)));
+ const ids=[...new Set(pack.objectives.map(r=>r.objective.conceptId))];
+ validateConceptMisconceptions(doc,ids);
+ assert.equal(doc.misconceptions.length,244);
+ assert.equal(doc.clinicalApproval,false);assert.equal(doc.learnerActivation,false);
+ for(const m of doc.misconceptions){
+  assert.equal(m.misconceptionId,'mc:'+createHash('sha256').update(m.conceptId+'\n'+m.misconception).digest('hex').slice(0,16));
+  assert.ok(MISCONCEPTION_KINDS.includes(m.kind));
+ }
+ const four=structuredClone(doc);const base=four.misconceptions[0];
+ for(let i=0;i<3;i++)four.misconceptions.push({...base,misconceptionId:'mc:'+String(i).repeat(16)});
+ assert.throws(()=>validateConceptMisconceptions(four,ids),/concept_misconceptions_invalid/);
+ const kind=structuredClone(doc);kind.misconceptions[0].kind='other';
+ assert.throws(()=>validateConceptMisconceptions(kind,ids),/concept_misconceptions_invalid/);
+});

@@ -87,7 +87,7 @@ function resultView() {
 }
 
 function errorView() {
-  return `<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Account</a><div class="page-heading"><div><span class="eyebrow">OPTIONAL RETENTION CHECK</span><h1>Retention check unavailable.</h1><p>${escape(state.error || 'retention_probe_unavailable')}</p></div></div><section class="panel"><button class="secondary" data-action="reload">Retry</button> <a class="primary action-link" href="/">Study Now →</a></section></main>`;
+  return `<main id="main" class="account-page"><a class="text-button" href="/web/account.html">← Account</a><div class="page-heading"><div><span class="eyebrow">OPTIONAL RETENTION CHECK</span><h1>Retention check unavailable.</h1><p>It could not be loaded right now. Your study record is unaffected; try again shortly.</p><p class="muted"><small>Reference: ${escape(state.error || 'retention_probe_unavailable')}</small></p></div></div><section class="panel"><button class="secondary" data-action="reload">Retry</button> <a class="primary action-link" href="/">Study Now →</a></section></main>`;
 }
 
 function render() {
