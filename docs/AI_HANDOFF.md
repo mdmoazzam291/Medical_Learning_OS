@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T06:55Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T08:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -28,9 +28,9 @@ Checked: 2026-11-19T06:55Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 
 ## Active task — loading speed (2026-11-19)
-- Webkit CI limit fix merged as `10fb45e` (#487).
-- Branch `perf/preconnect-and-timing`: API preconnect on all pages + latency measurements (see STATUS 2026-11-19). Next: CI green, owner merges.
-- Then, only with owner approval: remove the per-request `/auth/v1/user` round-trip (parallelise auth, runtime access and route reads; local JWT verification if signing keys are asymmetric). Check the project's JWT signing-key type first. Deploy each edge function via Supabase MCP and re-measure with the same log queries.
+- Merged: #487 (webkit limit, `10fb45e`), #488 (API preconnect + measurements, `bab07a9`).
+- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. study-api is 125 KB plus 7 shared files; inline MCP deploys of that size are error-prone, so a CLI/CI deploy route needs an owner decision first.
+- Not started: local JWT verification (check signing-key type first).
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.

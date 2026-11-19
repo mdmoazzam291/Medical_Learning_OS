@@ -175,6 +175,18 @@ function mapReviewWriteError(error: any): never {
   fail(500, "review_write_failed");
 }
 
+function unverifiedTokenSubject(token: string): string | null {
+  try {
+    const part = String(token || "").split(".")[1] || "";
+    const normalized = part.replace(/-/g, "+").replace(/_/g, "/");
+    const payload = JSON.parse(atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, "=")));
+    const sub = typeof payload?.sub === "string" ? payload.sub : "";
+    return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sub) ? sub : null;
+  } catch {
+    return null;
+  }
+}
+
 Deno.serve(async (req: Request) => {
   try {
     const allowedCorsHeaders = enforceOrigin(req);
@@ -189,15 +201,31 @@ Deno.serve(async (req: Request) => {
       auth: { persistSession: false, autoRefreshToken: false },
       global: { headers: { Authorization: authorization } }
     });
-    const { data: authData, error: authError } = await userClient.auth.getUser(token);
-    if (authError || !authData.user?.id) fail(401, "unauthorized");
-    const reviewerId = authData.user.id;
-
     const admin = createClient(supabaseUrl, secretKey, {
       auth: { persistSession: false, autoRefreshToken: false }
     });
 
-    const runtimeAccess = await checkRuntimeAccess(admin, token, reviewerId);
+    // Start the auth check, the runtime-access check and (for /me) the admin-status read
+    // together. The unverified token subject is only used to start reads; nothing is
+    // returned or written unless getUser verifies the token and returns the same user id.
+    const claimedId = unverifiedTokenSubject(token);
+    const userPromise = userClient.auth.getUser(token);
+    const earlyRuntimeAccess = claimedId ? checkRuntimeAccess(admin, token, claimedId) : null;
+    const earlyAdminStatus = claimedId && req.method === "GET" && routePath(new URL(req.url)) === "/me"
+      // Promise.resolve starts the lazy query exactly once and caches its result.
+      ? Promise.resolve(admin.rpc("content_admin_status_v1", { p_user: claimedId }))
+      : null;
+    // Avoid unhandled-rejection noise if auth fails before this is awaited.
+    earlyAdminStatus?.catch(() => {});
+
+    const { data: authData, error: authError } = await userPromise;
+    if (authError || !authData.user?.id) fail(401, "unauthorized");
+    const reviewerId = authData.user.id;
+    const verifiedEarly = claimedId === reviewerId;
+
+    const runtimeAccess = verifiedEarly && earlyRuntimeAccess
+      ? await earlyRuntimeAccess
+      : await checkRuntimeAccess(admin, token, reviewerId);
     if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
     if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
 
@@ -215,9 +243,11 @@ Deno.serve(async (req: Request) => {
     const getAdminAccess = async () => {
       if (!adminAccessPromise) {
         adminAccessPromise = (async () => {
-          const { data, error } = await trustedRead("content_admin_status", async () =>
-            admin.rpc("content_admin_status_v1", { p_user: reviewerId })
-          );
+          let first = verifiedEarly ? earlyAdminStatus : null;
+          const { data, error } = await trustedRead("content_admin_status", async () => {
+            if (first) { const pending = first; first = null; return pending; }
+            return admin.rpc("content_admin_status_v1", { p_user: reviewerId });
+          });
           if (error) fail(500, "review_authz_unavailable");
           const payload = data && typeof data === "object" ? data as any : {};
           return {

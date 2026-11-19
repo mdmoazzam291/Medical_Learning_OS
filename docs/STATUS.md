@@ -9,6 +9,14 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — review-api: auth checks run in parallel (deployed v32)
+- `review-api` now starts `getUser`, `learner_runtime_access_v1` and (for `GET /me`) `content_admin_status_v1` at the same time, using the token's unverified `sub` only to start reads. Results are used only after `getUser` verifies the token and returns the same user id; otherwise the old sequential path runs. The early admin-status query is wrapped in `Promise.resolve` so the lazy Supabase query runs once.
+- Trade-off: a request with a forged or expired token now also triggers one cheap runtime-access read (and, for `/me`, one admin-status read) before being rejected with 401.
+- Deployed via Supabase MCP as review-api v32 at 2026-11-19 07:12 UTC (previous v31 matched `main` exactly). Deployed files verified byte-identical to the repo. Not yet verified with signed-in traffic: the workspace cannot reach the API, and no requests had arrived when checked. Rollback: redeploy `supabase/functions/review-api/` from `origin/main` before this branch.
+- Verified 2026-11-19 08:18 UTC with the owner's signed-in iPhone session: two `/me` calls returned 200; no 5xx since deploy. Logs show `/auth/v1/user`, `learner_runtime_access_v1` and `content_admin_status_v1` starting together (08:18:38.709–.714) and finishing in ~0.55 s total. Those two calls still took ~3.0 s because they were the first run of the new version: ~2.4 s passed before the function's first outbound call (one-time load after deploy; the reported `boot_time` was 32 ms). A warm `/me` timing is still to be measured.
+- Same visit, study-api v54 (unchanged, sequential): progress/questions/revision 1.9–2.1 s, with `getUser` ~0.59 s then runtime access ~1.0 s before route work. A warm study-api request in the same visit took 217 ms (getUser 21 ms, runtime access 51 ms), so first calls on new connections dominate.
+- Expected effect: `/me` drops from about three sequential round-trips (median ~0.5 s) to roughly the auth-server call alone. Re-measure with the STATUS 2026-11-19 log queries.
+
 ### 2026-11-19 — NMC foundation: presentations and misconceptions (ADR-139)
 - Admin learner preview now shows these layers per concept (builds on, confused with, misconceptions, presentations) in each topic.
 - Clinical presentation layer: 66 presentations → 517 concepts (759 links, cause/approach). Misconception library: 244 high-yield wrong beliefs with corrections and error kinds (15 guideline-sensitive). Both AI drafts, Admin-only data, no redeploy needed.
