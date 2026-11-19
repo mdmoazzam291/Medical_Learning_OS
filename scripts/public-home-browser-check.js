@@ -93,8 +93,12 @@ try {
         await page.locator('#signin-form input[name="password"]').fill('synthetic-password-123');
         await page.locator('#signin-form button').click();
         await page.getByRole('heading', { name: 'What should you study next?' }).waitFor();
-        await page.getByRole('link', { name: 'Open Study →', exact: true }).click();
-        await page.waitForURL(`${origin}/web/medical.html`);
+        // Nothing published in this fixture: Home must say so honestly and offer real next steps, not "up to date".
+        await page.getByRole('heading', { name: 'Questions and notes are being prepared.' }).waitFor();
+        assert.equal(await page.getByRole('link', { name: 'Explore the NMC curriculum →', exact: true }).getAttribute('href'), '/web/nmc-catalogue.html');
+        assert.equal(await page.getByRole('link', { name: 'Set exam goals', exact: true }).count(), 1);
+        assert.equal(await page.getByText('Your scheduled reviews are up to date.').count(), 0);
+        await page.goto(`${origin}/web/medical.html`);
         await page.locator('#study-entry-title').waitFor();
         assert.match(await page.locator('#medical-app').innerText(), /0|No|available/);
       }

@@ -33,6 +33,10 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Deploy token: scoped to this project (Edge Functions read-write, Project Settings read), expires about 17 Feb 2027; owner renews it.
 - Not started: local JWT verification (check signing-key type first); other functions (owner-api, content-library-api, learner-experiment-api, retention-probe-api) still sequential.
 
+## Completed — learner UX honesty pass (2026-11-19)
+- Branch `fix/learner-ux-honesty`: honest empty states, plain learner copy, compact phone Library header; catalogue source rights corrected in production (migration applied). See STATUS 2026-11-19.
+- Live-site access: allowed domains now include medretica.com, *.medretica.com, *.medicalos.workers.dev and the Supabase host. Never type learner passwords into production; audit signed-in screens via real data fed to a local copy, or via the owner's signed-in Chrome.
+
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
 - Cross-concept prerequisites: complete for all 19 subjects (1,600 links, 1,269 concepts; `data/nmc-concept-prerequisites.json`), one at a time via `ops/nmc/build-concept-prerequisites.js`. Not yet used by the app.
