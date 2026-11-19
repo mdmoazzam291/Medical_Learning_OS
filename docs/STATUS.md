@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — API preconnect; server latency measured
+- Pages now open the API connection early (`web/api-preconnect.js`, loaded right after `appearance-boot.js` on all 21 pages; one reviewed `supabase` coupling entry; test pins it to `cloudConfig.projectUrl`). Verified in Chromium on exam, account and privacy pages with no console errors.
+- Measured from existing production logs (last 24 h, no new learner data collected): learner function boot time averages about 35 ms (max about 220 ms), so cold starts are not the main cost. Every authenticated request first calls `/auth/v1/user` (median 398 ms, p90 823 ms), then `learner_runtime_access_v1` (median 116 ms, p90 578 ms), then its own query, all in sequence. Slowest routes: `review-api/me` (median 491 ms, p90 1,421 ms), `study-api/progress`, `/questions`, `/revision/due`, `/exam-simulator/readiness` (medians 570–680 ms, p90 about 1.5 s).
+- `learner_runtime_access_v1` already rejects deleted users, suspended users and inactive sessions from the database. Proposed next step (not done; auth-boundary change, needs owner approval): run the three checks in parallel, and verify the token signature locally instead of calling `/auth/v1/user` if the project uses asymmetric signing keys.
+
 ### 2026-11-19 — webkit CI time limit
 - Main run on `b319576` failed: webkit was cancelled at 15 minutes (check and browser passed). Cause: PR #483 added the accessibility audit to both browser jobs but raised only Chromium's limit. Webkit limit raised to 25 minutes on `fix/webkit-ci-timeout`.
 
