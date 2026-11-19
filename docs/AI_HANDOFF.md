@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T17:30Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -16,6 +16,12 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Source exceptions: printed codes are stored unchanged; resolutions live in `data/nmc-reference-overlay.json` (7 search aliases, 2 heading groups, 2 official replacements, 1 deletion). `validateFoundationDrafts(pack, catalogue, overlay)` requires the overlay and checks every exception binding against its overlay row. PS 2.1*: alias PS2.1 accepted for search only; the asterisk's meaning is unresolved.
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v29 (@28 Admin learner preview). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
+
+## Active task — NMC Admin learner preview: concept-wise browsing (2026-11-19, Claude)
+- Branch `feat/nmc-preview-concept-browse` (base `ad3c6e7`); see STATUS 2026-11-19. Changes: `src/domain/nmc-admin-learner-preview.js` (`view=concept`, `concept=<id>` filters), `web/nmc-admin-learner-preview.js`, `web/content-coverage.css`, tests.
+- Verified locally (tests, check, real-browser run at four sizes). Not yet: CI, merge, redeploy of nmc-admin-preview via the ADR-140 workflow, check with the owner's signed-in session.
+- Exact next action: open PR → wait for Workers Builds, check, browser, webkit → owner merges → run `deploy-supabase-function.yml` for `nmc-admin-preview` → owner opens Admin → learner preview → Browse by: Concept.
+- Left in place on purpose: 4 unaccepted private concept drafts (see STATUS); Brown-Séquard learner concept.
 
 ## Completed task — learner UX follow-ups (2026-11-19)
 - PR [#486](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/486) was squash-merged into `main` as `e4f6ce7c37fefab3492630196139f68b3e4631d6` on 2026-11-18 18:43 UTC.
@@ -49,7 +55,7 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Live-site access: allowed domains now include medretica.com, *.medretica.com, *.medicalos.workers.dev and the Supabase host. Never type learner passwords into production; audit signed-in screens via real data fed to a local copy, or via the owner's signed-in Chrome.
 
 ## Known gaps
-- Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
+- Confusion pairs: 170 (`data/nmc-concept-confusions.json`), AI-drafted.
 - Cross-concept prerequisites: complete for all 19 subjects (1,600 links, 1,269 concepts; `data/nmc-concept-prerequisites.json`), one at a time via `ops/nmc/build-concept-prerequisites.js`. Not yet used by the app.
 - After an owner identity edit, linked objectives show "changed" until re-pinned with `ops/nmc/repin-identity-digests.js`.
 - Source-exception batch metadata says `subjectId: surgery` although it spans nine subjects (accepted file is checksum-pinned; reports should use `subjectIds`).
