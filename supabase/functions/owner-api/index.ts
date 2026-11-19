@@ -12,6 +12,8 @@ import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-aud
 import { buildSourceWatchReport, validateSourceSighting } from "../../../src/domain/medical-source-surveillance.js";
 import { adminAssuranceForToken, strictModeFromEnv } from "../../../src/domain/admin-assurance.js";
 import { auditLimit, auditTimeline, billingSummary } from "../../../src/domain/owner-records.js";
+import { accessReview } from "../../../src/domain/access-protection.js";
+import { extractWatermarks, watermarkCode } from "../../../src/domain/content-watermark.js";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -170,7 +172,10 @@ function mapOwnerWriteError(error: any): never {
     "owner_auth_action_invalid",
     "owner_action_reason_invalid",
     "owner_learner_not_found",
-    "owner_beta_expiry_invalid"
+    "owner_beta_expiry_invalid",
+    "owner_throttle_action_invalid",
+    "owner_throttle_duration_invalid",
+    "owner_throttle_factor_invalid"
   ]) {
     if (message.includes(code)) fail(code === "owner_learner_not_found" ? 404 : code === "content_admin_required" || code === "owner_target_protected" ? 403 : 400, code);
   }
@@ -229,6 +234,35 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, auditTimeline({ learnerEvents: learnerEvents.data, featureEvents: featureEvents.data, limit }));
     }
 
+    if (req.method === "GET" && path === "/access-signals") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("owner_access_signals_v1");
+      if (error || !data || (data as any).contractId !== "owner-access-signals-v1") fail(503, "owner_access_signals_unavailable");
+      return response(req, 200, data);
+    }
+
+    if (req.method === "POST" && path === "/trace-watermark") {
+      if (url.search) fail(400, "query_not_supported");
+      const input = await jsonBody(req);
+      if (Object.keys(input).some((key) => key !== "text")) fail(400, "invalid_fields");
+      if (typeof input.text !== "string" || input.text.length < 1 || input.text.length > 6000) fail(400, "trace_text_invalid");
+      const codes = extractWatermarks(input.text);
+      if (!codes.length) return response(req, 200, { contractId: "owner-watermark-trace-v1", codesFound: [], matches: [], note: "no_mark_found_proves_nothing" });
+      const salt = Deno.env.get("MLOS_WATERMARK_SALT") || "medretica-watermark-v1";
+      const matches: Array<{ code: string; learnerId: string; email: string | null }> = [];
+      for (let page = 1; page <= 20; page += 1) {
+        const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 1000 });
+        if (error) fail(503, "owner_trace_users_unavailable");
+        const users = data?.users ?? [];
+        for (const user of users) {
+          const code = await watermarkCode(user.id, salt);
+          if (codes.includes(code)) matches.push({ code, learnerId: user.id, email: user.email ?? null });
+        }
+        if (users.length < 1000) break;
+      }
+      return response(req, 200, { contractId: "owner-watermark-trace-v1", codesFound: codes, matches });
+    }
+
     if (req.method === "GET" && path === "/learner-funnel") {
       if (url.search) fail(400, "query_not_supported");
       const { data, error } = await admin.rpc("owner_learner_funnel_v1");
@@ -256,7 +290,7 @@ Deno.serve(async (req: Request) => {
 
     if (req.method === "GET" && path === "/dashboard") {
       if (url.search) fail(400, "query_not_supported");
-      const [dashboardResult, storage, accessSummaryResult, snapshotsResult, edge, r2Backup, r2Audit, restoreDrill] = await Promise.all([
+      const [dashboardResult, storage, accessSummaryResult, snapshotsResult, edge, r2Backup, r2Audit, restoreDrill, signalsResult] = await Promise.all([
         admin.rpc("owner_admin_dashboard_v1"),
         admin.storage.listBuckets(),
         admin.rpc("owner_admin_access_summary_v1"),
@@ -264,8 +298,10 @@ Deno.serve(async (req: Request) => {
         cloudflareHealth(),
         workflowHealth("supabase-r2-backup.yml"),
         workflowHealth("r2-storage-audit.yml"),
-        workflowHealth("supabase-r2-restore-drill.yml")
+        workflowHealth("supabase-r2-restore-drill.yml"),
+        admin.rpc("owner_access_signals_v1")
       ]);
+      const signalReview = signalsResult.error ? null : accessReview(signalsResult.data);
       if (dashboardResult.error || !dashboardResult.data || typeof dashboardResult.data !== "object") fail(500, "owner_dashboard_unavailable");
       if (accessSummaryResult.error) fail(500, "owner_access_summary_unavailable");
       const buckets = storage.error ? null : (storage.data ?? []).map((bucket: any) => ({
@@ -289,6 +325,7 @@ Deno.serve(async (req: Request) => {
         ...(dashboardResult.data as Record<string, unknown>),
         owner: { userId: authData.user.id, email: authData.user.email ?? null, singleton: true },
         learnerAdministration: accessSummaryResult.data,
+        accessSignals: signalReview ? { needsReview: signalReview.needsReview, watching: signalReview.watching } : null,
         infrastructure
       });
     }
@@ -561,7 +598,7 @@ Deno.serve(async (req: Request) => {
     if (req.method === "POST" && path === "/learner-actions") {
       if (url.search) fail(400, "query_not_supported");
       const input = await jsonBody(req);
-      const allowedFields = new Set(["learnerId","action","reason","confirmation","requestId","betaAccessUntil","suspensionHours"]);
+      const allowedFields = new Set(["learnerId","action","reason","confirmation","requestId","betaAccessUntil","suspensionHours","throttleHours","throttleFactor"]);
       if (Object.keys(input).some((key) => !allowedFields.has(key))) fail(400, "invalid_fields");
       const learnerId = uuidValue(input.learnerId, "owner_learner_id_invalid");
       const requestId = uuidValue(input.requestId, "owner_request_id_invalid");
@@ -571,11 +608,27 @@ Deno.serve(async (req: Request) => {
         grant_beta: "GRANT BETA",
         revoke_beta: "REVOKE BETA",
         suspend: "SUSPEND",
-        restore: "RESTORE"
+        restore: "RESTORE",
+        throttle: "THROTTLE",
+        unthrottle: "UNTHROTTLE"
       };
       if (!(action in expectedConfirmations)) fail(400, "owner_action_invalid");
       if (String(input.confirmation || "") !== expectedConfirmations[action]) fail(400, "owner_action_confirmation_required");
       if (learnerId === authData.user.id) fail(403, "owner_target_protected");
+
+      if (action === "throttle" || action === "unthrottle") {
+        const hours = action === "throttle" ? Number(input.throttleHours) : null;
+        const factor = action === "throttle" ? Number(input.throttleFactor) : null;
+        if (action === "throttle" && (!Number.isSafeInteger(hours) || (hours as number) < 1 || (hours as number) > 2160)) fail(400, "owner_throttle_duration_invalid");
+        if (action === "throttle" && (!Number.isSafeInteger(factor) || (factor as number) < 2 || (factor as number) > 100)) fail(400, "owner_throttle_factor_invalid");
+        if (action === "unthrottle" && (input.throttleHours != null || input.throttleFactor != null)) fail(400, "owner_throttle_duration_invalid");
+        const { data, error } = await admin.rpc("owner_admin_apply_throttle_v1", {
+          p_actor: authData.user.id, p_learner: learnerId, p_action: action,
+          p_hours: hours, p_factor: factor, p_reason: reason, p_request_id: requestId
+        });
+        if (error) mapOwnerWriteError(error);
+        return response(req, 200, data);
+      }
 
       if (action === "grant_beta" || action === "revoke_beta") {
         let betaUntil: string | null = null;

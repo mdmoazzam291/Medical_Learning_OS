@@ -125,3 +125,55 @@ test('learner funnel panel shows shares and fails closed', async () => {
   assert.match(html, /Answered at least one question<\/span><strong>4 \(50%\)/);
   assert.match(html, /not mastery/);
 });
+
+test('quota buckets cover question and library reads only', async () => {
+  const { quotaBucketForRoute } = await import('../src/domain/access-protection.js');
+  assert.equal(quotaBucketForRoute('POST', '/sessions'), 'question');
+  assert.equal(quotaBucketForRoute('POST', '/sessions/abc-1/answer'), 'question');
+  assert.equal(quotaBucketForRoute('GET', '/attempts/x/review'), 'question');
+  assert.equal(quotaBucketForRoute('GET', '/vault/concepts/c1'), 'library');
+  assert.equal(quotaBucketForRoute('GET', '/progress'), null);
+  assert.equal(quotaBucketForRoute('GET', '/export'), null, 'a learner exporting their own data is never limited');
+  assert.equal(quotaBucketForRoute('OPTIONS', '/sessions'), null);
+});
+
+test('access signals: strong flag needs review, one weak flag is watch, normal study is none', async () => {
+  const { evaluateAccessSignals, accessReview } = await import('../src/domain/access-protection.js');
+  assert.equal(evaluateAccessSignals({ attempts7d: 200, fastAttempts7d: 10, maxAttemptsInDay: 120, maxActiveHoursInDay: 6, distinctIps: 2 }).level, 'none');
+  assert.equal(evaluateAccessSignals({ attempts7d: 100, fastAttempts7d: 80 }).level, 'review');
+  assert.equal(evaluateAccessSignals({ maxActiveHoursInDay: 20 }).level, 'watch');
+  assert.equal(evaluateAccessSignals({ maxActiveHoursInDay: 20, distinctIps: 9 }).level, 'review');
+  assert.deepEqual(evaluateAccessSignals({ automationUserAgents: 1 }).flags.map(f => f.code), ['automation_agent']);
+  const review = accessReview({ contractId: 'owner-access-signals-v1', learners: [{ learnerId: 'a' }, { learnerId: 'b', libraryReadsMaxDay: 1800 }, { learnerId: 'c', libraryReadsMaxDay: 1800, throttledUntil: '2026-12-01T00:00:00Z' }] });
+  assert.equal(review.needsReview, 1, 'already-throttled learners are not counted again');
+  assert.equal(review.rows[0].level, 'review');
+  assert.equal(accessReview(null), null);
+});
+
+test('watermark round-trips, is invisible, idempotent, and survives surrounding text', async () => {
+  const { watermarkCode, embedWatermark, extractWatermarks, stripWatermarks } = await import('../src/domain/content-watermark.js');
+  const code = await watermarkCode('11111111-1111-4111-8111-111111111111', 'salt');
+  assert.match(code, /^[0-9a-f]{6}$/);
+  assert.notEqual(code, await watermarkCode('22222222-2222-4222-8222-222222222222', 'salt'));
+  const stem = 'A 45-year-old man presents with chest pain.';
+  const marked = embedWatermark(stem, code);
+  assert.equal(stripWatermarks(marked), stem);
+  assert.equal(embedWatermark(marked, code), marked);
+  assert.deepEqual(extractWatermarks('Leaked: ' + marked + ' (copied)'), [code]);
+  assert.deepEqual(extractWatermarks(stem), []);
+  assert.equal(stripWatermarks(embedWatermark('Nospace', code)), 'Nospace');
+});
+
+test('throttle is audited, owner-only and reversible; quota fails open in study-api', async () => {
+  const sql = await readFile(new URL('../supabase/migrations/20261120090000_learner_access_protection.sql', import.meta.url), 'utf8');
+  assert.match(sql, /'throttle','unthrottle'/);
+  assert.match(sql, /insert into public\.owner_admin_audit_events/);
+  assert.match(sql, /on delete cascade/);
+  assert.match(sql, /grant execute on function public\.learner_request_quota_v1\(uuid,text\) to service_role/);
+  const api = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
+  assert.ok(api.indexOf('learner_request_quota_v1') > api.indexOf('auth.getUser(token)'), 'quota runs only after the token is verified');
+  assert.match(api, /learner_quota_unavailable/);
+  assert.match(api, /"Retry-After"/);
+  const owner = await readFile(new URL('../supabase/functions/owner-api/index.ts', import.meta.url), 'utf8');
+  assert.match(owner, /throttle: "THROTTLE"/);
+});

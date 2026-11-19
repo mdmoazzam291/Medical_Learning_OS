@@ -19,6 +19,8 @@ export const publicFiles = Object.freeze([
   'src/domain/admin-action-inbox.js',
   'src/domain/admin-assurance.js',
   'src/domain/owner-records.js',
+  'src/domain/access-protection.js',
+  'src/domain/content-watermark.js',
   'src/domain/catalog-integrity-audit.js',
   'src/domain/operational-recovery.js',
   'src/domain/subject-index.js',

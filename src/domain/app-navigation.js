@@ -70,7 +70,8 @@ const SECTIONS = {
     item('learners', 'Learners & Access', 'user', '/web/admin.html#owner-users', [
       item('accounts', 'Learner Accounts', 'user', '/web/admin.html#owner-users'),
       item('authority', 'Reviewer Authority', 'settings', '/web/admin.html#owner-review-authority'),
-      item('audit', 'Admin Audit Log', 'cases', '/web/admin.html#owner-audit')
+      item('audit', 'Admin Audit Log', 'cases', '/web/admin.html#owner-audit'),
+      item('signals', 'Access Signals', 'cases', '/web/admin.html#owner-access-signals')
     ]),
     item('research', 'Learning & Research', 'graph', '/web/admin.html#research-gate', [
       item('learning', 'Observed Learning', 'graph', '/web/admin.html#owner-learning'),
@@ -153,7 +154,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
   if (pathname.endsWith('/admin.html')) {
-    const ownerAnchors = { '#owner-concept-drafts': 'content', '#owner-exam-syllabus': 'content', '#owner-foundation': 'content', '#owner-coverage': 'content', '#owner-users': 'learners', '#owner-review-authority': 'learners', '#owner-learning': 'research', '#research-gate': 'research', '#owner-ai': 'operations', '#owner-content': 'content', '#owner-infrastructure': 'operations', '#owner-infrastructure-alerts': 'operations', '#owner-features': 'operations', '#owner-integrity': 'content', '#owner-source-watch': 'content', '#owner-audit': 'learners', '#owner-payments': 'operations', '#admin-security': 'operations' };
+    const ownerAnchors = { '#owner-concept-drafts': 'content', '#owner-exam-syllabus': 'content', '#owner-foundation': 'content', '#owner-coverage': 'content', '#owner-users': 'learners', '#owner-review-authority': 'learners', '#owner-learning': 'research', '#research-gate': 'research', '#owner-ai': 'operations', '#owner-content': 'content', '#owner-infrastructure': 'operations', '#owner-infrastructure-alerts': 'operations', '#owner-features': 'operations', '#owner-integrity': 'content', '#owner-source-watch': 'content', '#owner-audit': 'learners', '#owner-access-signals': 'learners', '#owner-payments': 'operations', '#admin-security': 'operations' };
     return { master: 'admin', section: ownerAnchors[hash] || 'overview' };
   }
   if (pathname.endsWith('/content-import.html') || pathname.endsWith('/review.html')) return { master: 'admin', section: 'content' };

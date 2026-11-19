@@ -25,6 +25,12 @@ export function buildAdminActionInbox(dashboard, { alerts = null } = {}) {
       count: null
     });
   }
+  const flaggedLearners = validCount(dashboard?.accessSignals?.needsReview);
+  if (flaggedLearners !== null && flaggedLearners > 0) actions.push({
+    kind: 'access-signals', priority: 1, label: 'Learners flagged for unusual access',
+    detail: 'Behaviour evidence only (speed, volume, automation). Review before throttling or suspending; flags are not proof.',
+    href: '/web/admin.html#owner-access-signals', count: flaggedLearners
+  });
   if (openReports !== null && openReports > 0) actions.push({
     kind: 'learner-report', priority: 1, label: 'Learner-reported content issues',
     detail: 'Review exact reported versions; learner reports do not establish medical truth.',

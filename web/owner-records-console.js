@@ -6,6 +6,7 @@ import { createCloudOwner } from '/src/adapters/cloud-owner.js';
 import { cloudConfig } from '/web/cloud-config.js';
 import { errorMonitor } from '/web/monitoring.js';
 import { formatInrMinor } from '/src/domain/owner-records.js';
+import { accessReview } from '/src/domain/access-protection.js';
 
 const app = document.querySelector('#admin-app');
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -90,6 +91,32 @@ export function funnelMarkup(f) {
     '<p class="muted">Admin accounts excluded. These are activity counts, not mastery or memory retention. Percentages under ~30 learners are noisy.</p>';
 }
 
+const LEVEL = { review: 'NEEDS REVIEW', watch: 'WATCH', none: 'NO FLAGS' };
+
+export function accessSignalsMarkup(payload) {
+  const review = accessReview(payload);
+  if (!review) return '<p class="muted" role="status">Access signals unavailable. This is not evidence that nobody is scraping. Reload to retry.</p>';
+  const limits = review.limits
+    ? '<p class="muted">Automatic limits per learner: questions ' + escape(review.limits.question?.perMinute) + '/min and ' + escape(review.limits.question?.perDay) + '/day; library ' + escape(review.limits.library?.perMinute) + '/min and ' + escape(review.limits.library?.perDay) + '/day. A throttle divides these.</p>'
+    : '';
+  const flagged = review.rows.filter(row => row.level !== 'none' || row.throttledUntil || row.suspendedUntil);
+  const rows = flagged.length
+    ? '<ul class="owner-action-inbox-list">' + flagged.map(row => '<li class="owner-action-row"><div><strong>' + escape(row.email || shortId(row.learnerId)) + '</strong> <span class="badge">' + escape(LEVEL[row.level]) + '</span>' +
+        (row.suspendedUntil ? ' <span class="badge">SUSPENDED</span>' : '') + (row.throttledUntil ? ' <span class="badge">THROTTLED 1/' + escape(row.throttleFactor) + ' until ' + escape(dateTime(row.throttledUntil)) + '</span>' : '') +
+        (row.flags.length ? '<ul>' + row.flags.map(flag => '<li>' + escape(flag.label) + ' <small>(' + escape(flag.strength) + ') ' + escape(flag.evidence) + '</small></li>').join('') + '</ul>' : '') +
+        '</div><a class="secondary action-link" href="#owner-users" data-owner-learner-id="' + escape(row.learnerId) + '">Manage learner →</a></li>').join('') + '</ul>'
+    : '<p class="muted">No learner shows unusual access in the last ' + escape(review.windowDays) + ' days. Signals cover behaviour inside Medretica only; they cannot see an agent that behaves like a person.</p>';
+  return limits + rows + '<p class="muted">' + escape(review.rows.length) + ' learner(s) with any activity checked. Flags are evidence for your decision, never automatic action. Suggested response: watch → throttle → suspend.</p>';
+}
+
+export function traceMarkup(result) {
+  if (!result || result.contractId !== 'owner-watermark-trace-v1') return '<p class="muted" role="status">Trace failed. Nothing was concluded.</p>';
+  if (!result.codesFound?.length) return '<p>No trace mark found in that text. This proves nothing: retyped, screenshotted or cleaned text loses the mark.</p>';
+  if (!result.matches?.length) return '<p>Mark found (' + escape(result.codesFound.join(', ')) + ') but it matches no current account.</p>';
+  return '<ul>' + result.matches.map(m => '<li>Matches <strong>' + escape(m.email || m.learnerId) + '</strong> (' + escape(shortId(m.learnerId)) + ') · <a href="#owner-users" data-owner-learner-id="' + escape(m.learnerId) + '">Manage learner →</a></li>').join('') +
+    '</ul><p class="muted">The mark shows which account the text was served to, not who shared it. Text from questions served before 20 Nov 2026 has no mark.</p>';
+}
+
 function panel(id, view, eyebrow, title, description, bodyId) {
   const section = document.createElement('section');
   section.id = id; section.className = 'panel'; section.dataset.adminPanel = view; section.hidden = true;
@@ -102,26 +129,43 @@ async function mount() {
   if (!container || app.querySelector('#owner-audit')) return;
   const audit = panel('owner-audit', 'audit', 'GOVERNANCE', 'Admin audit log', 'Who changed learner access or feature gates, when, and why.', 'owner-audit-state');
   const payments = panel('owner-payments', 'payments', 'BILLING', 'Billing ledger', 'Subscriptions, verified captures, refunds and webhooks that need attention.', 'owner-payments-state');
-  container.append(audit, payments);
+  const signals = panel('owner-access-signals', 'signals', 'LEARNERS · ACCESS PROTECTION', 'Access signals', 'Learners whose behaviour looks automated or bulk-copying, with the evidence. Throttle or suspend from Manage learner.', 'owner-access-signals-state');
+  signals.insertAdjacentHTML('beforeend', '<h3>Trace leaked question text</h3><form id="owner-trace-form" autocomplete="off"><label>Paste the leaked question text<textarea name="text" maxlength="6000" required></textarea></label><button class="secondary" type="submit">Find source account</button></form><div id="owner-trace-result" aria-live="polite"></div>');
+  container.append(audit, payments, signals);
   window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
   const learning = app.querySelector('#owner-learning');
   const journey = document.createElement('div');
   journey.className = 'owner-status-block'; journey.id = 'owner-learner-journey';
   journey.innerHTML = '<h3>Learner journey</h3><div id="owner-learner-journey-state" aria-live="polite"><p class="muted">Loading…</p></div>';
   learning?.append(journey);
-  const [auditResult, billingResult, funnelResult] = await Promise.allSettled([client().auditEvents({ limit: 50 }), client().billingSummary(), client().learnerFunnel()]);
+  const [auditResult, billingResult, funnelResult, signalsResult] = await Promise.allSettled([client().auditEvents({ limit: 50 }), client().billingSummary(), client().learnerFunnel(), client().accessSignals()]);
+  signals.querySelector('#owner-access-signals-state').innerHTML = accessSignalsMarkup(signalsResult.status === 'fulfilled' ? signalsResult.value : null);
   if (app.querySelector('#owner-console') !== container) return;
   audit.querySelector('#owner-audit-state').innerHTML = auditMarkup(auditResult.status === 'fulfilled' ? auditResult.value : null);
   payments.querySelector('#owner-payments-state').innerHTML = billingMarkup(billingResult.status === 'fulfilled' ? billingResult.value : null);
   const journeyState = journey.querySelector('#owner-learner-journey-state');
   if (journeyState) journeyState.innerHTML = funnelMarkup(funnelResult.status === 'fulfilled' ? funnelResult.value : null);
-  for (const [result, operation] of [[auditResult, 'load_audit_events'], [billingResult, 'load_billing_summary'], [funnelResult, 'load_learner_funnel']]) {
+  for (const [result, operation] of [[auditResult, 'load_audit_events'], [billingResult, 'load_billing_summary'], [funnelResult, 'load_learner_funnel'], [signalsResult, 'load_access_signals']]) {
     if (result.status === 'rejected' && ![401, 403].includes(Number(result.reason?.status || 0))) {
       errorMonitor.capture(result.reason, { component: 'owner-records-console', operation, code: result.reason?.code || null });
     }
   }
   window.dispatchEvent(new CustomEvent('mlos:admin-ready', { detail: { layoutChanged: true } }));
 }
+
+app?.addEventListener('submit', event => {
+  const form = event.target.closest('#owner-trace-form');
+  if (!form) return;
+  event.preventDefault();
+  const out = app.querySelector('#owner-trace-result');
+  const button = form.querySelector('button');
+  if (button) button.disabled = true;
+  (async () => {
+    try { out.innerHTML = traceMarkup(await client().traceWatermark(String(new FormData(form).get('text') || ''))); }
+    catch (error) { out.innerHTML = traceMarkup(null); if (Number(error?.status || 0) >= 500) errorMonitor.capture(error, { component: 'owner-records-console', operation: 'trace_watermark' }); }
+    finally { if (button) button.disabled = false; }
+  })();
+});
 
 if (app) {
   new MutationObserver(() => queueMicrotask(mount)).observe(app, { childList: true, subtree: true });

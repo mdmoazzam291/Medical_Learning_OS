@@ -9,7 +9,7 @@ export const ADMIN_VIEWS = Object.freeze([
   ['source-watch', 'Source Change Watch', 'owner-source-watch'], ['ai', 'AI Usage', 'owner-ai'],
   ['health', 'Provider Health', 'owner-infrastructure'], ['alerts', 'Infrastructure Alerts', 'owner-infrastructure-alerts'],
   ['features', 'Feature Gates', 'owner-features'], ['research', 'Research Readiness', 'research-gate'],
-  ['audit', 'Admin Audit Log', 'owner-audit'], ['payments', 'Payments', 'owner-payments'], ['security', 'Admin Security', 'admin-security']
+  ['audit', 'Admin Audit Log', 'owner-audit'], ['signals', 'Access Signals', 'owner-access-signals'], ['payments', 'Payments', 'owner-payments'], ['security', 'Admin Security', 'admin-security']
 ].map(([id, label, anchor]) => Object.freeze({ id, label, anchor })));
 export function adminViewFor(hash = '') {
   if (/^#m11c-pair-[1-9]\d*$/.test(hash)) return ADMIN_VIEWS.find(view => view.id === 'research');

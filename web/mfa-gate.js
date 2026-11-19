@@ -1,4 +1,5 @@
-// Sign-in code prompt for accounts with two-factor turned on (ADR-142).
+// Sign-in code prompt for accounts with two-factor turned on (ADR-142),
+// and the fair-use limit notice (ADR-143).
 // Loaded on every signed-in app page. The server is the real gate:
 // learner_runtime_access_v1 makes every edge function answer 401 mfa_required for
 // an aal1 session of an account with a verified factor. This module watches for
@@ -57,6 +58,27 @@ async function prompt() {
   });
 }
 
+// Fair-use limit notice (ADR-143). Plain words, the wait time, and a way to appeal.
+export function rateLimitMessage(body) {
+  const seconds = Math.max(1, Number(body?.retryAfterSeconds) || 60);
+  const wait = seconds >= 3600 ? 'tomorrow' : seconds >= 120 ? 'in about ' + Math.ceil(seconds / 60) + ' minutes' : 'in a minute';
+  return body?.throttled
+    ? 'Your account is on a reduced request limit. You can continue ' + wait + '. If you think this is a mistake, write to us from the Contact page.'
+    : 'You are going faster than our fair-use limit. You can continue ' + wait + '.';
+}
+let noticeShown = false;
+function rateLimitNotice(body) {
+  if (noticeShown || typeof document === 'undefined') return;
+  noticeShown = true;
+  const note = document.createElement('div');
+  note.className = 'rate-limit-notice';
+  note.setAttribute('role', 'status');
+  note.innerHTML = '<p></p><button class="text-button" type="button">Dismiss</button>';
+  note.querySelector('p').textContent = rateLimitMessage(body);
+  note.querySelector('button').addEventListener('click', () => { note.remove(); noticeShown = false; });
+  document.body.append(note);
+}
+
 if (typeof globalThis.fetch === 'function' && !globalThis.__mlosMfaGate) {
   globalThis.__mlosMfaGate = true;
   const original = globalThis.fetch.bind(globalThis);
@@ -64,6 +86,9 @@ if (typeof globalThis.fetch === 'function' && !globalThis.__mlosMfaGate) {
     const response = await original(input, init);
     const url = typeof input === 'string' ? input : input?.url;
     if (response.status === 401) isMfaRequiredResponse(response, url).then(required => { if (required) prompt(); });
+    if (response.status === 429 && /\/functions\/v1\//.test(String(url || ''))) {
+      response.clone().json().then(body => { if (body?.error === 'rate_limited') rateLimitNotice(body); }).catch(() => {});
+    }
     return response;
   };
 }
