@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — study-api: auth and runtime-access checks run in parallel (not deployed)
+- Same pattern as review-api v32: `learner_runtime_access_v1` starts alongside `getUser` using the token's unverified `sub`; its result is used only if `getUser` returns the same user id. Route reads are unchanged.
+- Live study-api v54 was checked file-by-file against `main` before this change (identical, including `data/preparation-curriculum.js` and `src/domain/preparation-pathways.js`).
+- To deploy after merge: run the ADR-140 workflow for `study-api`, then check `function_edge_logs` for 5xx and compare progress/questions/revision timings with STATUS 2026-11-19.
+
 ### 2026-11-19 — review-api: auth checks run in parallel (deployed v32)
 - `review-api` now starts `getUser`, `learner_runtime_access_v1` and (for `GET /me`) `content_admin_status_v1` at the same time, using the token's unverified `sub` only to start reads. Results are used only after `getUser` verifies the token and returns the same user id; otherwise the old sequential path runs. The early admin-status query is wrapped in `Promise.resolve` so the lazy Supabase query runs once.
 - Trade-off: a request with a forged or expired token now also triggers one cheap runtime-access read (and, for `/me`, one admin-status read) before being rejected with 401.

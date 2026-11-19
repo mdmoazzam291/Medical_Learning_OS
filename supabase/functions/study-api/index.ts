@@ -273,6 +273,18 @@ function summarize(events: any[]) {
   };
 }
 
+function unverifiedTokenSubject(token: string): string | null {
+  try {
+    const part = String(token || "").split(".")[1] || "";
+    const normalized = part.replace(/-/g, "+").replace(/_/g, "/");
+    const payload = JSON.parse(atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, "=")));
+    const sub = typeof payload?.sub === "string" ? payload.sub : "";
+    return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sub) ? sub : null;
+  } catch {
+    return null;
+  }
+}
+
 Deno.serve(async (req: Request) => {
   try {
     const allowedCorsHeaders = enforceOrigin(req);
@@ -287,16 +299,23 @@ Deno.serve(async (req: Request) => {
       auth: { persistSession: false, autoRefreshToken: false },
       global: { headers: { Authorization: authorization } }
     });
+    const admin = createClient(supabaseUrl, secretKey, {
+      auth: { persistSession: false, autoRefreshToken: false }
+    });
+
+    // Run the auth check and the runtime-access check together. The unverified token
+    // subject only starts the read; its result is used only if getUser verifies the
+    // token and returns the same user id.
+    const claimedId = unverifiedTokenSubject(token);
+    const earlyRuntimeAccess = claimedId ? checkRuntimeAccess(admin, token, claimedId) : null;
     const { data: authData, error: authError } = await userClient.auth.getUser(token);
     if (authError || !authData.user?.id) fail(401, "unauthorized");
     const learnerId = authData.user.id;
     const internalExamTester = authData.user.app_metadata?.medical_learning_os_internal_tester === true;
 
-    const admin = createClient(supabaseUrl, secretKey, {
-      auth: { persistSession: false, autoRefreshToken: false }
-    });
-
-    const runtimeAccess = await checkRuntimeAccess(admin, token, learnerId);
+    const runtimeAccess = claimedId === learnerId && earlyRuntimeAccess
+      ? await earlyRuntimeAccess
+      : await checkRuntimeAccess(admin, token, learnerId);
     if (runtimeAccess?.reason === "account_suspended") fail(403, "account_suspended");
     if (runtimeAccess?.allowed !== true) fail(401, String(runtimeAccess?.reason || "runtime_access_denied"));
     const requireExamRunAccess = (row: any) => {
