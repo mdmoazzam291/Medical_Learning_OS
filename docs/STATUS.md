@@ -10,6 +10,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 ## Recent
 
 ### 2026-11-19 — NMC foundation: presentations and misconceptions (ADR-139)
+- Admin learner preview now shows these layers per concept (builds on, confused with, misconceptions, presentations) in each topic.
 - Clinical presentation layer: 66 presentations → 517 concepts (759 links, cause/approach). Misconception library: 244 high-yield wrong beliefs with corrections and error kinds (15 guideline-sensitive). Both AI drafts, Admin-only data, no redeploy needed.
 - System tags already on 1,531/1,543 identities; skin and mental-health systems missing from the vocabulary (deferred). High-yield tiers wait for PYQ data.
 
@@ -83,7 +84,7 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 ### 2026-11-18 — NMC foundation marked complete (subject-competency scope)
 - Owner decision (ADR-138): foundation complete for the 2,633 live subject competency rows; AI-drafted objectives, no faculty review, no learner material.
 - The five non-subject parts are kept separate in `data/nmc-non-subject-curriculum-deferred.json` (counts, overlap, recommendation, pointer to the retained audit branch `feat/nmc-support-cohort-reconciliation-20261103` @ `5524c5a`). AETCOM is the first candidate if ever needed.
-- Production: nmc-admin-preview v29 on registry @28; owner-api v27 still on @27 (repo pins @28; redeploy pending, deferred to save usage).
+- Production: nmc-admin-preview v30 on registry @28 with concept layers; owner-api v27 still on @27 (repo pins @28; redeploy pending, deferred to save usage).
 
 ### 2026-11-18 — Registry @28: quality-audit fixes
 - Seeded audit (60 objectives, 60 prerequisite links, 20 confusion pairs): wording and NMC row matches sound; one systematic issue — 146 clinical-phase objectives carried the classifier's fallback 'mechanism' label.
