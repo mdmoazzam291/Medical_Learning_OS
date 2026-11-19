@@ -40,9 +40,13 @@ export function learnerPreviewMarkup(p=null,filters={},message='Load the learner
 }
 export const validPreviewResult=r=>r?.contractId==='nmc-admin-learner-preview-v1'&&r.audience==='admin-only'&&r.learnerActivation===false&&Array.isArray(r.subjects)&&
  (r.view==='concept'?(Array.isArray(r.concepts)||(r.concept&&Array.isArray(r.concept.sections))):Array.isArray(r.topics));
-export function mountLearnerPreview({root,load,identity,window:win=window}){
- let generation=0,disposed=false,page=null,filters={},back={};
- const clear=()=>{generation++;page=null;back={};root.innerHTML=learnerPreviewMarkup();};
+export function mountLearnerPreview({root,load,identity,window:win=window,initial=null}){
+ let generation=0,disposed=false,page=null,filters={},back={},owner=null;
+ // Admin console: blank on any focus/storage/access change. Learner-page panels (initial set): reload only if the signed-in user changed.
+ const clear=async()=>{
+  if(initial){const current=await identity();if(disposed||(current&&current===owner))return;if(!current){generation++;page=null;root.innerHTML=learnerPreviewMarkup(null,{},'Sign in as Admin to see this preview.');return;}return read(initial);}
+  generation++;page=null;back={};root.innerHTML=learnerPreviewMarkup();
+ };
  async function read(next={}){
   const current=++generation;filters=next;page=null;root.innerHTML=learnerPreviewMarkup(null,{},'Loading learner preview…');
   try{
@@ -51,7 +55,7 @@ export function mountLearnerPreview({root,load,identity,window:win=window}){
    if(disposed||current!==generation)return;
    if(!after||before!==after)throw new Error();
    if(!validPreviewResult(result))throw new Error();
-   page=result;root.innerHTML=learnerPreviewMarkup(page,filters,'Admin-only preview loaded.');
+   page=result;owner=after;root.innerHTML=learnerPreviewMarkup(page,filters,'Admin-only preview loaded.');
   }catch{if(!disposed&&current===generation){page=null;root.innerHTML=learnerPreviewMarkup(null,{},'Preview could not be loaded. Check Admin access and retry.');}}
  }
  function click(ev){
@@ -61,7 +65,7 @@ export function mountLearnerPreview({root,load,identity,window:win=window}){
   if(b.hasAttribute('data-preview-back'))return read(back.view||back.subject||back.search?back:{view:'concept'});
  }
  function submit(ev){if(!ev.target.matches('[data-preview-filters]'))return;ev.preventDefault();return read(Object.fromEntries(new FormData(ev.target)));}
- root.innerHTML=learnerPreviewMarkup();root.addEventListener('click',click);root.addEventListener('submit',submit);
+ root.innerHTML=learnerPreviewMarkup();if(initial)read(initial);root.addEventListener('click',click);root.addEventListener('submit',submit);
  for(const n of ['storage','focus','pageshow','mlos:access'])win.addEventListener(n,clear);
  return ()=>{disposed=true;generation++;root.removeEventListener('click',click);root.removeEventListener('submit',submit);for(const n of ['storage','focus','pageshow','mlos:access'])win.removeEventListener(n,clear);page=null;root.replaceChildren();};
 }

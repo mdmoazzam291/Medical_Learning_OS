@@ -1,6 +1,9 @@
 export const publicFiles = Object.freeze([
   'web/nmc-foundation-review.js',
   'web/nmc-admin-learner-preview.js',
+  'web/nmc-admin-overlay.js',
+  'web/nmc-admin-overlay-boot.js',
+  'web/nmc-admin-overlay.css',
   'web/nmc-concept-batch-review.js',
   'web/nmc-catalogue.html',
   'web/nmc-catalogue.js',
