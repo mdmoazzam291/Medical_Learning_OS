@@ -9,6 +9,9 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — Chromium CI time limit 20 → 30 minutes
+- The Chromium `browser` job was cancelled at 20 minutes on a docs-only PR (#496); no test failed. Its last 14 runs took 10–19 minutes, so the limit had no headroom.
+
 ### 2026-11-19 — study-api: auth and runtime-access checks run in parallel (deployed v55, verified)
 - Same pattern as review-api v32: `learner_runtime_access_v1` starts alongside `getUser` using the token's unverified `sub`; its result is used only if `getUser` returns the same user id. Route reads are unchanged.
 - Live study-api v54 was checked file-by-file against `main` before this change (identical, including `data/preparation-curriculum.js` and `src/domain/preparation-pathways.js`).
