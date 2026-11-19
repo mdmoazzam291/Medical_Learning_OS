@@ -75,7 +75,7 @@ jobs:
   webkit:
     # Native macOS WebKit provides composited screenshots closest to Safari.
     runs-on: macos-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

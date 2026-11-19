@@ -9,6 +9,9 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — webkit CI time limit
+- Main run on `b319576` failed: webkit was cancelled at 15 minutes (check and browser passed). Cause: PR #483 added the accessibility audit to both browser jobs but raised only Chromium's limit. Webkit limit raised to 25 minutes on `fix/webkit-ci-timeout`.
+
 ### 2026-11-19 — Learner UX follow-ups merged (PR #486)
 - PR [#486](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/486) was squash-merged into `main` as `e4f6ce7c37fefab3492630196139f68b3e4631d6` on 2026-11-18 18:43 UTC. The PR head was `8f8728b0365263fbdfcedc8751b27987f94492fd`.
 - Post-merge GitHub Actions workflow [#3427](https://github.com/mdmoazzam291/Medical_Learning_OS/actions/runs/44372765762) completed successfully on the merge commit: `check`, `browser` (Chromium), and `webkit` all passed.
