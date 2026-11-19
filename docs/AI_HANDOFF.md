@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T19:40Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T20:05Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -17,11 +17,11 @@ Checked: 2026-11-19T19:40Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — NMC panel on Admin's learner pages (2026-11-20, Claude)
-- Branch `feat/nmc-admin-overlay-learner-pages` (base: PR #503 branch head `e1eabab`, which is `main` + handoff); see STATUS 2026-11-20. Includes #503's handoff change; close #503 when this merges.
-- Verified locally (tests, check, browser behaviour runs). Not yet: CI, merge, production check with the owner's session.
-- Owner preference: ask before deploying content changes; target Admin + learner `mdmoazzam291@gmail.com` (same account). Merging this deploys web pages only (Cloudflare from `main`).
-- Exact next action: wait for Workers Builds, check, browser, webkit → ask owner → merge → owner opens Library / NMC topics / Vault → "NMC foundation · Admin preview".
+## Completed — NMC panel on Admin's learner pages (2026-11-20, Claude)
+- PR [#505](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/505) (rebased onto #504; all four checks green) squash-merged as `47b3516` on owner go-ahead 00:57 IST. Web pages only (Cloudflare from `main`); live medretica.com library/nmc-catalogue/vault pages carry the slot, boot and CSS. No edge-function or database change. #503 closed (its commit is in #505).
+- Audience: Admin account only (= learner `mdmoazzam291@gmail.com`). Panel appears after server Admin check; data from Admin-gated nmc-admin-preview v32, loaded only when opened.
+- Not yet verified: the panel with the owner's signed-in session on production.
+- Owner preference: ask before deploying content changes; target Admin + that learner.
 
 ## Completed — NMC Admin learner preview: concept-wise browsing (2026-11-19, Claude)
 - PR [#502](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/502) (all four checks green) squash-merged as `4e6a8eb` on owner go-ahead 23:51 IST. Deployed by the ADR-140 workflow (run 44587154069, tests+check passed in the run): **nmc-admin-preview v32**; unauthenticated → 401. Web pages from `main` live on medretica.com (Workers Builds success; served `web/nmc-admin-learner-preview.js` contains the concept view).
