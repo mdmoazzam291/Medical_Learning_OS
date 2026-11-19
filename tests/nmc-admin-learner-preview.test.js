@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validatePreviewData,parsePreviewFilters,previewPage} from '../src/domain/nmc-admin-learner-preview.js';
-import {learnerPreviewMarkup,conceptLayerMarkup} from '../web/nmc-admin-learner-preview.js';
+import {learnerPreviewMarkup,conceptLayerMarkup,validPreviewResult} from '../web/nmc-admin-learner-preview.js';
 const raw=readFileSync(new URL('../data/nmc-admin-learner-preview.json',import.meta.url));
 const data=JSON.parse(raw);
 const fn=readFileSync(new URL('../supabase/functions/nmc-admin-preview/index.ts',import.meta.url),'utf8');
@@ -51,4 +51,50 @@ test('preview shows AI-draft concept layers once per concept per topic, escaped'
  const evil=conceptLayerMarkup({label:'<b>x',after:[{label:'<i>',strength:'essential',reason:'<s>'}],confusedWith:[],misconceptions:[{misconception:'<script>',correction:'<x>',kind:'reversed',guidelineSensitive:false}],presentations:[]});
  assert.doesNotMatch(evil,/<script>|<b>x|<i>/);
  assert.throws(()=>validatePreviewData({...data,concepts:[]}),/preview_data_invalid/);
+});
+test('concept-wise browsing reaches every objective through only its linked subjects',()=>{
+ const index=previewPage(data,parsePreviewFilters({view:'concept'}));
+ assert.equal(index.view,'concept');assert.equal(index.matched,index.totalConcepts);
+ const conceptIds=new Set(data.items.map(i=>i.conceptId));
+ assert.equal(index.concepts.length,conceptIds.size);
+ assert.equal(index.concepts.reduce((n,c)=>n+c.objectiveCount,0),data.items.length);
+ let reached=0;
+ for(const c of index.concepts){
+  const page=previewPage(data,parsePreviewFilters({view:'concept',concept:c.conceptId}));
+  const own=data.items.filter(i=>i.conceptId===c.conceptId);
+  assert.deepEqual(new Set(page.concept.subjectIds),new Set(own.map(i=>i.subjectId)));
+  assert.ok(page.concept.sections.every(s=>s.objectives.length>0));
+  reached+=page.concept.sections.reduce((n,s)=>n+s.objectives.length,0);
+ }
+ assert.equal(reached,data.items.length);
+ const multi=index.concepts.find(c=>c.subjectIds.length>=4);assert.ok(multi);
+ const page=previewPage(data,parsePreviewFilters({view:'concept',concept:multi.conceptId}));
+ assert.ok(validPreviewResult(page));assert.equal(page.concept.sections.length,multi.subjectIds.length);
+ const surgery=previewPage(data,parsePreviewFilters({view:'concept',subject:'surgery'}));
+ assert.ok(surgery.concepts.length>0&&surgery.concepts.every(c=>c.subjectIds.includes('surgery')));
+ assert.ok(previewPage(data,parsePreviewFilters({view:'concept',search:'rabies'})).concepts.some(c=>c.label==='Rabies'));
+});
+test('concept filters are validated',()=>{
+ assert.throws(()=>parsePreviewFilters({concept:'C-abc'}));
+ assert.throws(()=>parsePreviewFilters({view:'concept',concept:'not-an-id'}));
+ assert.throws(()=>parsePreviewFilters({view:'tree'}));
+ assert.throws(()=>previewPage(data,parsePreviewFilters({view:'concept',concept:'C-0000-missing'})));
+ assert.equal(parsePreviewFilters({}).view,'subject');
+});
+test('subject search also matches concept names, and objectives link to their concept',()=>{
+ const label=data.items.find(i=>i.conceptLabel&&!i.objective.toLowerCase().includes(i.conceptLabel.toLowerCase())).conceptLabel;
+ const p=previewPage(data,parsePreviewFilters({search:label}));
+ assert.ok(p.topics.flatMap(t=>t.objectives).some(o=>o.conceptLabel===label));
+ assert.match(learnerPreviewMarkup(p,{}),/data-preview-concept="C-/);
+});
+test('concept markup keeps the Admin banner, escapes content and offers a way back',()=>{
+ const index=previewPage(data,parsePreviewFilters({view:'concept'}));
+ const html=learnerPreviewMarkup(index,{view:'concept'});
+ assert.match(html,/Admin preview only/);assert.match(html,/Concept \(across subjects\)/);assert.match(html,/concepts\. Each concept lists only the subjects/);
+ const page=previewPage(data,parsePreviewFilters({view:'concept',concept:index.concepts[0].conceptId}));
+ const detail=learnerPreviewMarkup(page,{});
+ assert.match(detail,/data-preview-back/);assert.match(detail,/Admin preview only/);assert.match(detail,/AI draft/);
+ const evil=learnerPreviewMarkup({...index,concepts:[{conceptId:'C-x"><script>',label:'<img src=x>',subjectIds:['<b>'],objectiveCount:1}]},{});
+ assert.doesNotMatch(evil,/<script>|<img src=x>|<b>/);
+ assert.equal(validPreviewResult({...index,learnerActivation:true}),false);
 });

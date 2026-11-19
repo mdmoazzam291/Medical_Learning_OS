@@ -2,12 +2,19 @@
 
 Current state and recent entries. Entries up to 2026-11-17 are archived in [archive/STATUS-through-2026-11-17.md](archive/STATUS-through-2026-11-17.md) (unchanged). Add new entries at the top of "Recent".
 
-## Current state — 2026-11-17
-- NMC foundation source accounting complete: registry @24, 2,865 draft objectives on 1,544 concepts, 2,633/2,634 NMC rows linked (PS9.2 deleted officially). No clinical or faculty review (owner skipped it); no learner activation; no question import.
+## Current state — 2026-11-19
+- NMC foundation complete for the subject-competency scope (ADR-138): registry @28, Admin learner preview browses by subject and by concept (2026-11-19).
+- NMC foundation source accounting (2026-11-17): registry @24, 2,865 draft objectives on 1,544 concepts, 2,633/2,634 NMC rows linked (PS9.2 deleted officially). No clinical or faculty review (owner skipped it); no learner activation; no question import.
 - Concepts: 1,543 accepted private identities; subject revisions supported and applied to 328 concepts.
 - Syllabus checklist functions read current identities (migration `20261117150000`).
 
 ## Recent
+
+### 2026-11-19 — NMC Admin learner preview: concept-wise browsing; full-coverage audit
+- Admin learner preview (`nmc-admin-preview`) now browses two ways, per the subject-wise/concept-wise decision: **Subject** (unchanged; search now also matches concept names, and each objective's concept name opens that concept) and **Concept (across subjects)**: an index of all 1,544 concepts (filter by subject or name/exact NMC code) and a concept page listing only the subjects that link to it, objectives grouped by subject with topic, and the AI-draft concept layers. Read-only; `learnerActivation:false` and the Admin-only banner on every view.
+- Preview data unchanged (registry @28, checksum `2d056482…0787`); no re-pin needed. Only function code changed: **nmc-admin-preview must be redeployed** (ADR-140 workflow) for production to show the concept view.
+- Coverage audit (repo + live DB, read-only): preview = 2,865/2,865 registry objectives, 19/19 subjects, 1,544 concepts (1,543 accepted identities + learner concept Brown-Séquard), all 1,600 prerequisite links, 170 confusion pairs, 244 misconceptions, 66 presentations (759 links); 2,633/2,634 NMC rows bound (PS9.2 official deletion). DB: 1,543 acceptances, 0 accepted without draft; 4 unaccepted private drafts (engineering test draft C-dd9b3a6e; deferred COPD/asthma respiratory drafts C-89191b5c, C-305ac1fc, C-f2c27acd) are not in the preview and were left in place (immutable audit records, never learner-visible). Nothing deleted. `foundation_objective_revisions` = 0 (no owner objective edits yet).
+- Verification: `npm test` 1,751/1,751; `npm run check` passed (local Node 22; CI uses 24). Local Playwright/Chrome run with real data at 390, 820×1180, 1180×820, 1440 px: concept index → HIV infection (8 subjects) → back; subject list → concept link → back to the same subject; no horizontal overflow, no console errors, link targets 28 px. Not verified: production after redeploy with the owner's session.
 
 ### 2026-11-19 — Two-factor for learners; learner journey dashboard (ADR-142)
 - Account → Sign-in & Security: turn two-factor on/off (admins: status only, managed in Admin Security). Code prompt on every signed-in app page. Server gate in `learner_runtime_access_v1` (migration `20261119150000`).
