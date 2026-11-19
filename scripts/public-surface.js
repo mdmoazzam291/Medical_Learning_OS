@@ -26,6 +26,7 @@ export const publicFiles = Object.freeze([
   'web/navigation.js',
   'web/navigation.css',
   'web/appearance-boot.js',
+  'web/api-preconnect.js',
   'web/navigation-preferences.js',
   'web/navigation-access.js',
   'data/preparation-curriculum.js',

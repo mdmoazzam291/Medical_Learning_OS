@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T06:10Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T06:55Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -27,8 +27,10 @@ Checked: 2026-11-19T06:10Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Separate architectural follow-up: instrument shared app-shell/client-side navigation and edge cold-start latency before implementing; preserve auth boundaries, deep links, browser history, page state, accessibility, and locked exam-session behavior.
 
 
-## Active task — webkit CI time limit (2026-11-19)
-- Branch `fix/webkit-ci-timeout`. Main run 44397604450 (`b319576`, docs-only) failed because the webkit job was cancelled at its 15-minute limit; no test failed. Recent successful webkit runs took 8–13 minutes after the accessibility audit (PR #483) added work to that job, while only the Chromium job's limit had been raised. The limit is now 25 minutes. Next: CI green, owner merges.
+## Active task — loading speed (2026-11-19)
+- Webkit CI limit fix merged as `10fb45e` (#487).
+- Branch `perf/preconnect-and-timing`: API preconnect on all pages + latency measurements (see STATUS 2026-11-19). Next: CI green, owner merges.
+- Then, only with owner approval: remove the per-request `/auth/v1/user` round-trip (parallelise auth, runtime access and route reads; local JWT verification if signing keys are asymmetric). Check the project's JWT signing-key type first. Deploy each edge function via Supabase MCP and re-measure with the same log queries.
 
 ## Known gaps
 - Confusion pairs: 173 (`data/nmc-concept-confusions.json`), AI-drafted.
