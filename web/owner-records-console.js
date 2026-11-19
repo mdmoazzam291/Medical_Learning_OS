@@ -80,7 +80,7 @@ async function mount() {
   const container = app?.querySelector('#owner-console');
   if (!container || app.querySelector('#owner-audit')) return;
   const audit = panel('owner-audit', 'audit', 'GOVERNANCE', 'Admin audit log', 'Who changed learner access or feature gates, when, and why.', 'owner-audit-state');
-  const payments = panel('owner-payments', 'payments', 'BILLING LEDGER', 'Payments', 'Subscriptions, verified captures, refunds and webhooks that need attention.', 'owner-payments-state');
+  const payments = panel('owner-payments', 'payments', 'BILLING', 'Billing ledger', 'Subscriptions, verified captures, refunds and webhooks that need attention.', 'owner-payments-state');
   container.append(audit, payments);
   window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
   const [auditResult, billingResult] = await Promise.allSettled([client().auditEvents({ limit: 50 }), client().billingSummary()]);
