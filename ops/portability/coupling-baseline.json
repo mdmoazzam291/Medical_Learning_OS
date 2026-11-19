@@ -815,6 +815,12 @@
   "web/owner-records-console.js": [
     "supabase"
   ],
+  "web/account-two-factor.js": [
+    "supabase"
+  ],
+  "web/mfa-gate.js": [
+    "supabase"
+  ],
   "web/owner-v3-console.js": [
     "supabase"
   ],
@@ -880,6 +886,9 @@
     "supabase"
   ],
   "supabase/migrations/20261119120000_correct_catalog_source_rights.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261119150000_two_factor_runtime_gate_and_learner_funnel.sql": [
     "supabase"
   ]
 }

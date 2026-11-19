@@ -62,6 +62,7 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     sourceWatch() { return request('/source-watch'); },
     auditEvents({ limit = 50 } = {}) { return request('/audit-events?limit=' + encodeURIComponent(limit)); },
     billingSummary() { return request('/billing-summary'); },
+    learnerFunnel() { return request('/learner-funnel'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {
       return request('/learners?q=' + encodeURIComponent(String(query || '').trim()));

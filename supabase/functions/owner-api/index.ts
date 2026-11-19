@@ -229,6 +229,13 @@ Deno.serve(async (req: Request) => {
       return response(req, 200, auditTimeline({ learnerEvents: learnerEvents.data, featureEvents: featureEvents.data, limit }));
     }
 
+    if (req.method === "GET" && path === "/learner-funnel") {
+      if (url.search) fail(400, "query_not_supported");
+      const { data, error } = await admin.rpc("owner_learner_funnel_v1");
+      if (error || !data || (data as any).contractId !== "owner-learner-funnel-v1") fail(503, "owner_learner_funnel_unavailable");
+      return response(req, 200, data);
+    }
+
     if (req.method === "GET" && path === "/billing-summary") {
       if (url.search) fail(400, "query_not_supported");
       const reads = await Promise.all([

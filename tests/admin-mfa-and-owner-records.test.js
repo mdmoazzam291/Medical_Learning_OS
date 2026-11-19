@@ -85,3 +85,43 @@ test('billing summary separates sandbox from production and counts only verified
   assert.equal(summary.recentPayments[0].paymentId, 'p2');
   assert.equal(formatInrMinor(49900), '₹499.00');
 });
+
+test('two-factor gate migration denies aal1 sessions only for users with a verified factor', async () => {
+  const sql = await readFile(new URL('../supabase/migrations/20261119150000_two_factor_runtime_gate_and_learner_funnel.sql', import.meta.url), 'utf8');
+  assert.match(sql, /status='verified'/);
+  assert.match(sql, /session_aal from s\) <> 'aal2' then 'mfa_required'/);
+  assert.match(sql, /grant execute on function public\.learner_runtime_access_v1\(uuid,uuid\) to service_role/);
+  assert.match(sql, /revoke all on function public\.owner_learner_funnel_v1\(\) from public,anon,authenticated/);
+  assert.doesNotMatch(sql.slice(sql.indexOf('owner_learner_funnel_v1()')), /'email',|u\.email\b/, 'funnel returns aggregates only');
+});
+
+test('account two-factor panel: off, on for learner, and admin cannot turn it off', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const { verifiedTotpFactors } = await import('../src/domain/admin-assurance.js');
+  const source = (await readFile(new URL('../web/two-factor-view.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '').replace(/^export /gm, '');
+  const ctx = { verifiedTotpFactors, Date };
+  runInNewContext(source + '\nthis.view = { accountTwoFactorMarkup, signInCodePromptMarkup };', ctx);
+  const { accountTwoFactorMarkup, signInCodePromptMarkup } = ctx.view;
+  assert.match(accountTwoFactorMarkup({ factors: [] }), /Two-factor sign-in: Off[\s\S]*Turn on two-factor sign-in/);
+  const on = accountTwoFactorMarkup({ factors: [verified], aal: 'aal2' });
+  assert.match(on, /Two-factor sign-in: On/);
+  assert.match(on, /data-two-factor-form="disable"/);
+  const admin = accountTwoFactorMarkup({ factors: [verified], aal: 'aal2', isAdmin: true });
+  assert.doesNotMatch(admin, /data-two-factor-form="disable"/);
+  assert.match(admin, /admin-security/);
+  assert.doesNotMatch(accountTwoFactorMarkup({ factors: [verified], aal: 'aal1' }), /data-two-factor-form="disable"/, 'turning off needs a code-verified session');
+  assert.match(signInCodePromptMarkup({ factors: [verified] }), /autocomplete="one-time-code"[\s\S]*data-mfa-gate-signout/);
+  assert.match(accountTwoFactorMarkup({ enrollment: { factorId: verified.id, uri: 'otpauth://totp/x?a=1&b=2', secret: 'ABC' } }), /otpauth:\/\/totp\/x\?a=1&amp;b=2/);
+});
+
+test('learner funnel panel shows shares and fails closed', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const source = (await readFile(new URL('../web/owner-records-console.js', import.meta.url), 'utf8'));
+  const body = source.slice(source.indexOf('const n = value'), source.indexOf('function panel('));
+  const ctx = {};
+  runInNewContext("const escape = v => String(v ?? '').replace(/[&<>\"']/g, '');\n" + body.replace(/^export /gm, '') + '\nthis.funnelMarkup = funnelMarkup;', ctx);
+  assert.match(ctx.funnelMarkup(null), /not evidence of zero learners/);
+  const html = ctx.funnelMarkup({ contractId: 'owner-learner-funnel-v1', accounts: 8, emailConfirmed: 6, studiedOnce: 4, studiedOnTwoOrMoreDays: 2, studiedAgain7DaysAfterFirst: 1, eligibleFor7DayReturn: 2, activeLearners7d: 3, activeLearners30d: 4, twoFactorEnabled: 0, signups7d: 1, signups30d: 2, weeklySignups: [] });
+  assert.match(html, /Answered at least one question<\/span><strong>4 \(50%\)/);
+  assert.match(html, /not mastery/);
+});

@@ -1732,3 +1732,11 @@ Owner instruction (2026-11-18 01:47 IST): mark the foundation complete and keep 
 - **Audit log:** `GET owner-api/audit-events?limit=1..200` merges `owner_admin_audit_events` and `owner_feature_flag_audit_events`, newest first. Read-only.
 - **Payments:** `GET owner-api/billing-summary` summarises offers, subscriptions, verified captures, refunds and webhooks needing attention from the existing `consumer_billing_*` tables; production and sandbox are never summed. Read-only; payments stay not activated until an offer is approved.
 - **No migration.** Tables already exist; reads use the service role inside the owner-api admin gate.
+
+## ADR-142 — Two-factor sign-in for every account; learner journey in Observed Learning (19 November 2026)
+- **Owner request (2026-11-19 20:07 IST):** two-factor on/off for learners and admins, plus the necessary dashboards.
+- **Where:** learners turn it on/off in Account → Sign-in & Security (`/web/account.html#security`). Admins manage devices in Admin → System Operations → Admin Security; an admin account cannot turn two-factor off from Account, and the last admin device cannot be removed from the UI (ADR-141).
+- **Enforcement:** `learner_runtime_access_v1` returns `mfa_required` for an aal1 session when the user has a verified TOTP factor. Every edge function already calls this gate, so learners and admins are covered by one database rule. Users without a factor are unaffected. Turning it off needs a code-verified (aal2) session.
+- **Prompt:** `web/mfa-gate.js` on every signed-in app page (not public policy pages) asks for the code when the session is aal1 and the account has a factor. aal2 sessions cost nothing; aal1 sessions cost one auth read per tab.
+- **Learner journey:** `owner_learner_funnel_v1()` (service role only, aggregates only, admin excluded) shown in Admin → Observed Learning: accounts, email confirmed, answered ≥1 question, studied on 2+ days, came back ≥7 days after starting, active 7/30 days, two-factor adoption, weekly sign-ups. Activity counts, not mastery or retention evidence.
+- **Recovery:** a learner who loses the phone is helped via Contact; the factor is removed in the Supabase dashboard. No self-service backup codes yet.
