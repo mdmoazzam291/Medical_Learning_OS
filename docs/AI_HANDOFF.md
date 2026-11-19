@@ -32,6 +32,10 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Next (owner): Admin → Admin Security → Set up two-factor on iPhone, then add iPad. Until then sign-in is unchanged. Set `MLOS_ADMIN_MFA_STRICT=true` only after every admin has enrolled.
 - Not yet verified: a real enrolment and code prompt on production; the Audit Log and Payments panels with the owner's signed-in session.
 
+## Active task — learner two-factor + learner journey (2026-11-19, Claude)
+- Branch `feat/learner-mfa-funnel`, ADR-142. Release order: merge (Workers deploys the pages) → apply migration `20261119150000` via Supabase MCP → deploy owner-api (adds `/learner-funnel`). Other functions need no redeploy (gate is in SQL).
+- Rollback: re-create `learner_runtime_access_v1` from migration `20261003153000` (drops the mfa_required branch).
+
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 webkit limit; #488 API preconnect + measurements; #489 review-api parallel auth (v32, verified with signed-in traffic); #493/#495 manual deploy workflow (ADR-140); #494 study-api parallel auth.
 - study-api v55 deployed by the workflow at 10:29 UTC, files verified identical to `main`. Verified with the owner's signed-in visit (all 200; first page 0.46–0.58 s vs 1.9–2.1 s before; warm 0.18–0.29 s; warm `/me` 0.17 s). Rollback if needed = revert PR, then run the workflow. Next candidates: learner-experiment-api `/status` (1.05 s on first visit, still sequential), then re-measure medians over a few days.

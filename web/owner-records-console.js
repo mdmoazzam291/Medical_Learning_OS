@@ -69,6 +69,27 @@ export function billingMarkup(payload) {
     '<h3>Recent payments</h3>' + recent;
 }
 
+const n = value => (Number.isSafeInteger(value) && value >= 0 ? value : null);
+const share = (part, whole) => (n(part) === null || !n(whole) ? '' : ' (' + Math.round((part / whole) * 100) + '%)');
+
+export function funnelMarkup(f) {
+  if (!f || f.contractId !== 'owner-learner-funnel-v1') return '<p class="muted" role="status">Learner journey unavailable. This is not evidence of zero learners. Reload to retry.</p>';
+  const step = (label, value, base, note = '') => '<div class="owner-metric"><span>' + escape(label) + '</span><strong>' + escape(n(value) ?? '—') + escape(share(value, base)) + '</strong>' + (note ? '<small>' + escape(note) + '</small>' : '') + '</div>';
+  const weeks = Array.isArray(f.weeklySignups) && f.weeklySignups.length
+    ? '<p>Sign-ups per week (last 12): ' + f.weeklySignups.map(w => '<span class="badge">' + escape(String(w.weekStart).slice(5)) + ': ' + escape(w.signups) + '</span>').join(' ') + '</p>'
+    : '<p class="muted">No sign-ups in the last 12 weeks.</p>';
+  return '<div class="owner-metrics">' +
+    step('Learner accounts', f.accounts, null, (n(f.signups7d) ?? '—') + ' new in 7 days · ' + (n(f.signups30d) ?? '—') + ' in 30') +
+    step('Email confirmed', f.emailConfirmed, f.accounts) +
+    step('Answered at least one question', f.studiedOnce, f.accounts) +
+    step('Studied on 2+ days', f.studiedOnTwoOrMoreDays, f.studiedOnce) +
+    step('Came back 7+ days after starting', f.studiedAgain7DaysAfterFirst, f.eligibleFor7DayReturn, 'of ' + (n(f.eligibleFor7DayReturn) ?? '—') + ' who started 7+ days ago') +
+    step('Active in last 7 days', f.activeLearners7d, f.accounts, (n(f.activeLearners30d) ?? '—') + ' in 30 days') +
+    step('Two-factor turned on', f.twoFactorEnabled, f.accounts) +
+    '</div>' + weeks +
+    '<p class="muted">Admin accounts excluded. These are activity counts, not mastery or memory retention. Percentages under ~30 learners are noisy.</p>';
+}
+
 function panel(id, view, eyebrow, title, description, bodyId) {
   const section = document.createElement('section');
   section.id = id; section.className = 'panel'; section.dataset.adminPanel = view; section.hidden = true;
@@ -83,11 +104,18 @@ async function mount() {
   const payments = panel('owner-payments', 'payments', 'BILLING', 'Billing ledger', 'Subscriptions, verified captures, refunds and webhooks that need attention.', 'owner-payments-state');
   container.append(audit, payments);
   window.dispatchEvent(new CustomEvent('mlos:admin-ready'));
-  const [auditResult, billingResult] = await Promise.allSettled([client().auditEvents({ limit: 50 }), client().billingSummary()]);
+  const learning = app.querySelector('#owner-learning');
+  const journey = document.createElement('div');
+  journey.className = 'owner-status-block'; journey.id = 'owner-learner-journey';
+  journey.innerHTML = '<h3>Learner journey</h3><div id="owner-learner-journey-state" aria-live="polite"><p class="muted">Loading…</p></div>';
+  learning?.append(journey);
+  const [auditResult, billingResult, funnelResult] = await Promise.allSettled([client().auditEvents({ limit: 50 }), client().billingSummary(), client().learnerFunnel()]);
   if (app.querySelector('#owner-console') !== container) return;
   audit.querySelector('#owner-audit-state').innerHTML = auditMarkup(auditResult.status === 'fulfilled' ? auditResult.value : null);
   payments.querySelector('#owner-payments-state').innerHTML = billingMarkup(billingResult.status === 'fulfilled' ? billingResult.value : null);
-  for (const [result, operation] of [[auditResult, 'load_audit_events'], [billingResult, 'load_billing_summary']]) {
+  const journeyState = journey.querySelector('#owner-learner-journey-state');
+  if (journeyState) journeyState.innerHTML = funnelMarkup(funnelResult.status === 'fulfilled' ? funnelResult.value : null);
+  for (const [result, operation] of [[auditResult, 'load_audit_events'], [billingResult, 'load_billing_summary'], [funnelResult, 'load_learner_funnel']]) {
     if (result.status === 'rejected' && ![401, 403].includes(Number(result.reason?.status || 0))) {
       errorMonitor.capture(result.reason, { component: 'owner-records-console', operation, code: result.reason?.code || null });
     }

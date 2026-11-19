@@ -49,7 +49,7 @@ const SECTIONS = {
   ],
   library: libraryRows,
   exams: [item('simulator', 'Simulator', 'exam', '/web/exam.html'), item('dna', 'Exam DNA / PYQs', 'graph', workspace('exams', 'dna')), item('past', 'Past Runs', 'clock', workspace('exams', 'past')), item('autopsy', 'GT Autopsy', 'repair', workspace('exams', 'autopsy')), item('rules', 'Exam Plan & Rules', 'settings', workspace('exams', 'rules'))],
-  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research')],
+  account: [item('overview', 'Overview', 'user', '/web/account.html'), item('preferences', 'Preferences', 'settings', workspace('account', 'preferences')), item('security', 'Sign-in & Security', 'settings', '/web/account.html#security'), item('data', 'My Data', 'reference', workspace('account', 'data')), item('research', 'Research Participation', 'cases', '/web/account.html#research')],
   admin: [
     item('overview', 'Overview', 'home', '/web/admin.html', [
       item('actions', 'Action Inbox', 'repair', '/web/admin.html#admin-actions'),
@@ -157,6 +157,6 @@ export function routeIdentity(pathname, search = '', hash = '') {
     return { master: 'admin', section: ownerAnchors[hash] || 'overview' };
   }
   if (pathname.endsWith('/content-import.html') || pathname.endsWith('/review.html')) return { master: 'admin', section: 'content' };
-  if (/\/(account|plans|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : 'overview' };
+  if (/\/(account|plans|oauth-consent|retention|retention-origin)\.html$/.test(pathname)) return { master: 'account', section: pathname.endsWith('/account.html') && hash === '#research' ? 'research' : pathname.endsWith('/account.html') && hash === '#security' ? 'security' : 'overview' };
   return { master: 'home', section: 'today' };
 }

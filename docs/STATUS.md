@@ -9,6 +9,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — Two-factor for learners; learner journey dashboard (ADR-142)
+- Account → Sign-in & Security: turn two-factor on/off (admins: status only, managed in Admin Security). Code prompt on every signed-in app page. Server gate in `learner_runtime_access_v1` (migration `20261119150000`).
+- Admin → Observed Learning gains a "Learner journey" block from `owner_learner_funnel_v1` (owner-api `/learner-funnel`).
+- Verified: npm test 1,747 pass; npm run check pass. Owner enrolled a verified TOTP factor before this change (1 factor in production).
+
 ### 2026-11-19 — Admin two-factor sign-in, audit log and payments views (ADR-141)
 - Admin-POV audit: the owner console (18 views) lacked two-factor sign-in, a viewer for the immutable admin audit tables, and a payments view.
 - Added TOTP two-factor for admins (server-enforced in owner-api, nmc-admin-preview, review-api admin routes and content-library-api admin routes; admin page code prompt; self-service setup in Admin Security). Added read-only Admin Audit Log and Payments panels with owner-api `/audit-events` and `/billing-summary`.

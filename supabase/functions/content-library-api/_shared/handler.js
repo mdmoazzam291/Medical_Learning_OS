@@ -21,7 +21,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
       const authorization=req.headers.get('authorization')||'';
       if(!authorization.startsWith('Bearer '))fail(401,'unauthorized');
       const user=await getUser(authorization.slice(7));if(!user?.id)fail(401,'unauthorized');
-      const access=await runtimeAccess(authorization.slice(7),user.id);if(access?.allowed!==true)fail(access?.reason==='account_suspended'?403:401,'runtime_access_denied');
+      const access=await runtimeAccess(authorization.slice(7),user.id);if(access?.allowed!==true)fail(access?.reason==='account_suspended'?403:401,access?.reason==='mfa_required'?'mfa_required':'runtime_access_denied');
       const url=new URL(req.url);if(url.search)fail(400,'query_not_supported');
       const pieces=url.pathname.split('/').filter(Boolean);const at=pieces.lastIndexOf('content-library-api');let path;try{path='/'+pieces.slice(at>=0?at+1:0).map(p=>{const decoded=decodeURIComponent(p);if(decoded.includes('/'))fail(400,'invalid_path');return decoded;}).join('/');}catch{fail(400,'invalid_path');}
       const body=async(maximum=1048576)=>{
