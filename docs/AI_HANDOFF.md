@@ -28,7 +28,7 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 
 ## Active task — admin two-factor, audit log, payments (2026-11-19, Claude)
-- Branch `feat/admin-mfa-audit-payments`; PR pending (see below). ADR-141. No migration.
+- Branch `feat/admin-mfa-audit-payments`; PR [#498](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/498), code commit `06f094e`. ADR-141. No migration.
 - After merge: deploy owner-api, review-api, nmc-admin-preview, content-library-api with `deploy-supabase-function.yml` (owner instruction needed). Then owner opens Admin → Admin Security → Set up two-factor on iPhone; add iPad as a second device. Set `MLOS_ADMIN_MFA_STRICT=true` only after every admin has enrolled.
 - Owner-api v27 pin note above still applies: the owner-api deploy also ships registry @28.
 
