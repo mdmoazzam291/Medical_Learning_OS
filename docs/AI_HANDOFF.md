@@ -27,6 +27,11 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Separate architectural follow-up: instrument shared app-shell/client-side navigation and edge cold-start latency before implementing; preserve auth boundaries, deep links, browser history, page state, accessibility, and locked exam-session behavior.
 
 
+## Active task — admin two-factor, audit log, payments (2026-11-19, Claude)
+- Branch `feat/admin-mfa-audit-payments`; PR pending (see below). ADR-141. No migration.
+- After merge: deploy owner-api, review-api, nmc-admin-preview, content-library-api with `deploy-supabase-function.yml` (owner instruction needed). Then owner opens Admin → Admin Security → Set up two-factor on iPhone; add iPad as a second device. Set `MLOS_ADMIN_MFA_STRICT=true` only after every admin has enrolled.
+- Owner-api v27 pin note above still applies: the owner-api deploy also ships registry @28.
+
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 webkit limit; #488 API preconnect + measurements; #489 review-api parallel auth (v32, verified with signed-in traffic); #493/#495 manual deploy workflow (ADR-140); #494 study-api parallel auth.
 - study-api v55 deployed by the workflow at 10:29 UTC, files verified identical to `main`. Verified with the owner's signed-in visit (all 200; first page 0.46–0.58 s vs 1.9–2.1 s before; warm 0.18–0.29 s; warm `/me` 0.17 s). Rollback if needed = revert PR, then run the workflow. Next candidates: learner-experiment-api `/status` (1.05 s on first visit, still sequential), then re-measure medians over a few days.

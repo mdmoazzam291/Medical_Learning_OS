@@ -60,6 +60,8 @@ export function createCloudOwner({ projectUrl, publishableKey, auth, fetchFn = f
     editObjectiveWording(input) { return request('/foundation-objective-edits', {method: 'POST', body: input}); },
     foundationObjectiveDrafts(filters = {}) { return request('/foundation-objective-drafts?' + new URLSearchParams(Object.entries(filters).filter(([,v]) => v !== '' && v != null))); },
     sourceWatch() { return request('/source-watch'); },
+    auditEvents({ limit = 50 } = {}) { return request('/audit-events?limit=' + encodeURIComponent(limit)); },
+    billingSummary() { return request('/billing-summary'); },
     recordSourceSighting(input) { return request('/source-watch/sightings', { method: 'POST', body: input }); },
     searchLearners(query) {
       return request('/learners?q=' + encodeURIComponent(String(query || '').trim()));

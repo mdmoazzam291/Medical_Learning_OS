@@ -10,6 +10,8 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
 import { auditCanonicalCatalog } from "../../../src/domain/catalog-integrity-audit.js";
 import { buildSourceWatchReport, validateSourceSighting } from "../../../src/domain/medical-source-surveillance.js";
+import { adminAssuranceForToken, strictModeFromEnv } from "../../../src/domain/admin-assurance.js";
+import { auditLimit, auditTimeline, billingSummary } from "../../../src/domain/owner-records.js";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
@@ -205,9 +207,45 @@ Deno.serve(async (req: Request) => {
     });
     if (accessError) fail(500, "owner_authz_unavailable");
     if (!access || typeof access !== "object" || (access as any).isAdmin !== true) fail(403, "content_admin_required");
+    const assurance = adminAssuranceForToken({ token, user: authData.user, strict: strictModeFromEnv(Deno.env.get("MLOS_ADMIN_MFA_STRICT")) });
+    if (!assurance.allowed) fail(assurance.status, assurance.code as string);
 
     const url = new URL(req.url);
     const path = routePath(url);
+
+    if (req.method === "GET" && path === "/audit-events") {
+      for (const key of url.searchParams.keys()) if (key !== "limit") fail(400, "query_not_supported");
+      let limit = 50;
+      try { limit = auditLimit(url.searchParams.get("limit")); } catch { fail(400, "audit_limit_invalid"); }
+      const [learnerEvents, featureEvents] = await Promise.all([
+        admin.from("owner_admin_audit_events")
+          .select("id,admin_user_id,learner_id,action,reason,before_state,after_state,created_at")
+          .order("created_at", { ascending: false }).limit(limit),
+        admin.from("owner_feature_flag_audit_events")
+          .select("id,admin_user_id,feature_key,before_audience,after_audience,reason,created_at")
+          .order("created_at", { ascending: false }).limit(limit)
+      ]);
+      if (learnerEvents.error || featureEvents.error) fail(503, "owner_audit_unavailable");
+      return response(req, 200, auditTimeline({ learnerEvents: learnerEvents.data, featureEvents: featureEvents.data, limit }));
+    }
+
+    if (req.method === "GET" && path === "/billing-summary") {
+      if (url.search) fail(400, "query_not_supported");
+      const reads = await Promise.all([
+        admin.from("consumer_billing_offers").select("offer_id,status"),
+        admin.from("consumer_billing_subscriptions").select("environment,lifecycle_status").limit(10000),
+        admin.from("consumer_billing_payments")
+          .select("payment_id,subscription_id,environment,payment_status,amount_minor,recorded_at,provider_verified_at")
+          .order("recorded_at", { ascending: false }).limit(5000),
+        admin.from("consumer_billing_webhook_inbox").select("environment,processing_status")
+          .in("processing_status", ["unprocessed", "needs_review"]).limit(5000)
+      ]);
+      const missing = reads.find((read: any) => read.error && ["42P01", "PGRST205"].includes(String(read.error.code)));
+      if (missing) return response(req, 200, { contractId: "owner-billing-summary-v1", activation: "not_installed" });
+      if (reads.some((read: any) => read.error)) fail(503, "owner_billing_unavailable");
+      const [offers, subscriptions, payments, inbox] = reads.map((read: any) => read.data ?? []);
+      return response(req, 200, billingSummary({ offers, subscriptions, payments, inbox }));
+    }
 
     if (req.method === "GET" && path === "/dashboard") {
       if (url.search) fail(400, "query_not_supported");

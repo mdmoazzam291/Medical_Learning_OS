@@ -9,6 +9,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-19 — Admin two-factor sign-in, audit log and payments views (ADR-141)
+- Admin-POV audit: the owner console (18 views) lacked two-factor sign-in, a viewer for the immutable admin audit tables, and a payments view.
+- Added TOTP two-factor for admins (server-enforced in owner-api, nmc-admin-preview, review-api admin routes and content-library-api admin routes; admin page code prompt; self-service setup in Admin Security). Added read-only Admin Audit Log and Payments panels with owner-api `/audit-events` and `/billing-summary`.
+- Not deployed. Needs merge, then the four edge functions deployed. Until the owner enrols a device nothing changes for sign-in.
+- Verified: npm test 1,744 pass; npm run check pass. Live DB checked: audit and billing tables exist; 0 MFA factors. Not verified: browser flows on phone/tablet (CI browser jobs run on the PR); a real TOTP enrolment against production Auth.
+
 ### 2026-11-19 — Learner UX honesty pass and source-rights correction
 - Audit (local app, phone size, fed the real production learner state via `content_library_snapshot_v1` for a test learner): no crashes or overflow; learners see 0 concepts, 0 questions, 0 notes.
 - Home and Study now say "Questions and notes are being prepared" with links to the NMC curriculum and exam goals, instead of "Your scheduled reviews are up to date". Dead-end links hidden when empty (Start due reviews, past-paper browse).

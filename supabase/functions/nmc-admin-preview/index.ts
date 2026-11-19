@@ -1,6 +1,7 @@
 // Admin-only learner preview of owner-accepted NMC objectives.
 // Reads commit-pinned, checksum-verified preview data; never writes; never visible to learners.
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { adminAssuranceForToken, strictModeFromEnv } from "../../../src/domain/admin-assurance.js";
 import { validatePreviewData, parsePreviewFilters, previewPage } from "../../../src/domain/nmc-admin-learner-preview.js";
 import { validateBatch, batchSummary, parseAcceptRequest, batchAcceptInput, validateRevisionBatch, revisionSummary, revisionAcceptInput } from "../../../src/domain/nmc-concept-batch.js";
 
@@ -102,6 +103,8 @@ Deno.serve(async (req: Request) => {
     const role = await admin.rpc("content_admin_status_v1", { p_user: authData.user!.id });
     if (role.error) fail(500, "owner_authz_unavailable");
     if ((role.data as any)?.isAdmin !== true) fail(403, "content_admin_required");
+    const assurance = adminAssuranceForToken({ token, user: authData.user, strict: strictModeFromEnv(Deno.env.get("MLOS_ADMIN_MFA_STRICT")) });
+    if (!assurance.allowed) fail(assurance.status, assurance.code as string);
     const url = new URL(req.url);
     const path = routePath(url);
     if (path === "/batch" && req.method === "GET") {

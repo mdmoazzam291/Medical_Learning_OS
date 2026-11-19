@@ -4,15 +4,16 @@ import vm from 'node:vm';
 import { readFile } from 'node:fs/promises';
 import { navigationFor, routeIdentity } from '../src/domain/app-navigation.js';
 import { navigationMarkup, workspaceMenuMarkup } from '../web/navigation-view.js';
+import { adminAssuranceDecision, verifiedTotpFactors } from '../src/domain/admin-assurance.js';
 const source = (await readFile(new URL('../web/admin.js', import.meta.url), 'utf8')).replace(/^import .*;\n/gm, '');
-async function openAdmin({ pending = false, pairFailure = false, accessFailure = 0, deferredAccess = false, deferredPairs = false } = {}) {
+async function openAdmin({ pending = false, pairFailure = false, accessFailure = 0, deferredAccess = false, deferredPairs = false, mfa = { aal: 'aal1', factors: [] } } = {}) {
   const root = { innerHTML: '', addEventListener() {} }, notice = { hidden: true };
   const accessRequests = [], pairRequests = [];
   const context = vm.createContext({
     document: { querySelector: selector => selector === '#admin-app' ? root : notice },
-    createSupabaseAuth: () => ({ currentUser: () => ({ id: 'synthetic-owner', email: 'owner@example.invalid' }), getSession: () => pending ? new Promise(() => {}) : Promise.resolve({ user: { id: 'synthetic-owner' } }) }),
+    createSupabaseAuth: () => ({ mfaStatus: async () => mfa, currentUser: () => ({ id: 'synthetic-owner', email: 'owner@example.invalid' }), getSession: () => pending ? new Promise(() => {}) : Promise.resolve({ user: { id: 'synthetic-owner' } }) }),
     createCloudReview: () => ({ me: async () => { if (deferredAccess) return new Promise(resolve => accessRequests.push(resolve)); if (accessFailure) throw Object.assign(new Error('access_failed'), { status: accessFailure }); return { isAdmin: true, reviewKinds: ['medical', 'references', 'rights'] }; }, transferPairs: async () => { if (deferredPairs) return new Promise(resolve => pairRequests.push(resolve)); if (pairFailure) throw Object.assign(new Error('projection_unavailable'), { status: 503 }); return { pairs: [], researchGate: null }; } }),
-    cloudConfig: {}, errorMonitor: { capture() {} }, CustomEvent: class {}, dispatchEvent() {}, console
+    cloudConfig: {}, errorMonitor: { capture() {} }, CustomEvent: class {}, dispatchEvent() {}, console, adminAssuranceDecision, verifiedTotpFactors
   });
   vm.runInContext(source, context); await new Promise(resolve => setImmediate(resolve));
   return { root, context, accessRequests, pairRequests, async revoke(status) { accessFailure = status; await vm.runInContext('loadAdmin()', context); } };
@@ -142,4 +143,25 @@ test('medical relationship tools are discoverable once inside the Admin content 
   const rows = navigationFor('admin', { isAdmin: true });
   const links = rows.find(r => r.id === 'content').children;
   assert.equal(links.filter(r => r.href === '/web/content-import.html#medical-relationships').length, 1);
+});
+
+test('an admin with an enrolled two-factor device must enter a code before owner tools render', async () => {
+  const h = await openAdmin({ mfa: { aal: 'aal1', factors: [{ id: '11111111-1111-4111-8111-111111111111', status: 'verified', factor_type: 'totp', friendlyName: 'iPhone' }] } });
+  assert.equal(h.context.mlosNavigationAdmin, false);
+  assert.match(h.root.innerHTML, /Enter your authenticator code/);
+  assert.match(h.root.innerHTML, /autocomplete="one-time-code"/);
+  assert.doesNotMatch(h.root.innerHTML, /data-admin-panel="research"/);
+});
+test('a verified aal2 admin session opens the console and shows two-factor as on', async () => {
+  const h = await openAdmin({ mfa: { aal: 'aal2', factors: [{ id: '11111111-1111-4111-8111-111111111111', status: 'verified', factor_type: 'totp', friendlyName: 'iPhone' }] } });
+  assert.equal(h.context.mlosNavigationAdmin, true);
+  assert.match(h.root.innerHTML, /Two-factor sign-in: On · this session verified/);
+  assert.doesNotMatch(h.root.innerHTML, /admin-mfa-banner/);
+});
+test('an admin without two-factor is recommended to enrol but not locked out', async () => {
+  const h = await openAdmin();
+  assert.equal(h.context.mlosNavigationAdmin, true);
+  assert.match(h.root.innerHTML, /id="admin-mfa-banner"/);
+  assert.match(h.root.innerHTML, /data-action="mfa-setup"/);
+  assert.match(h.root.innerHTML, /Two-factor sign-in: Off/);
 });

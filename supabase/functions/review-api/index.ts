@@ -1,5 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { checkRuntimeAccess } from "./_shared/runtime-access.ts";
+import { adminAssuranceForToken, strictModeFromEnv } from "../../../src/domain/admin-assurance.js";
 
 type Json = Record<string, unknown>;
 
@@ -266,6 +267,8 @@ Deno.serve(async (req: Request) => {
     const requireAdmin = async () => {
       const access = await getAdminAccess();
       if (!access.isAdmin) fail(403, "content_admin_required");
+      const assurance = adminAssuranceForToken({ token, user: authData.user, strict: strictModeFromEnv(Deno.env.get("MLOS_ADMIN_MFA_STRICT")) });
+      if (!assurance.allowed) fail(assurance.status, assurance.code as string);
       return access;
     };
 
