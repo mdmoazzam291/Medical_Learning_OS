@@ -1,12 +1,12 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T08:35Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T09:20Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
 - Faculty/clinical review is skipped by owner instruction (2026-11-17 19:29 IST). All objectives are AI-authored drafts; never describe them as clinically or faculty reviewed.
 - Learner publication only on explicit owner instruction.
-- Deploy via the Supabase MCP tools; do not work around environment permission checks.
+- Deploy via the Supabase MCP tools or, for edge functions, the manual workflow `deploy-supabase-function.yml` (ADR-140, owner 2026-11-19); do not work around environment permission checks.
 - Merge only after Workers Builds, check, browser and webkit all pass.
 
 ## NMC foundation — state
@@ -29,7 +29,7 @@ Checked: 2026-11-19T08:35Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 ## Active task — loading speed (2026-11-19)
 - Merged: #487 (webkit limit, `10fb45e`), #488 (API preconnect + measurements, `bab07a9`).
-- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. study-api is 125 KB plus 7 shared files; inline MCP deploys of that size are error-prone, so a CLI/CI deploy route needs an owner decision first.
+- Branch `perf/parallel-auth`: `review-api` parallel auth (STATUS 2026-11-19). **Deployed as review-api v32** and verified with signed-in traffic (200s, no 5xx, parallel calls confirmed in logs; merged as #489). Warm `/me` latency not yet measured. Next: apply the same pattern to study-api (progress, questions, revision/due, exam readiness), one function at a time, verifying deployed bytes each time. Owner chose the GitHub deploy route (ADR-140): branch `ci/supabase-function-deploy` adds the workflow. Owner must add secret `SUPABASE_ACCESS_TOKEN` and variable `SUPABASE_PROJECT_REF` (= `iyapppmeieqhflnzslao`) before first use; then do the study-api change and deploy it with the workflow.
 - Not started: local JWT verification (check signing-key type first).
 
 ## Known gaps

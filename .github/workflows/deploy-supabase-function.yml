@@ -1,0 +1,68 @@
+name: Deploy Supabase edge function
+
+# Manual, owner-triggered deploy of one edge function from main (ADR-140).
+# Uploads the exact repository files, so large functions are not hand-copied.
+on:
+  workflow_dispatch:
+    inputs:
+      function:
+        description: Edge function to deploy
+        required: true
+        type: choice
+        options:
+          - study-api
+          - review-api
+          - owner-api
+          - content-library-api
+          - learner-experiment-api
+          - retention-probe-api
+          - nmc-admin-preview
+          - infrastructure-monitor
+      confirm:
+        description: Type the function name again to confirm
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-function-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    env:
+      FUNCTION: ${{ inputs.function }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ vars.SUPABASE_PROJECT_REF }}
+    steps:
+      - name: Guard inputs and branch
+        run: |
+          set -euo pipefail
+          [ "$GITHUB_REF" = "refs/heads/main" ] || { echo "Deploy only from main (got $GITHUB_REF)"; exit 1; }
+          [ "${{ inputs.confirm }}" = "$FUNCTION" ] || { echo "Confirmation does not match function name"; exit 1; }
+          [ -n "$SUPABASE_ACCESS_TOKEN" ] || { echo "Missing secret SUPABASE_ACCESS_TOKEN"; exit 1; }
+          [ -n "$SUPABASE_PROJECT_REF" ] || { echo "Missing variable SUPABASE_PROJECT_REF"; exit 1; }
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Tests and checks
+        run: npm test && npm run check
+      - uses: supabase/setup-cli@3c2f5e2ae34c34e428e8e206e2c4d21fa2d20fbf
+      - name: Deploy
+        # All listed functions authenticate requests themselves (verify_jwt is off in production).
+        run: supabase functions deploy "$FUNCTION" --project-ref "$SUPABASE_PROJECT_REF" --no-verify-jwt --use-api
+      - name: Record deployed version
+        run: |
+          set -euo pipefail
+          supabase functions list --project-ref "$SUPABASE_PROJECT_REF" | grep -E "[[:space:]]$FUNCTION[[:space:]]" | tee version.txt
+          {
+            echo "### Deployed \`$FUNCTION\`"
+            echo "- Commit: \`$GITHUB_SHA\`"
+            echo '```'; cat version.txt; echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
