@@ -32,9 +32,10 @@ Checked: 2026-11-19T11:20Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Next (owner): Admin → Admin Security → Set up two-factor on iPhone, then add iPad. Until then sign-in is unchanged. Set `MLOS_ADMIN_MFA_STRICT=true` only after every admin has enrolled.
 - Not yet verified: a real enrolment and code prompt on production; the Audit Log and Payments panels with the owner's signed-in session.
 
-## Active task — learner two-factor + learner journey (2026-11-19, Claude)
+## Completed — learner two-factor + learner journey (2026-11-19, Claude)
 - PR #500 merged as `9b8b188` (ADR-142); pages live on medretica.com. Migration `20261119150000` applied 15:20 UTC (gate + funnel verified: funnel returns; the owner had 0 aal1 sessions, 1 aal2).
-- Pending owner go-ahead: deploy owner-api (adds `/learner-funnel`; until then the Learner journey block shows "unavailable") and content-library-api (passes `mfa_required` through) with `deploy-supabase-function.yml`.
+- Deployed 15:40 UTC from `9b8b188` by the ADR-140 workflow (owner go-ahead 21:09 IST): owner-api (run 44557249347, adds `/learner-funnel`) and content-library-api (run 44557503021, passes `mfa_required`). Both boot; signed-in study-api/review-api traffic after the migration returned 200.
+- Not yet verified: the code prompt on a second device, and the Learner journey block with the owner signed in.
 - Rollback: re-create `learner_runtime_access_v1` from migration `20261003153000`.
 
 ## Active task — loading speed (2026-11-19)
