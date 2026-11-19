@@ -1,6 +1,15 @@
 import {escapeText as e} from './navigation-view.js';
 const MODE={'knowledge':'Knowledge','performance-and-knowledge':'Skill + knowledge'};
 const FINDING={'duplicate-wording':'duplicate wording','near-duplicate-in-concept':'near-duplicate in concept','no-leading-verb':'no action verb','non-measurable-verb':'non-measurable verb','no-source-binding':'no NMC row'};
+const KIND={'confusion':'confusion','reversed':'reversed','overgeneralisation':'overgeneralisation','mechanism':'mechanism','test-interpretation':'test interpretation','management':'management','sequence-timing':'sequence or timing','missed-red-flag':'missed red flag','reasoning':'reasoning','factual':'factual'};
+const list=(title,rows)=>rows.length?'<p><strong>'+e(title)+'</strong></p><ul>'+rows.join('')+'</ul>':'';
+export function conceptLayerMarkup(c){
+ return '<section class="nmc-concept-layer"><h4>'+e(c.label||'Concept')+'</h4>'+
+  list('Builds on',c.after.map(a=>'<li>'+e(a.label)+(a.strength==='essential'?' <small>(essential)</small>':'')+' — '+e(a.reason)+'</li>'))+
+  list('Commonly confused with',c.confusedWith.map(x=>'<li>'+e(x.label)+' — '+e(x.discriminator)+'</li>'))+
+  list('Common misconceptions',c.misconceptions.map(m=>'<li><p>✗ '+e(m.misconception)+'</p><p>✓ '+e(m.correction)+'</p><small>'+e(KIND[m.kind]||m.kind)+(m.guidelineSensitive?' · check against current guidelines':'')+'</small></li>'))+
+  list('Seen in presentations',c.presentations.map(x=>'<li>'+e(x.label)+' <small>('+(x.role==='cause'?'cause to consider':'part of the approach')+')</small></li>'))+'</section>';
+}
 const ASSESS={'in-app':'Assessable in app','in-app-partial':'Partly assessable in app','offline-only':'Offline assessment only'};
 export function learnerPreviewMarkup(p=null,filters={},message='Load the learner preview to see accepted NMC objectives as a learner would.'){
  const banner='<div class="nmc-admin-banner" role="note"><strong>Admin preview only.</strong> Learners cannot see this. Objectives are AI-drafted and not faculty-reviewed (review skipped by the owner).</div>';
@@ -11,7 +20,7 @@ export function learnerPreviewMarkup(p=null,filters={},message='Load the learner
  '<form data-preview-filters role="search"><label>Subject<select name="subject"><option value="">All subjects</option>'+p.subjects.map(s=>'<option value="'+e(s.subjectId)+'"'+(s.subjectId===filters.subject?' selected':'')+'>'+e(s.label)+'</option>').join('')+'</select></label><label>Search<input name="search" maxlength="200" value="'+e(filters.search||'')+'"></label><button type="submit">Show</button></form>'+
  (p.filterRequired?'<p>'+e(p.total)+' objectives. Choose a subject or search to list them.</p>':'<p>'+e(p.matched)+' of '+e(p.total)+' objectives</p>')+
  (p.filterRequired?'':p.topics.length?p.topics.map(t=>'<article class="nmc-topic"><h3>'+e(t.topicLabel||'Untitled topic')+(t.topicLabelKind==='editorial-grouping'?' <small>(editorial grouping)</small>':'')+'</h3><p class="muted">'+e(names.get(t.subjectId)||t.subjectId)+'</p><p>By the end of this topic you should be able to:</p><ul>'+
-  t.objectives.map(o=>'<li><p>'+e(o.objective)+'</p><small>'+e(MODE[o.mode]||o.mode)+(o.task?' · '+e(o.task):'')+(o.assessability?' · '+e(ASSESS[o.assessability]||o.assessability):'')+(o.prerequisiteCodes?.length?' · After '+e(o.prerequisiteCodes.join(', ')):'')+(o.reviewState==='needs-attention'?' · <strong>Needs attention: '+e(o.reviewFindings.map(f=>FINDING[f]||f).join(', '))+'</strong>':'')+' · <a href="'+e(p.sourceUrl)+'#page='+e(o.pdfPage)+'" target="_blank" rel="noopener noreferrer">NMC '+e(o.code)+' ↗</a></small></li>').join('')+'</ul></article>').join(''):'<p>No objectives match. Clear the filters.</p>')+
+  t.objectives.map(o=>'<li><p>'+e(o.objective)+'</p><small>'+(o.conceptLabel?e(o.conceptLabel)+' · ':'')+e(MODE[o.mode]||o.mode)+(o.task?' · '+e(o.task):'')+(o.assessability?' · '+e(ASSESS[o.assessability]||o.assessability):'')+(o.prerequisiteCodes?.length?' · After '+e(o.prerequisiteCodes.join(', ')):'')+(o.reviewState==='needs-attention'?' · <strong>Needs attention: '+e(o.reviewFindings.map(f=>FINDING[f]||f).join(', '))+'</strong>':'')+' · <a href="'+e(p.sourceUrl)+'#page='+e(o.pdfPage)+'" target="_blank" rel="noopener noreferrer">NMC '+e(o.code)+' ↗</a></small></li>').join('')+'</ul>'+(t.concepts?.length?'<details><summary>Concept links and misconceptions ('+e(t.concepts.length)+') · AI draft</summary>'+t.concepts.map(conceptLayerMarkup).join('')+'</details>':'')+'</article>').join(''):'<p>No objectives match. Clear the filters.</p>')+
  '<button type="button" data-preview-load>Refresh</button>';
 }
 export function mountLearnerPreview({root,load,identity,window:win=window}){
