@@ -20,6 +20,11 @@
     "github",
     "supabase"
   ],
+  ".github/workflows/load-dataset-staging.yml": [
+    "github",
+    "huggingface",
+    "supabase"
+  ],
   ".github/workflows/nmc-hosted-staging-preflight.yml": [
     "supabase"
   ],
@@ -182,6 +187,9 @@
     "supabase"
   ],
   "scripts/live-concept-drafts-http-check.mjs": [
+    "supabase"
+  ],
+  "scripts/load-dataset-staging.py": [
     "supabase"
   ],
   "scripts/medical-relationship-browser-check.js": [
@@ -725,6 +733,9 @@
     "supabase"
   ],
   "supabase/migrations/20261117150000_syllabus_current_concept_identities.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261120120000_dataset_question_staging.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [
