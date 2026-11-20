@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-19T21:30Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-19T23:40Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -17,8 +17,14 @@ Checked: 2026-11-19T21:30Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — NMC preview: 19-subject index + integration (2026-11-20, Claude)
-- Branch `feat/nmc-subject-integration` from `main` `fc2e1c4`; see STATUS 2026-11-20. Verified locally (tests, check, browser at four sizes). Not yet: CI, owner go-ahead (standing preference: ask before deploying content changes), merge, nmc-admin-preview redeploy (ADR-140 workflow), signed-in production check. Includes the #507 handoff update (close #507 when this merges).
+## Active task — sub-topic hierarchy (2026-11-20, Claude)
+- Branch `feat/concept-topic-hierarchy` from `main` `c3475d9`; ADR-144; see STATUS 2026-11-20. Verified locally: `npm test` 1,765/1,765, `npm run check` passes. Not yet: CI, merge.
+- No deploy needed: preview data unchanged (hierarchy is added to it only once links exist). Web pages deploy from `main` on merge (adds breadcrumb/sub-topic markup that renders nothing while the registry is empty).
+- Exact next action: wait for Workers Builds, check, browser, webkit → ask owner → merge. Then MedMCQA import planning (see STATUS).
+- Owner answers 2026-11-20 04:44 IST: NMC foundation stays Admin + owner only (no learner publication); merge #508 first (done); one optional parent per concept/topic.
+
+## Completed — NMC preview: 19-subject index + integration (2026-11-20, Claude)
+- PR #508 squash-merged as `c3475d9` on owner go-ahead 04:44 IST; #507 closed. nmc-admin-preview redeployed from `c3475d9` (run 44662824259); unauthenticated → 401. Not yet verified with the owner's signed-in session.
 
 ## Completed — NMC panel on Admin's learner pages (2026-11-20, Claude)
 - PR [#505](https://github.com/mdmoazzam291/Medical_Learning_OS/pull/505) (rebased onto #504; all four checks green) squash-merged as `47b3516` on owner go-ahead 00:57 IST. Web pages only (Cloudflare from `main`); live medretica.com library/nmc-catalogue/vault pages carry the slot, boot and CSS. No edge-function or database change. #503 closed (its commit is in #505).
