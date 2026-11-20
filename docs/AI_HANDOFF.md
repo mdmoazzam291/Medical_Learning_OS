@@ -19,8 +19,8 @@ Checked: 2026-11-20T19:50Z. Full history up to this date: [archive/AI_HANDOFF-th
 
 ## Active task — UI type, spacing and layout (2026-11-21, Claude)
 - Branch `fix/ui-type-spacing-layout` from `main` `9f81832`; ADR-153; see STATUS 2026-11-21. Web pages only — no edge function, database or content change.
-- Verified locally: `npm test` 1,793/1,793, `npm run check`, axe audit and 28 Chromium browser checks pass. Not yet: CI (incl. WebKit), owner device check, merge.
-- Exact next action: wait for Workers Builds, check, browser, webkit → ask owner → merge. Follow-ups awaiting owner choice: phone bottom tab bar, Concept Notes filter sheet, NMC catalogue redesign.
+- PR #522 at `63e2ff4`: Workers Builds, check, webkit and browser all green (browser after one re-run: `preparation-browser-check.js` 'Refresh session' wait is a pre-existing flake — fails 5/6 locally on `main` `9f81832`, not caused by this PR). Verified locally: `npm test` 1,793/1,793, `npm run check`, axe audit, 28 Chromium browser checks. Not yet: owner device check, merge.
+- Exact next action: owner go-ahead → squash-merge #522 (web pages deploy from `main`). Separately fix the preparation-check flake. Follow-ups awaiting owner choice: phone bottom tab bar, Concept Notes filter sheet, NMC catalogue redesign.
 
 ## Active task — MedMCQA pilot import (2026-11-20, Claude)
 - Owner decisions: rights not reviewed for questions now or in future (12:43 IST); unverified keys and no exam/year source acceptable (04:40 IST); audience Admin + owner first (12:43 IST).
