@@ -38,3 +38,6 @@ test('concise study selection resolves the reviewed variant and never accepts ca
   assert.equal((await handler(req('/study','POST',{questionVersionIds:[q.questionVersionId],variants:{[q.questionVersionId]:'short'},stem:'forged'}))).status,400);
   const response=await handler(req('/study','POST',{questionVersionIds:[q.questionVersionId],variants:{[q.questionVersionId]:'short'}}));assert.equal(response.status,200);assert.equal(writes,1);
 });
+test('owner rights waiver is an accepted publication decision; unknown statuses are still rejected (ADR-146)',async()=>{const f=fixture();const base={digest:'a'.repeat(64),reviewNotes:'Inspected',attested:true};
+ assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,rightsDecisions:[{sourceId:'SRC-x',rightsStatus:'owner_waived',evidence:'Owner decision 2026-11-20 (ADR-146)'}]}))).status,200);assert.equal(f.writes(),1);
+ assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,rightsDecisions:[{sourceId:'SRC-x',rightsStatus:'restricted',evidence:'x'}]}))).status,400);assert.equal(f.writes(),1);});

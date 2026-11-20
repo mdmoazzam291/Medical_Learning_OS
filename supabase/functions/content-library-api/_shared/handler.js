@@ -114,7 +114,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
       if(req.method==='POST'&&detail[2]){
         const input=await body(65536);fields(input,['digest','rightsDecisions','reviewNotes','attested']);
         if(!/^[a-f0-9]{64}$/.test(input.digest)||input.attested!==true||typeof input.reviewNotes!=='string'||!input.reviewNotes.trim()||input.reviewNotes.length>4000||!Array.isArray(input.rightsDecisions))fail(400,'review_attestation_required');
-        for(const d of input.rightsDecisions){fields(d,['sourceId','rightsStatus','evidence']);if(!['owned','licensed','public_domain','citation_only'].includes(d.rightsStatus)||typeof d.evidence!=='string'||!d.evidence.trim()||d.evidence.length>4000)fail(400,'rights_decisions_invalid');}
+        for(const d of input.rightsDecisions){fields(d,['sourceId','rightsStatus','evidence']);if(!['owned','licensed','public_domain','citation_only','owner_waived'].includes(d.rightsStatus)||typeof d.evidence!=='string'||!d.evidence.trim()||d.evidence.length>4000)fail(400,'rights_decisions_invalid');}
         const {data,error}=await admin.rpc('content_library_review_publish_v1',{p_import_id:detail[1],p_reviewer:user.id,p_expected_digest:input.digest,p_rights_decisions:input.rightsDecisions,p_review_notes:input.reviewNotes,p_attested:true});
         if(error){
           if(/content_admin_required|reviewer_not_authorized/.test(String(error.message)))fail(403,'reviewer_not_authorized');
