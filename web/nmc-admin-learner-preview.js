@@ -16,10 +16,23 @@ function filtersMarkup(p,filters){
  const view=filters.view==='concept'?'concept':'subject';
  return '<form data-preview-filters role="search"><label>Browse by<select name="view"><option value="subject"'+(view==='subject'?' selected':'')+'>Subject</option><option value="concept"'+(view==='concept'?' selected':'')+'>Concept (across subjects)</option></select></label><label>Subject<select name="subject"><option value="">All subjects</option>'+p.subjects.map(s=>'<option value="'+e(s.subjectId)+'"'+(s.subjectId===filters.subject?' selected':'')+'>'+e(s.label)+'</option>').join('')+'</select></label><label>Search<input name="search" maxlength="200" value="'+e(filters.search||'')+'"></label><button type="submit">Show</button></form>';
 }
+const plural=(n,one,many)=>e(n)+' '+(n===1?one:many);
+function subjectIndexMarkup(p){
+ return '<p>'+e(p.total)+' objectives across '+e(p.subjectIndex.length)+' subjects. Open a subject to see its topics and where each topic is also taught.</p><ul class="nmc-subject-index">'+
+  p.subjectIndex.map(s=>'<li><button type="button" class="nmc-subject-card" data-preview-subject="'+e(s.subjectId)+'">'+(s.phase?'<small>'+e(s.phase)+'</small>':'')+'<strong>'+e(s.label)+'</strong><small>'+plural(s.topics,'topic','topics')+' · '+plural(s.concepts,'concept','concepts')+' · '+plural(s.objectives,'objective','objectives')+'</small><small>'+plural(s.sharedConcepts,'concept','concepts')+' shared with other subjects</small></button></li>').join('')+'</ul>';
+}
+// Textbook-style integration box: the same concept as taught in other subjects (AI-mapped via shared concepts).
+function integrationMarkup(t,p,names){
+ if(!t.integration?.length)return '';
+ const subjects=new Set(t.integration.flatMap(c=>c.connected.map(x=>x.subjectId)));
+ return '<section class="nmc-integration"><h4>Also taught in '+e([...subjects].map(s=>names.get(s)||s).join(' · '))+'</h4><p class="muted"><small>Linked by shared concept (AI-mapped), not NMC\'s own integration list.</small></p>'+
+  t.integration.map(c=>'<div class="nmc-integration-concept"><p><button type="button" class="link-button" data-preview-concept="'+e(c.conceptId)+'">'+e(c.label||c.conceptId)+'</button></p>'+
+   c.connected.map(x=>'<details><summary>'+e(names.get(x.subjectId)||x.subjectId)+' · '+plural(x.objectives.length,'objective','objectives')+'</summary><ul>'+x.objectives.map(o=>'<li><p>'+e(o.objective)+'</p><small>'+(o.topicLabel?e(o.topicLabel)+' · ':'')+e(MODE[o.mode]||o.mode)+' · <a href="'+e(p.sourceUrl)+'#page='+e(o.pdfPage)+'" target="_blank" rel="noopener noreferrer">NMC '+e(o.code)+' ↗</a></small></li>').join('')+'</ul></details>').join('')+'</div>').join('')+'</section>';
+}
 function subjectViewMarkup(p,names){
- if(p.filterRequired)return '<p>'+e(p.total)+' objectives. Choose a subject or search to list them, or browse by concept.</p>';
+ if(p.filterRequired)return p.subjectIndex?.length?subjectIndexMarkup(p):'<p>'+e(p.total)+' objectives. Choose a subject or search to list them, or browse by concept.</p>';
  return '<p>'+e(p.matched)+' of '+e(p.total)+' objectives</p>'+(p.topics.length?p.topics.map(t=>'<article class="nmc-topic"><h3>'+e(t.topicLabel||'Untitled topic')+(t.topicLabelKind==='editorial-grouping'?' <small>(editorial grouping)</small>':'')+'</h3><p class="muted">'+e(names.get(t.subjectId)||t.subjectId)+'</p><p>By the end of this topic you should be able to:</p><ul>'+
-  t.objectives.map(o=>'<li><p>'+e(o.objective)+'</p>'+objectiveMeta(o,p)+'</li>').join('')+'</ul>'+(t.concepts?.length?'<details><summary>Concept links and misconceptions ('+e(t.concepts.length)+') · AI draft</summary>'+t.concepts.map(conceptLayerMarkup).join('')+'</details>':'')+'</article>').join(''):'<p>No objectives match. Clear the filters.</p>');
+  t.objectives.map(o=>'<li><p>'+e(o.objective)+'</p>'+objectiveMeta(o,p)+'</li>').join('')+'</ul>'+integrationMarkup(t,p,names)+(t.concepts?.length?'<details><summary>Concept links and misconceptions ('+e(t.concepts.length)+') · AI draft</summary>'+t.concepts.map(conceptLayerMarkup).join('')+'</details>':'')+'</article>').join(''):'<p>No objectives match. Clear the filters.</p>');
 }
 function conceptIndexMarkup(p,names){
  return '<p>'+e(p.matched)+' of '+e(p.totalConcepts)+' concepts. Each concept lists only the subjects that link to it.</p>'+(p.concepts.length?'<ul class="nmc-concept-index">'+p.concepts.map(c=>'<li><button type="button" class="link-button" data-preview-concept="'+e(c.conceptId)+'">'+e(c.label||c.conceptId)+'</button> <small>'+e(c.subjectIds.map(s=>names.get(s)||s).join(' · '))+' · '+e(c.objectiveCount)+(c.objectiveCount===1?' objective':' objectives')+'</small></li>').join('')+'</ul>':'<p>No concepts match. Clear the filters.</p>');
@@ -61,6 +74,7 @@ export function mountLearnerPreview({root,load,identity,window:win=window,initia
  function click(ev){
   const b=ev.target.closest('button');if(!b)return;
   if(b.hasAttribute('data-preview-load'))return read(filters);
+  if(b.hasAttribute('data-preview-subject')){back={};return read({view:'subject',subject:b.getAttribute('data-preview-subject')});}
   if(b.hasAttribute('data-preview-concept')){if(!filters.concept)back=filters;return read({view:'concept',concept:b.getAttribute('data-preview-concept')});}
   if(b.hasAttribute('data-preview-back'))return read(back.view||back.subject||back.search?back:{view:'concept'});
  }
