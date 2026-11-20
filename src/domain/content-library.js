@@ -21,6 +21,12 @@ export function questionSignature(q) {
   return JSON.stringify([normalize(q.stem),q.options.map(x=>normalize(x.text)).sort()]);
 }
 export function questionAnswer(q) { return normalize(q.options.find(x=>x.optionId===q.answerOptionId)?.text ?? ''); }
+// ADR-148: named question collections. Learners and Admin screens show the collection name; where a collection's
+// questions came from stays in its private source record (needed for key checks, licence notices and one-step removal).
+export const COLLECTIONS=Object.freeze({
+  'medretica-qbank-s1':Object.freeze({label:'Medretica QBank · Series 1',answerKeys:'unverified'})
+});
+export const collectionLabel=id=>COLLECTIONS[id]?.label||id;
 export function questionHome(origins=[]) {
   const exams=unique(origins.filter(x=>x.kind==='pyq').map(x=>x.examId)).sort();
   if(exams.length) return {kind:'pyq',platforms:[],exams};
@@ -84,7 +90,8 @@ export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],ques
     const conceptLinks=[...new Map([...q.conceptLinks,...(meta.concept_links_version_id===q.questionVersionId?(meta.concept_links||[]).filter(l=>l.role!=='primary'):[])].map(l=>[l.conceptId+'|'+l.role,l])).values()];
     const classification=structuredClone(meta.classification||emptyFacets());
     if(!classification.subjects.length) classification.subjects=unique(conceptLinks.flatMap(l=>catalog.concepts.find(c=>c.conceptId===l.conceptId)?.subjectTags||[]));
-    return {questionId:q.questionId,questionVersionId:q.questionVersionId,audience:q.status==='admin_preview'?'admin-preview':'all-learners',sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
+    const home=questionHome(origins);const collection=COLLECTIONS[home.platforms[0]]?{id:home.platforms[0],...COLLECTIONS[home.platforms[0]]}:null;
+    return {questionId:q.questionId,questionVersionId:q.questionVersionId,audience:q.status==='admin_preview'?'admin-preview':'all-learners',sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home,collection,observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
   });
   const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,sourceIds:[...(n.source_ids||[])],bodyMarkdown:n.body_markdown}));
   const reviewedMedicalRelationships=projectReviewedMedicalRelations({relations:medicalRelationships,concepts:catalog.concepts,sources:catalog.sources||[]});
