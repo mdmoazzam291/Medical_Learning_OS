@@ -6,7 +6,8 @@ const fixture=(options={})=>{
   let writes=0;
   const admin={rpc:async(name,args)=>{
     if(name==='content_admin_status_v1')return {data:{isAdmin:options.isAdmin!==false},error:null};
-    if(name==='content_library_review_publish_v1'){writes++;return options.dbFailure?{error:{message:'stale_import_digest'},data:null}:{data:{contractId:'content-library-publication-v1',status:'published'},error:null};}
+    if(name==='content_library_widen_audience_v1'){writes++;assert.equal(args.p_actor,'actual-user');return {data:{importId:args.p_import_id,audience:'all-learners',widenedQuestionCount:2},error:null};}
+    if(name==='content_library_review_publish_v2'){writes++;assert.equal(args.p_audience,options.audience||'admin-preview');return options.dbFailure?{error:{message:'stale_import_digest'},data:null}:{data:{contractId:'content-library-publication-v1',status:'published'},error:null};}
     if(name==='study_start_session'){writes++;assert.equal(args.p_learner,'actual-user');assert.deepEqual(args.p_ids,['published@1']);return {data:{id:'saved-session'},error:null};}
     if(name==='content_library_snapshot_v1'&&options.study)return {data:{catalog:{concepts:[],questions:[{questionId:'published',questionVersionId:'published@1',status:'published',stem:'Synthetic',options:[],conceptLinks:[]}]},notes:[],questionMetadata:[],conceptMetadata:[],links:[],stats:[]},error:null};
     if(name==='content_library_snapshot_v1'){assert.equal(args.p_learner,'actual-user');return {data:{catalog:{concepts:[],questions:[{status:'in_review',answerOptionId:'secret'}]},notes:[],questionMetadata:[],conceptMetadata:[],links:[],stats:[]},error:null};}
@@ -41,3 +42,10 @@ test('concise study selection resolves the reviewed variant and never accepts ca
 test('owner rights waiver is an accepted publication decision; unknown statuses are still rejected (ADR-146)',async()=>{const f=fixture();const base={digest:'a'.repeat(64),reviewNotes:'Inspected',attested:true};
  assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,rightsDecisions:[{sourceId:'SRC-x',rightsStatus:'owner_waived',evidence:'Owner decision 2026-11-20 (ADR-146)'}]}))).status,200);assert.equal(f.writes(),1);
  assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,rightsDecisions:[{sourceId:'SRC-x',rightsStatus:'restricted',evidence:'x'}]}))).status,400);assert.equal(f.writes(),1);});
+test('publish defaults to the Admin-only audience; all-learners must be explicit; unknown audiences fail (ADR-147)',async()=>{const base={digest:'a'.repeat(64),rightsDecisions:[],reviewNotes:'Inspected',attested:true};
+ let f=fixture();assert.equal((await f.handler(req('/imports/test/publish','POST',base))).status,200);
+ f=fixture({audience:'all-learners'});assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,audience:'all-learners'}))).status,200);
+ f=fixture();assert.equal((await f.handler(req('/imports/test/publish','POST',{...base,audience:'everyone'}))).status,400);assert.equal(f.writes(),0);});
+test('widening needs Admin and a typed confirmation (ADR-147)',async()=>{let f=fixture({isAdmin:false});assert.equal((await f.handler(req('/imports/test/widen','POST',{confirm:'all-learners'}))).status,403);assert.equal(f.writes(),0);
+ f=fixture();assert.equal((await f.handler(req('/imports/test/widen','POST',{confirm:'yes'}))).status,400);assert.equal(f.writes(),0);
+ const r=await f.handler(req('/imports/test/widen','POST',{confirm:'all-learners'}));assert.equal(r.status,200);assert.equal((await r.json()).widenedQuestionCount,2);});

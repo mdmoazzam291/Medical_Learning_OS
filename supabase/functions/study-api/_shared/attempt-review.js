@@ -1,7 +1,7 @@
 // Read-only historical boundary. Retirement never implies archive permission.
 const idPattern = /^[a-zA-Z0-9:_@.\-]{1,160}$/;
-const rightsStatuses = new Set(['owned', 'licensed', 'public_domain', 'citation_only']);
-export async function readLearnerAttemptReview({ admin, learnerId, attemptId, search = '', getCatalog, trustedRead = (_operation, read) => read() }) {
+const rightsStatuses = new Set(['owned', 'licensed', 'public_domain', 'citation_only', 'owner_waived']); // owner_waived: ADR-146
+export async function readLearnerAttemptReview({ admin, learnerId, attemptId, search = '', getCatalog, trustedRead = (_operation, read) => read(), isContentAdmin = async () => false }) {
   if (search) throw new Error('query_not_supported');
   if (typeof learnerId !== 'string' || !learnerId) throw new Error('learner_required');
   if (typeof attemptId !== 'string' || !idPattern.test(attemptId)) throw new Error('invalid_identifier');
@@ -28,7 +28,8 @@ export async function readLearnerAttemptReview({ admin, learnerId, attemptId, se
   if (catalog?.schemaVersion !== 1) throw new Error('attempt_review_read_failed');
   const matches = (Array.isArray(catalog?.questions) ? catalog.questions : []).filter(q => q?.questionVersionId === event.questionVersionId);
   const q = matches.length === 1 ? matches[0] : null;
-  if (!q || q.status !== 'published' || typeof q.publishedAt !== 'string' || !Number.isFinite(Date.parse(q.publishedAt)) ||
+  // ADR-147: an Admin may review its own attempts on admin_preview questions; everyone else needs 'published'.
+  if (!q || !(q.status === 'published' || (q.status === 'admin_preview' && await isContentAdmin())) || typeof q.publishedAt !== 'string' || !Number.isFinite(Date.parse(q.publishedAt)) ||
       !Array.isArray(q.sourceIds) || !q.sourceIds.length || !Array.isArray(catalog.sources) ||
       q.sourceIds.some(id => {
         const sources = catalog.sources.filter(s => s?.sourceId === id);

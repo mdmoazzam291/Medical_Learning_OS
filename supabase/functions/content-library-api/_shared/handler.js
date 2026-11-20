@@ -31,16 +31,22 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         try{return JSON.parse(raw);}catch{fail(400,'invalid_json');}
       };
       const requireAdmin=async()=>{const data=await checked(admin.rpc('content_admin_status_v1',{p_user:user.id}));if(data?.isAdmin!==true)fail(403,'content_admin_required');const assurance=adminAssuranceForToken({token:authorization.slice(7),user,strict:adminMfaStrict});if(!assurance.allowed)fail(assurance.status,assurance.code);};
+      // ADR-147: Admin preview questions are visible only to the Admin account. Never throws: a failed check means not Admin.
+      // The Admin check runs only when preview questions exist, so ordinary library reads cost nothing extra.
+      const hasAdminPreview=snapshot=>Array.isArray(snapshot?.catalog?.questions)&&snapshot.catalog.questions.some(q=>q?.status==='admin_preview');
+      const isContentAdmin=async()=>{try{const {data,error}=await admin.rpc('content_admin_status_v1',{p_user:user.id});return !error&&data?.isAdmin===true;}catch{return false;}};
       if(req.method==='GET'&&path==='/library'){
         const snapshot=await checked(admin.rpc('content_library_snapshot_v1',{p_learner:user.id}));
-        return reply(200,{...projectLibrary(snapshot),preparation:preparationContext(preparationCurriculum,user.user_metadata?.mlos_preparation_profile)});
+        const includeAdminPreview=hasAdminPreview(snapshot)&&await isContentAdmin();
+        return reply(200,{...projectLibrary(snapshot,{includeAdminPreview}),preparation:preparationContext(preparationCurriculum,user.user_metadata?.mlos_preparation_profile)});
       }
       if(req.method==='POST'&&path==='/study'){
         const input=await body(32768);fields(input,['questionVersionIds',...(Object.hasOwn(input,'variants')?['variants']:[])]);
         const ids=input.questionVersionIds;
         if(!Array.isArray(ids)||!ids.length||ids.length>50||new Set(ids).size!==ids.length||ids.some(x=>typeof x!=='string'))fail(400,'question_selection_invalid');
         const snapshot=await checked(admin.rpc('content_library_snapshot_v1',{p_learner:user.id}));
-        const available=new Set(snapshot.catalog.questions.filter(q=>q.status==='published').map(q=>q.questionVersionId));
+        const includeAdminPreview=hasAdminPreview(snapshot)&&await isContentAdmin();
+        const available=new Set(snapshot.catalog.questions.filter(q=>q.status==='published'||(includeAdminPreview&&q.status==='admin_preview')).map(q=>q.questionVersionId));
         if(ids.some(id=>!available.has(id)))fail(400,'question_selection_invalid');
         const variants=input.variants;
         if(variants!==undefined){
@@ -101,7 +107,7 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         if(error)fail(String(error.message).includes('import_payload_conflict')?409:400,String(error.message).includes('import_payload_conflict')?'import_payload_conflict':'manifest_invalid');
         return reply(200,data);
       }
-      const detail=/^\/imports\/([a-zA-Z0-9:_@.\-]{1,160})(\/publish)?$/.exec(path);
+      const detail=/^\/imports\/([a-zA-Z0-9:_@.\-]{1,160})(\/publish|\/widen)?$/.exec(path);
       if(!detail)fail(404,'not_found');
       if(req.method==='GET'&&!detail[2]){
         const {data:row,error}=await admin.from('content_library_imports').select('import_id,manifest,digest,status,receipt').eq('import_id',detail[1]).single();if(error||!row)fail(404,'import_not_found');
@@ -111,11 +117,19 @@ export function createLibraryHandler({admin,getUser,runtimeAccess,allowedOrigins
         const duplicateTargets=row.manifest.questions.flatMap(candidate=>catalog.body.questions.filter(q=>questionSignature(q)===questionSignature(candidate)).map(q=>({candidateId:candidate.questionId,canonicalQuestion:q})));
         return reply(200,{...row,sources,duplicateTargets});
       }
-      if(req.method==='POST'&&detail[2]){
-        const input=await body(65536);fields(input,['digest','rightsDecisions','reviewNotes','attested']);
+      if(req.method==='POST'&&detail[2]==='/widen'){
+        const input=await body(1024);fields(input,['confirm']);if(input.confirm!=='all-learners')fail(400,'widen_confirmation_required');
+        const {data,error}=await admin.rpc('content_library_widen_audience_v1',{p_import_id:detail[1],p_actor:user.id});
+        if(error){if(/content_admin_required/.test(String(error.message)))fail(403,'content_admin_required');if(/import_not_found/.test(String(error.message)))fail(404,'import_not_found');fail(500,'audience_change_failed');}
+        return reply(200,data);
+      }
+      if(req.method==='POST'&&detail[2]==='/publish'){
+        const input=await body(65536);fields(input,['digest','rightsDecisions','reviewNotes','attested',...(Object.hasOwn(input||{},'audience')?['audience']:[])]);
+        // ADR-147: default is the narrowest audience, so an older client can never publish to every learner by omission.
+        const audience=input.audience??'admin-preview';if(!['admin-preview','all-learners'].includes(audience))fail(400,'audience_invalid');
         if(!/^[a-f0-9]{64}$/.test(input.digest)||input.attested!==true||typeof input.reviewNotes!=='string'||!input.reviewNotes.trim()||input.reviewNotes.length>4000||!Array.isArray(input.rightsDecisions))fail(400,'review_attestation_required');
         for(const d of input.rightsDecisions){fields(d,['sourceId','rightsStatus','evidence']);if(!['owned','licensed','public_domain','citation_only','owner_waived'].includes(d.rightsStatus)||typeof d.evidence!=='string'||!d.evidence.trim()||d.evidence.length>4000)fail(400,'rights_decisions_invalid');}
-        const {data,error}=await admin.rpc('content_library_review_publish_v1',{p_import_id:detail[1],p_reviewer:user.id,p_expected_digest:input.digest,p_rights_decisions:input.rightsDecisions,p_review_notes:input.reviewNotes,p_attested:true});
+        const {data,error}=await admin.rpc('content_library_review_publish_v2',{p_import_id:detail[1],p_reviewer:user.id,p_expected_digest:input.digest,p_rights_decisions:input.rightsDecisions,p_review_notes:input.reviewNotes,p_attested:true,p_audience:audience});
         if(error){
           if(/content_admin_required|reviewer_not_authorized/.test(String(error.message)))fail(403,'reviewer_not_authorized');
           const code=[...knownErrors].find(x=>String(error.message).includes(x));fail(code?409:500,code||'import_publication_failed');

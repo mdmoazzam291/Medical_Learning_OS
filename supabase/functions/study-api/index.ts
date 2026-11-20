@@ -229,6 +229,17 @@ function routePath(url: URL) {
   return "/" + (index >= 0 ? parts.slice(index + 1) : parts).join("/");
 }
 
+// ADR-147: Admin-only preview questions (status admin_preview). Never part of lists, Study Now or revision;
+// only an Admin may open, answer and review one inside a session it started.
+function adminPreviewQuestions(catalog: any) {
+  if (!catalog || catalog.schemaVersion !== 1 || !Array.isArray(catalog.questions)) return [];
+  return catalog.questions.filter((q: any) =>
+    q && q.status === "admin_preview" && typeof q.publishedAt === "string" &&
+    typeof q.questionVersionId === "string" && typeof q.stem === "string" &&
+    Array.isArray(q.options) && typeof q.answerOptionId === "string"
+  );
+}
+
 function publishedQuestions(catalog: any) {
   if (!catalog || catalog.schemaVersion !== 1 || !Array.isArray(catalog.questions)) return [];
   return catalog.questions.filter((q: any) =>
@@ -314,6 +325,19 @@ Deno.serve(async (req: Request) => {
     if (authError || !authData.user?.id) fail(401, "unauthorized");
     const learnerId = authData.user.id;
     const internalExamTester = authData.user.app_metadata?.medical_learning_os_internal_tester === true;
+    let contentAdminCheck: Promise<boolean> | null = null;
+    const isContentAdmin = () => (contentAdminCheck ??= (async () => {
+      try {
+        const { data, error } = await admin.rpc("content_admin_status_v1", { p_user: learnerId });
+        return !error && data?.isAdmin === true;
+      } catch { return false; }
+    })());
+    // Published first; the Admin check runs only when the question is not published (no cost for learners).
+    const sessionQuestion = async (catalogBody: any, questionVersionId: unknown) =>
+      publishedQuestions(catalogBody).find((item: any) => item.questionVersionId === questionVersionId) ??
+      (await isContentAdmin()
+        ? adminPreviewQuestions(catalogBody).find((item: any) => item.questionVersionId === questionVersionId)
+        : undefined);
 
     // Per-learner request quota (ADR-143). Started only after the token is verified,
     // so a forged token cannot spend another learner's quota; runs alongside the
@@ -1024,7 +1048,7 @@ Deno.serve(async (req: Request) => {
           recordedAt: judgment.recorded_at
         } : null;
       }
-      const q = publishedQuestions(body).find((item: any) => item.questionVersionId === ids[session.position]);
+      const q = await sessionQuestion(body, ids[session.position]);
       if (!q) return { ...result, blocked: "question_no_longer_published", receipt: attempt?.receipt ?? null, memoryJudgment, recommendationContext };
       let revisionCues: any[] = [];
       if (attempt?.id) {
@@ -1140,9 +1164,7 @@ Deno.serve(async (req: Request) => {
       const questionVersionId = identifier(rawQuestionVersionId);
 
       const catalog = await getCatalog();
-      if (!publishedQuestions(catalog.body).some((question: any) =>
-        question.questionVersionId === questionVersionId
-      )) fail(404, "question_not_available");
+      if (!(await sessionQuestion(catalog.body, questionVersionId))) fail(404, "question_not_available");
 
       return response(req, 200, await learnerMediaPrompt(questionVersionId));
     }
@@ -1489,7 +1511,7 @@ Deno.serve(async (req: Request) => {
     const attemptReviewMatch = path.match(/^\/attempts\/([a-zA-Z0-9:_@.\-]{1,160})\/review$/);
     if (req.method === "GET" && attemptReviewMatch) {
       try {
-        return response(req, 200, await readLearnerAttemptReview({ admin, learnerId, attemptId: attemptReviewMatch[1], search: url.search, getCatalog, trustedRead }));
+        return response(req, 200, await readLearnerAttemptReview({ admin, learnerId, attemptId: attemptReviewMatch[1], search: url.search, getCatalog, trustedRead, isContentAdmin }));
       } catch (error) {
         const code = error instanceof Error ? error.message : "attempt_review_read_failed";
         fail(code === "attempt_not_found" ? 404 : ["query_not_supported", "invalid_identifier"].includes(code) ? 400 : 500,
@@ -2943,7 +2965,7 @@ Deno.serve(async (req: Request) => {
       if (sessionError) fail(500, "study_read_failed");
       if (!session) fail(404, "session_not_found");
       const qid = (session.question_version_ids as string[])[position];
-      const q = publishedQuestions(catalog.body).find((item: any) => item.questionVersionId === qid);
+      const q = await sessionQuestion(catalog.body, qid);
       if (!q) fail(409, "question_no_longer_published");
       if (!q.options.some((option: any) => option.optionId === optionId)) fail(400, "invalid_option");
       const primary = q.conceptLinks?.find((link: any) => link.role === "primary");

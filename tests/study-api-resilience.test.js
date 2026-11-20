@@ -339,7 +339,7 @@ test('media prompt API exposes only published-question media through the trusted
   const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
   assert.match(source, /path === "\/media"/);
   assert.match(source, /questionVersionId/);
-  assert.match(source, /publishedQuestions\(catalog\.body\)\.some/);
+  assert.match(source, /await sessionQuestion\(catalog\.body, questionVersionId\)/);
   assert.match(source, /admin\.rpc\("content_media_prompt"/);
   assert.match(source, /question_not_available/);
   assert.match(source, /media_prompt_failed/);
@@ -349,7 +349,7 @@ test('media prompt API exposes only published-question media through the trusted
 
 test('session state binds learner-safe media prompt to the exact published question', async () => {
   const source = await readFile(new URL('../supabase/functions/study-api/index.ts', import.meta.url), 'utf8');
-  const sessionQuestion = source.indexOf('const q = publishedQuestions(body).find');
+  const sessionQuestion = source.indexOf('const q = await sessionQuestion(body, ids[session.position]);');
   const mediaRpc = source.indexOf('await learnerMediaPrompt(q.questionVersionId)', sessionQuestion);
   assert.ok(sessionQuestion >= 0 && mediaRpc > sessionQuestion);
   assert.match(source, /const sourceMedia = Array\.isArray\(data\?\.media\) \? data\.media : \[\]/);

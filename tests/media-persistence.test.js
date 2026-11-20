@@ -67,7 +67,7 @@ test('learner media prompt omits diagnosis, provenance, rights and annotations',
 
 test('study API exposes media only for currently published questions via trusted RPC', () => {
   assert.match(studyApi, /path === "\/media"/);
-  assert.match(studyApi, /publishedQuestions\(catalog\.body\)\.some/);
+  assert.match(studyApi, /await sessionQuestion\(catalog\.body, questionVersionId\)/);
   assert.match(studyApi, /admin\.rpc\("content_media_prompt"/);
   assert.match(studyApi, /question_not_available/);
   assert.match(studyApi, /media_prompt_failed/);
