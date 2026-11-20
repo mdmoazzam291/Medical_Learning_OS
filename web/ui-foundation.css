@@ -68,3 +68,20 @@ a.text-button,.study-entry-topbar a,.vault-topbar a,.library-intro+p a,.workspac
   .page-heading h1,main>h1{font-size:1.75rem;margin:6px 0}
   .page-heading p,.library-intro{margin:4px 0}
 }
+
+/* ADR-154 — Phone: "Search & filters" opens as a bottom sheet over the page,
+   so concept notes are not pushed down. Tap the sheet's header to close. */
+@media (max-width:700px){
+  details.cw-filter-disclosure[open]{position:fixed;left:0;right:0;bottom:0;z-index:60;max-height:80vh;overflow:auto;margin:0;background:var(--surface);border-radius:18px 18px 0 0;border:1px solid var(--line);padding:0 16px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -12px 32px rgba(0,0,0,.18)}
+  details.cw-filter-disclosure[open]>summary{position:sticky;top:0;z-index:1;background:var(--surface);font-weight:700;justify-content:space-between}
+  details.cw-filter-disclosure[open]>summary::after{content:"Done";margin-left:auto;padding:6px 14px;border-radius:999px;background:var(--forest);color:var(--surface);font-size:.875rem}
+  details.cw-filter-disclosure[open]>summary{display:flex;align-items:center}
+  details.cw-filter-disclosure[open] .library-filters{display:grid;grid-template-columns:1fr;gap:10px}
+  body:has(details.cw-filter-disclosure[open])::after{content:"";position:fixed;inset:0;z-index:55;background:rgba(10,20,16,.4)}
+  body:has(details.cw-filter-disclosure[open]){overflow:hidden}
+  body:has(details.cw-filter-disclosure[open]) .mlos-tabbar{display:none}
+  /* Study is the main action: full width; secondary controls share the next row. */
+  .library-actions>button:first-of-type{flex-basis:100%;order:-1;background:var(--forest);color:var(--surface);border-color:var(--forest)}
+  .library-actions>a{flex-basis:auto;order:3}
+  .cw-toolbar>span{display:none}
+}

@@ -10,6 +10,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-21 — Phone tab bar, filter sheet, sticky NMC search (ADR-154), branch `feat/phone-tabbar-filters-catalogue`
+- Owner go-ahead 02:07 IST for the three ADR-153 follow-ups. Web pages only.
+- Verified locally: `npm test` 1,796/1,796 (new `tests/phone-tabbar.test.js`); `npm run check`; axe WCAG 2.2 audit (120 audits) passes after forcing full opacity on tab labels; 28 Chromium browser checks incl. headless navigation check. `library-browser-check.js` and `navigation-browser-check.js` updated to close the phone filter sheet before page interactions.
+- Not run locally: WebKit, headed navigation check (CI). Not checked on the owner's devices.
+- Next: CI green → owner go-ahead to merge. Stacked on #523 (docs); merging this PR includes it.
+
 ### 2026-11-21 — UI type, spacing and layout pass (ADR-153), branch `fix/ui-type-spacing-layout`
 - Owner asked for a phone/tablet/desktop review of fonts, boxes and spacing, then "Fix it".
 - Measured before/after on 20 pages × 6 viewports (phone and tablet in both orientations, laptop, wide; signed-out and synthetic signed-in): text under 12px 918 → 250 (all remaining instances are the decorative sign-in mock-up), undersized tap targets 372 → 195 (remaining are inline sentence/footer links, exempt under WCAG 2.5.8), longest estimated line 187 → 112 characters, no horizontal scrolling, no page errors.
