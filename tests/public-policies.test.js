@@ -7,13 +7,16 @@ import { buildPages } from '../scripts/build-pages.js';
 import { publicFileSet } from '../scripts/public-surface.js';
 
 const pages = ['terms', 'privacy', 'refunds', 'contact', 'services', 'delivery'];
+// Credits & licences (ADR-148) is public and checked like the policy pages, but it is not a policy page, so the
+// frozen sign-in page does not have to link it.
+const publicPages = [...pages, 'credits'];
 
 test('public policy bundle provides readable unauthenticated pages without private drafts', async () => {
-  for (const name of pages) assert.ok(publicFileSet.has(`web/${name}.html`), `${name} must be public`);
+  for (const name of publicPages) assert.ok(publicFileSet.has(`web/${name}.html`), `${name} must be public`);
   const output = await mkdtemp(join(tmpdir(), 'medretica-policies-'));
   try {
     await buildPages({ outputDirectory: output });
-    for (const name of pages) {
+    for (const name of publicPages) {
       const html = await readFile(join(output, `web/${name}.html`), 'utf8');
       assert.match(html, /<main\b/);
       assert.match(html, /<h1\b/);
