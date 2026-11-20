@@ -266,6 +266,23 @@
       "references": [
         "docs/SERVICE_PORTABILITY.md"
       ]
+    },
+    {
+      "id": "huggingface",
+      "provider": "Hugging Face (public dataset download)",
+      "status": "workflow-in-source",
+      "owner": "Medical Learning OS owner",
+      "markers": [
+        "huggingface.co"
+      ],
+      "data": "Download-only source of the public MedMCQA dataset files; no account, credential or learner data. Downloaded rows are copied into the private Supabase staging table, which is the system of record from then on.",
+      "boundary": "Manual load-dataset-staging workflow only; application code never calls it.",
+      "export": "Nothing held there; the staging table keeps each raw row and its SHA-256, and the workflow logs the parquet checksums.",
+      "restore": "Re-run the workflow from the same dataset revision, or restore the staging table from the database backup; another mirror of the same dataset can replace the URL if checksums match.",
+      "gaps": "Dataset revision is not pinned to a commit hash yet; the workflow records file checksums per run.",
+      "references": [
+        "docs/DECISIONS.md"
+      ]
     }
   ]
 }

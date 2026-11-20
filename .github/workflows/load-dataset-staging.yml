@@ -1,0 +1,65 @@
+name: Load dataset into private staging
+
+# Manual, owner-requested load of MedMCQA rows into public.dataset_question_staging (ADR-145).
+# The agent workspace cannot reach the dataset CDN; GitHub runners can. Logs are public:
+# only counts and checksums are printed, never question text. Nothing is published.
+on:
+  workflow_dispatch:
+    inputs:
+      per_subject_train:
+        description: Training rows to sample per subject (validation rows are always loaded)
+        required: true
+        default: '1000'
+      confirm:
+        description: Type medmcqa to confirm
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dataset-staging
+  cancel-in-progress: false
+
+jobs:
+  load:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    steps:
+      - name: Guard inputs and branch
+        run: |
+          test "${{ inputs.confirm }}" = "medmcqa"
+          test "${{ github.ref }}" = "refs/heads/main"
+          [[ "${{ inputs.per_subject_train }}" =~ ^[0-9]{1,5}$ ]]
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+          pip install -q pyarrow==26.0.1
+      - name: Download MedMCQA (Hugging Face, Apache-2.0 per dataset card)
+        run: |
+          set -euo pipefail
+          base=https://huggingface.co/datasets/openlifescienceai/medmcqa/resolve/main/data
+          curl -fsSL -o "$RUNNER_TEMP/train.parquet" "$base/train-00000-of-00001.parquet"
+          curl -fsSL -o "$RUNNER_TEMP/validation.parquet" "$base/validation-00000-of-00001.parquet"
+          sha256sum "$RUNNER_TEMP"/*.parquet | sed "s#$RUNNER_TEMP/##"
+      - name: Select rows
+        run: python3 scripts/load-dataset-staging.py "$RUNNER_TEMP/train.parquet" "$RUNNER_TEMP/validation.parquet" "$RUNNER_TEMP/rows.csv" "${{ inputs.per_subject_train }}"
+      - name: Load into staging (upsert by dataset and row ID)
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -q <<SQL
+          begin;
+          create temp table incoming (dataset_id text, dataset_version text, split text, row_id text, subject_label text, topic_label text, choice_type text, payload jsonb, payload_sha256 text) on commit drop;
+          \copy incoming from '$RUNNER_TEMP/rows.csv' with (format csv)
+          insert into public.dataset_question_staging (dataset_id,dataset_version,split,row_id,subject_label,topic_label,choice_type,payload,payload_sha256)
+          select dataset_id,dataset_version,split,row_id,nullif(subject_label,''),nullif(topic_label,''),nullif(choice_type,''),payload,payload_sha256 from incoming
+          on conflict (dataset_id,row_id) do update set payload=excluded.payload,payload_sha256=excluded.payload_sha256,split=excluded.split,
+            subject_label=excluded.subject_label,topic_label=excluded.topic_label,choice_type=excluded.choice_type,dataset_version=excluded.dataset_version,loaded_at=now()
+          where dataset_question_staging.payload_sha256 is distinct from excluded.payload_sha256;
+          commit;
+          SQL
+          psql "$SUPABASE_DB_URL" -At -c "select split||' '||count(*) from public.dataset_question_staging where dataset_id='medmcqa' group by split order by split"

@@ -1759,3 +1759,10 @@ Owner instruction (2026-11-18 01:47 IST): mark the foundation complete and keep 
 - **Editing:** `node ops/hierarchy/link-subtopic.js` (`--find`, `--parent … --child …`, `--parent … --new "Label"`, `--unlink`, `--check`). An Admin edit screen is a later step and would use the same `addLink` / `removeLink` / `validateHierarchy` functions.
 - **Display:** the NMC preview shows "Part of: …" and "Sub-topics: …" on concept pages and topic cards once links exist. The preview builder adds `hierarchy` only when there is at least one link, so the pinned preview data and checksum are unchanged today; after the first links, rebuild the preview, repin and redeploy nmc-admin-preview.
 - **Not in scope:** multiple parents, automatic inference of sub-topics, mastery roll-up (accuracy on children is not mastery of the parent).
+
+## ADR-145 — Private staging for external question datasets; MedMCQA pilot (20 November 2026)
+- **Owner decisions (2026-11-20):** import MedMCQA questions; rights are not reviewed for questions now or in future (04:40 and 12:43 IST); unverified answer keys and no exam/year source are acceptable; first audience is Admin + owner only (12:43 IST).
+- **Route:** the agent workspace cannot reach the dataset CDN, and the Drive connector cannot pass a 55 MB file, so a manual workflow (`load-dataset-staging.yml`, main only, typed confirmation) downloads the Hugging Face copy (`openlifescienceai/medmcqa`, dataset card licence: Apache-2.0) and loads rows into `public.dataset_question_staging` with `SUPABASE_DB_URL`.
+- **Scope of the load:** all 6,150 validation rows (NEET PG split) plus a fixed-seed sample of up to N training rows per subject (default 1,000). The 4,183 test rows have no released keys and are not loaded.
+- **Privacy of the data:** the repository is public, so question text is never committed and the workflow prints only counts and checksums. The staging table has RLS on and no browser grants; only the service role can read it. Staging is not publication.
+- **Next:** NMC concept mapping, owner rights waiver (ADR-146) and Admin-only audience (ADR-147) before anything reaches the Library or Question bank.
