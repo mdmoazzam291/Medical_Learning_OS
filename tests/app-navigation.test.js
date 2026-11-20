@@ -79,6 +79,7 @@ test('blocked browser storage retains preferences in memory without claiming dev
 test('route identity places private notes in Library and authenticated tools under Account', () => {
   const { routeIdentity } = requireNav();
   assert.deepEqual(routeIdentity('/web/vault.html', ''), { master: 'library', section: 'mynotes' });
+  assert.deepEqual(routeIdentity('/web/nmc-catalogue.html', ''), { master: 'library', section: 'subjects' });
   assert.deepEqual(routeIdentity('/web/admin.html', '?admin=true'), { master: 'admin', section: 'overview' });
   assert.deepEqual(routeIdentity('/web/content-import', ''), { master: 'admin', section: 'content' });
   assert.deepEqual(routeIdentity('/web/review', ''), { master: 'admin', section: 'content' });

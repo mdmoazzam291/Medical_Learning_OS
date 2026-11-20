@@ -5,7 +5,7 @@ import { handleAdminMcpHttp, protectedResourceMetadata } from '../src/server/adm
 import { publicFileSet } from './public-surface.js';
 
 const root = new URL('../', import.meta.url);
-const types = { xml: 'application/xml', txt: 'text/plain', html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png', json: 'application/json' };
+const types = { xml: 'application/xml', txt: 'text/plain', html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png', json: 'application/json', woff2: 'font/woff2' };
 
 const securityHeaders = {
   'X-Content-Type-Options': 'nosniff',
@@ -71,7 +71,7 @@ const server = createServer(async (req, res) => {
     }
     const data = await readFile(fileURLToPath(new URL(path, root)));
     res.writeHead(200, {
-      'Content-Type': `${types[path.split('.').pop()]}; charset=utf-8`,
+      'Content-Type': path.endsWith('.woff2') ? types.woff2 : `${types[path.split('.').pop()]}; charset=utf-8`,
       'Cache-Control': 'no-store',
       ...securityHeaders,
       'Content-Security-Policy': "default-src 'self'; script-src 'self' https://js.sentry-cdn.com https://browser.sentry-cdn.com; style-src 'self'; img-src 'self' https://iyapppmeieqhflnzslao.supabase.co; connect-src 'self' https://iyapppmeieqhflnzslao.supabase.co https://o4512152153751552.ingest.us.sentry.io; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"

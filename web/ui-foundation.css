@@ -1,0 +1,70 @@
+/* UI foundation (2026-11-21): one font, readable minimum sizes, touch targets,
+   reading measure and content-first density across phone, tablet and desktop.
+   Loaded last on every page so it settles conflicts between older sheets. */
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url("/web/fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url("/web/fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2")}
+
+:root{--font:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--measure:70ch;font-family:var(--font);font-size:16px}
+body,button,input,select,textarea{font-family:var(--font)}
+h1,h2,h3,h4,.hero h2,.session-card,.cw-concept-heading h2{font-family:var(--font)}
+/* Numbers line up in stats and counts. */
+strong,.metrics,.schedule-count{font-variant-numeric:tabular-nums}
+
+/* iPhone Safari zooms into any text field below 16px. */
+input,select,textarea,input[type=search]{font-size:16px!important}
+
+/* Small labels stay readable: 12px floor, calmer letter-spacing. */
+.eyebrow,.cw-eyebrow,.account-kicker{font-size:.75rem!important;letter-spacing:.08em}
+small,.muted{font-size:.875rem}
+.badge{font-size:.75rem}
+
+/* Reading measure: running text never stretches past ~70 characters. */
+main p,.library-note-body,.vault-markdown,.canonical-note-body,.policy-page li{max-width:var(--measure)}
+.hero p,.panel p{max-width:var(--measure)}
+
+/* Touch targets: every disclosure and stand-alone text link is at least 44px tall. */
+/* Padding (not display:flex) keeps the native ▸ marker and any page-specific summary layout. */
+summary{min-height:44px;padding-top:12px;padding-bottom:12px;box-sizing:border-box;cursor:pointer}
+a.text-button,.study-entry-topbar a,.vault-topbar a,.library-intro+p a,.workspace-chips a,.library-actions>a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Home: stats read as one compact row on every device; no tall empty box. */
+.learning-snapshot{padding-top:18px;padding-bottom:18px}
+.learning-snapshot .metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0}
+.learning-snapshot .metrics>div{min-width:0}
+.learning-snapshot .metrics span{font-size:.875rem;margin-top:4px}
+@media (max-width:700px){
+  .learning-snapshot .metrics strong{font-size:1.375rem}
+  .learning-snapshot .metrics span{font-size:.75rem}
+  .learning-snapshot .metrics>div{border-left:0!important;padding-left:0!important}
+  .hero.study-next .action-link,.hero.study-next a.button,.hero.study-next>div>a{width:100%;justify-content:center}
+}
+
+/* Concept Notes: one tidy control row, aligned to the 44px button height. */
+.library-actions{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px}
+.library-actions>label{display:flex;align-items:center;gap:8px;margin:0;white-space:nowrap}
+.library-actions>label select{margin:0;width:auto;min-width:84px}
+.library-actions>button{min-height:44px;height:44px;padding:0 16px}
+.workspace-chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.workspace-chips>label{display:flex;align-items:center;gap:8px;margin:0}
+.workspace-chips>label select{margin:0;width:auto}
+.preparation-focus{padding-top:12px;padding-bottom:12px}
+.cw-concept-heading{padding-bottom:4px}
+.cw-concept-heading small{display:none}
+@media (max-width:700px){
+  .library-actions>button{flex:1 1 calc(50% - 10px)}
+  .library-actions>a{flex-basis:100%}
+}
+
+/* Vault: the concept index only sticks when the screen is tall enough to hold it. */
+@media (max-height:700px){.vault-index{position:static!important;max-height:none!important}}
+@media (max-height:700px) and (min-width:801px){.cw-explorer,.cw-context{position:static!important;max-height:none!important}}
+
+/* Navigation: submenu arrows recede until hovered or focused. */
+.mlos-master-item>button{opacity:.55}
+.mlos-master-item:hover>button,.mlos-master-item>button:focus-visible,.mlos-master-item>button[aria-expanded=true]{opacity:1}
+
+/* Phone landscape: shorter header leaves room for content. */
+@media (max-height:500px) and (orientation:landscape){
+  .page-heading h1,main>h1{font-size:1.75rem;margin:6px 0}
+  .page-heading p,.library-intro{margin:4px 0}
+}

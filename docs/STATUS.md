@@ -10,6 +10,13 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-21 — UI type, spacing and layout pass (ADR-153), branch `fix/ui-type-spacing-layout`
+- Owner asked for a phone/tablet/desktop review of fonts, boxes and spacing, then "Fix it".
+- Measured before/after on 20 pages × 6 viewports (phone and tablet in both orientations, laptop, wide; signed-out and synthetic signed-in): text under 12px 918 → 250 (all remaining instances are the decorative sign-in mock-up), undersized tap targets 372 → 195 (remaining are inline sentence/footer links, exempt under WCAG 2.5.8), longest estimated line 187 → 112 characters, no horizontal scrolling, no page errors.
+- Changes: self-hosted Atkinson Hyperlegible; six-step type scale; 16px text fields (stops iPhone zoom); `web/ui-foundation.css`; NMC catalogue navigation highlight; sign-in content baseline hashes updated for the new stylesheet link and snapped sizes (`tests/fixtures/signin-content-baseline.json`).
+- Verified locally: `npm test` 1,793/1,793; `npm run check`; axe WCAG 2.2 audit (120 audits, Chromium) passes; 28 Chromium browser checks pass. Not run locally: WebKit jobs and the headed navigation check (CI covers them). Not yet checked on the owner's real iPhone/iPad.
+- Next: CI green → owner go-ahead to merge (web pages deploy from `main`). Then owner choice on the bottom tab bar, filter sheet and NMC catalogue redesign.
+
 ### 2026-11-20 — #508 merged and deployed; sub-topic hierarchy (ADR-144)
 - Owner (04:44 IST) asked whether the NMC foundation is on the learner side. Answer: Admin account only (= learner `mdmoazzam291@gmail.com`); `learnerActivation:false`. Owner chose to keep it that way for now.
 - On owner go-ahead, PR #508 (19-subject index, "Also taught in …") squash-merged as `c3475d9`; #507 closed (included). nmc-admin-preview redeployed from `c3475d9` by the ADR-140 workflow (run 44662824259; tests and check passed in the run); unauthenticated request → 401.
