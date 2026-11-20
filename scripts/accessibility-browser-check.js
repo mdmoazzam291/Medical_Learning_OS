@@ -43,6 +43,7 @@ const PUBLIC_PAGES = Object.freeze([
   '/web/terms.html',
   '/web/privacy.html',
   '/web/refunds.html',
+  '/web/credits.html',
   '/web/delivery.html'
 ]);
 

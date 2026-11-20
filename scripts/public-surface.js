@@ -70,6 +70,7 @@ export const publicFiles = Object.freeze([
   'web/services.html',
   'web/contact.html',
   'web/refunds.html',
+  'web/credits.html',
   'web/delivery.html',
   'web/terms.html',
   'web/privacy.html',
