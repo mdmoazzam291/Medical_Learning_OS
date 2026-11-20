@@ -10,6 +10,11 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-20 — MedMCQA staged; question rights waiver live (ADR-145, ADR-146)
+- Staging: private table applied; 25,183 MedMCQA rows loaded by the manual workflow (no question text in logs or the repository).
+- Rights: `owner_waived` live for question publication; Review & publish records it automatically for question sources; Import & review defaults to it; content-library-api redeployed. Notes, media and AI tests unchanged.
+- Nothing published; no learner-visible change. Next: Admin-only audience, concept mapping, pilot import.
+
 ### 2026-11-20 — #508 merged and deployed; sub-topic hierarchy (ADR-144)
 - Owner (04:44 IST) asked whether the NMC foundation is on the learner side. Answer: Admin account only (= learner `mdmoazzam291@gmail.com`); `learnerActivation:false`. Owner chose to keep it that way for now.
 - On owner go-ahead, PR #508 (19-subject index, "Also taught in …") squash-merged as `c3475d9`; #507 closed (included). nmc-admin-preview redeployed from `c3475d9` by the ADR-140 workflow (run 44662824259; tests and check passed in the run); unauthenticated request → 401.

@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-20T08:10Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-20T08:45Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -18,12 +18,10 @@ Checked: 2026-11-20T08:10Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
 ## Active task — MedMCQA pilot import (2026-11-20, Claude)
-- Owner decisions: rights not reviewed for questions now or in future (12:43 IST); unverified keys and no exam/year source acceptable (04:40 IST); audience Admin + owner first (12:43 IST).
-- PR #511 `feat/medmcqa-staging` (ADR-145): private `dataset_question_staging` table + manual `load-dataset-staging.yml`. PR #512 `feat/question-rights-waiver` (ADR-146): `owner_waived` rights status, automatic for question sources. Both: tests/check pass locally; **migrations not applied**. Both append to DECISIONS.md: rebase the second after the first merges.
-- Blocked on owner go-ahead for production DDL. A rolled-back trial of the #512 migration was refused by the safety check (the script lacked a final ROLLBACK, so the refusal was correct); do not retry without go-ahead.
-- Workspace cannot reach `cdn.hf.co` or `datasets-server.huggingface.co`; the Drive copy (`MedMCQA for medretica/data.zip`, 55 MB) is too large for the connector, so the workflow downloads on GitHub runners.
-- Next after go-ahead: merge #511 → apply staging migration → run workflow (per_subject_train 1000) → verify counts via Supabase MCP; merge #512 → rolled-back trial → apply → redeploy content-library-api. Then ADR-147 Admin-only audience for published questions (today publishing reaches every learner), NMC concept mapping, manifests (100 questions each), unverified-key handling outside mastery/FSRS.
-
+- Owner decisions: rights not reviewed for questions now or in future (12:43 IST); unverified keys and no exam/year source acceptable (04:40 IST); audience Admin + owner first (12:43 IST); go-ahead for staging + waiver 13:07 IST.
+- Done: #511 merged `12b438a` (ADR-145), migration `dataset_question_staging` applied (RLS on, no anon/authenticated access). Workflow run 44698014031 loaded 25,183 MedMCQA rows: train 21,000 (1,000 per subject, 21 subjects incl. Dental and Unknown), validation 4,183. Parquet sha256 train `b119434b…`, validation `b768a1ea…`. Every row has a 0–3 key; 16,871 are single-answer. Do not call the HF validation split "NEET PG": its size (4,183) differs from the paper's dev split (6,150).
+- Done: #512 merged `86430e8` (ADR-146). Rolled-back trial passed (constraint, 3 gates, publish function; ACL unchanged), migration `question_rights_owner_waiver` applied and verified; content-library-api redeployed from `86430e8` (run 44699928979), unauthenticated → 401.
+- Next: ADR-147 Admin-only audience for published questions (publishing currently reaches every learner); NMC concept mapping for a ~3,000 single-answer pilot (exclude Dental, Unknown); manifests of 100; keep these attempts out of mastery/FSRS evidence. Ask the owner before deploying each.
 ## Active task — sub-topic hierarchy (2026-11-20, Claude)
 - Branch `feat/concept-topic-hierarchy` from `main` `c3475d9`; ADR-144; see STATUS 2026-11-20. Verified locally: `npm test` 1,765/1,765, `npm run check` passes. Not yet: CI, merge.
 - No deploy needed: preview data unchanged (hierarchy is added to it only once links exist). Web pages deploy from `main` on merge (adds breadcrumb/sub-topic markup that renders nothing while the registry is empty).
