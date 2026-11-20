@@ -1,0 +1,74 @@
+name: Stage a Series 1 batch for Admin review
+
+# Manual, owner-requested (ADR-152). Builds one Medretica QBank · Series 1 manifest from the private staging rows and
+# the reviewed concept links, then stages it in the Admin content inbox. Staging has no publication authority: the
+# owner inspects the import in Admin and chooses Review & publish (Admin preview). Logs are public: counts only.
+on:
+  workflow_dispatch:
+    inputs:
+      batch_id:
+        description: Reviewed batch ID (has data/series1/<batch>-concept-review.json)
+        required: true
+        default: 'pilot-300'
+      batch_number:
+        description: Batch of 100 to build (1, 2, 3 …)
+        required: true
+        default: '1'
+      stage:
+        description: Type stage to write it to the Admin inbox (anything else = dry run, counts only)
+        required: true
+        default: 'dry-run'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: series1-staging
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - name: Guard inputs and branch
+        run: |
+          test "${{ github.ref }}" = "refs/heads/main"
+          [[ "${{ inputs.batch_id }}" =~ ^[a-z0-9-]{1,40}$ ]]
+          [[ "${{ inputs.batch_number }}" =~ ^[0-9]{1,3}$ ]]
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install PostgreSQL client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+      - name: Export reviewed rows and their concepts (private)
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          psql "$SUPABASE_DB_URL" -At -v ON_ERROR_STOP=1 -c "select json_build_object('rowId',s.row_id,'subjectId',m.subject_id,'choiceType',s.choice_type,'payload',s.payload,'conceptId',m.reviewed_concept_id,'decision',m.review_decision) from public.dataset_question_concept_matches m join public.dataset_question_staging s on s.dataset_id=m.dataset_id and s.row_id=m.row_id where m.batch_id='${{ inputs.batch_id }}' order by s.row_id" > "$RUNNER_TEMP/rows.jsonl"
+          psql "$SUPABASE_DB_URL" -At -v ON_ERROR_STOP=1 -c "select coalesce(json_object_agg(concept_id, accepted_document),'{}') from public.content_concept_current_identities where concept_id in (select reviewed_concept_id from public.dataset_question_concept_matches where batch_id='${{ inputs.batch_id }}' and reviewed_concept_id is not null)" > "$RUNNER_TEMP/concepts.json"
+          wc -l < "$RUNNER_TEMP/rows.jsonl"
+      - name: Build and validate the manifest
+        run: node scripts/build-series1-batch.js "$RUNNER_TEMP/rows.jsonl" "$RUNNER_TEMP/concepts.json" "$RUNNER_TEMP/manifest.json" "${{ inputs.batch_id }}" "${{ inputs.batch_number }}"
+      - name: Stage in the Admin inbox (no publication)
+        if: inputs.stage == 'stage'
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          # The manifest is loaded from the runner file (too large for a command-line variable).
+          # Database errors can contain manifest text; never print them.
+          if ! psql "$SUPABASE_DB_URL" -At -v ON_ERROR_STOP=1 -q > "$RUNNER_TEMP/receipt.txt" 2>/dev/null <<SQL
+          begin;
+          create temp table incoming (j jsonb) on commit drop;
+          \copy incoming from '$RUNNER_TEMP/manifest.json' with (format csv, quote e'\x01', delimiter e'\x02')
+          select public.content_library_stage_v1(j, null)::text from incoming;
+          commit;
+          SQL
+          then
+            echo "Staging failed; nothing was published. Check the Admin inbox."; exit 1
+          fi
+          cat "$RUNNER_TEMP/receipt.txt"
