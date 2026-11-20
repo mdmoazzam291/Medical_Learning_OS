@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 
 const review = JSON.parse(readFileSync(new URL('../data/series1/pilot-300-concept-review.json', import.meta.url), 'utf8'));
 const FITS = new Set(['exact', 'broad', 'none', 'exclude']);
-const FLAGS = new Set(['cross-subject', 'misfiled-subject', 'key-suspect', 'stem-cleanup', 'defect']);
+const FLAGS = new Set(['cross-subject', 'misfiled-subject', 'key-suspect', 'stem-cleanup', 'defect', 'text-repair', 'no-explanation', 'wording-review']);
 const ROW_KEYS = new Set(['rowSuffix', 'subjectId', 'conceptLabel', 'fit', 'conceptSubject', 'gap', 'flags']);
 
 test('Series 1 pilot review covers 304 distinct questions with valid decisions', () => {

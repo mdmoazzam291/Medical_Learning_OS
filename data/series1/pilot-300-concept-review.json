@@ -76,7 +76,10 @@
    "rowSuffix": "bbae7daf",
    "subjectId": "anaesthesia",
    "conceptLabel": "Regional anaesthesia",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "d589d49d",
@@ -199,7 +202,10 @@
    "rowSuffix": "8ea660c3",
    "subjectId": "anatomy",
    "conceptLabel": "Subclavian artery",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "93c2a77c",
@@ -238,13 +244,19 @@
    "rowSuffix": "df7869e1",
    "subjectId": "anatomy",
    "conceptLabel": "Development of the heart",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "e0407481",
    "subjectId": "anatomy",
    "conceptLabel": "Cerebral arterial supply",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "044651ea",
@@ -262,7 +274,10 @@
    "rowSuffix": "1b3f2699",
    "subjectId": "biochemistry",
    "conceptLabel": "Colorimetry and spectrophotometry",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
   },
   {
    "rowSuffix": "28dbaadb",
@@ -358,7 +373,8 @@
    "fit": "exact",
    "conceptSubject": "medicine",
    "flags": [
-    "cross-subject"
+    "cross-subject",
+    "stem-cleanup"
    ]
   },
   {
@@ -371,7 +387,10 @@
    "rowSuffix": "226477e6",
    "subjectId": "community-medicine",
    "conceptLabel": "Health care delivery system in India",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
   },
   {
    "rowSuffix": "2edb48d8",
@@ -392,7 +411,8 @@
    "fit": "exact",
    "conceptSubject": "psychiatry",
    "flags": [
-    "cross-subject"
+    "cross-subject",
+    "wording-review"
    ]
   },
   {
@@ -499,12 +519,13 @@
   {
    "rowSuffix": "5f9cdb22",
    "subjectId": "dermatology",
-   "conceptLabel": null,
-   "fit": "none",
-   "gap": "pigmentary disorders",
+   "conceptLabel": "Heavy metal poisoning",
+   "fit": "exact",
    "flags": [
+    "cross-subject",
     "defect"
-   ]
+   ],
+   "conceptSubject": "forensic-medicine"
   },
   {
    "rowSuffix": "675a157f",
@@ -685,17 +706,21 @@
    "conceptLabel": "Abortion",
    "fit": "exact",
    "flags": [
-    "stem-cleanup"
+    "stem-cleanup",
+    "text-repair"
    ]
   },
   {
    "rowSuffix": "1eee567d",
    "subjectId": "forensic-medicine",
-   "conceptLabel": "Mental disorders",
+   "conceptLabel": "Anxiety disorders",
    "fit": "exact",
    "flags": [
+    "cross-subject",
+    "misfiled-subject",
     "stem-cleanup"
-   ]
+   ],
+   "conceptSubject": "psychiatry"
   },
   {
    "rowSuffix": "26564122",
@@ -719,7 +744,10 @@
    "rowSuffix": "6ba5e1ac",
    "subjectId": "forensic-medicine",
    "conceptLabel": "Personal identification",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "7344ba05",
@@ -819,14 +847,21 @@
   {
    "rowSuffix": "70e6e066",
    "subjectId": "medicine",
-   "conceptLabel": "Viral hepatitis",
-   "fit": "exact"
+   "conceptLabel": "Oncogenic infections",
+   "fit": "exact",
+   "conceptSubject": "microbiology",
+   "flags": [
+    "cross-subject"
+   ]
   },
   {
    "rowSuffix": "73fc6501",
    "subjectId": "medicine",
    "conceptLabel": "Arboviral infections",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "7e55d31e",
@@ -835,7 +870,8 @@
    "fit": "exact",
    "conceptSubject": "surgery",
    "flags": [
-    "cross-subject"
+    "cross-subject",
+    "text-repair"
    ]
   },
   {
@@ -915,7 +951,10 @@
    "rowSuffix": "334873df",
    "subjectId": "microbiology",
    "conceptLabel": "Disinfection",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "424d96ef",
@@ -1021,7 +1060,10 @@
    "rowSuffix": "3de4c88d",
    "subjectId": "obstetrics-gynaecology",
    "conceptLabel": "Menopause",
-   "fit": "broad"
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "4036b902",
@@ -1039,7 +1081,10 @@
    "rowSuffix": "61f149f0",
    "subjectId": "obstetrics-gynaecology",
    "conceptLabel": "Ectopic pregnancy",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "665b6a15",
@@ -1127,7 +1172,10 @@
    "subjectId": "ophthalmology",
    "conceptLabel": "Retinal disorders",
    "fit": "broad",
-   "gap": "fundus fluorescein angiography"
+   "gap": "fundus fluorescein angiography",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "4df935ad",
@@ -1179,7 +1227,10 @@
    "subjectId": "ophthalmology",
    "conceptLabel": null,
    "fit": "none",
-   "gap": "phakomatoses (neurofibromatosis)"
+   "gap": "phakomatoses (neurofibromatosis)",
+   "flags": [
+    "stem-cleanup"
+   ]
   },
   {
    "rowSuffix": "ac4480cf",
@@ -1194,7 +1245,8 @@
    "fit": "exact",
    "conceptSubject": "physiology",
    "flags": [
-    "cross-subject"
+    "cross-subject",
+    "stem-cleanup"
    ]
   },
   {
@@ -1243,7 +1295,10 @@
    "rowSuffix": "7448a082",
    "subjectId": "orthopaedics",
    "conceptLabel": "Open fractures",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
   },
   {
    "rowSuffix": "832da952",
@@ -1293,7 +1348,10 @@
    "rowSuffix": "fe70731e",
    "subjectId": "orthopaedics",
    "conceptLabel": "Musculoskeletal deformities",
-   "fit": "exact"
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "fe87d1b2",
@@ -1318,7 +1376,10 @@
    "rowSuffix": "3e5389bb",
    "subjectId": "pathology",
    "conceptLabel": "Breast cancer",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "no-explanation"
+   ]
   },
   {
    "rowSuffix": "4394978a",
@@ -1451,7 +1512,10 @@
    "subjectId": "pediatrics",
    "conceptLabel": "Neonatal surgical conditions",
    "fit": "broad",
-   "gap": "congenital lung malformations"
+   "gap": "congenital lung malformations",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "452831bd",
@@ -1497,7 +1561,10 @@
    "rowSuffix": "a172ce87",
    "subjectId": "pediatrics",
    "conceptLabel": "Portal hypertension",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "b27a4488",
@@ -1579,13 +1646,19 @@
    "rowSuffix": "abf6c939",
    "subjectId": "pharmacology",
    "conceptLabel": "Antibacterial drugs",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "bd39d8f6",
    "subjectId": "pharmacology",
    "conceptLabel": "Drugs used in heart failure",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "dbd1431e",
@@ -1621,13 +1694,19 @@
    "rowSuffix": "031b48a5",
    "subjectId": "physiology",
    "conceptLabel": "Renal function tests",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
   },
   {
    "rowSuffix": "0eb14ef0",
    "subjectId": "physiology",
    "conceptLabel": "Blood pressure",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "14f71e35",
@@ -1697,8 +1776,12 @@
   {
    "rowSuffix": "c4253a02",
    "subjectId": "physiology",
-   "conceptLabel": "Adrenal gland",
-   "fit": "exact"
+   "conceptLabel": "Adrenal insufficiency",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
   },
   {
    "rowSuffix": "d5f643cd",
@@ -1822,13 +1905,19 @@
    "rowSuffix": "eceb6c78",
    "subjectId": "psychiatry",
    "conceptLabel": "Schizophrenia",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
   },
   {
    "rowSuffix": "f41671b5",
    "subjectId": "psychiatry",
    "conceptLabel": "Dementia",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
   },
   {
    "rowSuffix": "fa2defd8",
@@ -1844,13 +1933,19 @@
    "rowSuffix": "117026dc",
    "subjectId": "radiology",
    "conceptLabel": "Radiograph interpretation",
-   "fit": "broad"
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "1e016ea4",
    "subjectId": "radiology",
    "conceptLabel": "Imaging in surgical conditions",
-   "fit": "broad"
+   "fit": "broad",
+   "flags": [
+    "stem-cleanup"
+   ]
   },
   {
    "rowSuffix": "24b6e494",
@@ -1918,7 +2013,10 @@
    "rowSuffix": "9e70ef2d",
    "subjectId": "radiology",
    "conceptLabel": "Radiograph interpretation",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
   },
   {
    "rowSuffix": "c876f7bb",
@@ -1939,7 +2037,10 @@
    "rowSuffix": "dbc88c3e",
    "subjectId": "radiology",
    "conceptLabel": "Radiation biology",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
   },
   {
    "rowSuffix": "18b9d29d",
@@ -1957,7 +2058,10 @@
    "rowSuffix": "5701cbc3",
    "subjectId": "surgery",
    "conceptLabel": "Glasgow Coma Scale",
-   "fit": "exact"
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
   },
   {
    "rowSuffix": "5e4e6597",
@@ -1979,7 +2083,7 @@
    "rowSuffix": "871d2659",
    "subjectId": "surgery",
    "conceptLabel": "Stroke",
-   "fit": "broad",
+   "fit": "exact",
    "conceptSubject": "medicine",
    "flags": [
     "cross-subject"
@@ -1992,7 +2096,8 @@
    "fit": "broad",
    "conceptSubject": "medicine",
    "flags": [
-    "cross-subject"
+    "cross-subject",
+    "text-repair"
    ]
   },
   {
@@ -2058,5 +2163,17 @@
     "cross-subject"
    ]
   }
- ]
+ ],
+ "independentCheck": {
+  "date": "2026-11-20",
+  "method": "separate AI agent, blind pick then compare, 40 rows (2 per subject + 2, md5 seed spot-check-1)",
+  "agree": 33,
+  "acceptable": 6,
+  "wrong": 1,
+  "wrongRateWilson95": [
+   0.004,
+   0.129
+  ],
+  "note": "wrong and better-alternative rows corrected; automatic sweep added stem-cleanup, defect, text-repair (missing rt) flags"
+ }
 }
