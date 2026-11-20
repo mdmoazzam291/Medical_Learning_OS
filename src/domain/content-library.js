@@ -79,6 +79,17 @@ export function validateImport(m) {
   return m;
 }
 const emptyFacets=()=>Object.fromEntries(facets.map(f=>[f,[]]));
+// ADR-151: a concept reached only through Admin-preview questions is Admin-only wherever learners list or open
+// concepts (Vault list, search and detail). A published question or a published canonical note makes it visible.
+export function adminPreviewOnlyConceptIds(catalog,{publishedNoteConceptIds=[]}={}) {
+  const preview=new Set(),published=new Set(publishedNoteConceptIds.map(String));
+  for(const q of Array.isArray(catalog?.questions)?catalog.questions:[]){
+    const target=q?.status==='published'?published:q?.status==='admin_preview'?preview:null;
+    if(!target)continue;
+    for(const l of Array.isArray(q.conceptLinks)?q.conceptLinks:[])if(l?.conceptId)target.add(String(l.conceptId));
+  }
+  return new Set([...preview].filter(id=>!published.has(id)));
+}
 // ADR-147: includeAdminPreview is true only for the Admin account; admin_preview questions are otherwise never projected.
 export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],questionMetadata=[],conceptMetadata=[],links=[],stats=[],medicalRelationships=[]},{includeAdminPreview=false}={}) {
   const qm=new Map(questionMetadata.map(x=>[x.question_id,x])); const cm=new Map(conceptMetadata.map(x=>[x.concept_id,x])); const observations=new Map(stats.map(x=>[x.question_id,x]));
