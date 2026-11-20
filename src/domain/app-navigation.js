@@ -151,6 +151,7 @@ export function routeIdentity(pathname, search = '', hash = '') {
   if (pathname.endsWith('/workspace.html')) { const master = MASTERS.some(x => x.id === p.get('master')) ? p.get('master') : 'home'; const section = (SECTIONS[master] || []).some(x => x.id === p.get('section')) ? p.get('section') : SECTIONS[master][0].id; return { master, section }; }
   if (pathname.endsWith('/library.html')) { if (p.get('build') === '1') return { master: 'study', section: 'build' }; const view = p.get('view') || 'overview'; if (p.get('master') === 'study' && view === 'subjects') return { master: 'study', section: 'subjects' }; return ['recall', 'cases', 'images', 'skills'].includes(view) ? { master: 'study', section: view } : { master: 'library', section: libraryRows.some(x => x.id === view) ? view : 'overview' }; }
   if (pathname.endsWith('/vault.html')) return { master: 'library', section: 'mynotes' };
+  if (pathname.endsWith('/nmc-catalogue.html')) return { master: 'library', section: 'subjects' };
   if (pathname.endsWith('/medical.html')) return { master: 'study', section: 'practice' };
   if (pathname.endsWith('/exam.html')) return { master: 'exams', section: 'simulator' };
   if (pathname.endsWith('/admin.html')) {
