@@ -31,15 +31,22 @@ function integrationMarkup(t,p,names){
 }
 function subjectViewMarkup(p,names){
  if(p.filterRequired)return p.subjectIndex?.length?subjectIndexMarkup(p):'<p>'+e(p.total)+' objectives. Choose a subject or search to list them, or browse by concept.</p>';
- return '<p>'+e(p.matched)+' of '+e(p.total)+' objectives</p>'+(p.topics.length?p.topics.map(t=>'<article class="nmc-topic"><h3>'+e(t.topicLabel||'Untitled topic')+(t.topicLabelKind==='editorial-grouping'?' <small>(editorial grouping)</small>':'')+'</h3><p class="muted">'+e(names.get(t.subjectId)||t.subjectId)+'</p><p>By the end of this topic you should be able to:</p><ul>'+
+ return '<p>'+e(p.matched)+' of '+e(p.total)+' objectives</p>'+(p.topics.length?p.topics.map(t=>'<article class="nmc-topic"><h3>'+e(t.topicLabel||'Untitled topic')+(t.topicLabelKind==='editorial-grouping'?' <small>(editorial grouping)</small>':'')+'</h3>'+hierarchyMarkup(t.hierarchy)+'<p class="muted">'+e(names.get(t.subjectId)||t.subjectId)+'</p><p>By the end of this topic you should be able to:</p><ul>'+
   t.objectives.map(o=>'<li><p>'+e(o.objective)+'</p>'+objectiveMeta(o,p)+'</li>').join('')+'</ul>'+integrationMarkup(t,p,names)+(t.concepts?.length?'<details><summary>Concept links and misconceptions ('+e(t.concepts.length)+') · AI draft</summary>'+t.concepts.map(conceptLayerMarkup).join('')+'</details>':'')+'</article>').join(''):'<p>No objectives match. Clear the filters.</p>');
 }
 function conceptIndexMarkup(p,names){
  return '<p>'+e(p.matched)+' of '+e(p.totalConcepts)+' concepts. Each concept lists only the subjects that link to it.</p>'+(p.concepts.length?'<ul class="nmc-concept-index">'+p.concepts.map(c=>'<li><button type="button" class="link-button" data-preview-concept="'+e(c.conceptId)+'">'+e(c.label||c.conceptId)+'</button> <small>'+e(c.subjectIds.map(s=>names.get(s)||s).join(' · '))+' · '+e(c.objectiveCount)+(c.objectiveCount===1?' objective':' objectives')+'</small></li>').join('')+'</ul>':'<p>No concepts match. Clear the filters.</p>');
 }
+// Parent breadcrumb and sub-topics (ADR-144). Concepts open their concept page; other nodes are plain labels.
+export function hierarchyMarkup(h){
+ if(!h)return '';
+ const node=n=>n.kind==='concept'?'<button type="button" class="link-button" data-preview-concept="'+e(n.id)+'">'+e(n.label)+'</button>':e(n.label);
+ return '<nav class="nmc-hierarchy" aria-label="Topic hierarchy">'+(h.ancestors.length?'<p><small>Part of: '+[...h.ancestors].reverse().map(node).join(' › ')+'</small></p>':'')+
+  (h.children.length?'<p><small>Sub-topics: '+h.children.map(node).join(' · ')+'</small></p>':'')+'</nav>';
+}
 function conceptDetailMarkup(p,names){
  const c=p.concept;
- return '<button type="button" data-preview-back>← Back</button><article class="nmc-topic nmc-concept-page"><h3>'+e(c.label||c.conceptId)+'</h3><p class="muted">'+e(c.subjectIds.length)+(c.subjectIds.length===1?' subject':' subjects')+': '+e(c.subjectIds.map(s=>names.get(s)||s).join(' · '))+' · '+e(p.matched)+(p.matched===1?' objective':' objectives')+'</p>'+
+ return '<button type="button" data-preview-back>← Back</button><article class="nmc-topic nmc-concept-page"><h3>'+e(c.label||c.conceptId)+'</h3>'+hierarchyMarkup(c.hierarchy)+'<p class="muted">'+e(c.subjectIds.length)+(c.subjectIds.length===1?' subject':' subjects')+': '+e(c.subjectIds.map(s=>names.get(s)||s).join(' · '))+' · '+e(p.matched)+(p.matched===1?' objective':' objectives')+'</p>'+
   c.sections.map(sec=>'<section><h4>'+e(names.get(sec.subjectId)||sec.subjectId)+'</h4><ul>'+sec.objectives.map(o=>'<li><p>'+e(o.objective)+'</p>'+(o.topicLabel?'<small>'+e(o.topicLabel)+(o.topicLabelKind==='editorial-grouping'?' (editorial grouping)':'')+'</small><br>':'')+objectiveMeta(o,p,{conceptLink:false})+'</li>').join('')+'</ul></section>').join('')+
   '<details open><summary>Concept links and misconceptions · AI draft</summary>'+conceptLayerMarkup(c)+'</details></article>';
 }

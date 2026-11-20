@@ -1,4 +1,5 @@
 // Admin-only learner preview of owner-accepted NMC objectives. Pure functions; no I/O.
+import {hierarchyIndex} from './concept-hierarchy.js';
 export const PREVIEW_CONTRACT='nmc-admin-learner-preview-v1';
 const MODES=new Set(['knowledge','performance-and-knowledge']);
 export function validatePreviewData(data){
@@ -11,7 +12,17 @@ export function validatePreviewData(data){
   if(typeof i.objective!=='string'||!i.objective||!MODES.has(i.mode)||typeof i.code!=='string'||typeof i.subjectId!=='string')throw new Error('preview_data_invalid');
   ids.add(i.objectiveRevisionId);
  }
+ if(data.hierarchy!==undefined){const h=data.hierarchy;if(!h||typeof h.nodes!=='object'||Array.isArray(h.nodes)||!Array.isArray(h.links)||h.links.some(l=>typeof h.nodes[l.childId]!=='string'||typeof h.nodes[l.parentId]!=='string'))throw new Error('preview_data_invalid');}
  return data;
+}
+// Parent breadcrumb and sub-topics of a concept or topic (ADR-144); null when no hierarchy data.
+const indexCache=new WeakMap();
+export function hierarchyView(data,id){
+ const h=data.hierarchy;if(!h||!id)return null;
+ if(!indexCache.has(h))indexCache.set(h,hierarchyIndex({nodes:[],links:h.links}));
+ const ix=indexCache.get(h),node=x=>({id:x,label:h.nodes[x]||x,kind:x.startsWith('C-')?'concept':x.startsWith('nmc-2024-topic:')?'nmc-topic':'subtopic'});
+ const ancestors=ix.ancestors(id).map(node),children=ix.childrenOf(id).map(node);
+ return ancestors.length||children.length?{ancestors,children}:null;
 }
 const VIEWS=new Set(['','subject','concept']);
 const CONCEPT_ID=/^C-[0-9A-Za-z-]{1,80}$/;
@@ -33,7 +44,7 @@ function conceptPage(data,{subject,search,concept}){
   const bySubject=new Map();
   for(const i of items){if(!bySubject.has(i.subjectId))bySubject.set(i.subjectId,[]);bySubject.get(i.subjectId).push({...objectiveView(i),topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind});}
   const sections=[...bySubject].sort(([a],[b])=>subjectOrder.get(a)-subjectOrder.get(b)).map(([subjectId,objectives])=>({subjectId,objectives}));
-  return {...head(data),view:'concept',totalConcepts:conceptCount(data),matched:items.length,concept:{...layerView(data,concept,items[0].conceptLabel),subjectIds:sections.map(s=>s.subjectId),sections}};
+  return {...head(data),view:'concept',totalConcepts:conceptCount(data),matched:items.length,concept:{...layerView(data,concept,items[0].conceptLabel),subjectIds:sections.map(s=>s.subjectId),sections,hierarchy:hierarchyView(data,concept)}};
  }
  const index=new Map();
  for(const i of data.items){
@@ -78,7 +89,7 @@ export function previewPage(data,{subject='',search='',view='subject',concept=''
  const topics=[];const byKey=new Map();
  for(const i of items){
   const key=i.subjectId+'|'+(i.topicLabel||'');
-  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[],concepts:[],integration:[]};byKey.set(key,t);topics.push(t);}
+  if(!byKey.has(key)){const t={subjectId:i.subjectId,topicLabel:i.topicLabel,topicLabelKind:i.topicLabelKind,objectives:[],concepts:[],integration:[],hierarchy:i.topicLabelKind==='source-topic'?hierarchyView(data,i.topicId):null};byKey.set(key,t);topics.push(t);}
   const t=byKey.get(key),layer=i.conceptId&&data.concepts?.[i.conceptId];
   // AI-draft concept layers (prerequisites, confusions, misconceptions, presentations), once per concept per topic.
   if(layer&&!t.concepts.some(c=>c.conceptId===i.conceptId))t.concepts.push(layerView(data,i.conceptId,i.conceptLabel));

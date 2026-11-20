@@ -30,11 +30,15 @@ for(const q of conf.pairs){for(const [x,y] of [[q.conceptIdA,q.labelB],[q.concep
 for(const m of mis.misconceptions)(at(m.conceptId).misconceptions||(at(m.conceptId).misconceptions=[])).push({misconception:m.misconception,correction:m.correction,kind:m.kind,guidelineSensitive:m.guidelineSensitive});
 for(const p of pres.presentations)for(const l of p.links)(at(l.conceptId).presentations||(at(l.conceptId).presentations=[])).push({label:p.label,role:l.role});
 const used=new Set(items.map(i=>i.conceptId));for(const id of Object.keys(concepts))if(!used.has(id))delete concepts[id];
+// Sub-topic hierarchy (ADR-144): included only once links exist, so an empty registry leaves the pinned data unchanged.
+const hier=read('data/concept-hierarchy.json');
+const labelOf=new Map([...items.map(i=>[i.conceptId,i.conceptLabel||'']),...items.filter(i=>i.topicLabelKind==='source-topic').map(i=>[i.topicId,i.topicLabel||'']),...hier.nodes.map(n=>[n.nodeId,n.label])]);
+const hierarchy=hier.links.length?{status:'owner-added sub-topics',nodes:Object.fromEntries([...labelOf].filter(([id])=>hier.links.some(l=>l.childId===id||l.parentId===id)).sort(([a],[b])=>a.localeCompare(b))),links:hier.links.map(l=>({childId:l.childId,parentId:l.parentId}))}:null;
 const out={schemaVersion:1,contractId:'nmc-admin-learner-preview-v1',audience:'admin-only',learnerActivation:false,
  sourceEdition:catalogue.edition,sourceUrl:catalogue.sourceUrl,registryVersion:reg.draftVersion,
  status:'AI-drafted objectives; faculty review skipped by owner; not published to learners',
  subjects:[...new Set(items.map(i=>i.subjectId))].sort().map(id=>({subjectId:id,label:SUBJECTS[id]||id})),items,
- conceptLayers:'AI-draft; not faculty or clinical review',concepts:Object.fromEntries(Object.entries(concepts).sort(([a],[b])=>a.localeCompare(b)))};
+ conceptLayers:'AI-draft; not faculty or clinical review',concepts:Object.fromEntries(Object.entries(concepts).sort(([a],[b])=>a.localeCompare(b))),...(hierarchy?{hierarchy}:{})};
 const text=JSON.stringify(out)+'\n';
 const target=new URL('../../data/nmc-admin-learner-preview.json',import.meta.url);
 if(process.argv.includes('--check')){if(readFileSync(target,'utf8')!==text)throw new Error('preview data out of date');}

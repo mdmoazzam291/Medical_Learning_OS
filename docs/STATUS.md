@@ -10,6 +10,12 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-20 — #508 merged and deployed; sub-topic hierarchy (ADR-144)
+- Owner (04:44 IST) asked whether the NMC foundation is on the learner side. Answer: Admin account only (= learner `mdmoazzam291@gmail.com`); `learnerActivation:false`. Owner chose to keep it that way for now.
+- On owner go-ahead, PR #508 (19-subject index, "Also taught in …") squash-merged as `c3475d9`; #507 closed (included). nmc-admin-preview redeployed from `c3475d9` by the ADR-140 workflow (run 44662824259; tests and check passed in the run); unauthenticated request → 401.
+- Branch `feat/concept-topic-hierarchy`: parent → sub-topic links for concepts and topics (ADR-144). Registry `data/concept-hierarchy.json` (empty), domain `src/domain/concept-hierarchy.js`, CLI `ops/hierarchy/link-subtopic.js`, preview breadcrumb/sub-topics, tests `tests/concept-hierarchy.test.js`. Preview data unchanged (same checksum; no redeploy needed for this change). `npm test` 1,765/1,765; `npm run check` passes.
+- Next: MedMCQA import (owner decisions 04:40 IST: rights paused, unverified keys and no source acceptable) — questions link to NMC concepts, appear in Library and Question bank via roll-up, answers kept out of mastery/FSRS evidence until keys are verified.
+
 ### 2026-11-20 — NMC preview: conventional 19-subject view with textbook-style integration
 - Owner request (02:31 IST): browse like conventional books — a subject's topics, each with the other subjects that teach the same thing.
 - Browse by Subject now opens on a 19-subject index in NMC document/phase order (Phase 1 Anatomy, Physiology, Biochemistry → Phase III Part II), each card with topics, concepts, objectives and concepts shared with other subjects. Each topic in a subject shows an **"Also taught in …"** box: per shared concept, the other subjects' objectives (expandable, with NMC code links), labelled "Linked by shared concept (AI-mapped), not NMC's own integration list" — the 2024 metadata holds no integration table. Admin console and the Admin-only learner-page panel both get it.
