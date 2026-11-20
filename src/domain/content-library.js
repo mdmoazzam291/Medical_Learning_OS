@@ -73,17 +73,18 @@ export function validateImport(m) {
   return m;
 }
 const emptyFacets=()=>Object.fromEntries(facets.map(f=>[f,[]]));
-export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],questionMetadata=[],conceptMetadata=[],links=[],stats=[],medicalRelationships=[]}) {
+// ADR-147: includeAdminPreview is true only for the Admin account; admin_preview questions are otherwise never projected.
+export function projectLibrary({catalog={concepts:[],questions:[]},notes=[],questionMetadata=[],conceptMetadata=[],links=[],stats=[],medicalRelationships=[]},{includeAdminPreview=false}={}) {
   const qm=new Map(questionMetadata.map(x=>[x.question_id,x])); const cm=new Map(conceptMetadata.map(x=>[x.concept_id,x])); const observations=new Map(stats.map(x=>[x.question_id,x]));
   const seen=new Set();
-  const questions=catalog.questions.filter(q=>q.status==='published').filter(q=>{if(seen.has(q.questionId))return false;seen.add(q.questionId);return true;}).map(q=>{
+  const questions=catalog.questions.filter(q=>q.status==='published'||(includeAdminPreview===true&&q.status==='admin_preview')).filter(q=>{if(seen.has(q.questionId))return false;seen.add(q.questionId);return true;}).map(q=>{
     const meta=qm.get(q.questionId)||{};const observed=observations.get(q.questionId);const origins=[...(meta.origins||[])];
     const legacy=q.provenance;
     if(['licensed_pyq','recalled_pyq'].includes(legacy?.kind)){const examId=legacy.exam.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');if(!origins.some(o=>o.kind==='pyq'&&o.examId===examId&&o.year===legacy.year))origins.push({kind:'pyq',examId,year:legacy.year,session:'unspecified',evidence:legacy.evidence});}
     const conceptLinks=[...new Map([...q.conceptLinks,...(meta.concept_links_version_id===q.questionVersionId?(meta.concept_links||[]).filter(l=>l.role!=='primary'):[])].map(l=>[l.conceptId+'|'+l.role,l])).values()];
     const classification=structuredClone(meta.classification||emptyFacets());
     if(!classification.subjects.length) classification.subjects=unique(conceptLinks.flatMap(l=>catalog.concepts.find(c=>c.conceptId===l.conceptId)?.subjectTags||[]));
-    return {questionId:q.questionId,questionVersionId:q.questionVersionId,sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
+    return {questionId:q.questionId,questionVersionId:q.questionVersionId,audience:q.status==='admin_preview'?'admin-preview':'all-learners',sourceIds:[...(q.sourceIds||[])],stem:q.stem,options:q.options.map(o=>({optionId:o.optionId,text:o.text})),conceptLinks,classification,origins,intelligence:learnerIntelligence(q,meta.intelligence),home:questionHome(origins),observed:{attempts:Number(observed?.attempts||0),wrong:Number(observed?.wrong||0),latestCorrect:observed?.latest_correct??null,state:!observed?'unattempted':observed.latest_correct===true?'correct':'incorrect',repeatedWrong:Number(observed?.wrong||0)>=2}};
   });
   const publishedNotes=notes.filter(n=>n.status==='published').map(n=>({noteVersionId:n.id,conceptId:n.concept_id,title:n.title,sourceIds:[...(n.source_ids||[])],bodyMarkdown:n.body_markdown}));
   const reviewedMedicalRelationships=projectReviewedMedicalRelations({relations:medicalRelationships,concepts:catalog.concepts,sources:catalog.sources||[]});
