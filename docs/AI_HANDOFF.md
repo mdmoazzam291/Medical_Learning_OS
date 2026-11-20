@@ -22,12 +22,9 @@ Checked: 2026-11-20T08:45Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Done: #511 merged `12b438a` (ADR-145), migration `dataset_question_staging` applied (RLS on, no anon/authenticated access). Workflow run 44698014031 loaded 25,183 MedMCQA rows: train 21,000 (1,000 per subject, 21 subjects incl. Dental and Unknown), validation 4,183. Parquet sha256 train `b119434b…`, validation `b768a1ea…`. Every row has a 0–3 key; 16,871 are single-answer. Do not call the HF validation split "NEET PG": its size (4,183) differs from the paper's dev split (6,150).
 - Done: #512 merged `86430e8` (ADR-146). Rolled-back trial passed (constraint, 3 gates, publish function; ACL unchanged), migration `question_rights_owner_waiver` applied and verified; content-library-api redeployed from `86430e8` (run 44699928979), unauthenticated → 401.
 - Next: ADR-147 Admin-only audience for published questions (publishing currently reaches every learner); NMC concept mapping for a ~3,000 single-answer pilot (exclude Dental, Unknown); manifests of 100; keep these attempts out of mastery/FSRS evidence. Ask the owner before deploying each.
-## Active task — sub-topic hierarchy (2026-11-20, Claude)
-- Branch `feat/concept-topic-hierarchy` from `main` `c3475d9`; ADR-144; see STATUS 2026-11-20. Verified locally: `npm test` 1,765/1,765, `npm run check` passes. Not yet: CI, merge.
-- No deploy needed: preview data unchanged (hierarchy is added to it only once links exist). Web pages deploy from `main` on merge (adds breadcrumb/sub-topic markup that renders nothing while the registry is empty).
-- Exact next action: wait for Workers Builds, check, browser, webkit → ask owner → merge. Then MedMCQA import planning (see STATUS).
-- Owner answers 2026-11-20 04:44 IST: NMC foundation stays Admin + owner only (no learner publication); merge #508 first (done); one optional parent per concept/topic.
-
+## Completed — sub-topic hierarchy (2026-11-20, Claude)
+- PR #509 squash-merged as `aeebeb8` on owner go-ahead 08:57 IST (all four checks green); ADR-144. Web pages live (served `web/nmc-admin-learner-preview.js` contains the hierarchy markup). No edge-function or database change; `data/concept-hierarchy.json` is empty, so nothing shows yet.
+- Add links with `node ops/hierarchy/link-subtopic.js`; after the first links, rebuild the preview, repin and redeploy nmc-admin-preview (ask owner first).
 ## Completed — NMC preview: 19-subject index + integration (2026-11-20, Claude)
 - PR #508 squash-merged as `c3475d9` on owner go-ahead 04:44 IST; #507 closed. nmc-admin-preview redeployed from `c3475d9` (run 44662824259); unauthenticated → 401. Not yet verified with the owner's signed-in session.
 
