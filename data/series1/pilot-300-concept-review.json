@@ -1,0 +1,2179 @@
+{
+ "schemaVersion": 1,
+ "contractId": "series1-concept-review-v1",
+ "batchId": "pilot-300",
+ "reviewer": "ai-session (Claude), not clinician-reviewed",
+ "reviewedOn": "2026-11-20",
+ "method": "Read each question and its keyed answer against the NMC concept list; most specific fitting concept; an exact concept from another subject is allowed; broad = a parent that genuinely contains the topic; none = no fitting concept (recorded gap); exclude = unusable item. Flags are codes only; reasons for key-suspect and defect items are kept outside this public file.",
+ "rows": [
+  {
+   "rowSuffix": "03bdb28c",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Skeletal muscle relaxants",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "07ec1305",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Airway anatomy",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "0a4b6cbe",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Intraoperative monitoring",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4eef2dc8",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "61a7b94d",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9ba51441",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Regional anaesthesia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9f043296",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Local anaesthetics",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "a1afa79a",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Local anaesthetics",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "a7122876",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "bbae7daf",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Regional anaesthesia",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "d589d49d",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Preoperative assessment",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "db44f97d",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e20f934b",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Skeletal muscle relaxants",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "f407100e",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "fa041894",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "General anaesthetics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "fa6a2b53",
+   "subjectId": "anaesthesia",
+   "conceptLabel": "Patient safety in anaesthesia",
+   "fit": "broad",
+   "gap": "malignant hyperthermia"
+  },
+  {
+   "rowSuffix": "0cc97603",
+   "subjectId": "anatomy",
+   "conceptLabel": "Hypothyroidism",
+   "fit": "broad",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "276f92c1",
+   "subjectId": "anatomy",
+   "conceptLabel": "Pericardial disease",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "337ef1d8",
+   "subjectId": "anatomy",
+   "conceptLabel": "Prostate",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3b362dc6",
+   "subjectId": "anatomy",
+   "conceptLabel": "Facial nerve",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "444ef26e",
+   "subjectId": "anatomy",
+   "conceptLabel": "Thoracic skeleton",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "45cf9e2c",
+   "subjectId": "anatomy",
+   "conceptLabel": "Hand",
+   "fit": "exact",
+   "flags": [
+    "key-suspect",
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "554559a2",
+   "subjectId": "anatomy",
+   "conceptLabel": "Digestive system histology",
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
+  },
+  {
+   "rowSuffix": "64aa6024",
+   "subjectId": "anatomy",
+   "conceptLabel": "Oedema",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "66231533",
+   "subjectId": "anatomy",
+   "conceptLabel": "Oesophagus",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "8ea660c3",
+   "subjectId": "anatomy",
+   "conceptLabel": "Subclavian artery",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "93c2a77c",
+   "subjectId": "anatomy",
+   "conceptLabel": "Opportunistic infections",
+   "fit": "broad",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "c0b1cbbd",
+   "subjectId": "anatomy",
+   "conceptLabel": "Rheumatic fever",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "cd28b8b0",
+   "subjectId": "anatomy",
+   "conceptLabel": "Bones of the upper limb",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "d085ae96",
+   "subjectId": "anatomy",
+   "conceptLabel": "Pharynx",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "df7869e1",
+   "subjectId": "anatomy",
+   "conceptLabel": "Development of the heart",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "e0407481",
+   "subjectId": "anatomy",
+   "conceptLabel": "Cerebral arterial supply",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "044651ea",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Uronic acid pathway",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1305a076",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Protein synthesis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1b3f2699",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Colorimetry and spectrophotometry",
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
+  },
+  {
+   "rowSuffix": "28dbaadb",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Amino acids",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2c34174a",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Carbohydrates",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "408aecef",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Oxidative phosphorylation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "46b983e9",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Proteins",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "47ef3130",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Regulation of gene expression",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5f643b75",
+   "subjectId": "biochemistry",
+   "conceptLabel": "DNA replication",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6f799067",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Lipoproteins",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7e28ecd2",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Fructose metabolism",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "acb3edfd",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Nucleic acids",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "c8d5dfa9",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Enzymes",
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
+  },
+  {
+   "rowSuffix": "df543296",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Vitamins",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e3f3fc0c",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Iron metabolism",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "fa798992",
+   "subjectId": "biochemistry",
+   "conceptLabel": "Extracellular matrix",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "0643c11c",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Communicable disease control",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "08aad4c2",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Rabies",
+   "fit": "exact",
+   "conceptSubject": "medicine",
+   "flags": [
+    "cross-subject",
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "0dcaf014",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Reproductive and child health programme",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "226477e6",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Health care delivery system in India",
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "2edb48d8",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Nutrients",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4176df31",
+   "subjectId": "community-medicine",
+   "conceptLabel": "National programmes for infectious diseases",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "539e2d25",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Intellectual disability",
+   "fit": "exact",
+   "conceptSubject": "psychiatry",
+   "flags": [
+    "cross-subject",
+    "wording-review"
+   ]
+  },
+  {
+   "rowSuffix": "64fa3f4c",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Immunisation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "68b11ca4",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Zoonoses",
+   "fit": "broad",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "71fcfe62",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Occupational hazards",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7eabe11a",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Screening for disease",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "8421d1e4",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Vector-borne diseases",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "88f9ec9c",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Health care delivery system in India",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e4cc07af",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Mass disaster management",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "ed1dcaf0",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Biostatistics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "faaf6c70",
+   "subjectId": "community-medicine",
+   "conceptLabel": "Tests of significance",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "04dc6346",
+   "subjectId": "dermatology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "ichthyoses / genodermatoses"
+  },
+  {
+   "rowSuffix": "06f6ffa1",
+   "subjectId": "dermatology",
+   "conceptLabel": "Acne vulgaris",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "15b0f01a",
+   "subjectId": "dermatology",
+   "conceptLabel": "Psoriasis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2b400f80",
+   "subjectId": "dermatology",
+   "conceptLabel": "Viral warts",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "376cd98e",
+   "subjectId": "dermatology",
+   "conceptLabel": "Autoimmune blistering diseases",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4743bea2",
+   "subjectId": "dermatology",
+   "conceptLabel": "Vitiligo",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5b62283b",
+   "subjectId": "dermatology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "adnexal disorders"
+  },
+  {
+   "rowSuffix": "5f9cdb22",
+   "subjectId": "dermatology",
+   "conceptLabel": "Heavy metal poisoning",
+   "fit": "exact",
+   "flags": [
+    "cross-subject",
+    "defect"
+   ],
+   "conceptSubject": "forensic-medicine"
+  },
+  {
+   "rowSuffix": "675a157f",
+   "subjectId": "dermatology",
+   "conceptLabel": "Autoimmune blistering diseases",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6f0fa084",
+   "subjectId": "dermatology",
+   "conceptLabel": "Acne vulgaris",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7c090eeb",
+   "subjectId": "dermatology",
+   "conceptLabel": "Syphilis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b0485d34",
+   "subjectId": "dermatology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "skin structure and function"
+  },
+  {
+   "rowSuffix": "c6ab4231",
+   "subjectId": "dermatology",
+   "conceptLabel": "Eczema",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "dbcfd9bc",
+   "subjectId": "dermatology",
+   "conceptLabel": "Burns",
+   "fit": "exact",
+   "conceptSubject": "surgery",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "ec1355f1",
+   "subjectId": "dermatology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "epidermal naevi"
+  },
+  {
+   "rowSuffix": "f77a5686",
+   "subjectId": "dermatology",
+   "conceptLabel": "Non-Hodgkin lymphoma",
+   "fit": "broad",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "16e5379b",
+   "subjectId": "ent",
+   "conceptLabel": "Hearing tests",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "25b5b54c",
+   "subjectId": "ent",
+   "conceptLabel": "Otomicroscopy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "34b8d641",
+   "subjectId": "ent",
+   "conceptLabel": "ENT emergencies",
+   "fit": "broad",
+   "gap": "acute epiglottitis"
+  },
+  {
+   "rowSuffix": "3bf70741",
+   "subjectId": "ent",
+   "conceptLabel": "Head and neck cancer",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3ef5ad4d",
+   "subjectId": "ent",
+   "conceptLabel": "Benign laryngeal disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "418d4ff3",
+   "subjectId": "ent",
+   "conceptLabel": "Cholesteatoma",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "457f42f6",
+   "subjectId": "ent",
+   "conceptLabel": "Topical ENT medicines",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "69759c40",
+   "subjectId": "ent",
+   "conceptLabel": "Juvenile nasopharyngeal angiofibroma",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7bcaf328",
+   "subjectId": "ent",
+   "conceptLabel": "Syphilis",
+   "fit": "broad",
+   "conceptSubject": "dermatology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "82fa3918",
+   "subjectId": "ent",
+   "conceptLabel": "ENT emergencies",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9a9f792e",
+   "subjectId": "ent",
+   "conceptLabel": "Head and neck trauma",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "ae38a4ec",
+   "subjectId": "ent",
+   "conceptLabel": "Benign laryngeal disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b5cfa391",
+   "subjectId": "ent",
+   "conceptLabel": "Otosclerosis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "dfc9ec01",
+   "subjectId": "ent",
+   "conceptLabel": "Facial nerve palsy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e9857b6d",
+   "subjectId": "ent",
+   "conceptLabel": "Nasal polyps",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "ec424258",
+   "subjectId": "ent",
+   "conceptLabel": "Vertigo",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "0746eeae",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Pesticide poisoning",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "0fd9cc59",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Blast injuries",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "183d702e",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Abortion",
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup",
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "1eee567d",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Anxiety disorders",
+   "fit": "exact",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject",
+    "stem-cleanup"
+   ],
+   "conceptSubject": "psychiatry"
+  },
+  {
+   "rowSuffix": "26564122",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Mortuary and embalming",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "436235f6",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Corrosive poisoning",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "66d4348a",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Heavy metal poisoning",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6ba5e1ac",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Personal identification",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "7344ba05",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Hanging",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "8f2fdc8b",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Sexual offences",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9794d04e",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Abortion",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a2298655",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Firearm injuries",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b50dbc17",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Pesticide poisoning",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b896e2f6",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Indian medico-legal system",
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "bee2616e",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Early post-mortem changes",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d42f2144",
+   "subjectId": "forensic-medicine",
+   "conceptLabel": "Brain death",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "40e2092f",
+   "subjectId": "medicine",
+   "conceptLabel": "Myasthenia gravis",
+   "fit": "exact",
+   "conceptSubject": "physiology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "41a621a6",
+   "subjectId": "medicine",
+   "conceptLabel": "Meningitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "513faf46",
+   "subjectId": "medicine",
+   "conceptLabel": "Lung carcinoma",
+   "fit": "broad",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "672cddd8",
+   "subjectId": "medicine",
+   "conceptLabel": "Liver transplantation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6aded9c3",
+   "subjectId": "medicine",
+   "conceptLabel": "Hyponatraemia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6e35a56e",
+   "subjectId": "medicine",
+   "conceptLabel": "Hypercalcaemia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "70e6e066",
+   "subjectId": "medicine",
+   "conceptLabel": "Oncogenic infections",
+   "fit": "exact",
+   "conceptSubject": "microbiology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "73fc6501",
+   "subjectId": "medicine",
+   "conceptLabel": "Arboviral infections",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "7e55d31e",
+   "subjectId": "medicine",
+   "conceptLabel": "Chest trauma",
+   "fit": "exact",
+   "conceptSubject": "surgery",
+   "flags": [
+    "cross-subject",
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "8c96a610",
+   "subjectId": "medicine",
+   "conceptLabel": "Opportunistic infections",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "97fbfe83",
+   "subjectId": "medicine",
+   "conceptLabel": "Arboviral infections",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "98415edd",
+   "subjectId": "medicine",
+   "conceptLabel": "Hypercalcaemia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "aef9df23",
+   "subjectId": "medicine",
+   "conceptLabel": "Infective endocarditis",
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
+  },
+  {
+   "rowSuffix": "b7b41a11",
+   "subjectId": "medicine",
+   "conceptLabel": "Urinary tract infection",
+   "fit": "broad",
+   "gap": "genitourinary tuberculosis"
+  },
+  {
+   "rowSuffix": "c26c1e7e",
+   "subjectId": "medicine",
+   "conceptLabel": "High altitude",
+   "fit": "exact",
+   "conceptSubject": "physiology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "d109cc27",
+   "subjectId": "medicine",
+   "conceptLabel": "Down syndrome",
+   "fit": "exact",
+   "conceptSubject": "paediatrics",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "0cb0c788",
+   "subjectId": "microbiology",
+   "conceptLabel": "Malaria",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1a76e9f0",
+   "subjectId": "microbiology",
+   "conceptLabel": "Malaria",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "29e44ac1",
+   "subjectId": "microbiology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "bacterial genetics"
+  },
+  {
+   "rowSuffix": "334873df",
+   "subjectId": "microbiology",
+   "conceptLabel": "Disinfection",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "424d96ef",
+   "subjectId": "microbiology",
+   "conceptLabel": "Opportunistic infections",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "451ab8ea",
+   "subjectId": "microbiology",
+   "conceptLabel": "Actinomycosis and nocardiosis",
+   "fit": "exact",
+   "conceptSubject": "medicine",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "4f8eceb4",
+   "subjectId": "microbiology",
+   "conceptLabel": "Microorganisms",
+   "fit": "broad",
+   "gap": "general virology"
+  },
+  {
+   "rowSuffix": "518487a5",
+   "subjectId": "microbiology",
+   "conceptLabel": "Meningitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "56e9de1f",
+   "subjectId": "microbiology",
+   "conceptLabel": "Immunisation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9d1a371a",
+   "subjectId": "microbiology",
+   "conceptLabel": "Encephalitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a00e3c49",
+   "subjectId": "microbiology",
+   "conceptLabel": "Malaria",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a01bc690",
+   "subjectId": "microbiology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "trematodes (schistosomiasis)"
+  },
+  {
+   "rowSuffix": "c6097f23",
+   "subjectId": "microbiology",
+   "conceptLabel": "Zoonoses",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "d4048ccb",
+   "subjectId": "microbiology",
+   "conceptLabel": "Laboratory diagnosis of infection",
+   "fit": "broad",
+   "gap": "bacterial culture characteristics"
+  },
+  {
+   "rowSuffix": "e6d7e4d5",
+   "subjectId": "microbiology",
+   "conceptLabel": "Zoonoses",
+   "fit": "broad",
+   "gap": "babesiosis"
+  },
+  {
+   "rowSuffix": "ef7b483e",
+   "subjectId": "microbiology",
+   "conceptLabel": "Microorganisms",
+   "fit": "broad",
+   "gap": "bacterial structure"
+  },
+  {
+   "rowSuffix": "1e5d6d6c",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Female sterilisation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2d1bcfd6",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "vulvar cancer"
+  },
+  {
+   "rowSuffix": "334e89af",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Gestational trophoblastic disease",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3de4c88d",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Menopause",
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "4036b902",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Malpresentation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5b2d2782",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Diabetes in pregnancy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "61f149f0",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Ectopic pregnancy",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "665b6a15",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Pelvic organ prolapse",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "72d33489",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Diagnosis of pregnancy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a20ffc8e",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Ovarian tumours",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a4751710",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "congenital anomalies of the genital tract"
+  },
+  {
+   "rowSuffix": "a8f3b90c",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Pregnancy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b3c80b6f",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Amenorrhoea",
+   "fit": "broad",
+   "gap": "hyperprolactinaemia"
+  },
+  {
+   "rowSuffix": "b8b871f4",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Anaemia in pregnancy",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d732dee8",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Abortion",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e6005e44",
+   "subjectId": "obstetrics-gynaecology",
+   "conceptLabel": "Abortion",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "038cc72e",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Angle-closure glaucoma",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1177c27b",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Retinal disorders",
+   "fit": "broad",
+   "gap": "vitreous haemorrhage"
+  },
+  {
+   "rowSuffix": "203dfeb4",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Trachoma",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "33290d37",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Uveitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3c321212",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Retinal disorders",
+   "fit": "broad",
+   "gap": "fundus fluorescein angiography",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "4df935ad",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Vitamin A deficiency",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "50308d9b",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Lens",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "516680bb",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Conjunctivitis",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "517cfa36",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Lacrimal system disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6e899587",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Lens",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7bf577cc",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Lens",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7dc05974",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Lens",
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "9d35a469",
+   "subjectId": "ophthalmology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "phakomatoses (neurofibromatosis)",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "ac4480cf",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Dry eye disease",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d15c76c8",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Visual pathway",
+   "fit": "exact",
+   "conceptSubject": "physiology",
+   "flags": [
+    "cross-subject",
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "fa3a59a3",
+   "subjectId": "ophthalmology",
+   "conceptLabel": "Cataract surgery",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "15f23fb2",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Peripheral nerve injury",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2347e651",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Joint dislocations",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3caf6192",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Peripheral nerve injury",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4b207584",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Osteomyelitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5f380ecd",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Bone tumours",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6a036c9e",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Distal radius fracture",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "7448a082",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Open fractures",
+   "fit": "exact",
+   "flags": [
+    "key-suspect"
+   ]
+  },
+  {
+   "rowSuffix": "832da952",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Joint dislocations",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b340ede6",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Musculoskeletal deformities",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b38d32be",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Musculoskeletal deformities",
+   "fit": "broad",
+   "gap": "skeletal dysplasias"
+  },
+  {
+   "rowSuffix": "b96ebddf",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Bone tumours",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d5db36f5",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Forearm fractures",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "da675254",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Osteomyelitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e83aa587",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Soft tissue injuries",
+   "fit": "broad",
+   "gap": "tendinopathies"
+  },
+  {
+   "rowSuffix": "fe70731e",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Musculoskeletal deformities",
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "fe87d1b2",
+   "subjectId": "orthopaedics",
+   "conceptLabel": "Soft tissue injuries",
+   "fit": "broad",
+   "gap": "enthesopathies (tennis elbow)"
+  },
+  {
+   "rowSuffix": "08973942",
+   "subjectId": "pathology",
+   "conceptLabel": "Cardiomyopathies",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1ae04654",
+   "subjectId": "pathology",
+   "conceptLabel": "Haemostasis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3e5389bb",
+   "subjectId": "pathology",
+   "conceptLabel": "Breast cancer",
+   "fit": "exact",
+   "flags": [
+    "no-explanation"
+   ]
+  },
+  {
+   "rowSuffix": "4394978a",
+   "subjectId": "pathology",
+   "conceptLabel": "Thyroid neoplasms",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "493dab7a",
+   "subjectId": "pathology",
+   "conceptLabel": "Wound healing",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4ddefbc9",
+   "subjectId": "pathology",
+   "conceptLabel": null,
+   "fit": "exclude",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "5600d747",
+   "subjectId": "pathology",
+   "conceptLabel": "Cell injury",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "5f30ec37",
+   "subjectId": "pathology",
+   "conceptLabel": "Scabies",
+   "fit": "exact",
+   "conceptSubject": "dermatology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "8edce6be",
+   "subjectId": "pathology",
+   "conceptLabel": "Lacrimal system disorders",
+   "fit": "exact",
+   "conceptSubject": "ophthalmology",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "925a5d5c",
+   "subjectId": "pathology",
+   "conceptLabel": "Rheumatic fever",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a5cc28e6",
+   "subjectId": "pathology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "trinucleotide repeat disorders / genetic anticipation"
+  },
+  {
+   "rowSuffix": "a9a94c73",
+   "subjectId": "pathology",
+   "conceptLabel": "Intracellular accumulations",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "ade47bd0",
+   "subjectId": "pathology",
+   "conceptLabel": "Shock",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e2bff61a",
+   "subjectId": "pathology",
+   "conceptLabel": "Gallstones",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "f0c72c51",
+   "subjectId": "pathology",
+   "conceptLabel": "Granulomatous inflammation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "fc2c8629",
+   "subjectId": "pathology",
+   "conceptLabel": "Metastasis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "0cf71ed0",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Bilirubin metabolism",
+   "fit": "exact",
+   "conceptSubject": "medicine",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "100b869c",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Immunisation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "15e495c8",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Febrile seizures",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2673e30b",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Water and electrolyte balance",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "37bf65f1",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Neonatal seizures",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "44d1a6d4",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Neonatal surgical conditions",
+   "fit": "broad",
+   "gap": "congenital lung malformations",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "452831bd",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Disorders of puberty",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5390b8bf",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Viral exanthematous illnesses",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5a701010",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Liver function tests",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6e728c1d",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Congenital heart disease",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "84a1828b",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Perinatal infections",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9cb3533a",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Glycogen metabolism",
+   "fit": "broad",
+   "conceptSubject": "biochemistry",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "a172ce87",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Portal hypertension",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "b27a4488",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Nephrotic syndrome",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "d42c552b",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Chest radiograph",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "db0c757c",
+   "subjectId": "pediatrics",
+   "conceptLabel": "Juvenile idiopathic arthritis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "021ced58",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Drugs for asthma and COPD",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "15adefed",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Drugs for asthma and COPD",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1c6ec47e",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Poisoning",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "26a70e28",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Antifungal drugs",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "4b2eec4e",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Antidiarrhoeal drugs",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "64c80547",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Anticoagulants",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6d860c72",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Diuretics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "789c773a",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Sedative-hypnotics",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "96e94768",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Renin-angiotensin system inhibitors",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "abf6c939",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Antibacterial drugs",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "bd39d8f6",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Drugs used in heart failure",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "dbd1431e",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Drugs used in heart failure",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "e52c8324",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Adrenergic drugs",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "ecb9f619",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Substance use disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "eef43ee7",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Ocular drugs",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "f10fb961",
+   "subjectId": "pharmacology",
+   "conceptLabel": "Antitubercular drugs",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "031b48a5",
+   "subjectId": "physiology",
+   "conceptLabel": "Renal function tests",
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "0eb14ef0",
+   "subjectId": "physiology",
+   "conceptLabel": "Blood pressure",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "14f71e35",
+   "subjectId": "physiology",
+   "conceptLabel": "Medico-legal exhibits",
+   "fit": "broad",
+   "conceptSubject": "forensic medicine",
+   "flags": [
+    "cross-subject",
+    "misfiled-subject"
+   ]
+  },
+  {
+   "rowSuffix": "16dce057",
+   "subjectId": "physiology",
+   "conceptLabel": "Colour vision",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "1c30f08a",
+   "subjectId": "physiology",
+   "conceptLabel": "Exercise",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "272e44f9",
+   "subjectId": "physiology",
+   "conceptLabel": "Cardiac conduction system",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2d1e3c6e",
+   "subjectId": "physiology",
+   "conceptLabel": "Pulmonary function tests",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3ad955bd",
+   "subjectId": "physiology",
+   "conceptLabel": "Membrane transport",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "40cc8f56",
+   "subjectId": "physiology",
+   "conceptLabel": "Pulmonary compliance and gas exchange",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "911b5288",
+   "subjectId": "physiology",
+   "conceptLabel": "Reflexes",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "983ea8b2",
+   "subjectId": "physiology",
+   "conceptLabel": "Membrane potentials",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "acf3cf4a",
+   "subjectId": "physiology",
+   "conceptLabel": "Gastric secretion",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "c4253a02",
+   "subjectId": "physiology",
+   "conceptLabel": "Adrenal insufficiency",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "d5f643cd",
+   "subjectId": "physiology",
+   "conceptLabel": "Cardiovascular regulation",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d70c7352",
+   "subjectId": "physiology",
+   "conceptLabel": "Kidney",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "f6eee8bd",
+   "subjectId": "physiology",
+   "conceptLabel": "Regulation of respiration",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "3f0fc9eb",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Mental status examination",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "49bc72dc",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Child and adolescent psychiatric disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5464dd51",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Antipsychotics",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "66e32317",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Child and adolescent psychiatric disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "69390031",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Antidepressants",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "85476c5a",
+   "subjectId": "psychiatry",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "behavioural psychology"
+  },
+  {
+   "rowSuffix": "909e9224",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Antidepressants",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "99bb82ca",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Schizophrenia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9a559b56",
+   "subjectId": "psychiatry",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "history of psychiatry / psychoanalysis"
+  },
+  {
+   "rowSuffix": "9d6bebb0",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Schizophrenia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a3b96cbd",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Eating disorders",
+   "fit": "exact",
+   "conceptSubject": "paediatrics",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "aecddc92",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Antipsychotics",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "bf08a0f9",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Schizophrenia",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "eceb6c78",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Schizophrenia",
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "f41671b5",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Dementia",
+   "fit": "exact",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "fa2defd8",
+   "subjectId": "psychiatry",
+   "conceptLabel": "Antipsychotics",
+   "fit": "exact",
+   "conceptSubject": "pharmacology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "117026dc",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiograph interpretation",
+   "fit": "broad",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "1e016ea4",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging in surgical conditions",
+   "fit": "broad",
+   "flags": [
+    "stem-cleanup"
+   ]
+  },
+  {
+   "rowSuffix": "24b6e494",
+   "subjectId": "radiology",
+   "conceptLabel": "Obstetric and gynaecological imaging",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2551955a",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging in medical emergencies",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "2586d0c2",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging modalities",
+   "fit": "broad",
+   "gap": "contrast agents"
+  },
+  {
+   "rowSuffix": "565049da",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging safety",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5c840747",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging selection",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "6733e007",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiograph interpretation",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "6ddeee29",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiograph interpretation",
+   "fit": "broad"
+  },
+  {
+   "rowSuffix": "726cce83",
+   "subjectId": "radiology",
+   "conceptLabel": "Imaging in surgical conditions",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "8ff80ab8",
+   "subjectId": "radiology",
+   "conceptLabel": "Obstetric and gynaecological imaging",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "92404f03",
+   "subjectId": "radiology",
+   "conceptLabel": null,
+   "fit": "none",
+   "gap": "radiotherapy planning"
+  },
+  {
+   "rowSuffix": "9e70ef2d",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiograph interpretation",
+   "fit": "exact",
+   "flags": [
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "c876f7bb",
+   "subjectId": "radiology",
+   "conceptLabel": null,
+   "fit": "exclude",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "d61800b7",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiation biology",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "dbc88c3e",
+   "subjectId": "radiology",
+   "conceptLabel": "Radiation biology",
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "18b9d29d",
+   "subjectId": "surgery",
+   "conceptLabel": "Pancreatitis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "38316706",
+   "subjectId": "surgery",
+   "conceptLabel": "Thyroid neoplasms",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "5701cbc3",
+   "subjectId": "surgery",
+   "conceptLabel": "Glasgow Coma Scale",
+   "fit": "exact",
+   "flags": [
+    "defect"
+   ]
+  },
+  {
+   "rowSuffix": "5e4e6597",
+   "subjectId": "surgery",
+   "conceptLabel": "Central nervous system tumours",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "735abaee",
+   "subjectId": "surgery",
+   "conceptLabel": "Salivary gland disorders",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "871d2659",
+   "subjectId": "surgery",
+   "conceptLabel": "Stroke",
+   "fit": "exact",
+   "conceptSubject": "medicine",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "87b84b97",
+   "subjectId": "surgery",
+   "conceptLabel": "Stroke",
+   "fit": "broad",
+   "conceptSubject": "medicine",
+   "flags": [
+    "cross-subject",
+    "text-repair"
+   ]
+  },
+  {
+   "rowSuffix": "880d031e",
+   "subjectId": "surgery",
+   "conceptLabel": "Blood products",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9a4fcbc6",
+   "subjectId": "surgery",
+   "conceptLabel": "Skin tumours",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "9aad143d",
+   "subjectId": "surgery",
+   "conceptLabel": "Surgical incisions and instruments",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "a13ad035",
+   "subjectId": "surgery",
+   "conceptLabel": "Biliary tract disease",
+   "fit": "broad",
+   "gap": "haemobilia"
+  },
+  {
+   "rowSuffix": "a7e832dc",
+   "subjectId": "surgery",
+   "conceptLabel": "Urethral stricture",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "b532eb67",
+   "subjectId": "surgery",
+   "conceptLabel": "Soft tissue tumours",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  },
+  {
+   "rowSuffix": "c5e8269b",
+   "subjectId": "surgery",
+   "conceptLabel": "Breast cancer",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "d87bed58",
+   "subjectId": "surgery",
+   "conceptLabel": "Undescended testis",
+   "fit": "exact"
+  },
+  {
+   "rowSuffix": "ddc2be88",
+   "subjectId": "surgery",
+   "conceptLabel": "Soft tissue tumours",
+   "fit": "exact",
+   "conceptSubject": "pathology",
+   "flags": [
+    "cross-subject"
+   ]
+  }
+ ],
+ "independentCheck": {
+  "date": "2026-11-20",
+  "method": "separate AI agent, blind pick then compare, 40 rows (2 per subject + 2, md5 seed spot-check-1)",
+  "agree": 33,
+  "acceptable": 6,
+  "wrong": 1,
+  "wrongRateWilson95": [
+   0.004,
+   0.129
+  ],
+  "note": "wrong and better-alternative rows corrected; automatic sweep added stem-cleanup, defect, text-repair (missing rt) flags"
+ }
+}
