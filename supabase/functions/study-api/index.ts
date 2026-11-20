@@ -22,6 +22,7 @@ import { readLearnerNavigation } from "./_shared/learner-navigation.js";
 import { readLearnerAttemptReview } from "./_shared/attempt-review.js";
 import { quotaBucketForRoute } from "../../../src/domain/access-protection.js";
 import { embedWatermark, watermarkCode } from "../../../src/domain/content-watermark.js";
+import { adminPreviewOnlyConceptIds } from "../../../src/domain/content-library.js";
 
 type Json = Record<string, unknown>;
 
@@ -332,6 +333,12 @@ Deno.serve(async (req: Request) => {
         return !error && data?.isAdmin === true;
       } catch { return false; }
     })());
+    // ADR-151: concepts reached only through Admin-preview questions are hidden from learners' Vault.
+    // The Admin check runs only when such concepts exist.
+    const hiddenVaultConcepts = async (catalogBody: any, publishedNoteConceptIds: unknown[]) => {
+      const hidden = adminPreviewOnlyConceptIds(catalogBody, { publishedNoteConceptIds: publishedNoteConceptIds.map(String) });
+      return hidden.size && !(await isContentAdmin()) ? hidden : new Set<string>();
+    };
     // Published first; the Admin check runs only when the question is not published (no cost for learners).
     const sessionQuestion = async (catalogBody: any, questionVersionId: unknown) =>
       publishedQuestions(catalogBody).find((item: any) => item.questionVersionId === questionVersionId) ??
@@ -1295,7 +1302,9 @@ Deno.serve(async (req: Request) => {
       }
 
       const normalize = (value: unknown) => String(value ?? "").toLocaleLowerCase();
-      const concepts = Array.isArray(catalog.body?.concepts) ? catalog.body.concepts : [];
+      const hiddenConcepts = await hiddenVaultConcepts(catalog.body, [...canonicalByConcept.keys()]);
+      const concepts = (Array.isArray(catalog.body?.concepts) ? catalog.body.concepts : [])
+        .filter((concept: any) => !hiddenConcepts.has(String(concept.conceptId)));
       const results = concepts.flatMap((concept: any, catalogOrder: number) => {
         const conceptId = String(concept.conceptId);
         const canonical = canonicalByConcept.get(conceptId);
@@ -1377,8 +1386,9 @@ Deno.serve(async (req: Request) => {
         }
       }
 
+      const hiddenConcepts = await hiddenVaultConcepts(catalog.body, [...canonicalByConcept.keys()]);
       const concepts = Array.isArray(catalog.body?.concepts)
-        ? catalog.body.concepts.map((concept: any) => {
+        ? catalog.body.concepts.filter((concept: any) => !hiddenConcepts.has(String(concept.conceptId))).map((concept: any) => {
             const canonical = canonicalByConcept.get(String(concept.conceptId));
             return {
               conceptId: concept.conceptId,
@@ -1433,6 +1443,7 @@ Deno.serve(async (req: Request) => {
       ]);
       if (conceptError || canonicalError || annotationError) fail(500, "vault_read_failed");
       if (!concept) fail(404, "vault_concept_not_found");
+      if ((await hiddenVaultConcepts(catalog.body, canonical ? [canonical.concept_id] : [])).has(conceptId)) fail(404, "vault_concept_not_found");
       const catalogQuestions = Array.isArray(catalog.body?.questions) ? catalog.body.questions : [];
       return response(req, 200, {
         concept,
