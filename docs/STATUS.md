@@ -10,12 +10,18 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 
 ## Recent
 
+### 2026-11-21 — Phone tab bar, filter sheet, sticky NMC search (ADR-154), branch `feat/phone-tabbar-filters-catalogue`
+- Owner go-ahead 02:07 IST for the three ADR-153 follow-ups. Web pages only.
+- Verified locally: `npm test` 1,796/1,796 (new `tests/phone-tabbar.test.js`); `npm run check`; axe WCAG 2.2 audit (120 audits) passes after forcing full opacity on tab labels; 28 Chromium browser checks incl. headless navigation check. `library-browser-check.js` and `navigation-browser-check.js` updated to close the phone filter sheet before page interactions.
+- Not run locally: WebKit, headed navigation check (CI). Not checked on the owner's devices.
+- Next: CI green → owner go-ahead to merge. Stacked on #523 (docs); merging this PR includes it.
+
 ### 2026-11-21 — UI type, spacing and layout pass (ADR-153), branch `fix/ui-type-spacing-layout`
 - Owner asked for a phone/tablet/desktop review of fonts, boxes and spacing, then "Fix it".
 - Measured before/after on 20 pages × 6 viewports (phone and tablet in both orientations, laptop, wide; signed-out and synthetic signed-in): text under 12px 918 → 250 (all remaining instances are the decorative sign-in mock-up), undersized tap targets 372 → 195 (remaining are inline sentence/footer links, exempt under WCAG 2.5.8), longest estimated line 187 → 112 characters, no horizontal scrolling, no page errors.
 - Changes: self-hosted Atkinson Hyperlegible; six-step type scale; 16px text fields (stops iPhone zoom); `web/ui-foundation.css`; NMC catalogue navigation highlight; sign-in content baseline hashes updated for the new stylesheet link and snapped sizes (`tests/fixtures/signin-content-baseline.json`).
 - Verified locally: `npm test` 1,793/1,793; `npm run check`; axe WCAG 2.2 audit (120 audits, Chromium) passes; 28 Chromium browser checks pass. Not run locally: WebKit jobs and the headed navigation check (CI covers them). Not yet checked on the owner's real iPhone/iPad.
-- Next: CI green → owner go-ahead to merge (web pages deploy from `main`). Then owner choice on the bottom tab bar, filter sheet and NMC catalogue redesign.
+- Merged as `db2d09f` (#522) on owner go-ahead 02:00 IST and live on medretica.com (stylesheet and font served; phone render confirmed). Next: owner choice on the bottom tab bar, filter sheet and NMC catalogue redesign.
 
 ### 2026-11-20 — #508 merged and deployed; sub-topic hierarchy (ADR-144)
 - Owner (04:44 IST) asked whether the NMC foundation is on the learner side. Answer: Admin account only (= learner `mdmoazzam291@gmail.com`); `learnerActivation:false`. Owner chose to keep it that way for now.
