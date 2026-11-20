@@ -25,6 +25,10 @@
     "huggingface",
     "supabase"
   ],
+  ".github/workflows/map-dataset-concepts.yml": [
+    "github",
+    "supabase"
+  ],
   ".github/workflows/nmc-hosted-staging-preflight.yml": [
     "supabase"
   ],
@@ -745,6 +749,9 @@
     "supabase"
   ],
   "supabase/migrations/20261120150000_attempt_trust_stamp.sql": [
+    "supabase"
+  ],
+  "supabase/migrations/20261120160000_dataset_concept_matches.sql": [
     "supabase"
   ],
   "supabase/verification/connected-learning-pilot.sql": [

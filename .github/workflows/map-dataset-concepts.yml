@@ -1,0 +1,72 @@
+name: Map staged questions to NMC concepts
+
+# Manual, owner-requested NMC concept matching for staged questions (ADR-150). Reads the private staging table,
+# runs the tested matcher, writes private results. Logs are public: only counts are printed, never question text.
+# Nothing is published. A rerun replaces unreviewed rows of the same batch; reviewed rows are kept.
+on:
+  workflow_dispatch:
+    inputs:
+      batch_id:
+        description: Batch ID (lowercase letters, digits, hyphens)
+        required: true
+        default: 'pilot-300'
+      per_subject:
+        description: Single-answer questions per subject (19 MBBS subjects)
+        required: true
+        default: '16'
+      confirm:
+        description: Type map to confirm
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dataset-concept-mapping
+  cancel-in-progress: false
+
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    steps:
+      - name: Guard inputs and branch
+        run: |
+          test "${{ inputs.confirm }}" = "map"
+          test "${{ github.ref }}" = "refs/heads/main"
+          [[ "${{ inputs.batch_id }}" =~ ^[a-z0-9-]{1,40}$ ]]
+          [[ "${{ inputs.per_subject }}" =~ ^[0-9]{1,4}$ ]]
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install PostgreSQL client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+      - name: Export concepts and the pilot questions
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          psql "$SUPABASE_DB_URL" -At -v ON_ERROR_STOP=1 -c "select json_build_object('conceptId',concept_id,'label',accepted_document->>'label','aliases',coalesce(accepted_document->'aliases','[]'::jsonb),'subjects',coalesce(accepted_document->'classification'->'subjects','[]'::jsonb)) from public.content_concept_current_identities" > "$RUNNER_TEMP/concepts.jsonl"
+          psql "$SUPABASE_DB_URL" -At -v ON_ERROR_STOP=1 -c "select row_to_json(t) from (select row_id, subject_label, topic_label, payload from (select s.*, row_number() over (partition by subject_label order by md5(row_id)) n from public.dataset_question_staging s where dataset_id='medmcqa' and choice_type='single' and coalesce(payload->>'exp','')<>'' and subject_label not in ('Dental','Unknown')) x where n <= ${{ inputs.per_subject }}) t" > "$RUNNER_TEMP/questions.jsonl"
+          wc -l "$RUNNER_TEMP/concepts.jsonl" "$RUNNER_TEMP/questions.jsonl" | sed "s#$RUNNER_TEMP/##"
+      - name: Match
+        run: node scripts/map-dataset-concepts.js "$RUNNER_TEMP/concepts.jsonl" "$RUNNER_TEMP/questions.jsonl" "$RUNNER_TEMP/results.jsonl" "${{ inputs.batch_id }}"
+      - name: Load results (private table)
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -q <<SQL
+          begin;
+          create temp table incoming (j jsonb) on commit drop;
+          \copy incoming from '$RUNNER_TEMP/results.jsonl' with (format csv, quote e'\x01', delimiter e'\x02')
+          insert into public.dataset_question_concept_matches (dataset_id,row_id,batch_id,subject_id,status,concept_id,confidence,reason,candidates,matcher_version)
+          select j->>'dataset_id', j->>'row_id', j->>'batch_id', j->>'subject_id', j->>'status', j->>'concept_id', (j->>'confidence')::numeric, j->>'reason', j->'candidates', j->>'matcher_version' from incoming
+          on conflict (dataset_id,row_id,batch_id) do update set subject_id=excluded.subject_id,status=excluded.status,concept_id=excluded.concept_id,confidence=excluded.confidence,
+            reason=excluded.reason,candidates=excluded.candidates,matcher_version=excluded.matcher_version,matched_at=now()
+          where dataset_question_concept_matches.review_decision is null;
+          commit;
+          SQL
+          psql "$SUPABASE_DB_URL" -At -c "select status||' '||count(*) from public.dataset_question_concept_matches where batch_id='${{ inputs.batch_id }}' group by status order by status"
