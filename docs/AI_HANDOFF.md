@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-20T19:50Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-20T20:50Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -17,10 +17,10 @@ Checked: 2026-11-20T19:50Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — UI type, spacing and layout (2026-11-21, Claude)
-- Branch `fix/ui-type-spacing-layout` from `main` `9f81832`; ADR-153; see STATUS 2026-11-21. Web pages only — no edge function, database or content change.
-- PR #522 at `63e2ff4`: Workers Builds, check, webkit and browser all green (browser after one re-run: `preparation-browser-check.js` 'Refresh session' wait is a pre-existing flake — fails 5/6 locally on `main` `9f81832`, not caused by this PR). Verified locally: `npm test` 1,793/1,793, `npm run check`, axe audit, 28 Chromium browser checks. Not yet: owner device check, merge.
-- Exact next action: owner go-ahead → squash-merge #522 (web pages deploy from `main`). Separately fix the preparation-check flake. Follow-ups awaiting owner choice: phone bottom tab bar, Concept Notes filter sheet, NMC catalogue redesign.
+## Completed — UI type, spacing and layout (2026-11-21, Claude)
+- PR #522 squash-merged as `db2d09f` on owner go-ahead (02:00 IST); ADR-153. Web pages only; Workers Builds deployed from `main`. Live check 2026-11-20T20:50Z: medretica.com pages link `ui-foundation.css`, font served as `font/woff2`, phone render uses Atkinson Hyperlegible with 16px inputs.
+- Not yet verified on the owner's own iPhone/iPad.
+- Follow-ups awaiting owner choice: phone bottom tab bar, Concept Notes filter sheet, NMC catalogue redesign. Separate: fix flaky `preparation-browser-check.js` 'Refresh session' wait (fails 5/6 locally on `9f81832`).
 
 ## Active task — MedMCQA pilot import (2026-11-20, Claude)
 - Owner decisions: rights not reviewed for questions now or in future (12:43 IST); unverified keys and no exam/year source acceptable (04:40 IST); audience Admin + owner first (12:43 IST).
