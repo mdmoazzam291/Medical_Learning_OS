@@ -23,7 +23,7 @@ function harness(cloud) {
     document: { querySelector: selector => selector === '#medical-app' ? root : notice },
     createSupabaseAuth: () => ({ currentUser: () => ({ email: 'synthetic@example.invalid' }) }),
     createCloudStudy: () => ({ sessionSummary: async id => ({ contractId: 'study-session-summary-v1', sessionId: id, closed: true, selectedCount: 1, answeredCount: 1, correctCount: 1, incorrectCount: 0, completedAllSelected: true, concepts: [], revision: { available: false } }), ...cloud }),
-    cloudConfig: {}, localStorage: {}, URL, URLSearchParams,
+    cloudConfig: {}, localStorage: {}, URL, URLSearchParams, syncStudyResume: () => {},
     location: { search: '', href: 'https://example.invalid/web/medical.html' }, history: { replaceState() {} },
     errorMonitor: { capture: (error, metadata) => monitored.push({ error, metadata }) }
   });
