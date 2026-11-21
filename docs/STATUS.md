@@ -14,7 +14,8 @@ Current state and recent entries. Entries up to 2026-11-17 are archived in [arch
 - Owner chose Version 4 of the navigation design canvas (05:50 IST). Web pages only; no database or edge-function change.
 - New: `src/domain/phone-navigation.js` (menu model, your-pages, concept shortcuts, search suggestions, resume record), `web/phone-navigation.js` (DOM), `web/study-resume.js` (Study page writes the device-local resume record), styles in `web/navigation.css`.
 - Verified locally: `npm test` 1,803/1,803 (new `tests/phone-navigation.test.js`); `npm run check`; axe WCAG 2.2 (120 audits); all 29 Chromium browser checks incl. headless navigation check (updated for the hidden ≡, focus return to the area chip and dark mode in the account menu); phone walkthrough (menu, last-page return, hold-to-open, pin, resume bar, reading mode, search hints, account dark mode) with no page errors; 120-page capture: no errors, no horizontal scroll.
-- Limits: resume bar only knows sessions started on this device; no count badges yet; not checked on the owner's devices; WebKit runs in CI.
+- Limits: resume bar only knows sessions started on this device; no count badges yet; not checked on the owner's devices.
+- Merged as `20d0f14` (#526) on owner go-ahead 11:41 IST; all four CI checks green; live on medretica.com.
 
 ### 2026-11-21 — Phone tab bar, filter sheet, sticky NMC search (ADR-154), branch `feat/phone-tabbar-filters-catalogue`
 - Owner go-ahead 02:07 IST for the three ADR-153 follow-ups. Web pages only.
