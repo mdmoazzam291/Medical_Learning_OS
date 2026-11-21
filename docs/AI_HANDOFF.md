@@ -1,6 +1,6 @@
 # AI handoff — current state
 
-Checked: 2026-11-20T21:40Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
+Checked: 2026-11-21T01:10Z. Full history up to this date: [archive/AI_HANDOFF-through-2026-11-17.md](archive/AI_HANDOFF-through-2026-11-17.md) (read only when an older decision is needed). Always verify live `main`, open PRs and production before acting; this file is a snapshot.
 
 ## Owner standing instructions
 - Complete the NMC foundation and necessary follow-up tasks; no private-bank question import yet.
@@ -17,15 +17,19 @@ Checked: 2026-11-20T21:40Z. Full history up to this date: [archive/AI_HANDOFF-th
 - Concepts: 1,543 accepted private identities (learner catalogue has 1 concept). Subject-only revisions via `concept_subject_revision_batch_v1`; current identity = view `content_concept_current_identities`. 328 concepts revised (462 subjects added) on 2026-11-17.
 - Production: owner-api v28 (2026-11-19, from `ebae810`) serves registry @28; edit routes `/concept-identity-edits`, `/foundation-objective-edits`); nmc-admin-preview v32 (@28 Admin learner preview, subject + concept browsing, from `4e6a8eb`). Migrations `concept_identity_name_index` and `admin_identity_and_objective_edits` applied 2026-11-17; name index backfilled (2,447 names, 1,543 identities); conflict check 6 ms (was ~320 ms).
 
-## Active task — phone tab bar, filter sheet, NMC search (2026-11-21, Claude)
-- Branch `feat/phone-tabbar-filters-catalogue`, stacked on `docs/ui-pass-merged` (#523) over `main` `db2d09f`; ADR-154; see STATUS 2026-11-21. Web pages only.
-- Verified locally: npm test 1,796/1,796, check, axe, 28 Chromium browser checks. Not yet: CI, owner device check, merge.
-- Exact next action: CI green → owner go-ahead → squash-merge (then close #523 if not merged separately). Merging #523 was refused by the session's permission check; owner may merge it.
+## Active task — phone navigation Version 4 (2026-11-21, Claude)
+- Branch `feat/phone-nav-v4`, stacked on `docs/adr154-merged` (#525) over `main` `c91bd87`; ADR-155; see STATUS 2026-11-21. Web pages only.
+- Verified locally: npm test 1,803/1,803, check, axe, 29 Chromium browser checks. Not yet: CI, owner device check, merge.
+- Exact next action: CI green → owner go-ahead → squash-merge (includes #525; close it afterwards). Later: server list of open sessions for cross-device resume; honest count badges once the learner model exposes them.
+
+## Completed — phone tab bar, filter sheet, NMC search (2026-11-21, Claude)
+- PR #524 squash-merged as `c91bd87` on owner go-ahead (03:13 IST); ADR-154; includes #523 (closed as superseded). Web pages only; Workers Builds deployed. Live check 2026-11-20T21:50Z: served navigation.css/navigation-view.js contain the tab bar, nmc-catalogue.css the sticky search.
+- Not yet verified on the owner's own iPhone/iPad.
 
 ## Completed — UI type, spacing and layout (2026-11-21, Claude)
 - PR #522 squash-merged as `db2d09f` on owner go-ahead (02:00 IST); ADR-153. Web pages only; Workers Builds deployed from `main`. Live check 2026-11-20T20:50Z: medretica.com pages link `ui-foundation.css`, font served as `font/woff2`, phone render uses Atkinson Hyperlegible with 16px inputs.
 - Not yet verified on the owner's own iPhone/iPad.
-- Follow-ups awaiting owner choice: phone bottom tab bar, Concept Notes filter sheet, NMC catalogue redesign. Separate: fix flaky `preparation-browser-check.js` 'Refresh session' wait (fails 5/6 locally on `9f81832`).
+- Follow-ups done in ADR-154 (#524). Separate: fix flaky `preparation-browser-check.js` 'Refresh session' wait (fails 5/6 locally on `9f81832`).
 
 ## Active task — MedMCQA pilot import (2026-11-20, Claude)
 - Owner decisions: rights not reviewed for questions now or in future (12:43 IST); unverified keys and no exam/year source acceptable (04:40 IST); audience Admin + owner first (12:43 IST).

@@ -85,3 +85,6 @@ a.text-button,.study-entry-topbar a,.vault-topbar a,.library-intro+p a,.workspac
   .library-actions>a{flex-basis:auto;order:3}
   .cw-toolbar>span{display:none}
 }
+
+/* ADR-155: large stat numbers use the system face — Atkinson's slashed zero reads as a "not allowed" sign at display sizes. */
+.metrics strong,.schedule-count,.stat-value{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}

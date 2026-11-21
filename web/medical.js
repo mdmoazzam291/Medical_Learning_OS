@@ -1,4 +1,5 @@
 import { guestPage } from '/web/guest-view.js';
+import { syncStudyResume } from '/web/study-resume.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudStudy } from '/src/adapters/cloud-study.js';
 import { cloudConfig } from '/web/cloud-config.js';
@@ -315,6 +316,7 @@ function studyView() {
 function render() {
   if (!state.user) root.innerHTML = signedOut();
   else root.innerHTML = state.session ? studyView() : overview();
+  if (state.user && state.session) syncStudyResume({ userId: state.user.id, session: state.session, summaryShown: Boolean(state.sessionSummary) });
 }
 
 async function loadOverview() {

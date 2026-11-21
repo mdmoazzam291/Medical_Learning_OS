@@ -96,7 +96,15 @@ try {
       if (page.viewportSize().width <= 700) {
         // Authorization can replace the learner shell with the Admin shell after
         // layout readiness. Resolve the current control when it becomes actionable.
-        if (await page.locator('.mlos-panel[hidden]').count()) await page.getByRole('button', { name: /^(Admin tools|.+: expand navigation)$/ }).click();
+        if (await page.locator('.mlos-panel[hidden]').count()) {
+          // ADR-155: inside Home/Study/Library/Exams the phone ≡ button gives way to the area menu,
+          // whose "All sections & settings" opens the same drawer.
+          if (await page.evaluate(() => document.body.dataset.phoneAreaNav === 'true' && Boolean(document.querySelector('.mlos-tabbar')))) {
+            await page.locator('[data-area-menu]').click();
+            await page.getByRole('button', { name: 'All sections & settings', exact: true }).click();
+            await page.locator('.mlos-panel:not([hidden])').waitFor();
+          } else await page.getByRole('button', { name: /^(Admin tools|.+: expand navigation)$/ }).click();
+        }
         return;
       }
       if (await page.locator('#mlos-workspace-menu').isVisible()) return;
@@ -106,7 +114,7 @@ try {
       await trigger.click();
       await page.locator('#mlos-workspace-menu').waitFor({ state: 'visible' });
     };
-    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? /^Admin tools$/ : /^.+: collapse navigation$/ }).click(); } else await page.keyboard.press('Escape'); };
+    const closeTools = async () => { if (page.viewportSize().width <= 700) { if (!(await page.locator('.mlos-panel[hidden]').count()) && await page.evaluate(() => document.body.dataset.phoneAreaNav === 'true')) { await page.keyboard.press('Escape'); await page.locator('.mlos-panel[hidden]').waitFor({ state: 'attached' }); } else if (!(await page.locator('.mlos-panel[hidden]').count())) await page.getByRole('button', { name: await page.locator('.mlos-admin-toolbar').count() ? /^Admin tools$/ : /^.+: collapse navigation$/ }).click(); } else await page.keyboard.press('Escape'); };
     // Phone pin buttons are temporarily hidden by design. Seed/toggle the existing
     // persisted preference in the test harness; real pin clicks remain tested above 700px.
     const togglePinForNavigationTest = async key => {
@@ -326,7 +334,8 @@ try {
         assert.ok(drawerFit.outsideWidth >= 95, 'outside dismissal region ' + phoneWidth);
         assert.equal(drawerFit.controlsFit, true, 'drawer links and controls fit ' + phoneWidth);
         await page.keyboard.press('Escape');
-        assert.equal(await page.locator('.mlos-mobile-menu').evaluate(node => document.activeElement === node), true);
+        await page.waitForFunction(() => document.activeElement && document.activeElement !== document.body);
+        assert.equal(await page.evaluate(() => document.activeElement === (document.body.dataset.phoneAreaNav === 'true' ? document.querySelector('[data-area-menu]') : document.querySelector('.mlos-mobile-menu'))), true, 'drawer returns focus to its opener');
       }
       await page.setViewportSize({ width, height });
     }
@@ -393,7 +402,12 @@ try {
     assert.equal(await page.getByRole('navigation', { name: 'Pinned shortcuts', includeHidden: true }).count(), 0, 'same-workspace pin does not duplicate its destination');
     await page.keyboard.press('Control+k');
     await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('Preserved search');
-    await page.getByRole('button', { name: 'Switch to dark appearance', exact: true }).click();
+    // ADR-155: inside the phone learning areas the appearance switch lives in the account menu.
+    if (await page.evaluate(() => document.body.dataset.phoneAreaNav === 'true')) {
+      await page.getByLabel('Account menu', { exact: true }).click();
+      await page.getByRole('button', { name: 'Dark mode: off', exact: true }).click();
+      await page.keyboard.press('Control+k');
+    } else await page.getByRole('button', { name: 'Switch to dark appearance', exact: true }).click();
     assert.equal(await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).inputValue(), 'Preserved search');
     await page.getByRole('searchbox', { name: 'Search all published content', exact: true }).fill('');
     await page.keyboard.press('Escape');
@@ -684,7 +698,10 @@ try {
     await go(origin + '/web/library.html?view=recall');
     await page.getByLabel('Your recall', { exact: true }).fill('Unsaved self-review');
     if (await page.evaluate(() => document.body.dataset.rail === 'collapsed')) await openTools();
-    await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
+    if (await page.evaluate(() => document.body.dataset.phoneAreaNav === 'true')) {
+      await page.getByLabel('Account menu', { exact: true }).click();
+      await page.getByRole('button', { name: 'Dark mode: on', exact: true }).click();
+    } else await page.getByRole('button', { name: 'Switch to light appearance', exact: true }).click();
     assert.equal(await page.getByLabel('Your recall', { exact: true }).inputValue(), 'Unsaved self-review');
     if (await page.evaluate(() => document.body.dataset.rail === 'expanded')) await closeTools();
     await go(origin + '/web/workspace.html?master=home&section=recent');
@@ -736,7 +753,7 @@ try {
       assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('mlos-navigation-v1'))), prefsBefore, 'full saved preference equality');
       if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: join(process.env.SCREENSHOT_DIR, 'preferences-' + surfaceStyle + '-' + palette + '-' + theme + '-' + name + '.png'), fullPage: surfaceStyle !== 'glass' });
       for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/admin.html']) {
-        await go(origin + destination); await page.locator('[data-theme]').waitFor();
+        await go(origin + destination); await page.locator('.mlos-header .mlos-theme').waitFor({ state: 'attached' });
         if (destination === '/web/admin.html') await settleAdmin();
         const actual = await page.evaluate(() => {
           const root = document.documentElement, headerNode = document.querySelector('.mlos-header');
@@ -819,7 +836,7 @@ try {
       await page.getByLabel('Appearance', { exact: true }).selectOption('light');
       for (const destination of ['/', '/web/medical.html', '/web/library.html?view=notes', '/web/exam.html', '/web/account.html', '/web/admin.html']) {
         await go(origin + destination);
-        await page.locator('[data-theme]').waitFor();
+        await page.locator('.mlos-header .mlos-theme').waitFor({ state: 'attached' });
         if (destination === '/web/admin.html') await page.locator('#owner-home').waitFor();
         const actual = await page.evaluate(() => ({
           palette: document.documentElement.dataset.palette,

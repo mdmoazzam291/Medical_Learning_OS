@@ -5,6 +5,7 @@ import { resolveAdminAccess } from '/web/navigation-access.js';
 import { createSupabaseAuth } from '/src/adapters/supabase-auth.js';
 import { createCloudReview } from '/src/adapters/cloud-review.js';
 import { cloudConfig } from '/web/cloud-config.js';
+import '/web/phone-navigation.js';
 const store = preferenceStore();
 const navigationAuth = createSupabaseAuth(cloudConfig);
 let compact = innerWidth <= 1050, phone = innerWidth <= 700, drawerOpen = false;
@@ -56,6 +57,7 @@ function render(focusSelector, captureSearch = true) {
   if (nextSearch) nextSearch.value = searchQuery;
   opener = null;
   syncDrawerAccessibility();
+  window.dispatchEvent(new CustomEvent('mlos:navigation-rendered', { detail: { learnerId: navigationUser?.id || '' } }));
   if (focusSelector) shell.querySelector(focusSelector)?.focus();
   else if (hadSearchFocus) shell.querySelector('#mlos-global-search')?.focus();
 }
